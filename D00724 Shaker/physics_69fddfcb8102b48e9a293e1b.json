@@ -1,0 +1,81 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00724 Shaker",
+      "source_part_name": "D00724 Shaker",
+      "source_object_name": "D00724 Shaker",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "brushed_stainless_steel",
+      "material": "brushed_stainless_steel",
+      "non_visual_material": null,
+      "mass": 0.45,
+      "density": 7850.0,
+      "inertia": [
+        0.00034354335946686857,
+        0.0014917970496159802,
+        0.0014931120132848008
+      ],
+      "inertia_axes": [
+        0.006130147544997716,
+        0.7071062385922263,
+        -0.006085094105448332,
+        0.7070545666812129
+      ],
+      "center_of_mass": [
+        -0.0001105332608628288,
+        2.0360331215885246e-05,
+        0.10652838146377026
+      ],
+      "part_origin_world": [
+        -0.0001105332608628288,
+        2.0360331215885246e-05,
+        0.10652838146377026
+      ],
+      "volume": 0.0009496951477512347,
+      "bounds": {
+        "min": [
+          -0.04531056806445122,
+          0.0,
+          -0.04522055760025978
+        ],
+        "max": [
+          0.04504430666565895,
+          0.21878919005393982,
+          0.04519432783126831
+        ],
+        "center": [
+          -0.00010853934590180847,
+          0.10402965267163616,
+          -2.0317267521644244e-05
+        ]
+      },
+      "description": "A brushed stainless steel cocktail shaker with a tapered cylindrical body, rounded shoulder, and small ribbed cap. The surface is silver metallic with visible fine scratches and circular seam lines.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The object appears to be a hollow, thin-wall stainless steel cocktail shaker, likely a 3-piece style with a lower cup, shoulder/lid, and cap. Typical dimensions for this form are approximately 0.22\u20130.25 m tall, 0.075\u20130.09 m maximum diameter, and 0.055\u20130.07 m base diameter, with stainless wall thickness around 0.5\u20130.8 mm. Based on those dimensions and common product masses, an empty mass of about 0.45 kg is realistic. Stainless steel material density is about 7850 kg/m^3, but because the object is hollow, the apparent/envelope density is much lower; in Isaac Sim it is best to apply a mass override rather than deriving mass from a solid convex volume. The dominant contact material is brushed stainless steel, so static friction is estimated at 0.45 and dynamic friction at 0.35 for generic dry contact; this is appropriate for steel against common lab/table surfaces but should be adjusted for the actual counterpart material. Restitution is set to 0.50: bare steel can rebound, but this hollow, seamed container will dissipate energy through ringing, lid motion, and local deformation. Collision should use convex decomposition rather than one convex hull if shoulder and cap contacts matter; a practical decomposition would use separate convex pieces for the tapered cup, rounded shoulder/frustum, neck, and cap, while ignoring the fine grooves as visual detail. SDF mesh collision could improve fidelity around seams but is usually unnecessary and more expensive for this simple axisymmetric object. Recommended contact offset is small, about 0.002 m, with rest offset 0.0 m to avoid visible hovering on the base. CCD is recommended if the object can be dropped, thrown, or move faster than a few meters per second, because the shell and rounded rim can otherwise tunnel through thin surfaces. For stable small-object contacts, 120 Hz simulation is preferable; at 60 Hz increase solver iterations if stacking or rolling instability appears. Suggested velocity limits are roughly 15\u201320 m/s linear and 80\u2013120 rad/s angular, with sleep thresholds low enough to let the shaker settle after rolling, e.g. linear sleep around 0.01 m/s and angular sleep around 0.05 rad/s. Compliant contacts are not needed for this non-deformable metal object; if contact chatter occurs, use very stiff/damped compliant contacts rather than soft settings.",
+      "static_friction": 0.45,
+      "dynamic_friction": 0.35,
+      "restitution": 0.5,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": ""
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00724 Shaker",
+  "object_description": "A brushed stainless steel cocktail shaker with a tapered cylindrical body, rounded shoulder, and small ribbed cap. The surface is silver metallic with visible fine scratches and circular seam lines.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.45,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies"
+}

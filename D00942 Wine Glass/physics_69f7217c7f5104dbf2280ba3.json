@@ -1,0 +1,81 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00942 Wine Glass",
+      "source_part_name": "D00942 Wine Glass",
+      "source_object_name": "D00942 Wine Glass",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "glass",
+      "material": "glass",
+      "non_visual_material": null,
+      "mass": 0.2,
+      "density": 2500.0,
+      "inertia": [
+        0.00012487196637337117,
+        0.0006545948397803827,
+        0.0006554712394464986
+      ],
+      "inertia_axes": [
+        0.7071046454324034,
+        -0.0006166757016131026,
+        0.7071083352398225,
+        0.0006650965051606843
+      ],
+      "center_of_mass": [
+        -0.0001215764621747489,
+        9.968936790730397e-05,
+        0.09377620269464965
+      ],
+      "part_origin_world": [
+        -0.0001215764621747489,
+        9.968936790730397e-05,
+        0.09377620269464965
+      ],
+      "volume": 0.0007581462350273329,
+      "bounds": {
+        "min": [
+          -0.040408000349998474,
+          -0.04088199883699417,
+          -3.000000106112566e-06
+        ],
+        "max": [
+          0.0412990003824234,
+          0.04083399847149849,
+          0.15620200335979462
+        ],
+        "center": [
+          -6.274110685071786e-05,
+          5.208275261592477e-05,
+          0.0918827188238574
+        ]
+      },
+      "description": "A clear transparent glass wine goblet with a rounded bowl, thin stem, and circular foot. The object is made of smooth soda-lime glass with a polished rim and base.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The asset appears to be a standard empty wine glass made almost entirely from transparent soda-lime glass. A typical full-size wine glass is approximately 0.20-0.23 m tall, with a bowl diameter around 0.065-0.080 m, a base diameter around 0.065-0.075 m, and thin walls near 1-2 mm. Commercial empty wine glasses commonly weigh about 0.15-0.25 kg depending on wall thickness and stem/base mass; 0.20 kg is a realistic estimate. The physical material density of soda-lime glass is about 2400-2600 kg/m\u00b3, so 2500 kg/m\u00b3 is used. Because the glass is a thin shell, the rendered/enclosing volume is much larger than the actual glass material volume; in Isaac Sim it is preferable to set mass explicitly rather than relying only on collision-volume-derived density. Glass has relatively low-to-moderate friction on common surfaces; a dry glass contact is estimated at static friction 0.35 and dynamic friction 0.25. Restitution for non-fracturing glass can be moderately high because glass is stiff and elastic, but real wine glasses dissipate energy through ringing, micro-slip, and fragile geometry, so 0.60 is a practical rigid-body value rather than an extremely bouncy value. For collision, a single convex hull would incorrectly fill the bowl and over-simplify the stem/base silhouette. Convex decomposition is recommended, ideally as separate convex pieces for the bowl exterior, stem, foot, and rim/base thickening. If the hollow interior must be physically accessible, a high-resolution SDF or carefully authored compound collision should be used, but for stable rigid-body handling and performance convex decomposition is the best default. Small contact and rest offsets are recommended because this is a thin, smooth object; excessive offsets would make the rim, stem, and foot appear to hover or contact too early. CCD should be enabled because the thin stem, rim, and foot can tunnel through other objects during fast motion. The object has no articulations, joints, or deformable parts, so articulation parameters are disabled or left empty.",
+      "static_friction": 0.35,
+      "dynamic_friction": 0.25,
+      "restitution": 0.6,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": ""
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00942 Wine Glass",
+  "object_description": "A clear transparent glass wine goblet with a rounded bowl, thin stem, and circular foot. The object is made of smooth soda-lime glass with a polished rim and base.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.2,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies"
+}

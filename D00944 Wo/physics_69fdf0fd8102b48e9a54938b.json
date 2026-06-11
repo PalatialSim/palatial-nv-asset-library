@@ -1,0 +1,81 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00944 Wo",
+      "source_part_name": "D00944 Wo",
+      "source_object_name": "D00944 Wo",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "aged_hardwood",
+      "material": "aged_hardwood",
+      "non_visual_material": null,
+      "mass": 22.0,
+      "density": 650.0,
+      "inertia": [
+        0.7469151088479423,
+        2.6550485132290214,
+        3.2784944364766346
+      ],
+      "inertia_axes": [
+        0.7076884537159212,
+        -0.7065072733585253,
+        -0.00347006839245112,
+        -0.0035332412912784635
+      ],
+      "center_of_mass": [
+        -0.0008785888171470475,
+        -0.0012685854403418288,
+        0.36568980204938134
+      ],
+      "part_origin_world": [
+        -0.0008785888171470475,
+        -0.0012685854403418288,
+        0.36568980204938134
+      ],
+      "volume": 0.1433064729331138,
+      "bounds": {
+        "min": [
+          -0.6736512780189514,
+          0.0,
+          -0.10160307586193085
+        ],
+        "max": [
+          0.6765687465667725,
+          0.7144426703453064,
+          0.12992827594280243
+        ],
+        "center": [
+          -0.002158734890326247,
+          0.3917627738413663,
+          -0.002069053733498523
+        ]
+      },
+      "description": "An aged dark-brown wooden yoke-like frame with a long carved curved beam, vertical supports, and rounded end holes. It has worn leather straps, rusted iron rings, rivets, and scuffed varnished surfaces.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The visible object is dominated by aged hardwood, with smaller contributions from leather straps and iron/steel rings, rivets, and side bands. No product data is provided, so dimensions and mass are estimated visually: approximately 1.5\u20131.7 m long, 0.35\u20130.45 m deep, and 0.65\u20130.80 m high including the hanging frame members. The main carved top beam appears to be a thick, irregular solid wooden member, while the lower vertical supports and loop-like members add additional wood volume but leave substantial open space. A plausible total wood volume is about 0.027\u20130.032 m^3; using aged hardwood density around 600\u2013700 kg/m^3 gives roughly 17\u201322 kg of wood. Rusted iron rings, brackets, rivets, and leather straps likely add about 3\u20135 kg, so a total mass estimate of 22 kg is appropriate for a single rigid body representation. The root material is set to aged hardwood because it is the dominant structural and contact surface; the density is therefore the material density of the dominant wood rather than an effective density based on the large empty bounding box. Wood-on-general-surface friction is moderate to high, but the worn varnish and polished/scuffed high points reduce it slightly; static friction is estimated at 0.55 and dynamic friction at 0.45. Restitution is low-to-moderate at 0.35 because aged wood has limited bounce and the attached leather/metal hardware dissipates energy. The asset is highly concave, with open loops, holes, straps, and a central ring, so a single convex hull would greatly overfill the object and create unrealistic contacts. Convex decomposition is the best default PhysX choice for a dynamic rigid body: use separate convex pieces for the long carved beam, vertical wooden members, lower loop members, straps, and approximated ring sections. SDF mesh collision could be considered only if very high-fidelity concave contact is required and performance cost is acceptable; triangle mesh collision should be avoided for a freely moving dynamic body. A small rest offset of 0.001 m and contact offset of 0.01 m are recommended for meter-scale geometry to avoid jitter while keeping contacts visually close to the worn wood surface. CCD is enabled because the object has thin ring/strap features that can tunnel through surfaces during drops or fast manipulation; it can be disabled for purely slow, quasi-static scenes. The initial velocity is zero. For stable heavy-object contact, 120 Hz simulation is recommended, especially when the convex decomposition has many small parts. If the object is only a static display asset, hibernation/sleeping can be aggressive; for dynamic use, use moderate sleep thresholds and avoid very high initial angular velocities because the long, uneven mass distribution can produce large contact impulses.",
+      "static_friction": 0.55,
+      "dynamic_friction": 0.45,
+      "restitution": 0.35,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": ""
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00944 Wo",
+  "object_description": "An aged dark-brown wooden yoke-like frame with a long carved curved beam, vertical supports, and rounded end holes. It has worn leather straps, rusted iron rings, rivets, and scuffed varnished surfaces.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 22.0,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies"
+}

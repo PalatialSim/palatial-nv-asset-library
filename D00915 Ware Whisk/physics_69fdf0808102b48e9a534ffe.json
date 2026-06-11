@@ -1,0 +1,81 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00915 Ware Whisk",
+      "source_part_name": "D00915 Ware Whisk",
+      "source_object_name": "D00915 Ware Whisk",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "stainless_steel_with_wood_handle",
+      "material": "stainless_steel_with_wood_handle",
+      "non_visual_material": null,
+      "mass": 0.115,
+      "density": 1600.0,
+      "inertia": [
+        4.3623485108316614e-05,
+        0.0004128635843164656,
+        0.0004135791278815609
+      ],
+      "inertia_axes": [
+        0.5031522147028589,
+        0.49699310833837357,
+        -0.49578889132051684,
+        -0.5040129704153877
+      ],
+      "center_of_mass": [
+        5.49139236555684e-05,
+        -0.006809520750528884,
+        0.0350393468215122
+      ],
+      "part_origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "volume": 0.00045007514475218423,
+      "bounds": {
+        "min": [
+          -0.03752899914979935,
+          -0.1940850019454956,
+          -2.9000000722589903e-05
+        ],
+        "max": [
+          0.03671500086784363,
+          0.08973900228738785,
+          0.07244899868965149
+        ],
+        "center": [
+          -5.314519594872371e-05,
+          -0.017655288316839407,
+          0.03649547082714052
+        ]
+      },
+      "description": "A balloon whisk with thin polished stainless-steel wire loops, a coiled metal collar, and a smooth light wood handle with a small hanging loop.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "Estimated as a medium kitchen balloon whisk approximately 0.30-0.32 m long, with a 0.075-0.09 m diameter wire bulb, a 0.13-0.15 m wooden handle around 25 mm in diameter, and 1.2-1.6 mm stainless wires. The handle volume is roughly 5.5e-5 to 7.0e-5 m3; at 600-750 kg/m3 for beech/maple-like wood this contributes about 35-50 g. The stainless wire loops, collar coil, and hanging loop contribute roughly 45-70 g depending on wire count and diameter, giving a practical total mass estimate near 0.115 kg. The density value is an aggregate solid-volume density for the mixed wood/steel construction, not a bounding-box density; if authoring separate materials, use about 650 kg/m3 for the wood handle and 7850 kg/m3 for the stainless steel while keeping the explicit mass override. The dominant exposed structural/contact surface is polished stainless steel wire, with the wood handle as a significant secondary surface, so friction is set between typical steel and dry wood contact values: moderate static friction and slightly lower dynamic friction. Restitution is kept moderate-low because the wooden handle and thin wire assembly dissipate energy even though stainless steel alone would be bouncier. For collision, a single convex hull is not recommended because it would fill the open whisk cage and produce unrealistic contacts. A compound convex decomposition is preferred: one or several convex pieces for the handle and collar, plus simplified slender convex/capsule-like hulls for the wire loops and hook. SDF mesh collision can preserve the exact wire openings, but it is more expensive and may jitter on sub-2 mm wires unless resolution is high. CCD is enabled because the wire radius is very small and tunneling can occur during drops, impacts, or fast grasping. A 2 mm contact offset gives reliable early contact generation for thin features without excessively inflating the utensil; rest offset is left at zero for visual/collision alignment. For stable Isaac Sim v4.5 behavior, use explicit mass and preferably explicit inertia/COM if available; the center of mass should lie closer to the collar/handle than the geometric center of the full whisk. For high-speed tests, cap linear velocity around 5-10 m/s and angular velocity around 40-60 rad/s, and use low sleep thresholds so the light object settles without premature hibernation. Compliant contacts are disabled because this is treated as a rigid, non-deformable asset.",
+      "static_friction": 0.46,
+      "dynamic_friction": 0.35,
+      "restitution": 0.4,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": ""
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00915 Ware Whisk",
+  "object_description": "A balloon whisk with thin polished stainless-steel wire loops, a coiled metal collar, and a smooth light wood handle with a small hanging loop.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.115,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies"
+}

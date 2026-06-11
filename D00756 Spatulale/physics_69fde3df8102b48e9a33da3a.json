@@ -1,0 +1,81 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00756 Spatulale",
+      "source_part_name": "D00756 Spatulale",
+      "source_object_name": "D00756 Spatulale",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "stainless_steel",
+      "material": "stainless_steel",
+      "non_visual_material": null,
+      "mass": 0.16,
+      "density": 7800.0,
+      "inertia": [
+        6.0042357008370734e-05,
+        0.001008971791479968,
+        0.0010505380098699121
+      ],
+      "inertia_axes": [
+        0.9991824661199458,
+        -0.00015334080391596515,
+        -0.04041067955969457,
+        0.0011631262120831516
+      ],
+      "center_of_mass": [
+        -0.002841925343786412,
+        0.0001360142675029944,
+        0.02279233203033606
+      ],
+      "part_origin_world": [
+        -0.002841925343786412,
+        0.0001360142675029944,
+        0.02279233203033606
+      ],
+      "volume": 0.0004234524613662513,
+      "bounds": {
+        "min": [
+          -0.1935696005821228,
+          0.0,
+          -0.04513523727655411
+        ],
+        "max": [
+          0.1441524475812912,
+          0.04647147282958031,
+          0.044308219105005264
+        ],
+        "center": [
+          0.0019049189413001249,
+          0.020274857001507916,
+          -8.833307721557352e-05
+        ]
+      },
+      "description": "A stainless-steel slotted spatula with a brushed metal blade and shaft, paired with a dark molded polymer handle. The blade is thin and slightly curved with elongated drainage slots, and the handle has a hanging hole.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The object appears to be a kitchen turner/spatula made primarily from stainless steel with a black plastic or rubberized polymer handle. Estimated overall dimensions are roughly 0.36-0.40 m long, with a blade about 0.11-0.12 m by 0.085-0.095 m and a thin sheet thickness near 0.8-1.2 mm. The handle is approximately 0.13-0.15 m long with an oval cross-section, and the metal neck/shaft is a narrow cylindrical or slightly flattened section. A realistic total mass for this construction is about 0.16 kg: approximately 0.09-0.11 kg from the stainless blade/shaft/ferrule and 0.04-0.06 kg from the polymer handle. Stainless steel is the dominant contact/structural material because the blade and shaft provide most exposed rigid surface and contact area, so root material density is set to a stainless-steel value of about 7800 kg/m^3 even though the composite effective density of the complete utensil would be lower due to the polymer handle and thin-sheet construction. Friction is estimated for brushed stainless steel: static friction around 0.45 and dynamic friction around 0.35 against common dry rigid surfaces; the handle would be higher-friction if modeled as a separate material. Restitution is kept moderate at 0.45: bare steel can be bouncy, but this thin stamped part and polymer handle dissipate energy and should not rebound like a solid steel ball. For Isaac Sim / PhysX, a single convex hull would poorly approximate the concave neck and slots, and a bounding box would be much too coarse. Convex decomposition is recommended: separate convex pieces for the handle, ferrule, shaft, blade body, and raised/curved blade lip. The slots can usually be ignored or represented visually only unless tool-hole interaction is required. If slot-level collision fidelity is essential, an SDF mesh can be used, but it is more expensive and the very thin sheet may require careful voxel resolution. Contact offset is set to 0.002 m to provide stable early contact generation on the thin blade, while rest offset is left at 0.0 m so the visible mesh does not appear inflated. CCD is recommended because the blade edge is thin and could tunnel during fast drops or manipulator-driven motion. Initial velocity is zero, gravity is standard Earth gravity, and compliant contacts are disabled because the object is effectively rigid; small damping can be used only if contact chatter occurs.",
+      "static_friction": 0.45,
+      "dynamic_friction": 0.35,
+      "restitution": 0.45,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": ""
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00756 Spatulale",
+  "object_description": "A stainless-steel slotted spatula with a brushed metal blade and shaft, paired with a dark molded polymer handle. The blade is thin and slightly curved with elongated drainage slots, and the handle has a hanging hole.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.16,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies"
+}

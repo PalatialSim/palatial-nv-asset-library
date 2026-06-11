@@ -1,0 +1,81 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00750 Spatula",
+      "source_part_name": "D00750 Spatula",
+      "source_object_name": "D00750 Spatula",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "stainless_steel",
+      "material": "stainless_steel",
+      "non_visual_material": null,
+      "mass": 0.18,
+      "density": 7900.0,
+      "inertia": [
+        3.540007406853179e-05,
+        0.0010090598281201609,
+        0.0010277086816802576
+      ],
+      "inertia_axes": [
+        0.7056776767570628,
+        0.018358825698135975,
+        0.01328302213910093,
+        0.7081705524579457
+      ],
+      "center_of_mass": [
+        -0.00020172586061404838,
+        0.005602712738147524,
+        0.015918910075711494
+      ],
+      "part_origin_world": [
+        -0.00020172586061404838,
+        0.005602712738147524,
+        0.015918910075711494
+      ],
+      "volume": 0.0002537635691161461,
+      "bounds": {
+        "min": [
+          -0.03583500161767006,
+          -0.1516139954328537,
+          -8.299999899463728e-05
+        ],
+        "max": [
+          0.035663001239299774,
+          0.19721899926662445,
+          0.032756999135017395
+        ],
+        "center": [
+          -9.514627855820213e-05,
+          -0.0006806739450605117,
+          0.016216343573362275
+        ]
+      },
+      "description": "A flat stainless-steel turner spatula with a thin rounded rectangular blade, bent neck, and riveted wooden handle. The blade has a brushed or worn metallic finish, while the handle varies in stained wood tones with small metal rivets.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The object appears to be a kitchen turner/spatula made from a thin stainless-steel sheet with a wooden handle and metal rivets. A realistic full-scale size is approximately 0.28-0.32 m long, with a blade about 0.075-0.085 m wide, 0.11-0.13 m long, and roughly 1.0-1.5 mm thick. The handle is estimated around 0.11-0.13 m long, 0.022-0.030 m wide, and 0.015-0.020 m thick. Using stainless steel at about 7800-8000 kg/m^3 for the blade/neck/tang and hardwood at about 600-800 kg/m^3 for the handle gives an estimated total mass of about 0.16-0.22 kg; 0.18 kg is a practical mid-range value. The dominant collision/contact surface is the stainless-steel blade, so root material, friction, and density are based primarily on brushed stainless steel rather than the smaller wooden handle. Static friction is estimated at 0.45 and dynamic friction at 0.35 for steel contacting common table, tray, or metal surfaces; the wooden handle alone would be slightly higher, but it is not the dominant external contact area. Restitution is set to 0.35: clean steel can rebound more, but the thin blade, bent neck, handle, rivets, and likely surface damping reduce effective bounce and improve rigid-body stability. For Isaac Sim v4.5/PhysX, a single convex hull would overfill the bent L-shaped neck and produce unrealistic contacts, while a bounding box would be much too coarse. Convex decomposition is the best default: separate convex parts for the flat blade, curved/bent neck represented by 2-3 hulls, tang/handle, and optional rivet caps. SDF mesh collision could be used for very high-fidelity edge contact, but convex decomposition is faster and robust for a dynamic rigid body. Because the blade is very thin, contact_offset should be much smaller than Isaac Sim defaults; 0.002 m is recommended, with rest_offset near 0.0 m to keep contacts visually aligned. CCD should be enabled because a 1-1.5 mm blade can tunnel through surfaces during drops, flips, or fast impacts. For stable operation, use 120 simulation steps/s if the spatula is expected to contact on its thin edge; 60 Hz is acceptable for slow, low-energy placement. Suggested velocity limits, if authored through PhysX attributes, are about 10 m/s max linear velocity and 50 rad/s max angular velocity, with sleep threshold near the PhysX default for small rigid objects to allow hibernation after settling. Compliant contacts are not needed because the object is modeled as rigid; if contact jitter occurs, solver iterations and contact offsets should be adjusted before adding compliance.",
+      "static_friction": 0.45,
+      "dynamic_friction": 0.35,
+      "restitution": 0.35,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": ""
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00750 Spatula",
+  "object_description": "A flat stainless-steel turner spatula with a thin rounded rectangular blade, bent neck, and riveted wooden handle. The blade has a brushed or worn metallic finish, while the handle varies in stained wood tones with small metal rivets.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.18,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies"
+}

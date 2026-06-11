@@ -1,0 +1,81 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00940 White Vase",
+      "source_part_name": "D00940 White Vase",
+      "source_object_name": "D00940 White Vase",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "glazed_ceramic_porcelain",
+      "material": "glazed_ceramic_porcelain",
+      "non_visual_material": null,
+      "mass": 0.8,
+      "density": 2300.0,
+      "inertia": [
+        0.0004533358915127644,
+        0.0011848581832731343,
+        0.0011899917154236206
+      ],
+      "inertia_axes": [
+        0.5110336667799438,
+        0.48855379467810905,
+        0.5105853458856582,
+        -0.48934894062405837
+      ],
+      "center_of_mass": [
+        -0.00047939301176650357,
+        0.00012245609524719764,
+        0.05743637085131876
+      ],
+      "part_origin_world": [
+        -0.00047939301176650357,
+        0.00012245609524719764,
+        0.05743637085131876
+      ],
+      "volume": 0.0004393246376498148,
+      "bounds": {
+        "min": [
+          -0.08349400013685226,
+          -0.08422599732875824,
+          -0.00011300000187475234
+        ],
+        "max": [
+          0.08510400354862213,
+          0.08329799771308899,
+          0.3012250065803528
+        ],
+        "center": [
+          8.49870763604263e-05,
+          -8.571593401164426e-05,
+          0.15764020235460713
+        ]
+      },
+      "description": "A set of small white and cream vases with glossy glazed ceramic surfaces, rounded and faceted bodies, narrow necks, and flared rims. Some pieces show exposed clay-colored wear, and one vessel has a translucent glass-like finish.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The image shows multiple similar tabletop vase variants rather than a single uniquely dimensioned product, so the numeric values are estimated for one representative small hollow vase; if the USD contains all vases as separate pieces, each should be authored as its own rigid body, and if all are merged into one rigid body the mass should be multiplied by the number of vessels. The dominant material is glazed ceramic/porcelain, with a true material density around 2200-2500 kg/m^3. A typical vessel of this type is approximately 0.20-0.30 m tall, 0.08-0.13 m in diameter, with 3-6 mm walls and a thicker base/rim, giving an estimated ceramic volume of roughly 0.00030-0.00045 m^3 and a mass around 0.7-1.0 kg; 0.8 kg is a reasonable representative value. Because the object is hollow, set an explicit mass rather than relying on density applied to a solid convex collision volume, which would overestimate mass. Glazed ceramic has moderate friction on common dry surfaces; the unglazed foot ring would be slightly higher, but the dominant external material is smooth glazed ceramic, so static friction is estimated at 0.45 and dynamic friction at 0.34. Restitution is kept low-to-moderate at 0.28 because hollow ceramic dissipates energy through vibration and would normally chip or fracture rather than bounce elastically. For collision, an SDF mesh is the best high-fidelity option because the model has concave openings, thin walls, rims, and hollow interiors; for higher performance or many instances, use convex decomposition with multiple hulls per vase rather than a single convex hull, since a single hull would close the mouth and remove the concavity. Contact offset is kept small, around 3 mm, to avoid visible hovering and to preserve thin-rim contact behavior; rest offset is zero for close visual alignment. CCD is recommended for drops or fast manipulator motion because the rim and walls are thin and the object is brittle. For stable tabletop interaction in Isaac Sim/PhysX, use 120 Hz if possible, enable CCD globally when objects may fall quickly, and use solver settings around 8 position iterations and 2 velocity iterations. Recommended velocity limits are approximately 10 m/s linear and 30-50 rad/s angular for this scale; use sleep thresholds near default or slightly conservative values once settled to reduce jitter. Compliant contacts are not physically necessary for rigid ceramic, but if numerical softness is desired for grasping, use very stiff optional compliance, e.g. stiffness on the order of 1e6-1e7 N/m with damping around 500-2000 N*s/m; otherwise keep compliant contacts disabled.",
+      "static_friction": 0.45,
+      "dynamic_friction": 0.34,
+      "restitution": 0.28,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": ""
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00940 White Vase",
+  "object_description": "A set of small white and cream vases with glossy glazed ceramic surfaces, rounded and faceted bodies, narrow necks, and flared rims. Some pieces show exposed clay-colored wear, and one vessel has a translucent glass-like finish.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.8,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies"
+}

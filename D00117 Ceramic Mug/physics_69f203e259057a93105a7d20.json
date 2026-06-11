@@ -1,0 +1,108 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_0",
+      "part_name": "ceramic mug",
+      "source_part_name": "part_0",
+      "source_object_name": "part_0",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "glazed_ceramic",
+      "material": "glazed_ceramic",
+      "non_visual_material": {
+        "base": "ceramic",
+        "coating": "glaze",
+        "attributes": [
+          "smooth",
+          "polished"
+        ]
+      },
+      "mass": 0.24,
+      "density": 2350.0,
+      "inertia": [
+        0.000185418268835088,
+        0.00019108787092720066,
+        0.00024209901327315088
+      ],
+      "inertia_axes": [
+        0.45216782472447786,
+        0.45477301210822546,
+        0.54044449787179,
+        -0.5446517331855786
+      ],
+      "center_of_mass": [
+        -0.00043435403263364516,
+        0.00011826623221605485,
+        0.040764959224491505
+      ],
+      "part_origin_world": [
+        -0.00043435403263364516,
+        0.00011826623221605485,
+        0.040764959224491505
+      ],
+      "volume": 0.0003656778734834602,
+      "bounds": {
+        "min": [
+          -0.041898,
+          -0.034703,
+          -9.5e-05
+        ],
+        "max": [
+          0.05649,
+          0.035067,
+          0.081529
+        ],
+        "center": [
+          0.007296,
+          0.000182,
+          0.040717
+        ]
+      },
+      "description": "One-piece hollow drinking vessel with an integrated side handle, functioning as the complete rigid mug body.",
+      "semantic": {
+        "qid": "Q386952"
+      },
+      "reasoning": "The reference image shows a typical white ceramic mug with a smooth glazed finish. The segmentation contains the cup body and handle as a single continuous mesh, so it should be simulated as one rigid body with no articulated joints. The bounding dimensions match a small empty mug; mass is estimated from a thin-walled ceramic shell rather than the full bounding-box volume.",
+      "static_friction": 0.45,
+      "dynamic_friction": 0.35,
+      "restitution": 0.08,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": "Red"
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "ceramic mug",
+  "object_description": "A single-piece glazed ceramic mug with an integrated handle. It is modeled as one rigid, non-articulated body with no movable components or contents.",
+  "object_semantic": {
+    "qid": "Q386952"
+  },
+  "total_mass": 0.24,
+  "center_of_mass": null,
+  "inertia": null,
+  "behavior_type": "normal",
+  "overall_assessment": "Stable first-pass rigid-body setup for an empty ceramic mug; the single-piece segmentation requires no articulation tree beyond the root body.",
+  "num_parts": 1,
+  "object_type": "rigid_bodies",
+  "_metadata": {
+    "openai_response": {
+      "model": "gpt-5.5",
+      "usage": {
+        "input_tokens": 19634,
+        "input_tokens_details": {
+          "cached_tokens": 2816
+        },
+        "output_tokens": 1569,
+        "output_tokens_details": {
+          "reasoning_tokens": 1034
+        },
+        "total_tokens": 21203
+      },
+      "web_search_tool_calls": 0,
+      "estimated_cost_usd": 0.132568,
+      "pricing_note": "Estimated from response usage and public token/tool prices. OpenAI organization Costs API is authoritative for billing."
+    }
+  }
+}

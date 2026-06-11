@@ -1,0 +1,201 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_0",
+      "part_name": "lower bowl body",
+      "source_part_name": "part_0",
+      "source_object_name": "part_0",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "glazed_porcelain_ceramic",
+      "material": "glazed_porcelain_ceramic",
+      "non_visual_material": {
+        "base": "ceramic",
+        "coating": "glaze",
+        "attributes": [
+          "smooth",
+          "polished",
+          "reflective"
+        ]
+      },
+      "mass": 0.29,
+      "density": 2400.0,
+      "inertia": [
+        0.0006109502422815775,
+        0.000616014924950818,
+        0.001116053059558272
+      ],
+      "inertia_axes": [
+        0.9365818401570531,
+        0.0017514210472602356,
+        -0.0006959075852270846,
+        0.35044386843683867
+      ],
+      "center_of_mass": [
+        -0.0002741393482246532,
+        -0.0003629765207542854,
+        0.0310272306250332
+      ],
+      "part_origin_world": [
+        -0.0002741393482246532,
+        -0.0003629765207542854,
+        0.0310272306250332
+      ],
+      "volume": 0.0010894179481635484,
+      "bounds": {
+        "min": [
+          -0.104655,
+          -0.104293,
+          -2.9e-05
+        ],
+        "max": [
+          0.1028,
+          0.101122,
+          0.051757
+        ],
+        "center": [
+          -0.000927,
+          -0.001586,
+          0.025864
+        ]
+      },
+      "description": "Curved lower exterior shell and foot area that supports the bowl on a surface.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The reference shows a white glazed ceramic serving bowl with a smooth hard surface. This lower shell is thin-walled rather than a solid volume, so mass is estimated from a typical 20 cm ceramic bowl rather than the full bounding box. The foot/body region is slightly less slippery than the upper eating surface but remains glazed ceramic.",
+      "static_friction": 0.42,
+      "dynamic_friction": 0.32,
+      "restitution": 0.2,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": "Red"
+    },
+    {
+      "canonical_name": "part_1",
+      "part_name": "upper rim and interior surface",
+      "source_part_name": "part_1",
+      "source_object_name": "part_1",
+      "part_index": 1,
+      "part_id": "part_01",
+      "material_name": "glazed_porcelain_ceramic",
+      "material": "glazed_porcelain_ceramic",
+      "non_visual_material": {
+        "base": "ceramic",
+        "coating": "glaze",
+        "attributes": [
+          "smooth",
+          "polished",
+          "reflective"
+        ]
+      },
+      "mass": 0.19,
+      "density": 2400.0,
+      "inertia": [
+        0.00039829363815674005,
+        0.0003992781487655497,
+        0.0007391653509857822
+      ],
+      "inertia_axes": [
+        0.0025771141718852484,
+        -0.9049767963194125,
+        -0.42545264534853444,
+        -0.0006349582127313347
+      ],
+      "center_of_mass": [
+        -0.00024119872334991485,
+        9.055725945917556e-05,
+        0.03367041186062794
+      ],
+      "part_origin_world": [
+        -0.00024119872334991485,
+        9.055725945917556e-05,
+        0.03367041186062794
+      ],
+      "volume": 0.0009819220769988872,
+      "bounds": {
+        "min": [
+          -0.104305,
+          -0.103775,
+          0.005257
+        ],
+        "max": [
+          0.10397,
+          0.104322,
+          0.052116
+        ],
+        "center": [
+          -0.000167,
+          0.000273,
+          0.028687
+        ]
+      },
+      "description": "Wide rounded rim and concave interior eating surface fixed to the lower bowl body.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "This part corresponds to the continuous upper lip and inner surface of the same ceramic bowl, not a removable lid. It is a thin glazed porcelain/ceramic shell fixed to the lower body. Smooth glazed ceramic has moderate friction, low compliance, and limited bounce in simulation to avoid unrealistic rebounding.",
+      "static_friction": 0.36,
+      "dynamic_friction": 0.28,
+      "restitution": 0.22,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": false,
+      "color_name": "Blue"
+    }
+  ],
+  "joint_relations": [
+    {
+      "child": "upper rim and interior surface",
+      "parent": "lower bowl body",
+      "joint_type": "fixed",
+      "name": "joint_lower_bowl_body__upper_rim_and_interior_surface",
+      "damping": 0.0,
+      "effort": 0.0,
+      "friction": 0.0,
+      "stiffness": 0.0,
+      "velocity": 0.0,
+      "origin": [],
+      "joint_rotation_local": [],
+      "axis": [],
+      "motion_limits": null,
+      "revolute_mode": null,
+      "score": 0.98,
+      "behavior_type": "normal"
+    }
+  ],
+  "base_link": "lower bowl body",
+  "object_description": "A shallow glazed ceramic bowl represented as a single rigid dish with its rim and lower body bonded together. No articulated behavior is assumed; the parts move as one solid object.",
+  "object_semantic": {
+    "qid": "Q153988"
+  },
+  "total_mass": 0.48,
+  "center_of_mass": null,
+  "inertia": null,
+  "behavior_type": "normal",
+  "overall_assessment": "This is a stable rigid ceramic dish setup with realistic low-to-moderate friction, low restitution, and mass appropriate for a shallow 20 cm glazed bowl.",
+  "num_parts": 2,
+  "object_type": "rigid_bodies",
+  "_metadata": {
+    "openai_response": {
+      "model": "gpt-5.5",
+      "usage": {
+        "input_tokens": 19970,
+        "input_tokens_details": {
+          "cached_tokens": 2816
+        },
+        "output_tokens": 4538,
+        "output_tokens_details": {
+          "reasoning_tokens": 3574
+        },
+        "total_tokens": 24508
+      },
+      "web_search_tool_calls": 0,
+      "estimated_cost_usd": 0.223318,
+      "pricing_note": "Estimated from response usage and public token/tool prices. OpenAI organization Costs API is authoritative for billing."
+    }
+  }
+}
