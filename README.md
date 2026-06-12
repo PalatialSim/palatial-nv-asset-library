@@ -79,7 +79,4 @@ D00060 Bowl Dish/
 │   ├── texture_base_color.png
 │   ├── texture_metallic.png
 │   └── texture_roughness.png
-└── IsaacSim/
-    ├── IsaacSim_validation_report_<id>.json
-    └── IsaacSim_validation_video_<id>.mp4
 ```
