@@ -1,0 +1,174 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "part_00",
+      "source_part_name": "part_00",
+      "source_object_name": "part_00",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "black enameled cast iron",
+      "material": "black enameled cast iron",
+      "non_visual_material": {
+        "base": "iron",
+        "coating": "glaze",
+        "attributes": [
+          "matte",
+          "rough"
+        ]
+      },
+      "mass": 1.25,
+      "density": 7200.0,
+      "inertia": [
+        0.002645389202602867,
+        0.002852451270578687,
+        0.005202860559850015
+      ],
+      "inertia_axes": [
+        0.9612660397840708,
+        -0.12458658153242974,
+        -0.04014413910544524,
+        0.24255768912857661
+      ],
+      "center_of_mass": [
+        -0.005769209850283556,
+        0.011235125870136867,
+        0.14443752409973024
+      ],
+      "part_origin_world": [
+        -0.005769209850283556,
+        0.011235125870136867,
+        0.14443752409973024
+      ],
+      "volume": 0.0009523579828226517,
+      "bounds": {
+        "min": [
+          -0.107923,
+          -0.091795,
+          0.105693
+        ],
+        "max": [
+          0.100101,
+          0.108698,
+          0.17978
+        ],
+        "center": [
+          -0.003911,
+          0.008452,
+          0.142737
+        ]
+      },
+      "description": "Removable cast-iron lid with knob.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "Dome and knob are cast iron but hollow-backed.",
+      "static_friction": 0.62,
+      "dynamic_friction": 0.48,
+      "restitution": 0.04,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": false,
+      "color_name": "Red"
+    },
+    {
+      "canonical_name": "part_01",
+      "part_name": "part_01",
+      "source_part_name": "part_01",
+      "source_object_name": "part_01",
+      "part_index": 1,
+      "part_id": "part_01",
+      "material_name": "black enameled cast iron",
+      "material": "black enameled cast iron",
+      "non_visual_material": {
+        "base": "iron",
+        "coating": "glaze",
+        "attributes": [
+          "matte",
+          "rough"
+        ]
+      },
+      "mass": 2.45,
+      "density": 7200.0,
+      "inertia": [
+        0.013387153087317262,
+        0.016696861761470887,
+        0.02269535837672864
+      ],
+      "inertia_axes": [
+        0.9995609574704546,
+        -0.008953456148992948,
+        -0.0028502777840689886,
+        0.028099890396401702
+      ],
+      "center_of_mass": [
+        0.006057888646139443,
+        -0.009181049590864406,
+        0.05251201469093987
+      ],
+      "part_origin_world": [
+        0.006057888646139443,
+        -0.009181049590864406,
+        0.05251201469093987
+      ],
+      "volume": 0.00027998280275319185,
+      "bounds": {
+        "min": [
+          -0.128303,
+          -0.113472,
+          0.000232
+        ],
+        "max": [
+          0.140198,
+          0.09763,
+          0.107046
+        ],
+        "center": [
+          0.005948,
+          -0.007921,
+          0.053639
+        ]
+      },
+      "description": "Cast-iron pot body with handles.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "Hollow cast iron shell makes mass below solid volume.",
+      "static_friction": 0.68,
+      "dynamic_friction": 0.52,
+      "restitution": 0.03,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": "Blue"
+    }
+  ],
+  "joint_relations": [
+    {
+      "child": "part_00",
+      "parent": "part_01",
+      "joint_type": "floating",
+      "name": "joint_part_01__part_00",
+      "damping": 0.0,
+      "effort": 0.0,
+      "friction": 0.0,
+      "stiffness": 0.0,
+      "velocity": 0.0,
+      "origin": [],
+      "joint_rotation_local": [],
+      "axis": [],
+      "motion_limits": null,
+      "revolute_mode": null,
+      "score": 0.95,
+      "rest_pose_state": "open"
+    }
+  ],
+  "base_link": "part_01",
+  "object_description": "Cast-iron Dutch oven with a removable lid; articulation is treated as normal/unconstrained. Parts are heavy rigid bodies with rough, low-bounce contact.",
+  "object_semantic": null,
+  "total_mass": 3.7,
+  "center_of_mass": null,
+  "inertia": null
+}

@@ -1,0 +1,81 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00753 Spatula Spoon",
+      "source_part_name": "D00753 Spatula Spoon",
+      "source_object_name": "D00753 Spatula Spoon",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "stainless_steel",
+      "material": "stainless_steel",
+      "non_visual_material": null,
+      "mass": 0.13,
+      "density": 7850.0,
+      "inertia": [
+        2.363263068628913e-05,
+        0.0008240852432985352,
+        0.000842136276922588
+      ],
+      "inertia_axes": [
+        0.7069018132872145,
+        -0.0024151131825041177,
+        -0.0025675311702076944,
+        -0.707302906386828
+      ],
+      "center_of_mass": [
+        9.141884744292876e-06,
+        0.005896826766973252,
+        0.010181166563133434
+      ],
+      "part_origin_world": [
+        9.141884744292876e-06,
+        0.005896826766973252,
+        0.010181166563133434
+      ],
+      "volume": 0.00018868669035959444,
+      "bounds": {
+        "min": [
+          -0.15872099995613098,
+          -0.05169700086116791,
+          -2.9000000722589903e-05
+        ],
+        "max": [
+          0.22785699367523193,
+          0.05158799886703491,
+          0.03406599909067154
+        ],
+        "center": [
+          -0.004218394705752184,
+          0.00012075890648411666,
+          0.015105989014867125
+        ]
+      },
+      "description": "A polished stainless-steel serving spoon with a broad shallow bowl, slender curved neck, and cylindrical metal handle. The surface is smooth, reflective silver metal with rounded edges.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The object appears to be a one-piece or assembled stainless-steel serving spoon/large kitchen spoon. No product data is provided, so values are estimated from typical dimensions: total length about 0.27-0.31 m, bowl width about 0.06-0.075 m, bowl length about 0.075-0.09 m, and a cylindrical handle roughly 0.11-0.14 m long with 16-20 mm outside diameter. A purely solid cylinder of that size would be too heavy, so the handle is likely hollow or thin-walled, while the bowl and neck are thin stamped stainless steel. A realistic total mass is therefore about 0.13 kg. The dominant contact material is polished stainless steel, so the material density is taken as approximately 7850 kg/m^3, but in Isaac Sim the mass should preferably be authored explicitly rather than derived from a convex collision volume because the convex decomposition will include hollow and concave spaces and would overestimate mass if assigned solid steel density. Static friction is estimated at 0.45 and dynamic friction at 0.35 for polished stainless steel against common hard surfaces; these values may be reduced slightly for glass/ceramic or increased if contacting rubber mats. Restitution is set to 0.55: stainless steel is relatively elastic, but the thin spoon geometry, curved bowl, and contact damping reduce practical bounce compared with a compact steel ball. The collision shape should not be a single convex hull because that would fill the spoon bowl and over-simplify the neck/handle. A convex decomposition is the most robust dynamic-rigid-body choice in PhysX: use separate convex pieces for the bowl rim/underside, neck, collar, and cylindrical handle. For very high-fidelity bowl contact, an SDF mesh can be considered, but convex decomposition is typically faster and more stable. Rest offset is kept at 0.0 m so the visual and collision surfaces align closely; contact offset around 0.002 m gives stable contact generation without excessive floating for a thin metal utensil. CCD is recommended because the spoon has thin edges and may move or spin quickly, which otherwise risks tunneling. The object is rigid metal, so compliant contacts should normally be disabled; if jitter occurs in contact-rich scenes, very stiff/damped compliant contact values can be used only as a numerical stabilization aid, not as a deformability model. Principal inertia is approximated for an elongated 0.13 kg utensil, assuming the local X axis runs along the spoon length, Y across the bowl, and Z through the bowl thickness; final inertia should be recomputed from the actual closed collision geometry if available.",
+      "static_friction": 0.45,
+      "dynamic_friction": 0.35,
+      "restitution": 0.55,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": ""
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00753 Spatula Spoon",
+  "object_description": "A polished stainless-steel serving spoon with a broad shallow bowl, slender curved neck, and cylindrical metal handle. The surface is smooth, reflective silver metal with rounded edges.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.13,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies"
+}

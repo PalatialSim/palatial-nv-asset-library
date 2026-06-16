@@ -1,0 +1,81 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00785 Spoon W",
+      "source_part_name": "D00785 Spoon W",
+      "source_object_name": "D00785 Spoon W",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "polished_stainless_steel",
+      "material": "polished_stainless_steel",
+      "non_visual_material": null,
+      "mass": 0.045,
+      "density": 7850.0,
+      "inertia": [
+        4.5957532914093695e-06,
+        7.457398236894143e-05,
+        7.810023482019339e-05
+      ],
+      "inertia_axes": [
+        0.9989034512940875,
+        -0.0006450074010533741,
+        0.04675975049982939,
+        -0.002237116762067789
+      ],
+      "center_of_mass": [
+        0.00612137774184419,
+        -7.848059274786442e-05,
+        0.009654060394884888
+      ],
+      "part_origin_world": [
+        0.00612137774184419,
+        -7.848059274786442e-05,
+        0.009654060394884888
+      ],
+      "volume": 5.327175207717422e-05,
+      "bounds": {
+        "min": [
+          -0.06538673490285873,
+          0.0,
+          -0.024352647364139557
+        ],
+        "max": [
+          0.109710693359375,
+          0.023426365107297897,
+          0.024153033271431923
+        ],
+        "center": [
+          0.0015293125000013879,
+          0.008567229063851784,
+          -1.4623497575395017e-05
+        ]
+      },
+      "description": "A tarnished silver-colored metal spoon with a shallow oval bowl and a long, slightly curved handle. The polished surface is scratched and features raised rim detailing.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The asset appears to be a single-piece table spoon made from polished stainless steel or silver-plated steel. With no product data supplied, I assume a length of about 0.18-0.20 m, a bowl about 0.055-0.065 m long by 0.040-0.045 m wide, and a thin stamped shell/handle thickness of roughly 1.0-2.0 mm. That gives an estimated metal volume of about 5-7 cm^3; using stainless steel density near 7850 kg/m^3 gives a mass range of about 0.04-0.055 kg, so 0.045 kg is a realistic rigid-body mass. The tarnished/plated surface is minor relative to the structural metal, so stainless steel drives density and contact behavior. Polished metal has moderate dry friction, so static friction is set to 0.45 and dynamic friction to 0.35; these may be reduced for glass/ceramic contacts or increased for rubberized surfaces. Restitution is set to 0.50: steel is elastic, but the spoon\u2019s thin shell, shallow concavity, rim contacts, and micro-slip dissipate energy. For collision geometry, a single convex hull would incorrectly fill the concave bowl and overestimate the contact volume, while a triangle mesh is not ideal for dynamic rigid bodies. Convex decomposition is the recommended default in Isaac Sim/PhysX, using separate convex pieces for the bowl underside, rim/interior approximation, neck, and handle. Use an SDF mesh only if accurate concave bowl interaction is essential and the extra cost is acceptable. Rest offset is kept at 0.0 m and contact offset at 0.0015 m to preserve the thin 1-2 mm geometry while still generating stable contact constraints. CCD is enabled because the thin handle and rim can tunnel through surfaces when dropped, spun, or moved quickly. If additional PhysX attributes are authored, reasonable limits are about 20 m/s maximum linear velocity and 50-100 rad/s maximum angular velocity. The object is hard metal, so compliant contacts are disabled by default; if edge jitter occurs, prefer CCD, convex decomposition refinement, and a smaller timestep before adding compliance. A 120 Hz scene step is recommended for stable settling of the thin spoon, and default hibernation/sleep can be used with a low sleep kinetic threshold if small contact chatter persists.",
+      "static_friction": 0.45,
+      "dynamic_friction": 0.35,
+      "restitution": 0.5,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": ""
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00785 Spoon W",
+  "object_description": "A tarnished silver-colored metal spoon with a shallow oval bowl and a long, slightly curved handle. The polished surface is scratched and features raised rim detailing.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.045,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies"
+}

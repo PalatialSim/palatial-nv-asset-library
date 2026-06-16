@@ -1,0 +1,81 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00721 Servingula",
+      "source_part_name": "D00721 Servingula",
+      "source_object_name": "D00721 Servingula",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "tarnished_copper_bronze_metal",
+      "material": "tarnished_copper_bronze_metal",
+      "non_visual_material": null,
+      "mass": 0.16,
+      "density": 8800.0,
+      "inertia": [
+        4.650940989544643e-05,
+        0.0018109899442398493,
+        0.0018404689177658191
+      ],
+      "inertia_axes": [
+        0.7032148140079016,
+        -0.03531616903210458,
+        0.010962242299640603,
+        -0.7100151567456091
+      ],
+      "center_of_mass": [
+        2.9697020462547395e-05,
+        0.002183892887531705,
+        0.020977860149028284
+      ],
+      "part_origin_world": [
+        2.9697020462547395e-05,
+        0.002183892887531705,
+        0.020977860149028284
+      ],
+      "volume": 4.8778846394528804e-05,
+      "bounds": {
+        "min": [
+          -0.041815243661403656,
+          0.0,
+          -0.1862703412771225
+        ],
+        "max": [
+          0.04159219190478325,
+          0.03896211460232735,
+          0.14031237363815308
+        ],
+        "center": [
+          -0.00016279961836459676,
+          0.021479938612362828,
+          0.02198239627867531
+        ]
+      },
+      "description": "A tarnished copper ladle with a shallow rounded bowl, long narrow curved handle, and decorative looped end. The surface is metallic rose-brown with visible patina, scratches, and worn areas.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The object appears to be a thin-walled copper or bronze serving ladle/spoon. In SI units, a plausible overall size is approximately 0.28\u20130.34 m long, with a bowl diameter around 0.075\u20130.095 m, bowl depth around 0.02\u20130.035 m, and metal thickness around 1.0\u20131.8 mm. Copper/bronze alloys have true material densities around 8400\u20138960 kg/m^3; I use 8800 kg/m^3 as the dominant material density. Because the item is a thin shell, the rigid body mass should be overridden directly rather than inferred from a filled visual mesh or a large convex hull volume. Estimating shell volume from the bowl, handle, rim, and loop gives roughly 15\u201322 cm^3 of metal, corresponding to about 0.13\u20130.19 kg; 0.16 kg is a realistic midpoint. The center of mass will lie closer to the bowl than the geometric midpoint because the bowl contains more metal surface area and rim mass than the thin handle. Copper/bronze contact is moderately slippery on smooth surfaces but the oxidized, scratched surface raises friction slightly, so static friction is estimated at 0.48 and dynamic friction at 0.36. Restitution is lower than polished spring steel because copper/bronze is softer and the thin bowl dissipates energy through ringing and small elastic flexure, so an effective restitution around 0.40 is appropriate. For collision, a single convex hull would incorrectly fill the bowl and make the ladle much bulkier than the visual mesh. A convex decomposition is the preferred PhysX option for dynamic rigid-body use: segment the bowl into several convex shell/rim pieces, use one or two elongated hulls for the curved handle, and separate hulls for the decorative loop/end. If exact bowl interior interaction is required, an SDF mesh can be considered, but convex decomposition is faster and more stable for robotic/industrial scenes. Since the handle and rim are thin, use small but nonzero contact offsets; 0.002 m contact offset and 0.0 m rest offset are appropriate for a meter-scaled asset. Continuous collision detection is recommended because the thin handle and rim can tunnel during fast motion. For stable contact stacking or grasping, a 120 Hz scene step is preferable to the default 60 Hz. Compliant contacts should generally be disabled for this non-deformable metal object; if enabled to reduce contact chatter, use very stiff, heavily damped settings so the object still behaves as rigid metal.",
+      "static_friction": 0.48,
+      "dynamic_friction": 0.36,
+      "restitution": 0.4,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": ""
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00721 Servingula",
+  "object_description": "A tarnished copper ladle with a shallow rounded bowl, long narrow curved handle, and decorative looped end. The surface is metallic rose-brown with visible patina, scratches, and worn areas.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.16,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies"
+}

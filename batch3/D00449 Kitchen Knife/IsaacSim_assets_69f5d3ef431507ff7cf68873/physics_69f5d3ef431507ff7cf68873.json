@@ -1,0 +1,81 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00449 Kitchen Knife",
+      "source_part_name": "D00449 Kitchen Knife",
+      "source_object_name": "D00449 Kitchen Knife",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "stainless_steel",
+      "material": "stainless_steel",
+      "non_visual_material": null,
+      "mass": 0.22,
+      "density": 7850.0,
+      "inertia": [
+        3.1628126293348795e-05,
+        0.0013296463775374484,
+        0.0013509732445340622
+      ],
+      "inertia_axes": [
+        0.7055860878294602,
+        -9.274418194704184e-05,
+        -0.002257936153256534,
+        -0.7086206077897833
+      ],
+      "center_of_mass": [
+        0.0009102180723882356,
+        0.012484857815658515,
+        0.010881543312085155
+      ],
+      "part_origin_world": [
+        0.0009102180723882356,
+        0.012484857815658515,
+        0.010881543312085155
+      ],
+      "volume": 0.0001710358787439431,
+      "bounds": {
+        "min": [
+          -0.19470499455928802,
+          -0.03310500085353851,
+          -3.5000000934815034e-05
+        ],
+        "max": [
+          0.14316700398921967,
+          0.02097400091588497,
+          0.02092299982905388
+        ],
+        "center": [
+          -0.015435986911255617,
+          -0.00031887222267744305,
+          0.010737508258371043
+        ]
+      },
+      "description": "A chef\u2019s knife with a brushed stainless-steel blade, a brown wooden handle, and round brass rivets. The blade is broad and tapered with a sharp pointed tip, while the handle is smoothly contoured and slightly rounded.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The object appears to be a full-size chef\u2019s knife with a long steel blade and a riveted wooden handle. A typical chef\u2019s knife of this style is approximately 0.32\u20130.36 m long overall, with a 0.20\u20130.24 m blade, blade width around 0.04\u20130.055 m near the heel, and a spine thickness around 0.002\u20130.004 m tapering toward the cutting edge. The dominant structural and contact material is stainless steel because the blade and tang form the main rigid structure and largest high-density component, even though the handle exterior is wood. Typical masses for comparable knives are about 0.18\u20130.28 kg; 0.22 kg is a realistic estimate for a medium chef\u2019s knife with a full tang and wood scales. Stainless steel density is approximately 7800\u20138000 kg/m^3, so 7850 kg/m^3 is used as the dominant material density. The actual effective average density of the whole visual object would be lower because of the wood handle, but for root-level material behavior steel is the best dominant-material choice. Friction is estimated for brushed steel contacting common lab/table surfaces: static friction around 0.45 and dynamic friction around 0.35. The wooden handle may locally have higher friction, roughly 0.45\u20130.60, but the root-level coefficient should reflect the steel blade\u2019s dominant contact behavior. Restitution is moderate-low at 0.45: steel is resilient, but the thin blade, wood handle, and non-spherical shape dissipate energy during impacts. For Isaac Sim / PhysX, this is a thin, elongated object with sharp edges, so collision approximation is important. A single convex hull would greatly overfill the blade-handle silhouette and make the cutting edge and handle indentation inaccurate. Convex decomposition is recommended, using several hulls for the blade, bolster/tang, and handle scales. If extremely accurate blade-edge contact is required and performance is less important, an SDF mesh collider could be considered, but convex decomposition is usually more stable and efficient for a dynamic rigid body. Small contact offsets are recommended because the blade is thin: 0.0015 m contact offset and 0.0 m rest offset minimize visible hovering while still generating stable contacts. CCD should be enabled because a thin knife can tunnel through surfaces when dropped, thrown, or moved quickly. Initial velocity is zero. Gravity is the standard Isaac Sim scene gravity vector. No articulation properties are required because this is a single rigid body with no moving joints. Compliant contacts are disabled or set very stiff because the model represents rigid steel/wood/brass, not a deformable object.",
+      "static_friction": 0.45,
+      "dynamic_friction": 0.35,
+      "restitution": 0.45,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": ""
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00449 Kitchen Knife",
+  "object_description": "A chef\u2019s knife with a brushed stainless-steel blade, a brown wooden handle, and round brass rivets. The blade is broad and tapered with a sharp pointed tip, while the handle is smoothly contoured and slightly rounded.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.22,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies"
+}

@@ -1,0 +1,81 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00923 Whis Wooden Spoon",
+      "source_part_name": "D00923 Whis Wooden Spoon",
+      "source_object_name": "D00923 Whis Wooden Spoon",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "varnished_hardwood",
+      "material": "varnished_hardwood",
+      "non_visual_material": null,
+      "mass": 0.055,
+      "density": 650.0,
+      "inertia": [
+        7.92116866301608e-06,
+        0.0004588605491797139,
+        0.00046364355711241796
+      ],
+      "inertia_axes": [
+        0.7076695346230476,
+        -0.0005203495842617706,
+        0.003122925993563342,
+        -0.7065364862029052
+      ],
+      "center_of_mass": [
+        -4.503115633566872e-05,
+        0.02785144623090724,
+        0.013286153335571111
+      ],
+      "part_origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "volume": 8.35352411582176e-05,
+      "bounds": {
+        "min": [
+          -0.03380399942398071,
+          -0.10808300226926804,
+          0.0
+        ],
+        "max": [
+          0.03382499888539314,
+          0.18933799862861633,
+          0.02178500033915043
+        ],
+        "center": [
+          -2.0521398435544278e-05,
+          0.005810848692312089,
+          0.011359763485739784
+        ]
+      },
+      "description": "A light-colored wooden spoon with an oval concave bowl and a long rounded handle, showing visible wood grain and a smooth varnished finish.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The object appears to be a single-piece wooden cooking spoon, likely beech, maple, or similar hardwood. With no product data supplied, dimensions are estimated at roughly 0.28-0.32 m overall length, a bowl about 0.075-0.085 m long by 0.055-0.065 m wide, and a handle diameter around 0.015-0.020 m. A solid-equivalent wood volume of about 7e-5 to 9e-5 m^3 at 600-750 kg/m^3 gives a realistic mass range of about 0.04-0.065 kg; 0.055 kg is a reasonable value for a moderately thick spoon. The density is set to 650 kg/m^3, representative of common hardwood; explicit mass should be authored because convex collision volumes may fill the bowl concavity and otherwise overestimate mass. The dominant contact material is smooth varnished wood, so friction is moderate: static friction around 0.48 and dynamic friction around 0.35. Restitution is low-to-moderate, about 0.35, because wood can bounce slightly but the thin spoon shape and varnished finish dissipate energy through rolling, sliding, and edge impacts. For Isaac Sim / PhysX, a single convex hull would incorrectly fill the concave bowl and make the spoon contact too bulky. A convex decomposition is the recommended default: use several hulls for the handle, neck, bowl back, rim, and bowl interior wall. If accurate contact inside the concave bowl is critical, an SDF mesh collider can be used instead at higher memory and compute cost. Contact offset is kept small, around 2 mm, because the object is small and thin; rest offset is 0 so the visual mesh aligns with contact geometry. CCD is recommended because the handle and bowl rim are thin and can tunnel during fast drops or high-speed manipulation. A 120 Hz scene step improves stability for thin contacts, although 60 Hz is acceptable for low-speed tabletop scenes. Since this is a non-deformable wooden object, compliant contacts are disabled by default; if contact jitter occurs, a stiff low-compliance contact model may be added, but it should not be used to represent large deformation.",
+      "static_friction": 0.48,
+      "dynamic_friction": 0.35,
+      "restitution": 0.35,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": ""
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00923 Whis Wooden Spoon",
+  "object_description": "A light-colored wooden spoon with an oval concave bowl and a long rounded handle, showing visible wood grain and a smooth varnished finish.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.055,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies"
+}

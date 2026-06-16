@@ -1,0 +1,81 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00278 Dish Towel",
+      "source_part_name": "D00278 Dish Towel",
+      "source_object_name": "D00278 Dish Towel",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "cotton_textile_fabric",
+      "material": "cotton_textile_fabric",
+      "non_visual_material": null,
+      "mass": 0.12,
+      "density": 80.0,
+      "inertia": [
+        0.0006189197350742888,
+        0.001089125556979106,
+        0.0016705070671234367
+      ],
+      "inertia_axes": [
+        5.04644532051253e-05,
+        0.7203393334855206,
+        0.6936165166680116,
+        0.0027147545577495737
+      ],
+      "center_of_mass": [
+        -0.011975882837396748,
+        -0.01313718126500242,
+        0.023342768378819673
+      ],
+      "part_origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "volume": 0.003535696359064368,
+      "bounds": {
+        "min": [
+          -0.14401499927043915,
+          -0.18007299304008484,
+          -4.600000102072954e-05
+        ],
+        "max": [
+          0.1144459992647171,
+          0.15637299418449402,
+          0.04734399914741516
+        ],
+        "center": [
+          -0.004375771604813921,
+          -0.004097842441207472,
+          0.020155587844422916
+        ]
+      },
+      "description": "A folded rectangular cotton cloth shown in assorted woven textures and colors, with stitched hems and soft wrinkled surfaces. The material appears matte, fibrous, and slightly compressible.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The image shows folded household textiles/napkins or small towels made primarily from cotton or cotton-linen fabric. No real product dimensions or mass are provided, so the values are estimated for one representative folded cloth body. A typical folded cloth of this type is approximately 0.25-0.35 m wide, 0.30-0.45 m long, and 0.012-0.025 m thick depending on the number of folds and weave thickness. A realistic mass range is roughly 0.07-0.18 kg for a woven napkin and up to about 0.25 kg for a small terry towel; 0.12 kg is a practical representative value. Because a folded cloth contains many air gaps and should usually be represented by a solid convex collision envelope, the effective simulation density is much lower than raw cotton fiber density; an effective bulk density of about 80 kg/m^3 is appropriate for a folded, soft, porous slab. The dominant contact material is cotton textile. Textile-on-common-surfaces friction is relatively high due to weave roughness, so static friction is estimated at 0.75 and dynamic friction at 0.62. Restitution is very low, around 0.05, because fabric dissipates impact energy through internal damping and local compression. For Isaac Sim / PhysX rigid-body use, this should not be treated as a true deformable cloth unless a cloth solver is used; as a rigid body, a convex decomposition or simplified rounded slab collider is preferred. A single convex hull is fastest but will ignore the folded lip and hem detail, while a small convex decomposition with 2-6 hulls can preserve the folded rectangular slab, edge thickness, and rolled/hemmed borders without using expensive triangle or SDF collision. Contact offsets should be small but nonzero because the object is thin: a rest offset around 0.001 m and contact offset around 0.004 m help avoid jitter and tunneling while keeping the visual mesh aligned with contacts. CCD is recommended if the cloth body can be dropped, thrown, or gripped quickly, since the folded slab is thin. For non-deformable rigid-body approximation, compliant contacts with moderate stiffness and strong damping can imitate soft fabric compression and reduce hard-contact bouncing. If the full image is imported as a set of nine separate cloth variants, use these mass/contact values per cloth and assign each cloth its own rigid body; total mass would scale to roughly 1.0-1.3 kg for all nine pieces.",
+      "static_friction": 0.75,
+      "dynamic_friction": 0.62,
+      "restitution": 0.05,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": ""
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00278 Dish Towel",
+  "object_description": "A folded rectangular cotton cloth shown in assorted woven textures and colors, with stitched hems and soft wrinkled surfaces. The material appears matte, fibrous, and slightly compressible.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.12,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies"
+}

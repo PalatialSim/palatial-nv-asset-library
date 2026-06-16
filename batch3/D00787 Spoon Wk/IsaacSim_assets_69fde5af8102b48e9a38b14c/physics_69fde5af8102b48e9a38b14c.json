@@ -1,0 +1,81 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00787 Spoon Wk",
+      "source_part_name": "D00787 Spoon Wk",
+      "source_object_name": "D00787 Spoon Wk",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "stainless_steel",
+      "material": "stainless_steel",
+      "non_visual_material": null,
+      "mass": 0.035,
+      "density": 7900.0,
+      "inertia": [
+        3.5509715391389907e-06,
+        6.0470748975270945e-05,
+        6.348283812863926e-05
+      ],
+      "inertia_axes": [
+        0.00020364325938832624,
+        0.9997284014339268,
+        8.972619881132335e-05,
+        -0.023303944837676883
+      ],
+      "center_of_mass": [
+        0.006761152887315103,
+        2.6985592353220182e-05,
+        0.006533831708258234
+      ],
+      "part_origin_world": [
+        0.006761152887315103,
+        2.6985592353220182e-05,
+        0.006533831708258234
+      ],
+      "volume": 4.477063162586345e-05,
+      "bounds": {
+        "min": [
+          -0.06662796437740326,
+          0.0,
+          -0.02449110895395279
+        ],
+        "max": [
+          0.1161591038107872,
+          0.015813559293746948,
+          0.024429403245449066
+        ],
+        "center": [
+          0.0014475498691495664,
+          0.005811804378539807,
+          -3.205261001940804e-05
+        ]
+      },
+      "description": "A polished stainless steel spoon with an oval concave bowl and a long rounded handle. The surface is smooth silver metal with softly rolled edges and a slight brushed sheen.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The object is a single-piece stamped stainless steel spoon. With no product data supplied, the estimate assumes a typical household teaspoon/dessert spoon approximately 0.17-0.19 m long, 0.035-0.045 m wide at the bowl, and 1.2-2.0 mm thick through most sections, with locally thicker rolled edges and handle curvature. A realistic mass for this size is about 35 g; larger tablespoons may be closer to 45-60 g, but the visual proportions suggest a medium spoon rather than a heavy serving spoon. The dominant physical material is stainless steel, so the material density is set to 7900 kg/m^3. The effective modeled volume implied by 0.035 kg at 7900 kg/m^3 is about 4.4e-6 m^3, consistent with a thin stamped utensil. Stainless steel is smooth and hard, giving moderate dry friction: static friction around 0.45 and dynamic friction around 0.35 are appropriate for metal contact against typical simulation surfaces; values should be reduced if the contact surface is polished metal or increased if the ground material is rubberized. Restitution is estimated at 0.55 for steel, but the spoon\u2019s thin stamped geometry and concave bowl will dissipate some impact energy through ringing, flexural vibration, and rolling, so this is lower than an ideal hardened steel sphere. For Isaac Sim/PhysX, the spoon is long, thin, and partly concave, so a single convex hull would overfill the bowl and bridge the handle curvature. Convex decomposition is the best default rigid-body collider: use multiple hulls for the bowl, neck, and handle to preserve graspable edges while remaining stable and faster than an SDF/trimesh. If exact bowl concavity is critical, an SDF mesh can be used, but convex decomposition is usually preferable for dynamic tabletop interaction. Because the spoon has thin edges and may be dropped or moved quickly, CCD should be enabled globally and on the rigid body to reduce tunneling. Recommended collision offsets are small relative to the object thickness: rest_offset about 0.0005 m and contact_offset about 0.002 m. This keeps contacts stable without excessively inflating the thin metal geometry. Initial velocity is zero. For practical setups, keep maximum linear speeds moderate or enable CCD at higher speeds, and allow the object to sleep once settled to reduce simulation cost. Compliant contacts are not physically necessary for a rigid stainless object; if used to reduce solver jitter on hard tabletop impacts, they should be very stiff with high damping rather than soft/deformable.",
+      "static_friction": 0.45,
+      "dynamic_friction": 0.35,
+      "restitution": 0.55,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": ""
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00787 Spoon Wk",
+  "object_description": "A polished stainless steel spoon with an oval concave bowl and a long rounded handle. The surface is smooth silver metal with softly rolled edges and a slight brushed sheen.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.035,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies"
+}

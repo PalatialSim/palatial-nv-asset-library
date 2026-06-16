@@ -1,0 +1,81 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00790 Spooner",
+      "source_part_name": "D00790 Spooner",
+      "source_object_name": "D00790 Spooner",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "polished_stainless_steel",
+      "material": "polished_stainless_steel",
+      "non_visual_material": null,
+      "mass": 0.09,
+      "density": 7850.0,
+      "inertia": [
+        1.3678307217020661e-05,
+        8.958726280342989e-05,
+        0.00010100706289715332
+      ],
+      "inertia_axes": [
+        0.00010585106687113532,
+        -0.9999420933472173,
+        5.2672484921150245e-05,
+        -0.010760853755440534
+      ],
+      "center_of_mass": [
+        0.005522821247260998,
+        2.8911815862890947e-05,
+        0.006846246220270994
+      ],
+      "part_origin_world": [
+        0.005522821247260998,
+        2.8911815862890947e-05,
+        0.006846246220270994
+      ],
+      "volume": 5.5836697844535595e-05,
+      "bounds": {
+        "min": [
+          -0.0559660829603672,
+          0.0,
+          -0.02933298796415329
+        ],
+        "max": [
+          0.07283984869718552,
+          0.01547410897910595,
+          0.02927744761109352
+        ],
+        "center": [
+          -0.0027399173194554683,
+          0.005427746568659694,
+          -2.648677397199548e-05
+        ]
+      },
+      "description": "A polished stainless-steel spoon with a shallow oval bowl, raised rim, and long curved handle. The surface is smooth, reflective silver metal with thin rolled edges.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The object appears to be a single-piece stainless-steel spoon or spoon-rest-like utensil with a concave bowl and an elongated curved handle. No product dimensions are provided, so the estimate assumes a utensil length of roughly 0.20\u20130.24 m, bowl width of 0.07\u20130.09 m, and sheet-metal thickness around 1.0\u20131.5 mm. Stainless steel has a true material density near 7700\u20138000 kg/m^3; 7850 kg/m^3 is used as the root material density. Because this is a thin shell rather than a solid filled volume, the rigid-body mass should be assigned explicitly instead of allowing the physics engine to compute mass from the visual bounding volume. A surface-area estimate of about 0.007\u20130.010 m^2 times approximately 1.2 mm thickness gives a steel volume near 8e-6 to 1.2e-5 m^3, corresponding to roughly 0.06\u20130.10 kg, so 0.09 kg is a realistic mass for a medium stainless serving spoon or spoon rest. The dominant contact material is polished stainless steel, so friction is moderate: static friction is estimated at 0.45 and dynamic friction at 0.32 for generic dry contact against common hard surfaces. Restitution is set to 0.55 because steel is elastic, but the thin curved shape, rolling edges, and vibration/ringing dissipate energy more than a compact steel ball. For Isaac Sim/PhysX, a single convex hull would incorrectly fill the concave spoon bowl and bridge the underside curvature. Convex decomposition is the recommended default for a dynamic rigid body because it is robust and performant while preserving the bowl, rim, and handle shape better than a single hull. If exact bowl-interior interaction is required and the mesh is watertight, an SDF mesh collider could be used at higher cost; otherwise HACD-style convex decomposition with several hulls is safer. Small contact offsets are recommended because the utensil is thin: a rest offset around 0.0005 m slightly inflates the contact surface without making the object visibly hover, and a contact offset around 0.0035 m gives PhysX enough distance to generate stable contacts. CCD should be enabled because thin metal edges can tunnel through surfaces when dropped or moved quickly. The object is rigid metal, so compliant contacts are disabled by default; solver stability should instead come from adequate substepping, contact offsets, and CCD.",
+      "static_friction": 0.45,
+      "dynamic_friction": 0.32,
+      "restitution": 0.55,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": ""
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00790 Spooner",
+  "object_description": "A polished stainless-steel spoon with a shallow oval bowl, raised rim, and long curved handle. The surface is smooth, reflective silver metal with thin rolled edges.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.09,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies"
+}
