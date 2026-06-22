@@ -1,0 +1,102 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00829 Strainer",
+      "source_part_name": "D00829 Strainer",
+      "source_object_name": "D00829 Strainer",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "ceramic",
+      "material": "ceramic",
+      "non_visual_material": null,
+      "mass": 1.85,
+      "density": 2400.0,
+      "inertia": [
+        0.006515028375372082,
+        0.00849509064682928,
+        0.009965892860334221
+      ],
+      "inertia_axes": [
+        0.999999483907684,
+        -0.00013866558375692943,
+        -0.00013267481191125977,
+        0.0009976741031074282
+      ],
+      "center_of_mass": [
+        -2.369612941976736e-05,
+        -9.874683126397498e-05,
+        0.06439241484725859
+      ],
+      "part_origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "volume": 0.000358003263763588,
+      "bounds": {
+        "min": [
+          -0.11852800101041794,
+          -0.08748599886894226,
+          -7.000000096013537e-06
+        ],
+        "max": [
+          0.11857199668884277,
+          0.08749400079250336,
+          0.11571399867534637
+        ],
+        "center": [
+          2.12698548871182e-05,
+          -3.3797357405088884e-05,
+          0.0615351412829092
+        ]
+      },
+      "description": "A cream-colored, matte ceramic colander with a bowl-shaped body covered in small drainage holes. It features two loop handles on opposite sides and a circular pedestal base with small cutout arches.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The visual appearance\u2014specifically the matte finish, material thickness around the rim and handles, and overall solid form\u2014strongly suggests ceramic (stoneware or earthenware) rather than lightweight plastic or thin metal. For physics simulation in Isaac Sim, ceramic properties dictate a relatively high density and mass for its size. The friction coefficients reflect a slightly rough, unglazed ceramic finish typical of such functional items. Restitution is kept very low, as ceramic is highly rigid, brittle, and absorbs impact energy rather than bouncing. Continuous Collision Detection (CCD) is recommended because if this object is dropped or manipulated quickly, its relatively thin walls (compared to its overall bounding box) could tunnel through other objects. For collision geometry, 'convex_decomposition' is absolutely critical; a standard 'convex_hull' would span across the top opening, preventing objects from being placed inside the bowl.",
+      "static_friction": 0.55,
+      "dynamic_friction": 0.45,
+      "restitution": 0.15,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": "",
+      "appearance_properties": {},
+      "newton": {
+        "collisions": {
+          "collider_type": "convex_decomposition",
+          "rest_offset": 0,
+          "contact_offset": 0.002,
+          "explosion_view_distance": 0,
+          "collision_mesh_debug_visualization": false
+        },
+        "simulation_scene": {
+          "simulation_steps_per_second": 60,
+          "enable_ccd": true,
+          "gravitational_acceleration": [
+            0,
+            0,
+            -9.81
+          ],
+          "gpu_buffer_parameters": {},
+          "residuals": {}
+        }
+      }
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00829 Strainer",
+  "object_description": "A cream-colored, matte ceramic colander with a bowl-shaped body covered in small drainage holes. It features two loop handles on opposite sides and a circular pedestal base with small cutout arches.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 1.85,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies"
+}

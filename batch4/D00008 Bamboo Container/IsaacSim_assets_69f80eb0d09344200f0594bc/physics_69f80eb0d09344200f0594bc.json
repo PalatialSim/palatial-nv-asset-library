@@ -1,0 +1,81 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00008 Bamboo Container",
+      "source_part_name": "D00008 Bamboo Container",
+      "source_object_name": "D00008 Bamboo Container",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "wood",
+      "material": "wood",
+      "non_visual_material": null,
+      "mass": 0.34,
+      "density": 650.0,
+      "inertia": [
+        0.00036361731550552313,
+        0.0005198290614566036,
+        0.0005466158777530161
+      ],
+      "inertia_axes": [
+        0.5579399975934156,
+        -0.5547636683153142,
+        -0.43818861370965057,
+        -0.4346619033432884
+      ],
+      "center_of_mass": [
+        0.00033974081246631113,
+        0.0004694832206490738,
+        0.05527795360943629
+      ],
+      "part_origin_world": [
+        0.00033974081246631113,
+        0.0004694832206490738,
+        0.05527795360943629
+      ],
+      "volume": 0.0007513927795084987,
+      "bounds": {
+        "min": [
+          -0.07025499641895294,
+          -0.04840800166130066,
+          3.000000106112566e-06
+        ],
+        "max": [
+          0.05637599900364876,
+          0.05486400052905083,
+          0.12655100226402283
+        ],
+        "center": [
+          0.0007961945059461565,
+          -0.0011774212618152313,
+          0.056886175123987755
+        ]
+      },
+      "description": "A cylindrical bamboo canister with a flat round lid, small rounded knob, and a matching wooden spoon protruding through a slot. It has a light natural wood finish with visible vertical grain.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The object appears to be an empty bamboo or light hardwood lidded canister with a small spoon. Assuming a typical countertop canister size of roughly 0.10\u20130.11 m diameter and 0.10\u20130.12 m body height, with 5\u20137 mm wall thickness, a thin lid, knob, and spoon, the solid bamboo volume is estimated at about 4.5e-4 to 5.5e-4 m^3. Using a realistic bamboo material density of about 600\u2013750 kg/m^3 gives an empty assembled mass near 0.30\u20130.40 kg; 0.34 kg is a reasonable rigid-body mass for the canister, lid, knob, and spoon treated as one rigid object. The material density is set to 650 kg/m^3, while the effective bounding-volume density would be lower because the canister is hollow. The center of mass should be near the central vertical axis of the cylinder, slightly shifted upward and toward the protruding spoon if the spoon is included in the same rigid body. For PhysX in Isaac Sim, convex decomposition is preferable: a single convex hull would overfill the spoon gap and rounded details, while a triangle mesh is not recommended for dynamic rigid bodies. A decomposition into cylinder-like hulls for the body/lid/knob plus a slender hull for the spoon gives stable contacts at much lower cost than SDF mesh collision. Finished bamboo behaves like smooth wood: use moderate friction, with static friction around 0.50\u20130.60 and dynamic friction around 0.35\u20130.45 depending on the counter surface. Restitution is low-to-moderate because hollow wood dissipates energy and the object has rounded edges, so 0.35 is appropriate. Contact offset is kept small at 0.0025 m for a 10 cm-scale object; larger default offsets can make the object appear to float or collide too early. Rest offset is 0.0 m to align collision and visual surfaces. CCD is not required for normal placement or falling speeds, but should be enabled if the spoon is simulated as a separate fast, thin rigid body or if the canister is thrown at high speed. Compliant contacts are disabled because the asset is visually rigid; if a softer tactile response is desired, a high-stiffness, damped contact model can be enabled, but it is not the baseline recommendation.",
+      "static_friction": 0.55,
+      "dynamic_friction": 0.42,
+      "restitution": 0.35,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": ""
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00008 Bamboo Container",
+  "object_description": "A cylindrical bamboo canister with a flat round lid, small rounded knob, and a matching wooden spoon protruding through a slot. It has a light natural wood finish with visible vertical grain.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.34,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies"
+}

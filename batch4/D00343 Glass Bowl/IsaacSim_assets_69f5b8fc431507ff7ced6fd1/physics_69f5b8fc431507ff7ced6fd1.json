@@ -1,0 +1,81 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00343 Glass Bowl",
+      "source_part_name": "D00343 Glass Bowl",
+      "source_object_name": "D00343 Glass Bowl",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "baked_bread",
+      "material": "baked_bread",
+      "non_visual_material": null,
+      "mass": 0.34,
+      "density": 2350.0,
+      "inertia": [
+        0.0005119615109126713,
+        0.0005127937428868817,
+        0.000758176727580617
+      ],
+      "inertia_axes": [
+        0.9988898521084487,
+        8.477382711857456e-05,
+        -0.0002578477615874376,
+        -0.04710615334212326
+      ],
+      "center_of_mass": [
+        1.4643978884167348e-05,
+        0.00012127257695887712,
+        0.04549790577835171
+      ],
+      "part_origin_world": [
+        1.4643978884167348e-05,
+        0.00012127257695887712,
+        0.04549790577835171
+      ],
+      "volume": 0.0009397058178224328,
+      "bounds": {
+        "min": [
+          -0.0975940003991127,
+          -0.09748400002717972,
+          -0.00013099999341648072
+        ],
+        "max": [
+          0.09738799929618835,
+          0.09734100103378296,
+          0.09878599643707275
+        ],
+        "center": [
+          -0.00013860027551382606,
+          -0.00014656125823465447,
+          0.05154217828658367
+        ]
+      },
+      "description": "A glossy white ceramic bowl with a rounded hemispherical body, thick rolled rim, and small circular foot ring.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "No product specifications are provided, so the estimates assume a typical small ceramic serving/rice bowl with an outer diameter of roughly 0.14-0.16 m, height of 0.075-0.09 m, wall thickness of about 3-5 mm, and a slightly thicker base/foot ring. Porcelain or glazed stoneware has a material density around 2200-2500 kg/m^3; using an estimated ceramic shell volume of about 1.3-1.5e-4 m^3 gives a mass near 0.30-0.36 kg, so 0.34 kg is a realistic explicit mass. The density value should be treated as the ceramic material density; for Isaac Sim it is preferable to author an explicit mass because convex decomposition can overestimate volume if the hollow cavity is partially filled by collision hulls. The center of mass should lie on the vertical symmetry axis and slightly below mid-height because the foot ring and bottom are thicker. The glossy glazed ceramic surface is hard and smooth: static friction is estimated at about 0.48 and dynamic friction at about 0.36, with the foot ring potentially slightly higher if unglazed. Restitution is set to 0.30 rather than a high hard-material value because a thin ceramic bowl dissipates impact energy through vibration and would normally chip or crack instead of bouncing elastically. For collision, a single convex hull is not recommended because it would close the bowl opening and remove the interior cavity. Convex decomposition is the best general PhysX-compatible choice for a dynamic rigid body: use multiple hulls around the sidewall, rim, bottom, and foot ring to preserve the concave bowl shape. SDF mesh collision can be used instead when high-fidelity inner-rim contact is required and the mesh is clean, but convex decomposition is more predictable and usually faster for rigid body contact. Rest offset is kept at 0.0 m to avoid visual/collision separation, and contact offset is kept small at 0.002 m so contacts are generated reliably without artificially thickening the thin rim or wall. CCD is enabled because the object has thin features and can tunnel during drops or fast contacts. Initial velocities are zero; practical velocity limits would be around 10-15 m/s linear and 50-80 rad/s angular for stable tabletop-scale scenes. A 120 Hz simulation step is recommended for stable contact on the narrow foot ring; 60 Hz is acceptable for slow scenes. Sleep/hibernation can use default PhysX thresholds or slightly elevated thresholds after settling to reduce jitter, but avoid overly aggressive sleep if the bowl must respond to small contacts. Compliant contacts are disabled for a rigid ceramic bowl; if contact chatter occurs, use high-stiffness, low-compliance contact settings rather than soft deformable behavior.",
+      "static_friction": 0.48,
+      "dynamic_friction": 0.36,
+      "restitution": 0.3,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": ""
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00343 Glass Bowl",
+  "object_description": "A glossy white ceramic bowl with a rounded hemispherical body, thick rolled rim, and small circular foot ring.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.34,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies"
+}

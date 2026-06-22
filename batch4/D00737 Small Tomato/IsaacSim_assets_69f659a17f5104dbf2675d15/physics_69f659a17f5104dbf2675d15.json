@@ -1,0 +1,81 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00737 Small Tomato",
+      "source_part_name": "D00737 Small Tomato",
+      "source_object_name": "D00737 Small Tomato",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "organic_fruit_tissue",
+      "material": "organic_fruit_tissue",
+      "non_visual_material": null,
+      "mass": 0.12,
+      "density": 950.0,
+      "inertia": [
+        1.7995718299839757e-05,
+        2.1472024883564092e-05,
+        2.1605452244054736e-05
+      ],
+      "inertia_axes": [
+        0.6344695381620515,
+        -0.004844412170783931,
+        0.7282888931164747,
+        0.25888264711705306
+      ],
+      "center_of_mass": [
+        -3.4271097541959276e-05,
+        0.0010610875559358762,
+        0.0215303711876195
+      ],
+      "part_origin_world": [
+        -3.4271097541959276e-05,
+        0.0010610875559358762,
+        0.0215303711876195
+      ],
+      "volume": 3.557417899057414e-05,
+      "bounds": {
+        "min": [
+          -0.02275799959897995,
+          -0.02121799997985363,
+          -5.0999999075429514e-05
+        ],
+        "max": [
+          0.021740999072790146,
+          0.02300800010561943,
+          0.05086499825119972
+        ],
+        "center": [
+          -0.00016428853450652008,
+          0.00038282393515828633,
+          0.024049803735782905
+        ]
+      },
+      "description": "A glossy red tomato with a rounded, slightly flattened fruit body and green fibrous calyx, leaves, and short stem. The surface appears smooth, thin-skinned, and moist with small natural speckles.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The object is a fresh tomato: a water-rich organic fruit with a nearly spherical/oblate body and lightweight leafy stem structure. A typical medium tomato has a diameter of about 55\u201370 mm and a mass of roughly 80\u2013180 g; a representative value of 0.12 kg is appropriate for a single tomato of the shown size. Tomato bulk density is close to water but slightly lower due to internal air spaces and cellular tissue, so 950 kg/m^3 is a realistic rigid-body density estimate. The main fruit is soft and highly damped, so although this is modeled as a rigid body, contact behavior should use low restitution and optionally compliant contacts to approximate the non-bouncy, energy-absorbing response of a ripe tomato. The smooth waxy skin gives moderate friction on common clean surfaces: higher than glass/plastic because of slight tackiness and moisture, but lower than rubber. Static friction is estimated at 0.55 and dynamic friction at 0.42. Restitution is set low at 0.12 because a tomato deforms internally and dissipates impact energy rather than bouncing. For collision geometry, the best practical Isaac Sim representation is convex decomposition: one near-spherical or ellipsoidal convex part for the fruit body plus simplified convex hulls/capsules for the calyx leaves and stem if they need physical contact. If only gross manipulation/contact is required, a sphere or ellipsoid approximation for the body alone is faster and usually more stable; however, convex decomposition better preserves the protruding green top. A full triangle mesh collider is not recommended for a dynamic rigid body in PhysX unless converted to SDF or simplified, and SDF would be unnecessarily expensive for most tomato interactions. Contact offset of about 2 mm is suitable for a small organic object in meter units, providing stable contact generation without visibly floating. Rest offset is kept at 0 so the collider aligns closely with the visible mesh. CCD is recommended because the tomato is small and can be dropped or thrown; it helps prevent tunneling through thin surfaces. Initial velocity is zero, with normal Earth gravity. For non-deformable approximation of a soft fruit, compliant contacts can be enabled with moderate stiffness and high damping to reduce unrealistic hard impacts. Suggested solver settings would use 60\u2013120 Hz simulation; 120 Hz is preferable for grasping or impacts with small objects. Sleep/hibernation should be allowed after motion settles to improve performance, with a low sleep threshold because the mass is small; avoid excessive contact offsets or overly detailed leaf colliders that can cause jitter.",
+      "static_friction": 0.55,
+      "dynamic_friction": 0.42,
+      "restitution": 0.12,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": ""
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00737 Small Tomato",
+  "object_description": "A glossy red tomato with a rounded, slightly flattened fruit body and green fibrous calyx, leaves, and short stem. The surface appears smooth, thin-skinned, and moist with small natural speckles.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.12,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies"
+}

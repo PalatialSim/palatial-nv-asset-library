@@ -1,0 +1,102 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00795 Sprig",
+      "source_part_name": "D00795 Sprig",
+      "source_object_name": "D00795 Sprig",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "plant_matter_light_wood",
+      "material": "plant_matter_light_wood",
+      "non_visual_material": null,
+      "mass": 0.03,
+      "density": 600.0,
+      "inertia": [
+        4.573861670433398e-05,
+        0.00010028548507108902,
+        0.0001116135751827431
+      ],
+      "inertia_axes": [
+        0.9301066495256685,
+        0.3661443529149571,
+        -0.024289612317919596,
+        0.01580974604691652
+      ],
+      "center_of_mass": [
+        -0.00414278753484681,
+        0.0004383592967709836,
+        0.056380432132879944
+      ],
+      "part_origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "volume": 7.803548390088974e-05,
+      "bounds": {
+        "min": [
+          -0.22469399869441986,
+          -0.1397940069437027,
+          9.999999974752427e-07
+        ],
+        "max": [
+          0.19061200320720673,
+          0.13870400190353394,
+          0.1982879936695099
+        ],
+        "center": [
+          0.0017441328141238534,
+          0.0018346777837927762,
+          0.07804499460939093
+        ]
+      },
+      "description": "A natural plant branch featuring a thin, woody stem, multiple green ovate leaves, and clusters of small, dark, spherical berries.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The object is an organic plant branch with leaves and berries. In a rigid body physics context, it is characterized by very low mass, complex concave geometry with thin features, and highly damped impact behavior. The dominant material is considered to be fresh plant matter/light wood. The mass is estimated at 0.03 kg, assuming a standard size of roughly 20-30 cm in length and a very sparse solid volume compared to its bounding box. Density is estimated at 600 kg/m\u00b3, lower than solid wood but representative of the overall organic structure. Friction is set moderately (0.5 static) as bark and leaves provide some grip, while restitution is extremely low (0.15) because a branch will deaden upon impact and not bounce. For Isaac Sim, Continuous Collision Detection (CCD) is absolutely critical for this asset; its low mass and thin leaf structures make it highly prone to tunneling through other colliders at even moderate velocities. A 'convex_decomposition' is necessary for the collider to capture the branching shape without creating a massive empty bounding volume, though careful tuning is required to avoid generating too many hulls for the leaves. Contact offsets are kept minimal (0.002m) to ensure the thin leaves rest realistically on surfaces.",
+      "static_friction": 0.5,
+      "dynamic_friction": 0.4,
+      "restitution": 0.15,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": "",
+      "appearance_properties": {},
+      "newton": {
+        "collisions": {
+          "collider_type": "convex_decomposition",
+          "rest_offset": 0,
+          "contact_offset": 0.002,
+          "explosion_view_distance": 0,
+          "collision_mesh_debug_visualization": false
+        },
+        "simulation_scene": {
+          "simulation_steps_per_second": 60,
+          "enable_ccd": true,
+          "gravitational_acceleration": [
+            0,
+            0,
+            -9.81
+          ],
+          "gpu_buffer_parameters": {},
+          "residuals": {}
+        }
+      }
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00795 Sprig",
+  "object_description": "A natural plant branch featuring a thin, woody stem, multiple green ovate leaves, and clusters of small, dark, spherical berries.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.03,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies"
+}

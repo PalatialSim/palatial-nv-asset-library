@@ -1,0 +1,102 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00035 Blue Bottle",
+      "source_part_name": "D00035 Blue Bottle",
+      "source_object_name": "D00035 Blue Bottle",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "plastic",
+      "material": "plastic",
+      "non_visual_material": null,
+      "mass": 0.85,
+      "density": 1000.0,
+      "inertia": [
+        0.0010789783998314498,
+        0.004740286365372169,
+        0.004865699797836916
+      ],
+      "inertia_axes": [
+        0.4911937848610344,
+        -0.48528716991039544,
+        -0.5146658756454269,
+        -0.5082755796616408
+      ],
+      "center_of_mass": [
+        0.002010728128357303,
+        0.002173228938347896,
+        0.12099004295351708
+      ],
+      "part_origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "volume": 0.0019727090195505747,
+      "bounds": {
+        "min": [
+          -0.06111891195178032,
+          -1.0067145922221243e-05,
+          -0.0539243146777153
+        ],
+        "max": [
+          0.05716508626937866,
+          0.28177592158317566,
+          0.05240768566727638
+        ],
+        "center": [
+          0.001142132363770954,
+          0.13116514382088582,
+          -0.0007516943343587555
+        ]
+      },
+      "description": "A matte blue plastic spray bottle with a white and blue trigger mechanism and a large white rectangular label.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The physical properties are estimated based on a full bottle configuration. The label clearly states a volume of 750 ml. Assuming the cleaning liquid has a density comparable to water (1000 kg/m\u00b3), the liquid mass is 0.75 kg. Adding an estimated 0.1 kg for the relatively thick plastic body and the complex spray mechanism yields a total mass of roughly 0.85 kg. The bulk density is set to 1000 kg/m\u00b3 to reflect the water-based contents. The dominant external material is smooth plastic (likely HDPE or PET), which dictates a moderate static friction (0.5) and dynamic friction (0.4) against typical robotic end-effectors or tabletops. Restitution is set low (0.2) because a fluid-filled plastic container will absorb impact energy rather than bouncing. For Isaac Sim collision physics, a 'convex_decomposition' collider type is critical; a standard 'convex_hull' would erroneously encapsulate the empty space between the main bottle body, the neck, and the overhanging spray nozzle, making accurate grasping impossible.",
+      "static_friction": 0.5,
+      "dynamic_friction": 0.4,
+      "restitution": 0.2,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": "",
+      "appearance_properties": {},
+      "newton": {
+        "collisions": {
+          "collider_type": "convex_decomposition",
+          "rest_offset": 0,
+          "contact_offset": 0.002,
+          "explosion_view_distance": 0,
+          "collision_mesh_debug_visualization": false
+        },
+        "simulation_scene": {
+          "simulation_steps_per_second": 60,
+          "enable_ccd": false,
+          "gravitational_acceleration": [
+            0,
+            0,
+            -9.81
+          ],
+          "gpu_buffer_parameters": {},
+          "residuals": {}
+        }
+      }
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00035 Blue Bottle",
+  "object_description": "A matte blue plastic spray bottle with a white and blue trigger mechanism and a large white rectangular label.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.85,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies"
+}

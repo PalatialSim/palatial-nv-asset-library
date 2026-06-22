@@ -1,0 +1,81 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00716 Scoop",
+      "source_part_name": "D00716 Scoop",
+      "source_object_name": "D00716 Scoop",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "stainless_steel",
+      "material": "stainless_steel",
+      "non_visual_material": null,
+      "mass": 0.22,
+      "density": 420.0,
+      "inertia": [
+        9.380161371282805e-05,
+        0.0006821821406661533,
+        0.0007306427718631265
+      ],
+      "inertia_axes": [
+        0.9999589437534181,
+        -0.00011012304377043315,
+        -0.009059004924813154,
+        0.0001819621823121007
+      ],
+      "center_of_mass": [
+        0.007924597587036985,
+        0.00014798487068986562,
+        0.02666619008428433
+      ],
+      "part_origin_world": [
+        0.007924597587036985,
+        0.00014798487068986562,
+        0.02666619008428433
+      ],
+      "volume": 0.0004264324538623867,
+      "bounds": {
+        "min": [
+          -0.15514600276947021,
+          -0.05932899937033653,
+          -4.70000013592653e-05
+        ],
+        "max": [
+          0.22701400518417358,
+          0.05964700132608414,
+          0.06883200258016586
+        ],
+        "center": [
+          -0.0028393833972581075,
+          0.00015333793456921742,
+          0.034392658155679164
+        ]
+      },
+      "description": "A brushed stainless-steel scoop with a deep oval bowl and rolled rim, attached to a brown wooden handle. The handle has visible metal rivets and rounded ends.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The object appears to be a composite kitchen scoop: a thin formed stainless-steel bowl and tang with two wooden handle scales fastened by metal rivets. No product data is available, so dimensions are estimated at roughly 0.30-0.35 m total length, a bowl around 0.16-0.18 m long by 0.10-0.12 m wide by 0.05-0.06 m deep, and a handle about 0.14-0.16 m long. Assuming 0.7-1.0 mm stainless steel for the scoop shell, a small steel tang, hardwood handle scales, and rivets, a realistic total mass is about 0.20-0.25 kg; 0.22 kg is used. The density value is an effective PhysX density relative to the closed collision/envelope volume, not the true stainless-steel density, because the scoop is mostly hollow air volume. If assigning explicit mass through USD MassAPI, use the mass directly and let Isaac Sim compute inertia from the collision mesh or provide a custom inertia tensor if high accuracy is needed. Contact behavior is dominated by brushed stainless steel on the bowl and hardwood on the handle: dry steel/wood contacts justify moderate friction, with static friction slightly higher than dynamic friction. Restitution is kept lower than bulk steel because the thin shell, rim, handle, and edge contacts dissipate energy and can produce rolling rather than clean bounce. For collision geometry, a single convex hull would incorrectly seal the concave bowl and remove the usable interior shape. An SDF mesh is the preferred high-fidelity option in Isaac Sim v4.5 if the mesh is watertight or has physical thickness; otherwise use convex decomposition with multiple hulls for the bowl wall/rim, neck, handle, and rivets. Contact offset is kept small, about 2 mm, to avoid floating on the thin rim while still generating stable contact constraints. CCD is recommended because the rolled rim and thin metal shell can tunnel during drops or fast manipulation. Compliant contacts should generally be disabled for this rigid metal/wood object; if contact jitter appears on the thin rim, use very stiff, highly damped compliant contact settings only as a stabilization aid. A 120 Hz scene step is recommended for robust contact on the thin concave shape, though 60 Hz is acceptable for slow motion with lower accuracy.",
+      "static_friction": 0.5,
+      "dynamic_friction": 0.38,
+      "restitution": 0.3,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": ""
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00716 Scoop",
+  "object_description": "A brushed stainless-steel scoop with a deep oval bowl and rolled rim, attached to a brown wooden handle. The handle has visible metal rivets and rounded ends.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.22,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies"
+}

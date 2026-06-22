@@ -1,0 +1,81 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00757 Spice",
+      "source_part_name": "D00757 Spice",
+      "source_object_name": "D00757 Spice",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "organic_leaf_tissue",
+      "material": "organic_leaf_tissue",
+      "non_visual_material": null,
+      "mass": 0.012,
+      "density": 600.0,
+      "inertia": [
+        2.1360143156328505e-07,
+        2.875054829378225e-07,
+        2.9963563864356214e-07
+      ],
+      "inertia_axes": [
+        0.0657050014614882,
+        -0.9948655079117397,
+        -0.005533914280508993,
+        -0.07677792484300473
+      ],
+      "center_of_mass": [
+        0.00018943818254843803,
+        0.00014429888436470455,
+        0.006459166997701984
+      ],
+      "part_origin_world": [
+        0.00018943818254843803,
+        0.00014429888436470455,
+        0.006459166997701984
+      ],
+      "volume": 1.6388417487845525e-06,
+      "bounds": {
+        "min": [
+          -0.012082000263035297,
+          -0.009243999607861042,
+          -1.8000000636675395e-05
+        ],
+        "max": [
+          0.013842999935150146,
+          0.009704000316560268,
+          0.01781499944627285
+        ],
+        "center": [
+          0.0008230511281469609,
+          0.0001999795213052541,
+          0.008901060300531517
+        ]
+      },
+      "description": "A small brown walnut with an oval hard shell and deeply wrinkled, ridged organic surface. The exterior appears dry, matte-to-satin, and woody with lighter scuffed highlights in the grooves.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The object appears to be a whole walnut or similar hard-shelled nut. In the absence of product data, I assume a typical real size of approximately 35\u201345 mm long, 28\u201335 mm wide, and 28\u201335 mm tall. A whole walnut commonly has a mass of about 10\u201315 g, so 0.012 kg is a realistic rigid-body mass. The effective bulk density is much lower than dense wood because the walnut includes shell, kernel, and internal air gaps; using an ellipsoid volume of roughly 4.0 cm x 3.2 cm x 3.2 cm gives an external volume near 21 cm^3, and 12 g / 21 cm^3 gives about 570 kg/m^3. A rounded value of 600 kg/m^3 is appropriate for mass-from-volume authoring if the mesh is scaled to real dimensions. The shell behaves like a hard dry organic material: friction is comparable to rough wood or dry plant shell, higher than polished plastic but lower than rubber. I estimate static friction around 0.55 and dynamic friction around 0.42 against typical lab table, plastic, or metal surfaces. Restitution is low-to-moderate because the shell is hard but the internal kernel and irregular shell dissipate energy; 0.25 is a stable value that prevents excessive bouncing. For Isaac Sim / PhysX, the walnut is globally convex and roughly ellipsoidal, so a convex hull collider is the best default for performance and stable rolling. Fine wrinkle geometry should generally remain visual only; using SDF or triangle mesh for every groove would be expensive and may introduce noisy contacts. If exact resting on ridges is required, use a simplified convex decomposition with a few hulls or an SDF mesh only for high-fidelity offline scenes. Rest offset should be 0.0 m for direct visual alignment, and contact offset around 0.001 m is suitable for a small object in meter units. CCD is recommended because the object is small and could tunnel through thin surfaces if dropped or thrown. Initial velocity is zero, gravity is standard Earth gravity, and no articulations are present. Sleep/hibernation should be allowed with low thresholds because this lightweight object will otherwise jitter on its wrinkled contact surface; use solver/contact settings conservatively if the mesh scale is very small.",
+      "static_friction": 0.55,
+      "dynamic_friction": 0.42,
+      "restitution": 0.25,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": ""
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00757 Spice",
+  "object_description": "A small brown walnut with an oval hard shell and deeply wrinkled, ridged organic surface. The exterior appears dry, matte-to-satin, and woody with lighter scuffed highlights in the grooves.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.012,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies"
+}
