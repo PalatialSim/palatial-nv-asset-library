@@ -1,0 +1,102 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00073 Bowl Strain",
+      "source_part_name": "D00073 Bowl Strain",
+      "source_object_name": "D00073 Bowl Strain",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "hard_plastic",
+      "material": "hard_plastic",
+      "non_visual_material": null,
+      "mass": 0.35,
+      "density": 1200.0,
+      "inertia": [
+        0.0010803359629064564,
+        0.0013505553102400468,
+        0.00178258614328747
+      ],
+      "inertia_axes": [
+        0.999930468088166,
+        -0.009833058627325105,
+        0.0009439681704895839,
+        0.006440409234341373
+      ],
+      "center_of_mass": [
+        8.654181286855931e-05,
+        0.0003025943275692664,
+        0.06764978798144866
+      ],
+      "part_origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "volume": 0.0032729555725059278,
+      "bounds": {
+        "min": [
+          -0.12357600033283234,
+          -0.09272199869155884,
+          -1.5999999959603883e-05
+        ],
+        "max": [
+          0.1249459981918335,
+          0.0952180027961731,
+          0.10562299937009811
+        ],
+        "center": [
+          0.0002239597162712949,
+          0.0006064635555416329,
+          0.049689047847551494
+        ]
+      },
+      "description": "A white, bowl-shaped colander with evenly spaced circular drainage holes and two small side handles.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "Based on the visual appearance, the object is likely made of a thick, hard matte plastic (such as melamine or high-density polyethylene), common for kitchen prep ware. The mass is estimated at 0.35 kg assuming typical dimensions (approx 20-25cm diameter). The density is set to 1200 kg/m^3, reflecting a dense plastic material. Friction coefficients are estimated for smooth hard plastic, providing moderate grip, while restitution is kept relatively low (0.4) as rigid plastics tend to absorb impacts rather than bounce elastically. Crucially for simulation, a simple convex hull would enclose the entire bowl volume, preventing objects from being placed inside. Therefore, 'convex_decomposition' is highly recommended to accurately capture the deep concavity of the bowl and the protruding handles, allowing for realistic interactions.",
+      "static_friction": 0.4,
+      "dynamic_friction": 0.3,
+      "restitution": 0.4,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": "",
+      "appearance_properties": {},
+      "newton": {
+        "collisions": {
+          "collider_type": "convex_decomposition",
+          "rest_offset": 0,
+          "contact_offset": 0.01,
+          "explosion_view_distance": 0,
+          "collision_mesh_debug_visualization": false
+        },
+        "simulation_scene": {
+          "simulation_steps_per_second": 60,
+          "enable_ccd": false,
+          "gravitational_acceleration": [
+            0,
+            0,
+            -9.81
+          ],
+          "gpu_buffer_parameters": {},
+          "residuals": {}
+        }
+      }
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00073 Bowl Strain",
+  "object_description": "A white, bowl-shaped colander with evenly spaced circular drainage holes and two small side handles.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.35,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies"
+}

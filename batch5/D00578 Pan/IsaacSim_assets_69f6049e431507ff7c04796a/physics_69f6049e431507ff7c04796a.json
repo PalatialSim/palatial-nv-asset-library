@@ -1,0 +1,102 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00578 Pan",
+      "source_part_name": "D00578 Pan",
+      "source_object_name": "D00578 Pan",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "stainless_steel",
+      "material": "stainless_steel",
+      "non_visual_material": null,
+      "mass": 1.5,
+      "density": 7900.0,
+      "inertia": [
+        0.0034838026264660486,
+        0.006436929757229355,
+        0.009566345790185556
+      ],
+      "inertia_axes": [
+        0.999653429460168,
+        -2.7768983992670753e-05,
+        -0.024049880211894477,
+        0.010706234594946934
+      ],
+      "center_of_mass": [
+        0.008828731195337844,
+        0.0002358218187193128,
+        0.02199334238913752
+      ],
+      "part_origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "volume": 0.0014046073610040905,
+      "bounds": {
+        "min": [
+          -0.11769092828035355,
+          -0.10561344772577286,
+          -0.00035979540552943945
+        ],
+        "max": [
+          0.20043115317821503,
+          0.1062818169593811,
+          0.0459236204624176
+        ],
+        "center": [
+          -0.004429541843898784,
+          0.00010602261597588531,
+          0.013664945108385665
+        ]
+      },
+      "description": "A polished stainless steel frying pan with a circular cooking surface, flared sides, and a long handle attached by two rivets.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The object is visually identified as a solid stainless steel frying pan. The dominant material is clearly steel, dictating a high density (approx 7900 kg/m\u00b3) and moderate friction/restitution coefficients typical of polished metals. For a standard 10-12 inch pan of heavy-bottom construction, a mass of 1.5 kg is estimated. Crucially, for Isaac Sim PhysX, the collision geometry must be set to 'convex_decomposition' (VHACD) rather than a simple convex hull; otherwise, the physics engine will cap the top of the pan, preventing other simulated objects from being placed inside it. Continuous Collision Detection (CCD) is recommended due to the relatively thin rim of the pan, which could cause tunneling if dropped at high velocities edge-first.",
+      "static_friction": 0.5,
+      "dynamic_friction": 0.4,
+      "restitution": 0.55,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": "",
+      "appearance_properties": {},
+      "newton": {
+        "collisions": {
+          "collider_type": "convex_decomposition",
+          "rest_offset": 0,
+          "contact_offset": 0.005,
+          "explosion_view_distance": 0,
+          "collision_mesh_debug_visualization": false
+        },
+        "simulation_scene": {
+          "simulation_steps_per_second": 60,
+          "enable_ccd": true,
+          "gravitational_acceleration": [
+            0,
+            0,
+            -9.81
+          ],
+          "gpu_buffer_parameters": {},
+          "residuals": {}
+        }
+      }
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00578 Pan",
+  "object_description": "A polished stainless steel frying pan with a circular cooking surface, flared sides, and a long handle attached by two rivets.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 1.5,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies"
+}

@@ -1,0 +1,102 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "generated reference 01",
+      "source_part_name": "generated reference 01",
+      "source_object_name": "generated reference 01",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "hard_plastic",
+      "material": "hard_plastic",
+      "non_visual_material": null,
+      "mass": 0.25,
+      "density": 1200.0,
+      "inertia": [
+        0.0005412059682377933,
+        0.0007032786511980112,
+        0.0008591803678613011
+      ],
+      "inertia_axes": [
+        0.9999527770695416,
+        -0.0004471388953499578,
+        -0.0011895600925554417,
+        -0.009634762296294555
+      ],
+      "center_of_mass": [
+        0.00017022346201850803,
+        -5.980721215370276e-05,
+        0.05970643414334006
+      ],
+      "part_origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "volume": 0.0019266431217448917,
+      "bounds": {
+        "min": [
+          -0.11338884,
+          0.0,
+          -0.0911502
+        ],
+        "max": [
+          0.11354283,
+          0.10098629,
+          0.09126513
+        ],
+        "center": [
+          3.830072906436929e-05,
+          0.05500248371648515,
+          6.344501273659913e-05
+        ]
+      },
+      "description": "A matte, off-white colander with small drainage holes arranged in a pattern, two integrated side handles, and a pedestal base.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The object is visually identified as a kitchen colander, likely made of hard, matte plastic (like melamine) or possibly a lightweight ceramic, though plastic is more standard for this form factor. The density is estimated at 1200 kg/m\u00b3, typical for solid hard plastics. Assuming standard dimensions (roughly 20-25cm diameter), the volume yields an estimated mass of 0.25 kg. Friction coefficients (0.4 static, 0.3 dynamic) and restitution (0.3) are appropriate for hard plastic interacting with typical kitchen or robotic surfaces in PhysX. For Isaac Sim collision handling, 'convex_decomposition' is critical; a simple convex hull would create a 'lid' over the bowl, preventing objects from being placed inside. Decomposition will preserve the main concavity and handle loops, though the solver will likely fill the small drainage holes to optimize performance, which is standard practice for rigid body manipulation tasks unless fluid/particle simulation requires an SDF mesh.",
+      "static_friction": 0.4,
+      "dynamic_friction": 0.3,
+      "restitution": 0.3,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": "",
+      "appearance_properties": {},
+      "newton": {
+        "collisions": {
+          "collider_type": "convex_decomposition",
+          "rest_offset": 0,
+          "contact_offset": 0.002,
+          "explosion_view_distance": 0.05,
+          "collision_mesh_debug_visualization": false
+        },
+        "simulation_scene": {
+          "simulation_steps_per_second": 60,
+          "enable_ccd": true,
+          "gravitational_acceleration": [
+            0,
+            0,
+            -9.81
+          ],
+          "gpu_buffer_parameters": {},
+          "residuals": {}
+        }
+      }
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "generated reference 01",
+  "object_description": "A matte, off-white colander with small drainage holes arranged in a pattern, two integrated side handles, and a pedestal base.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.25,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies"
+}

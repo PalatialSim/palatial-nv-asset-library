@@ -1,0 +1,81 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00088 Bun",
+      "source_part_name": "D00088 Bun",
+      "source_object_name": "D00088 Bun",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "baked_bread",
+      "material": "baked_bread",
+      "non_visual_material": null,
+      "mass": 0.55,
+      "density": 250.0,
+      "inertia": [
+        0.0003039839403037587,
+        0.0003093162395288535,
+        0.00045361166599567346
+      ],
+      "inertia_axes": [
+        0.9999980773941082,
+        0.000810841122232608,
+        0.0011453897676172446,
+        0.001369608353563164
+      ],
+      "center_of_mass": [
+        0.0012159068320960718,
+        -0.00014253390505747322,
+        0.020778257095194715
+      ],
+      "part_origin_world": [
+        0.0012159068320960718,
+        -0.00014253390505747322,
+        0.020778257095194715
+      ],
+      "volume": 0.00022529717132598604,
+      "bounds": {
+        "center": [
+          0.00091290917392171,
+          0.019969247091819374,
+          0.00015178724651383426
+        ],
+        "max": [
+          0.046131547540426254,
+          0.05056184157729149,
+          0.044578518718481064
+        ],
+        "min": [
+          -0.042805202305316925,
+          0.0,
+          -0.04426855593919754
+        ]
+      },
+      "description": "A round rustic bread loaf with a golden-brown crust, flour-dusted surface, porous crumb openings, and a scored top.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The object is a small-to-medium round artisan loaf. With no measured product data provided, I estimated a typical boule diameter of roughly 0.18-0.22 m and height of 0.10-0.13 m. A fresh crusty bread loaf of this size commonly weighs about 0.45-0.75 kg, so 0.55 kg is a realistic central estimate. Bread is highly porous, so its bulk density is far below solid starch/protein material density; using an approximate loaf volume near 0.0022 m^3 gives a bulk density of about 250 kg/m^3. The crust is rough, dry, and flour-dusted, giving moderate-to-high static friction but somewhat lower sliding friction due to loose flour particles; static friction is estimated at 0.62 and dynamic friction at 0.48. Restitution is very low because bread dissipates impact energy through crumb compression and crust cracking, so 0.08 is appropriate. For Isaac Sim/PhysX, the visible small pores should not be modeled as collision holes because they would create unstable, expensive contacts. A convex decomposition is recommended over a single convex hull if the flattened base and top scoring need approximate contact behavior; otherwise a single convex hull would be faster. SDF or triangle mesh collision is unnecessary for a dynamic rigid body of this type unless exact visual-surface contact is required. Contact offset is set to 0.005 m to generate stable contacts for a decimeter-scale object, with a small 0.001 m rest offset to avoid visual interpenetration while preserving the rounded surface. CCD can remain disabled for normal handling and falling speeds because the loaf is thick and slow relative to its size; enable CCD only if it is launched or moved faster than several meters per second. Compliant contacts are enabled with modest damping/stiffness values to approximate the slightly compressible crust-and-crumb behavior while still treating the asset as a rigid body. A 120 Hz simulation rate is recommended when using compliant contacts or grasp-like interactions; 60 Hz is acceptable for simple settling on a surface.",
+      "static_friction": 0.62,
+      "dynamic_friction": 0.48,
+      "restitution": 0.08,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": ""
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00088 Bun",
+  "object_description": "A round rustic bread loaf with a golden-brown crust, flour-dusted surface, porous crumb openings, and a scored top.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.55,
+  "center_of_mass": null,
+  "inertia": null,
+  "num_parts": 1,
+  "object_type": "rigid_bodies",
+  "overall_assessment": ""
+}
