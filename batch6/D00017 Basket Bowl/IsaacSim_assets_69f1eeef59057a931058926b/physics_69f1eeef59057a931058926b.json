@@ -1,0 +1,102 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00017 Basket Bowl",
+      "source_part_name": "D00017 Basket Bowl",
+      "source_object_name": "D00017 Basket Bowl",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "ceramic",
+      "material": "ceramic",
+      "non_visual_material": null,
+      "mass": 0.6,
+      "density": 2400.0,
+      "inertia": [
+        0.002013962609292228,
+        0.0023156093855066172,
+        0.0032549147066296092
+      ],
+      "inertia_axes": [
+        0.999996007549686,
+        -0.00017965055747924205,
+        0.00025917075424874986,
+        -0.002808102719956139
+      ],
+      "center_of_mass": [
+        -0.00047603870722683664,
+        -3.7485545962606604e-06,
+        0.04170582280795855
+      ],
+      "part_origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "volume": 0.0004409429381705258,
+      "bounds": {
+        "min": [
+          -0.1065719872713089,
+          -1.3068883163214196e-05,
+          -0.09713806957006454
+        ],
+        "max": [
+          0.10617601126432419,
+          0.127113938331604,
+          0.09642592817544937
+        ],
+        "center": [
+          -0.00021614533920728943,
+          0.049212617077979776,
+          -0.00022344901886662885
+        ]
+      },
+      "description": "A white ceramic bowl featuring a basket-weave textured exterior and two looped handles.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "Based on the visual appearance, the object is made of glazed ceramic or porcelain. A density of 2400 kg/m\u00b3 is assigned, typical for dense ceramics. Assuming standard dimensions for a medium-sized serving bowl, the mass is estimated at 0.6 kg. The glazed surface dictates moderate friction (0.4 static, 0.3 dynamic) against typical surfaces, and its rigid, brittle nature results in a low restitution coefficient (0.15). Crucially, for Isaac Sim collision modeling, 'convex_decomposition' must be used; a basic convex hull would incorrectly seal the top opening and bridge the gap under the handles, preventing accurate physical interactions like placing objects inside or grasping the handles. Standard contact offsets are used to prevent interpenetration while maintaining performance.",
+      "static_friction": 0.4,
+      "dynamic_friction": 0.3,
+      "restitution": 0.15,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": "",
+      "appearance_properties": {},
+      "newton": {
+        "collisions": {
+          "collider_type": "convex_decomposition",
+          "rest_offset": 0,
+          "contact_offset": 0.005,
+          "explosion_view_distance": 0,
+          "collision_mesh_debug_visualization": false
+        },
+        "simulation_scene": {
+          "simulation_steps_per_second": 60,
+          "enable_ccd": true,
+          "gravitational_acceleration": [
+            0,
+            0,
+            -9.81
+          ],
+          "gpu_buffer_parameters": {},
+          "residuals": {}
+        }
+      }
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00017 Basket Bowl",
+  "object_description": "A white ceramic bowl featuring a basket-weave textured exterior and two looped handles.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.6,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies"
+}

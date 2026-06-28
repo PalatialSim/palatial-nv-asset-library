@@ -1,0 +1,102 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00024 Black Bottle",
+      "source_part_name": "D00024 Black Bottle",
+      "source_object_name": "D00024 Black Bottle",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "rigid_plastic",
+      "material": "rigid_plastic",
+      "non_visual_material": null,
+      "mass": 0.45,
+      "density": 950.0,
+      "inertia": [
+        0.0002657961421351118,
+        0.000919904937058574,
+        0.0009961553049671478
+      ],
+      "inertia_axes": [
+        0.4999800905113795,
+        -0.49999534800166984,
+        -0.49995899031328506,
+        -0.5000655647751028
+      ],
+      "center_of_mass": [
+        -1.0214556485009575e-05,
+        0.00012535573854797745,
+        0.0720538547490413
+      ],
+      "part_origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "volume": 0.0005326714460420555,
+      "bounds": {
+        "min": [
+          -0.03798599913716316,
+          -0.02843499928712845,
+          -0.00010199999815085903
+        ],
+        "max": [
+          0.038040000945329666,
+          0.02846500091254711,
+          0.16545799374580383
+        ],
+        "center": [
+          5.4793751472715884e-05,
+          7.852400731495e-05,
+          0.07277121149021051
+        ]
+      },
+      "description": "A black, rigid plastic bottle with a rectangular body, rounded edges, and a cylindrical flip-top cap. The external surface features visible scratches and wear marks.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The object is visually identified as a rigid plastic container, typical of HDPE or PET bottles. For rigid body simulation in Isaac Sim, bulk properties are estimated assuming a filled state (approx. 400ml) to provide realistic heft and stability during robotic manipulation (e.g., grasping, pushing). Bulk density is calculated assuming the bounding volume is mostly filled with a water-like substance or heavy lotion. Friction and restitution coefficients are selected based on standard hard plastic material interactions. A convex decomposition collider is recommended to accurately approximate the shape, particularly the indentation around the neck, while maintaining efficient PhysX collision solving.",
+      "static_friction": 0.4,
+      "dynamic_friction": 0.3,
+      "restitution": 0.3,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": "",
+      "appearance_properties": {},
+      "newton": {
+        "collisions": {
+          "collider_type": "convex_decomposition",
+          "rest_offset": 0,
+          "contact_offset": 0.002,
+          "explosion_view_distance": 0,
+          "collision_mesh_debug_visualization": false
+        },
+        "simulation_scene": {
+          "simulation_steps_per_second": 60,
+          "enable_ccd": false,
+          "gravitational_acceleration": [
+            0,
+            0,
+            -9.81
+          ],
+          "gpu_buffer_parameters": {},
+          "residuals": {}
+        }
+      }
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00024 Black Bottle",
+  "object_description": "A black, rigid plastic bottle with a rectangular body, rounded edges, and a cylindrical flip-top cap. The external surface features visible scratches and wear marks.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.45,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies"
+}

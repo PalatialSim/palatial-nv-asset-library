@@ -1,0 +1,102 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00544 Mug Glass",
+      "source_part_name": "D00544 Mug Glass",
+      "source_object_name": "D00544 Mug Glass",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "ceramic",
+      "material": "ceramic",
+      "non_visual_material": null,
+      "mass": 0.35,
+      "density": 2400.0,
+      "inertia": [
+        0.0003259375551255568,
+        0.00034457769481823137,
+        0.0003802262159633782
+      ],
+      "inertia_axes": [
+        0.6601330433252449,
+        -0.6574399294101436,
+        -0.25529813989889155,
+        -0.25849557847572924
+      ],
+      "center_of_mass": [
+        -0.0023379734046859177,
+        -0.00027754093212577327,
+        0.03470306715963121
+      ],
+      "part_origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "volume": 7.543735806943496e-05,
+      "bounds": {
+        "min": [
+          -0.03901118412613869,
+          -0.03401007130742073,
+          -9.231484727934003e-05
+        ],
+        "max": [
+          0.0547223761677742,
+          0.03391989693045616,
+          0.07781854271888733
+        ],
+        "center": [
+          -0.0024228184682698714,
+          -5.019265883551864e-05,
+          0.03631398494663016
+        ]
+      },
+      "description": "A matte white ceramic coffee mug with a cylindrical body and a C-shaped handle.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "Based on the visual appearance, the object is a standard coffee mug made of unglazed or matte-finished ceramic (stoneware or porcelain). The mass is estimated at 0.35 kg, which is typical for an average-sized, thick-walled ceramic mug. The density of dense ceramic material is approximately 2400 kg/m\u00b3. Ceramic surfaces typically exhibit moderate friction (estimated static 0.5, dynamic 0.4) and very low restitution (0.2) as the material is hard and brittle, tending to absorb impact energy rather than bouncing. For physics simulation in Isaac Sim, continuous collision detection (CCD) is recommended due to the object's relatively small size and potential for high-velocity impacts if dropped. Crucially, the collision geometry must be set to 'convex_decomposition' (or 'sdf_mesh') rather than a simple 'convex_hull'; a convex hull would encapsulate the entire bounding volume, closing off the top opening and the gap inside the handle, which would prevent objects from being placed inside the mug and block realistic grasping behaviors.",
+      "static_friction": 0.5,
+      "dynamic_friction": 0.4,
+      "restitution": 0.2,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": "",
+      "appearance_properties": {},
+      "newton": {
+        "collisions": {
+          "collider_type": "convex_decomposition",
+          "rest_offset": 0,
+          "contact_offset": 0.002,
+          "explosion_view_distance": 0,
+          "collision_mesh_debug_visualization": false
+        },
+        "simulation_scene": {
+          "simulation_steps_per_second": 60,
+          "enable_ccd": true,
+          "gravitational_acceleration": [
+            0,
+            0,
+            -9.81
+          ],
+          "gpu_buffer_parameters": {},
+          "residuals": {}
+        }
+      }
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00544 Mug Glass",
+  "object_description": "A matte white ceramic coffee mug with a cylindrical body and a C-shaped handle.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.35,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies"
+}

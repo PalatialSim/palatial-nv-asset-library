@@ -1,0 +1,102 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "generated reference 01",
+      "source_part_name": "generated reference 01",
+      "source_object_name": "generated reference 01",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "wood",
+      "material": "wood",
+      "non_visual_material": null,
+      "mass": 4.0,
+      "density": 650.0,
+      "inertia": [
+        0.05870802191880694,
+        0.07244444765500445,
+        0.12602799076774426
+      ],
+      "inertia_axes": [
+        1.6756687747500792e-05,
+        0.7070682121991212,
+        0.7071453470166196,
+        -3.47778157616972e-05
+      ],
+      "center_of_mass": [
+        0.0007800734915870571,
+        -0.0008023173828233544,
+        0.044481985433517925
+      ],
+      "part_origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "volume": 0.016683228391749173,
+      "bounds": {
+        "min": [
+          -0.20697552,
+          0.0,
+          -0.23052907
+        ],
+        "max": [
+          0.20853727,
+          0.08848381,
+          0.23218181
+        ],
+        "center": [
+          0.0008070538526287465,
+          0.05139300655027466,
+          0.0008521608542090623
+        ]
+      },
+      "description": "A thick, rectangular wooden cutting board with rounded edges, a perimeter juice groove, side handle indents, and small black rubber feet.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The object is visually identifiable as a solid hardwood cutting board (likely walnut or acacia). The dominant material is wood, which dictates the density and overall body friction/restitution. Based on typical dimensions for a block this thick (approx. 35x35x5 cm), the volume is roughly 0.006 m^3. Assuming a hardwood density of 650 kg/m^3, the estimated mass is around 4.0 kg. The static friction is set moderately high (0.5) to represent finished wood, though it's worth noting the rubber feet would provide significantly higher friction (0.8+) on the bottom surface if multi-material collision is utilized. Restitution is low (0.4) as dense wood absorbs impacts well. For collisions, 'convex_decomposition' is highly recommended over a simple bounding box or single convex hull to ensure the side handle indents and the shallow juice groove are accurately represented for physical interactions (like a knife resting in the groove or a robotic gripper engaging the handle). Continuous Collision Detection (CCD) is disabled as this object is heavy and unlikely to reach high velocities under normal simulation conditions.",
+      "static_friction": 0.5,
+      "dynamic_friction": 0.4,
+      "restitution": 0.4,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": "",
+      "appearance_properties": {},
+      "newton": {
+        "collisions": {
+          "collider_type": "convex_decomposition",
+          "rest_offset": 0,
+          "contact_offset": 0.002,
+          "explosion_view_distance": 0.05,
+          "collision_mesh_debug_visualization": false
+        },
+        "simulation_scene": {
+          "simulation_steps_per_second": 60,
+          "enable_ccd": false,
+          "gravitational_acceleration": [
+            0,
+            0,
+            -9.81
+          ],
+          "gpu_buffer_parameters": {},
+          "residuals": {}
+        }
+      }
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "generated reference 01",
+  "object_description": "A thick, rectangular wooden cutting board with rounded edges, a perimeter juice groove, side handle indents, and small black rubber feet.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 4.0,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies"
+}

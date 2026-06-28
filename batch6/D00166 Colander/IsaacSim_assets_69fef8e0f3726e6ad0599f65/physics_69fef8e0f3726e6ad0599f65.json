@@ -1,0 +1,81 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00166 Colander",
+      "source_part_name": "D00166 Colander",
+      "source_object_name": "D00166 Colander",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "glazed_ceramic",
+      "material": "glazed_ceramic",
+      "non_visual_material": null,
+      "mass": 1.6,
+      "density": 2400.0,
+      "inertia": [
+        0.006390644170268259,
+        0.007825940118766533,
+        0.009890514074751684
+      ],
+      "inertia_axes": [
+        0.9999769161903179,
+        0.0013569104038467425,
+        0.0006335519320643801,
+        0.00662755555293037
+      ],
+      "center_of_mass": [
+        0.00014362856098790096,
+        0.00043045130598998036,
+        0.06021344348175501
+      ],
+      "part_origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "volume": 0.00047045667747142115,
+      "bounds": {
+        "min": [
+          -0.13407395780086517,
+          0.0,
+          -0.10380008071660995
+        ],
+        "max": [
+          0.13453541696071625,
+          0.11830554902553558,
+          0.10287455469369888
+        ],
+        "center": [
+          0.00020908324382433138,
+          0.06331585835330192,
+          -0.0003268044766312232
+        ]
+      },
+      "description": "A glossy white glazed ceramic colander with a rounded perforated bowl, raised pedestal foot, and two loop handles.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The object appears to be a hollow glazed ceramic or porcelain kitchen colander. With no product data provided, I estimated a typical size of roughly 0.26-0.30 m bowl diameter, 0.15-0.18 m height, and about 0.34-0.38 m handle-to-handle span. Glazed ceramic has a true material density around 2200-2600 kg/m^3; however, this object is a thin shell with perforations, a hollow bowl, handles, rim thickening, and a pedestal foot, so the total mass is much lower than a solid volume. Estimating 5-7 mm ceramic wall thickness over the bowl, rim, foot, and handles gives a plausible total mass of about 1.6 kg. The root density is set to the dominant material density rather than the effective bounding-volume density; in Isaac Sim, mass should preferably be authored explicitly so convex collision decomposition does not overestimate mass by treating hollow regions as solid. The dominant contact material is smooth glazed ceramic, giving moderate-low dry friction: static friction about 0.45 and dynamic friction about 0.34 on common hard surfaces. Restitution is set around 0.38: the surface is hard like glass/ceramic, but the bowl is brittle, hollow, and energy-dissipating, so high bounce would look unrealistic. For collision, a single convex hull would incorrectly seal the hollow bowl and handle openings, while a triangle mesh is generally unsuitable for dynamic rigid bodies. Convex decomposition is the best default for performance and stability: separate hull groups should approximate the bowl shell, rim, pedestal foot, and handles, while the many small drainage perforations should usually remain visual-only unless small objects must physically pass through them. If exact perforation behavior is required, an SDF mesh can be substituted at higher cost. Contact offset is kept small, around 4 mm, to handle the thin rim and curved foot without excessive visible separation; rest offset is zero for hard contact alignment. CCD is recommended because the walls, rim, and handle loops are relatively thin and can tunnel during drops or fast robot interactions. Compliant contacts are disabled because the object is non-deformable ceramic; contact softness should be added only if solver jitter appears. A 120 Hz scene step rate is recommended for stable contacts with the curved pedestal and high-curvature rim.",
+      "static_friction": 0.45,
+      "dynamic_friction": 0.34,
+      "restitution": 0.38,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": ""
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00166 Colander",
+  "object_description": "A glossy white glazed ceramic colander with a rounded perforated bowl, raised pedestal foot, and two loop handles.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 1.6,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies"
+}

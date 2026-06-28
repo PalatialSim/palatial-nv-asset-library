@@ -1,0 +1,102 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00578 Pan",
+      "source_part_name": "D00578 Pan",
+      "source_object_name": "D00578 Pan",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "stainless_steel",
+      "material": "stainless_steel",
+      "non_visual_material": null,
+      "mass": 1.2,
+      "density": 8000.0,
+      "inertia": [
+        0.0027870421011728396,
+        0.005149543805783484,
+        0.00765307663214845
+      ],
+      "inertia_axes": [
+        0.9996534294601681,
+        -2.7768983993114995e-05,
+        -0.024049880211894796,
+        0.010706234594946896
+      ],
+      "center_of_mass": [
+        0.008828731195337844,
+        0.0002358218187193128,
+        0.02199334238913752
+      ],
+      "part_origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "volume": 0.0014046073610040905,
+      "bounds": {
+        "min": [
+          -0.11769092828035355,
+          -0.10561344772577286,
+          -0.00035979540552943945
+        ],
+        "max": [
+          0.20043115317821503,
+          0.1062818169593811,
+          0.0459236204624176
+        ],
+        "center": [
+          -0.004429541843898784,
+          0.00010602261597588531,
+          0.013664945108385665
+        ]
+      },
+      "description": "A circular stainless steel frying pan with a brushed interior and a long, riveted metal handle.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The object is visually identifiable as a solid piece of cookware, specifically a stainless steel frying pan. The dominant material is polished/brushed metal. A typical 10-to-12-inch stainless steel pan has a mass of approximately 1.0 to 1.5 kg, so an estimate of 1.2 kg is used. The density reflects standard stainless steel (approx. 8000 kg/m^3). Friction coefficients are set moderately low (0.4-0.5), typical for smooth metal surfaces interacting with other objects. Restitution is low-to-moderate (0.3), as solid steel objects clank but do not bounce highly. Crucially, the collider type must be 'convex_decomposition' or 'sdf_mesh' rather than a simple convex hull; a basic convex hull would 'cap off' the top of the pan, preventing physics objects (like simulated food) from resting inside the pan's concave interior. Continuous Collision Detection (CCD) is enabled to prevent fast-moving or thin objects from tunneling through the relatively thin base of the pan during simulation.",
+      "static_friction": 0.5,
+      "dynamic_friction": 0.4,
+      "restitution": 0.3,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": "",
+      "appearance_properties": {},
+      "newton": {
+        "collisions": {
+          "collider_type": "convex_decomposition",
+          "rest_offset": 0,
+          "contact_offset": 0.002,
+          "explosion_view_distance": 0,
+          "collision_mesh_debug_visualization": false
+        },
+        "simulation_scene": {
+          "simulation_steps_per_second": 60,
+          "enable_ccd": true,
+          "gravitational_acceleration": [
+            0,
+            0,
+            -9.81
+          ],
+          "gpu_buffer_parameters": {},
+          "residuals": {}
+        }
+      }
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00578 Pan",
+  "object_description": "A circular stainless steel frying pan with a brushed interior and a long, riveted metal handle.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 1.2,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies"
+}

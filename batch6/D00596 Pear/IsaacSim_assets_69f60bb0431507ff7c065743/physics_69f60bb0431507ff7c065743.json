@@ -1,0 +1,102 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00596 Pear",
+      "source_part_name": "D00596 Pear",
+      "source_object_name": "D00596 Pear",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "organic_matter",
+      "material": "organic_matter",
+      "non_visual_material": null,
+      "mass": 0.2,
+      "density": 1000.0,
+      "inertia": [
+        4.086315175302618e-05,
+        6.679432770612497e-05,
+        6.789838267324556e-05
+      ],
+      "inertia_axes": [
+        0.4218545834307538,
+        -0.62249797873787,
+        -0.31692555039336373,
+        -0.578007934559375
+      ],
+      "center_of_mass": [
+        0.0007591701474372793,
+        0.00011844585225310489,
+        0.02757006572494836
+      ],
+      "part_origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "volume": 6.831328587191942e-05,
+      "bounds": {
+        "min": [
+          -0.023808013647794724,
+          -0.022944195196032524,
+          2.09366153285373e-05
+        ],
+        "max": [
+          0.023648066446185112,
+          0.02429901249706745,
+          0.0770997703075409
+        ],
+        "center": [
+          -3.5052552428599755e-05,
+          0.00029513506224884976,
+          0.025970426922974924
+        ]
+      },
+      "description": "A green, bulbous pear with a brown stem and a speckled, textured skin.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The object is a fresh pear. The dominant material is organic plant matter, which has a density close to that of water (approximately 1000 kg/m\u00b3). Assuming standard dimensions for a pear, the mass is estimated at 0.2 kg. The skin provides moderate friction (static 0.5, dynamic 0.4), and due to its soft, water-dense internal structure, it has a low coefficient of restitution (0.2), meaning it will absorb impacts and bruise rather than bounce. For collision geometry in Isaac Sim, 'convex_decomposition' is highly recommended; a simple convex hull would incorrectly bridge the gap between the top of the stem and the bulbous base, resulting in an unnaturally large collision volume that would cause the pear to float or roll incorrectly. Continuous Collision Detection (CCD) is disabled as this object is typically used in low-velocity manipulation scenarios. Standard contact offsets (0.005m) are estimated to ensure stable PhysX solver behavior without creating noticeable visual gaps during contact.",
+      "static_friction": 0.5,
+      "dynamic_friction": 0.4,
+      "restitution": 0.2,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": "",
+      "appearance_properties": {},
+      "newton": {
+        "collisions": {
+          "collider_type": "convex_decomposition",
+          "rest_offset": 0,
+          "contact_offset": 0.005,
+          "explosion_view_distance": 0,
+          "collision_mesh_debug_visualization": false
+        },
+        "simulation_scene": {
+          "simulation_steps_per_second": 60,
+          "enable_ccd": false,
+          "gravitational_acceleration": [
+            0,
+            0,
+            -9.81
+          ],
+          "gpu_buffer_parameters": {},
+          "residuals": {}
+        }
+      }
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00596 Pear",
+  "object_description": "A green, bulbous pear with a brown stem and a speckled, textured skin.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.2,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies"
+}
