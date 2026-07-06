@@ -1,0 +1,81 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00205 Cooking Utensil Holder",
+      "source_part_name": "D00205 Cooking Utensil Holder",
+      "source_object_name": "D00205 Cooking Utensil Holder",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "wood",
+      "material": "wood",
+      "non_visual_material": null,
+      "mass": 1.9,
+      "density": 620.0,
+      "inertia": [
+        0.003990252803020565,
+        0.005240162147066378,
+        0.00540278504212576
+      ],
+      "inertia_axes": [
+        0.7062561833165815,
+        0.04509686530675153,
+        -0.705022916216874,
+        0.04594740336139741
+      ],
+      "center_of_mass": [
+        -0.0006444897894705926,
+        3.52144917463245e-05,
+        0.07797225110073598
+      ],
+      "part_origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "volume": 0.00184227077918007,
+      "bounds": {
+        "min": [
+          -0.09841900318861008,
+          -0.1124420017004013,
+          -0.00020500000391621143
+        ],
+        "max": [
+          0.06823299825191498,
+          0.07165499776601791,
+          0.24849699437618256
+        ],
+        "center": [
+          -0.0031100093381257517,
+          -0.0011949742484124231,
+          0.08893012011103753
+        ]
+      },
+      "description": "A square, open-top wooden bin with slightly tapered sides, rounded corners, and a thick rim. It has a glossy medium-brown wood grain finish over solid wood panels.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The object appears to be a hollow wooden wastebasket or planter-like bin. No product dimensions are provided, so values are estimated in SI units from the visible proportions: approximately 0.28\u20130.32 m tall, 0.22\u20130.25 m wide at the top, slightly narrower at the base, with roughly 10\u201318 mm wall thickness and a solid bottom panel. Using a representative size of about 0.28 m height, 0.22 m top side, 0.18 m bottom side, 12\u201315 mm walls, and a 15 mm bottom, the actual wood volume is around 0.0028\u20130.0033 m^3. Medium-density hardwood, bamboo, or laminated wood typically ranges from 550\u2013750 kg/m^3, so a realistic total mass is about 1.7\u20132.2 kg; 1.9 kg is used as a stable estimate. The root density is set to 620 kg/m^3 to represent the dominant structural/contact material rather than the hollow average density. The dominant contact surface is finished wood, so static friction is estimated at 0.55 and dynamic friction at 0.42, consistent with varnished wood on common industrial surfaces. Restitution is set to 0.35: wood has moderate impact recovery, but the hollow box shape, finish, and broad panels dissipate energy and should not behave bouncily. For collision geometry, a single convex hull would incorrectly cap the open top and prevent internal contacts, so convex decomposition is preferred: separate hulls for the four side walls, rounded-corner approximation, rim, and bottom panel. If very accurate internal placement is required, an SDF mesh could be considered, but convex decomposition is generally better for dynamic rigid bodies in Isaac Sim/PhysX due to performance and robustness. Rest offset is kept at 0.0 m for visual/contact alignment, while a 0.004 m contact offset gives stable early contact generation for a hand-sized rigid object without noticeably inflating the shape. CCD is not necessary for normal handling or falling speeds because the bin is relatively large and not thin like a fast projectile; enable CCD only if it is launched or moved at high velocity. Compliant contacts are disabled because this is a non-deformable rigid wooden object; any perceived compliance should come from solver settings rather than springy material behavior. For stable simulation, default sleep/hibernation settings are appropriate, with a low sleep threshold recommended if the object rests on a surface and should settle cleanly.",
+      "static_friction": 0.55,
+      "dynamic_friction": 0.42,
+      "restitution": 0.35,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": ""
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00205 Cooking Utensil Holder",
+  "object_description": "A square, open-top wooden bin with slightly tapered sides, rounded corners, and a thick rim. It has a glossy medium-brown wood grain finish over solid wood panels.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 1.9,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies"
+}

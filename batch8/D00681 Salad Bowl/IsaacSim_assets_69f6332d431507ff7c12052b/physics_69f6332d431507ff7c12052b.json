@@ -1,0 +1,102 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00681 Salad Bowl",
+      "source_part_name": "D00681 Salad Bowl",
+      "source_object_name": "D00681 Salad Bowl",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "ceramic",
+      "material": "ceramic",
+      "non_visual_material": null,
+      "mass": 0.4,
+      "density": 2400.0,
+      "inertia": [
+        0.0009620657858276446,
+        0.000986582445786696,
+        0.0015045492181457061
+      ],
+      "inertia_axes": [
+        0.9658271424051217,
+        0.003035528735486161,
+        0.00018131782523966855,
+        -0.25916921823916345
+      ],
+      "center_of_mass": [
+        -0.0004638893733506073,
+        0.0006784442073736844,
+        0.03941006744284659
+      ],
+      "part_origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "volume": 0.00026679266645698624,
+      "bounds": {
+        "min": [
+          -0.08200547844171524,
+          -0.0810999795794487,
+          -3.128287789877504e-05
+        ],
+        "max": [
+          0.08147487789392471,
+          0.08231697976589203,
+          0.0824771374464035
+        ],
+        "center": [
+          -0.00012254470911233882,
+          0.00028784381746257433,
+          0.04268703258627142
+        ]
+      },
+      "description": "An off-white ceramic bowl with a matte finish, a distinct foot ring, and a slightly irregular rim.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "Based on its visual appearance, the object is a standard-sized ceramic or stoneware bowl. Assuming typical dimensions (approx. 15cm diameter, 7cm height, 5mm wall thickness), the volume of the ceramic material is roughly 0.00017 m\u00b3. With a standard ceramic density of 2400 kg/m\u00b3, the estimated mass is approximately 0.4 kg. The friction coefficients (0.5 static, 0.4 dynamic) reflect the slightly porous/matte nature of unglazed or lightly glazed ceramic against typical surfaces. The restitution is low (0.2) because ceramics are highly rigid and tend to dissipate energy internally rather than bounce upon impact. For PhysX simulation in Isaac Sim, it is crucial that the 'collider_type' is set to 'convex_decomposition' rather than 'convex_hull'; otherwise, the bowl's concavity will be ignored, preventing other objects from being placed inside it. Continuous Collision Detection (CCD) is recommended to prevent tunneling if the thin-walled bowl is dropped or subjected to fast movements.",
+      "static_friction": 0.5,
+      "dynamic_friction": 0.4,
+      "restitution": 0.2,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": "",
+      "appearance_properties": {},
+      "newton": {
+        "collisions": {
+          "collider_type": "convex_decomposition",
+          "rest_offset": 0,
+          "contact_offset": 0.01,
+          "explosion_view_distance": 0,
+          "collision_mesh_debug_visualization": false
+        },
+        "simulation_scene": {
+          "simulation_steps_per_second": 60,
+          "enable_ccd": true,
+          "gravitational_acceleration": [
+            0,
+            0,
+            -9.81
+          ],
+          "gpu_buffer_parameters": {},
+          "residuals": {}
+        }
+      }
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00681 Salad Bowl",
+  "object_description": "An off-white ceramic bowl with a matte finish, a distinct foot ring, and a slightly irregular rim.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.4,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies"
+}

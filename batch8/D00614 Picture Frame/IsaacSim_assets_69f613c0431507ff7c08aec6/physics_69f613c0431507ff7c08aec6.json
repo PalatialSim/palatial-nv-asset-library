@@ -1,0 +1,102 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00614 Picture Frame",
+      "source_part_name": "D00614 Picture Frame",
+      "source_object_name": "D00614 Picture Frame",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "painted_wood_mdf",
+      "material": "painted_wood_mdf",
+      "non_visual_material": null,
+      "mass": 0.6,
+      "density": 700.0,
+      "inertia": [
+        0.00265509823907008,
+        0.0036647722532452097,
+        0.005388883002575258
+      ],
+      "inertia_axes": [
+        0.43630724741335386,
+        0.4775035109126833,
+        0.5028345074683321,
+        -0.5733967570711603
+      ],
+      "center_of_mass": [
+        -0.004163913291156568,
+        0.009600600803132865,
+        0.11153280482417376
+      ],
+      "part_origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "volume": 0.0046125817628405,
+      "bounds": {
+        "min": [
+          -0.11150512099266052,
+          -0.0543958954513073,
+          -1.2000000424450263e-05
+        ],
+        "max": [
+          0.12172380834817886,
+          0.0984048992395401,
+          0.2763591706752777
+        ],
+        "center": [
+          -3.241243500428367e-05,
+          0.002179964378020748,
+          0.12706241827415643
+        ]
+      },
+      "description": "A rectangular white picture frame with a decorative molded border and a plain off-white matting. The frame is supported by a brown cardboard easel back.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The object is a typical wooden or MDF picture frame with a glass front (implied, though the image shows matting) and a cardboard backing. The dominant material for the structural frame is likely painted wood or MDF. The density for wood/MDF is approximately 600-800 kg/m^3. A standard 8x10 inch (approx 20x25 cm) frame with this thickness (approx 1.5-2 cm) would have a volume roughly around 0.0008 m^3. The mass would be roughly 0.5-0.7 kg including the glass and cardboard backing. We estimate 0.6 kg. Friction for painted wood against typical surfaces is moderate (0.4-0.6). Restitution is low (0.2-0.4) as it's a rigid, non-bouncy structure. For Isaac Sim, a convex decomposition collider is suitable due to the hollow center (if simulated without glass) or a bounding box/convex hull if treating it as a solid block. Given the back stand, convex decomposition is best to capture the complex overall shape. CCD is generally not needed unless it's thrown at high speeds, but can be enabled for safety in manipulation.",
+      "static_friction": 0.5,
+      "dynamic_friction": 0.4,
+      "restitution": 0.3,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": "",
+      "appearance_properties": {},
+      "newton": {
+        "collisions": {
+          "collider_type": "convex_decomposition",
+          "rest_offset": 0,
+          "contact_offset": 0.02,
+          "explosion_view_distance": 0,
+          "collision_mesh_debug_visualization": false
+        },
+        "simulation_scene": {
+          "simulation_steps_per_second": 60,
+          "enable_ccd": false,
+          "gravitational_acceleration": [
+            0,
+            -9.81,
+            0
+          ],
+          "gpu_buffer_parameters": {},
+          "residuals": {}
+        }
+      }
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00614 Picture Frame",
+  "object_description": "A rectangular white picture frame with a decorative molded border and a plain off-white matting. The frame is supported by a brown cardboard easel back.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.6,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies"
+}

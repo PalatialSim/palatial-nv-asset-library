@@ -1,0 +1,81 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00451 Kitchen Knife Holder",
+      "source_part_name": "D00451 Kitchen Knife Holder",
+      "source_object_name": "D00451 Kitchen Knife Holder",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "finished_wood",
+      "material": "finished_wood",
+      "non_visual_material": null,
+      "mass": 2.0,
+      "density": 650.0,
+      "inertia": [
+        0.006536651139543368,
+        0.008898377144296797,
+        0.009372360985559035
+      ],
+      "inertia_axes": [
+        0.7069460748417953,
+        0.006761729538242002,
+        -0.7071609449082911,
+        -0.010243255139048234
+      ],
+      "center_of_mass": [
+        -0.0001882279955697362,
+        -0.006378914240617083,
+        0.08821396011336066
+      ],
+      "part_origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "volume": 0.003644900961921975,
+      "bounds": {
+        "min": [
+          -0.08493799716234207,
+          -0.04196799919009209,
+          3.999999989900971e-06
+        ],
+        "max": [
+          0.09055700153112411,
+          0.06058099865913391,
+          0.31175199151039124
+        ],
+        "center": [
+          0.0015151976322364078,
+          0.00546816443260296,
+          0.11538145019197248
+        ]
+      },
+      "description": "A slanted rectangular knife block with a smaller front compartment, rounded edges, and multiple narrow blade slots. It appears in wood-grain, brushed metal, black coated, and transparent plastic variants.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The visible object is a countertop knife block composed of two joined prismatic forms: a larger rear slanted block and a smaller front vertical block, both with elongated blade slots. No product dimensions or mass are provided, so values are estimated for a typical domestic knife block approximately 0.20-0.24 m tall, 0.11-0.14 m wide, and 0.16-0.20 m deep. The root values assume the common wood-grain version because wood appears as a dominant/representative structural material in the image and is typical for this form factor. A solid wood body with machined slots and rounded edges would have an effective solid material density around 550-750 kg/m^3; accounting for the angled geometry and slot voids gives an estimated mass of about 2.0 kg. If the stainless steel variant is intended as a solid metal object, the mass should be increased significantly, but many metal knife blocks are thin shell constructions, so the visual material alone is not enough to justify solid-steel density. For rigid-body behavior in Isaac Sim, a convex decomposition collider is preferable: a single convex hull would fill the concave step between the rear and front block and would also ignore the visual slot recesses, while triangle/SDF mesh collision is usually unnecessary unless knife insertion or slot-level contacts are required. The blade slots are narrow internal cavities and should generally be omitted from collision for stable tabletop interactions; if objects must enter the slots, use simplified custom box colliders or an SDF mesh with carefully tuned contact offsets. Varnished or finished wood on a hard surface typically has static friction around 0.45-0.60 and dynamic friction around 0.35-0.50, so 0.52 static and 0.42 dynamic are reasonable. Restitution is low-to-moderate for a dense wood block with rounded edges, estimated at 0.35. The object is not expected to move at high speed, so CCD can be disabled by default for performance, though it should be enabled if the block is dropped from height or struck by fast tools. Contact and rest offsets are set small in meter units to maintain stable stacking and avoid visible hovering while still generating contacts before interpenetration. No articulations are present.",
+      "static_friction": 0.52,
+      "dynamic_friction": 0.42,
+      "restitution": 0.35,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": ""
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00451 Kitchen Knife Holder",
+  "object_description": "A slanted rectangular knife block with a smaller front compartment, rounded edges, and multiple narrow blade slots. It appears in wood-grain, brushed metal, black coated, and transparent plastic variants.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 2.0,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies"
+}

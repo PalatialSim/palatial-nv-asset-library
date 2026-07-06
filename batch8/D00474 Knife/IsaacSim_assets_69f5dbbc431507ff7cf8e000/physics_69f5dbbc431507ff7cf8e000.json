@@ -1,0 +1,102 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00474 Knife",
+      "source_part_name": "D00474 Knife",
+      "source_object_name": "D00474 Knife",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "steel",
+      "material": "steel",
+      "non_visual_material": null,
+      "mass": 0.25,
+      "density": 7850.0,
+      "inertia": [
+        2.2781708391509644e-05,
+        0.0006905883298052894,
+        0.000707143529634851
+      ],
+      "inertia_axes": [
+        0.9999905137003312,
+        -0.000909718474529106,
+        0.00025491065650040673,
+        -0.004252051528604052
+      ],
+      "center_of_mass": [
+        0.00780994658061293,
+        -0.0002050796842025925,
+        0.007548199579506603
+      ],
+      "part_origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "volume": 6.790675712089424e-05,
+      "bounds": {
+        "min": [
+          -0.13875797390937805,
+          -0.025947999209165573,
+          -7.184433343354613e-05
+        ],
+        "max": [
+          0.09717009961605072,
+          0.015148214064538479,
+          0.015095866285264492
+        ],
+        "center": [
+          -0.012114265116714583,
+          0.0005182509236666788,
+          0.007553671422110294
+        ]
+      },
+      "description": "A chef's knife with a brushed steel blade and a dark wooden handle secured by three brass rivets.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The object is a standard chef's knife. The dominant material for physics interactions (cutting, dropping, resting on surfaces) is the steel blade, so root-level properties are based on stainless or high-carbon steel. A typical 8-inch chef's knife weighs approximately 250 grams (0.25 kg). Steel density is roughly 7850 kg/m^3. Friction coefficients are estimated for smooth brushed steel against typical surfaces. Restitution is set moderately low, as a dropped knife dissipates energy through vibration and its non-uniform shape. In Isaac Sim v4.5, continuous collision detection (CCD) is absolutely critical for this object; without it, the thin blade will tunnel through tables or cutting boards at standard time steps. A 'convex_decomposition' collider is necessary to capture the transition from the thick handle to the thin blade accurately, which a simple convex hull would over-simplify. The contact offset must be very small (0.001m) to prevent the knife from visibly floating above surfaces due to its thin profile.",
+      "static_friction": 0.5,
+      "dynamic_friction": 0.4,
+      "restitution": 0.5,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": "",
+      "appearance_properties": {},
+      "newton": {
+        "collisions": {
+          "collider_type": "convex_decomposition",
+          "rest_offset": 0,
+          "contact_offset": 0.001,
+          "explosion_view_distance": 0,
+          "collision_mesh_debug_visualization": false
+        },
+        "simulation_scene": {
+          "simulation_steps_per_second": 120,
+          "enable_ccd": true,
+          "gravitational_acceleration": [
+            0,
+            0,
+            -9.81
+          ],
+          "gpu_buffer_parameters": {},
+          "residuals": {}
+        }
+      }
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00474 Knife",
+  "object_description": "A chef's knife with a brushed steel blade and a dark wooden handle secured by three brass rivets.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.25,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies"
+}

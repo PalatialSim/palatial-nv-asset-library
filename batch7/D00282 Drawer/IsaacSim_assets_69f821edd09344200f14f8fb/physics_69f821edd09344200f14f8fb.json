@@ -1,0 +1,81 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00282 Drawer",
+      "source_part_name": "D00282 Drawer",
+      "source_object_name": "D00282 Drawer",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "wood",
+      "material": "wood",
+      "non_visual_material": null,
+      "mass": 2.1,
+      "density": 520.0,
+      "inertia": [
+        0.01313790553346989,
+        0.01417417131009379,
+        0.023108629875178165
+      ],
+      "inertia_axes": [
+        0.005844135038103978,
+        0.7067449118022355,
+        0.7074205247809816,
+        -0.005803175502020428
+      ],
+      "center_of_mass": [
+        0.00013816700433944717,
+        0.0021977943846343997,
+        0.05538794784074555
+      ],
+      "part_origin_world": [
+        0.00013816700433944717,
+        0.0021977943846343997,
+        0.05538794784074555
+      ],
+      "volume": 0.00722499419681463,
+      "bounds": {
+        "min": [
+          -0.4450869858264923,
+          -0.38654500246047974,
+          -2.5999999706982635e-05
+        ],
+        "max": [
+          0.45142000913619995,
+          0.46936601400375366,
+          1.1127400398254395
+        ],
+        "center": [
+          0.0033627586277969546,
+          0.12320258794543097,
+          0.5556284489865095
+        ]
+      },
+      "description": "A light-colored wooden open-top drawer box with visible grain, thick side walls, and a recessed rectangular pull slot on the front face.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The model appears to be a hollow rectangular drawer/box made from light softwood or bamboo-like wood. No exact dimensions are provided, so a realistic drawer scale is assumed at roughly 0.35-0.40 m wide, 0.25-0.30 m deep, and 0.12-0.16 m tall, with wall and bottom thickness around 10-15 mm. For a representative 0.38 x 0.28 x 0.14 m outer envelope and about 12 mm wall thickness, the actual wood volume is approximately 0.0035-0.0045 m^3. Light wood commonly ranges from about 400-650 kg/m^3 depending on species and finish; 520 kg/m^3 is a reasonable estimate for pine/bamboo-style drawer stock. This gives an estimated mass near 2 kg, so 2.1 kg is used. The dominant contact material is unfinished or lightly sealed wood, so static friction is estimated at 0.50 and dynamic friction at 0.40, within typical wood contact ranges. Restitution is kept low-moderate at 0.35 because a wooden box can rebound slightly on hard surfaces but loses significant energy through sound, vibration, and edge impacts. For collision geometry, a single convex hull would incorrectly close the open cavity and remove the usable interior. The preferred PhysX representation is convex decomposition or, better, a manually authored compound collider made from simple convex boxes: one bottom panel, two side panels, a rear panel, and front-face pieces around the pull slot if the slot must be physically represented. If the handle opening is not used for contact, it can be ignored to improve stability. Contact offset is set small, around 0.004 m, to avoid visible hovering while preserving reliable contact generation on the thin wooden edges. Rest offset is 0.0 m for close visual alignment. CCD is not required for normal placement or slow manipulation, but should be enabled if the drawer is thrown, dropped from height, or moved at high speed through thin objects. Initial velocity is zero. Sleep/hibernation should be allowed with ordinary thresholds because the object is rigid and non-actuated; no compliant contact model is needed unless a soft contact approximation is desired for noise reduction. Since the asset is a single rigid drawer body with no moving joints, articulation properties are disabled or empty.",
+      "static_friction": 0.5,
+      "dynamic_friction": 0.4,
+      "restitution": 0.35,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": ""
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00282 Drawer",
+  "object_description": "A light-colored wooden open-top drawer box with visible grain, thick side walls, and a recessed rectangular pull slot on the front face.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 2.1,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies"
+}

@@ -1,0 +1,102 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00655 Potted Plant",
+      "source_part_name": "D00655 Potted Plant",
+      "source_object_name": "D00655 Potted Plant",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "ceramic",
+      "material": "ceramic",
+      "non_visual_material": null,
+      "mass": 3.5,
+      "density": 2200.0,
+      "inertia": [
+        0.024938668266527703,
+        0.06812998280672836,
+        0.07020593546163241
+      ],
+      "inertia_axes": [
+        0.5400638850781166,
+        0.45820558647445897,
+        -0.544537977519745,
+        0.44928502267117015
+      ],
+      "center_of_mass": [
+        -0.0012651520102730715,
+        0.003835618972598275,
+        0.2578341745732335
+      ],
+      "part_origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "volume": 0.020132384613215877,
+      "bounds": {
+        "min": [
+          -0.1691190004348755,
+          -0.12178821861743927,
+          -0.00012011208309559152
+        ],
+        "max": [
+          0.14530053734779358,
+          0.14953064918518066,
+          0.4926390051841736
+        ],
+        "center": [
+          8.087081834651764e-05,
+          0.0007484926175591942,
+          0.22425519498008065
+        ]
+      },
+      "description": "A potted snake plant with tall, stiff, sword-like green leaves featuring light green and yellow banding. The plant is housed in a smooth, dark gray cylindrical ceramic pot filled with small brown clay pebbles at the base.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The object is a potted plant consisting of two main physical components: a heavy ceramic pot and the plant itself (leaves and soil/pebbles). For rigid body simulation in Isaac Sim, treating this as a single rigid body is most practical unless specific manipulation of leaves is required (which would necessitate a complex articulated or deformable setup). The dominant contact material is the ceramic pot, as it forms the base and primary interaction surface. Ceramic has a relatively high density, low restitution, and moderate friction. The mass is estimated at around 3.5 kg, accounting for the dense ceramic pot, the soil, and the plant mass. The center of mass should be low, inside the pot, to ensure stability. A convex decomposition is recommended for the collider to capture the cylindrical pot shape accurately, though a bounding cylinder might suffice if simplified. The leaves might be excluded from the main collision hull to prevent unrealistic tipping when lightly brushed, or approximated with a very simplified convex hull.",
+      "static_friction": 0.6,
+      "dynamic_friction": 0.5,
+      "restitution": 0.2,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": "",
+      "appearance_properties": {},
+      "newton": {
+        "collisions": {
+          "collider_type": "convex_decomposition",
+          "rest_offset": 0,
+          "contact_offset": 0.005,
+          "explosion_view_distance": 0,
+          "collision_mesh_debug_visualization": false
+        },
+        "simulation_scene": {
+          "simulation_steps_per_second": 60,
+          "enable_ccd": false,
+          "gravitational_acceleration": [
+            0,
+            0,
+            -9.81
+          ],
+          "gpu_buffer_parameters": {},
+          "residuals": {}
+        }
+      }
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00655 Potted Plant",
+  "object_description": "A potted snake plant with tall, stiff, sword-like green leaves featuring light green and yellow banding. The plant is housed in a smooth, dark gray cylindrical ceramic pot filled with small brown clay pebbles at the base.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 3.5,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies"
+}

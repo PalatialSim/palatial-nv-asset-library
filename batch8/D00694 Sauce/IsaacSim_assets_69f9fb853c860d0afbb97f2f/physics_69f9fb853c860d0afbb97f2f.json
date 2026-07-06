@@ -1,0 +1,81 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00694 Sauce",
+      "source_part_name": "D00694 Sauce",
+      "source_object_name": "D00694 Sauce",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "plastic",
+      "material": "plastic",
+      "non_visual_material": null,
+      "mass": 0.28,
+      "density": 740.0,
+      "inertia": [
+        0.00017447950633539083,
+        0.0008729452809263687,
+        0.0008737437980830435
+      ],
+      "inertia_axes": [
+        0.7066363526985788,
+        -0.025161070504589666,
+        -0.7066841069469589,
+        -0.025091005649276587
+      ],
+      "center_of_mass": [
+        -7.523411378500996e-05,
+        1.987206221927984e-05,
+        0.08984562856693375
+      ],
+      "part_origin_world": [
+        -7.523411378500996e-05,
+        1.987206221927984e-05,
+        0.08984562856693375
+      ],
+      "volume": 0.0007415874127353972,
+      "bounds": {
+        "min": [
+          -0.030587000772356987,
+          -0.030896000564098358,
+          -6.399999983841553e-05
+        ],
+        "max": [
+          0.030724000185728073,
+          0.03240099921822548,
+          0.21689899265766144
+        ],
+        "center": [
+          4.834447753079487e-05,
+          0.0009228660352603159,
+          0.09401235361088726
+        ]
+      },
+      "description": "A translucent red plastic squeeze bottle with a ribbed green screw cap and tapered nozzle. The body is cylindrical with rounded shoulders and a slightly rounded base.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The object appears to be a small plastic squeeze bottle, approximately 55 mm in diameter and 165-180 mm tall including the cap and nozzle. With no product data supplied, the mass is estimated for a mostly filled or thick-walled plastic bottle rather than an empty thin shell: a 250-300 mL bottle with plastic body/cap and red contents would commonly be about 0.25-0.32 kg. I use 0.28 kg as a stable rigid-body mass for tabletop interaction. The external occupied volume is roughly a rounded cylinder plus cap/nozzle, about 3.8e-4 m^3, giving an effective rigid-body density near 740 kg/m^3; this is lower than solid plastic because the collision volume includes hollow/air/neck geometry and represents the entire exterior volume. The dominant contact material is smooth polyethylene/polypropylene-like plastic, so static friction is estimated at 0.45 and dynamic friction at 0.35; the ribbed cap may locally increase grip but should not dominate the whole-body contact material unless separate materials are authored. Restitution is kept low-moderate at 0.25 because a filled plastic bottle is damped and does not bounce like hard glass or rubber. For Isaac Sim 4.5 / PhysX, the visual shape is mostly axisymmetric but includes small cap ribs and a tapered nozzle; a convex hull is efficient but may over-smooth the waist/nozzle, while convex decomposition gives better contact around the shoulder, cap, and base with moderate cost. SDF mesh is unnecessary unless very high-fidelity concave contact is required. Recommended collision offsets are small relative to the object scale: rest_offset 0.0 m and contact_offset 0.002 m to avoid jitter while maintaining close visual alignment. CCD can remain disabled for normal tabletop speeds, but should be enabled globally or per-body if the bottle is thrown, dropped from height, or moved quickly by a manipulator. The bottle is a single rigid body with no articulation; cap/nozzle are assumed fixed to the body. Compliant contacts are included with modest damping to approximate the non-rigid, slightly yielding plastic/filled construction without modeling deformation.",
+      "static_friction": 0.45,
+      "dynamic_friction": 0.35,
+      "restitution": 0.25,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": ""
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00694 Sauce",
+  "object_description": "A translucent red plastic squeeze bottle with a ribbed green screw cap and tapered nozzle. The body is cylindrical with rounded shoulders and a slightly rounded base.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.28,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies"
+}

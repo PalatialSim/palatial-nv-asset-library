@@ -1,0 +1,81 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00463 Kitchen Sponge",
+      "source_part_name": "D00463 Kitchen Sponge",
+      "source_object_name": "D00463 Kitchen Sponge",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "polyurethane_foam",
+      "material": "polyurethane_foam",
+      "non_visual_material": null,
+      "mass": 0.014,
+      "density": 56.0,
+      "inertia": [
+        6.300849656069257e-06,
+        1.5056601616541415e-05,
+        1.8683725601976853e-05
+      ],
+      "inertia_axes": [
+        4.074896523151011e-05,
+        -0.7071648469965283,
+        -0.7070486995345843,
+        0.00011831463099426845
+      ],
+      "center_of_mass": [
+        7.21730126876868e-05,
+        0.0007825847832514714,
+        0.016967254418948353
+      ],
+      "part_origin_world": [
+        7.21730126876868e-05,
+        0.0007825847832514714,
+        0.016967254418948353
+      ],
+      "volume": 0.0002401230195479654,
+      "bounds": {
+        "min": [
+          -0.05522400140762329,
+          -0.03409900143742561,
+          9.999999974752427e-07
+        ],
+        "max": [
+          0.05576600134372711,
+          0.035576000809669495,
+          0.031585000455379486
+        ],
+        "center": [
+          0.0001608149820647032,
+          0.0007146728499058283,
+          0.015678540733637954
+        ]
+      },
+      "description": "A rectangular yellow porous sponge block with a rough green scouring pad bonded to the top surface. The body has soft rounded edges and an open-cell foam texture.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The object appears to be a common dry kitchen scouring sponge: a low-density yellow foam body with a thin green abrasive fiber pad on top. A typical size for this item is approximately 0.11 m \u00d7 0.07 m \u00d7 0.03 m, giving an overall volume of about 2.3e-4 m\u00b3. Dry kitchen sponges commonly weigh around 10\u201320 g depending on foam type and pad thickness, so a mass estimate of 0.014 kg is appropriate. This gives an effective bulk density near 55\u201360 kg/m\u00b3, much lower than solid plastic because most of the volume is air-filled open-cell foam. The dominant structural/contact material is the yellow sponge foam, although the top green scouring surface is rougher and more abrasive. Friction is estimated high compared with hard plastic because porous foam and fibrous scouring material interlock with surfaces; static friction around 0.80 and dynamic friction around 0.65 are reasonable for a dry sponge on common hard surfaces. Restitution is very low, about 0.05, because the foam dissipates impact energy and does not bounce significantly. For Isaac Sim rigid-body use, a scaled bounding box collider is the best default because the object is essentially a rectangular cuboid and fine pore geometry should not be represented in collision. Slightly positive contact offset, around 0.002 m, improves stable contact generation for the small soft-looking object. Rest offset can remain 0.0 or slightly negative if visual penetration is acceptable; here 0.0 is used for predictable alignment. CCD is not necessary for normal handling speeds because the object is light, blunt, and not expected to move ballistically at high velocity. If launched quickly or simulated at large time steps, enabling CCD globally may help prevent tunneling. The real sponge is deformable, but as a rigid body it can be approximated with compliant contacts using low-to-moderate contact stiffness and damping to reduce hard, unrealistic impacts. Because the mass is very low, extremely high friction or high solver impulses can cause jitter; using sleep/hibernation thresholds and avoiding excessive velocities is recommended.",
+      "static_friction": 0.8,
+      "dynamic_friction": 0.65,
+      "restitution": 0.05,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": ""
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00463 Kitchen Sponge",
+  "object_description": "A rectangular yellow porous sponge block with a rough green scouring pad bonded to the top surface. The body has soft rounded edges and an open-cell foam texture.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.014,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies"
+}

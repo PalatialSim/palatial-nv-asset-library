@@ -1,0 +1,102 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00330 Frying Pan Saucepan",
+      "source_part_name": "D00330 Frying Pan Saucepan",
+      "source_object_name": "D00330 Frying Pan Saucepan",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "stainless_steel",
+      "material": "stainless_steel",
+      "non_visual_material": null,
+      "mass": 1.2,
+      "density": 7850.0,
+      "inertia": [
+        0.0039179804454880915,
+        0.00910209792527614,
+        0.01258457947835873
+      ],
+      "inertia_axes": [
+        7.019322292046915e-05,
+        -0.9997922938245797,
+        0.0002778746227203415,
+        -0.02037859336634817
+      ],
+      "center_of_mass": [
+        0.011327208652404863,
+        0.00020308505458030678,
+        0.027538868909439795
+      ],
+      "part_origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "volume": 0.0026967862070748365,
+      "bounds": {
+        "min": [
+          -0.1481703370809555,
+          -1.7389086224284256e-06,
+          -0.12445197999477386
+        ],
+        "max": [
+          0.27457666397094727,
+          0.05994725972414017,
+          0.12476502358913422
+        ],
+        "center": [
+          -0.007680590113048162,
+          0.01735493412834301,
+          0.0001777181543265217
+        ]
+      },
+      "description": "A stainless steel frying pan with a circular, slightly concave body and curved sides. It features a long metallic handle attached with two visible rivets.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The object is visually identified as a solid stainless steel frying pan. The dominant material is steel, which dictates the density (approx 7850 kg/m\u00b3), friction, and restitution values. The mass is estimated at 1.2 kg, typical for a standard 10-inch to 12-inch multi-ply stainless pan. For Isaac Sim collisions, 'convex_decomposition' is highly recommended; a simple 'convex_hull' would span across the rim, closing the cavity and preventing objects from being placed inside the pan. Continuous Collision Detection (CCD) should be enabled because the pan has relatively thin walls and could tunnel through other objects if subjected to high velocities (e.g., being dropped or swung). Contact offsets are kept small (1mm) for precise visual alignment.",
+      "static_friction": 0.5,
+      "dynamic_friction": 0.4,
+      "restitution": 0.5,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": "",
+      "appearance_properties": {},
+      "newton": {
+        "collisions": {
+          "collider_type": "convex_decomposition",
+          "rest_offset": 0,
+          "contact_offset": 0.001,
+          "explosion_view_distance": 0,
+          "collision_mesh_debug_visualization": false
+        },
+        "simulation_scene": {
+          "simulation_steps_per_second": 60,
+          "enable_ccd": true,
+          "gravitational_acceleration": [
+            0,
+            0,
+            -9.81
+          ],
+          "gpu_buffer_parameters": {},
+          "residuals": {}
+        }
+      }
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00330 Frying Pan Saucepan",
+  "object_description": "A stainless steel frying pan with a circular, slightly concave body and curved sides. It features a long metallic handle attached with two visible rivets.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 1.2,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies"
+}

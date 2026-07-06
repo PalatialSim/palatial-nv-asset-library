@@ -1,0 +1,81 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00359 Glass Pitcher Milk Jug",
+      "source_part_name": "D00359 Glass Pitcher Milk Jug",
+      "source_object_name": "D00359 Glass Pitcher Milk Jug",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "glass",
+      "material": "glass",
+      "non_visual_material": null,
+      "mass": 4.6,
+      "density": 2500.0,
+      "inertia": [
+        0.005830973846598719,
+        0.010675896940331437,
+        0.011824271080846775
+      ],
+      "inertia_axes": [
+        0.5026739088039521,
+        -0.5024068807537335,
+        -0.49784640410262826,
+        -0.49704650235279046
+      ],
+      "center_of_mass": [
+        -8.859363548098057e-05,
+        -3.0414173739263198e-05,
+        0.07919424314081436
+      ],
+      "part_origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "volume": 0.0011827380486333276,
+      "bounds": {
+        "min": [
+          -0.10722900182008743,
+          -0.053456999361515045,
+          -4.999999873689376e-06
+        ],
+        "max": [
+          0.09974999725818634,
+          0.05404600128531456,
+          0.19314299523830414
+        ],
+        "center": [
+          0.004122253953300925,
+          4.033914870184963e-05,
+          0.08561364184404383
+        ]
+      },
+      "description": "A collection of translucent glass pitchers and bottles with narrow necks, spouts, handles, and several plastic or metal caps, alongside frosted plastic gallon-style jugs. The surfaces are clear to milky white with rounded bases, raised rims, and molded handles.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "No exact product dimensions or weights are provided, so the values are estimated for the visible set as an aggregate empty-container asset. The dominant external/contact material is glass: most vessels are clear or frosted glass, with only a few HDPE-style plastic jugs and small plastic/metal caps. Typical empty glass pitchers and milk bottles in this scale range from about 0.35 to 1.0 kg each, while empty plastic gallon jugs are usually around 0.07 to 0.12 kg. For the visible group, an aggregate mass of about 4.6 kg is reasonable: several medium glass vessels contribute most of the mass, with minor contribution from plastic jugs, caps, and wire hardware. The density is set to soda-lime glass material density, about 2500 kg/m^3, because this should drive material behavior if mass is generated from volume; the effective density of the hollow asset would be lower if computed from the outer bounding volume. Smooth glass has relatively low dry friction against many industrial surfaces, so static friction is estimated at 0.32 and dynamic friction at 0.25. The plastic jugs would be slightly higher, but they are not dominant. Glass has a relatively high elastic restitution as a material, but hollow vessels, caps, seams, and real contact damping reduce practical bounce, so 0.62 is a reasonable non-fracturing restitution estimate. For collision geometry, SDF mesh is preferred because the vessels have thin walls, open rims, concave handles, spouts, neck grooves, and handle holes that a single convex hull would incorrectly fill. For faster real-time use, each vessel should alternatively be separated into individual rigid bodies with convex decomposition, keeping handles, caps, and body shells as separate convex pieces; avoid a single convex hull for the full collection because it would erase openings and create large false collision volumes. Rest offset is set to 0.0 m to keep visual and collision surfaces aligned, while contact offset is set to 0.002 m to generate stable contacts before thin glass rims visually interpenetrate. CCD is recommended because thin rims, necks, and handles can tunnel during fast drops or robot interactions. Compliant contacts are disabled because the objects are non-deformable rigid containers; if jitter occurs, prefer higher solver iterations, smaller time steps, and modest damping rather than soft contacts. A 120 Hz scene step is recommended for stable handling of thin glass geometry; 60 Hz can work for slow tabletop placement but is less robust. For velocity management in Isaac Sim, use initial velocity [0,0,0,0,0,0], clamp unusually high linear speeds to roughly 5-10 m/s and angular speeds to roughly 20-40 rad/s for manipulation scenes, and use low sleep thresholds so settled empty containers can hibernate without visible creeping.",
+      "static_friction": 0.32,
+      "dynamic_friction": 0.25,
+      "restitution": 0.62,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": ""
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00359 Glass Pitcher Milk Jug",
+  "object_description": "A collection of translucent glass pitchers and bottles with narrow necks, spouts, handles, and several plastic or metal caps, alongside frosted plastic gallon-style jugs. The surfaces are clear to milky white with rounded bases, raised rims, and molded handles.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 4.6,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies"
+}

@@ -1,0 +1,107 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00623 Plate",
+      "source_part_name": "D00623 Plate",
+      "source_object_name": "D00623 Plate",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "ceramic",
+      "material": "ceramic",
+      "non_visual_material": null,
+      "mass": 0.65,
+      "density": 2400.0,
+      "inertia": [
+        0.0011906666051043164,
+        0.0011935310894656272,
+        0.002340596530456493
+      ],
+      "inertia_axes": [
+        0.9999983970117637,
+        -1.7382401227135155e-05,
+        2.1632452230746505e-05,
+        0.0017903082952920647
+      ],
+      "center_of_mass": [
+        0.0002196289962508565,
+        0.0001130962543436433,
+        0.012260194031830533
+      ],
+      "part_origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "volume": 0.0004419815723015691,
+      "bounds": {
+        "min": [
+          -0.09534694999456406,
+          -0.09549393504858017,
+          -0.00013334616960491985
+        ],
+        "max": [
+          0.09582559764385223,
+          0.09570625424385071,
+          0.021113811060786247
+        ],
+        "center": [
+          0.0002524162206982555,
+          8.335825159191651e-05,
+          0.009933339250195362
+        ]
+      },
+      "description": "A plain white circular dinner plate with a wide, slightly elevated rim. It features a smooth, glossy finish characteristic of glazed ceramic or porcelain.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The object is visually identified as a standard ceramic or porcelain dinner plate. The material dictates a relatively high density (approx. 2400 kg/m^3) and low restitution, as ceramic is rigid and brittle. Assuming a standard diameter of 27 cm and an average thickness of 4 mm, the estimated mass is around 0.65 kg. For Isaac Sim simulation, the concave nature of the plate's upper surface is critical; a simple convex hull would incorrectly close off the center, preventing objects from resting inside it. Therefore, a convex decomposition or SDF mesh is required for accurate collision. Continuous Collision Detection (CCD) is highly recommended because the plate's thin profile makes it susceptible to tunneling if dropped or subjected to high velocities.",
+      "static_friction": 0.35,
+      "dynamic_friction": 0.3,
+      "restitution": 0.15,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": "",
+      "appearance_properties": {},
+      "newton": {
+        "collisions": {
+          "collider_type": "convex_decomposition",
+          "rest_offset": 0,
+          "contact_offset": 0.001,
+          "explosion_view_distance": 0,
+          "collision_mesh_debug_visualization": false
+        },
+        "simulation_scene": {
+          "simulation_steps_per_second": 60,
+          "enable_ccd": true,
+          "gravitational_acceleration": [
+            0,
+            0,
+            -9.81
+          ],
+          "gpu_buffer_parameters": {
+            "contact_buffer_capacity": 1048576
+          },
+          "residuals": {
+            "position_iteration_count": 4,
+            "velocity_iteration_count": 1
+          }
+        }
+      }
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00623 Plate",
+  "object_description": "A plain white circular dinner plate with a wide, slightly elevated rim. It features a smooth, glossy finish characteristic of glazed ceramic or porcelain.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.65,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies"
+}

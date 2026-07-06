@@ -1,0 +1,81 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00264 Decorative Plate Chopping Board",
+      "source_part_name": "D00264 Decorative Plate Chopping Board",
+      "source_object_name": "D00264 Decorative Plate Chopping Board",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "sealed_hardwood_bamboo_wood",
+      "material": "sealed_hardwood_bamboo_wood",
+      "non_visual_material": null,
+      "mass": 2.1,
+      "density": 700.0,
+      "inertia": [
+        0.008239661544709436,
+        0.02128652193731088,
+        0.029386457277819415
+      ],
+      "inertia_axes": [
+        0.999992388969201,
+        1.1095684328882923e-05,
+        -1.6171350127658357e-05,
+        -0.0039014893366065744
+      ],
+      "center_of_mass": [
+        -0.0001506270018655852,
+        5.462868819296349e-05,
+        0.01001986868229118
+      ],
+      "part_origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "volume": 0.0015825401212516352,
+      "bounds": {
+        "min": [
+          -0.12338099628686905,
+          -0.11727400124073029,
+          -0.00011700000322889537
+        ],
+        "max": [
+          0.14274899661540985,
+          0.11721000075340271,
+          0.023088999092578888
+        ],
+        "center": [
+          -0.003457464417873606,
+          -4.9771265675783234e-05,
+          0.01335149369284036
+        ]
+      },
+      "description": "A collection of flat cutting boards in round, oval, and rectangular forms, mostly light or dark grained wood with rounded edges, plus several brushed silver metal plates.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The image shows multiple cutting-board variants rather than one precisely dimensioned product, so the root values are estimated for one representative mid-size wooden board, which is the dominant visible/contact material. A typical board of this type is approximately 0.35\u20130.45 m across or long, 0.25\u20130.35 m wide for rectangular forms, and 0.02\u20130.035 m thick. Using an approximate solid volume of 0.0025\u20130.0035 m^3 and sealed hardwood/bamboo density of about 650\u2013750 kg/m^3 gives a mass range of roughly 1.6\u20132.6 kg; 2.1 kg is a practical nominal rigid-body mass. The density is set to 700 kg/m^3 for varnished hardwood/bamboo. Smooth sealed wood has moderate contact friction; static friction is estimated at 0.55 and dynamic friction at 0.42, suitable for wood-on-table, wood-on-rubber, or wood-on-conveyor interactions after PhysX material combine modes. Wood is only mildly elastic and has internal damping, so restitution is kept low at 0.32 to avoid unrealistic bouncing when dropped. The pictured metal variants would need separate material overrides if simulated individually: aluminum-like plates would be about 2700 kg/m^3 and stainless steel about 7800 kg/m^3, with higher mass and slightly lower surface damping. Collision should not use an unconstrained dynamic triangle mesh. For simple circular/rectangular boards, a single convex hull is adequate, but because some variants have handle slots, scalloped edges, or concave finger cutouts, convex decomposition is the best default: it preserves the flat slab outline and allows reasonably accurate contact without the cost of SDF mesh. Thin broad objects are susceptible to contact jitter and tunneling during fast motion, so small contact offsets around 0.003 m, zero rest offset, 120 Hz stepping, and CCD enabled are recommended. Compliant contacts are disabled because the board is a rigid non-deformable object; use high stiffness/low compliance only if modeling soft pads or surface liners that are not visible here.",
+      "static_friction": 0.55,
+      "dynamic_friction": 0.42,
+      "restitution": 0.32,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": ""
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00264 Decorative Plate Chopping Board",
+  "object_description": "A collection of flat cutting boards in round, oval, and rectangular forms, mostly light or dark grained wood with rounded edges, plus several brushed silver metal plates.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 2.1,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies"
+}
