@@ -1,0 +1,121 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00855 Teacup",
+      "source_part_name": "D00855 Teacup",
+      "source_object_name": "D00855 Teacup",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "cast_iron",
+      "material": "cast_iron",
+      "non_visual_material": null,
+      "mass": 0.184,
+      "density": 7200.0,
+      "inertia": [
+        9.506903423403482e-05,
+        0.00012934026826151847,
+        0.00014816095118075717
+      ],
+      "inertia_axes": [
+        0.9997778814548202,
+        -0.00015719666341417843,
+        -0.021025400061063234,
+        0.0014476170739282739
+      ],
+      "center_of_mass": [
+        8.965799002051492e-05,
+        -0.00011557201902503046,
+        0.03217610343725611
+      ],
+      "part_origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "volume": 0.0002394961724245076,
+      "bounds": {
+        "min": [
+          -0.04355800151824951,
+          -0.038979001343250275,
+          -1.2999999853491317e-05
+        ],
+        "max": [
+          0.056540001183748245,
+          0.038933999836444855,
+          0.05172799900174141
+        ],
+        "center": [
+          -0.0018435501059613749,
+          -2.3625181169706514e-05,
+          0.026728749167337362
+        ]
+      },
+      "description": "A dark grey, rough-textured cast iron teacup with a curved side handle. It features a wide, rounded bowl tapering to a flat circular base.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The object is visually identified as a cast iron teacup, supported by the context metadata suggesting 'cast iron' and a rough, porous texture. The dominant material is cast iron, which dictates the physics properties. The density of cast iron is approximately 7200 kg/m^3. Using the provided voxel volume of 2.55e-05 m^3, the estimated mass is ~0.184 kg (184 grams), which is highly realistic for a small 5.5cm tall cast iron teacup. Friction coefficients are typical for rough iron surfaces (static 0.5, dynamic 0.4), and restitution is low (0.2) as cast iron is rigid and inelastic. For Isaac Sim, a 'convex_decomposition' collider is essential so the hollow bowl shape is preserved for interactions (e.g., objects falling into the cup). Continuous Collision Detection (CCD) is enabled due to the thin walls and small scale of the object. Contact offsets are set small (0.002m) to reflect the physical size and prevent visible floating gaps.",
+      "static_friction": 0.5,
+      "dynamic_friction": 0.4,
+      "restitution": 0.2,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": "",
+      "appearance_properties": {},
+      "newton": {
+        "collisions": {
+          "collider_type": "convex_decomposition",
+          "rest_offset": 0,
+          "contact_offset": 0.002,
+          "explosion_view_distance": 0,
+          "collision_mesh_debug_visualization": false
+        },
+        "simulation_scene": {
+          "simulation_steps_per_second": 60,
+          "enable_ccd": true,
+          "gravitational_acceleration": [
+            0,
+            -9.81,
+            0
+          ],
+          "gpu_buffer_parameters": {},
+          "residuals": {}
+        }
+      }
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00855 Teacup",
+  "object_description": "A dark grey, rough-textured cast iron teacup with a curved side handle. It features a wide, rounded bowl tapering to a flat circular base.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.184,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies",
+  "total_object_mass_kg": 0.184,
+  "_authoritative_context_applied": {
+    "object": {},
+    "parts": [
+      {
+        "part_index": 0,
+        "part_id": "part_00",
+        "fields": [
+          "bounds",
+          "canonical_name",
+          "material",
+          "part_id",
+          "part_index",
+          "source_object_name",
+          "source_part_name"
+        ]
+      }
+    ]
+  }
+}

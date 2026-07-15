@@ -1,0 +1,81 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00880 Tray",
+      "source_part_name": "D00880 Tray",
+      "source_object_name": "D00880 Tray",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "matte_glazed_ceramic_stoneware",
+      "material": "matte_glazed_ceramic_stoneware",
+      "non_visual_material": null,
+      "mass": 0.52,
+      "density": 2200.0,
+      "inertia": [
+        0.0010946570874614465,
+        0.0023897069800796226,
+        0.0034116574669058233
+      ],
+      "inertia_axes": [
+        0.9999884890345294,
+        -0.0018628562426690268,
+        0.0007801653775189045,
+        -0.004352345004912339
+      ],
+      "center_of_mass": [
+        -6.374196511029738e-05,
+        0.00031625853075973367,
+        0.015822772708856552
+      ],
+      "part_origin_world": [
+        -6.374196511029738e-05,
+        0.00031625853075973367,
+        0.015822772708856552
+      ],
+      "volume": 0.001092238694091078,
+      "bounds": {
+        "min": [
+          -0.11612500250339508,
+          -0.08027400076389313,
+          -0.0006939999875612557
+        ],
+        "max": [
+          0.1140270009636879,
+          0.08050499856472015,
+          0.025616999715566635
+        ],
+        "center": [
+          -0.00045515886489362736,
+          0.00017462069362897018,
+          0.008341993872093573
+        ]
+      },
+      "description": "A light gray speckled ceramic tray with a shallow rectangular basin, rounded corners, and a raised rolled rim.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The object appears to be a small stoneware or ceramic tray with a matte/lightly glazed speckled surface. No exact scale is provided, so the estimates assume a tabletop tray roughly 0.22\u20130.25 m long, 0.14\u20130.16 m wide, and 0.02\u20130.03 m tall, with a relatively thick bottom and rounded rim. Dense ceramic/stoneware is typically about 2000\u20132400 kg/m\u00b3; using approximately 2200 kg/m\u00b3 and an estimated actual ceramic volume of about 2.3e-4 m\u00b3 gives a total mass near 0.5 kg. The root density is therefore assigned as the dominant material density rather than the bounding-box bulk density. The dominant contact material is matte glazed ceramic, giving moderate friction: higher than smooth glass but lower than rubber. Static friction is estimated at 0.55 and dynamic friction at 0.45 for contact against common table, plastic, or metal surfaces. Restitution is kept low-to-moderate at 0.32 because ceramic is hard but dissipative and brittle; in a rigid-body solver it may rebound slightly but should not behave like rubber or polished steel. The tray is concave, so a single convex hull would incorrectly fill the basin and prevent accurate contact with the interior surface. For Isaac Sim/PhysX dynamic rigid bodies, convex decomposition is the recommended default: use separate convex pieces for the bottom slab, long side rims, short side rims, and rounded corner regions. SDF mesh collision could be used for a higher-fidelity concave interior, but convex decomposition is usually more stable and performant for robotic or industrial scenes. Rest/contact offsets are set small because the object is thin and shallow; a 1 mm rest offset with a 4 mm contact offset gives stable contact generation without excessive visual hovering. CCD is enabled because the thin rim and shallow wall could otherwise tunnel through surfaces during fast drops or quick manipulation. Compliant contacts are disabled because the asset is rigid ceramic; if soft gripper contact stability is needed, a very stiff spring-damper contact can be enabled instead. Solver iterations and modest damping values are recommended to reduce jitter while preserving realistic free motion.",
+      "static_friction": 0.55,
+      "dynamic_friction": 0.45,
+      "restitution": 0.32,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": ""
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00880 Tray",
+  "object_description": "A light gray speckled ceramic tray with a shallow rectangular basin, rounded corners, and a raised rolled rim.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.52,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies"
+}

@@ -1,0 +1,81 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00021 Bell Pepper",
+      "source_part_name": "D00021 Bell Pepper",
+      "source_object_name": "D00021 Bell Pepper",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "organic_vegetable_tissue",
+      "material": "organic_vegetable_tissue",
+      "non_visual_material": null,
+      "mass": 0.17,
+      "density": 450.0,
+      "inertia": [
+        0.00010558278297970286,
+        0.0001305925823591767,
+        0.00013258048174629377
+      ],
+      "inertia_axes": [
+        0.8840831117389454,
+        0.02045844776062959,
+        -0.020298052734090462,
+        -0.46644023465864637
+      ],
+      "center_of_mass": [
+        -0.0015588959343580424,
+        0.0012442797847625933,
+        0.035613279526836475
+      ],
+      "part_origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "volume": 0.0003074173090445887,
+      "bounds": {
+        "center": [
+          -0.0018590442571709256,
+          0.03541899657886644,
+          -0.0012615805751210395
+        ],
+        "max": [
+          0.0418037548661232,
+          0.0718923881649971,
+          0.04171429201960564
+        ],
+        "min": [
+          -0.04643719643354416,
+          0.0,
+          -0.0465867854654789
+        ]
+      },
+      "description": "A glossy red bell pepper with rounded lobes and a green, slightly curved stem. The surface appears waxy and organic with shallow wrinkles and small natural blemishes.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The object is a whole bell pepper: a hollow, lobed organic body with a thin waxy skin, watery flesh, internal air cavity, and a lightweight fibrous stem. No product data or exact scale is provided, so values are estimated for a typical medium-large pepper about 85-100 mm in body diameter and 80-95 mm tall, excluding a 35-50 mm stem. Typical real bell pepper mass is about 0.12-0.22 kg; 0.17 kg is a reasonable nominal value. Although vegetable tissue is close to water density, the whole pepper includes a large hollow cavity, so the effective density relative to the closed outer collision volume is much lower, estimated around 450 kg/m^3. For Isaac Sim rigid-body use, the external collider should represent the closed pepper envelope rather than the hollow interior unless interaction with cut/open geometry is required. The lobed shape contains deep concave grooves, so a single convex hull would overfill the grooves and produce unrealistic contacts; convex decomposition is the recommended default. SDF mesh collision can be used if high-fidelity contact with the grooves and stem is needed, but it is more expensive. The waxy moist skin gives moderate friction on common table or gripper surfaces: static friction about 0.55 and dynamic friction about 0.42. Restitution is low, about 0.12, because impacts are strongly damped by the soft, watery, hollow structure. Since the model is light and has small curved contact patches, contact offsets should remain small relative to its scale: rest_offset near 0 and contact_offset around 2 mm. CCD is recommended when the pepper may be tossed, dropped from height, or moved quickly by kinematic actors because its thin stem and curved lobe features can otherwise tunnel. For stable industrial-style manipulation, use low restitution, moderate-to-high damping, conservative velocity limits, and optionally compliant contacts to approximate the non-rigid squashiness without making the asset a deformable body.",
+      "static_friction": 0.55,
+      "dynamic_friction": 0.42,
+      "restitution": 0.12,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": ""
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00021 Bell Pepper",
+  "object_description": "A glossy red bell pepper with rounded lobes and a green, slightly curved stem. The surface appears waxy and organic with shallow wrinkles and small natural blemishes.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.17,
+  "center_of_mass": null,
+  "inertia": null,
+  "num_parts": 1,
+  "object_type": "rigid_bodies",
+  "overall_assessment": ""
+}

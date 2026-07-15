@@ -1,0 +1,81 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00772 Sponge",
+      "source_part_name": "D00772 Sponge",
+      "source_object_name": "D00772 Sponge",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "plastic",
+      "material": "plastic",
+      "non_visual_material": null,
+      "mass": 0.018,
+      "density": 75.0,
+      "inertia": [
+        9.860427808283833e-06,
+        1.844958445720725e-05,
+        2.5184139050660714e-05
+      ],
+      "inertia_axes": [
+        0.4986520133820436,
+        -0.5013873267417972,
+        -0.5012146747092124,
+        0.49873917831757214
+      ],
+      "center_of_mass": [
+        -0.0025994730682552592,
+        0.0009609226417310201,
+        0.03769699884891666
+      ],
+      "part_origin_world": [
+        -0.0025994730682552592,
+        0.0009609226417310201,
+        0.03769699884891666
+      ],
+      "volume": 0.00025630248991337666,
+      "bounds": {
+        "min": [
+          -0.05289899930357933,
+          -0.0140990000218153,
+          -9.999999974752427e-07
+        ],
+        "max": [
+          0.051858000457286835,
+          0.0194070003926754,
+          0.07643000036478043
+        ],
+        "center": [
+          -0.000644702435364532,
+          0.0025788979904115767,
+          0.03846432329106401
+        ]
+      },
+      "description": "A rectangular yellow porous sponge block with rounded edges and a thin green fibrous scouring layer on one face. The surface is open-cell foam with rough abrasive fibers along the dark green pad.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "No product data is provided, so the estimates assume a typical dry household sponge with approximate dimensions of 0.115 m \u00d7 0.075 m \u00d7 0.028 m, giving a gross rectangular volume of about 2.4e-4 m^3. Dry open-cell cellulose or polyurethane sponge foam is extremely porous and typically has a low bulk density; the attached green nylon/mineral abrasive layer increases the effective density slightly. A total dry mass of about 0.018 kg and effective bulk density of about 75 kg/m^3 are reasonable. If the sponge is wet, mass can increase by an order of magnitude and should be overridden, commonly to 0.10\u20130.20 kg depending on saturation. For rigid-body treatment, the visible pores and fibers should not be modeled as collision detail because they would create unstable, noisy contact generation; a simplified convex hull or beveled-box hull around the outer silhouette is preferable. The object is soft and highly damped physically, so restitution should be very low, around 0.05. Friction is estimated high because the foam and abrasive pad have rough, fibrous surfaces: the yellow sponge side is moderately high friction, while the green scouring side can be very high friction on smooth surfaces. A single averaged material value is therefore set to static friction 0.85 and dynamic friction 0.65. For Isaac Sim/PhysX, use a small positive contact offset, about 0.003 m, to keep contacts stable on the lightweight object; a slightly negative rest offset, about -0.001 m, helps avoid visual hovering caused by fuzzy/irregular surface fibers. CCD is not required for ordinary handling speeds, but should be enabled if the object is thrown quickly or interacts with very thin obstacles. Because the object is light and soft-looking but represented as rigid, optional compliant contacts with low stiffness and relatively high damping are recommended to mimic a small amount of contact give without using deformable-body simulation.",
+      "static_friction": 0.85,
+      "dynamic_friction": 0.65,
+      "restitution": 0.05,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": ""
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00772 Sponge",
+  "object_description": "A rectangular yellow porous sponge block with rounded edges and a thin green fibrous scouring layer on one face. The surface is open-cell foam with rough abrasive fibers along the dark green pad.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.018,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies"
+}

@@ -1,0 +1,102 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00897 Utensils Container",
+      "source_part_name": "D00897 Utensils Container",
+      "source_object_name": "D00897 Utensils Container",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "stainless_steel",
+      "material": "stainless_steel",
+      "non_visual_material": null,
+      "mass": 0.2,
+      "density": 7850.0,
+      "inertia": [
+        0.0004745554426179157,
+        0.0006571297720397108,
+        0.0006575104326879578
+      ],
+      "inertia_axes": [
+        0.7070611253227858,
+        -0.005499106797442207,
+        0.7071102127897537,
+        0.005428798222043656
+      ],
+      "center_of_mass": [
+        0.00018121450973152643,
+        0.0006148785243692431,
+        0.08029648262652127
+      ],
+      "part_origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "volume": 0.002307721305465094,
+      "bounds": {
+        "min": [
+          -0.06320922076702118,
+          -3.687898981752369e-07,
+          -0.0635383129119873
+        ],
+        "max": [
+          0.06325677782297134,
+          0.16533462703227997,
+          0.06319968402385712
+        ],
+        "center": [
+          2.3136668669440002e-05,
+          0.07611197311842884,
+          -0.00020955686552986448
+        ]
+      },
+      "description": "A collection of nine cylindrical and rectangular containers arranged in a grid. The objects are crafted from diverse materials including brushed stainless steel, various finished woods, speckled ceramic, clear acrylic, and hammered copper.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "Since the image displays multiple objects, the top-left brushed stainless steel container is used as the baseline for these physical estimates. A typical metal desktop cup or holder of this size has a mass of approximately 0.2 kg. Density is set to 7850 kg/m^3, reflecting standard stainless steel. Friction coefficients (0.5 static, 0.4 dynamic) represent smooth metal interacting with typical desktop or manipulator surfaces. Restitution is set to 0.5, giving a moderate metallic bounce. For simulation in Isaac Sim, a convex decomposition collider is essential to accurately capture the hollow interior of the container without relying on a less accurate bounding box or single convex hull. Continuous Collision Detection (CCD) should be enabled due to the thin walls of the container, preventing it from tunneling through other objects during fast movements or impacts.",
+      "static_friction": 0.5,
+      "dynamic_friction": 0.4,
+      "restitution": 0.5,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": "",
+      "appearance_properties": {},
+      "newton": {
+        "collisions": {
+          "collider_type": "convex_decomposition",
+          "rest_offset": 0,
+          "contact_offset": 0.001,
+          "explosion_view_distance": 0,
+          "collision_mesh_debug_visualization": false
+        },
+        "simulation_scene": {
+          "simulation_steps_per_second": 60,
+          "enable_ccd": true,
+          "gravitational_acceleration": [
+            0,
+            0,
+            -9.81
+          ],
+          "gpu_buffer_parameters": {},
+          "residuals": {}
+        }
+      }
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00897 Utensils Container",
+  "object_description": "A collection of nine cylindrical and rectangular containers arranged in a grid. The objects are crafted from diverse materials including brushed stainless steel, various finished woods, speckled ceramic, clear acrylic, and hammered copper.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.2,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies"
+}
