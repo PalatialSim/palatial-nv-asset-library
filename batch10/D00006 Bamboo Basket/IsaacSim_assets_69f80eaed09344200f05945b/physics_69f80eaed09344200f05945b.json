@@ -1,0 +1,132 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00006 Bamboo Basket",
+      "source_part_name": "D00006 Bamboo Basket",
+      "source_object_name": "D00006 Bamboo Basket",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "wood",
+      "material": "wood",
+      "non_visual_material": null,
+      "mass": 0.8,
+      "density": 540.0,
+      "inertia": [
+        0.006581437007888494,
+        0.009388489114857953,
+        0.009837807941003137
+      ],
+      "inertia_axes": [
+        0.5006028369946242,
+        -0.5003508956227004,
+        -0.4995211883035062,
+        -0.4995241368325944
+      ],
+      "center_of_mass": [
+        -2.842863132217554e-05,
+        0.00011394147738282577,
+        0.1568551357693645
+      ],
+      "part_origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "volume": 0.01642077234085267,
+      "bounds": {
+        "min": [
+          -0.1407332867383957,
+          -5.481290281750262e-05,
+          -0.14139702916145325
+        ],
+        "max": [
+          0.14076972007751465,
+          0.3840261995792389,
+          0.1409749686717987
+        ],
+        "center": [
+          -3.0771195929312394e-05,
+          0.10880979294816674,
+          -0.00011723110278466303
+        ]
+      },
+      "description": "A woven bamboo basket with a cylindrical base and a prominent arched handle. The structure consists of intertwined light brown natural wood fibers.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The physical properties are estimated based on the provided physics context and visual analysis. The dominant material is bamboo/wood. Using the provided post-scaling voxel volume of ~0.00148 m^3 and a standard dry bamboo/rattan density of roughly 550-700 kg/m^3, the overall mass is estimated at 0.8 kg, accounting for the porosity and hollow nature of the weave. Friction coefficients (static: 0.5, dynamic: 0.4) and restitution (0.3) are selected for dry, slightly textured wood. For collisions, 'convex_decomposition' is highly recommended over a simple convex hull because the object is a basket; a decomposition allows other simulated objects to be placed inside its hollow cavity while maintaining efficient PhysX performance. Continuous Collision Detection (CCD) is enabled at the rigid body level due to the thin woven walls which could otherwise suffer from tunneling if small objects fall into it rapidly.",
+      "static_friction": 0.5,
+      "dynamic_friction": 0.4,
+      "restitution": 0.3,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "enable_ccd": null,
+      "solver_position_iterations": null,
+      "solver_velocity_iterations": null,
+      "color_name": "",
+      "appearance_properties": {},
+      "newton": {
+        "collisions": {
+          "collider_type": "convex_decomposition",
+          "rest_offset": 0,
+          "contact_offset": 0.002,
+          "explosion_view_distance": 0.1,
+          "collision_mesh_debug_visualization": false
+        },
+        "simulation_scene": {
+          "simulation_steps_per_second": 60,
+          "enable_ccd": true,
+          "gravitational_acceleration": [
+            0,
+            -9.81,
+            0
+          ],
+          "gpu_buffer_parameters": {},
+          "residuals": {}
+        }
+      }
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00006 Bamboo Basket",
+  "base_link_recommendation": null,
+  "fix_base": false,
+  "source": null,
+  "authored_by": null,
+  "up_axis": null,
+  "coordinate_frames": null,
+  "solver_position_iterations": null,
+  "solver_velocity_iterations": null,
+  "object_description": "A woven bamboo basket with a cylindrical base and a prominent arched handle. The structure consists of intertwined light brown natural wood fibers.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.8,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies",
+  "total_object_mass_kg": 0.8,
+  "_authoritative_context_applied": {
+    "object": {},
+    "parts": [
+      {
+        "part_index": 0,
+        "part_id": "part_00",
+        "fields": [
+          "bounds",
+          "canonical_name",
+          "material",
+          "part_id",
+          "part_index",
+          "source_object_name",
+          "source_part_name"
+        ]
+      }
+    ]
+  }
+}

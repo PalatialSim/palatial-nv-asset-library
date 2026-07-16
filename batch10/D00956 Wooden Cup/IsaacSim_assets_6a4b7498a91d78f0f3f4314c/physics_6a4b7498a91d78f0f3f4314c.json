@@ -1,0 +1,132 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "generated reference 01",
+      "source_part_name": "generated reference 01",
+      "source_object_name": "generated reference 01",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "wood",
+      "material": "wood",
+      "non_visual_material": null,
+      "mass": 0.03,
+      "density": 700.0,
+      "inertia": [
+        3.3145055093986057e-05,
+        4.2372284783988966e-05,
+        4.249035852543135e-05
+      ],
+      "inertia_axes": [
+        0.7063861112447698,
+        -0.02684708635309672,
+        -0.7068263967209828,
+        -0.026350345221135992
+      ],
+      "center_of_mass": [
+        3.610276372685668e-05,
+        -2.0187908046244935e-05,
+        0.04099847481862693
+      ],
+      "part_origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "volume": 0.00012983127905564227,
+      "bounds": {
+        "min": [
+          -0.049052946269512177,
+          -7.340329375438159e-06,
+          -0.04901512339711189
+        ],
+        "max": [
+          0.04902005195617676,
+          0.11507266014814377,
+          0.0486648753285408
+        ],
+        "center": [
+          -1.2642190114895e-05,
+          0.05349069968608443,
+          -0.000182835081492583
+        ]
+      },
+      "description": "A cylindrical wooden cup with a smooth, light-colored wood grain finish and a hollow interior.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "Based on visual analysis and provided metadata, the object is a single piece of wood, resembling a cup. Despite the text metadata mentioning a handle, the visual reference clearly shows a handle-less cylindrical shape. The provided metrics give bounding extents of approximately 0.108 x 0.095 x 0.108 m, with a solid volume of 3.5e-5 m^3. Assuming a hardwood density of around 700 kg/m^3, the mass is calculated at roughly 0.025 kg (rounded to 0.03 kg for simulation stability). For the material properties, wood typically has a moderate friction coefficient (0.5 static, 0.4 dynamic) and low restitution (0.3). Because the object is a hollow cup intended to contain other items, 'convex_decomposition' is necessary for its collision geometry rather than a simple convex hull. Continuous Collision Detection (CCD) is enabled at both the body and scene levels due to the object's small scale and thin walls, preventing tunneling during high-velocity impacts or drops.",
+      "static_friction": 0.5,
+      "dynamic_friction": 0.4,
+      "restitution": 0.3,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "enable_ccd": null,
+      "solver_position_iterations": null,
+      "solver_velocity_iterations": null,
+      "color_name": "",
+      "appearance_properties": {},
+      "newton": {
+        "collisions": {
+          "collider_type": "convex_decomposition",
+          "rest_offset": 0,
+          "contact_offset": 0.001,
+          "explosion_view_distance": 0,
+          "collision_mesh_debug_visualization": false
+        },
+        "simulation_scene": {
+          "simulation_steps_per_second": 60,
+          "enable_ccd": true,
+          "gravitational_acceleration": [
+            0,
+            0,
+            -9.81
+          ],
+          "gpu_buffer_parameters": {},
+          "residuals": {}
+        }
+      }
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "generated reference 01",
+  "base_link_recommendation": null,
+  "fix_base": false,
+  "source": null,
+  "authored_by": null,
+  "up_axis": null,
+  "coordinate_frames": null,
+  "solver_position_iterations": null,
+  "solver_velocity_iterations": null,
+  "object_description": "A cylindrical wooden cup with a smooth, light-colored wood grain finish and a hollow interior.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.03,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies",
+  "total_object_mass_kg": 0.03,
+  "_authoritative_context_applied": {
+    "object": {},
+    "parts": [
+      {
+        "part_index": 0,
+        "part_id": "part_00",
+        "fields": [
+          "bounds",
+          "canonical_name",
+          "material",
+          "part_id",
+          "part_index",
+          "source_object_name",
+          "source_part_name"
+        ]
+      }
+    ]
+  }
+}

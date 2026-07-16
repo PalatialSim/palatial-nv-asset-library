@@ -1,0 +1,102 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00595 Pastry Dough",
+      "source_part_name": "D00595 Pastry Dough",
+      "source_object_name": "D00595 Pastry Dough",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "dough_flour_water_mixture",
+      "material": "dough_flour_water_mixture",
+      "non_visual_material": null,
+      "mass": 0.55,
+      "density": 1150.0,
+      "inertia": [
+        0.004301993284080221,
+        0.006829521734469164,
+        0.00895572226191512
+      ],
+      "inertia_axes": [
+        0.9992738484907201,
+        -0.03656920000497492,
+        -1.0980289329998172e-06,
+        -0.010699034177718907
+      ],
+      "center_of_mass": [
+        -0.018392309311951353,
+        0.02896597361325487,
+        0.08125819827946866
+      ],
+      "part_origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "volume": 0.015036300361152534,
+      "bounds": {
+        "min": [
+          -0.2134450227022171,
+          -0.1045369952917099,
+          9.686733392300084e-05
+        ],
+        "max": [
+          0.17260125279426575,
+          0.17241549491882324,
+          0.17540806531906128
+        ],
+        "center": [
+          -0.015430475441728809,
+          0.02262678956319963,
+          0.07972413980889154
+        ]
+      },
+      "description": "A rectangular block of layered raw pastry dough with a flour-dusted top surface and visibly defined strata on its sides.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The object is identified as a block of raw layered dough (like puff pastry). For rigid body simulation in Isaac Sim, it must be approximated as a non-deformable object. The density of typical dough is slightly higher than water, around 1100 to 1200 kg/m^3. Assuming approximate dimensions of 12cm x 10cm x 4cm, the estimated mass is around 0.5 to 0.6 kg. Dough is highly inelastic, absorbing almost all impact energy, so restitution is set extremely low (0.05). The surface is dusted with flour, which reduces tackiness, resulting in moderate friction coefficients (0.5 static, 0.4 dynamic). A 'convex_hull' collider is appropriate to capture the slightly rounded, organic shape of the block efficiently. To approximate the soft nature of dough within a rigid body framework, compliant contacts with high damping could be employed to prevent harsh rebounding forces on impact.",
+      "static_friction": 0.5,
+      "dynamic_friction": 0.4,
+      "restitution": 0.05,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": "",
+      "appearance_properties": {},
+      "newton": {
+        "collisions": {
+          "collider_type": "convex_hull",
+          "rest_offset": 0,
+          "contact_offset": 0.01,
+          "explosion_view_distance": 0,
+          "collision_mesh_debug_visualization": false
+        },
+        "simulation_scene": {
+          "simulation_steps_per_second": 60,
+          "enable_ccd": false,
+          "gravitational_acceleration": [
+            0,
+            0,
+            -9.81
+          ],
+          "gpu_buffer_parameters": {},
+          "residuals": {}
+        }
+      }
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00595 Pastry Dough",
+  "object_description": "A rectangular block of layered raw pastry dough with a flour-dusted top surface and visibly defined strata on its sides.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.55,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies"
+}
