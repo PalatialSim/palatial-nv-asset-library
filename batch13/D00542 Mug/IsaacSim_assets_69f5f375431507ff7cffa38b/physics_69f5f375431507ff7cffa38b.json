@@ -1,0 +1,102 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00542 Mug",
+      "source_part_name": "D00542 Mug",
+      "source_object_name": "D00542 Mug",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "ceramic",
+      "material": "ceramic",
+      "non_visual_material": null,
+      "mass": 0.35,
+      "density": 2400.0,
+      "inertia": [
+        0.000322216453363319,
+        0.0003376728288762815,
+        0.0003730050146839976
+      ],
+      "inertia_axes": [
+        0.6645006056428141,
+        -0.6834816865653417,
+        -0.20572949943678998,
+        -0.2212851153865016
+      ],
+      "center_of_mass": [
+        -0.002254546628173539,
+        -0.00016036426740712468,
+        0.032187358173214296
+      ],
+      "part_origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "volume": 7.759744125156176e-05,
+      "bounds": {
+        "min": [
+          -0.03871564939618111,
+          -0.033510006964206696,
+          -2.4055321773630567e-05
+        ],
+        "max": [
+          0.05548325926065445,
+          0.0335349515080452,
+          0.07619874179363251
+        ],
+        "center": [
+          -0.002505377158217729,
+          -0.000173454576567651,
+          0.03464843400336624
+        ]
+      },
+      "description": "A plain white ceramic coffee mug with a cylindrical body and a curved side handle.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The visual appearance strongly indicates a glazed ceramic coffee mug. For rigid body simulation, glazed ceramic acts as a hard, brittle material with moderate density (estimated at 2400 kg/m^3) and low restitution (0.2). The mass is estimated at 0.35 kg, typical for this form factor. Surface friction is moderate due to the glaze, estimated at 0.5 static and 0.4 dynamic. Crucially, for collision geometry in Isaac Sim, a 'convex_decomposition' must be employed to accurately represent the concavity of the main fluid receptacle and the handle's through-hole, allowing interaction with other objects (e.g., placing a spoon inside). Continuous Collision Detection (CCD) is recommended to prevent tunneling during high-velocity impacts, such as dropping the mug.",
+      "static_friction": 0.5,
+      "dynamic_friction": 0.4,
+      "restitution": 0.2,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": "",
+      "appearance_properties": {},
+      "newton": {
+        "collisions": {
+          "collider_type": "convex_decomposition",
+          "rest_offset": 0,
+          "contact_offset": 0.001,
+          "explosion_view_distance": 0,
+          "collision_mesh_debug_visualization": false
+        },
+        "simulation_scene": {
+          "simulation_steps_per_second": 60,
+          "enable_ccd": true,
+          "gravitational_acceleration": [
+            0,
+            0,
+            -9.81
+          ],
+          "gpu_buffer_parameters": {},
+          "residuals": {}
+        }
+      }
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00542 Mug",
+  "object_description": "A plain white ceramic coffee mug with a cylindrical body and a curved side handle.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.35,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies"
+}

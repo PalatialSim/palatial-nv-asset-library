@@ -1,0 +1,121 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00708 Saucepan Wok",
+      "source_part_name": "D00708 Saucepan Wok",
+      "source_object_name": "D00708 Saucepan Wok",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "stainless_steel",
+      "material": "stainless_steel",
+      "non_visual_material": null,
+      "mass": 2.0,
+      "density": 8000.0,
+      "inertia": [
+        0.005751579206190109,
+        0.01585342383877091,
+        0.019869781616691836
+      ],
+      "inertia_axes": [
+        0.001040787907812666,
+        0.9995043711159949,
+        -0.0015457740226567998,
+        0.03142514062373447
+      ],
+      "center_of_mass": [
+        0.010787270139003864,
+        0.0004277371869842208,
+        0.04909962185378001
+      ],
+      "part_origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "volume": 0.0036491501186385524,
+      "bounds": {
+        "min": [
+          -0.17290108453306274,
+          -0.11884564406871344,
+          -0.00046231252332618495
+        ],
+        "max": [
+          0.2776067940904086,
+          0.11815264954022853,
+          0.09182361751166743
+        ],
+        "center": [
+          -0.004491558005177227,
+          -0.0003668165777870776,
+          0.032121506926943454
+        ]
+      },
+      "description": "A stainless steel wok with a large, polished concave bowl. It features a long, cylindrical main handle with a black grip insert, and a smaller looped helper handle riveted to the opposite side.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "Based on the provided metadata, the object has an overall length of 0.49m (including handle) and a bowl diameter of roughly 0.38m. This aligns with a large kitchen wok. Following the mass estimation hint to prefer product priors, a standard 38cm heavy-duty stainless steel wok typically weighs about 2.0 kg. The dominant material is stainless steel, dictating a density of 8000 kg/m^3. Friction coefficients are estimated at 0.5 (static) and 0.4 (dynamic), which are typical for smooth steel surfaces, with a moderate restitution of 0.4. Because the object is functionally a bowl, 'convex_decomposition' is selected for the collider type to accurately preserve the internal concavity, preventing objects from colliding with an invisible plane over the opening. CCD is enabled both on the rigid body and scene levels due to the thin-walled nature of the pan, mitigating the risk of tunneling through fast-moving objects or surfaces.",
+      "static_friction": 0.5,
+      "dynamic_friction": 0.4,
+      "restitution": 0.4,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": "",
+      "appearance_properties": {},
+      "newton": {
+        "collisions": {
+          "collider_type": "convex_decomposition",
+          "rest_offset": 0,
+          "contact_offset": 0.001,
+          "explosion_view_distance": 0,
+          "collision_mesh_debug_visualization": false
+        },
+        "simulation_scene": {
+          "simulation_steps_per_second": 60,
+          "enable_ccd": true,
+          "gravitational_acceleration": [
+            0,
+            -9.81,
+            0
+          ],
+          "gpu_buffer_parameters": {},
+          "residuals": {}
+        }
+      }
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00708 Saucepan Wok",
+  "object_description": "A stainless steel wok with a large, polished concave bowl. It features a long, cylindrical main handle with a black grip insert, and a smaller looped helper handle riveted to the opposite side.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 2.0,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies",
+  "total_object_mass_kg": 2,
+  "_authoritative_context_applied": {
+    "object": {},
+    "parts": [
+      {
+        "part_index": 0,
+        "part_id": "part_00",
+        "fields": [
+          "bounds",
+          "canonical_name",
+          "material",
+          "part_id",
+          "part_index",
+          "source_object_name",
+          "source_part_name"
+        ]
+      }
+    ]
+  }
+}

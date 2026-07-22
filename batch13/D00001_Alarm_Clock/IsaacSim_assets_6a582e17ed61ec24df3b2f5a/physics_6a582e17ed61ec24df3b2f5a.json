@@ -1,0 +1,132 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "generated reference 01",
+      "source_part_name": "generated reference 01",
+      "source_object_name": "generated reference 01",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "metal",
+      "material": "metal",
+      "non_visual_material": null,
+      "mass": 0.35,
+      "density": 4125.0,
+      "inertia": [
+        0.00036194968631738587,
+        0.0005810652976115244,
+        0.0007958359780059481
+      ],
+      "inertia_axes": [
+        0.5321039869473261,
+        0.46565968970440097,
+        -0.465638284812291,
+        0.5321723293973755
+      ],
+      "center_of_mass": [
+        2.7544623244358936e-05,
+        -0.0015936514926313157,
+        0.07213619484947235
+      ],
+      "part_origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "volume": 0.0007093210318777857,
+      "bounds": {
+        "min": [
+          -0.05975877,
+          0.0,
+          -0.03003518
+        ],
+        "max": [
+          0.05981401,
+          0.1624389,
+          0.0378388
+        ],
+        "center": [
+          -3.0101804160261257e-05,
+          0.07659699466516114,
+          -0.001091131739311889
+        ]
+      },
+      "description": "A classic twin-bell alarm clock featuring a polished chrome-plated metal exterior, two top-mounted bells, and angled metal resting legs. It has a circular white face covered by glass, displaying black Arabic numerals and hands.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "Based on the provided JSON context, the object has dimensions of 120 x 80 x 170 mm and a calculated voxel volume of 8.486e-05 m\u00b3. Real-world twin-bell alarm clocks of this size typically weigh between 0.3 to 0.4 kg. By assigning a mass of 0.35 kg, the effective density resolves to approximately 4125 kg/m\u00b3, which correctly models a partially hollow, thin-walled metal structure containing mechanical internals. Metal is the dominant structural and contact material, so static and dynamic friction coefficients are set to 0.5 and 0.4 respectively, representing steel-on-common-surface interactions. Restitution is set to a low 0.3 to reflect rigid, inelastic metal behavior upon impact. For Isaac Sim (PhysX), 'convex_decomposition' is highly recommended for the collider type; a simple convex hull would incorrectly envelop the empty space between the bells and legs, leading to unrealistic collision responses. A standard contact offset of 0.002m is applied to ensure stable constraint generation, and Continuous Collision Detection (CCD) is enabled globally and on the body to prevent tunneling if the object is knocked over or dropped.",
+      "static_friction": 0.5,
+      "dynamic_friction": 0.4,
+      "restitution": 0.3,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "enable_ccd": null,
+      "solver_position_iterations": null,
+      "solver_velocity_iterations": null,
+      "color_name": "",
+      "appearance_properties": {},
+      "newton": {
+        "collisions": {
+          "collider_type": "convex_decomposition",
+          "rest_offset": 0,
+          "contact_offset": 0.002,
+          "explosion_view_distance": 0,
+          "collision_mesh_debug_visualization": false
+        },
+        "simulation_scene": {
+          "simulation_steps_per_second": 60,
+          "enable_ccd": true,
+          "gravitational_acceleration": [
+            0,
+            -9.81,
+            0
+          ],
+          "gpu_buffer_parameters": {},
+          "residuals": {}
+        }
+      }
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "generated reference 01",
+  "base_link_recommendation": null,
+  "fix_base": false,
+  "source": null,
+  "authored_by": null,
+  "up_axis": null,
+  "coordinate_frames": null,
+  "solver_position_iterations": null,
+  "solver_velocity_iterations": null,
+  "object_description": "A classic twin-bell alarm clock featuring a polished chrome-plated metal exterior, two top-mounted bells, and angled metal resting legs. It has a circular white face covered by glass, displaying black Arabic numerals and hands.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.35,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies",
+  "total_object_mass_kg": 0.35,
+  "_authoritative_context_applied": {
+    "object": {},
+    "parts": [
+      {
+        "part_index": 0,
+        "part_id": "part_00",
+        "fields": [
+          "bounds",
+          "canonical_name",
+          "material",
+          "part_id",
+          "part_index",
+          "source_object_name",
+          "source_part_name"
+        ]
+      }
+    ]
+  }
+}

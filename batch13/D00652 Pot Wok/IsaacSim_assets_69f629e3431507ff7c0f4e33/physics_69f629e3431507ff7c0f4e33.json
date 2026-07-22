@@ -1,0 +1,102 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00652 Pot Wok",
+      "source_part_name": "D00652 Pot Wok",
+      "source_object_name": "D00652 Pot Wok",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "stainless_steel",
+      "material": "stainless_steel",
+      "non_visual_material": null,
+      "mass": 2.0,
+      "density": 8000.0,
+      "inertia": [
+        0.004054016073706896,
+        0.010096553321162117,
+        0.012955777945139677
+      ],
+      "inertia_axes": [
+        0.7066350058797963,
+        -0.7063851956986505,
+        0.02900415420846491,
+        -0.02908062588203913
+      ],
+      "center_of_mass": [
+        0.011168709033635931,
+        -0.041771712203544,
+        0.00012013180178927033
+      ],
+      "part_origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "volume": 0.0020292107690151125,
+      "bounds": {
+        "min": [
+          -0.14129631221294403,
+          -0.10042983293533325,
+          -6.100069367676042e-05
+        ],
+        "max": [
+          0.22780117392539978,
+          0.10074615478515625,
+          0.08048304915428162
+        ],
+        "center": [
+          -0.002477300704017224,
+          0.00014237744448717003,
+          0.029243494474729754
+        ]
+      },
+      "description": "A brushed silver stainless steel wok featuring a long primary handle and a shorter helper handle riveted to the opposite side.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The object is entirely constructed from stainless steel, evident from its brushed metallic finish, color, and typical cookware design. Stainless steel has a density of approximately 8000 kg/m^3. A wok of this size typically weighs around 2.0 kg. As a metal object, it exhibits moderate friction (estimated around 0.5 static) and relatively low restitution (around 0.4) due to its rigidity and structural damping. For physics simulation in Isaac Sim, the deep, concave shape of the bowl requires a 'convex_decomposition' or 'sdf_mesh' collider; a simple convex hull would inappropriately cap off the opening of the pan, preventing objects from being placed inside it. Continuous Collision Detection (CCD) is recommended if the pan or objects interacting with it will move at high velocities, preventing tunneling through the relatively thin walls.",
+      "static_friction": 0.5,
+      "dynamic_friction": 0.4,
+      "restitution": 0.4,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": "",
+      "appearance_properties": {},
+      "newton": {
+        "collisions": {
+          "collider_type": "convex_decomposition",
+          "rest_offset": 0,
+          "contact_offset": 0.002,
+          "explosion_view_distance": 0,
+          "collision_mesh_debug_visualization": false
+        },
+        "simulation_scene": {
+          "simulation_steps_per_second": 60,
+          "enable_ccd": true,
+          "gravitational_acceleration": [
+            0,
+            0,
+            -9.81
+          ],
+          "gpu_buffer_parameters": {},
+          "residuals": {}
+        }
+      }
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00652 Pot Wok",
+  "object_description": "A brushed silver stainless steel wok featuring a long primary handle and a shorter helper handle riveted to the opposite side.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 2.0,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies"
+}
