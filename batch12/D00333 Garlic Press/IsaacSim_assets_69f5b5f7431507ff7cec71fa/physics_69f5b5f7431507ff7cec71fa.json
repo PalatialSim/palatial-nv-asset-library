@@ -1,0 +1,81 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00333 Garlic Press",
+      "source_part_name": "D00333 Garlic Press",
+      "source_object_name": "D00333 Garlic Press",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "brushed_stainless_steel",
+      "material": "brushed_stainless_steel",
+      "non_visual_material": null,
+      "mass": 0.34,
+      "density": 7850.0,
+      "inertia": [
+        0.0001359514594933407,
+        0.0005443868498546247,
+        0.0006072719195570875
+      ],
+      "inertia_axes": [
+        0.7120421136447453,
+        0.6972914031797711,
+        -0.05770454267008451,
+        0.058744473809422874
+      ],
+      "center_of_mass": [
+        0.023274405290895486,
+        0.0003009649361266534,
+        0.034768566034024694
+      ],
+      "part_origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "volume": 0.0002899397657196783,
+      "bounds": {
+        "min": [
+          -0.05423918411612827,
+          -0.025729054118389535,
+          2.3548466432473135e-06
+        ],
+        "max": [
+          0.11544164412977125,
+          0.025964538383283386,
+          0.08119864318961989
+        ],
+        "center": [
+          0.007877917192315561,
+          -5.283881471327859e-06,
+          0.030568455462434408
+        ]
+      },
+      "description": "A handheld garlic press with a brushed stainless-steel body, curved paired handles, cylindrical pressing cup, and hinge pins. Some variants include smooth wooden or black rubber grip inserts.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The object appears to be a compact handheld garlic press/mincer. The dominant structural and contact material is brushed stainless steel or a similar polished cast metal; optional wood or rubber handle inserts are secondary and do not dominate the external load-bearing geometry. A typical garlic press of this form is about 0.16-0.20 m long, 0.035-0.055 m wide, and 0.045-0.070 m tall, with a hollow pressing cup, two curved handles, hinge pins, and relatively thick cast or stamped metal sections. Assuming roughly 35-45 cm^3 of metal at 7700-8000 kg/m^3 plus small grip/pin details gives a realistic mass range of about 0.28-0.40 kg; 0.34 kg is a balanced estimate for an all-metal or mostly-metal press. The density is set to stainless-steel-like material density rather than envelope density because mass should preferably be assigned directly in USD Physics for this irregular hollow shape. For contact, brushed stainless steel on common tabletop/industrial surfaces has moderate friction: static friction around 0.4-0.6 and dynamic friction around 0.3-0.45. I use 0.48 static and 0.36 dynamic to represent a smooth but not mirror-polished metal surface; if rubber grip inserts are used as the main contact patch, local friction should be overridden to approximately 0.8-1.0. Restitution is set to 0.55, appropriate for a hard metal object with some energy loss from hinges, thin sections, and surface damping; it will sound and rebound like metal but not behave as an ideal elastic sphere. Collision should not use a single convex hull because the handle gap, hinge recess, and cylindrical cup are strongly concave; a single hull would fill the opening and produce unrealistic contacts. Convex decomposition is the recommended dynamic-rigid-body collider for Isaac Sim v4.5/PhysX, using multiple hulls for the two handles, hinge knuckle, cup wall, and pressing jaw. For highest-fidelity non-real-time contact with the cup cavity and perforated plate, an SDF mesh could be used, but convex decomposition is better for general robotic/industrial performance. Contact offset is kept small, about 2.5 mm, because the object is only around 18 cm long and has thin handle edges; larger offsets may make it appear to float or collide prematurely. Rest offset is 0 so the visual and collision surfaces settle closely. CCD is recommended because the handles and hinge arms are slender and can tunnel through surfaces during drops or fast manipulation. Initial velocity is zero. Gravity is standard SI downward Z. Compliant contacts are disabled or made very stiff because the object is rigid metal; any deformability should come from joint compliance if the press is modeled as an articulation, not from soft body contact. If the press is split into moving parts, use a revolute hinge with moderate angular damping and a hard angular limit, but for a single rigid body asset the articulation fields remain inactive.",
+      "static_friction": 0.48,
+      "dynamic_friction": 0.36,
+      "restitution": 0.55,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": ""
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00333 Garlic Press",
+  "object_description": "A handheld garlic press with a brushed stainless-steel body, curved paired handles, cylindrical pressing cup, and hinge pins. Some variants include smooth wooden or black rubber grip inserts.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.34,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies"
+}

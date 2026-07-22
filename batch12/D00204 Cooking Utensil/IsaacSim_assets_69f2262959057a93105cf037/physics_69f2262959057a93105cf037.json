@@ -1,0 +1,119 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00204 Cooking Utensil",
+      "source_part_name": "D00204 Cooking Utensil",
+      "source_object_name": "D00204 Cooking Utensil",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "stainless_steel",
+      "material": "stainless_steel",
+      "mass": 0.18,
+      "density": 1698.0,
+      "inertia": [
+        8.588098443309034e-05,
+        0.0012659579114103988,
+        0.0013330882578514974
+      ],
+      "inertia_axes": [
+        0.999833956742639,
+        5.934823184058882e-05,
+        -0.01822233692954067,
+        4.3115801637035354e-05
+      ],
+      "center_of_mass": [
+        0.021635620079662448,
+        0.0001286141593638007,
+        0.018886473716591745
+      ],
+      "part_origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "volume": 0.00048565662824673117,
+      "bounds": {
+        "min": [
+          -0.14314552,
+          0.0,
+          -0.04984052
+        ],
+        "max": [
+          0.20892404,
+          0.03892832,
+          0.04962441
+        ],
+        "center": [
+          -0.0008161313969284645,
+          0.01616724754064693,
+          -0.00011489399649502091
+        ]
+      },
+      "description": "A cooking spatula with a slotted brushed stainless steel blade and a dark wooden handle secured by two metal rivets.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The model represents a standard kitchen spatula (turner). The physical extents (0.35m x 0.1m x 0.05m) are typical for this type of utensil. The volume is calculated at roughly 0.000106 m^3. A standard spatula of this size and construction (thin stainless steel blade, thicker wooden handle) typically weighs between 150 to 200 grams. Estimating the mass at 0.18 kg gives a composite density of approximately 1698 kg/m^3, which reflects the combination of dense but thin steel (7800 kg/m^3) and lighter but thicker wood (~600-800 kg/m^3). Stainless steel is chosen as the dominant material for friction and restitution properties as the head is the primary contact surface during manipulation tasks. Because the blade is very thin, Continuous Collision Detection (CCD) is enabled to prevent tunneling during fast motions. Convex decomposition is recommended for the collider to accurately capture the bent neck and the slots in the blade, which are critical for grasping and object interaction.",
+      "static_friction": 0.5,
+      "dynamic_friction": 0.4,
+      "restitution": 0.4,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": "",
+      "appearance_properties": {},
+      "newton": {
+        "collisions": {
+          "collider_type": "convex_decomposition",
+          "rest_offset": 0,
+          "contact_offset": 0.001,
+          "explosion_view_distance": 0,
+          "collision_mesh_debug_visualization": false
+        },
+        "simulation_scene": {
+          "simulation_steps_per_second": 60,
+          "enable_ccd": true,
+          "gravitational_acceleration": [
+            0,
+            0,
+            -9.81
+          ],
+          "gpu_buffer_parameters": {},
+          "residuals": {}
+        }
+      }
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00204 Cooking Utensil",
+  "fix_base": false,
+  "object_description": "A cooking spatula with a slotted brushed stainless steel blade and a dark wooden handle secured by two metal rivets.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.18,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies",
+  "total_object_mass_kg": 0.18,
+  "_authoritative_context_applied": {
+    "object": {},
+    "parts": [
+      {
+        "part_index": 0,
+        "part_id": "part_00",
+        "fields": [
+          "bounds",
+          "canonical_name",
+          "material",
+          "part_id",
+          "part_index",
+          "source_object_name",
+          "source_part_name"
+        ]
+      }
+    ]
+  }
+}

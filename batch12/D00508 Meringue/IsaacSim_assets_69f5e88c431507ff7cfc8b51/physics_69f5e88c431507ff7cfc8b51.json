@@ -1,0 +1,102 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00508 Meringue",
+      "source_part_name": "D00508 Meringue",
+      "source_object_name": "D00508 Meringue",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "baked_meringue",
+      "material": "baked_meringue",
+      "non_visual_material": null,
+      "mass": 0.005,
+      "density": 350.0,
+      "inertia": [
+        1.8537614288681139e-06,
+        1.9849542860175806e-06,
+        2.786155057527661e-06
+      ],
+      "inertia_axes": [
+        0.9544381390145202,
+        0.0009473352041783199,
+        -9.718011118042824e-07,
+        0.2984073413131221
+      ],
+      "center_of_mass": [
+        4.47722765181606e-05,
+        0.0007520403819700121,
+        0.016109274392904948
+      ],
+      "part_origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "volume": 0.00012164719915394657,
+      "bounds": {
+        "min": [
+          -0.038698211312294006,
+          -0.03850338235497475,
+          -2.4976743588922545e-05
+        ],
+        "max": [
+          0.03922197222709656,
+          0.039042383432388306,
+          0.05007735267281532
+        ],
+        "center": [
+          8.989003289172725e-05,
+          0.0006076292944158465,
+          0.017381457825572134
+        ]
+      },
+      "description": "A pale cream-colored meringue cookie featuring a swirled, conical peak and a dry, textured surface with visible small pores.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The object is visually identifiable as a meringue, which is an aerated confection made from whipped egg whites and sugar. This composition implies an extremely low mass and density, as it is mostly trapped air within a brittle sugar structure. For simulation, the density is estimated around 350 kg/m^3 to account for the solid sugar network while maintaining a very low total mass (approx. 5 grams for a typical 4cm diameter piece). The dry, slightly rough, and porous surface suggests moderate friction coefficients (static 0.6, dynamic 0.45). Because the structure is brittle and non-elastic, restitution is set very low (0.05); dropping it would result in a dead stop or shattering, not bouncing. The complex swirled geometry with distinct ridges and valleys dictates a 'convex_decomposition' collider to ensure accurate contact points during interaction or grasping, rather than a simple bounding hull that would bridge the gaps between the swirls.",
+      "static_friction": 0.6,
+      "dynamic_friction": 0.45,
+      "restitution": 0.05,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": "",
+      "appearance_properties": {},
+      "newton": {
+        "collisions": {
+          "collider_type": "convex_decomposition",
+          "rest_offset": 0,
+          "contact_offset": 0.001,
+          "explosion_view_distance": 0,
+          "collision_mesh_debug_visualization": false
+        },
+        "simulation_scene": {
+          "simulation_steps_per_second": 60,
+          "enable_ccd": false,
+          "gravitational_acceleration": [
+            0,
+            0,
+            -9.81
+          ],
+          "gpu_buffer_parameters": {},
+          "residuals": {}
+        }
+      }
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00508 Meringue",
+  "object_description": "A pale cream-colored meringue cookie featuring a swirled, conical peak and a dry, textured surface with visible small pores.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.005,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies"
+}

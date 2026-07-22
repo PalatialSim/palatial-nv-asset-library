@@ -1,0 +1,119 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00233 Cup Mug",
+      "source_part_name": "D00233 Cup Mug",
+      "source_object_name": "D00233 Cup Mug",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "ceramic",
+      "material": "ceramic",
+      "mass": 0.35,
+      "density": 2400.0,
+      "inertia": [
+        0.0003610969540708694,
+        0.00038080190039018315,
+        0.0004157881763840973
+      ],
+      "inertia_axes": [
+        0.6585017982365443,
+        -0.6611491164027151,
+        -0.25392364518376104,
+        -0.25451917416127623
+      ],
+      "center_of_mass": [
+        -0.0029476276709764853,
+        0.0001808059213625712,
+        0.0356811761746701
+      ],
+      "part_origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "volume": 9.86235403455003e-05,
+      "bounds": {
+        "min": [
+          -0.04054914,
+          0.0,
+          -0.03531775
+        ],
+        "max": [
+          0.06064724,
+          0.07995098,
+          0.03510453
+        ],
+        "center": [
+          -0.0024374345697276596,
+          0.036570249606597556,
+          -1.2592301702665101e-05
+        ]
+      },
+      "description": "A matte white ceramic coffee mug with a cylindrical body and a curved side handle.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "Visual analysis and provided metadata indicate a white ceramic coffee mug. Extents from the payload (0.11m x 0.08m x 0.10m) confirm standard real-world scaling. Matte ceramic is assigned a density of 2400 kg/m^3. While voxel volume (3.18e-5 m^3) yields a mathematically lower mass, product category priors are favored as advised in the mass_estimation_hint, placing the mass at a realistic 0.35 kg for a standard mug. Friction (0.5 static) and restitution (0.6) values reflect unglazed or matte ceramic. Continuous Collision Detection (CCD) is enabled to prevent tunneling during high-speed robotic manipulation or dropping. A convex decomposition collider is selected to accurately resolve the internal concavity of the cup and the loop of the handle, ensuring accurate grasping physics. Contact offsets are set to 0.002m to provide stable resting contacts on flat surfaces without visual hovering.",
+      "static_friction": 0.5,
+      "dynamic_friction": 0.4,
+      "restitution": 0.6,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": "",
+      "appearance_properties": {},
+      "newton": {
+        "collisions": {
+          "collider_type": "convex_decomposition",
+          "rest_offset": 0,
+          "contact_offset": 0.002,
+          "explosion_view_distance": 0,
+          "collision_mesh_debug_visualization": false
+        },
+        "simulation_scene": {
+          "simulation_steps_per_second": 60,
+          "enable_ccd": true,
+          "gravitational_acceleration": [
+            0,
+            -9.81,
+            0
+          ],
+          "gpu_buffer_parameters": {},
+          "residuals": {}
+        }
+      }
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00233 Cup Mug",
+  "fix_base": false,
+  "object_description": "A matte white ceramic coffee mug with a cylindrical body and a curved side handle.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.35,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies",
+  "total_object_mass_kg": 0.35,
+  "_authoritative_context_applied": {
+    "object": {},
+    "parts": [
+      {
+        "part_index": 0,
+        "part_id": "part_00",
+        "fields": [
+          "bounds",
+          "canonical_name",
+          "material",
+          "part_id",
+          "part_index",
+          "source_object_name",
+          "source_part_name"
+        ]
+      }
+    ]
+  }
+}

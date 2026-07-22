@@ -1,0 +1,119 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00190 Cookie",
+      "source_part_name": "D00190 Cookie",
+      "source_object_name": "D00190 Cookie",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "baked_dough",
+      "material": "baked_dough",
+      "mass": 0.04,
+      "density": 700.0,
+      "inertia": [
+        1.3275859046125845e-05,
+        1.4601507778433504e-05,
+        2.5427996134089077e-05
+      ],
+      "inertia_axes": [
+        0.936945112308305,
+        -0.00038746793846025385,
+        0.0013967929614682188,
+        0.3494735402853802
+      ],
+      "center_of_mass": [
+        0.0008884404525783298,
+        0.00018626916769357187,
+        0.009491253646523057
+      ],
+      "part_origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "volume": 7.888718945907032e-05,
+      "bounds": {
+        "min": [
+          -0.03666995,
+          0.0,
+          -0.03759794
+        ],
+        "max": [
+          0.03861354,
+          0.02135493,
+          0.03726286
+        ],
+        "center": [
+          0.0007280097224884288,
+          0.009435585433808505,
+          -9.760738130142358e-05
+        ]
+      },
+      "description": "A baked, round chocolate chip cookie with a textured, golden-brown surface and embedded dark chocolate chips.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The asset is a realistic chocolate chip cookie with physical extents of approximately 9.8cm x 2.1cm x 9.7cm. Following the context hint to prefer category mass priors, a large (approx 4-inch) cookie typically weighs around 40 grams (0.04 kg). Using this mass and an approximated cylindrical bounding volume, the density is estimated at roughly 700 kg/m^3, which is consistent with the porous, air-filled structure of baked dough. The dominant external material is the baked dough, which presents a rough, dry surface, yielding moderate friction coefficients (static 0.6, dynamic 0.5). Cookies are highly inelastic and prone to crumbling rather than bouncing, so the restitution is set extremely low (0.05). For physics simulation in Isaac Sim, a 'convex_hull' collider is selected as it efficiently and accurately wraps the disc-like shape without unnecessary overhead from the surface irregularities. Continuous Collision Detection (CCD) is enabled to prevent the small, relatively light object from tunneling through surfaces if dropped or subjected to high-impulse impacts.",
+      "static_friction": 0.6,
+      "dynamic_friction": 0.5,
+      "restitution": 0.05,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": "",
+      "appearance_properties": {},
+      "newton": {
+        "collisions": {
+          "collider_type": "convex_hull",
+          "rest_offset": 0,
+          "contact_offset": 0.001,
+          "explosion_view_distance": 0,
+          "collision_mesh_debug_visualization": false
+        },
+        "simulation_scene": {
+          "simulation_steps_per_second": 60,
+          "enable_ccd": true,
+          "gravitational_acceleration": [
+            0,
+            -9.81,
+            0
+          ],
+          "gpu_buffer_parameters": {},
+          "residuals": {}
+        }
+      }
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00190 Cookie",
+  "fix_base": false,
+  "object_description": "A baked, round chocolate chip cookie with a textured, golden-brown surface and embedded dark chocolate chips.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.04,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies",
+  "total_object_mass_kg": 0.04,
+  "_authoritative_context_applied": {
+    "object": {},
+    "parts": [
+      {
+        "part_index": 0,
+        "part_id": "part_00",
+        "fields": [
+          "bounds",
+          "canonical_name",
+          "material",
+          "part_id",
+          "part_index",
+          "source_object_name",
+          "source_part_name"
+        ]
+      }
+    ]
+  }
+}

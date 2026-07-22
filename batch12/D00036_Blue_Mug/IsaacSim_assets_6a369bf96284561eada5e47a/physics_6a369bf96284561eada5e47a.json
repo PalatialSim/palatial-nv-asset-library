@@ -1,0 +1,131 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "generated reference 01",
+      "source_part_name": "generated reference 01",
+      "source_object_name": "generated reference 01",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "ceramic",
+      "material": "ceramic",
+      "non_visual_material": null,
+      "mass": 0.35,
+      "density": 2400.0,
+      "inertia": [
+        0.0003948891112455467,
+        0.0004221533821418828,
+        0.00046674093678362815
+      ],
+      "inertia_axes": [
+        0.6493523556959957,
+        -0.7084553459850218,
+        0.028541912596033673,
+        -0.2749870908291236
+      ],
+      "center_of_mass": [
+        -0.0027728362215194667,
+        0.001468329560989103,
+        0.03509755224332334
+      ],
+      "part_origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "volume": 0.00011150171455754257,
+      "bounds": {
+        "min": [
+          -0.045173220336437225,
+          -3.236621341784485e-05,
+          -0.03794800490140915
+        ],
+        "max": [
+          0.06380178034305573,
+          0.08734963089227676,
+          0.03786899521946907
+        ],
+        "center": [
+          -0.0033259352902302677,
+          0.04812256655996953,
+          -8.795504711356783e-05
+        ]
+      },
+      "description": "A matte blue ceramic coffee mug with a cylindrical body and a curved side handle.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The dominant material is visually identifiable as a matte ceramic, which typically has a density of around 2400 kg/m^3. The provided dimensions are 0.12 x 0.09 x 0.12 m. Following the payload hints to prefer product category priors over raw mesh volume (which yielded a low 35 cm^3), a standard mug of these dimensions with typical wall thickness has a mass of approximately 0.35 kg. Static and dynamic friction are estimated at 0.5 and 0.4, standard for unglazed or matte ceramic on tabletop surfaces. Restitution is set to 0.2 because ceramic is a rigid, brittle material that dissipates energy quickly upon impact. For Isaac Sim simulation, a 'convex_decomposition' collider is absolutely necessary to accurately model the hollow interior and the handle gap, allowing for realistic robotic grasping. Continuous Collision Detection (CCD) is enabled to prevent the thin walls of the mug from tunneling through other objects during fast manipulation.",
+      "static_friction": 0.5,
+      "dynamic_friction": 0.4,
+      "restitution": 0.2,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "enable_ccd": null,
+      "solver_position_iterations": null,
+      "solver_velocity_iterations": null,
+      "color_name": "",
+      "appearance_properties": {},
+      "newton": {
+        "collisions": {
+          "collider_type": "convex_decomposition",
+          "rest_offset": 0,
+          "contact_offset": 0.001,
+          "explosion_view_distance": 0,
+          "collision_mesh_debug_visualization": false
+        },
+        "simulation_scene": {
+          "simulation_steps_per_second": 60,
+          "enable_ccd": true,
+          "gravitational_acceleration": [
+            0,
+            0,
+            -9.81
+          ],
+          "gpu_buffer_parameters": {},
+          "residuals": {}
+        }
+      }
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "generated reference 01",
+  "base_link_recommendation": null,
+  "fix_base": false,
+  "source": null,
+  "authored_by": null,
+  "up_axis": null,
+  "solver_position_iterations": null,
+  "solver_velocity_iterations": null,
+  "object_description": "A matte blue ceramic coffee mug with a cylindrical body and a curved side handle.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.35,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies",
+  "total_object_mass_kg": 0.35,
+  "_authoritative_context_applied": {
+    "object": {},
+    "parts": [
+      {
+        "part_index": 0,
+        "part_id": "part_00",
+        "fields": [
+          "bounds",
+          "canonical_name",
+          "material",
+          "part_id",
+          "part_index",
+          "source_object_name",
+          "source_part_name"
+        ]
+      }
+    ]
+  }
+}
