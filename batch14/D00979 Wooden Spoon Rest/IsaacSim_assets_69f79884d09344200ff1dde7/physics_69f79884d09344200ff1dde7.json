@@ -1,0 +1,119 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00979 Wooden Spoon Rest",
+      "source_part_name": "D00979 Wooden Spoon Rest",
+      "source_object_name": "D00979 Wooden Spoon Rest",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "wood",
+      "material": "wood",
+      "mass": 0.1,
+      "density": 700.0,
+      "inertia": [
+        3.601542327098859e-05,
+        8.762890585642888e-05,
+        0.00012038857962020478
+      ],
+      "inertia_axes": [
+        0.7074199132234865,
+        0.0003634536922427831,
+        -5.4226289160741466e-05,
+        -0.7067934148927805
+      ],
+      "center_of_mass": [
+        0.00014562110224559057,
+        -0.00012890268163598279,
+        0.0078502166096153
+      ],
+      "part_origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "volume": 9.728104267782325e-05,
+      "bounds": {
+        "min": [
+          -0.05145089328289032,
+          -3.0335684641613625e-05,
+          -0.07760011404752731
+        ],
+        "max": [
+          0.05131310597062111,
+          0.01716766506433487,
+          0.07863087952136993
+        ],
+        "center": [
+          0.0003083783278731041,
+          0.0070818431970109865,
+          0.00034827079230276324
+        ]
+      },
+      "description": "A carved wooden spoon rest with an oval shape and a shallow central depression. The wood features a natural medium-brown grain pattern.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The asset is a finished wooden spoon rest. The primary material is wood, so a standard hardwood density of 700 kg/m\u00b3 is applied. Although the auto-scaled voxel volume is unusually low (1.7e-5 m\u00b3), the bounding box (approx 14x14x1.5 cm) suggests a larger true volume. Therefore, a category mass prior of 0.1 kg (100 grams) is used for realistic simulation weight, which aligns perfectly with the density and an estimated solid volume of ~140 cm\u00b3. Friction coefficients (static 0.5, dynamic 0.4) and restitution (0.3) are typical for finished wood surfaces. For collisions, 'convex_decomposition' is critical; a simple convex hull would cover the central depression, whereas decomposition allows objects to physically rest inside the bowl. A contact offset of 0.002m provides numerical stability without visible gaps. The bounding box metadata indicates the Y-axis is the vertical (smallest extent, resting near zero), so gravity is set to [0.0, -9.81, 0.0].",
+      "static_friction": 0.5,
+      "dynamic_friction": 0.4,
+      "restitution": 0.3,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": "",
+      "appearance_properties": {},
+      "newton": {
+        "collisions": {
+          "collider_type": "convex_decomposition",
+          "rest_offset": 0,
+          "contact_offset": 0.002,
+          "explosion_view_distance": 0,
+          "collision_mesh_debug_visualization": false
+        },
+        "simulation_scene": {
+          "simulation_steps_per_second": 60,
+          "enable_ccd": false,
+          "gravitational_acceleration": [
+            0,
+            -9.81,
+            0
+          ],
+          "gpu_buffer_parameters": {},
+          "residuals": {}
+        }
+      }
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00979 Wooden Spoon Rest",
+  "fix_base": false,
+  "object_description": "A carved wooden spoon rest with an oval shape and a shallow central depression. The wood features a natural medium-brown grain pattern.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.1,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies",
+  "total_object_mass_kg": 0.1,
+  "_authoritative_context_applied": {
+    "object": {},
+    "parts": [
+      {
+        "part_index": 0,
+        "part_id": "part_00",
+        "fields": [
+          "bounds",
+          "canonical_name",
+          "material",
+          "part_id",
+          "part_index",
+          "source_object_name",
+          "source_part_name"
+        ]
+      }
+    ]
+  }
+}

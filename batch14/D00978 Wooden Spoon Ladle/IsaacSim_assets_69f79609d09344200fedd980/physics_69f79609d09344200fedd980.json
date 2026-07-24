@@ -1,0 +1,132 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00978 Wooden Spoon Ladle",
+      "source_part_name": "D00978 Wooden Spoon Ladle",
+      "source_object_name": "D00978 Wooden Spoon Ladle",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "wood",
+      "material": "wood",
+      "non_visual_material": null,
+      "mass": 0.047,
+      "density": 700.0,
+      "inertia": [
+        1.6162539295625324e-05,
+        0.00027993407511093556,
+        0.00028675058469036644
+      ],
+      "inertia_axes": [
+        0.9982894615365508,
+        0.0353632168370258,
+        0.04651423754759376,
+        -0.0020048903628207197
+      ],
+      "center_of_mass": [
+        0.011430334115968195,
+        1.0982089061406605e-05,
+        0.02357566157373708
+      ],
+      "part_origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "volume": 0.00010453097683973448,
+      "bounds": {
+        "min": [
+          -0.09500715136528015,
+          -0.00013215535727795213,
+          -0.04281062260270119
+        ],
+        "max": [
+          0.18292085826396942,
+          0.057903844863176346,
+          0.04140137881040573
+        ],
+        "center": [
+          0.0025019224058803703,
+          0.025893630312190708,
+          8.383961323784628e-05
+        ]
+      },
+      "description": "A carved wooden ladle featuring a deep, rounded bowl and a thick handle with a hole at the end. The object has a smooth, natural wood grain finish throughout.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "Based on the visual appearance and the provided context artifacts, the object is a solid wooden ladle. The dominant material is hardwood, such as walnut or acacia, which typically has a density around 700 kg/m^3. Using the provided voxel volume of approximately 6.65e-05 m^3, the calculated mass is 0.0465 kg (rounded to 0.047 kg), which is highly realistic for a kitchen utensil of this size (extents: ~27.6 cm long). Friction coefficients (0.5 static, 0.4 dynamic) and restitution (0.4) are selected based on standard properties for polished wood. For collision detection in Isaac Sim, a 'convex_decomposition' collider is essential; a standard convex hull would seal off the concave bowl of the ladle, preventing it from being used to scoop or hold objects in simulation. Continuous Collision Detection (CCD) is enabled at both the body and scene levels because the low mass of the object makes it susceptible to tunneling if subjected to high-velocity impacts or rapid manipulation. A small contact offset (1 mm) is used to maintain surface precision given the object's relatively small dimensions.",
+      "static_friction": 0.5,
+      "dynamic_friction": 0.4,
+      "restitution": 0.4,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "enable_ccd": null,
+      "solver_position_iterations": null,
+      "solver_velocity_iterations": null,
+      "color_name": "",
+      "appearance_properties": {},
+      "newton": {
+        "collisions": {
+          "collider_type": "convex_decomposition",
+          "rest_offset": 0,
+          "contact_offset": 0.001,
+          "explosion_view_distance": 0,
+          "collision_mesh_debug_visualization": false
+        },
+        "simulation_scene": {
+          "simulation_steps_per_second": 60,
+          "enable_ccd": true,
+          "gravitational_acceleration": [
+            0,
+            0,
+            -9.81
+          ],
+          "gpu_buffer_parameters": {},
+          "residuals": {}
+        }
+      }
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00978 Wooden Spoon Ladle",
+  "base_link_recommendation": null,
+  "fix_base": false,
+  "source": null,
+  "authored_by": null,
+  "up_axis": null,
+  "coordinate_frames": null,
+  "solver_position_iterations": null,
+  "solver_velocity_iterations": null,
+  "object_description": "A carved wooden ladle featuring a deep, rounded bowl and a thick handle with a hole at the end. The object has a smooth, natural wood grain finish throughout.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.047,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies",
+  "total_object_mass_kg": 0.047,
+  "_authoritative_context_applied": {
+    "object": {},
+    "parts": [
+      {
+        "part_index": 0,
+        "part_id": "part_00",
+        "fields": [
+          "bounds",
+          "canonical_name",
+          "material",
+          "part_id",
+          "part_index",
+          "source_object_name",
+          "source_part_name"
+        ]
+      }
+    ]
+  }
+}

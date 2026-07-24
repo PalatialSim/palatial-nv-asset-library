@@ -1,0 +1,119 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "generated reference 01",
+      "source_part_name": "generated reference 01",
+      "source_object_name": "generated reference 01",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "ceramic",
+      "material": "ceramic",
+      "mass": 1.91,
+      "density": 2400.0,
+      "inertia": [
+        0.014065241607042799,
+        0.024183617691724498,
+        0.037815105858445115
+      ],
+      "inertia_axes": [
+        0.9999999927182701,
+        2.099243749130196e-06,
+        -1.8818995716318735e-05,
+        0.0001191843048952374
+      ],
+      "center_of_mass": [
+        -0.0008613994716655594,
+        0.0004369073337012828,
+        0.019201564004746846
+      ],
+      "part_origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "volume": 0.004269010103584397,
+      "bounds": {
+        "min": [
+          -0.19930519,
+          0.0,
+          -0.1520971
+        ],
+        "max": [
+          0.19754595,
+          0.03736512,
+          0.15120954
+        ],
+        "center": [
+          -0.0008529226336845431,
+          0.011553616876047836,
+          -0.00043601223000376923
+        ]
+      },
+      "description": "A white, rectangular ceramic tray platter with raised edges and a glossy finish.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The object is identified as a ceramic or porcelain tray platter based on the provided metadata and visual appearance. Given the scale (roughly 40x30x3 cm) and the provided voxel volume of ~0.000797 m^3, a standard ceramic density of 2400 kg/m^3 yields a mass of approximately 1.91 kg. Glazed ceramic surfaces have moderate friction (estimated 0.5 static, 0.4 dynamic) and relatively low restitution (0.3) due to their rigidity and lack of elasticity. For collision detection in Isaac Sim, 'convex_decomposition' is essential here because the tray has raised edges; a simple convex hull would cause objects to float above the tray's surface. Continuous Collision Detection (CCD) is enabled to prevent tunneling if the object is dropped or interacted with forcefully.",
+      "static_friction": 0.5,
+      "dynamic_friction": 0.4,
+      "restitution": 0.3,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": "",
+      "appearance_properties": {},
+      "newton": {
+        "collisions": {
+          "collider_type": "convex_decomposition",
+          "rest_offset": 0,
+          "contact_offset": 0.001,
+          "explosion_view_distance": 0,
+          "collision_mesh_debug_visualization": false
+        },
+        "simulation_scene": {
+          "simulation_steps_per_second": 60,
+          "enable_ccd": true,
+          "gravitational_acceleration": [
+            0,
+            0,
+            -9.81
+          ],
+          "gpu_buffer_parameters": {},
+          "residuals": {}
+        }
+      }
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "generated reference 01",
+  "fix_base": false,
+  "object_description": "A white, rectangular ceramic tray platter with raised edges and a glossy finish.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 1.91,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies",
+  "total_object_mass_kg": 1.91,
+  "_authoritative_context_applied": {
+    "object": {},
+    "parts": [
+      {
+        "part_index": 0,
+        "part_id": "part_00",
+        "fields": [
+          "bounds",
+          "canonical_name",
+          "material",
+          "part_id",
+          "part_index",
+          "source_object_name",
+          "source_part_name"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "generated reference 01",
+      "source_part_name": "generated reference 01",
+      "source_object_name": "generated reference 01",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "organic",
+      "material": "organic",
+      "mass": 0.2,
+      "density": 1000.0,
+      "inertia": [
+        8.262666752575519e-05,
+        0.00014172683375829575,
+        0.00016036422175025818
+      ],
+      "inertia_axes": [
+        0.40786045767081697,
+        0.4177303387289084,
+        0.49772204650343427,
+        -0.6414233980752624
+      ],
+      "center_of_mass": [
+        0.00134553014646748,
+        -0.00025466293976466285,
+        0.05395650069365975
+      ],
+      "part_origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "volume": 0.00021315511104500056,
+      "bounds": {
+        "min": [
+          -0.03592474,
+          0.0,
+          -0.0327704
+        ],
+        "max": [
+          0.04453414,
+          0.1123385,
+          0.02846065
+        ],
+        "center": [
+          6.867157316257572e-05,
+          0.05054135970187248,
+          0.00014727924298822155
+        ]
+      },
+      "description": "A cluster of fresh, round purple grapes attached to a branching green stem. The organic fruit has a smooth, slightly matte skin texture.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The model represents a bunch of grapes with provided dimensions of approximately 10 x 10 x 15 cm. The dominant material is biological tissue with high water content; thus, the density is estimated at 1000 kg/m^3 (similar to water), resulting in a mass of 0.2 kg considering the sparse packing of grapes within the bounding volume. The smooth grape skin provides moderate friction (static 0.5, dynamic 0.4) and low restitution (0.2) because the soft flesh internally dampens impact energy. Given the complex, branching structure and clustered spheres, a convex decomposition collider is strongly recommended to allow the object to rest naturally on uneven surfaces rather than rolling unnaturally on a simple convex hull. Continuous Collision Detection (CCD) is enabled to prevent thin stem sections or individual outer grapes from tunneling through collision geometries during dynamic drops.",
+      "static_friction": 0.5,
+      "dynamic_friction": 0.4,
+      "restitution": 0.2,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": "",
+      "appearance_properties": {},
+      "newton": {
+        "collisions": {
+          "collider_type": "convex_decomposition",
+          "rest_offset": 0,
+          "contact_offset": 0.002,
+          "explosion_view_distance": 0.05,
+          "collision_mesh_debug_visualization": false
+        },
+        "simulation_scene": {
+          "simulation_steps_per_second": 60,
+          "enable_ccd": true,
+          "gravitational_acceleration": [
+            0,
+            0,
+            -9.81
+          ],
+          "gpu_buffer_parameters": {},
+          "residuals": {}
+        }
+      }
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "generated reference 01",
+  "fix_base": false,
+  "object_description": "A cluster of fresh, round purple grapes attached to a branching green stem. The organic fruit has a smooth, slightly matte skin texture.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.2,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies",
+  "total_object_mass_kg": 0.2,
+  "_authoritative_context_applied": {
+    "object": {},
+    "parts": [
+      {
+        "part_index": 0,
+        "part_id": "part_00",
+        "fields": [
+          "bounds",
+          "canonical_name",
+          "material",
+          "part_id",
+          "part_index",
+          "source_object_name",
+          "source_part_name"
+        ]
+      }
+    ]
+  }
+}

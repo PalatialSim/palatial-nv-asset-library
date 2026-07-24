@@ -1,0 +1,119 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00986 Wooden Utensil",
+      "source_part_name": "D00986 Wooden Utensil",
+      "source_object_name": "D00986 Wooden Utensil",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "wood",
+      "material": "wood",
+      "mass": 0.0568,
+      "density": 700.0,
+      "inertia": [
+        1.814865334295122e-05,
+        0.0003927132916117319,
+        0.0004069906291405697
+      ],
+      "inertia_axes": [
+        0.9999926448218619,
+        0.0033199412184605754,
+        -0.0018074083124545177,
+        0.0006492824314050614
+      ],
+      "center_of_mass": [
+        0.023528520647100194,
+        -9.721469978227734e-05,
+        0.013379714740614687
+      ],
+      "part_origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "volume": 0.00010628967856418246,
+      "bounds": {
+        "min": [
+          -0.041740015149116516,
+          -8.936413905757945e-06,
+          -0.12397406250238419
+        ],
+        "max": [
+          0.03787398710846901,
+          0.14803805947303772,
+          0.08434293419122696
+        ],
+        "center": [
+          -0.0011598550384475804,
+          0.054860877934453475,
+          0.004104089406716529
+        ]
+      },
+      "description": "A light brown wooden spoon with a long cylindrical handle and a shallow, rounded bowl.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The physical properties are derived from the provided auto-scale metrics and the visual identification of the material as wood. Typical hardwood (such as beech, often used for kitchen utensils) has a density of approximately 700 kg/m\u00b3. Using the provided voxel volume of 8.116e-05 m\u00b3, the calculated mass is 0.0568 kg (about 57 grams), which is highly realistic for a wooden spoon of these dimensions (approx 31cm length). Friction coefficients (0.5 static, 0.4 dynamic) and restitution (0.3) are standard estimates for sanded, finished wood. For Isaac Sim simulation, the collider type MUST be 'convex_decomposition' because a standard 'convex_hull' would completely enclose the spoon's bowl, preventing it from scooping or resting realistically on uneven surfaces. Continuous Collision Detection (CCD) is recommended globally and per-body due to the thinness of the handle and bowl edges, which are prone to tunneling during high-velocity impacts or robotic grasping.",
+      "static_friction": 0.5,
+      "dynamic_friction": 0.4,
+      "restitution": 0.3,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": "",
+      "appearance_properties": {},
+      "newton": {
+        "collisions": {
+          "collider_type": "convex_decomposition",
+          "rest_offset": 0,
+          "contact_offset": 0.002,
+          "explosion_view_distance": 0,
+          "collision_mesh_debug_visualization": false
+        },
+        "simulation_scene": {
+          "simulation_steps_per_second": 60,
+          "enable_ccd": true,
+          "gravitational_acceleration": [
+            0,
+            0,
+            -9.81
+          ],
+          "gpu_buffer_parameters": {},
+          "residuals": {}
+        }
+      }
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00986 Wooden Utensil",
+  "fix_base": false,
+  "object_description": "A light brown wooden spoon with a long cylindrical handle and a shallow, rounded bowl.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.0568,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies",
+  "total_object_mass_kg": 0.0568,
+  "_authoritative_context_applied": {
+    "object": {},
+    "parts": [
+      {
+        "part_index": 0,
+        "part_id": "part_00",
+        "fields": [
+          "bounds",
+          "canonical_name",
+          "material",
+          "part_id",
+          "part_index",
+          "source_object_name",
+          "source_part_name"
+        ]
+      }
+    ]
+  }
+}

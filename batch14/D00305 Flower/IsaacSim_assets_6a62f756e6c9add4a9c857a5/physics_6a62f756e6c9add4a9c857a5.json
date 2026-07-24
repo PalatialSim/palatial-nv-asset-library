@@ -1,0 +1,119 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "generated reference 01",
+      "source_part_name": "generated reference 01",
+      "source_object_name": "generated reference 01",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "lightweight_plastic_organic_plant_material",
+      "material": "lightweight_plastic_organic_plant_material",
+      "mass": 0.019,
+      "density": 500.0,
+      "inertia": [
+        1.9202438600100304e-05,
+        3.586959129936352e-05,
+        3.8678242527197304e-05
+      ],
+      "inertia_axes": [
+        0.5369022216040059,
+        0.42400492316662847,
+        -0.5360593328613716,
+        0.49456670047564416
+      ],
+      "center_of_mass": [
+        0.0012451296315020995,
+        1.6537402549981844e-05,
+        0.12956054529049799
+      ],
+      "part_origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "volume": 0.0007573482372084453,
+      "bounds": {
+        "min": [
+          -0.06010823,
+          0.0,
+          -0.05392101
+        ],
+        "max": [
+          0.05562334,
+          0.19186003,
+          0.05675799
+        ],
+        "center": [
+          -0.000250926143405931,
+          0.14717252529827818,
+          -6.014264153792966e-05
+        ]
+      },
+      "description": "A realistic white lily with broad, textured petals and central yellow stamens. It is supported by a smooth green stem with alternating, lance-shaped leaves.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The asset is a delicate, complex object. Based on the provided auto-scale summary, the object's voxel volume is approximately 3.81e-5 m^3. Assigning a density of 500 kg/m^3 (representing lightweight plastic or stiff organic material common in artificial or real cut flowers) results in a mass of roughly 0.019 kg (19 grams). The friction coefficients (0.5 static, 0.4 dynamic) reflect the slightly smooth but gripping surface of plant stems and leaves. Restitution is kept at a minimal 0.1, as flowers do not bounce upon impact. Crucially, the collision geometry must be modeled as an 'sdf_mesh' (Signed Distance Field) rather than a convex hull or decomposition. The extremely thin, concave, and intricate geometry of the petals and leaves would be lost in convex approximations, which could result in a massive invisible bounding volume preventing accurate interaction. CCD is enabled to prevent this lightweight, thin object from tunneling through floors or manipulators. Contact offsets are reduced to 0.002 m to accommodate the thin geometry without artificial inflation.",
+      "static_friction": 0.5,
+      "dynamic_friction": 0.4,
+      "restitution": 0.1,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": "",
+      "appearance_properties": {},
+      "newton": {
+        "collisions": {
+          "collider_type": "sdf_mesh",
+          "rest_offset": 0,
+          "contact_offset": 0.002,
+          "explosion_view_distance": 0.05,
+          "collision_mesh_debug_visualization": false
+        },
+        "simulation_scene": {
+          "simulation_steps_per_second": 60,
+          "enable_ccd": true,
+          "gravitational_acceleration": [
+            0,
+            0,
+            -9.81
+          ],
+          "gpu_buffer_parameters": {},
+          "residuals": {}
+        }
+      }
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "generated reference 01",
+  "fix_base": false,
+  "object_description": "A realistic white lily with broad, textured petals and central yellow stamens. It is supported by a smooth green stem with alternating, lance-shaped leaves.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.019,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies",
+  "total_object_mass_kg": 0.019,
+  "_authoritative_context_applied": {
+    "object": {},
+    "parts": [
+      {
+        "part_index": 0,
+        "part_id": "part_00",
+        "fields": [
+          "bounds",
+          "canonical_name",
+          "material",
+          "part_id",
+          "part_index",
+          "source_object_name",
+          "source_part_name"
+        ]
+      }
+    ]
+  }
+}

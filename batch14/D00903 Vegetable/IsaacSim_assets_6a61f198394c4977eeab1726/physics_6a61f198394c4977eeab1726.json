@@ -1,0 +1,119 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "generated reference 01",
+      "source_part_name": "generated reference 01",
+      "source_object_name": "generated reference 01",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "organic",
+      "material": "organic",
+      "mass": 0.25,
+      "density": 500.0,
+      "inertia": [
+        0.000203166515910398,
+        0.00027053730550021025,
+        0.00028884605186219086
+      ],
+      "inertia_axes": [
+        0.016371517708189603,
+        0.9981684509527607,
+        -0.012275456796259389,
+        0.056930045590528555
+      ],
+      "center_of_mass": [
+        -0.0062792671549185535,
+        -0.001138590264017594,
+        0.04197470655184355
+      ],
+      "part_origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "volume": 0.00047474914893924576,
+      "bounds": {
+        "min": [
+          -0.07662048,
+          0.0,
+          -0.04946403
+        ],
+        "max": [
+          0.04891228,
+          0.08826631,
+          0.0479888
+        ],
+        "center": [
+          0.002428855182930006,
+          0.04232285071375645,
+          0.0002212191634145184
+        ]
+      },
+      "description": "A fresh head of green broccoli featuring a thick, smooth stalk and dense, textured florets. The surface presents a natural organic appearance with a slightly waxy stem finish and a clustered canopy.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The object is identified as a head of broccoli with dimensions of 0.15 x 0.15 x 0.15 m (150 mm on each side) based on the provided physics context. While the voxel volume suggests a very low mass, a solid volume estimate of this bounding box yields a much higher mass; a typical real-world broccoli head of this size weighs approximately 0.25 kg. Therefore, an effective bulk density of 500 kg/m\u00b3 is assigned to account for the porous nature of the florets and the denser stalk. The dominant material is organic vegetable matter with a waxy skin, leading to a moderate static friction of 0.5 and dynamic friction of 0.4 to simulate interaction with standard kitchen or robotic surfaces. Restitution is set very low (0.1), as raw vegetables are highly dampening and do not bounce. For Isaac Sim physics, 'convex_decomposition' is selected for the collider to accurately represent the branching structure and prevent unnatural rolling that a simple convex hull or bounding box would cause. Contact offsets are set to a small value (1 mm) relative to the 15 cm scale to ensure precise contact generation without visible floating.",
+      "static_friction": 0.5,
+      "dynamic_friction": 0.4,
+      "restitution": 0.1,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": "",
+      "appearance_properties": {},
+      "newton": {
+        "collisions": {
+          "collider_type": "convex_decomposition",
+          "rest_offset": 0,
+          "contact_offset": 0.001,
+          "explosion_view_distance": 0,
+          "collision_mesh_debug_visualization": false
+        },
+        "simulation_scene": {
+          "simulation_steps_per_second": 60,
+          "enable_ccd": false,
+          "gravitational_acceleration": [
+            0,
+            -9.81,
+            0
+          ],
+          "gpu_buffer_parameters": {},
+          "residuals": {}
+        }
+      }
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "generated reference 01",
+  "fix_base": false,
+  "object_description": "A fresh head of green broccoli featuring a thick, smooth stalk and dense, textured florets. The surface presents a natural organic appearance with a slightly waxy stem finish and a clustered canopy.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.25,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies",
+  "total_object_mass_kg": 0.25,
+  "_authoritative_context_applied": {
+    "object": {},
+    "parts": [
+      {
+        "part_index": 0,
+        "part_id": "part_00",
+        "fields": [
+          "bounds",
+          "canonical_name",
+          "material",
+          "part_id",
+          "part_index",
+          "source_object_name",
+          "source_part_name"
+        ]
+      }
+    ]
+  }
+}

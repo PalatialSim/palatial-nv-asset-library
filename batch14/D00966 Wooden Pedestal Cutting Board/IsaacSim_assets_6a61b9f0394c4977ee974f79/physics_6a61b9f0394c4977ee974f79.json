@@ -1,0 +1,119 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "generated reference 01",
+      "source_part_name": "generated reference 01",
+      "source_object_name": "generated reference 01",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "wood",
+      "material": "wood",
+      "mass": 1.2,
+      "density": 650.0,
+      "inertia": [
+        0.006359892986155426,
+        0.0063892085779262255,
+        0.010716841467313703
+      ],
+      "inertia_axes": [
+        0.0001247880316272522,
+        0.7064661838935479,
+        0.7077467868795142,
+        -3.32349012039666e-05
+      ],
+      "center_of_mass": [
+        -0.00021333983555068804,
+        0.0004935698668588165,
+        0.07642192119305546
+      ],
+      "part_origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "volume": 0.0012708541058994713,
+      "bounds": {
+        "min": [
+          -0.14833145,
+          0.0,
+          -0.14856315
+        ],
+        "max": [
+          0.14790446,
+          0.09739073,
+          0.14765637
+        ],
+        "center": [
+          -0.000226429433978124,
+          0.07849663117286436,
+          -0.0004814305466556879
+        ]
+      },
+      "description": "A circular wooden cutting board mounted on a flared pedestal base, featuring a smooth, natural light wood grain finish.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The physical dimensions extracted from the metadata are approximately 0.3m x 0.3m x 0.1m (300 x 300 x 100 mm). The object is visually identified as being made of solid wood, such as oak or maple, which typically has a density of around 650 kg/m\u00b3. Given its geometry\u2014a wide circular top supported by a narrower pedestal base\u2014the actual volume is significantly less than its bounding box. Calculating an approximate volume of the constituent cylinders yields around 0.0018 m\u00b3, resulting in an estimated mass of 1.2 kg. For rigid body physics in Isaac Sim, wood generally exhibits moderate friction (static 0.5, dynamic 0.4) and low restitution (0.3) due to its relatively inelastic collision response. Convex decomposition is selected for the collider type to accurately capture the concave profile underneath the wide cutting surface. Standard contact offsets (0.002m) are applied for macroscopic object simulation stability.",
+      "static_friction": 0.5,
+      "dynamic_friction": 0.4,
+      "restitution": 0.3,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": "",
+      "appearance_properties": {},
+      "newton": {
+        "collisions": {
+          "collider_type": "convex_decomposition",
+          "rest_offset": 0,
+          "contact_offset": 0.002,
+          "explosion_view_distance": 0,
+          "collision_mesh_debug_visualization": false
+        },
+        "simulation_scene": {
+          "simulation_steps_per_second": 60,
+          "enable_ccd": false,
+          "gravitational_acceleration": [
+            0,
+            -9.81,
+            0
+          ],
+          "gpu_buffer_parameters": {},
+          "residuals": {}
+        }
+      }
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "generated reference 01",
+  "fix_base": false,
+  "object_description": "A circular wooden cutting board mounted on a flared pedestal base, featuring a smooth, natural light wood grain finish.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 1.2,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies",
+  "total_object_mass_kg": 1.2,
+  "_authoritative_context_applied": {
+    "object": {},
+    "parts": [
+      {
+        "part_index": 0,
+        "part_id": "part_00",
+        "fields": [
+          "bounds",
+          "canonical_name",
+          "material",
+          "part_id",
+          "part_index",
+          "source_object_name",
+          "source_part_name"
+        ]
+      }
+    ]
+  }
+}
