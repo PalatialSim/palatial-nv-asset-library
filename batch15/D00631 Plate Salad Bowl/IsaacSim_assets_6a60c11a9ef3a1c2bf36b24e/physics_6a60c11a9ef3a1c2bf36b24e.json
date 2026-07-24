@@ -1,0 +1,119 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "generated reference 01",
+      "source_part_name": "generated reference 01",
+      "source_object_name": "generated reference 01",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "ceramic",
+      "material": "ceramic",
+      "mass": 0.717,
+      "density": 2400.0,
+      "inertia": [
+        0.003315686492722883,
+        0.0033260454342405104,
+        0.005511410630520165
+      ],
+      "inertia_axes": [
+        0.9943347842490079,
+        0.0003900282337255316,
+        0.0004184342784950835,
+        0.10629209577014868
+      ],
+      "center_of_mass": [
+        -0.00010896965114892587,
+        0.00028155360018276837,
+        0.04461832674553842
+      ],
+      "part_origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "volume": 0.00038960369714209045,
+      "bounds": {
+        "min": [
+          -0.12370953,
+          0.0,
+          -0.12391253
+        ],
+        "max": [
+          0.12381049,
+          0.08303101,
+          0.12343183
+        ],
+        "center": [
+          2.6211672958973476e-05,
+          0.04485007544706337,
+          -0.0002275604382566996
+        ]
+      },
+      "description": "A white ceramic bowl with a deep central basin and a wide, flat outer rim. The surface features a smooth, uniform finish consistent with glazed tableware.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The object is identified and visually confirmed as a ceramic salad bowl. Based on the provided voxel volume of 0.0002989 m^3 and a typical ceramic density of 2400 kg/m^3, the estimated mass is approximately 0.72 kg. As a bowl, it requires a 'convex_decomposition' collider to accurately represent the concavity of the basin, preventing other objects from floating on top of a simple convex hull. Ceramic materials have moderate friction (estimated static 0.4, dynamic 0.3) against typical tabletop surfaces and a low restitution (0.2) as they are hard and brittle rather than bouncy. Continuous Collision Detection (CCD) is enabled at both the body and scene levels to prevent thin objects or the bowl's rim from tunneling through surfaces under gravity or during impacts. Contact offsets are set to a standard 1mm (0.001m) to maintain stable resting contacts without visible floating.",
+      "static_friction": 0.4,
+      "dynamic_friction": 0.3,
+      "restitution": 0.2,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": "",
+      "appearance_properties": {},
+      "newton": {
+        "collisions": {
+          "collider_type": "convex_decomposition",
+          "rest_offset": 0,
+          "contact_offset": 0.001,
+          "explosion_view_distance": 0,
+          "collision_mesh_debug_visualization": false
+        },
+        "simulation_scene": {
+          "simulation_steps_per_second": 60,
+          "enable_ccd": true,
+          "gravitational_acceleration": [
+            0,
+            0,
+            -9.81
+          ],
+          "gpu_buffer_parameters": {},
+          "residuals": {}
+        }
+      }
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "generated reference 01",
+  "fix_base": false,
+  "object_description": "A white ceramic bowl with a deep central basin and a wide, flat outer rim. The surface features a smooth, uniform finish consistent with glazed tableware.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.717,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies",
+  "total_object_mass_kg": 0.717,
+  "_authoritative_context_applied": {
+    "object": {},
+    "parts": [
+      {
+        "part_index": 0,
+        "part_id": "part_00",
+        "fields": [
+          "bounds",
+          "canonical_name",
+          "material",
+          "part_id",
+          "part_index",
+          "source_object_name",
+          "source_part_name"
+        ]
+      }
+    ]
+  }
+}

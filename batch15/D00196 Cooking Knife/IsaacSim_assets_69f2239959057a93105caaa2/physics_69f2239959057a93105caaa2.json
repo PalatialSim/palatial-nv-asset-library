@@ -1,0 +1,119 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00196 Cooking Knife",
+      "source_part_name": "D00196 Cooking Knife",
+      "source_object_name": "D00196 Cooking Knife",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "steel",
+      "material": "steel",
+      "mass": 0.22,
+      "density": 3280.0,
+      "inertia": [
+        3.434541732331215e-05,
+        0.0012825483123746362,
+        0.001310144614396127
+      ],
+      "inertia_axes": [
+        0.9999974092042189,
+        0.000822842104534723,
+        0.0008848406134231992,
+        -0.0019291378411308683
+      ],
+      "center_of_mass": [
+        0.01422509892435583,
+        -0.0007099563105055139,
+        0.009007579376102448
+      ],
+      "part_origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "volume": 0.0001449180525474186,
+      "bounds": {
+        "min": [
+          -0.20116497576236725,
+          1.565822822158225e-05,
+          -0.02078673429787159
+        ],
+        "max": [
+          0.13916103541851044,
+          0.017792658880352974,
+          0.030545266345143318
+        ],
+        "center": [
+          -0.01863026316167115,
+          0.009165875220038191,
+          -0.00021585284214238184
+        ]
+      },
+      "description": "A chef's knife featuring a brushed stainless steel blade and a dark wooden handle secured with three silver rivets.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "Based on the provided metadata, the object has a total length of approximately 0.34m, width of 0.053m, and a thickness of 0.018m. A standard professional chef's knife of this size typically weighs around 0.22 kg. Given the calculated voxel volume of 6.71e-05 m^3, the implied average density is roughly 3280 kg/m^3. This value perfectly aligns with a composite body consisting of a dense stainless steel blade and full tang (approx. 7800 kg/m^3) bound by lighter wooden handle scales (approx. 700 kg/m^3). Because the object features a very thin blade, Continuous Collision Detection (CCD) is critical and enabled at both the rigid body and scene levels to prevent tunneling during fast motions (e.g., chopping or dropping). A convex decomposition collider is selected to accurately represent the disparate thicknesses of the blade and handle while maintaining the concavity at the heel of the blade. Contact offsets are reduced to 1mm to ensure tight contact constraints without instability, suitable for tabletop manipulation tasks.",
+      "static_friction": 0.4,
+      "dynamic_friction": 0.3,
+      "restitution": 0.4,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": "",
+      "appearance_properties": {},
+      "newton": {
+        "collisions": {
+          "collider_type": "convex_decomposition",
+          "rest_offset": 0,
+          "contact_offset": 0.001,
+          "explosion_view_distance": 0.02,
+          "collision_mesh_debug_visualization": false
+        },
+        "simulation_scene": {
+          "simulation_steps_per_second": 120,
+          "enable_ccd": true,
+          "gravitational_acceleration": [
+            0,
+            0,
+            -9.81
+          ],
+          "gpu_buffer_parameters": {},
+          "residuals": {}
+        }
+      }
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00196 Cooking Knife",
+  "fix_base": false,
+  "object_description": "A chef's knife featuring a brushed stainless steel blade and a dark wooden handle secured with three silver rivets.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.22,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies",
+  "total_object_mass_kg": 0.22,
+  "_authoritative_context_applied": {
+    "object": {},
+    "parts": [
+      {
+        "part_index": 0,
+        "part_id": "part_00",
+        "fields": [
+          "bounds",
+          "canonical_name",
+          "material",
+          "part_id",
+          "part_index",
+          "source_object_name",
+          "source_part_name"
+        ]
+      }
+    ]
+  }
+}

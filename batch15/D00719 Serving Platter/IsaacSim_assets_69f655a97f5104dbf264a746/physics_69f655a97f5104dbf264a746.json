@@ -1,0 +1,119 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00719 Serving Platter",
+      "source_part_name": "D00719 Serving Platter",
+      "source_object_name": "D00719 Serving Platter",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "ceramic",
+      "material": "ceramic",
+      "mass": 0.8,
+      "density": 2400.0,
+      "inertia": [
+        0.0025453496975656083,
+        0.0025528734347542693,
+        0.005056528599357672
+      ],
+      "inertia_axes": [
+        0.0013845052700460856,
+        0.5327538476507118,
+        0.8462674567964774,
+        0.0016770586577791744
+      ],
+      "center_of_mass": [
+        8.764383354503103e-05,
+        -0.0002912365508851392,
+        0.010716095909093639
+      ],
+      "part_origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "volume": 0.0002682156525837231,
+      "bounds": {
+        "min": [
+          -0.11045552,
+          0.0,
+          -0.11008439
+        ],
+        "max": [
+          0.11065942,
+          0.02589456,
+          0.11091907
+        ],
+        "center": [
+          -0.0001597903318976046,
+          0.011115264033394929,
+          0.00029669730331896365
+        ]
+      },
+      "description": "A white, round serving platter made of ceramic with a slightly raised rim and small feet on the base.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The object is a serving platter with extents of approximately 0.31m x 0.31m x 0.027m. Based on the material description (ceramic or porcelain), a density of 2400 kg/m^3 is assigned. Since voxel volume analysis (0.000143 m^3) typically underestimates thin-walled meshes, the mass is adjusted to a realistic prior of 0.8 kg for a 31cm ceramic platter. Ceramic features moderate friction (0.5 static) and low restitution (0.2) to simulate hard, brittle interactions. Because this is a concave plate intended to contain items, 'convex_decomposition' is selected for the collider type, allowing other objects to rest inside its shallow bowl without floating, while supporting robust robotic grasping of the rim. CCD is enabled due to the thin profile of the object to prevent tunneling at high velocities.",
+      "static_friction": 0.5,
+      "dynamic_friction": 0.4,
+      "restitution": 0.2,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": "",
+      "appearance_properties": {},
+      "newton": {
+        "collisions": {
+          "collider_type": "convex_decomposition",
+          "rest_offset": 0,
+          "contact_offset": 0.001,
+          "explosion_view_distance": 0.05,
+          "collision_mesh_debug_visualization": false
+        },
+        "simulation_scene": {
+          "simulation_steps_per_second": 60,
+          "enable_ccd": true,
+          "gravitational_acceleration": [
+            0,
+            -9.81,
+            0
+          ],
+          "gpu_buffer_parameters": {},
+          "residuals": {}
+        }
+      }
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00719 Serving Platter",
+  "fix_base": false,
+  "object_description": "A white, round serving platter made of ceramic with a slightly raised rim and small feet on the base.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.8,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies",
+  "total_object_mass_kg": 0.8,
+  "_authoritative_context_applied": {
+    "object": {},
+    "parts": [
+      {
+        "part_index": 0,
+        "part_id": "part_00",
+        "fields": [
+          "bounds",
+          "canonical_name",
+          "material",
+          "part_id",
+          "part_index",
+          "source_object_name",
+          "source_part_name"
+        ]
+      }
+    ]
+  }
+}
