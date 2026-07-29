@@ -1,0 +1,91 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00959 Wooden Fork",
+      "source_part_name": "D00959 Wooden Fork",
+      "source_object_name": "D00959 Wooden Fork",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "wood",
+      "material": "wood",
+      "non_visual_material": null,
+      "mass": 0.018,
+      "density": 650.0,
+      "inertia": [
+        2.9892674081182363e-06,
+        0.00015132462197210407,
+        0.00015318935657823515
+      ],
+      "inertia_axes": [
+        0.7068615195180444,
+        -0.7072757915968162,
+        0.006971516047771131,
+        -0.007690566281754233
+      ],
+      "center_of_mass": [
+        0.0377165292926623,
+        -0.012424171656461924,
+        9.677915535546409e-05
+      ],
+      "part_origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "volume": 0.00011199943330959661,
+      "bounds": {
+        "min": [
+          -0.13536405563354492,
+          0.0,
+          -0.028574984520673752
+        ],
+        "max": [
+          0.18361149728298187,
+          0.02703230269253254,
+          0.028361234813928604
+        ],
+        "center": [
+          0.008962532248484346,
+          0.011994588754773832,
+          -7.990435077093663e-05
+        ]
+      },
+      "description": "A light tan wooden fork with a rounded handle, visible wood grain, and four slender tines. The utensil has smoothly carved, rounded edges and a matte natural finish.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The object appears to be a single-piece carved wooden fork, approximately the size of a handheld eating utensil. With no product data supplied, dimensions are estimated at roughly 0.18\u20130.22 m long, 0.035\u20130.045 m wide at the fork head, 0.018\u20130.025 m wide at the handle, and 0.004\u20130.008 m thick. A realistic displaced volume after accounting for tapering, rounded edges, and the gaps between tines is about 2.5e-5 to 3.0e-5 m^3. Light hardwoods and bamboo-like utensil woods commonly fall around 550\u2013750 kg/m^3, so a density of 650 kg/m^3 gives a mass near 0.016\u20130.020 kg; 0.018 kg is a practical estimate. The center of mass should lie closer to the broad fork head than the geometric midpoint, but still along the handle centerline for a single-piece symmetric utensil. For PhysX in Isaac Sim v4.5, the fork is thin, lightweight, and has concave features between the tines, so a single convex hull would incorrectly fill the tine gaps and overestimate the collision shape. Convex decomposition is the best default rigid-body collider choice: use separate convex parts for the handle, neck, fork head, and each tine, with moderate simplification. If exact tine-gap interaction is critical, an SDF mesh collider may be used, but convex decomposition is usually faster and more stable for dynamic rigid bodies. Wood-on-general-surface friction is moderate: static friction around 0.5\u20130.6 and dynamic friction around 0.4\u20130.5 are appropriate. Restitution is low to moderate because wood is stiff but the object is light and shaped with rounded contact patches; 0.32 avoids excessive bouncing while still allowing a small rebound. Because the object is thin at the tines, contact_offset should be kept small relative to the geometry; about 0.002 m is suitable for reliable contact generation without visible hovering, with rest_offset near zero. CCD is recommended when dropped, swept, or manipulated quickly because the tines are only a few millimeters thick and can otherwise tunnel through surfaces. For stable stacking or tabletop contact, 120 Hz simulation is preferable to 60 Hz, especially for this low-mass object. Compliant contacts are disabled by default because the model is treated as rigid wood; if contact chatter occurs, use a very stiff compliant-contact setting rather than soft deformation. Sleep thresholds should be kept low for such a light object so it can settle without jitter but still wake when contacted; typical kinetic-energy-style sleep thresholds around 0.001\u20130.005 are appropriate in Isaac/PhysX workflows.",
+      "static_friction": 0.56,
+      "dynamic_friction": 0.44,
+      "restitution": 0.32,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "enable_ccd": null,
+      "solver_position_iterations": null,
+      "solver_velocity_iterations": null,
+      "color_name": ""
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00959 Wooden Fork",
+  "object_description": "A light tan wooden fork with a rounded handle, visible wood grain, and four slender tines. The utensil has smoothly carved, rounded edges and a matte natural finish.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.018,
+  "center_of_mass": null,
+  "inertia": null,
+  "base_link_recommendation": null,
+  "fix_base": false,
+  "source": null,
+  "authored_by": null,
+  "up_axis": null,
+  "solver_position_iterations": null,
+  "solver_velocity_iterations": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies"
+}
