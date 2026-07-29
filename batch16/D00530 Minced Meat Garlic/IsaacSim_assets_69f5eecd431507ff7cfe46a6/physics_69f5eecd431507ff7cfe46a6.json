@@ -1,0 +1,102 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00530 Minced Meat Garlic",
+      "source_part_name": "D00530 Minced Meat Garlic",
+      "source_object_name": "D00530 Minced Meat Garlic",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "raw_meat",
+      "material": "raw_meat",
+      "non_visual_material": null,
+      "mass": 0.5,
+      "density": 1000.0,
+      "inertia": [
+        0.0006320861834415157,
+        0.0006835716416856924,
+        0.0010308242481135198
+      ],
+      "inertia_axes": [
+        0.9702765705091206,
+        -0.00937262608148608,
+        -0.011876274733555795,
+        -0.2415253293131991
+      ],
+      "center_of_mass": [
+        0.002068951951545135,
+        -1.868474109571099e-05,
+        0.0261851491506757
+      ],
+      "part_origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "volume": 0.0007479787490390341,
+      "bounds": {
+        "min": [
+          -0.07345037162303925,
+          -0.07197070866823196,
+          -3.8565991417272016e-05
+        ],
+        "max": [
+          0.07062619179487228,
+          0.0718446746468544,
+          0.07201792299747467
+        ],
+        "center": [
+          0.0003502055420737184,
+          0.0002608715166570778,
+          0.02516652200494897
+        ]
+      },
+      "description": "A mound of raw ground meat mixed with chopped garlic pieces and black pepper. The pile has an irregular, textured surface with a moist, pinkish-red color.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The object is visually identified as a pile of raw ground meat. For rigid body simulation in Isaac Sim, this amorphous mound must be approximated as a single solid mass. The density is estimated at 1000 kg/m^3, similar to mammalian muscle and fat with high water content. Assuming a diameter of roughly 12 cm, the mass is estimated at 0.5 kg. The material is wet and cohesive, leading to high static (0.8) and dynamic (0.7) friction coefficients to simulate its sticky, drag-heavy nature against surfaces. Restitution is set extremely low (0.05) because raw meat is highly inelastic and will absorb impact rather than bounce. For collision geometry, 'convex_decomposition' is recommended to approximate the lumpy, irregular exterior surface, which will prevent unrealistic rolling that a simpler convex hull might cause. A small contact offset (0.005) is suggested to maintain stability for the complex collision shape.",
+      "static_friction": 0.8,
+      "dynamic_friction": 0.7,
+      "restitution": 0.05,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": "",
+      "appearance_properties": {},
+      "newton": {
+        "collisions": {
+          "collider_type": "convex_decomposition",
+          "rest_offset": 0,
+          "contact_offset": 0.005,
+          "explosion_view_distance": 0,
+          "collision_mesh_debug_visualization": false
+        },
+        "simulation_scene": {
+          "simulation_steps_per_second": 60,
+          "enable_ccd": false,
+          "gravitational_acceleration": [
+            0,
+            0,
+            -9.81
+          ],
+          "gpu_buffer_parameters": {},
+          "residuals": {}
+        }
+      }
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00530 Minced Meat Garlic",
+  "object_description": "A mound of raw ground meat mixed with chopped garlic pieces and black pepper. The pile has an irregular, textured surface with a moist, pinkish-red color.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.5,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies"
+}

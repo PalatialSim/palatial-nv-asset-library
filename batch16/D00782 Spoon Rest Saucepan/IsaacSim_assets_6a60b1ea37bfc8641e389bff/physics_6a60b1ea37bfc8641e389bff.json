@@ -1,0 +1,119 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "generated reference 01",
+      "source_part_name": "generated reference 01",
+      "source_object_name": "generated reference 01",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "steel",
+      "material": "steel",
+      "mass": 0.15,
+      "density": 7850.0,
+      "inertia": [
+        4.511344219566305e-05,
+        0.00012353563508854594,
+        0.0001532416566262501
+      ],
+      "inertia_axes": [
+        0.999998421226273,
+        -1.683144062224276e-05,
+        0.0017738405652100164,
+        -0.00010368853957598509
+      ],
+      "center_of_mass": [
+        0.003933367785066,
+        -0.000142488672282,
+        0.015051037073135
+      ],
+      "part_origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "volume": 0.00013169795416364814,
+      "bounds": {
+        "min": [
+          -0.045628998428583,
+          -0.035890001803637,
+          0.000535049994596
+        ],
+        "max": [
+          0.087833002209663,
+          0.035599000751972,
+          0.027800049399957
+        ],
+        "center": [
+          -0.002317126261528,
+          -0.000144934422909,
+          0.012080650194147
+        ]
+      },
+      "description": "A small, shallow bowl with a short, straight handle resembling a miniature saucepan. It is made entirely of brushed stainless steel with a metallic silver finish.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "Based on the provided metadata and visual evidence, the object is a 'Spoon Rest Saucepan' made of steel. The dominant material is steel, which governs the physical properties. The standard density for stainless steel is approximately 7850 kg/m\u00b3. Using the provided voxel volume of 1.93e-05 m\u00b3, the estimated mass is approximately 0.15 kg, which is realistic for a small steel kitchen accessory of these dimensions (15 x 10 x 3 cm). The friction coefficients are estimated at 0.5 (static) and 0.4 (dynamic), which are typical for steel surfaces. The restitution is set to 0.5. For collision detection in Isaac Sim, 'convex_decomposition' is highly recommended because a simple convex hull would enclose the hollow basin, preventing other objects (like spoons) from resting inside it naturally. Continuous Collision Detection (CCD) is enabled at both the body and scene levels to prevent tunneling, given the thin walls of the object. Contact offsets are set to a small value (0.001 m) to ensure precise interactions.",
+      "static_friction": 0.5,
+      "dynamic_friction": 0.4,
+      "restitution": 0.5,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": "",
+      "appearance_properties": {},
+      "newton": {
+        "collisions": {
+          "collider_type": "convex_decomposition",
+          "rest_offset": 0,
+          "contact_offset": 0.001,
+          "explosion_view_distance": 0,
+          "collision_mesh_debug_visualization": false
+        },
+        "simulation_scene": {
+          "simulation_steps_per_second": 60,
+          "enable_ccd": true,
+          "gravitational_acceleration": [
+            0,
+            0,
+            -9.81
+          ],
+          "gpu_buffer_parameters": {},
+          "residuals": {}
+        }
+      }
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "generated reference 01",
+  "fix_base": false,
+  "object_description": "A small, shallow bowl with a short, straight handle resembling a miniature saucepan. It is made entirely of brushed stainless steel with a metallic silver finish.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.15,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies",
+  "total_object_mass_kg": 0.15,
+  "_authoritative_context_applied": {
+    "object": {},
+    "parts": [
+      {
+        "part_index": 0,
+        "part_id": "part_00",
+        "fields": [
+          "bounds",
+          "canonical_name",
+          "material",
+          "part_id",
+          "part_index",
+          "source_object_name",
+          "source_part_name"
+        ]
+      }
+    ]
+  }
+}

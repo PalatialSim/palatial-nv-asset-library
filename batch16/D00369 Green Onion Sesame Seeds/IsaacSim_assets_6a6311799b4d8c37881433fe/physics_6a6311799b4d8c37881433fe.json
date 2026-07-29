@@ -1,0 +1,119 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "generated reference 01",
+      "source_part_name": "generated reference 01",
+      "source_object_name": "generated reference 01",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "ceramic",
+      "material": "ceramic",
+      "mass": 0.05,
+      "density": 2200.0,
+      "inertia": [
+        2.156403258219538e-05,
+        2.165443099395841e-05,
+        3.29212744271599e-05
+      ],
+      "inertia_axes": [
+        3.3572558806345057e-06,
+        -0.7049403480857931,
+        -0.7092665934268724,
+        7.126043476227489e-05
+      ],
+      "center_of_mass": [
+        -0.00020717296220651102,
+        0.00021855377484492387,
+        0.02144421029478702
+      ],
+      "part_origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "volume": 0.00014596809651809035,
+      "bounds": {
+        "min": [
+          -0.04000331,
+          0.0,
+          -0.03997007
+        ],
+        "max": [
+          0.03957389,
+          0.03765054,
+          0.03960778
+        ],
+        "center": [
+          -0.0001375875608859929,
+          0.02362059409327406,
+          -0.00012626126353837896
+        ]
+      },
+      "description": "A small terracotta bowl filled with chopped green onions and sprinkled with black sesame seeds.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The provided metadata confirms the dimensions of the object as 0.08 x 0.08 x 0.04 m, establishing it as a small bowl. Visual inspection indicates the dominant structural and contact material is unglazed ceramic or terracotta. The density of porous terracotta is approximately 2200 kg/m^3. Using the provided voxel volume of ~1.45e-05 m^3, the ceramic shell alone would mass around 0.032 kg; adding the water-rich organic contents brings the estimated total mass to 0.05 kg. Unglazed terracotta possesses a moderately rough surface, resulting in higher friction coefficients (static 0.6, dynamic 0.5). Restitution is extremely low (0.1) because both the brittle ceramic and the soft organic contents absorb kinetic energy. For PhysX simulation in Isaac Sim, Continuous Collision Detection (CCD) is enabled to prevent tunneling, as this is a lightweight, small object susceptible to high-velocity impacts during manipulation. A convex decomposition collider is recommended to capture the rounded base and slight concavity at the top surface, ensuring stable resting contacts. A small contact offset (2mm) is applied to ensure stable constraint generation without visual interpenetration.",
+      "static_friction": 0.6,
+      "dynamic_friction": 0.5,
+      "restitution": 0.1,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": "",
+      "appearance_properties": {},
+      "newton": {
+        "collisions": {
+          "collider_type": "convex_decomposition",
+          "rest_offset": 0,
+          "contact_offset": 0.002,
+          "explosion_view_distance": 0,
+          "collision_mesh_debug_visualization": false
+        },
+        "simulation_scene": {
+          "simulation_steps_per_second": 60,
+          "enable_ccd": true,
+          "gravitational_acceleration": [
+            0,
+            0,
+            -9.81
+          ],
+          "gpu_buffer_parameters": {},
+          "residuals": {}
+        }
+      }
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "generated reference 01",
+  "fix_base": false,
+  "object_description": "A small terracotta bowl filled with chopped green onions and sprinkled with black sesame seeds.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.05,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies",
+  "total_object_mass_kg": 0.05,
+  "_authoritative_context_applied": {
+    "object": {},
+    "parts": [
+      {
+        "part_index": 0,
+        "part_id": "part_00",
+        "fields": [
+          "bounds",
+          "canonical_name",
+          "material",
+          "part_id",
+          "part_index",
+          "source_object_name",
+          "source_part_name"
+        ]
+      }
+    ]
+  }
+}

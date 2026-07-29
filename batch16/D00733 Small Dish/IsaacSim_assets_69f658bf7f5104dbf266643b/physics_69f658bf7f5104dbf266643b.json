@@ -1,0 +1,81 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00733 Small Dish",
+      "source_part_name": "D00733 Small Dish",
+      "source_object_name": "D00733 Small Dish",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "baked_bread",
+      "material": "baked_bread",
+      "non_visual_material": null,
+      "mass": 0.34,
+      "density": 2400.0,
+      "inertia": [
+        0.0003100204345056035,
+        0.0003111510370693454,
+        0.0005087803728878275
+      ],
+      "inertia_axes": [
+        0.5137240526858384,
+        0.5135391442635513,
+        0.4860132665040324,
+        -0.48595910299445766
+      ],
+      "center_of_mass": [
+        9.821109535285266e-05,
+        -0.022433167300557163,
+        -0.00010443278621541427
+      ],
+      "part_origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "volume": 8.19147922299385e-05,
+      "bounds": {
+        "min": [
+          -0.05055348947644234,
+          0.0,
+          -0.0507064126431942
+        ],
+        "max": [
+          0.05070430040359497,
+          0.04626259580254555,
+          0.05059121176600456
+        ],
+        "center": [
+          6.956296259262904e-05,
+          0.023457004171969678,
+          -6.444016551517774e-05
+        ]
+      },
+      "description": "A glossy white ceramic bowl with a rounded open body, thick rolled rim, and small circular foot ring. The surface appears smooth, glazed, and slightly off-white.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The object appears to be a small-to-medium porcelain/ceramic bowl with a hollow hemispherical form, rolled rim, and raised foot ring. No real product data or scale is provided, so the estimate assumes a typical tableware bowl of roughly 0.13\u20130.15 m outer diameter, 0.065\u20130.08 m height, 3\u20135 mm ceramic wall thickness, and a slightly thicker base/rim. Dense fired ceramic/porcelain has a material density around 2300\u20132600 kg/m^3; using about 2400 kg/m^3 and the likely shell volume gives an estimated mass near 0.30\u20130.40 kg, so 0.34 kg is a practical rigid-body mass. The bowl is hollow and concave, so a single convex hull would incorrectly close the opening and prevent realistic interior contact. For Isaac Sim/PhysX rigid-body use, convex decomposition is the preferred general-purpose collider: use multiple convex hulls around the outer wall, inner wall, rim, and foot ring to preserve the cavity while remaining compatible with dynamic rigid bodies. If very accurate interior contact is required and performance budget allows, an SDF mesh collider can be considered, but convex decomposition is the safer default for interactive rigid bodies. Ceramic glaze is hard and smooth; friction is moderate on common surfaces, estimated static friction about 0.45 and dynamic friction about 0.35. Restitution is set low-to-moderate at 0.22 because ceramic is hard but brittle and tableware impacts usually lose energy through ringing, micro-slip, and possible chipping rather than bouncing elastically. Contact offset is set to 0.002 m and rest offset to 0.0 m for a small tabletop object; these values avoid visible hovering while maintaining stable contact generation in PhysX. CCD is recommended because a bowl has thin walls and rim features that can tunnel during drops or fast manipulation. Initial velocity is zero. Gravity is standard Earth gravity. Compliant contacts are disabled/near-rigid because the ceramic bowl should behave as a stiff non-deformable body; only a small damping value is suggested at the material level to reduce chatter if compliant-contact mode is enabled. There are no articulations or joints for this single rigid body.",
+      "static_friction": 0.45,
+      "dynamic_friction": 0.35,
+      "restitution": 0.22,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": ""
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00733 Small Dish",
+  "object_description": "A glossy white ceramic bowl with a rounded open body, thick rolled rim, and small circular foot ring. The surface appears smooth, glazed, and slightly off-white.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.34,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies"
+}

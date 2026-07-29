@@ -1,0 +1,119 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00958 Wooden Figure",
+      "source_part_name": "D00958 Wooden Figure",
+      "source_object_name": "D00958 Wooden Figure",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "wood",
+      "material": "wood",
+      "mass": 0.107,
+      "density": 700.0,
+      "inertia": [
+        0.00016132698131569422,
+        0.0005928336926327648,
+        0.0006804861162170319
+      ],
+      "inertia_axes": [
+        0.6370248981049291,
+        0.3281864779929081,
+        -0.611451386777214,
+        0.3355892079093683
+      ],
+      "center_of_mass": [
+        0.0041031602947275,
+        -0.011333217311036118,
+        0.13648251409559087
+      ],
+      "part_origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "volume": 0.001921837913191687,
+      "bounds": {
+        "min": [
+          -0.06604082882404327,
+          2.6192883524345234e-05,
+          -0.031746093183755875
+        ],
+        "max": [
+          0.08030016720294952,
+          0.31389617919921875,
+          0.08149690926074982
+        ],
+        "center": [
+          -0.0003491908341476244,
+          0.15977960178283962,
+          -0.000462860578904689
+        ]
+      },
+      "description": "A light brown wooden articulated figure featuring a smooth natural finish and visible spherical joints. The object is constructed from segmented wooden parts connected by metal hardware in a stylized humanoid form.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The model represents a wooden figure with an analyzed height of approximately 0.31m and an axis-aligned bounding box volume that, combined with the voxel volume of 0.0001527 m^3, confirms its small size. The dominant material is wood, which typically has a density of around 700 kg/m^3, yielding an estimated total mass of roughly 0.107 kg. Static and dynamic friction coefficients (0.5 and 0.4, respectively) and restitution (0.4) reflect smooth hardwood behavior. For Isaac Sim simulation, given the thin cylindrical and spherical geometry of the limbs and joints, convex decomposition is the ideal collider type if treated as a single mesh; however, if imported as an articulated structure, individual convex hulls per bone are preferable. CCD is enabled due to the narrow cross-section of the limbs, preventing tunneling during high-velocity collisions or falls. A small contact offset of 1mm is applied to accommodate the scale without causing visible floating.",
+      "static_friction": 0.5,
+      "dynamic_friction": 0.4,
+      "restitution": 0.4,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": "",
+      "appearance_properties": {},
+      "newton": {
+        "collisions": {
+          "collider_type": "convex_decomposition",
+          "rest_offset": 0,
+          "contact_offset": 0.001,
+          "explosion_view_distance": 0.1,
+          "collision_mesh_debug_visualization": false
+        },
+        "simulation_scene": {
+          "simulation_steps_per_second": 60,
+          "enable_ccd": true,
+          "gravitational_acceleration": [
+            0,
+            -9.81,
+            0
+          ],
+          "gpu_buffer_parameters": {},
+          "residuals": {}
+        }
+      }
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00958 Wooden Figure",
+  "fix_base": false,
+  "object_description": "A light brown wooden articulated figure featuring a smooth natural finish and visible spherical joints. The object is constructed from segmented wooden parts connected by metal hardware in a stylized humanoid form.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.107,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies",
+  "total_object_mass_kg": 0.107,
+  "_authoritative_context_applied": {
+    "object": {},
+    "parts": [
+      {
+        "part_index": 0,
+        "part_id": "part_00",
+        "fields": [
+          "bounds",
+          "canonical_name",
+          "material",
+          "part_id",
+          "part_index",
+          "source_object_name",
+          "source_part_name"
+        ]
+      }
+    ]
+  }
+}

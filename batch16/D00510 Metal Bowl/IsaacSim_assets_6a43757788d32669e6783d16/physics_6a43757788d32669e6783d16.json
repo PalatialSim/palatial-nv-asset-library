@@ -1,0 +1,121 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "image",
+      "source_part_name": "image",
+      "source_object_name": "image",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "steel",
+      "material": "steel",
+      "non_visual_material": null,
+      "mass": 0.65,
+      "density": 7800.0,
+      "inertia": [
+        0.0013698613584283068,
+        0.0013748173860894807,
+        0.002149961229791031
+      ],
+      "inertia_axes": [
+        0.9331590143420784,
+        -0.000601536257021566,
+        -0.00048430780357489045,
+        0.35946301277350307
+      ],
+      "center_of_mass": [
+        -9.235117560859126e-05,
+        -6.866627028484485e-05,
+        0.029868523360860044
+      ],
+      "part_origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "volume": 8.13830413696548e-05,
+      "bounds": {
+        "min": [
+          -0.07311197370290756,
+          7.249429927469464e-06,
+          -0.07342103123664856
+        ],
+        "max": [
+          0.07306502014398575,
+          0.06486625224351883,
+          0.07270596921443939
+        ],
+        "center": [
+          -1.1388144690095817e-05,
+          0.030129860190561585,
+          -0.00034417043470280883
+        ]
+      },
+      "description": "A round, hammered metal bowl with a brushed metallic finish.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "Based on the provided context and visual analysis, the object is a hammered metal bowl. The dimensions are authoritative from the JSON payload (approx 0.15 x 0.15 x 0.075 m), with a voxel volume of 8.41e-5 m\u00b3. Assuming the material is stainless steel, the density is set to 7800 kg/m\u00b3, which yields an estimated mass of 0.65 kg. Metal properties dictate moderate friction (0.5 static, 0.4 dynamic) and a restitution of 0.6. For Isaac Sim, the thin-walled nature of the bowl necessitates Continuous Collision Detection (CCD) to prevent high-velocity objects from tunneling through it. Crucially, the collision geometry must be set to 'convex_decomposition' (or 'sdf_mesh') rather than a simple 'convex_hull'; otherwise, the concave opening would be sealed, preventing objects from being placed inside the bowl. Contact offsets are kept minimal (0.001 m) reflecting the rigid, non-compliant metallic surface.",
+      "static_friction": 0.5,
+      "dynamic_friction": 0.4,
+      "restitution": 0.6,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": "",
+      "appearance_properties": {},
+      "newton": {
+        "collisions": {
+          "collider_type": "convex_decomposition",
+          "rest_offset": 0,
+          "contact_offset": 0.001,
+          "explosion_view_distance": 0,
+          "collision_mesh_debug_visualization": false
+        },
+        "simulation_scene": {
+          "simulation_steps_per_second": 60,
+          "enable_ccd": true,
+          "gravitational_acceleration": [
+            0,
+            0,
+            -9.81
+          ],
+          "gpu_buffer_parameters": {},
+          "residuals": {}
+        }
+      }
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "image",
+  "object_description": "A round, hammered metal bowl with a brushed metallic finish.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.65,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies",
+  "total_object_mass_kg": 0.65,
+  "_authoritative_context_applied": {
+    "object": {},
+    "parts": [
+      {
+        "part_index": 0,
+        "part_id": "part_00",
+        "fields": [
+          "bounds",
+          "canonical_name",
+          "material",
+          "part_id",
+          "part_index",
+          "source_object_name",
+          "source_part_name"
+        ]
+      }
+    ]
+  }
+}

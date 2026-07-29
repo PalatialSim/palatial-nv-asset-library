@@ -1,0 +1,102 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00485 Ladle Spoon",
+      "source_part_name": "D00485 Ladle Spoon",
+      "source_object_name": "D00485 Ladle Spoon",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "stainless_steel",
+      "material": "stainless_steel",
+      "non_visual_material": null,
+      "mass": 0.2,
+      "density": 7900.0,
+      "inertia": [
+        8.470570063106805e-05,
+        0.001839864314767595,
+        0.0018763056830589375
+      ],
+      "inertia_axes": [
+        0.7273523711137042,
+        -0.6860500549156846,
+        0.013246924260181588,
+        -0.010879769441657505
+      ],
+      "center_of_mass": [
+        0.05224634622615077,
+        -0.02940646249629845,
+        -5.804513698984272e-05
+      ],
+      "part_origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "volume": 9.051252567545285e-05,
+      "bounds": {
+        "min": [
+          -0.09328801184892654,
+          -0.047742750495672226,
+          4.431642810232006e-05
+        ],
+        "max": [
+          0.20652161538600922,
+          0.046806372702121735,
+          0.06361595541238785
+        ],
+        "center": [
+          0.0013858065718453155,
+          9.821745852721848e-05,
+          0.027439168511116194
+        ]
+      },
+      "description": "A silver metal ladle with a rounded bowl and a long, curved handle featuring a hanging hole at the end.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The object is a solid metal ladle, typically made of stainless steel. In Isaac Sim v4.5, stainless steel has a density of approximately 7800-8000 kg/m^3. Given a typical volume for a ladle (mostly hollow bowl, thin handle), the mass is estimated around 0.15 - 0.25 kg. For collision physics, a convex decomposition or an SDF mesh is recommended to properly capture the hollow bowl shape without filling it in, which a simple convex hull would do. Friction for smooth steel is generally low (around 0.4 to 0.5) and restitution is moderate (0.4 to 0.6 depending on thickness). CCD is enabled because thin metal objects moving quickly can easily tunnel through other rigid bodies or static meshes in the scene.",
+      "static_friction": 0.5,
+      "dynamic_friction": 0.4,
+      "restitution": 0.5,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": "",
+      "appearance_properties": {},
+      "newton": {
+        "collisions": {
+          "collider_type": "convex_decomposition",
+          "rest_offset": 0,
+          "contact_offset": 0.005,
+          "explosion_view_distance": 0,
+          "collision_mesh_debug_visualization": false
+        },
+        "simulation_scene": {
+          "simulation_steps_per_second": 60,
+          "enable_ccd": true,
+          "gravitational_acceleration": [
+            0,
+            -9.81,
+            0
+          ],
+          "gpu_buffer_parameters": {},
+          "residuals": {}
+        }
+      }
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00485 Ladle Spoon",
+  "object_description": "A silver metal ladle with a rounded bowl and a long, curved handle featuring a hanging hole at the end.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.2,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies"
+}
