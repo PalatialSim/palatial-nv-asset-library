@@ -1,0 +1,97 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "generated reference 01",
+      "source_part_name": "generated reference 01",
+      "source_object_name": "generated reference 01",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "wood",
+      "material": "wood",
+      "mass": 0.059,
+      "density": 700,
+      "bounds": {
+        "min": [
+          -0.069557003676891,
+          -0.107960999011993,
+          0.001117089912441
+        ],
+        "max": [
+          0.068887002766132,
+          0.094543002545834,
+          0.029592090286314
+        ],
+        "center": [
+          -0.000236641901869,
+          -0.001602447741321,
+          0.012979903226662
+        ]
+      },
+      "description": "A carved wooden spoon rest with a shallow bowl and an extended, grooved handle. The object features a natural wood grain finish with smooth, rounded exterior edges.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The object is specified as a wooden spoon rest with exact dimensions of 0.22 x 0.11 x 0.025 m. The material is clearly solid wood, so a density of 700 kg/m\u00b3 (typical for common hardwoods like oak or ash) is used. Using the provided voxel volume of approximately 8.39e-05 m\u00b3, the mass is calculated to be around 0.059 kg, which is realistic for a relatively thin, hollowed-out wooden kitchen accessory. Friction coefficients (static 0.5, dynamic 0.4) reflect smoothed, finished wood on typical countertop or metal surfaces. Restitution is set to 0.3 since wood is mostly inelastic but has a slight bounce. Convex decomposition is chosen for the collision geometry because the concave resting area (the bowl) must be accurately represented to allow utensils to sit inside it properly. Continuous Collision Detection (CCD) is enabled due to the object's thin profile and lightweight nature to prevent tunneling during rapid manipulation.",
+      "static_friction": 0.5,
+      "dynamic_friction": 0.4,
+      "restitution": 0.3,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": "",
+      "appearance_properties": {},
+      "newton": {
+        "collisions": {
+          "collider_type": "convex_decomposition",
+          "rest_offset": 0,
+          "contact_offset": 0.001,
+          "explosion_view_distance": 0.02,
+          "collision_mesh_debug_visualization": false
+        },
+        "simulation_scene": {
+          "simulation_steps_per_second": 60,
+          "enable_ccd": true,
+          "gravitational_acceleration": [
+            0,
+            0,
+            -9.81
+          ],
+          "gpu_buffer_parameters": {},
+          "residuals": {}
+        }
+      }
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "generated reference 01",
+  "fix_base": false,
+  "object_description": "A carved wooden spoon rest with a shallow bowl and an extended, grooved handle. The object features a natural wood grain finish with smooth, rounded exterior edges.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.059,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies",
+  "total_object_mass_kg": 0.059,
+  "_authoritative_context_applied": {
+    "object": {},
+    "parts": [
+      {
+        "part_index": 0,
+        "part_id": "part_00",
+        "fields": [
+          "bounds",
+          "canonical_name",
+          "material",
+          "part_id",
+          "part_index",
+          "source_object_name",
+          "source_part_name"
+        ]
+      }
+    ]
+  }
+}
