@@ -1,0 +1,119 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "specialist-current",
+      "source_part_name": "specialist-current",
+      "source_object_name": "specialist-current",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "glass",
+      "material": "glass",
+      "mass": 1.0,
+      "density": 2500.0,
+      "inertia": [
+        0.0021463725429500917,
+        0.006709716834542962,
+        0.006723857398018883
+      ],
+      "inertia_axes": [
+        0.0034726910723121432,
+        -0.7070679190359415,
+        -0.003661492166473047,
+        -0.7071276347039581
+      ],
+      "center_of_mass": [
+        -0.0003377664749264008,
+        0.00016014195691272138,
+        0.13022878841670102
+      ],
+      "part_origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "volume": 0.0035128781832924703,
+      "bounds": {
+        "min": [
+          -0.06563334,
+          0.0,
+          -0.06592387
+        ],
+        "max": [
+          0.06492881,
+          0.26053867,
+          0.06563888
+        ],
+        "center": [
+          -0.000349445582505696,
+          0.11475269009638862,
+          -0.00013523745900743318
+        ]
+      },
+      "description": "A clear glass vase with a flared rim, a tapered waist, and a slightly thickened base.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The object is identified as a clear glass vase. The dimensions provided in the JSON context (metrics_after) indicate extents of approximately 0.146m x 0.261m x 0.147m and a voxel volume of roughly 0.0004 m\u00b3. Applying a standard density for glass (2500 kg/m\u00b3), the estimated mass is calculated precisely at 1.0 kg. Friction coefficients are set low (0.3 static, 0.2 dynamic) reflecting the smooth, low-friction surface of glass. A restitution value of 0.65 represents the hard and reasonably elastic nature of solid glass upon impact. For accurate physical simulation in Isaac Sim, the 'convex_decomposition' collider type is essential; a simple convex hull would seal the top opening, preventing other objects from being placed inside the hollow vase. Continuous Collision Detection (CCD) is enabled on the body and globally to prevent tunneling, which is common for objects with thin walls experiencing high angular velocity during a fall. The gravitational acceleration is oriented along the Y-axis based on the 'up_direction' provided in the derived job parameters.",
+      "static_friction": 0.3,
+      "dynamic_friction": 0.2,
+      "restitution": 0.65,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": "",
+      "appearance_properties": {},
+      "newton": {
+        "collisions": {
+          "collider_type": "convex_decomposition",
+          "rest_offset": 0,
+          "contact_offset": 0.002,
+          "explosion_view_distance": 0,
+          "collision_mesh_debug_visualization": false
+        },
+        "simulation_scene": {
+          "simulation_steps_per_second": 60,
+          "enable_ccd": true,
+          "gravitational_acceleration": [
+            0,
+            -9.81,
+            0
+          ],
+          "gpu_buffer_parameters": {},
+          "residuals": {}
+        }
+      }
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "specialist-current",
+  "fix_base": false,
+  "object_description": "A clear glass vase with a flared rim, a tapered waist, and a slightly thickened base.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 1.0,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies",
+  "total_object_mass_kg": 1,
+  "_authoritative_context_applied": {
+    "object": {},
+    "parts": [
+      {
+        "part_index": 0,
+        "part_id": "part_00",
+        "fields": [
+          "bounds",
+          "canonical_name",
+          "material",
+          "part_id",
+          "part_index",
+          "source_object_name",
+          "source_part_name"
+        ]
+      }
+    ]
+  }
+}

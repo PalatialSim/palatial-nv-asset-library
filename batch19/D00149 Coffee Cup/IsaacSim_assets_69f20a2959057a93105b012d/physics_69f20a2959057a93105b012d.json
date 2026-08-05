@@ -1,0 +1,79 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00149 Coffee Cup",
+      "source_part_name": "D00149 Coffee Cup",
+      "source_object_name": "D00149 Coffee Cup",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "glazed_ceramic",
+      "material": "glazed_ceramic",
+      "mass": 0.34,
+      "density": 2400.0,
+      "inertia": [
+        0.00029761362983851084,
+        0.00035184359585124726,
+        0.00042171611587313226
+      ],
+      "inertia_axes": [
+        0.0016296128005126105,
+        -0.9994500617875509,
+        0.004992173477097517,
+        -0.0327413585386386
+      ],
+      "center_of_mass": [
+        -0.0024584803528074728,
+        0.0002250707103055558,
+        0.029210223295607726
+      ],
+      "part_origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "volume": 6.539823224370167e-05,
+      "bounds": {
+        "min": [
+          -0.04671600088477135,
+          -0.040828000754117966,
+          -9.999999974752427e-07
+        ],
+        "max": [
+          0.06049799919128418,
+          0.041120998561382294,
+          0.0607450008392334
+        ],
+        "center": [
+          -0.002355784908340886,
+          6.579035765484724e-05,
+          0.0301593576919342
+        ]
+      },
+      "description": "A white glazed ceramic mug with a rounded cup body, thick rim, small foot, and curved loop handle.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The object appears to be a hollow glazed ceramic or porcelain mug. No product data is provided, so values are estimated from a typical medium mug with an outer diameter of roughly 85\u201395 mm, height of 80\u201395 mm, wall thickness of about 3\u20135 mm, and a ceramic handle. Dense fired ceramic/porcelain has a material density around 2200\u20132500 kg/m\u00b3; using 2400 kg/m\u00b3 and an estimated ceramic shell volume of about 1.3\u20131.5e-4 m\u00b3 gives a mass near 0.31\u20130.36 kg, so 0.34 kg is a realistic empty-mug mass. The effective density over the full bounding volume would be much lower because the mug is hollow, therefore an explicit mass should be authored rather than relying only on collider volume density if the collision approximation fills the interior. The dominant contact surface is smooth glazed ceramic, so friction is moderate: static friction is estimated at 0.45 and dynamic friction at 0.35, suitable for ceramic on wood, plastic, or laminate surfaces. Restitution is set to 0.30 because glazed ceramic is hard but not elastomeric; it may rebound slightly in a rigid-body model but in reality would chip or fracture, which is not represented here. The mug is strongly non-convex due to the open cavity and handle hole, so convex decomposition is recommended for dynamic PhysX simulation; a single convex hull would incorrectly fill the cup and handle opening. For highest-fidelity contact with the interior cavity or handle, an SDF mesh collider can be used at higher cost, but convex decomposition is the best general rigid-body choice for performance and USD Physics compatibility. Contact offsets are kept small because this is a small tabletop object: rest_offset 0.0 m and contact_offset 0.002 m reduce visible hovering while preserving stable contact generation. CCD is enabled because the rim, base foot, and handle are thin features that can tunnel during drops or fast manipulation; it may be disabled for slow scenes with many mugs. The object has no articulations or joints. For stable contact, 60 Hz is acceptable, but 120 Hz or additional solver iterations are recommended if the mug is dropped, stacked, or grasped around the handle. Suggested velocity limits outside this schema would be approximately 10 m/s linear and 50 rad/s angular for ordinary tabletop interactions, with sleep/hibernation enabled after low residual motion to improve performance.",
+      "static_friction": 0.45,
+      "dynamic_friction": 0.35,
+      "restitution": 0.3,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": ""
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00149 Coffee Cup",
+  "fix_base": false,
+  "object_description": "A white glazed ceramic mug with a rounded cup body, thick rim, small foot, and curved loop handle.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.34,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies"
+}

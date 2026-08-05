@@ -1,0 +1,119 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "specialist-current",
+      "source_part_name": "specialist-current",
+      "source_object_name": "specialist-current",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "plastic",
+      "material": "plastic",
+      "mass": 0.45,
+      "density": 1100.0,
+      "inertia": [
+        0.0003439806895646209,
+        0.0013330065746794317,
+        0.0013668502328859718
+      ],
+      "inertia_axes": [
+        0.5146893460656047,
+        0.514237835693659,
+        0.48549571633015465,
+        -0.48471459108709714
+      ],
+      "center_of_mass": [
+        -0.0014834224812850503,
+        0.00047416459966329304,
+        0.08700125024633795
+      ],
+      "part_origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "volume": 0.0008650480793631138,
+      "bounds": {
+        "min": [
+          -0.05225241,
+          0.0,
+          -0.04012851
+        ],
+        "max": [
+          0.04078091,
+          0.19985424,
+          0.03913865
+        ],
+        "center": [
+          0.0004855194356617759,
+          0.08198181681516341,
+          -0.000462154114980649
+        ]
+      },
+      "description": "A cylindrical white bottle with a black pump dispenser and minimalistic text.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The object is identified as a liquid hand soap bottle from the context, with physical extents roughly 11.2cm x 11.2cm x 20.0cm (based on auto_scale_summary.json metrics_after). Given these dimensions, it likely holds about 350-450ml of liquid. Considering the weight of the liquid soap and the plastic or ceramic container, a mass of 0.45 kg is estimated. The dominant external material is assumed to be a smooth, rigid plastic (like PET or ABS), which informs the friction (0.4) and restitution (0.2) values, yielding a low-bounce, moderately slippery surface. Because the user explicitly requested 'collision_quality=\"high\"', the collider type is set to 'convex_decomposition' to accurately represent the cylindrical body and the protruding pump nozzle. Continuous Collision Detection (CCD) is enabled to prevent tunneling if the object is knocked over or manipulated quickly by a robotic end-effector.",
+      "static_friction": 0.4,
+      "dynamic_friction": 0.3,
+      "restitution": 0.2,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": "",
+      "appearance_properties": {},
+      "newton": {
+        "collisions": {
+          "collider_type": "convex_decomposition",
+          "rest_offset": 0,
+          "contact_offset": 0.001,
+          "explosion_view_distance": 0,
+          "collision_mesh_debug_visualization": false
+        },
+        "simulation_scene": {
+          "simulation_steps_per_second": 60,
+          "enable_ccd": true,
+          "gravitational_acceleration": [
+            0,
+            -9.81,
+            0
+          ],
+          "gpu_buffer_parameters": {},
+          "residuals": {}
+        }
+      }
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "specialist-current",
+  "fix_base": false,
+  "object_description": "A cylindrical white bottle with a black pump dispenser and minimalistic text.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.45,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies",
+  "total_object_mass_kg": 0.45,
+  "_authoritative_context_applied": {
+    "object": {},
+    "parts": [
+      {
+        "part_index": 0,
+        "part_id": "part_00",
+        "fields": [
+          "bounds",
+          "canonical_name",
+          "material",
+          "part_id",
+          "part_index",
+          "source_object_name",
+          "source_part_name"
+        ]
+      }
+    ]
+  }
+}
