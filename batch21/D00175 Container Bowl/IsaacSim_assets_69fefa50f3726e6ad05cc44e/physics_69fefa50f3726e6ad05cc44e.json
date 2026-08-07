@@ -1,0 +1,79 @@
+{
+ "parts": [
+  {
+   "canonical_name": "part_00",
+   "part_name": "D00175 Container Bowl",
+   "source_part_name": "D00175 Container Bowl",
+   "source_object_name": "D00175 Container Bowl",
+   "part_index": 0,
+   "part_id": "part_00",
+   "material_name": "glazed_ceramic",
+   "material": "glazed_ceramic",
+   "mass": 0.3,
+   "density": 2200.0,
+   "inertia": [
+    0.00045346342685404455,
+    0.0005016927375005851,
+    0.0006971547780595523
+   ],
+   "inertia_axes": [
+    0.9996665379547134,
+    -0.0032573920159590965,
+    -0.01686840572796622,
+    -0.019278464126810994
+   ],
+   "center_of_mass": [
+    -0.0019004678342696884,
+    0.00018528149333941617,
+    0.031658025800679696
+   ],
+   "part_origin_world": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "volume": 0.00014382624673466542,
+   "bounds": {
+    "min": [
+     -0.06407000124454498,
+     -0.059438999742269516,
+     0.0003349798935232684
+    ],
+    "max": [
+     0.07507800310850143,
+     0.059863001108169556,
+     0.07013098010793328
+    ],
+    "center": [
+     0.005504000931978226,
+     0.00021200068295001984,
+     0.035232980000728276
+    ]
+   },
+   "description": "A cream-colored glazed ceramic teacup with a rounded bowl, raised foot ring, and curved loop handle. The surface is glossy with subtle speckling and slight handmade-looking irregularities.",
+   "semantic": {
+    "qid": null
+   },
+   "reasoning": "The object appears to be a small hollow ceramic cup, likely stoneware or porcelain with a glazed exterior. In the absence of product data, I assume approximate dimensions of 0.11-0.12 m rim diameter, 0.06-0.075 m height, and about 0.15-0.16 m total width including the handle. A typical cup of this size with 3-5 mm wall thickness has a ceramic material volume around 1.1e-4 to 1.5e-4 m^3. Using a fired ceramic density of roughly 2100-2400 kg/m^3 gives an estimated mass near 0.25-0.35 kg, so 0.30 kg is a reasonable rigid-body mass. The dominant material is glazed ceramic; although the glaze is hard and smooth, the unglazed or slightly rough foot ring may contact the table, so friction is moderate rather than extremely low. Static friction is estimated at 0.45 and dynamic friction at 0.35 for dry ceramic contact on common surfaces. Restitution is set to 0.30: ceramic is hard, but a cup shape dissipates energy through ringing, localized impacts, and likely chipping/fracture in reality, so a lower value improves stable contact behavior. For collision, a single convex hull would incorrectly fill the cup cavity and the handle opening. For Isaac Sim / PhysX, convex decomposition is the recommended general-purpose dynamic rigid-body collider: use multiple hulls for the outer bowl, inner wall, foot ring, and handle. If accurate interaction with the inside of the cup is required, an SDF mesh collider is more geometrically faithful but more expensive. Contact offset is kept small at 0.002 m to avoid visible hovering while still generating stable constraints around the thin rim and foot. Rest offset is 0.0 m to align collision with the visual surface. CCD is recommended because the cup has thin wall features and can tunnel through surfaces if dropped or moved quickly. For practical scenes, keep initial velocity zero, cap operational speeds to roughly below 5-10 m/s linear and 30-50 rad/s angular, and allow sleeping/hibernation for performance once the cup settles.",
+   "static_friction": 0.45,
+   "dynamic_friction": 0.35,
+   "restitution": 0.3,
+   "friction_combine_mode": "average",
+   "restitution_combine_mode": "average",
+   "physics_type": "rigid",
+   "is_structural_root": true,
+   "color_name": ""
+  }
+ ],
+ "joint_relations": [],
+ "base_link": "D00175 Container Bowl",
+ "fix_base": false,
+ "object_description": "A cream-colored glazed ceramic teacup with a rounded bowl, raised foot ring, and curved loop handle. The surface is glossy with subtle speckling and slight handmade-looking irregularities.",
+ "object_semantic": {
+  "qid": null
+ },
+ "total_mass": 0.3,
+ "overall_assessment": "",
+ "num_parts": 1,
+ "object_type": "rigid_bodies"
+}
