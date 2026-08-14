@@ -1,0 +1,81 @@
+{
+ "parts": [
+  {
+   "canonical_name": "part_00",
+   "part_name": "D00408 Jar Olive Oil Bottle",
+   "source_part_name": "D00408 Jar Olive Oil Bottle",
+   "source_object_name": "D00408 Jar Olive Oil Bottle",
+   "part_index": 0,
+   "part_id": "part_00",
+   "material_name": "plastic",
+   "material": "plastic",
+   "non_visual_material": null,
+   "mass": 0.36,
+   "density": 800.0,
+   "inertia": [
+    0.00012962927366044118,
+    0.0007618353691726491,
+    0.0007619425580304853
+   ],
+   "inertia_axes": [
+    0.6338961210437924,
+    0.3133794324906557,
+    -0.6338468251875332,
+    0.3133803459331056
+   ],
+   "center_of_mass": [
+    -8.434669963780226e-05,
+    0.00015204190811975377,
+    0.07517512063904958
+   ],
+   "part_origin_world": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "volume": 0.0003559007149405939,
+   "bounds": {
+    "min": [
+     -0.027744999155402184,
+     -0.02749600075185299,
+     -7.699999696342275e-05
+    ],
+    "max": [
+     0.0276699997484684,
+     0.027786999940872192,
+     0.1817069947719574
+    ],
+    "center": [
+     -3.749970346689224e-05,
+     0.0001454995945096016,
+     0.09081499738749699
+    ]
+   },
+   "description": "A translucent cylindrical plastic squeeze bottle filled with yellow liquid, with a ribbed screw cap and tapered dispensing nozzle.",
+   "semantic": {
+    "qid": null
+   },
+   "reasoning": "The object appears to be a small flexible squeeze bottle made from translucent LDPE/HDPE-like plastic with a plastic screw cap and nozzle. No product data or scale is provided, so dimensions are estimated as roughly 55 mm body diameter, 135-150 mm cylindrical body height, and 180-200 mm total height including the cap/nozzle. The visible fill level suggests approximately 0.32-0.36 L of liquid. Assuming a yellow oil/sauce/adhesive-like liquid density near 900-1000 kg/m^3 gives about 0.30-0.34 kg of contents. A thin plastic bottle shell, cap, and nozzle with 1-1.5 mm wall thickness add approximately 0.03-0.05 kg, so a total mass near 0.36 kg is appropriate. The root density is treated as an effective bulk density over the outer collision envelope, not pure plastic density; the actual external plastic material density is closer to 930 kg/m^3. The contact material is dominated by smooth plastic, so static friction is estimated at 0.42 and dynamic friction at 0.32; cap ribbing can locally increase grip but does not dominate the main cylindrical contact surface. Restitution is set low at 0.15 because the liquid fill and flexible shell dissipate impact energy, despite plastic alone being moderately resilient. For collision geometry, convex decomposition is preferable to a single convex hull because the bottle has a cylindrical body, rounded shoulder, cap, and narrow nozzle; a single hull would over-fill the profile around the neck/nozzle. SDF or triangle-mesh collision would be more geometrically accurate but is usually unnecessary for a small dynamic rigid body and less efficient than convex decomposition in Isaac Sim/PhysX. A rest offset of 0.0 m and contact offset around 0.0025 m are suitable for a small tabletop object; larger offsets would make the bottle appear to hover or contact too early. CCD is recommended if the object may be dropped, flicked, or moved quickly by a manipulator because the nozzle and cap are small features and the bottle mass is low. Mild compliant contact settings are included to approximate the slightly flexible plastic shell without modeling the bottle as deformable.",
+   "static_friction": 0.42,
+   "dynamic_friction": 0.32,
+   "restitution": 0.15,
+   "friction_combine_mode": "average",
+   "restitution_combine_mode": "average",
+   "physics_type": "rigid",
+   "is_structural_root": true,
+   "color_name": ""
+  }
+ ],
+ "joint_relations": [],
+ "base_link": "D00408 Jar Olive Oil Bottle",
+ "object_description": "A translucent cylindrical plastic squeeze bottle filled with yellow liquid, with a ribbed screw cap and tapered dispensing nozzle.",
+ "object_semantic": {
+  "qid": null
+ },
+ "total_mass": 0.36,
+ "center_of_mass": null,
+ "inertia": null,
+ "overall_assessment": "",
+ "num_parts": 1,
+ "object_type": "rigid_bodies"
+}
