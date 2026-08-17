@@ -1,0 +1,119 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "specialist-current",
+      "source_part_name": "specialist-current",
+      "source_object_name": "specialist-current",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "food_organic",
+      "material": "food_organic",
+      "mass": 0.03,
+      "density": 1050.0,
+      "inertia": [
+        3.5285097735461274e-06,
+        8.991168558606982e-06,
+        9.429464168695117e-06
+      ],
+      "inertia_axes": [
+        0.11855252609844241,
+        0.9912715385442447,
+        0.009612877192369501,
+        -0.05686499819650634
+      ],
+      "center_of_mass": [
+        0.0009505358076259075,
+        -0.000197768565733026,
+        0.015380187308433048
+      ],
+      "part_origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "volume": 4.163959555659102e-05,
+      "bounds": {
+        "min": [
+          -0.031452,
+          0.0,
+          -0.01566249
+        ],
+        "max": [
+          0.0364421,
+          0.03171271,
+          0.01600334
+        ],
+        "center": [
+          0.0004037700785576703,
+          0.014289241680933252,
+          0.000122769095603449
+        ]
+      },
+      "description": "A piece of nigiri sushi featuring a slice of bright orange salmon with distinct white fat striations, resting on an oblong bed of tightly packed, light brown seasoned rice.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The asset is a small food item, specifically salmon nigiri sushi, with provided dimensional bounds of 7.5cm (L) x 3.2cm (W) x 2.8cm (H). Given the composition of raw fish and cooked rice, an average organic food density of 1050 kg/m^3 is applied, leading to an estimated mass of approximately 30 grams (0.03 kg). The exterior consists of moist fish and starchy, sticky rice, necessitating high friction coefficients (static 0.75, dynamic 0.65). Since food is inherently soft and yielding, the restitution is set very low (0.1) to reflect its energy-absorbing properties and prevent unrealistic bouncing. For the Isaac Sim environment, Continuous Collision Detection (CCD) is enabled due to the object's small size to prevent tunneling effects. Convex decomposition is selected for the collider to closely wrap the rounded geometry of the fish draped over the rice base. Finally, compliant contact parameters (damping) are suggested in the advanced material settings to gently approximate the soft-body nature of the sushi within a rigid-body physics simulation.",
+      "static_friction": 0.75,
+      "dynamic_friction": 0.65,
+      "restitution": 0.1,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": "",
+      "appearance_properties": {},
+      "newton": {
+        "collisions": {
+          "collider_type": "convex_decomposition",
+          "rest_offset": 0,
+          "contact_offset": 0.001,
+          "explosion_view_distance": 0,
+          "collision_mesh_debug_visualization": false
+        },
+        "simulation_scene": {
+          "simulation_steps_per_second": 60,
+          "enable_ccd": true,
+          "gravitational_acceleration": [
+            0,
+            -9.81,
+            0
+          ],
+          "gpu_buffer_parameters": {},
+          "residuals": {}
+        }
+      }
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "specialist-current",
+  "fix_base": false,
+  "object_description": "A piece of nigiri sushi featuring a slice of bright orange salmon with distinct white fat striations, resting on an oblong bed of tightly packed, light brown seasoned rice.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.03,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies",
+  "total_object_mass_kg": 0.03,
+  "_authoritative_context_applied": {
+    "object": {},
+    "parts": [
+      {
+        "part_index": 0,
+        "part_id": "part_00",
+        "fields": [
+          "bounds",
+          "canonical_name",
+          "material",
+          "part_id",
+          "part_index",
+          "source_object_name",
+          "source_part_name"
+        ]
+      }
+    ]
+  }
+}
