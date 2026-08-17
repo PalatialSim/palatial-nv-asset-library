@@ -1,0 +1,81 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00659 Pumpkin Orange Mango",
+      "source_part_name": "D00659 Pumpkin Orange Mango",
+      "source_object_name": "D00659 Pumpkin Orange Mango",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "organic_fruit_tissue",
+      "material": "organic_fruit_tissue",
+      "non_visual_material": null,
+      "mass": 3.0,
+      "density": 700.0,
+      "inertia": [
+        0.002029424309517621,
+        0.002384638848079968,
+        0.0024956680242277478
+      ],
+      "inertia_axes": [
+        0.6460449837272952,
+        0.6655938466624384,
+        -0.15428694708394478,
+        0.34030317107751673
+      ],
+      "center_of_mass": [
+        0.0004530084261238606,
+        -0.03972399573209367,
+        0.0006465404993857537
+      ],
+      "part_origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "volume": 0.00034327864325247394,
+      "bounds": {
+        "min": [
+          -0.044808220118284225,
+          -0.045012351125478745,
+          -5.232995317783207e-05
+        ],
+        "max": [
+          0.04606892541050911,
+          0.046041496098041534,
+          0.08169914782047272
+        ],
+        "center": [
+          0.0005603077597674211,
+          0.0007393650436982835,
+          0.03966127444505074
+        ]
+      },
+      "description": "A round orange pumpkin-like gourd with a smooth speckled rind and a small dry brown stem scar. The surface appears firm, waxy, and slightly mottled with shallow natural dimples.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The asset appears to be a nearly spherical organic gourd/pumpkin with a smooth waxy rind rather than a hard engineered material. Because no scale or product data is provided, the estimates assume a medium spherical gourd of roughly 0.20 m diameter. A sphere of 0.20 m diameter has a volume of about 0.00419 m\u00b3; using an effective bulk density of about 700 kg/m\u00b3 for a water-rich but partially fibrous/hollow pumpkin-like body gives a mass near 2.9 kg, rounded to 3.0 kg. The center of mass should be close to the geometric center, with slight offset possible toward the stem scar, but the visual asymmetry is small enough to ignore for a basic rigid body. The rind is smooth and mildly waxy, so friction is estimated below rubber and similar to organic produce on dry plastic/wood/metal: static friction about 0.58 and dynamic friction about 0.48. Restitution is low, about 0.18, because the body is internally damped and will thud rather than bounce like rubber or glass. For Isaac Sim / PhysX, a sphere approximation is the most stable and performant collider because the object is almost round; it will give reliable rolling and contact generation. If the visible stem depression must affect contact, a convex hull or convex decomposition can be substituted, but a detailed triangle mesh or SDF is unnecessary unless the visual mesh has large non-spherical features. Recommended rest offset is 0.0 m and contact offset is about 0.003 m for meter-scale scenes, assuming the object radius is around 0.10 m; increase proportionally if the mesh is scaled larger. CCD can remain disabled for normal rolling and dropping because the body is compact and not thin, but should be enabled if launched at high speed or if using very small colliders. A small amount of compliant contact damping is useful to approximate the soft rind/pulp response without making the model deformable.",
+      "static_friction": 0.58,
+      "dynamic_friction": 0.48,
+      "restitution": 0.18,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": ""
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00659 Pumpkin Orange Mango",
+  "object_description": "A round orange pumpkin-like gourd with a smooth speckled rind and a small dry brown stem scar. The surface appears firm, waxy, and slightly mottled with shallow natural dimples.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 3.0,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies"
+}

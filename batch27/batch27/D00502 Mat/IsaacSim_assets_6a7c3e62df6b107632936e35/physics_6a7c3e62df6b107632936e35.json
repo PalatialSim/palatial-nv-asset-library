@@ -1,0 +1,119 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00502 Mat",
+      "source_part_name": "D00502 Mat",
+      "source_object_name": "D00502 Mat",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "rubber",
+      "material": "rubber",
+      "mass": 2.5,
+      "density": 694.4,
+      "inertia": [
+        0.03754681984575665,
+        0.0755025908473262,
+        0.11204795055052477
+      ],
+      "inertia_axes": [
+        0.9999999936734466,
+        2.225752800121242e-05,
+        -1.2195422622429676e-05,
+        0.00010958549631532497
+      ],
+      "center_of_mass": [
+        -2.6338639148622856e-05,
+        -7.359945807417081e-05,
+        0.00017595933693164052
+      ],
+      "part_origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "volume": 0.01287309626232816,
+      "bounds": {
+        "min": [
+          -0.31007723,
+          -0.02538547,
+          -0.22154342
+        ],
+        "max": [
+          0.31006794,
+          0.02593818,
+          0.22161336
+        ],
+        "center": [
+          1.0302449483777722e-05,
+          -2.355600470682471e-05,
+          1.624091070897785e-05
+        ]
+      },
+      "description": "A rectangular black anti-fatigue mat with a raised diamond tread pattern and gently beveled edges. The surface appears to be made of dense rubber or polyurethane foam.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "Based on visual inspection and the provided JSON metadata, the object is an anti-fatigue kitchen mat with dimensions of approximately 0.62m x 0.44m x 0.05m. The voxel volume is roughly 0.0036 m^3. Typical heavy-duty anti-fatigue mats are made of high-density rubber or polyurethane gel/foam, which has a density of around 700 kg/m^3. This yields an estimated mass of about 2.5 kg. The material exhibits very high static friction to prevent slipping on smooth floors and low restitution to absorb impact energy. For PhysX simulation in Isaac Sim, a 'convex_hull' collider is recommended to capture the beveled edges accurately while maintaining performance. Since it is modeled as a rigid body, utilizing 'compliant_contacts' parameters will help approximate the squishy, deformable nature of the rubber without incurring the overhead of a full soft-body simulation.",
+      "static_friction": 0.9,
+      "dynamic_friction": 0.8,
+      "restitution": 0.1,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": "",
+      "appearance_properties": {},
+      "newton": {
+        "collisions": {
+          "collider_type": "convex_hull",
+          "rest_offset": 0,
+          "contact_offset": 0.005,
+          "explosion_view_distance": 0,
+          "collision_mesh_debug_visualization": false
+        },
+        "simulation_scene": {
+          "simulation_steps_per_second": 60,
+          "enable_ccd": false,
+          "gravitational_acceleration": [
+            0,
+            -9.81,
+            0
+          ],
+          "gpu_buffer_parameters": {},
+          "residuals": {}
+        }
+      }
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00502 Mat",
+  "fix_base": false,
+  "object_description": "A rectangular black anti-fatigue mat with a raised diamond tread pattern and gently beveled edges. The surface appears to be made of dense rubber or polyurethane foam.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 2.5,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies",
+  "total_object_mass_kg": 2.5,
+  "_authoritative_context_applied": {
+    "object": {},
+    "parts": [
+      {
+        "part_index": 0,
+        "part_id": "part_00",
+        "fields": [
+          "bounds",
+          "canonical_name",
+          "material",
+          "part_id",
+          "part_index",
+          "source_object_name",
+          "source_part_name"
+        ]
+      }
+    ]
+  }
+}

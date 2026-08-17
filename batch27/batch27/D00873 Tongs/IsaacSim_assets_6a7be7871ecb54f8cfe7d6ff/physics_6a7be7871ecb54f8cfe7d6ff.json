@@ -1,0 +1,119 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "Bamboo Tongs",
+      "source_part_name": "Bamboo Tongs",
+      "source_object_name": "Bamboo Tongs",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "bamboo_wood",
+      "material": "bamboo_wood",
+      "mass": 0.03,
+      "density": 600.0,
+      "inertia": [
+        1.0135127472887005e-05,
+        0.00011892623794017259,
+        0.00012630058428257442
+      ],
+      "inertia_axes": [
+        0.9999942608158793,
+        0.003237923665794175,
+        -0.0002201215580607263,
+        -0.0009724876026840788
+      ],
+      "center_of_mass": [
+        -0.011578231970780502,
+        0.00010113545493885864,
+        0.012916127220415559
+      ],
+      "part_origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "volume": 0.0003091767932166374,
+      "bounds": {
+        "min": [
+          -0.1321434,
+          0.0,
+          -0.03348825
+        ],
+        "max": [
+          0.10582044,
+          0.02613849,
+          0.03332428
+        ],
+        "center": [
+          -0.001050811688191751,
+          0.012888533844890387,
+          -0.0001600881078055801
+        ]
+      },
+      "description": "A pair of U-shaped tongs made from light-colored bamboo with a smooth finish and visible wood grain.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The object is a single, continuous piece of shaped bamboo. From the provided metadata, the tongs have bounding dimensions of approximately 0.238m (length) x 0.067m (width) x 0.026m (height), and a voxel volume of 4.91e-05 m^3. The dominant material is bamboo wood, which typically has a density ranging from 500 to 800 kg/m^3. Using a nominal density of 600 kg/m^3, the calculated mass is roughly 0.03 kg (30 grams), which aligns with lightweight kitchen utensils. For rigid body physics in Isaac Sim, wood properties dictate moderate friction (static ~0.5, dynamic ~0.4) and low restitution (~0.35) as bamboo has some flexibility but absorbs impact energy without bouncing excessively. Crucially, because the tongs have a concave U-shape, 'convex_decomposition' must be used for the collider type; a standard convex hull would fill the gap between the prongs and destroy physical fidelity. Continuous Collision Detection (CCD) is highly recommended because the prongs are thin and could tunnel through objects or planes at high velocities. A small contact offset (0.002m) is applied to ensure stable collision generation without visually floating. Based on the bounds minimally resting near 0 on the Y-axis (-0.0003 to +0.026), Y is inferred as the up-axis, making gravity [0.0, -9.81, 0.0].",
+      "static_friction": 0.5,
+      "dynamic_friction": 0.4,
+      "restitution": 0.35,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": "",
+      "appearance_properties": {},
+      "newton": {
+        "collisions": {
+          "collider_type": "convex_decomposition",
+          "rest_offset": 0,
+          "contact_offset": 0.002,
+          "explosion_view_distance": 0,
+          "collision_mesh_debug_visualization": false
+        },
+        "simulation_scene": {
+          "simulation_steps_per_second": 60,
+          "enable_ccd": true,
+          "gravitational_acceleration": [
+            0,
+            -9.81,
+            0
+          ],
+          "gpu_buffer_parameters": {},
+          "residuals": {}
+        }
+      }
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "Bamboo Tongs",
+  "fix_base": false,
+  "object_description": "A pair of U-shaped tongs made from light-colored bamboo with a smooth finish and visible wood grain.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.03,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies",
+  "total_object_mass_kg": 0.03,
+  "_authoritative_context_applied": {
+    "object": {},
+    "parts": [
+      {
+        "part_index": 0,
+        "part_id": "part_00",
+        "fields": [
+          "bounds",
+          "canonical_name",
+          "material",
+          "part_id",
+          "part_index",
+          "source_object_name",
+          "source_part_name"
+        ]
+      }
+    ]
+  }
+}
