@@ -4,6 +4,18 @@ A library of USD assets (meshes, textures, physics configs, and Isaac Sim valida
 
 Large binary files (`.usd`, `.png`, `.mp4`, `.jpeg`, etc.) are stored with [Git LFS](https://git-lfs.com/). You **must** install Git LFS before cloning, otherwise you will only get small text pointer files instead of the real assets.
 
+## Visual previews and simulation videos
+
+Browse the [batch montage images](gallery/montages/) directly on GitHub. The [interactive gallery](gallery/) covers **963 assets across 39 populated batches (Batch 2–Batch 40)**, with search, batch and joint-type filters, rendered/collision views, and simulation videos.
+
+To browse the interactive gallery locally, run this from the repository root:
+
+```bash
+python3 -m http.server 8000
+```
+
+Then open <http://localhost:8000/gallery/>. Isaac Sim is not needed to view the gallery. Collision images show authored geometry; videos show the recorded test behavior, including tipping when it occurs.
+
 ## 1. Install Git LFS
 
 ### Linux (Debian/Ubuntu)
@@ -80,3 +92,7 @@ D00060 Bowl Dish/
 │   ├── texture_metallic.png
 │   └── texture_roughness.png
 ```
+
+## Visual previews
+
+Browse the [asset preview gallery](gallery/index.html) for searchable per-asset renders, collision views, and validation videos. Batch montage sheets are in [gallery/montages](gallery/montages/).
