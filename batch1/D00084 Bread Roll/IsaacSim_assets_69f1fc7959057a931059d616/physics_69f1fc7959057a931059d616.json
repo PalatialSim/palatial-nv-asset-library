@@ -1,0 +1,139 @@
+{
+  "schema_version": "1.0",
+  "asset_id": "D00084",
+  "asset": {
+    "name": "D00084 Bread Roll",
+    "description": "A round, golden-brown baked bread roll with a smooth, slightly textured crust. The object features a continuous curved top surface and a flattened base.",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.06,
+    "bounds": {
+      "min": [
+        -0.040045,
+        -0.070591,
+        -0.030851
+      ],
+      "max": [
+        0.040045,
+        0.070591,
+        0.030851
+      ],
+      "size": [
+        0.08009,
+        0.141182,
+        0.061702
+      ]
+    }
+  },
+  "parts": [
+    {
+      "id": "part_00",
+      "name": "D00084 Bread Roll",
+      "mass": 0.06,
+      "density": 250.0,
+      "volume": 0.00040150371926435516,
+      "inertia": [
+        3.198200094195421e-05,
+        7.922626847036423e-05,
+        8.608463094036525e-05
+      ],
+      "inertia_axes": [
+        0.02430131911588196,
+        -0.7437265681363358,
+        -0.6678868617931139,
+        0.014400610456597565
+      ],
+      "center_of_mass": [
+        0.00024276343207830017,
+        0.00016507619441351323,
+        -0.0018860731775014814
+      ],
+      "bounds": {
+        "min": [
+          -0.040045,
+          -0.070591,
+          -0.030851
+        ],
+        "max": [
+          0.040045,
+          0.070591,
+          0.030851
+        ],
+        "size": [
+          0.08009,
+          0.141182,
+          0.061702
+        ]
+      },
+      "material": "baked_bread_crust",
+      "physics_type": "rigid",
+      "source": {
+        "object_name": "D00084 Bread Roll",
+        "part_name": "D00084 Bread Roll"
+      },
+      "collision": {},
+      "reasoning": "The object is a typical bread roll or bun. Bread is a highly porous, lightweight material, resulting in a low estimated density of 250 kg/m^3 and a low total mass of approximately 0.06 kg for a standard-sized roll. The exterior baked crust provides a moderate amount of friction against common surfaces like wood or ceramic, estimated at 0.5 for static and 0.4 for dynamic friction. Because bread is soft and structurally inelastic, it absorbs almost all impact energy without bouncing, necessitating a very low restitution value of 0.1. For simulation performance, a 'convex_hull' collider is perfectly suited to this simple, rounded shape, as it has no significant concavities. Standard contact offsets are maintained, and Continuous Collision Detection (CCD) is left disabled, as this object is unlikely to be subjected to high-velocity impacts in typical scenarios.",
+      "static_friction": 0.5,
+      "dynamic_friction": 0.4,
+      "restitution": 0.1,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "is_structural_root": true,
+      "description": "A round, golden-brown baked bread roll with a smooth, slightly textured crust. The object features a continuous curved top surface and a flattened base.",
+      "semantic": {
+        "qid": null
+      },
+      "non_visual_material": null
+    }
+  ],
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "units": {
+    "length": "m",
+    "mass": "kg"
+  },
+  "simulation": {
+    "fix_base": false
+  },
+  "provenance": {
+    "source_schema": "legacy_batch1_physics",
+    "legacy_reasoning_preserved": true,
+    "legacy_overall_assessment": "",
+    "verification_note": "Bounds and collision geometry were read from the delivered USD; runtime drop/contact behavior remains unverified.",
+    "usd_world_bounds_source": "USD visual mesh extent",
+    "collision_source": "USD PhysicsCollisionAPI geometry"
+  },
+  "validation": {
+    "overall": "partial",
+    "scale": {
+      "status": "recorded",
+      "confidence": "medium",
+      "units": "m",
+      "up_axis": "Z",
+      "bounds_m": [
+        0.08009,
+        0.141182,
+        0.061702
+      ]
+    },
+    "mass": {
+      "status": "not_checked",
+      "confidence": "low",
+      "value_kg": 0.06
+    },
+    "collision": {
+      "status": "recorded",
+      "confidence": "medium",
+      "shape_count": 1,
+      "approximations": [
+        "sdf"
+      ]
+    },
+    "articulation": {
+      "status": "not_checked",
+      "confidence": "low",
+      "moving_joints": 0
+    }
+  }
+}

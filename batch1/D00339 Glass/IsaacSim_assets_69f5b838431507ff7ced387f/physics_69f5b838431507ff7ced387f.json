@@ -1,0 +1,139 @@
+{
+  "schema_version": "1.0",
+  "asset_id": "D00339",
+  "asset": {
+    "name": "D00339 Glass",
+    "description": "Cylindrical handled mugs with rounded rims, thick bases, and loop handles, shown in glossy ceramic, speckled stoneware, and transparent colored glass finishes.",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.38,
+    "bounds": {
+      "min": [
+        -0.040224,
+        -0.034978,
+        8.86513e-19
+      ],
+      "max": [
+        0.056953,
+        0.035582,
+        0.080866
+      ],
+      "size": [
+        0.097177,
+        0.07056000000000001,
+        0.080866
+      ]
+    }
+  },
+  "parts": [
+    {
+      "id": "part_00",
+      "name": "D00339 Glass",
+      "mass": 0.38,
+      "density": 2300.0,
+      "volume": 0.0003588004280920683,
+      "inertia": [
+        0.0002857303971736895,
+        0.00030440884316218654,
+        0.00037387435303247376
+      ],
+      "inertia_axes": [
+        0.4913234679944361,
+        -0.49679281958546534,
+        -0.5034550705736873,
+        -0.5082628612439503
+      ],
+      "center_of_mass": [
+        0.00033036704215586,
+        0.00022670922176474103,
+        0.04061741749410088
+      ],
+      "bounds": {
+        "min": [
+          -0.040224,
+          -0.034978,
+          8.86513e-19
+        ],
+        "max": [
+          0.056953,
+          0.035582,
+          0.080866
+        ],
+        "size": [
+          0.097177,
+          0.07056000000000001,
+          0.080866
+        ]
+      },
+      "material": "glazed_ceramic",
+      "physics_type": "rigid",
+      "source": {
+        "object_name": "D00339 Glass",
+        "part_name": "D00339 Glass"
+      },
+      "collision": {},
+      "reasoning": "The estimates are for one representative empty coffee mug of the type shown, approximately 90-100 mm tall, 78-85 mm in outside diameter, with a 4-6 mm ceramic wall, a thicker base, and a loop handle. A typical 300-350 mL ceramic or stoneware mug has about 1.5e-4 to 1.8e-4 m^3 of fired ceramic material; using a bulk ceramic density around 2200-2400 kg/m^3 gives a mass of roughly 0.33-0.43 kg, so 0.38 kg is a realistic nominal value. The density value is the bulk material density for glazed ceramic; if the asset uses a single filled convex hull for mass computation, override the mass directly or use an effective hull density around 350-450 kg/m^3 to avoid an unrealistically heavy mug. The dominant contact surface is glazed ceramic/stoneware with a slightly rougher foot ring, so friction is higher than smooth glass but lower than rubber: static friction is estimated at 0.50 and dynamic friction at 0.38 on common tabletop or metal surfaces. Restitution is set to 0.35 because ceramic and glass are stiff but lose energy through impact ringing, micro-slip, and possible chipping; for a fully transparent glass variant, restitution could be raised to about 0.50-0.60 and friction reduced to about 0.30-0.35. The mug is concave because of the open cup cavity and handle loop, so a single convex hull would close the cup and handle opening. Convex decomposition is the best general-purpose PhysX collider choice for dynamic rigid bodies, using separate convex pieces for the cylinder wall, base, rim, and handle; use an SDF mesh only when precise interior containment or very accurate handle contact is required and the performance cost is acceptable. Contact offset is kept small relative to the 4-6 mm wall thickness to avoid early contact artifacts, while still giving stable contact generation. CCD is recommended because the object is small, thin-walled, and may be dropped or moved quickly; sleep thresholds and damping are kept low so the mug settles naturally without jitter.",
+      "static_friction": 0.5,
+      "dynamic_friction": 0.38,
+      "restitution": 0.35,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "is_structural_root": true,
+      "description": "Cylindrical handled mugs with rounded rims, thick bases, and loop handles, shown in glossy ceramic, speckled stoneware, and transparent colored glass finishes.",
+      "semantic": {
+        "qid": null
+      },
+      "non_visual_material": null
+    }
+  ],
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "units": {
+    "length": "m",
+    "mass": "kg"
+  },
+  "simulation": {
+    "fix_base": false
+  },
+  "provenance": {
+    "source_schema": "legacy_batch1_physics",
+    "legacy_reasoning_preserved": true,
+    "legacy_overall_assessment": "",
+    "verification_note": "Bounds and collision geometry were read from the delivered USD; runtime drop/contact behavior remains unverified.",
+    "usd_world_bounds_source": "USD visual mesh extent",
+    "collision_source": "USD PhysicsCollisionAPI geometry"
+  },
+  "validation": {
+    "overall": "partial",
+    "scale": {
+      "status": "recorded",
+      "confidence": "medium",
+      "units": "m",
+      "up_axis": "Z",
+      "bounds_m": [
+        0.097177,
+        0.07056000000000001,
+        0.080866
+      ]
+    },
+    "mass": {
+      "status": "not_checked",
+      "confidence": "low",
+      "value_kg": 0.38
+    },
+    "collision": {
+      "status": "recorded",
+      "confidence": "medium",
+      "shape_count": 59,
+      "approximations": [
+        "convexHull"
+      ]
+    },
+    "articulation": {
+      "status": "not_checked",
+      "confidence": "low",
+      "moving_joints": 0
+    }
+  }
+}

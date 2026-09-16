@@ -1,0 +1,139 @@
+{
+  "schema_version": "1.0",
+  "asset_id": "D00378",
+  "asset": {
+    "name": "D00378 Herb Pot",
+    "description": "A terracotta-colored cylindrical planter with a matching saucer, dark potting soil, and a green basil plant with broad veined leaves.",
+    "object_type": "rigid_bodies",
+    "total_mass": 2.8,
+    "bounds": {
+      "min": [
+        -0.097648,
+        -0.119676,
+        -0.000306
+      ],
+      "max": [
+        0.104495,
+        0.101755,
+        0.273246
+      ],
+      "size": [
+        0.20214300000000002,
+        0.221431,
+        0.27355199999999996
+      ]
+    }
+  },
+  "parts": [
+    {
+      "id": "part_00",
+      "name": "D00378 Herb Pot",
+      "mass": 2.8,
+      "density": 1800.0,
+      "volume": 0.004753171956301214,
+      "inertia": [
+        0.013617195858471607,
+        0.01381112827953365,
+        0.013830960650275679
+      ],
+      "inertia_axes": [
+        0.3391919540310999,
+        -0.7142178003238474,
+        0.234106640118792,
+        0.5657170963241428
+      ],
+      "center_of_mass": [
+        0.0023486485279314074,
+        0.0016363816885156222,
+        0.08097120610860234
+      ],
+      "bounds": {
+        "min": [
+          -0.097648,
+          -0.119676,
+          -0.000306
+        ],
+        "max": [
+          0.104495,
+          0.101755,
+          0.273246
+        ],
+        "size": [
+          0.20214300000000002,
+          0.221431,
+          0.27355199999999996
+        ]
+      },
+      "material": "terracotta_ceramic",
+      "physics_type": "rigid",
+      "source": {
+        "object_name": "D00378 Herb Pot",
+        "part_name": "D00378 Herb Pot"
+      },
+      "collision": {},
+      "reasoning": "The visible object is a small tabletop potted herb: a rigid ceramic/terracotta-style pot and saucer, filled with potting soil and carrying lightweight leafy stems. With no product scale supplied, I estimate an outer pot diameter of about 0.16–0.18 m, pot height about 0.13–0.16 m, saucer height about 0.04–0.06 m, and total height including foliage about 0.30–0.38 m. A terracotta shell and saucer of this size, with 5–7 mm walls, would contribute roughly 1.2–1.6 kg. The potting mix volume is approximately 1.8–2.4 L; because it appears to be perlite-containing potting soil rather than dense mineral soil, a moist bulk density around 500–800 kg/m^3 gives about 1.0–1.7 kg. The basil foliage and stems add only around 0.03–0.08 kg. A total mass of 2.8 kg is therefore a realistic rigid-body value for a filled ceramic herb pot. The root material is set to terracotta ceramic because the largest load-bearing/contact surface is the pot/saucer, even though much of the mass is soil. The listed density uses a representative terracotta ceramic density; if generating mass purely from a simplified filled-cylinder collider, an aggregate effective density closer to 550–750 kg/m^3 may be needed, but assigning the explicit 2.8 kg mass is preferable. Rough unglazed terracotta has moderately high friction on typical tabletop or floor materials, so static friction is estimated at 0.62 and dynamic friction at 0.52. Restitution is low, about 0.20, because the soil fill and ceramic pot dissipate impact energy and the real object would chip or crack rather than bounce. For Isaac Sim/PhysX rigid-body use, a single convex hull would over-cover the foliage and bridge open regions around leaves, while a triangle mesh is not ideal for a dynamic rigid body; convex decomposition or a compound set of simple convexes is the best practical choice. The pot/saucer should receive the accurate collision shape, while leaves can be represented by a few simplified convex/ellipsoid hulls or ignored for contact if only the base matters. Contact offset of 0.005 m is appropriate for a 15–40 cm object and improves stable contact generation without visibly floating; rest offset can remain 0.0 m. CCD is not required for normal placement or slow handling, but should be enabled if the asset is thrown, dropped at high speed, or scaled very small. Sleep/hibernation can be left at PhysX defaults or slightly favored because this is a heavy, mostly stationary object; low restitution and explicit mass will help it settle quickly. Compliant contacts are disabled because the object is modeled as a non-deformable rigid assembly; softness of soil and leaves is approximated through low restitution rather than contact compliance.",
+      "static_friction": 0.62,
+      "dynamic_friction": 0.52,
+      "restitution": 0.2,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "is_structural_root": true,
+      "description": "A terracotta-colored cylindrical planter with a matching saucer, dark potting soil, and a green basil plant with broad veined leaves.",
+      "semantic": {
+        "qid": null
+      },
+      "non_visual_material": null
+    }
+  ],
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "units": {
+    "length": "m",
+    "mass": "kg"
+  },
+  "simulation": {
+    "fix_base": false
+  },
+  "provenance": {
+    "source_schema": "legacy_batch1_physics",
+    "legacy_reasoning_preserved": true,
+    "legacy_overall_assessment": "",
+    "verification_note": "Bounds and collision geometry were read from the delivered USD; runtime drop/contact behavior remains unverified.",
+    "usd_world_bounds_source": "USD visual mesh extent",
+    "collision_source": "USD PhysicsCollisionAPI geometry"
+  },
+  "validation": {
+    "overall": "partial",
+    "scale": {
+      "status": "recorded",
+      "confidence": "medium",
+      "units": "m",
+      "up_axis": "Z",
+      "bounds_m": [
+        0.20214300000000002,
+        0.221431,
+        0.27355199999999996
+      ]
+    },
+    "mass": {
+      "status": "not_checked",
+      "confidence": "low",
+      "value_kg": 2.8
+    },
+    "collision": {
+      "status": "recorded",
+      "confidence": "medium",
+      "shape_count": 59,
+      "approximations": [
+        "convexHull"
+      ]
+    },
+    "articulation": {
+      "status": "not_checked",
+      "confidence": "low",
+      "moving_joints": 0
+    }
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "schema_version": "1.0",
+  "asset_id": "D00095",
+  "asset": {
+    "name": "D00095 Can",
+    "description": "A plain silver tin-plated steel can with a cylindrical body, rolled top and bottom rims, and shallow concentric lid grooves. The surface is slightly brushed and mottled, with no label or visible openings.",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.07,
+    "bounds": {
+      "min": [
+        -0.048022,
+        -0.047789,
+        4e-06
+      ],
+      "max": [
+        0.047773,
+        0.048019,
+        0.083253
+      ],
+      "size": [
+        0.095795,
+        0.095808,
+        0.08324899999999999
+      ]
+    }
+  },
+  "parts": [
+    {
+      "id": "part_00",
+      "name": "D00095 Can",
+      "mass": 0.07,
+      "density": 165.0,
+      "volume": 0.0005995264254885234,
+      "inertia": [
+        8.027459187205638e-05,
+        8.047666037162658e-05,
+        8.05013230319247e-05
+      ],
+      "inertia_axes": [
+        0.7197856003449838,
+        0.06506799481968163,
+        -0.6858704111175342,
+        0.08518582475753549
+      ],
+      "center_of_mass": [
+        -0.00014143777079739613,
+        0.00010684846342150833,
+        0.04165024976051112
+      ],
+      "bounds": {
+        "min": [
+          -0.048022,
+          -0.047789,
+          4e-06
+        ],
+        "max": [
+          0.047773,
+          0.048019,
+          0.083253
+        ],
+        "size": [
+          0.095795,
+          0.095808,
+          0.08324899999999999
+        ]
+      },
+      "material": "tin_plated_steel",
+      "physics_type": "rigid",
+      "source": {
+        "object_name": "D00095 Can",
+        "part_name": "D00095 Can"
+      },
+      "collision": {},
+      "reasoning": "The object appears to be a small unlabeled metal tin can: a thin-walled cylindrical steel shell with rolled seams and pressed lid features. Because no real dimensions or product data are provided, I assume a representative small can of about 85 mm diameter and 75 mm height. The full outer bounding volume is approximately pi*(0.0425 m)^2*0.075 m = 4.26e-4 m^3. For an empty thin steel shell, using tin-plated steel density near 7850 kg/m^3, wall/lid thickness around 0.20-0.30 mm, and extra metal in the rolled rims, the metal volume is roughly 8-9e-6 m^3, giving a total mass near 0.06-0.08 kg; 0.07 kg is a reasonable simulation mass for the visible shell. The reported root density is therefore an effective rigid-body density relative to the closed outer collider volume, about 0.07 / 4.26e-4 = 165 kg/m^3. If this is intended to represent a filled sealed food can rather than an empty shell, the mass should be increased substantially, typically to about 0.30-0.50 kg depending on scale and contents, while the contact material would remain steel. The dominant contact material is dull tin-plated steel, so dry steel-like friction is appropriate: static friction around 0.50 and dynamic friction around 0.40-0.45. Restitution is set to 0.55, lower than an ideal solid steel sphere because the thin can shell, crimped rims, and lid embossing dissipate energy through ringing and slight local compliance. For Isaac Sim/PhysX, the can is visually close to convex. A single convex hull is the best performance choice for a dynamic rigid body and should wrap the outer cylindrical side and rims while ignoring small lid grooves. Use a sufficiently high radial-resolution hull to avoid faceted rolling jitter. If exact interaction with lid grooves or rolled seams is required, convex decomposition or SDF mesh can be used, but those are more expensive and usually unnecessary for manipulation or bin-contact scenarios. Contact offset around 1.5-2.0 mm is suitable for an object of this scale; rest offset can remain 0.0 m to avoid artificial separation from surfaces. CCD is recommended because the can is light, has thin features, and may roll or be dropped; it prevents tunneling at high linear or angular speeds. Initial velocity is zero. Practical velocity limits, if configured outside this schema, would be around 10 m/s linear and 100 rad/s angular for robust contact behavior at this scale. Sleep thresholds can remain near PhysX defaults, but for a light rolling can a slightly increased sleep threshold may be useful to prevent long-lived low-energy rolling jitter. Compliant contacts are disabled because this is modeled as a non-deformable rigid metal object; any lossiness is represented mainly through restitution and solver damping rather than spring compliance.",
+      "static_friction": 0.5,
+      "dynamic_friction": 0.42,
+      "restitution": 0.55,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "is_structural_root": true,
+      "description": "A plain silver tin-plated steel can with a cylindrical body, rolled top and bottom rims, and shallow concentric lid grooves. The surface is slightly brushed and mottled, with no label or visible openings.",
+      "semantic": {
+        "qid": null
+      },
+      "non_visual_material": null
+    }
+  ],
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "units": {
+    "length": "m",
+    "mass": "kg"
+  },
+  "simulation": {
+    "fix_base": false
+  },
+  "provenance": {
+    "source_schema": "legacy_batch1_physics",
+    "legacy_reasoning_preserved": true,
+    "legacy_overall_assessment": "",
+    "verification_note": "Bounds and collision geometry were read from the delivered USD; runtime drop/contact behavior remains unverified.",
+    "usd_world_bounds_source": "USD visual mesh extent",
+    "collision_source": "USD PhysicsCollisionAPI geometry"
+  },
+  "validation": {
+    "overall": "partial",
+    "scale": {
+      "status": "recorded",
+      "confidence": "medium",
+      "units": "m",
+      "up_axis": "Z",
+      "bounds_m": [
+        0.095795,
+        0.095808,
+        0.08324899999999999
+      ]
+    },
+    "mass": {
+      "status": "not_checked",
+      "confidence": "low",
+      "value_kg": 0.07
+    },
+    "collision": {
+      "status": "recorded",
+      "confidence": "medium",
+      "shape_count": 59,
+      "approximations": [
+        "convexHull"
+      ]
+    },
+    "articulation": {
+      "status": "not_checked",
+      "confidence": "low",
+      "moving_joints": 0
+    }
+  }
+}

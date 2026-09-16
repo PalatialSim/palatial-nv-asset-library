@@ -1,0 +1,139 @@
+{
+  "schema_version": "1.0",
+  "asset_id": "D00064",
+  "asset": {
+    "name": "D00064 Bowl Mortar",
+    "description": "Small round bowls with thick rolled rims, hollow interiors, and shallow raised foot rings, shown in varnished wood and brushed stainless-steel finishes.",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.45,
+    "bounds": {
+      "min": [
+        -0.090501,
+        -0.090251,
+        -9e-06
+      ],
+      "max": [
+        0.090242,
+        0.090295,
+        0.100451
+      ],
+      "size": [
+        0.180743,
+        0.18054599999999998,
+        0.10046
+      ]
+    }
+  },
+  "parts": [
+    {
+      "id": "part_00",
+      "name": "D00064 Bowl Mortar",
+      "mass": 0.45,
+      "density": 650.0,
+      "volume": 0.000890740991108965,
+      "inertia": [
+        0.0014214204843417367,
+        0.0014246096904560533,
+        0.0020376259930804763
+      ],
+      "inertia_axes": [
+        0.9999602684274536,
+        0.00013121831143460283,
+        -3.806095497127515e-05,
+        0.008913074644227574
+      ],
+      "center_of_mass": [
+        -0.00013934883804328927,
+        4.57665384132895e-05,
+        0.04621291133819426
+      ],
+      "bounds": {
+        "min": [
+          -0.090501,
+          -0.090251,
+          -9e-06
+        ],
+        "max": [
+          0.090242,
+          0.090295,
+          0.100451
+        ],
+        "size": [
+          0.180743,
+          0.18054599999999998,
+          0.10046
+        ]
+      },
+      "material": "varnished_hardwood",
+      "physics_type": "rigid",
+      "source": {
+        "object_name": "D00064 Bowl Mortar",
+        "part_name": "D00064 Bowl Mortar"
+      },
+      "collision": {},
+      "reasoning": "The image shows a family of small bowl-shaped assets with rounded exterior walls, a concave interior, a prominent rim, and a small circular foot. Most visible variants are wooden, so the root-level material is estimated as varnished hardwood; the steel variants would use different density/friction values. A typical size for this object is estimated at roughly 0.16–0.18 m outer diameter and 0.08–0.10 m height, with a 6–10 mm wall/rim thickness. For a carved wooden bowl of that size, the solid material volume is approximately 0.00055–0.00075 m^3; with hardwood density around 600–750 kg/m^3, a realistic mass is about 0.35–0.55 kg, so 0.45 kg is used. Density is set to 650 kg/m^3 for varnished hardwood, but in Isaac Sim it is better to author an explicit mass rather than relying only on density if the collision mesh is a closed concave shell, because a filled convex or closed SDF volume can otherwise overestimate mass. The center of mass should be slightly below the geometric mid-height because of the thicker foot and rounded lower bowl body. Friction is estimated for smooth varnished wood on common work surfaces: static friction about 0.50 and dynamic friction about 0.38. Restitution is set to 0.35, representing a stiff but damped wooden object with limited bounce; for the stainless-steel variant, density would be about 7800 kg/m^3, mass likely 0.18–0.35 kg for thin sheet metal, static/dynamic friction around 0.35/0.25, and restitution around 0.55. The shape is concave, so a single convex hull would incorrectly fill the bowl cavity. For physically meaningful rim, interior, and foot contacts, an SDF mesh collider is recommended when accuracy matters. For large scenes or many bowls, a convex decomposition made from several radial wall/rim/foot convex pieces would be faster. Contact offset is set to 3 mm and rest offset to 0.5 mm to provide stable contact generation without visibly floating the asset; these may be reduced if the model is scaled smaller or contacts appear too inflated. CCD is enabled because the bowl has relatively thin walls and rim features that can tunnel during drops or fast manipulation. For runtime stability, keep initial linear and angular velocities at zero unless spawned dynamically, use normal gravity, and allow sleeping/hibernation for inactive bowls; practical sleep thresholds would be low, around 1e-4 to 5e-4 mass-normalized kinetic energy, with wake-up on contact. For high-speed throws or drops, limit maximum linear velocity to roughly 10–20 m/s and angular velocity to roughly 50–100 rad/s to avoid unstable thin-feature contact. Compliant contacts are disabled because the object is modeled as a rigid wooden/metal bowl; if contact chatter appears, solver substeps or material damping should be preferred before adding artificial compliance.",
+      "static_friction": 0.5,
+      "dynamic_friction": 0.38,
+      "restitution": 0.35,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "is_structural_root": true,
+      "description": "Small round bowls with thick rolled rims, hollow interiors, and shallow raised foot rings, shown in varnished wood and brushed stainless-steel finishes.",
+      "semantic": {
+        "qid": null
+      },
+      "non_visual_material": null
+    }
+  ],
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "units": {
+    "length": "m",
+    "mass": "kg"
+  },
+  "simulation": {
+    "fix_base": false
+  },
+  "provenance": {
+    "source_schema": "legacy_batch1_physics",
+    "legacy_reasoning_preserved": true,
+    "legacy_overall_assessment": "",
+    "verification_note": "Bounds and collision geometry were read from the delivered USD; runtime drop/contact behavior remains unverified.",
+    "usd_world_bounds_source": "USD visual mesh extent",
+    "collision_source": "USD PhysicsCollisionAPI geometry"
+  },
+  "validation": {
+    "overall": "partial",
+    "scale": {
+      "status": "recorded",
+      "confidence": "medium",
+      "units": "m",
+      "up_axis": "Z",
+      "bounds_m": [
+        0.180743,
+        0.18054599999999998,
+        0.10046
+      ]
+    },
+    "mass": {
+      "status": "not_checked",
+      "confidence": "low",
+      "value_kg": 0.45
+    },
+    "collision": {
+      "status": "recorded",
+      "confidence": "medium",
+      "shape_count": 1,
+      "approximations": [
+        "sdf"
+      ]
+    },
+    "articulation": {
+      "status": "not_checked",
+      "confidence": "low",
+      "moving_joints": 0
+    }
+  }
+}
