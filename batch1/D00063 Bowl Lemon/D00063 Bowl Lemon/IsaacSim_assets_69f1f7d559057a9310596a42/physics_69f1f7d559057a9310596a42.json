@@ -1,0 +1,81 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00063 Bowl Lemon",
+      "source_part_name": "D00063 Bowl Lemon",
+      "source_object_name": "D00063 Bowl Lemon",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "glazed_ceramic",
+      "material": "glazed_ceramic",
+      "non_visual_material": null,
+      "mass": 0.28,
+      "density": 2200.0,
+      "inertia": [
+        0.00017810409902162578,
+        0.0002823187994874968,
+        0.0003475830818414586
+      ],
+      "inertia_axes": [
+        0.9965269816522906,
+        0.05587018324428225,
+        0.0464718934928905,
+        -0.04065538806125473
+      ],
+      "center_of_mass": [
+        0.0007723853552109018,
+        0.0012702294950832813,
+        0.000174143838047141
+      ],
+      "part_origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "volume": 0.00037740554725080206,
+      "bounds": {
+        "min": [
+          -0.0671830028295517,
+          -0.04553399980068207,
+          -0.031279999762773514
+        ],
+        "max": [
+          0.06706299632787704,
+          0.04568000137805939,
+          0.03113500028848648
+        ],
+        "center": [
+          -0.00013503280748738118,
+          0.0016952016322282944,
+          -0.0013684151329697249
+        ]
+      },
+      "description": "A glossy glazed ceramic bowl shaped like a halved lemon, with a yellow textured peel, cream interior, green leaf, and brown stem.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The object appears to be a small decorative ceramic dish with a hollow lemon-shaped body and raised leaf/stem detail. With no product data supplied, I estimate an overall size of roughly 0.13\u20130.16 m long, 0.08\u20130.10 m wide, and 0.055\u20130.075 m tall. A glazed ceramic shell of this size with 3\u20135 mm wall thickness gives a solid ceramic volume on the order of 1.1e-4 to 1.5e-4 m^3; using a fired ceramic/glaze density near 2100\u20132400 kg/m^3 yields a mass around 0.23\u20130.35 kg, so 0.28 kg is a practical rigid-body mass estimate. Because collision hull volume will not equal the actual thin shell volume, the mass should preferably be authored explicitly rather than relying on automatic mass from a convex collider. The dominant contact material is smooth glazed ceramic, so friction is lower than rubber or rough wood but higher than very smooth glass: static friction about 0.42 and dynamic friction about 0.32 are appropriate against common table or gripper materials. Restitution is set to 0.42: ceramic is hard but not very elastic, and real impacts dissipate energy through ringing, micro-slip, and potential chipping rather than producing strong bounce. The geometry is non-convex because the bowl interior is open and the leaf/stem protrude from the rim. A single convex hull would incorrectly fill the bowl cavity, so convex decomposition is recommended for robust Isaac Sim / PhysX rigid-body use; use multiple hulls for the outer lemon shell, rim segments, leaf, and stem. If exact internal contacts are required and performance is acceptable, an SDF mesh is a higher-fidelity alternative, but convex decomposition is generally safer and faster for a dynamic rigid body. Contact offset is kept small at 0.003 m to respect the small scale and fine rim features, while rest offset is 0.0 m for visual alignment. CCD is enabled because the shell rim and leaf are thin features that could tunnel during drops or fast manipulation. For solver stability, use 120 Hz for scenes with contact-rich manipulation, 8\u201312 position iterations if available, a sleep threshold around 5e-5 to 1e-4, and practical velocity limits around 10\u201320 m/s linear and 50\u2013100 rad/s angular for this small brittle object. Compliant contacts are disabled because the model is a rigid glazed ceramic item; if contact chatter occurs, prefer solver iteration/contact-offset tuning before adding artificial compliance.",
+      "static_friction": 0.42,
+      "dynamic_friction": 0.32,
+      "restitution": 0.42,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": ""
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00063 Bowl Lemon",
+  "object_description": "A glossy glazed ceramic bowl shaped like a halved lemon, with a yellow textured peel, cream interior, green leaf, and brown stem.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.28,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies"
+}

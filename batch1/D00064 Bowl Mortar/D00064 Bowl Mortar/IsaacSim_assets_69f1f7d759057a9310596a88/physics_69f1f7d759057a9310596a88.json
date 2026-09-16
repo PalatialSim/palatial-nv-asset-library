@@ -1,0 +1,81 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00064 Bowl Mortar",
+      "source_part_name": "D00064 Bowl Mortar",
+      "source_object_name": "D00064 Bowl Mortar",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "varnished_hardwood",
+      "material": "varnished_hardwood",
+      "non_visual_material": null,
+      "mass": 0.45,
+      "density": 650.0,
+      "inertia": [
+        0.0014214204843417367,
+        0.0014246096904560533,
+        0.0020376259930804763
+      ],
+      "inertia_axes": [
+        0.9999602684274536,
+        0.00013121831143460283,
+        -3.806095497127515e-05,
+        0.008913074644227574
+      ],
+      "center_of_mass": [
+        -0.00013934883804328927,
+        4.57665384132895e-05,
+        0.04621291133819426
+      ],
+      "part_origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "volume": 0.000890740991108965,
+      "bounds": {
+        "min": [
+          -0.06436900049448013,
+          -0.05870800092816353,
+          -5.500000042957254e-05
+        ],
+        "max": [
+          0.09196700155735016,
+          0.05879100039601326,
+          0.13540500402450562
+        ],
+        "center": [
+          -0.002330569835845775,
+          2.8349575603909628e-05,
+          0.042946224811013366
+        ]
+      },
+      "description": "Small round bowls with thick rolled rims, hollow interiors, and shallow raised foot rings, shown in varnished wood and brushed stainless-steel finishes.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The image shows a family of small bowl-shaped assets with rounded exterior walls, a concave interior, a prominent rim, and a small circular foot. Most visible variants are wooden, so the root-level material is estimated as varnished hardwood; the steel variants would use different density/friction values. A typical size for this object is estimated at roughly 0.16\u20130.18 m outer diameter and 0.08\u20130.10 m height, with a 6\u201310 mm wall/rim thickness. For a carved wooden bowl of that size, the solid material volume is approximately 0.00055\u20130.00075 m^3; with hardwood density around 600\u2013750 kg/m^3, a realistic mass is about 0.35\u20130.55 kg, so 0.45 kg is used. Density is set to 650 kg/m^3 for varnished hardwood, but in Isaac Sim it is better to author an explicit mass rather than relying only on density if the collision mesh is a closed concave shell, because a filled convex or closed SDF volume can otherwise overestimate mass. The center of mass should be slightly below the geometric mid-height because of the thicker foot and rounded lower bowl body. Friction is estimated for smooth varnished wood on common work surfaces: static friction about 0.50 and dynamic friction about 0.38. Restitution is set to 0.35, representing a stiff but damped wooden object with limited bounce; for the stainless-steel variant, density would be about 7800 kg/m^3, mass likely 0.18\u20130.35 kg for thin sheet metal, static/dynamic friction around 0.35/0.25, and restitution around 0.55. The shape is concave, so a single convex hull would incorrectly fill the bowl cavity. For physically meaningful rim, interior, and foot contacts, an SDF mesh collider is recommended when accuracy matters. For large scenes or many bowls, a convex decomposition made from several radial wall/rim/foot convex pieces would be faster. Contact offset is set to 3 mm and rest offset to 0.5 mm to provide stable contact generation without visibly floating the asset; these may be reduced if the model is scaled smaller or contacts appear too inflated. CCD is enabled because the bowl has relatively thin walls and rim features that can tunnel during drops or fast manipulation. For runtime stability, keep initial linear and angular velocities at zero unless spawned dynamically, use normal gravity, and allow sleeping/hibernation for inactive bowls; practical sleep thresholds would be low, around 1e-4 to 5e-4 mass-normalized kinetic energy, with wake-up on contact. For high-speed throws or drops, limit maximum linear velocity to roughly 10\u201320 m/s and angular velocity to roughly 50\u2013100 rad/s to avoid unstable thin-feature contact. Compliant contacts are disabled because the object is modeled as a rigid wooden/metal bowl; if contact chatter appears, solver substeps or material damping should be preferred before adding artificial compliance.",
+      "static_friction": 0.5,
+      "dynamic_friction": 0.38,
+      "restitution": 0.35,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": ""
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00064 Bowl Mortar",
+  "object_description": "Small round bowls with thick rolled rims, hollow interiors, and shallow raised foot rings, shown in varnished wood and brushed stainless-steel finishes.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.45,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies"
+}

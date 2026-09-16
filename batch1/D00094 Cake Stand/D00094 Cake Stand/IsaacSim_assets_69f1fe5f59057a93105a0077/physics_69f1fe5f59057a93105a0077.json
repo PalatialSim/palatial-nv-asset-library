@@ -1,0 +1,81 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00094 Cake Stand",
+      "source_part_name": "D00094 Cake Stand",
+      "source_object_name": "D00094 Cake Stand",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "ceramic",
+      "material": "ceramic",
+      "non_visual_material": null,
+      "mass": 2.2,
+      "density": 2300.0,
+      "inertia": [
+        0.012326415076516294,
+        0.012350805374943931,
+        0.01716804366888345
+      ],
+      "inertia_axes": [
+        0.7053798897535519,
+        0.00013881236232754458,
+        -0.00015487932660185338,
+        -0.7088294349664023
+      ],
+      "center_of_mass": [
+        -0.0006969464445779132,
+        0.0005766026131097972,
+        0.08662752170820152
+      ],
+      "part_origin_world": [
+        -0.0006969464445779132,
+        0.0005766026131097972,
+        0.08662752170820152
+      ],
+      "volume": 0.006699424139817019,
+      "bounds": {
+        "center": [
+          -0.0007144139495085606,
+          0.0912923043904335,
+          -0.0005868740846546062
+        ],
+        "max": [
+          0.14697156846523285,
+          0.14827285706996918,
+          0.14713726937770844
+        ],
+        "min": [
+          -0.1483471691608429,
+          0.0,
+          -0.1483914703130722
+        ]
+      },
+      "description": "A cream-white ceramic pedestal tray with a shallow circular top, rounded raised rim, tapered central column, and matching round base.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The object appears to be a single rigid ceramic or porcelain cake-stand/pedestal tray. With no product data supplied, I assume a real-world scale of roughly 0.33\u20130.36 m top diameter, 0.19\u20130.23 m base diameter, and 0.17\u20130.21 m total height, with 5\u20139 mm ceramic wall thickness. Porcelain/ceramic material density is typically about 2200\u20132400 kg/m^3, but the stand is hollow/thin-walled in places, so a realistic total mass is estimated at about 2.2 kg. The center of mass should lie on the central vertical axis, approximately 0.09\u20130.11 m above the bottom, because the top tray and lower base dominate the mass. Approximate inertia would be on the order of Ixx/Iyy 0.018\u20130.022 kg\u00b7m^2 and Izz 0.020\u20130.026 kg\u00b7m^2 for the assumed dimensions. Static friction is estimated at 0.48 and dynamic friction at 0.36 for matte/glazed ceramic contact; if the bottom surface is polished, reduce these by about 0.1. Restitution is kept low at 0.28 because ceramic is stiff but dissipative and brittle, and low bounce improves contact stability in PhysX. For Isaac Sim v4.5, a single convex hull is not recommended because it would fill the shallow tray and bridge the raised rim; convex decomposition or a compound collider made from cylinders/frustums is preferred. Use decomposition pieces for the tray surface, raised rim, pedestal column, and base. Contact offset of about 5 mm is appropriate for this meter-scale thin-rim object; rest offset should remain 0 mm or very small to avoid visible hovering and to keep items sitting correctly in the tray. CCD is enabled as a safe default because the rim and tray shell are thin; it may be disabled for purely static or very slow scenes. Compliant contacts should remain disabled for a non-deformable ceramic body; if contact chatter occurs, increase solver iterations before adding compliance. Recommended non-schema runtime limits are max linear velocity around 5 m/s, max angular velocity around 20 rad/s, linear sleep velocity near 0.02 m/s, and angular sleep velocity near 0.1 rad/s. If mass is computed from a simplified solid collider instead of using the explicit mass override, use an effective density closer to 600\u2013800 kg/m^3 to avoid making the hollow stand unrealistically heavy.",
+      "static_friction": 0.48,
+      "dynamic_friction": 0.36,
+      "restitution": 0.28,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": ""
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00094 Cake Stand",
+  "object_description": "A cream-white ceramic pedestal tray with a shallow circular top, rounded raised rim, tapered central column, and matching round base.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 2.2,
+  "center_of_mass": null,
+  "inertia": null,
+  "num_parts": 1,
+  "object_type": "rigid_bodies",
+  "overall_assessment": ""
+}

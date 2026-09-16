@@ -1,0 +1,81 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00020 Bell",
+      "source_part_name": "D00020 Bell",
+      "source_object_name": "D00020 Bell",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "steel",
+      "material": "steel",
+      "non_visual_material": null,
+      "mass": 0.85,
+      "density": 500.0,
+      "inertia": [
+        0.0006082924054554386,
+        0.0017422239825195713,
+        0.0017516699927066595
+      ],
+      "inertia_axes": [
+        0.4940622323437018,
+        0.4977820123989628,
+        0.5079370101614268,
+        -0.5001155590579717
+      ],
+      "center_of_mass": [
+        0.0003617623192206242,
+        -8.060911668587845e-05,
+        0.06391765361412036
+      ],
+      "part_origin_world": [
+        0.0003617623192206242,
+        -8.060911668587845e-05,
+        0.06391765361412036
+      ],
+      "volume": 0.0005619300698615455,
+      "bounds": {
+        "center": [
+          0.00022373313713249028,
+          0.06167147155259015,
+          6.118427759768696e-06
+        ],
+        "max": [
+          0.049495987594127655,
+          0.1957513839006424,
+          0.047991830855607986
+        ],
+        "min": [
+          -0.0484975203871727,
+          0.0,
+          -0.04877285286784172
+        ]
+      },
+      "description": "A hand bell with an aged brass flared bell body, brass clapper, and a dark polished wooden handle. The surface shows worn metallic patina, carved handle contours, and thin decorative grooves.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The object appears to be a medium-size handheld bell made primarily from thin cast or spun brass with a wooden handle and small brass clapper. Assuming an approximate total height of 0.28-0.32 m, mouth diameter of 0.14-0.17 m, brass wall thickness of roughly 1-2 mm, and a hardwood handle, a realistic total mass is about 0.8-0.9 kg; 0.85 kg is a suitable rigid-body mass. Actual material densities would be about 8400-8700 kg/m^3 for brass and 600-800 kg/m^3 for hardwood, but because the bell body is hollow and the collision volume will likely be represented by solid convex parts, an effective simulation density around 500 kg/m^3 is more appropriate if density is used to derive mass. For Isaac Sim, explicitly authoring mass is preferred over relying only on density for this hollow composite object. Contact behavior is dominated by brass at the rim and body, with some higher-friction wood on the handle; brass-on-common-surfaces typically has moderate friction, so static friction is estimated at 0.42 and dynamic friction at 0.32. Restitution is set to 0.35 because the brass shell is stiff but loses impact energy to sound, vibration, and local deformation; it should not behave like a highly elastic rubber object. The shape is mostly axisymmetric but includes a concave bell mouth and an internal clapper, so a single convex hull would overfill the hollow mouth and give inaccurate contacts. Convex decomposition is the recommended default for a performant dynamic rigid body: use several convex parts for the flared bell, rim, collar, handle, knob, and clapper if the clapper is fixed. If the interior cavity must be physically accessible or if another object must collide accurately inside the bell, an SDF mesh collider can be used instead, but at higher cost. Rest offset is kept at 0.0 m to align collision and visual geometry, while contact offset is set to 0.003 m for stable contact generation at this asset scale. CCD is enabled because the thin rim, small clapper, and rounded knob can tunnel during drops or fast manipulation; it may be disabled for slow, settled placement scenes to save performance. No compliant contacts are required for the rigid brass/wood body; use normal rigid contacts with adequate solver iterations. Recommended practical limits not represented as separate schema fields are max linear velocity around 10-15 m/s, max angular velocity around 50-80 rad/s, sleep threshold around 0.005-0.01 m^2/s^2, and stabilization enabled for resting contacts.",
+      "static_friction": 0.42,
+      "dynamic_friction": 0.32,
+      "restitution": 0.35,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": ""
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00020 Bell",
+  "object_description": "A hand bell with an aged brass flared bell body, brass clapper, and a dark polished wooden handle. The surface shows worn metallic patina, carved handle contours, and thin decorative grooves.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.85,
+  "center_of_mass": null,
+  "inertia": null,
+  "num_parts": 1,
+  "object_type": "rigid_bodies",
+  "overall_assessment": ""
+}

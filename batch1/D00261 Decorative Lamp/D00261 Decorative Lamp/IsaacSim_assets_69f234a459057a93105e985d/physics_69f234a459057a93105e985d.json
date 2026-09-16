@@ -1,0 +1,81 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00261 Decorative Lamp",
+      "source_part_name": "D00261 Decorative Lamp",
+      "source_object_name": "D00261 Decorative Lamp",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "painted_ceramic_stoneware",
+      "material": "painted_ceramic_stoneware",
+      "non_visual_material": null,
+      "mass": 4.2,
+      "density": 1800.0,
+      "inertia": [
+        0.050525090866801944,
+        0.16543430944808785,
+        0.16684402993227426
+      ],
+      "inertia_axes": [
+        0.5035279714285108,
+        -0.5030852915925151,
+        -0.5004941192422488,
+        -0.49281883890156697
+      ],
+      "center_of_mass": [
+        -0.0014485063837874673,
+        0.0031259751625453,
+        0.1995762120216982
+      ],
+      "part_origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "volume": 0.010307960291509334,
+      "bounds": {
+        "min": [
+          -0.15610499680042267,
+          -0.1480810046195984,
+          -0.00015799999528098851
+        ],
+        "max": [
+          0.1579049974679947,
+          0.15872099995613098,
+          0.44915398955345154
+        ],
+        "center": [
+          9.600465994326141e-05,
+          0.0050380771941962174,
+          0.28449170245489047
+        ]
+      },
+      "description": "A table lamp with a teal painted ceramic base, brushed brass metal stem, exposed glass bulb, and cream woven fabric shade with rolled edges.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "Estimated dimensions are approximately 0.65\u20130.75 m tall, 0.40\u20130.45 m maximum shade diameter, and 0.22\u20130.28 m base width. The mass is dominated by the teal painted ceramic/stoneware base, likely with a weighted insert for stability; the brass-colored metal stem/hardware contributes moderate mass, while the fabric shade and glass bulb are comparatively light. A realistic total mass is about 4.2 kg, with the center of mass low in the base/stem region around 0.16\u20130.20 m above the bottom contact plane. The root material is set to painted ceramic/stoneware because it dominates the support/contact behavior and much of the structural mass, even though the shade has the largest visible surface area. Ceramic/painted surfaces on a typical tabletop have moderate-high friction, so static friction is estimated at 0.55 and dynamic friction at 0.45. Restitution is kept low at 0.25 because the assembled lamp is heavy, irregular, and dissipative despite containing ceramic, metal, and glass elements. For Isaac Sim/PhysX, a single convex hull would incorrectly fill the open shade and concave gaps, while a high-resolution triangle/SDF mesh is usually unnecessary for a tabletop rigid object; convex decomposition or multiple simplified colliders are preferred. Recommended collision approximation is stacked convex/spheroid hulls for the base, cylinders/capsules for the stem and socket, a simplified thin frustum or several convex panels for the shade, and a small sphere/capsule for the bulb. The shade should be given finite collision thickness of at least 3\u20135 mm if contacts with it matter. CCD can remain disabled for normal placement and slow manipulation, but should be enabled if the lamp is dropped, thrown, or moved faster than about 1\u20132 m/s near thin geometry. Contact offset around 5\u20136 mm and zero rest offset are appropriate at meter scale for stable tabletop contacts without visibly floating the base. Compliant contacts are disabled because the model should behave as a rigid decorative object; any fabric flexibility is visual only unless a separate deformable setup is authored.",
+      "static_friction": 0.55,
+      "dynamic_friction": 0.45,
+      "restitution": 0.25,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": ""
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00261 Decorative Lamp",
+  "object_description": "A table lamp with a teal painted ceramic base, brushed brass metal stem, exposed glass bulb, and cream woven fabric shade with rolled edges.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 4.2,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies"
+}

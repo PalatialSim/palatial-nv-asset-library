@@ -1,0 +1,81 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00093 Cake",
+      "source_part_name": "D00093 Cake",
+      "source_object_name": "D00093 Cake",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "ceramic",
+      "material": "ceramic",
+      "non_visual_material": null,
+      "mass": 0.12,
+      "density": 560.0,
+      "inertia": [
+        0.0001283076233106609,
+        0.0001513859049959124,
+        0.0002243576682619512
+      ],
+      "inertia_axes": [
+        0.7005539924631748,
+        0.7117906019195901,
+        0.035640937959395824,
+        -0.03616581540941733
+      ],
+      "center_of_mass": [
+        -0.002687162528009529,
+        0.007858094604448397,
+        0.0501376207555421
+      ],
+      "part_origin_world": [
+        -0.002687162528009529,
+        0.007858094604448397,
+        0.0501376207555421
+      ],
+      "volume": 0.000604505410373831,
+      "bounds": {
+        "center": [
+          -0.0020150600566110222,
+          0.05206317497448845,
+          -0.006998105064529816
+        ],
+        "max": [
+          0.057637833058834076,
+          0.10817253589630127,
+          0.018826857209205627
+        ],
+        "min": [
+          -0.05994122475385666,
+          0.0,
+          -0.0363553948700428
+        ]
+      },
+      "description": "A wedge-shaped slice of chocolate layer cake with pale cream frosting, dark sponge layers, and curled chocolate shavings. The surface is soft, porous, slightly irregular, and crumbly with small decorative chocolate flakes.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The visible asset is interpreted as the cake slice only; the white plate should ideally be authored as a separate ceramic rigid body if included in the USD. A typical bakery cake slice of this size is approximately 0.11\u20130.14 m long, 0.07\u20130.09 m tall, and 0.04\u20130.07 m wide on average, giving an estimated volume around 1.8e-4 to 2.5e-4 m^3. Layer cake bulk density is much lower than solid chocolate because of porous sponge and whipped/buttercream frosting; a realistic effective density is about 450\u2013650 kg/m^3. Using 560 kg/m^3 gives a mass near 0.12 kg, consistent with a 100\u2013150 g dessert slice. Although real cake is deformable and fragile, for Isaac Sim rigid-body use it should be approximated as a low-mass rigid object with compliant contacts to mimic soft frosting/crust compression without requiring deformable-body simulation. Friction is estimated moderately high because frosting and moist cake have tacky contact behavior on ceramic/plastic/metal surfaces; static friction around 0.65 and dynamic friction around 0.55 are appropriate. Restitution should be very low because cake dissipates impact energy and does not bounce; 0.04 is suitable. The shape is a wedge with many high-frequency surface details and loose chocolate curls; for stable PhysX simulation, collision should not use every crumb. A convex decomposition or simplified convex hull set is preferred: one main wedge/prism collider for the cake body and optional small simplified convex pieces for large decorative curls if they must collide. For performance and stability, ignore tiny crumbs and shavings in collision or merge them into the top surface. Contact offset is kept small but larger than rest offset to prevent jitter on the irregular frosting surface. CCD is usually unnecessary for a slow, light food item, but can be enabled globally or per-body if it is dropped or moved rapidly by a gripper. Sleep/hibernation should be allowed via normal PhysX defaults because the object is light and stationary most of the time. If the visible plate is part of a single merged mesh, it should be separated; otherwise the estimated mass/density here would be inaccurate because a ceramic plate alone could add 0.35\u20130.7 kg and require much lower restitution and different friction/contact parameters.",
+      "static_friction": 0.65,
+      "dynamic_friction": 0.55,
+      "restitution": 0.04,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": ""
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00093 Cake",
+  "object_description": "A wedge-shaped slice of chocolate layer cake with pale cream frosting, dark sponge layers, and curled chocolate shavings. The surface is soft, porous, slightly irregular, and crumbly with small decorative chocolate flakes.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.12,
+  "center_of_mass": null,
+  "inertia": null,
+  "num_parts": 1,
+  "object_type": "rigid_bodies",
+  "overall_assessment": ""
+}

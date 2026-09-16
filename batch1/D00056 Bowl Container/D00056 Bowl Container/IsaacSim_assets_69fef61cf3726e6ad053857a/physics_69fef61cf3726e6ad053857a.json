@@ -1,0 +1,81 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00056 Bowl Container",
+      "source_part_name": "D00056 Bowl Container",
+      "source_object_name": "D00056 Bowl Container",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "glazed_ceramic",
+      "material": "glazed_ceramic",
+      "non_visual_material": null,
+      "mass": 0.46,
+      "density": 2300.0,
+      "inertia": [
+        0.0010615497599684954,
+        0.0010627171987516609,
+        0.0017472785635316269
+      ],
+      "inertia_axes": [
+        0.9978146587468573,
+        0.00015716688957809275,
+        0.00018486409890305927,
+        0.06607456328820199
+      ],
+      "center_of_mass": [
+        -0.00017463352949937983,
+        -1.4518639558757007e-05,
+        0.03346244132143453
+      ],
+      "part_origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "volume": 0.00020431683529767083,
+      "bounds": {
+        "min": [
+          -0.0781020000576973,
+          -0.07796300202608109,
+          -5.700000110664405e-05
+        ],
+        "max": [
+          0.07807700335979462,
+          0.07805600017309189,
+          0.06967300176620483
+        ],
+        "center": [
+          -1.2690119454878176e-05,
+          -1.636463985479971e-05,
+          0.03394602639460137
+        ]
+      },
+      "description": "A cream-colored glazed ceramic bowl with rounded sides, a raised rim, and a small foot ring. The surface is smooth, slightly glossy, and subtly speckled.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The object appears to be a hollow ceramic serving or cereal bowl with a broad circular rim, curved hemispherical/frustum-like body, and a smaller raised base foot. No product data is provided, so values are estimated for a typical glazed stoneware/porcelain bowl about 0.15-0.18 m in rim diameter and 0.075-0.095 m tall, with a wall thickness of roughly 3-5 mm. Ceramic material density is typically about 2200-2500 kg/m^3; using 2300 kg/m^3 and an estimated shell volume around 1.8e-4 to 2.2e-4 m^3 gives a mass near 0.4-0.5 kg. I set mass to 0.46 kg, which is realistic for a medium ceramic bowl and should be explicitly authored rather than relying on a solid closed-volume collider density, because the object is hollow. The dominant material is glazed ceramic; the glazed outer wall is relatively smooth, while the foot ring may be slightly rougher and unglazed. A static friction coefficient of 0.48 and dynamic friction of 0.38 are appropriate for ceramic on common tabletop, plastic, or metal surfaces; increase toward 0.55 if the foot ring is rough and unglazed. Restitution is set to 0.42: ceramic is hard and can rebound slightly, but real bowls dissipate energy through ringing, micro-impact losses, and possible chipping, so a high glass-like bounce would be unrealistic for most rigid-body scenes. The geometry is concave because of the open cavity, so a single convex hull would incorrectly seal the bowl opening and prevent objects from resting inside. For a movable rigid body in Isaac Sim/PhysX, convex decomposition is the recommended collider type: use multiple convex hulls around the bowl wall, rim, and foot ring to preserve the cavity while remaining dynamic-compatible and performant. An SDF mesh can be used for higher-fidelity concave contact if the bowl is mostly static or if performance cost is acceptable, but convex decomposition is the safer default for robotic/industrial rigid-body interaction. Contact offsets are kept small relative to the object size: rest_offset 0.0 m and contact_offset 0.0025 m reduce visible hovering while maintaining stable contact generation on the curved base and rim. CCD is enabled because the bowl has thin walls and a narrow foot ring that can tunnel through surfaces during drops or fast gripper motion; it can be disabled for slow tabletop-only scenes. For stability, use SI units, a 60 Hz minimum simulation step, preferably 120 Hz or substepping for fast manipulation, and allow sleeping/hibernation when the bowl is at rest to reduce jitter. Non-deformable ceramic should not use compliant contacts by default; if solver chatter occurs on hard surfaces, use only very stiff, lightly damped compliance rather than making the bowl feel rubbery.",
+      "static_friction": 0.48,
+      "dynamic_friction": 0.38,
+      "restitution": 0.42,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": ""
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00056 Bowl Container",
+  "object_description": "A cream-colored glazed ceramic bowl with rounded sides, a raised rim, and a small foot ring. The surface is smooth, slightly glossy, and subtly speckled.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.46,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies"
+}

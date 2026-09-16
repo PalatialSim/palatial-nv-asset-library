@@ -1,0 +1,81 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00339 Glass",
+      "source_part_name": "D00339 Glass",
+      "source_object_name": "D00339 Glass",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "glazed_ceramic",
+      "material": "glazed_ceramic",
+      "non_visual_material": null,
+      "mass": 0.38,
+      "density": 2300.0,
+      "inertia": [
+        0.0002857303971736895,
+        0.00030440884316218654,
+        0.00037387435303247376
+      ],
+      "inertia_axes": [
+        0.4913234679944361,
+        -0.49679281958546534,
+        -0.5034550705736873,
+        -0.5082628612439503
+      ],
+      "center_of_mass": [
+        0.00033036704215586,
+        0.00022670922176474103,
+        0.04061741749410088
+      ],
+      "part_origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "volume": 0.0003588004280920683,
+      "bounds": {
+        "min": [
+          -0.04022400081157684,
+          -0.034977998584508896,
+          0.0
+        ],
+        "max": [
+          0.05695300176739693,
+          0.03558199852705002,
+          0.0808660015463829
+        ],
+        "center": [
+          -0.002265668223649005,
+          0.0002470413086060307,
+          0.03570650513413056
+        ]
+      },
+      "description": "Cylindrical handled mugs with rounded rims, thick bases, and loop handles, shown in glossy ceramic, speckled stoneware, and transparent colored glass finishes.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The estimates are for one representative empty coffee mug of the type shown, approximately 90-100 mm tall, 78-85 mm in outside diameter, with a 4-6 mm ceramic wall, a thicker base, and a loop handle. A typical 300-350 mL ceramic or stoneware mug has about 1.5e-4 to 1.8e-4 m^3 of fired ceramic material; using a bulk ceramic density around 2200-2400 kg/m^3 gives a mass of roughly 0.33-0.43 kg, so 0.38 kg is a realistic nominal value. The density value is the bulk material density for glazed ceramic; if the asset uses a single filled convex hull for mass computation, override the mass directly or use an effective hull density around 350-450 kg/m^3 to avoid an unrealistically heavy mug. The dominant contact surface is glazed ceramic/stoneware with a slightly rougher foot ring, so friction is higher than smooth glass but lower than rubber: static friction is estimated at 0.50 and dynamic friction at 0.38 on common tabletop or metal surfaces. Restitution is set to 0.35 because ceramic and glass are stiff but lose energy through impact ringing, micro-slip, and possible chipping; for a fully transparent glass variant, restitution could be raised to about 0.50-0.60 and friction reduced to about 0.30-0.35. The mug is concave because of the open cup cavity and handle loop, so a single convex hull would close the cup and handle opening. Convex decomposition is the best general-purpose PhysX collider choice for dynamic rigid bodies, using separate convex pieces for the cylinder wall, base, rim, and handle; use an SDF mesh only when precise interior containment or very accurate handle contact is required and the performance cost is acceptable. Contact offset is kept small relative to the 4-6 mm wall thickness to avoid early contact artifacts, while still giving stable contact generation. CCD is recommended because the object is small, thin-walled, and may be dropped or moved quickly; sleep thresholds and damping are kept low so the mug settles naturally without jitter.",
+      "static_friction": 0.5,
+      "dynamic_friction": 0.38,
+      "restitution": 0.35,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": ""
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00339 Glass",
+  "object_description": "Cylindrical handled mugs with rounded rims, thick bases, and loop handles, shown in glossy ceramic, speckled stoneware, and transparent colored glass finishes.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.38,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies"
+}

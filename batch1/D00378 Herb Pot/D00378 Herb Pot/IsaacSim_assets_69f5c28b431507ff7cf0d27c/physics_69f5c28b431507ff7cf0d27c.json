@@ -1,0 +1,81 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00378 Herb Pot",
+      "source_part_name": "D00378 Herb Pot",
+      "source_object_name": "D00378 Herb Pot",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "terracotta_ceramic",
+      "material": "terracotta_ceramic",
+      "non_visual_material": null,
+      "mass": 2.8,
+      "density": 1800.0,
+      "inertia": [
+        0.013617195858471607,
+        0.01381112827953365,
+        0.013830960650275679
+      ],
+      "inertia_axes": [
+        0.3391919540310999,
+        -0.7142178003238474,
+        0.234106640118792,
+        0.5657170963241428
+      ],
+      "center_of_mass": [
+        0.0023486485279314074,
+        0.0016363816885156222,
+        0.08097120610860234
+      ],
+      "part_origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "volume": 0.004753171956301214,
+      "bounds": {
+        "min": [
+          -0.06065500155091286,
+          -0.07658500224351883,
+          -0.00014699999883305281
+        ],
+        "max": [
+          0.059985000640153885,
+          0.06603100150823593,
+          0.16544200479984283
+        ],
+        "center": [
+          0.00010014892675263533,
+          -0.0005460266315339027,
+          0.09328306435920025
+        ]
+      },
+      "description": "A terracotta-colored cylindrical planter with a matching saucer, dark potting soil, and a green basil plant with broad veined leaves.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The visible object is a small tabletop potted herb: a rigid ceramic/terracotta-style pot and saucer, filled with potting soil and carrying lightweight leafy stems. With no product scale supplied, I estimate an outer pot diameter of about 0.16\u20130.18 m, pot height about 0.13\u20130.16 m, saucer height about 0.04\u20130.06 m, and total height including foliage about 0.30\u20130.38 m. A terracotta shell and saucer of this size, with 5\u20137 mm walls, would contribute roughly 1.2\u20131.6 kg. The potting mix volume is approximately 1.8\u20132.4 L; because it appears to be perlite-containing potting soil rather than dense mineral soil, a moist bulk density around 500\u2013800 kg/m^3 gives about 1.0\u20131.7 kg. The basil foliage and stems add only around 0.03\u20130.08 kg. A total mass of 2.8 kg is therefore a realistic rigid-body value for a filled ceramic herb pot. The root material is set to terracotta ceramic because the largest load-bearing/contact surface is the pot/saucer, even though much of the mass is soil. The listed density uses a representative terracotta ceramic density; if generating mass purely from a simplified filled-cylinder collider, an aggregate effective density closer to 550\u2013750 kg/m^3 may be needed, but assigning the explicit 2.8 kg mass is preferable. Rough unglazed terracotta has moderately high friction on typical tabletop or floor materials, so static friction is estimated at 0.62 and dynamic friction at 0.52. Restitution is low, about 0.20, because the soil fill and ceramic pot dissipate impact energy and the real object would chip or crack rather than bounce. For Isaac Sim/PhysX rigid-body use, a single convex hull would over-cover the foliage and bridge open regions around leaves, while a triangle mesh is not ideal for a dynamic rigid body; convex decomposition or a compound set of simple convexes is the best practical choice. The pot/saucer should receive the accurate collision shape, while leaves can be represented by a few simplified convex/ellipsoid hulls or ignored for contact if only the base matters. Contact offset of 0.005 m is appropriate for a 15\u201340 cm object and improves stable contact generation without visibly floating; rest offset can remain 0.0 m. CCD is not required for normal placement or slow handling, but should be enabled if the asset is thrown, dropped at high speed, or scaled very small. Sleep/hibernation can be left at PhysX defaults or slightly favored because this is a heavy, mostly stationary object; low restitution and explicit mass will help it settle quickly. Compliant contacts are disabled because the object is modeled as a non-deformable rigid assembly; softness of soil and leaves is approximated through low restitution rather than contact compliance.",
+      "static_friction": 0.62,
+      "dynamic_friction": 0.52,
+      "restitution": 0.2,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": ""
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00378 Herb Pot",
+  "object_description": "A terracotta-colored cylindrical planter with a matching saucer, dark potting soil, and a green basil plant with broad veined leaves.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 2.8,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies"
+}

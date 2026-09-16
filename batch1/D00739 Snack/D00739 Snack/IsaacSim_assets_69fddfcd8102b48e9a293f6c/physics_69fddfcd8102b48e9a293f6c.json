@@ -1,0 +1,81 @@
+{
+  "parts": [
+    {
+      "canonical_name": "part_00",
+      "part_name": "D00739 Snack",
+      "source_part_name": "D00739 Snack",
+      "source_object_name": "D00739 Snack",
+      "part_index": 0,
+      "part_id": "part_00",
+      "material_name": "chocolate_confection_with_waxed_paper_liner",
+      "material": "chocolate_confection_with_waxed_paper_liner",
+      "non_visual_material": null,
+      "mass": 0.021,
+      "density": 900.0,
+      "inertia": [
+        2.4935840810731874e-06,
+        2.5192520730694104e-06,
+        4.220093365499596e-06
+      ],
+      "inertia_axes": [
+        0.9734388403530445,
+        0.0006222606909974308,
+        -0.0002250349566699228,
+        -0.22894625186497528
+      ],
+      "center_of_mass": [
+        -0.0001278204304615689,
+        2.8994945358414987e-05,
+        0.009313602459113899
+      ],
+      "part_origin_world": [
+        -0.0001278204304615689,
+        2.8994945358414987e-05,
+        0.009313602459113899
+      ],
+      "volume": 1.966780424183634e-05,
+      "bounds": {
+        "min": [
+          -0.023515721783041954,
+          0.0,
+          -0.023591483011841774
+        ],
+        "max": [
+          0.023346349596977234,
+          0.01712222583591938,
+          0.02354821003973484
+        ],
+        "center": [
+          -9.181732830573406e-05,
+          0.00823823058973507,
+          -5.945432527568511e-06
+        ]
+      },
+      "description": "A small round chocolate peanut-butter cup with a ridged chocolate shell and smooth top surface, seated in a crinkled brown paper liner.",
+      "semantic": {
+        "qid": null
+      },
+      "reasoning": "The object appears to be a single standard peanut-butter cup in a paper liner. A typical cup is about 45-50 mm in top diameter, 35-40 mm in bottom diameter, and 15-18 mm tall, with a mass near 20-22 g; the estimate uses 0.021 kg including the thin paper wrapper. Treating the candy as a shallow truncated cylinder gives an occupied volume on the order of 2.2e-5 to 2.4e-5 m^3, so an effective bulk density of about 900 kg/m^3 is appropriate; this is lower than solid chocolate because the wrapper flutes, peanut-butter filling, and shape voids reduce the convex-collider bulk density. The dominant structural mass is chocolate/peanut filling, while the paper liner affects many side and bottom contacts. Friction is estimated slightly above waxed paper but below rubber: static friction about 0.46 and dynamic friction about 0.36 for chocolate/paper against common table, plastic, or metal surfaces. Restitution is very low, about 0.05, because the candy and paper liner are damped and should not bounce appreciably. For Isaac Sim/PhysX, a convex decomposition is recommended instead of a raw triangle mesh for a dynamic rigid body: use a small number of hulls to approximate the tapered circular body and fluted wrapper, and reserve SDF mesh collision only if the corrugated rim must be contacted accurately. A single convex hull is faster but will smooth over the flutes and outer paper folds. Because this is a small, light object, contact_offset should be much smaller than Isaac defaults: about 1.5 mm with rest_offset near 0 keeps contacts stable without visible hovering. CCD is enabled because a 15-18 mm tall object can tunnel at normal drop or manipulation speeds at 60 Hz; recommended linear velocity limit is roughly 5 m/s and angular velocity limit 50-75 rad/s if many such objects are simulated. For hibernation/sleep, a low sleep threshold around 5e-4 to 2e-3 mass-normalized kinetic energy is appropriate so the candy settles quickly but does not sleep during light contacts. The compliant contact settings approximate the slight give of chocolate and paper while keeping the body rigid; stiffness around 5000 N/m and damping around 25 N*s/m are stable at 120 Hz for this mass and reduce jitter during grasping or stacking.",
+      "static_friction": 0.46,
+      "dynamic_friction": 0.36,
+      "restitution": 0.05,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "physics_type": "rigid",
+      "is_structural_root": true,
+      "color_name": ""
+    }
+  ],
+  "joint_relations": [],
+  "base_link": "D00739 Snack",
+  "object_description": "A small round chocolate peanut-butter cup with a ridged chocolate shell and smooth top surface, seated in a crinkled brown paper liner.",
+  "object_semantic": {
+    "qid": null
+  },
+  "total_mass": 0.021,
+  "center_of_mass": null,
+  "inertia": null,
+  "overall_assessment": "",
+  "num_parts": 1,
+  "object_type": "rigid_bodies"
+}
