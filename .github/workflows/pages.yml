@@ -21,23 +21,32 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout gallery only
+      - name: Checkout gallery and validation videos only
         uses: actions/checkout@v5
         with:
-          sparse-checkout: gallery
-          sparse-checkout-cone-mode: true
+          sparse-checkout: |
+            gallery
+            batch*/**/sim-video
+          sparse-checkout-cone-mode: false
           filter: blob:none
           lfs: false
       - name: Configure Pages
         uses: actions/configure-pages@v5
-      - name: Prepare gallery
+      - name: Assemble site
         run: |
           test -f gallery/index.html
-          touch gallery/.nojekyll
+          mkdir -p _site
+          cp -a gallery/. _site/
+          for batch in batch*/; do
+            if find "$batch" -type d -name sim-video -print -quit | grep -q .; then
+              cp -a "$batch" _site/
+            fi
+          done
+          touch _site/.nojekyll
       - name: Upload gallery artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: gallery
+          path: _site
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
