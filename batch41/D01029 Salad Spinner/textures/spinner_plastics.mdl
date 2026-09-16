@@ -1,0 +1,21 @@
+mdl 1.7;
+import ::df::*;
+import ::math::*;
+
+export material ClearSAN() = material(
+    thin_walled: false, ior: color(1.565),
+    surface: material_surface(scattering: df::simple_glossy_bsdf(tint: color(1.0), roughness_u: 0.055, roughness_v: 0.055, mode: df::scatter_reflect_transmit)),
+    volume: material_volume(absorption_coefficient: color(0.12, 0.055, 0.03)));
+
+export material FrostedPP() = material(ior: color(1.49), surface: material_surface(scattering: df::fresnel_layer(ior: 1.49, layer: df::simple_glossy_bsdf(tint: color(1.0), roughness_u: 0.29, roughness_v: 0.29), base: df::normalized_mix(df::bsdf_component[] (df::bsdf_component(0.84, df::diffuse_reflection_bsdf(tint: color(0.89, 0.92, 0.93))), df::bsdf_component(0.16, df::diffuse_transmission_bsdf(tint: color(0.95))))))));
+
+export material DriveAcetal() = material(ior: color(1.47), surface: material_surface(scattering: df::fresnel_layer(ior: 1.47, layer: df::simple_glossy_bsdf(tint: color(1.0), roughness_u: 0.255, roughness_v: 0.255), base: df::diffuse_reflection_bsdf(tint: color(0.83, 0.855, 0.85)))));
+
+export material MatteGrip() = material(ior: color(1.48), surface: material_surface(scattering: df::fresnel_layer(ior: 1.48, layer: df::simple_glossy_bsdf(tint: color(1.0), roughness_u: 0.43, roughness_v: 0.43), base: df::diffuse_reflection_bsdf(tint: color(0.012, 0.014, 0.016)))));
+
+export material MoldedMark() = material(ior: color(1.48), surface: material_surface(scattering: df::fresnel_layer(ior: 1.48, layer: df::simple_glossy_bsdf(tint: color(1.0), roughness_u: 0.48, roughness_v: 0.48), base: df::diffuse_reflection_bsdf(tint: color(0.012, 0.014, 0.016)))));
+
+export material NonSlipTPE() = material(ior: color(1.46), surface: material_surface(scattering: df::fresnel_layer(ior: 1.46, layer: df::simple_glossy_bsdf(tint: color(1.0), roughness_u: 0.57, roughness_v: 0.57), base: df::diffuse_reflection_bsdf(tint: color(0.014, 0.017, 0.019)))));
+
+export material SpringSteel() = material(surface: material_surface(scattering: df::simple_glossy_bsdf(tint: color(0.47, 0.5, 0.54), roughness_u: 0.23, roughness_v: 0.23)));
+
