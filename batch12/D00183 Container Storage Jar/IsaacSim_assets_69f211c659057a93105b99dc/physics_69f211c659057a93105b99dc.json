@@ -1,119 +1,83 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.05603672,
+        0.14869708,
+        0.05670137
+      ],
+      "min": [
+        -0.05504987,
+        0.0,
+        -0.05615492
+      ],
+      "size": [
+        0.11108659,
+        0.14869708,
+        0.11285629
+      ]
+    },
+    "description": "A white cylindrical ceramic storage jar filled with rice. It features a circular wooden lid resting slightly open on top.",
+    "name": "D00183 Container Storage Jar",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.8
+  },
+  "asset_id": "D00183",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00183 Container Storage Jar",
-      "source_part_name": "D00183 Container Storage Jar",
-      "source_object_name": "D00183 Container Storage Jar",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "ceramic",
-      "material": "ceramic",
-      "mass": 0.8,
-      "density": 2400.0,
-      "inertia": [
-        0.0015183782629999583,
-        0.0021000802425908656,
-        0.002125678926790889
-      ],
-      "inertia_axes": [
-        0.0010689061468408504,
-        -0.706740908312441,
-        -0.00024415467905924976,
-        -0.7074716152227225
-      ],
-      "center_of_mass": [
-        0.0006078754285258726,
-        -0.0002863543432801132,
-        0.07202338183858703
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.0016917267747998937,
       "bounds": {
-        "min": [
-          -0.05504987,
-          0.0,
-          -0.05615492
+        "center": [
+          0.0005407365127445498,
+          0.07228664989734257,
+          0.0002803440535434795
         ],
         "max": [
           0.05603672,
           0.14869708,
           0.05670137
         ],
-        "center": [
-          0.0005407365127445498,
-          0.07228664989734257,
-          0.0002803440535434795
+        "min": [
+          -0.05504987,
+          0.0,
+          -0.05615492
         ]
       },
-      "description": "A white cylindrical ceramic storage jar filled with rice. It features a circular wooden lid resting slightly open on top.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "Based on the provided metrics (extents: 0.11m x 0.15m x 0.11m), the object is approximately the size of a standard kitchen canister. The dominant contact material is ceramic, which constitutes the main body of the jar. Given its volume and the visual presence of rice, a total mass of 0.8 kg is estimated for a reasonably thick-walled ceramic container filled with contents. Density is set to 2400 kg/m^3, typical for ceramic materials, though the explicit mass will dictate simulation behavior. Friction coefficients (0.5 static, 0.4 dynamic) simulate a slightly matte or unglazed ceramic base sliding on typical tabletop surfaces. Restitution is kept low (0.2) to reflect the rigid, inelastic nature of ceramic. Continuous Collision Detection (CCD) is enabled to prevent tunneling during manipulation. Convex decomposition is chosen for the collider type to accurately preserve the cylindrical shape and potentially the lip/opening of the jar if the mesh is hollow.",
-      "static_friction": 0.5,
-      "dynamic_friction": 0.4,
-      "restitution": 0.2,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        0.0006078754285258726,
+        -0.0002863543432801132,
+        0.07202338183858703
+      ],
+      "collision": {},
+      "density": 2400.0,
+      "id": "part_00",
+      "inertia": [
+        0.0015183782629999583,
+        0.0021000802425908656,
+        0.002125678926790889
+      ],
+      "mass": 0.8,
+      "material": "ceramic",
+      "name": "D00183 Container Storage Jar",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": "",
-      "appearance_properties": {},
-      "newton": {
-        "collisions": {
-          "collider_type": "convex_decomposition",
-          "rest_offset": 0,
-          "contact_offset": 0.001,
-          "explosion_view_distance": 0,
-          "collision_mesh_debug_visualization": false
-        },
-        "simulation_scene": {
-          "simulation_steps_per_second": 60,
-          "enable_ccd": true,
-          "gravitational_acceleration": [
-            0,
-            0,
-            -9.81
-          ],
-          "gpu_buffer_parameters": {},
-          "residuals": {}
-        }
-      }
+      "source": {
+        "object_name": "D00183 Container Storage Jar",
+        "part_name": "D00183 Container Storage Jar"
+      },
+      "volume": 0.0016917267747998937
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00183 Container Storage Jar",
-  "fix_base": false,
-  "object_description": "A white cylindrical ceramic storage jar filled with rice. It features a circular wooden lid resting slightly open on top.",
-  "object_semantic": {
-    "qid": null
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {
+    "fix_base": false
   },
-  "total_mass": 0.8,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies",
-  "total_object_mass_kg": 0.8,
-  "_authoritative_context_applied": {
-    "object": {},
-    "parts": [
-      {
-        "part_index": 0,
-        "part_id": "part_00",
-        "fields": [
-          "bounds",
-          "canonical_name",
-          "material",
-          "part_id",
-          "part_index",
-          "source_object_name",
-          "source_part_name"
-        ]
-      }
-    ]
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
   }
 }

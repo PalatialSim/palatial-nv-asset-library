@@ -1,119 +1,83 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.04961444,
+        0.01532295,
+        0.04973287
+      ],
+      "min": [
+        -0.04964836,
+        0.0,
+        -0.04944831
+      ],
+      "size": [
+        0.09926280000000001,
+        0.01532295,
+        0.09918118000000001
+      ]
+    },
+    "description": "A circular wooden lid with a natural wood grain finish and a thin translucent seal ring around its lower edge.",
+    "name": "specialist-current",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.08
+  },
+  "asset_id": "D00962",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "specialist-current",
-      "source_part_name": "specialist-current",
-      "source_object_name": "specialist-current",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "wood",
-      "material": "wood",
-      "mass": 0.08,
-      "density": 700.0,
-      "inertia": [
-        4.774544494080476e-05,
-        4.7869561949580366e-05,
-        9.259706394085303e-05
-      ],
-      "inertia_axes": [
-        0.9999553172482412,
-        8.253171079297901e-06,
-        -3.143478033085234e-05,
-        0.00945317146302609
-      ],
-      "center_of_mass": [
-        -1.9349203153515265e-05,
-        -0.0001426642650838835,
-        0.007943246959178224
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.00011080335687162867,
       "bounds": {
-        "min": [
-          -0.04964836,
-          0.0,
-          -0.04944831
+        "center": [
+          -2.1741166064355424e-05,
+          0.008126875884623214,
+          0.0001455818061608232
         ],
         "max": [
           0.04961444,
           0.01532295,
           0.04973287
         ],
-        "center": [
-          -2.1741166064355424e-05,
-          0.008126875884623214,
-          0.0001455818061608232
+        "min": [
+          -0.04964836,
+          0.0,
+          -0.04944831
         ]
       },
-      "description": "A circular wooden lid with a natural wood grain finish and a thin translucent seal ring around its lower edge.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The primary material is identified as wood, which dominates the external and structural surface of the object. Based on the provided scaled bounding extents (approximately 10.0cm x 1.5cm x 10.0cm) and assuming it is a relatively solid piece of hardwood with a density of 700 kg/m^3, the mass is estimated at 0.08 kg to ensure realistic weight and stable simulation, overriding the raw voxel volume which suggests a much lighter or hollow structure. Friction (static 0.5, dynamic 0.4) and restitution (0.3) values are selected based on standard properties for finished wood interacting with typical surfaces. As requested in the user prompt to update build settings for 'high' collision quality, the collider_type is set to 'convex_decomposition' to accurately capture the subtle geometric details like the bottom lip and seal ring. A small contact offset of 0.001m is applied to prevent visual clipping while maintaining stable resting contacts.",
-      "static_friction": 0.5,
-      "dynamic_friction": 0.4,
-      "restitution": 0.3,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        -1.9349203153515265e-05,
+        -0.0001426642650838835,
+        0.007943246959178224
+      ],
+      "collision": {},
+      "density": 700.0,
+      "id": "part_00",
+      "inertia": [
+        4.774544494080476e-05,
+        4.7869561949580366e-05,
+        9.259706394085303e-05
+      ],
+      "mass": 0.08,
+      "material": "wood",
+      "name": "specialist-current",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": "",
-      "appearance_properties": {},
-      "newton": {
-        "collisions": {
-          "collider_type": "convex_decomposition",
-          "rest_offset": 0,
-          "contact_offset": 0.001,
-          "explosion_view_distance": 0,
-          "collision_mesh_debug_visualization": false
-        },
-        "simulation_scene": {
-          "simulation_steps_per_second": 60,
-          "enable_ccd": false,
-          "gravitational_acceleration": [
-            0,
-            -9.81,
-            0
-          ],
-          "gpu_buffer_parameters": {},
-          "residuals": {}
-        }
-      }
+      "source": {
+        "object_name": "specialist-current",
+        "part_name": "specialist-current"
+      },
+      "volume": 0.00011080335687162867
     }
   ],
-  "joint_relations": [],
-  "base_link": "specialist-current",
-  "fix_base": false,
-  "object_description": "A circular wooden lid with a natural wood grain finish and a thin translucent seal ring around its lower edge.",
-  "object_semantic": {
-    "qid": null
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {
+    "fix_base": false
   },
-  "total_mass": 0.08,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies",
-  "total_object_mass_kg": 0.08,
-  "_authoritative_context_applied": {
-    "object": {},
-    "parts": [
-      {
-        "part_index": 0,
-        "part_id": "part_00",
-        "fields": [
-          "bounds",
-          "canonical_name",
-          "material",
-          "part_id",
-          "part_index",
-          "source_object_name",
-          "source_part_name"
-        ]
-      }
-    ]
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
   }
 }

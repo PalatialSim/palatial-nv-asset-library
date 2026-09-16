@@ -1,81 +1,81 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.10720500349998474,
+        0.10678999871015549,
+        0.0945729985833168
+      ],
+      "min": [
+        -0.10619000345468521,
+        -0.10651999711990356,
+        -9.200000204145908e-05
+      ],
+      "size": [
+        0.21339500695466995,
+        0.21330999583005905,
+        0.09466499858535826
+      ]
+    },
+    "description": "A rounded glazed ceramic bowl with a thick rim, smooth concave interior, and small circular foot ring. The surface appears glossy stoneware or porcelain in several color and finish variants, with occasional chips, speckling, or clay texture.",
+    "name": "D00904 Vegetable Bowl",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.45
+  },
+  "asset_id": "D00904",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00904 Vegetable Bowl",
-      "source_part_name": "D00904 Vegetable Bowl",
-      "source_object_name": "D00904 Vegetable Bowl",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "glazed_ceramic_stoneware",
-      "material": "glazed_ceramic_stoneware",
-      "non_visual_material": null,
-      "mass": 0.45,
-      "density": 2300.0,
-      "inertia": [
-        0.0022532184270805064,
-        0.0022544022873965236,
-        0.003731982412191883
-      ],
-      "inertia_axes": [
-        3.6857524451560565e-05,
-        -0.8911458158778052,
-        -0.4537169868868552,
-        0.00017115874898770072
-      ],
-      "center_of_mass": [
-        -0.00015214876145074998,
-        2.745903376020133e-05,
-        0.04728720946326407
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.0008470924099490052,
       "bounds": {
-        "min": [
-          -0.10619000345468521,
-          -0.10651999711990356,
-          -9.200000204145908e-05
+        "center": [
+          0.00044279118491706527,
+          0.00023346274783332094,
+          0.04626391961430327
         ],
         "max": [
           0.10720500349998474,
           0.10678999871015549,
           0.0945729985833168
         ],
-        "center": [
-          0.00044279118491706527,
-          0.00023346274783332094,
-          0.04626391961430327
+        "min": [
+          -0.10619000345468521,
+          -0.10651999711990356,
+          -9.200000204145908e-05
         ]
       },
-      "description": "A rounded glazed ceramic bowl with a thick rim, smooth concave interior, and small circular foot ring. The surface appears glossy stoneware or porcelain in several color and finish variants, with occasional chips, speckling, or clay texture.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The estimates assume one medium ceramic bowl rather than the entire image collage. A typical bowl of this shape is approximately 0.13\u20130.16 m in outside diameter, 0.06\u20130.08 m tall, with a 4\u20136 mm wall and a thicker rolled rim/foot ring. Dense fired ceramic/stoneware is usually 2200\u20132500 kg/m^3; using 2300 kg/m^3 and an estimated solid shell volume of roughly 1.7e-4 to 2.2e-4 m^3 gives a mass around 0.39\u20130.51 kg, so 0.45 kg is a practical representative value. The center of mass should lie on the vertical symmetry axis, slightly below the geometric mid-height because of the thicker base/foot ring. The dominant material is glazed ceramic; the external glaze is relatively smooth, but the actual table contact is often an unglazed or rough ceramic foot ring, so static friction is estimated at 0.55 and dynamic friction at 0.45. Restitution is set low-to-moderate at 0.28: ceramic is hard but dissipates energy through micro-impact losses and would chip or fracture in reality, so a low value avoids unrealistic bouncing in a non-fracturing rigid body. For collision, the bowl is strongly concave; a single convex hull would incorrectly seal the open top and prevent objects from contacting the interior. An SDF mesh collider is therefore the most accurate Isaac Sim/PhysX choice for a dynamic hollow bowl. If performance is more important than interior accuracy, use convex decomposition with many radial hulls for the wall plus a base hull. Contact offset is kept small at 0.003 m to suit the thin rim/walls while still producing stable contact constraints; rest offset is 0.0005 m to avoid visible interpenetration without noticeably inflating the shape. CCD is recommended because the bowl has thin walls/rim and may be dropped or moved quickly; for slow tabletop-only scenes it can be disabled for performance. Recommended non-schema settings are sleep threshold around 0.005\u20130.02, stabilization enabled, max linear velocity about 5\u201310 m/s, max angular velocity about 50 rad/s, low linear damping around 0.01, and angular damping around 0.03\u20130.08. Compliant contacts are disabled because this is modeled as a hard non-deformable ceramic body; if solver chatter occurs, prefer increasing solver iterations/substeps before adding compliance.",
-      "static_friction": 0.55,
-      "dynamic_friction": 0.45,
-      "restitution": 0.28,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        -0.00015214876145074998,
+        2.745903376020133e-05,
+        0.04728720946326407
+      ],
+      "collision": {},
+      "density": 2300.0,
+      "id": "part_00",
+      "inertia": [
+        0.0022532184270805064,
+        0.0022544022873965236,
+        0.003731982412191883
+      ],
+      "mass": 0.45,
+      "material": "glazed_ceramic_stoneware",
+      "name": "D00904 Vegetable Bowl",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": ""
+      "source": {
+        "object_name": "D00904 Vegetable Bowl",
+        "part_name": "D00904 Vegetable Bowl"
+      },
+      "volume": 0.0008470924099490052
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00904 Vegetable Bowl",
-  "object_description": "A rounded glazed ceramic bowl with a thick rim, smooth concave interior, and small circular foot ring. The surface appears glossy stoneware or porcelain in several color and finish variants, with occasional chips, speckling, or clay texture.",
-  "object_semantic": {
-    "qid": null
-  },
-  "total_mass": 0.45,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies"
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  }
 }

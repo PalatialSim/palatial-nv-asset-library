@@ -1,92 +1,82 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.10990721732378006,
+        0.059218019247055054,
+        0.11018839478492737
+      ],
+      "min": [
+        -0.11001340299844742,
+        0.0,
+        -0.10959362983703613
+      ],
+      "size": [
+        0.21992062032222748,
+        0.059218019247055054,
+        0.2197820246219635
+      ]
+    },
+    "description": "An off-white glazed ceramic bowl with a rounded thick-walled body, shallow foot ring, and smooth rolled rim.",
+    "name": "D00882 Tray Bowl",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.52
+  },
+  "asset_id": "D00882",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00882 Tray Bowl",
-      "source_part_name": "D00882 Tray Bowl",
-      "source_object_name": "D00882 Tray Bowl",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "baked_bread",
-      "material": "baked_bread",
-      "non_visual_material": null,
-      "mass": 0.52,
-      "density": 2400.0,
-      "inertia": [
-        0.002047055357382653,
-        0.0020598829278271834,
-        0.003848855142435233
-      ],
-      "inertia_axes": [
-        0.6996632286762108,
-        -0.6996888891088561,
-        -0.10215947548308546,
-        -0.1023243200075936
-      ],
-      "center_of_mass": [
-        0.0002121719634634847,
-        -0.021082113676455714,
-        -4.242216636107389e-05
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.0005121787883011379,
       "bounds": {
-        "min": [
-          -0.11001340299844742,
-          0.0,
-          -0.10959362983703613
+        "center": [
+          0.00010987769895281473,
+          0.023483341466069778,
+          0.00020778050916091126
         ],
         "max": [
           0.10990721732378006,
           0.059218019247055054,
           0.11018839478492737
         ],
-        "center": [
-          0.00010987769895281473,
-          0.023483341466069778,
-          0.00020778050916091126
+        "min": [
+          -0.11001340299844742,
+          0.0,
+          -0.10959362983703613
         ]
       },
-      "description": "An off-white glazed ceramic bowl with a rounded thick-walled body, shallow foot ring, and smooth rolled rim.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "No product data was provided, so the estimates assume a typical medium ceramic serving/cereal bowl approximately 0.16-0.18 m in outside diameter, 0.055-0.065 m tall, with 3-5 mm wall thickness and a slightly heavier foot ring. Fired stoneware/porcelain density is typically about 2300-2500 kg/m^3; using an explicit mass of 0.52 kg avoids PhysX mass overestimation if a convex or SDF collider encloses some air volume. The center of mass should be slightly below the geometric mid-height because of the thicker base/foot. Glazed ceramic is hard and smooth, so friction is moderate: static friction around 0.40-0.45 and dynamic friction around 0.28-0.35 against common plastic/wood/metal tabletops. Restitution is set to 0.28: ceramic is stiff, but real bowl impacts dissipate energy through micro-slip, sound, and possible chipping/fracture that is not modeled, so high bounciness would look unrealistic. The shape is concave and hollow; a single convex hull would fill the bowl cavity and is not appropriate if the interior must collide. An SDF mesh collider is the best single-collider choice for the rounded concavity and rim. For higher performance, use convex decomposition with separate hulls around the outer wall, inner wall, rim, and foot ring, but expect less accurate interior contacts. Contact offset is kept small at 0.003 m to prevent visible hovering while still giving PhysX enough distance to generate stable constraints; rest offset is 0.0 m for close visual alignment. CCD is recommended because the rim and wall are thin features that can tunnel during drops or fast contact with tools. For stable rigid-body behavior in Isaac Sim v4.5, use explicit mass, enable sleeping/hibernation, cap expected linear velocity near 5 m/s and angular velocity near 40-50 rad/s for normal handling, and use 120 Hz scene stepping if the bowl is dropped, stacked, or contacted by fast-moving objects. Compliant contacts should normally remain disabled for hard ceramic; if solver chatter occurs, use a very stiff contact model rather than a soft one.",
-      "static_friction": 0.42,
-      "dynamic_friction": 0.3,
-      "restitution": 0.28,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        0.0002121719634634847,
+        -0.021082113676455714,
+        -4.242216636107389e-05
+      ],
+      "collision": {},
+      "density": 2400.0,
+      "id": "part_00",
+      "inertia": [
+        0.002047055357382653,
+        0.0020598829278271834,
+        0.003848855142435233
+      ],
+      "mass": 0.52,
+      "material": "baked_bread",
+      "name": "D00882 Tray Bowl",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "enable_ccd": null,
-      "solver_position_iterations": null,
-      "solver_velocity_iterations": null,
-      "color_name": ""
+      "source": {
+        "object_name": "D00882 Tray Bowl",
+        "part_name": "D00882 Tray Bowl"
+      },
+      "volume": 0.0005121787883011379
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00882 Tray Bowl",
-  "base_link_recommendation": null,
-  "fix_base": false,
-  "source": null,
-  "authored_by": null,
-  "up_axis": null,
-  "coordinate_frames": null,
-  "solver_position_iterations": null,
-  "solver_velocity_iterations": null,
-  "object_description": "An off-white glazed ceramic bowl with a rounded thick-walled body, shallow foot ring, and smooth rolled rim.",
-  "object_semantic": {
-    "qid": null
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {
+    "fix_base": false
   },
-  "total_mass": 0.52,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies"
+  "units": {
+    "length": "m",
+    "mass": "kg"
+  }
 }

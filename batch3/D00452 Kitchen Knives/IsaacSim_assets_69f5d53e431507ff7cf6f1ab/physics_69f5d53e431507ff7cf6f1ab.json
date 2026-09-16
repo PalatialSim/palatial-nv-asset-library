@@ -1,81 +1,81 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.0904180034995079,
+        0.11644899845123291,
+        0.015762999653816223
+      ],
+      "min": [
+        -0.14895200729370117,
+        -0.12308599799871445,
+        -0.0001500000071246177
+      ],
+      "size": [
+        0.23937001079320908,
+        0.23953499644994736,
+        0.01591299966094084
+      ]
+    },
+    "description": "A chef's knife with a brushed stainless steel blade, full tang, and dark wooden handle scales secured by metal rivets.",
+    "name": "D00452 Kitchen Knives",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.24
+  },
+  "asset_id": "D00452",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00452 Kitchen Knives",
-      "source_part_name": "D00452 Kitchen Knives",
-      "source_object_name": "D00452 Kitchen Knives",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "stainless_steel",
-      "material": "stainless_steel",
-      "non_visual_material": null,
-      "mass": 0.24,
-      "density": 3200.0,
-      "inertia": [
-        2.9049050310955284e-05,
-        0.00126027080048498,
-        0.0012825551819063167
-      ],
-      "inertia_axes": [
-        0.00012507249779716875,
-        -0.7111749054810614,
-        -0.7030151050170621,
-        1.6991846374831254e-05
-      ],
-      "center_of_mass": [
-        0.00115021878325123,
-        0.01779613668125153,
-        0.007903820894215745
-      ],
-      "part_origin_world": [
-        0.00115021878325123,
-        0.01779613668125153,
-        0.007903820894215745
-      ],
-      "volume": 0.00011688013469181531,
       "bounds": {
-        "min": [
-          -0.14895200729370117,
-          -0.12308599799871445,
-          -0.0001500000071246177
+        "center": [
+          -0.016070842819741367,
+          0.00689406127926323,
+          0.00810030591660289
         ],
         "max": [
           0.0904180034995079,
           0.11644899845123291,
           0.015762999653816223
         ],
-        "center": [
-          -0.016070842819741367,
-          0.00689406127926323,
-          0.00810030591660289
+        "min": [
+          -0.14895200729370117,
+          -0.12308599799871445,
+          -0.0001500000071246177
         ]
       },
-      "description": "A chef's knife with a brushed stainless steel blade, full tang, and dark wooden handle scales secured by metal rivets.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The object appears to be a medium-to-large chef's knife, approximately 0.32\u20130.34 m long overall, with a roughly 0.20\u20130.22 m blade, a 0.11\u20130.13 m handle, a blade width near 0.04\u20130.05 m, and a thin tapered blade thickness of about 1\u20133 mm. A realistic total mass for this construction is about 0.24 kg: roughly 0.16\u20130.19 kg from the stainless steel blade/full tang/bolster and 0.03\u20130.05 kg from the hardwood handle scales plus rivets. The listed density is an effective composite density for the complete visual object rather than pure stainless steel density; pure steel would be about 7800 kg/m^3, while the handle wood is closer to 600\u2013800 kg/m^3. Stainless steel is the dominant structural and contact material because the blade and tang form most of the rigid structure and exposed surface. Friction is estimated for smooth stainless steel and polished wood contact against common lab/industrial surfaces: static friction around 0.45 and dynamic friction around 0.35. Restitution is kept moderate-low at 0.35 because, although steel is hard, the thin edge, wooden handle, and composite construction dissipate impact energy and should not behave like a highly elastic ball. For Isaac Sim/PhysX, the knife is a thin, elongated object with a sharp tip, so convex decomposition is preferred over a single convex hull; one hull for the blade, one for the bolster/tang, and two or more hulls for the handle scales will avoid excessive invisible collision volume. A single convex hull would overfill the concave handle/bolster transition and blunt the profile, while an SDF mesh could be used only if very accurate edge contact is required at higher cost. Contact offset is set small at 0.002 m to preserve the thin blade geometry without excessive hovering, and rest offset is 0.0 m for visual/contact alignment. Continuous collision detection should be enabled because the tip and blade edge are thin and can tunnel during drops or fast manipulator motion. Initial velocity is zero, gravity is standard Earth gravity, and compliant contacts are disabled because this is a rigid steel/wood object; if impact chatter occurs, solver substeps or material damping should be tuned before adding artificial compliance.",
-      "static_friction": 0.45,
-      "dynamic_friction": 0.35,
-      "restitution": 0.35,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        0.00115021878325123,
+        0.01779613668125153,
+        0.007903820894215745
+      ],
+      "collision": {},
+      "density": 3200.0,
+      "id": "part_00",
+      "inertia": [
+        2.9049050310955284e-05,
+        0.00126027080048498,
+        0.0012825551819063167
+      ],
+      "mass": 0.24,
+      "material": "stainless_steel",
+      "name": "D00452 Kitchen Knives",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": ""
+      "source": {
+        "object_name": "D00452 Kitchen Knives",
+        "part_name": "D00452 Kitchen Knives"
+      },
+      "volume": 0.00011688013469181531
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00452 Kitchen Knives",
-  "object_description": "A chef's knife with a brushed stainless steel blade, full tang, and dark wooden handle scales secured by metal rivets.",
-  "object_semantic": {
-    "qid": null
-  },
-  "total_mass": 0.24,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies"
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  }
 }

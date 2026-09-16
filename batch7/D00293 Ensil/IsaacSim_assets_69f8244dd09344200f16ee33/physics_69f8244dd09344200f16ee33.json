@@ -1,81 +1,81 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.03271599858999252,
+        0.16796299815177917,
+        0.048847001045942307
+      ],
+      "min": [
+        -0.03415299952030182,
+        -0.2061930000782013,
+        -3.300000025774352e-05
+      ],
+      "size": [
+        0.06686899811029434,
+        0.37415599822998047,
+        0.04888000104620005
+      ]
+    },
+    "description": "A stainless-steel fork with four narrow tines, a rounded head, and a tapered metal neck. The handle is a smooth black cylindrical grip with rounded ends, likely rubberized plastic.",
+    "name": "D00293 Ensil",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.075
+  },
+  "asset_id": "D00293",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00293 Ensil",
-      "source_part_name": "D00293 Ensil",
-      "source_object_name": "D00293 Ensil",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "stainless_steel",
-      "material": "stainless_steel",
-      "non_visual_material": null,
-      "mass": 0.075,
-      "density": 2300.0,
-      "inertia": [
-        4.648944263749074e-06,
-        0.00018350026205829674,
-        0.00018529027035797186
-      ],
-      "inertia_axes": [
-        0.006023270789826916,
-        -0.706993320300658,
-        -0.7071627238549998,
-        -0.006711724757554023
-      ],
-      "center_of_mass": [
-        -3.639489477245592e-05,
-        -0.012967995696914763,
-        0.008316020656745438
-      ],
-      "part_origin_world": [
-        -3.639489477245592e-05,
-        -0.012967995696914763,
-        0.008316020656745438
-      ],
-      "volume": 6.0112942470797155e-05,
       "bounds": {
-        "min": [
-          -0.03415299952030182,
-          -0.2061930000782013,
-          -3.300000025774352e-05
+        "center": [
+          -0.0005516471709155922,
+          -0.02181831474379319,
+          0.01507731215032404
         ],
         "max": [
           0.03271599858999252,
           0.16796299815177917,
           0.048847001045942307
         ],
-        "center": [
-          -0.0005516471709155922,
-          -0.02181831474379319,
-          0.01507731215032404
+        "min": [
+          -0.03415299952030182,
+          -0.2061930000782013,
+          -3.300000025774352e-05
         ]
       },
-      "description": "A stainless-steel fork with four narrow tines, a rounded head, and a tapered metal neck. The handle is a smooth black cylindrical grip with rounded ends, likely rubberized plastic.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The object appears to be a household fork with a stainless-steel working end and a black polymer or rubberized handle. With an estimated overall length of about 0.19-0.21 m, a fork-head width of about 0.025-0.035 m, and a thick handle diameter around 0.018-0.024 m, a realistic total mass is about 0.07-0.09 kg; 0.075 kg is used. The metal head and tang likely contribute roughly 0.04-0.05 kg assuming stainless steel density near 7800-8000 kg/m^3, while the handle likely contributes 0.02-0.03 kg assuming ABS/TPE/rubberized plastic density near 1050-1250 kg/m^3. The reported bulk density is an effective rigid-body density rather than a true homogeneous material density, because the asset combines dense steel with lower-density polymer and contains thin open spaces between the tines. Friction is estimated as a composite value: stainless steel on common surfaces is moderate, about 0.4-0.6 static, while rubberized plastic can be much higher, about 0.7-1.0. Since the handle is large and likely to dominate stable resting contact, a static friction coefficient of 0.65 and dynamic friction of 0.50 are appropriate. Restitution is kept low at 0.25 because the rubberized handle and light, thin metal geometry will dissipate impact energy; pure steel could be higher, but the composite utensil should not bounce strongly. For Isaac Sim / PhysX, convex decomposition is recommended instead of a single convex hull because a single hull would fill the gaps between the four tines and overestimate the fork head contact envelope. A practical collision setup is several convex parts: one capsule-like hull for the handle, one tapered hull for the neck, one shallow hull for the fork bowl/head, and one narrow convex hull per tine. Rest offset should remain near 0.0 m for visual alignment, while a contact offset around 0.0015-0.002 m is suitable for this small object and helps stabilize contacts around the thin tines. Continuous collision detection should be enabled if the fork can be dropped, tossed, or contacted by fast grippers, because the tines are thin and can otherwise tunnel through surfaces at high velocity. Recommended practical velocity limits are on the order of 10-15 m/s linear and 100-150 rad/s angular for robust tabletop simulation. A small sleep threshold, around 0.0005-0.001 m^2/s^2, is appropriate so the utensil can settle without excessive jitter. Compliant contacts are not required for the metal body; if approximating a soft rubberized handle contact, use only mild damping and avoid large compliance that would make the rigid body appear deformable.",
-      "static_friction": 0.65,
-      "dynamic_friction": 0.5,
-      "restitution": 0.25,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        -3.639489477245592e-05,
+        -0.012967995696914763,
+        0.008316020656745438
+      ],
+      "collision": {},
+      "density": 2300.0,
+      "id": "part_00",
+      "inertia": [
+        4.648944263749074e-06,
+        0.00018350026205829674,
+        0.00018529027035797186
+      ],
+      "mass": 0.075,
+      "material": "stainless_steel",
+      "name": "D00293 Ensil",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": ""
+      "source": {
+        "object_name": "D00293 Ensil",
+        "part_name": "D00293 Ensil"
+      },
+      "volume": 6.0112942470797155e-05
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00293 Ensil",
-  "object_description": "A stainless-steel fork with four narrow tines, a rounded head, and a tapered metal neck. The handle is a smooth black cylindrical grip with rounded ends, likely rubberized plastic.",
-  "object_semantic": {
-    "qid": null
-  },
-  "total_mass": 0.075,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies"
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  }
 }

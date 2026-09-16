@@ -1,119 +1,83 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.10079902,
+        0.04564037,
+        0.13155983
+      ],
+      "min": [
+        -0.10061103,
+        0.0,
+        -0.25484545
+      ],
+      "size": [
+        0.20141005,
+        0.04564037,
+        0.38640527999999996
+      ]
+    },
+    "description": "A metallic frying pan with a brushed silver exterior and a dark, non-stick cooking surface. It features a long, wood-grained handle attached to the main body with two visible rivets.",
+    "name": "generated reference 01",
+    "object_type": "rigid_bodies",
+    "total_mass": 1.2
+  },
+  "asset_id": "D00327",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "generated reference 01",
-      "source_part_name": "generated reference 01",
-      "source_object_name": "generated reference 01",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "metal",
-      "material": "metal",
-      "mass": 1.2,
-      "density": 3913.0,
-      "inertia": [
-        0.0024273096506202078,
-        0.008010435046213581,
-        0.010158359227886306
-      ],
-      "inertia_axes": [
-        0.015243563326544658,
-        -0.7069282073137236,
-        -0.7069564640939787,
-        -0.015254552010914368
-      ],
-      "center_of_mass": [
-        0.00010033320784579861,
-        0.012070590778786023,
-        0.023153280092749078
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.0015729144008606417,
       "bounds": {
-        "min": [
-          -0.10061103,
-          0.0,
-          -0.25484545
+        "center": [
+          0.0001019889246386407,
+          0.014715729648026926,
+          0.008404413635839804
         ],
         "max": [
           0.10079902,
           0.04564037,
           0.13155983
         ],
-        "center": [
-          0.0001019889246386407,
-          0.014715729648026926,
-          0.008404413635839804
+        "min": [
+          -0.10061103,
+          0.0,
+          -0.25484545
         ]
       },
-      "description": "A metallic frying pan with a brushed silver exterior and a dark, non-stick cooking surface. It features a long, wood-grained handle attached to the main body with two visible rivets.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "Based on the provided telemetry, the object is a frying pan with dimensions 0.45 x 0.26 x 0.06 m and a voxel volume of approximately 0.000306 m^3. The primary contact and structural material is metal (likely aluminum or stainless steel). A typical 26 cm diameter pan of this type weighs around 1.2 kg. Using the provided volume, this results in an estimated density of ~3913 kg/m^3, which is consistent with a hollow metal object combined with a lighter handle material. For simulation, the dominant material is metal, giving it a moderate static friction of 0.4, dynamic friction of 0.3, and low restitution of 0.2 to prevent unrealistic bouncing. Continuous Collision Detection (CCD) is recommended due to the relatively thin walls of the pan. Convex decomposition is required for the collider to accurately represent the concavity of the pan's cooking surface, allowing other objects to rest inside it.",
-      "static_friction": 0.4,
-      "dynamic_friction": 0.3,
-      "restitution": 0.2,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        0.00010033320784579861,
+        0.012070590778786023,
+        0.023153280092749078
+      ],
+      "collision": {},
+      "density": 3913.0,
+      "id": "part_00",
+      "inertia": [
+        0.0024273096506202078,
+        0.008010435046213581,
+        0.010158359227886306
+      ],
+      "mass": 1.2,
+      "material": "metal",
+      "name": "generated reference 01",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": "",
-      "appearance_properties": {},
-      "newton": {
-        "collisions": {
-          "collider_type": "convex_decomposition",
-          "rest_offset": 0,
-          "contact_offset": 0.002,
-          "explosion_view_distance": 0,
-          "collision_mesh_debug_visualization": false
-        },
-        "simulation_scene": {
-          "simulation_steps_per_second": 60,
-          "enable_ccd": true,
-          "gravitational_acceleration": [
-            0,
-            0,
-            -9.81
-          ],
-          "gpu_buffer_parameters": {},
-          "residuals": {}
-        }
-      }
+      "source": {
+        "object_name": "generated reference 01",
+        "part_name": "generated reference 01"
+      },
+      "volume": 0.0015729144008606417
     }
   ],
-  "joint_relations": [],
-  "base_link": "generated reference 01",
-  "fix_base": false,
-  "object_description": "A metallic frying pan with a brushed silver exterior and a dark, non-stick cooking surface. It features a long, wood-grained handle attached to the main body with two visible rivets.",
-  "object_semantic": {
-    "qid": null
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {
+    "fix_base": false
   },
-  "total_mass": 1.2,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies",
-  "total_object_mass_kg": 1.2,
-  "_authoritative_context_applied": {
-    "object": {},
-    "parts": [
-      {
-        "part_index": 0,
-        "part_id": "part_00",
-        "fields": [
-          "bounds",
-          "canonical_name",
-          "material",
-          "part_id",
-          "part_index",
-          "source_object_name",
-          "source_part_name"
-        ]
-      }
-    ]
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
   }
 }

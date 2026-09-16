@@ -1,81 +1,81 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.0818680003285408,
+        0.05729300156235695,
+        0.07158499956130981
+      ],
+      "min": [
+        -0.06360699981451035,
+        -0.05721199885010719,
+        -2.4000000848900527e-05
+      ],
+      "size": [
+        0.14547500014305115,
+        0.11450500041246414,
+        0.07160899956215871
+      ]
+    },
+    "description": "A white glazed ceramic cup with a rounded bowl-shaped body, thin rim, small foot ring, and curved handle.",
+    "name": "D00223 Cup Bowl",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.28
+  },
+  "asset_id": "D00223",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00223 Cup Bowl",
-      "source_part_name": "D00223 Cup Bowl",
-      "source_object_name": "D00223 Cup Bowl",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "glazed_ceramic",
-      "material": "glazed_ceramic",
-      "non_visual_material": null,
-      "mass": 0.28,
-      "density": 2400.0,
-      "inertia": [
-        0.00020753152285380415,
-        0.0002669061718471938,
-        0.0003262605446800228
-      ],
-      "inertia_axes": [
-        0.999758699366302,
-        -0.0004458746501792984,
-        -0.021961684081434504,
-        0.000169320713502573
-      ],
-      "center_of_mass": [
-        -0.0009509011392750758,
-        6.965020816351001e-05,
-        0.03567534346621056
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.0004069657854227073,
       "bounds": {
-        "min": [
-          -0.06360699981451035,
-          -0.05721199885010719,
-          -2.4000000848900527e-05
+        "center": [
+          -0.002624166400954209,
+          1.3318701686818936e-05,
+          0.03562135255207145
         ],
         "max": [
           0.0818680003285408,
           0.05729300156235695,
           0.07158499956130981
         ],
-        "center": [
-          -0.002624166400954209,
-          1.3318701686818936e-05,
-          0.03562135255207145
+        "min": [
+          -0.06360699981451035,
+          -0.05721199885010719,
+          -2.4000000848900527e-05
         ]
       },
-      "description": "A white glazed ceramic cup with a rounded bowl-shaped body, thin rim, small foot ring, and curved handle.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The object appears to be a small porcelain or stoneware cup/mug with a smooth glazed exterior. No product dimensions are provided, so values are estimated from a typical teacup/coffee cup form: approximately 90\u2013110 mm outer diameter, 60\u201380 mm height, 3\u20135 mm wall thickness, and a handle extending 25\u201340 mm from the body. A cup of this size commonly has an empty mass around 0.22\u20130.35 kg; 0.28 kg is a realistic mid-range value for a ceramic cup with a substantial handle and foot ring. The dominant contact/structural material is glazed ceramic, whose true material density is typically about 2200\u20132500 kg/m^3, so 2400 kg/m^3 is used for material density even though the object is hollow. Glazed ceramic is hard and smooth: static friction against common tabletops is moderate, so static friction is estimated at 0.42 and dynamic friction at 0.32. Restitution is set to 0.45: ceramic is stiff and can rebound somewhat when modeled as non-fracturing, but real impacts dissipate energy and may chip or break, so it should not be treated as highly bouncy. The shape is concave because of the open cup cavity and handle aperture; for Isaac Sim/PhysX a convex decomposition is the best general rigid-body collider choice for performance while preserving the bowl, foot, and handle as multiple convex pieces. If accurate internal containment is required, an SDF mesh could be substituted at higher computational cost. Contact offsets are kept small, around 2 mm, because the cup has thin rim and base details; large offsets would make it visibly float or contact early. CCD is recommended because the rim, handle, and foot ring are thin features that can tunnel through surfaces during drops or fast manipulation. Compliant contacts are disabled because the object is non-deformable; if impact softness is desired, very stiff damping-only contact settings can be used rather than modeling actual deformation.",
-      "static_friction": 0.42,
-      "dynamic_friction": 0.32,
-      "restitution": 0.45,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        -0.0009509011392750758,
+        6.965020816351001e-05,
+        0.03567534346621056
+      ],
+      "collision": {},
+      "density": 2400.0,
+      "id": "part_00",
+      "inertia": [
+        0.00020753152285380415,
+        0.0002669061718471938,
+        0.0003262605446800228
+      ],
+      "mass": 0.28,
+      "material": "glazed_ceramic",
+      "name": "D00223 Cup Bowl",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": ""
+      "source": {
+        "object_name": "D00223 Cup Bowl",
+        "part_name": "D00223 Cup Bowl"
+      },
+      "volume": 0.0004069657854227073
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00223 Cup Bowl",
-  "object_description": "A white glazed ceramic cup with a rounded bowl-shaped body, thin rim, small foot ring, and curved handle.",
-  "object_semantic": {
-    "qid": null
-  },
-  "total_mass": 0.28,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies"
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  }
 }

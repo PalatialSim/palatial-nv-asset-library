@@ -1,97 +1,72 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.093437001109123,
+        0.063339002430439,
+        0.291487023234367
+      ],
+      "min": [
+        -0.092407003045082,
+        -0.06377699971199,
+        0.001532026898531
+      ],
+      "size": [
+        0.185844004154205,
+        0.127116002142429,
+        0.289954996335836
+      ]
+    },
+    "description": "A rectangular translucent plastic water jug with corrugated sides, an integrated handle, and an opaque blue screw-on cap.",
+    "name": "generated reference 01",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.4
+  },
+  "asset_id": "D00918",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "generated reference 01",
-      "source_part_name": "generated reference 01",
-      "source_object_name": "generated reference 01",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "hdpe_plastic",
-      "material": "hdpe_plastic",
-      "mass": 0.4,
-      "density": 950,
       "bounds": {
-        "min": [
-          -0.092407003045082,
-          -0.06377699971199,
-          0.001532026898531
+        "center": [
+          4.3663302356e-05,
+          -0.000221532641194,
+          0.136233483111479
         ],
         "max": [
           0.093437001109123,
           0.063339002430439,
           0.291487023234367
         ],
-        "center": [
-          4.3663302356e-05,
-          -0.000221532641194,
-          0.136233483111479
+        "min": [
+          -0.092407003045082,
+          -0.06377699971199,
+          0.001532026898531
         ]
       },
-      "description": "A rectangular translucent plastic water jug with corrugated sides, an integrated handle, and an opaque blue screw-on cap.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The object is identified as a plastic water jug with specified dimensions of 0.15 x 0.15 x 0.3 m. Based on the provided voxel volume (0.000426 m^3) and the typical density of high-density polyethylene (HDPE) plastic (950 kg/m^3), the estimated mass for the empty jug is roughly 0.4 kg. Friction and restitution coefficients are estimated based on typical values for smooth, rigid plastic. For Isaac Sim collisions, a 'convex_decomposition' collider type is selected instead of a basic convex hull to ensure the hole created by the handle is properly represented, which is critical for accurate grasping and interaction. Contact offsets are set to a small value (0.002 m) to ensure stable collision without visible gaps.",
-      "static_friction": 0.4,
-      "dynamic_friction": 0.35,
-      "restitution": 0.4,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "collision": {},
+      "density": 950,
+      "id": "part_00",
+      "mass": 0.4,
+      "material": "hdpe_plastic",
+      "name": "generated reference 01",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": "",
-      "appearance_properties": {},
-      "newton": {
-        "collisions": {
-          "collider_type": "convex_decomposition",
-          "rest_offset": 0,
-          "contact_offset": 0.002,
-          "explosion_view_distance": 0,
-          "collision_mesh_debug_visualization": false
-        },
-        "simulation_scene": {
-          "simulation_steps_per_second": 60,
-          "enable_ccd": true,
-          "gravitational_acceleration": [
-            0,
-            0,
-            -9.81
-          ],
-          "gpu_buffer_parameters": {},
-          "residuals": {}
-        }
+      "source": {
+        "object_name": "generated reference 01",
+        "part_name": "generated reference 01"
       }
     }
   ],
-  "joint_relations": [],
-  "base_link": "generated reference 01",
-  "fix_base": false,
-  "object_description": "A rectangular translucent plastic water jug with corrugated sides, an integrated handle, and an opaque blue screw-on cap.",
-  "object_semantic": {
-    "qid": null
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {
+    "fix_base": false
   },
-  "total_mass": 0.4,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies",
-  "total_object_mass_kg": 0.4,
-  "_authoritative_context_applied": {
-    "object": {},
-    "parts": [
-      {
-        "part_index": 0,
-        "part_id": "part_00",
-        "fields": [
-          "bounds",
-          "canonical_name",
-          "material",
-          "part_id",
-          "part_index",
-          "source_object_name",
-          "source_part_name"
-        ]
-      }
-    ]
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
   }
 }

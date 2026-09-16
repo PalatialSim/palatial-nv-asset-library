@@ -1,75 +1,81 @@
 {
- "parts": [
-  {
-   "canonical_name": "part_00",
-   "part_name": "D00202 Cooking Spoon",
-   "source_part_name": "D00202 Cooking Spoon",
-   "source_object_name": "D00202 Cooking Spoon",
-   "part_index": 0,
-   "part_id": "part_00",
-   "material_name": "steel",
-   "material": "steel",
-   "mass": 0.05,
-   "density": 700.0,
-   "inertia": [
-    8.909986315368028e-06,
-    0.0003727947796129502,
-    0.0003794610820443403
-   ],
-   "inertia_axes": [
-    0.0001920549520624266,
-    -0.9999842044542688,
-    0.0026913905125208943,
-    -0.004930555137883059
-   ],
-   "center_of_mass": [
-    0.02896770915803742,
-    -0.00013118202625887065,
-    0.012607641413350607
-   ],
-   "part_origin_world": [
-    0.02896770915803742,
-    -0.00013118202625887065,
-    0.012607641413350607
-   ],
-   "volume": 7.574241824930484e-05,
-   "bounds": {
-    "min": [
-     -0.109934002161026,
-     -0.033911000937223434,
-     0.0
-    ],
-    "max": [
-     0.18342499434947968,
-     0.034791000187397,
-     0.024403999690548517
-    ],
-    "center": [
-     0.03674549609422684,
-     0.00043999962508678436,
-     0.012201999845274258
-    ]
-   },
-   "description": "A light brown wooden spoon with a smooth finish and a hole at the end of the handle.",
-   "reasoning": "The object is a typical wooden cooking spoon. The material is clearly wood, likely beech or bamboo, which has a density around 600-750 kg/m^3. A typical wooden spoon weighs approximately 40-60 grams (0.04-0.06 kg). The friction coefficient for wood on wood/plastic is moderate, around 0.4-0.5. Wood has a relatively low restitution (bounciness) compared to metals or rubber, estimated at 0.3-0.4. For collision in Isaac Sim, a convex decomposition is recommended due to the concave bowl of the spoon, though a convex hull might suffice if the concavity is not critical for the simulation task. Continuous Collision Detection (CCD) is recommended due to the thinness of the handle and bowl, which could lead to tunneling at high velocities. Standard rest and contact offsets are used.",
-   "static_friction": 0.5,
-   "dynamic_friction": 0.4,
-   "restitution": 0.35,
-   "friction_combine_mode": "average",
-   "restitution_combine_mode": "average",
-   "physics_type": "rigid",
-   "is_structural_root": true,
-   "color_name": "",
-   "confidence": ""
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.18342499434947968,
+        0.034791000187397,
+        0.024403999690548517
+      ],
+      "min": [
+        -0.109934002161026,
+        -0.033911000937223434,
+        0.0
+      ],
+      "size": [
+        0.2933589965105057,
+        0.06870200112462044,
+        0.024403999690548517
+      ]
+    },
+    "description": "A light brown wooden spoon with a smooth finish and a hole at the end of the handle.",
+    "name": "D00202 Cooking Spoon",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.05
+  },
+  "asset_id": "D00202",
+  "parts": [
+    {
+      "bounds": {
+        "center": [
+          0.03674549609422684,
+          0.00043999962508678436,
+          0.012201999845274258
+        ],
+        "max": [
+          0.18342499434947968,
+          0.034791000187397,
+          0.024403999690548517
+        ],
+        "min": [
+          -0.109934002161026,
+          -0.033911000937223434,
+          0.0
+        ]
+      },
+      "center_of_mass": [
+        0.02896770915803742,
+        -0.00013118202625887065,
+        0.012607641413350607
+      ],
+      "collision": {},
+      "density": 700.0,
+      "id": "part_00",
+      "inertia": [
+        8.909986315368028e-06,
+        0.0003727947796129502,
+        0.0003794610820443403
+      ],
+      "mass": 0.05,
+      "material": "steel",
+      "name": "D00202 Cooking Spoon",
+      "physics_type": "rigid",
+      "source": {
+        "object_name": "D00202 Cooking Spoon",
+        "part_name": "D00202 Cooking Spoon"
+      },
+      "volume": 7.574241824930484e-05
+    }
+  ],
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
   }
- ],
- "joint_relations": [],
- "base_link": "D00202 Cooking Spoon",
- "object_description": "A light brown wooden spoon with a smooth finish and a hole at the end of the handle.",
- "total_mass": 0.05,
- "center_of_mass": null,
- "inertia": null,
- "overall_assessment": "",
- "num_parts": 1,
- "object_type": "rigid_bodies"
 }

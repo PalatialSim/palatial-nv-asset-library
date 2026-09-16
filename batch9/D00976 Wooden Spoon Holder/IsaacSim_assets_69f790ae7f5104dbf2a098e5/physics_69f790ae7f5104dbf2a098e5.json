@@ -1,81 +1,81 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.09244400262832642,
+        0.09257499873638153,
+        0.21864299476146698
+      ],
+      "min": [
+        -0.10054700076580048,
+        -0.09214500337839127,
+        -0.0003009999927598983
+      ],
+      "size": [
+        0.1929910033941269,
+        0.1847200021147728,
+        0.21894399475422688
+      ]
+    },
+    "description": "A group of open tabletop canisters and bowls with cylindrical, square, and rounded forms in wood, brushed stainless steel, ceramic, black-coated metal, and clear glass. Most have rounded rims and hollow interiors, with some metal pieces showing perforations or polished reflective surfaces.",
+    "name": "D00976 Wooden Spoon Holder",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.32
+  },
+  "asset_id": "D00976",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00976 Wooden Spoon Holder",
-      "source_part_name": "D00976 Wooden Spoon Holder",
-      "source_object_name": "D00976 Wooden Spoon Holder",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "stainless_steel",
-      "material": "stainless_steel",
-      "non_visual_material": null,
-      "mass": 0.32,
-      "density": 7850.0,
-      "inertia": [
-        0.0004710102736785071,
-        0.0006727137618580068,
-        0.000674598144149905
-      ],
-      "inertia_axes": [
-        0.49754166062313354,
-        0.5024874970474944,
-        -0.49745116374098486,
-        0.502494727283838
-      ],
-      "center_of_mass": [
-        0.00021432699457613053,
-        -0.0003120844252760234,
-        0.06589580994602623
-      ],
-      "part_origin_world": [
-        0.00021432699457613053,
-        -0.0003120844252760234,
-        0.06589580994602623
-      ],
-      "volume": 0.0011898140438912728,
       "bounds": {
-        "min": [
-          -0.10054700076580048,
-          -0.09214500337839127,
-          -0.0003009999927598983
+        "center": [
+          -0.00272231004858194,
+          0.0001384987172107107,
+          0.06131988340326514
         ],
         "max": [
           0.09244400262832642,
           0.09257499873638153,
           0.21864299476146698
         ],
-        "center": [
-          -0.00272231004858194,
-          0.0001384987172107107,
-          0.06131988340326514
+        "min": [
+          -0.10054700076580048,
+          -0.09214500337839127,
+          -0.0003009999927598983
         ]
       },
-      "description": "A group of open tabletop canisters and bowls with cylindrical, square, and rounded forms in wood, brushed stainless steel, ceramic, black-coated metal, and clear glass. Most have rounded rims and hollow interiors, with some metal pieces showing perforations or polished reflective surfaces.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The image appears to show a family of similar open containers rather than one fully specified product, so the root values are estimated for a representative medium open canister, approximately 80-95 mm in diameter or width and 95-120 mm tall. Stainless steel is used as the dominant root material because several variants are brushed or polished metal and it is the highest-mass structural/contact material among the visible examples. A thin stainless cylindrical cup with about 0.7-1.0 mm wall thickness has a side-wall volume near 2.2e-5 to 3.2e-5 m3, plus bottom, rim, and rolled-edge volume, giving roughly 0.25-0.35 kg at 7850 kg/m3; 0.32 kg is therefore a reasonable representative mass. Wood variants would typically be about 0.15-0.35 kg depending on wall thickness, while ceramic or glass variants could be about 0.4-0.7 kg. The listed density is the solid stainless material density; if a single filled convex hull is used for auto-mass, set an explicit mass override or use an effective density around 400-600 kg/m3 to avoid overestimating mass due to the hollow interior. Friction is estimated for brushed stainless contact on common hard surfaces: static about 0.45-0.50 and dynamic about 0.30-0.38. Wood versions should be slightly higher, around static 0.55 and dynamic 0.40, while glass/ceramic contacts should be lower, around static 0.25-0.35 and dynamic 0.18-0.28. Restitution is set to 0.50 for hard metal, but hollow sheet-metal, ceramic, and wood containers should often be damped lower in contact tuning if unrealistic ringing or bouncing appears. For collision, a single convex hull is not suitable because it would cap the opening and prevent interior interactions; convex decomposition into wall, rim, and bottom pieces is the recommended dynamic rigid-body representation. SDF mesh collision can be used when accurate concave interior contact is more important than performance. Small perforations in the metal holder should usually be ignored unless small parts must pass through them, because resolving every hole greatly increases contact complexity. A rest offset of 0 m and contact offset of about 2.5 mm are appropriate for tabletop-scale objects with thin walls; reduce contact_offset toward 1 mm for very thin or tight-fitting interactions. CCD is recommended when the object can be dropped, tossed, or moved quickly by grippers because the walls and rim are thin. Recommended practical velocity limits are approximately 5 m/s linear and 50 rad/s angular for stable manipulation scenes, with lower limits if stacking many thin vessels. Sleep thresholds can generally remain near PhysX defaults, but for stable resting on a table use low sleep energy thresholds so the canister hibernates after contacts settle.",
-      "static_friction": 0.48,
-      "dynamic_friction": 0.35,
-      "restitution": 0.5,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        0.00021432699457613053,
+        -0.0003120844252760234,
+        0.06589580994602623
+      ],
+      "collision": {},
+      "density": 7850.0,
+      "id": "part_00",
+      "inertia": [
+        0.0004710102736785071,
+        0.0006727137618580068,
+        0.000674598144149905
+      ],
+      "mass": 0.32,
+      "material": "stainless_steel",
+      "name": "D00976 Wooden Spoon Holder",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": ""
+      "source": {
+        "object_name": "D00976 Wooden Spoon Holder",
+        "part_name": "D00976 Wooden Spoon Holder"
+      },
+      "volume": 0.0011898140438912728
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00976 Wooden Spoon Holder",
-  "object_description": "A group of open tabletop canisters and bowls with cylindrical, square, and rounded forms in wood, brushed stainless steel, ceramic, black-coated metal, and clear glass. Most have rounded rims and hollow interiors, with some metal pieces showing perforations or polished reflective surfaces.",
-  "object_semantic": {
-    "qid": null
-  },
-  "total_mass": 0.32,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies"
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  }
 }

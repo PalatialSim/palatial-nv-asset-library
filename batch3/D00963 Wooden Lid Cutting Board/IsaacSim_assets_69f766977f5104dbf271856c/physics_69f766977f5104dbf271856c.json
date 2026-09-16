@@ -1,81 +1,81 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.1510010063648224,
+        0.14873099327087402,
+        0.04671100154519081
+      ],
+      "min": [
+        -0.14754000306129456,
+        -0.14949999749660492,
+        -4.3000000005122274e-05
+      ],
+      "size": [
+        0.29854100942611694,
+        0.29823099076747894,
+        0.04675400154519593
+      ]
+    },
+    "description": "A rectangular bamboo cutting board with rounded corners, warm blond wood grain, a recessed perimeter groove, and a small oblong finger slot. The surface appears laminated and smoothly finished.",
+    "name": "D00963 Wooden Lid Cutting Board",
+    "object_type": "rigid_bodies",
+    "total_mass": 1.2
+  },
+  "asset_id": "D00963",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00963 Wooden Lid Cutting Board",
-      "source_part_name": "D00963 Wooden Lid Cutting Board",
-      "source_object_name": "D00963 Wooden Lid Cutting Board",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "bamboo_wood",
-      "material": "bamboo_wood",
-      "non_visual_material": null,
-      "mass": 1.2,
-      "density": 650.0,
-      "inertia": [
-        0.008956454750240294,
-        0.01646611471457597,
-        0.02505613034530721
-      ],
-      "inertia_axes": [
-        0.999999990780989,
-        -7.06375137418458e-05,
-        -1.7696816094092675e-05,
-        -0.00011460884078273552
-      ],
-      "center_of_mass": [
-        0.001240697862381677,
-        0.0015298137457801283,
-        0.02153475269869465
-      ],
-      "part_origin_world": [
-        0.001240697862381677,
-        0.0015298137457801283,
-        0.02153475269869465
-      ],
-      "volume": 0.005171873440730129,
       "bounds": {
-        "min": [
-          -0.14754000306129456,
-          -0.14949999749660492,
-          -4.3000000005122274e-05
+        "center": [
+          0.0013485104298221042,
+          6.238576282382084e-05,
+          0.017337583582664202
         ],
         "max": [
           0.1510010063648224,
           0.14873099327087402,
           0.04671100154519081
         ],
-        "center": [
-          0.0013485104298221042,
-          6.238576282382084e-05,
-          0.017337583582664202
+        "min": [
+          -0.14754000306129456,
+          -0.14949999749660492,
+          -4.3000000005122274e-05
         ]
       },
-      "description": "A rectangular bamboo cutting board with rounded corners, warm blond wood grain, a recessed perimeter groove, and a small oblong finger slot. The surface appears laminated and smoothly finished.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The object appears to be a solid bamboo or light hardwood cutting board/tray insert. No product data or scale is provided, so I estimated a common household board size of roughly 0.34 m \u00d7 0.24 m \u00d7 0.022\u20130.025 m. That gives a gross rectangular volume near 0.0018\u20130.0020 m\u00b3; the shallow perimeter recess and small finger slot remove only a small fraction of material, so a realistic net volume is about 0.0017\u20130.0019 m\u00b3. Bamboo cutting boards typically have material densities around 600\u2013750 kg/m\u00b3 depending on lamination and moisture content, so a mass near 1.2 kg is appropriate. If the imported mesh is scaled differently, mass should be recomputed from the mesh volume using approximately 650 kg/m\u00b3.\n\nThe dominant contact material is smooth finished bamboo/wood. Finished wood on common tabletop or floor materials has moderate friction: static friction is estimated at 0.55 and dynamic friction at 0.42. Restitution is set to 0.35 because wood is moderately inelastic; it may bounce slightly on hard surfaces but will dissipate most impact energy. The object should be simulated as a single rigid body with its center of mass near the geometric center, slightly unaffected by the shallow top recess. For a manual inertia approximation using the assumed dimensions and 1.2 kg mass, a rectangular-slab inertia would be approximately Ixx \u2248 0.0058 kg\u00b7m\u00b2, Iyy \u2248 0.0116 kg\u00b7m\u00b2, and Izz \u2248 0.0173 kg\u00b7m\u00b2 before accounting for small bevels and recesses.\n\nFor collision, convex decomposition is preferred. A single convex hull would be stable and fast but would ignore the recessed perimeter and central slot, while an SDF or detailed triangle-style mesh would be unnecessary for most rigid-body use and more expensive. Convex decomposition can represent the rounded rectangular slab and top groove well enough using a small number of hulls. If only external pushing, stacking, or sliding behavior matters, a simplified convex hull or beveled box collider is also acceptable. Recommended contact parameters are a rest offset of 0.0 m and contact offset around 0.002 m for meter-scale assets; this is large enough to generate stable contacts on a thin board without visibly floating. Continuous collision detection is not required for normal handling or drops, but should be enabled if the board is launched quickly or interacts with very thin surfaces. Compliant contacts are disabled because the object is rigid; damping should come from ordinary contact constraints rather than soft-contact compliance. Sleep/hibernation can be left at PhysX defaults, with moderate stabilization enabled, since the object is a passive rigid body that should settle quickly on flat surfaces.",
-      "static_friction": 0.55,
-      "dynamic_friction": 0.42,
-      "restitution": 0.35,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        0.001240697862381677,
+        0.0015298137457801283,
+        0.02153475269869465
+      ],
+      "collision": {},
+      "density": 650.0,
+      "id": "part_00",
+      "inertia": [
+        0.008956454750240294,
+        0.01646611471457597,
+        0.02505613034530721
+      ],
+      "mass": 1.2,
+      "material": "bamboo_wood",
+      "name": "D00963 Wooden Lid Cutting Board",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": ""
+      "source": {
+        "object_name": "D00963 Wooden Lid Cutting Board",
+        "part_name": "D00963 Wooden Lid Cutting Board"
+      },
+      "volume": 0.005171873440730129
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00963 Wooden Lid Cutting Board",
-  "object_description": "A rectangular bamboo cutting board with rounded corners, warm blond wood grain, a recessed perimeter groove, and a small oblong finger slot. The surface appears laminated and smoothly finished.",
-  "object_semantic": {
-    "qid": null
-  },
-  "total_mass": 1.2,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies"
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  }
 }

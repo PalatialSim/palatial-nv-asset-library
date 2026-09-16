@@ -1,102 +1,81 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.1444290280342102,
+        0.04263053089380264,
+        0.026775116100907326
+      ],
+      "min": [
+        -0.20108848810195923,
+        -0.04239783436059952,
+        -4.640469342120923e-05
+      ],
+      "size": [
+        0.34551751613616943,
+        0.08502836525440216,
+        0.026821520794328535
+      ]
+    },
+    "description": "A spatula with a cylindrical brushed stainless steel handle and a flat, flexible orange silicone head. The handle features a small metal hanging loop at the end.",
+    "name": "D00576 Orange Spatula",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.15
+  },
+  "asset_id": "D00576",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00576 Orange Spatula",
-      "source_part_name": "D00576 Orange Spatula",
-      "source_object_name": "D00576 Orange Spatula",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "silicone_rubber_and_stainless_steel",
-      "material": "silicone_rubber_and_stainless_steel",
-      "non_visual_material": null,
-      "mass": 0.15,
-      "density": 1000.0,
-      "inertia": [
-        4.451187297766914e-05,
-        0.0010732810881826217,
-        0.001108717151387087
-      ],
-      "inertia_axes": [
-        0.9999843921270629,
-        -0.00017915207954052615,
-        -0.00558420893553535,
-        4.167141753609686e-06
-      ],
-      "center_of_mass": [
-        -0.017026232603401362,
-        7.934548727932066e-05,
-        0.014174773405223454
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.0003154807097895967,
       "bounds": {
-        "min": [
-          -0.20108848810195923,
-          -0.04239783436059952,
-          -4.640469342120923e-05
+        "center": [
+          0.0070013334689320765,
+          8.868653724120336e-05,
+          0.014047214461072606
         ],
         "max": [
           0.1444290280342102,
           0.04263053089380264,
           0.026775116100907326
         ],
-        "center": [
-          0.0070013334689320765,
-          8.868653724120336e-05,
-          0.014047214461072606
+        "min": [
+          -0.20108848810195923,
+          -0.04239783436059952,
+          -4.640469342120923e-05
         ]
       },
-      "description": "A spatula with a cylindrical brushed stainless steel handle and a flat, flexible orange silicone head. The handle features a small metal hanging loop at the end.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The object is a kitchen spatula. Visually, the handle appears to be stainless steel due to its metallic sheen and brushed texture, while the head is made of a pliable orange material, highly likely silicone rubber given its typical application in cookware. The dominant contact materials are the steel handle and the silicone head. For a rigid body approximation in Isaac Sim, we treat it as a single cohesive mesh (unless articulated, but a spatula is typically a single rigid body despite the head's minor flexibility). The overall mass should be a weighted average of steel (high density, handle) and silicone (lower density, head). A typical spatial volume for a spatula is around 0.00015 cubic meters, and a mass of ~0.15 kg is standard for a sturdy metal/silicone utensil. Thus, the effective density would be roughly 1000 kg/m^3 to account for hollow parts in the handle. We select silicone as the primary friction material because the head is often the contact point for manipulation, providing high friction. Restitution should be somewhat low due to the dampening effect of the silicone and hollow handle. We enable CCD since spatulas can be swung or dropped quickly. Convex decomposition is the best collider type due to the thin, flat shape of the head transitioning to a cylindrical handle.",
-      "static_friction": 0.8,
-      "dynamic_friction": 0.7,
-      "restitution": 0.4,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        -0.017026232603401362,
+        7.934548727932066e-05,
+        0.014174773405223454
+      ],
+      "collision": {},
+      "density": 1000.0,
+      "id": "part_00",
+      "inertia": [
+        4.451187297766914e-05,
+        0.0010732810881826217,
+        0.001108717151387087
+      ],
+      "mass": 0.15,
+      "material": "silicone_rubber_and_stainless_steel",
+      "name": "D00576 Orange Spatula",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": "",
-      "appearance_properties": {},
-      "newton": {
-        "collisions": {
-          "collider_type": "convex_decomposition",
-          "rest_offset": 0,
-          "contact_offset": 0.002,
-          "explosion_view_distance": 0,
-          "collision_mesh_debug_visualization": false
-        },
-        "simulation_scene": {
-          "simulation_steps_per_second": 60,
-          "enable_ccd": true,
-          "gravitational_acceleration": [
-            0,
-            0,
-            -9.81
-          ],
-          "gpu_buffer_parameters": {},
-          "residuals": {}
-        }
-      }
+      "source": {
+        "object_name": "D00576 Orange Spatula",
+        "part_name": "D00576 Orange Spatula"
+      },
+      "volume": 0.0003154807097895967
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00576 Orange Spatula",
-  "object_description": "A spatula with a cylindrical brushed stainless steel handle and a flat, flexible orange silicone head. The handle features a small metal hanging loop at the end.",
-  "object_semantic": {
-    "qid": null
-  },
-  "total_mass": 0.15,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies"
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  }
 }

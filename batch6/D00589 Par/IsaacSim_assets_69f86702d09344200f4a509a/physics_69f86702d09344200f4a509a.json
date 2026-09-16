@@ -1,102 +1,81 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.01346499565988779,
+        0.058566849678754807,
+        0.19310936331748962
+      ],
+      "min": [
+        -0.013423004187643528,
+        -1.9149663785356097e-05,
+        -0.29102063179016113
+      ],
+      "size": [
+        0.02688799984753132,
+        0.05858599934254016,
+        0.48412999510765076
+      ]
+    },
+    "description": "A fixed-blade knife featuring a dark steel blade, a polished wooden handle, and brass bolsters at both ends.",
+    "name": "D00589 Par",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.25
+  },
+  "asset_id": "D00589",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00589 Par",
-      "source_part_name": "D00589 Par",
-      "source_object_name": "D00589 Par",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "steel",
-      "material": "steel",
-      "non_visual_material": null,
-      "mass": 0.25,
-      "density": 7850.0,
-      "inertia": [
-        3.8701818249164627e-05,
-        0.001129775453925549,
-        0.0011437591300017525
-      ],
-      "inertia_axes": [
-        0.7067671783447115,
-        -0.7074333820794736,
-        0.002903376598665686,
-        0.003120246557385293
-      ],
-      "center_of_mass": [
-        0.0021944315645711916,
-        8.675304466979579e-05,
-        0.023853055161866817
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.00020573921497918455,
       "bounds": {
-        "min": [
-          -0.013423004187643528,
-          -1.9149663785356097e-05,
-          -0.29102063179016113
+        "center": [
+          6.487787388739803e-05,
+          0.035555334045497426,
+          -0.07749148943619814
         ],
         "max": [
           0.01346499565988779,
           0.058566849678754807,
           0.19310936331748962
         ],
-        "center": [
-          6.487787388739803e-05,
-          0.035555334045497426,
-          -0.07749148943619814
+        "min": [
+          -0.013423004187643528,
+          -1.9149663785356097e-05,
+          -0.29102063179016113
         ]
       },
-      "description": "A fixed-blade knife featuring a dark steel blade, a polished wooden handle, and brass bolsters at both ends.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The mass is estimated at 0.25 kg, typical for a medium-sized hunting or utility knife. The dominant structural material is steel for the blade and tang (density ~7850 kg/m\u00b3), combined with wood and brass on the handle. Static friction (0.5) and dynamic friction (0.4) reflect a mix of smooth metal and polished wood. Restitution is set to 0.4, as the rigid metal and wood construction will not bounce significantly. Continuous Collision Detection (CCD) is highly recommended for this asset because the thin blade is prone to tunneling through other objects at high velocities. A convex decomposition collider is chosen to accurately capture the shape transitions between the handle guard and the blade. A small contact offset (0.002m) is specified to ensure realistic resting behavior without visible floating, particularly for the thin edge.",
-      "static_friction": 0.5,
-      "dynamic_friction": 0.4,
-      "restitution": 0.4,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        0.0021944315645711916,
+        8.675304466979579e-05,
+        0.023853055161866817
+      ],
+      "collision": {},
+      "density": 7850.0,
+      "id": "part_00",
+      "inertia": [
+        3.8701818249164627e-05,
+        0.001129775453925549,
+        0.0011437591300017525
+      ],
+      "mass": 0.25,
+      "material": "steel",
+      "name": "D00589 Par",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": "",
-      "appearance_properties": {},
-      "newton": {
-        "collisions": {
-          "collider_type": "convex_decomposition",
-          "rest_offset": 0,
-          "contact_offset": 0.002,
-          "explosion_view_distance": 0,
-          "collision_mesh_debug_visualization": false
-        },
-        "simulation_scene": {
-          "simulation_steps_per_second": 60,
-          "enable_ccd": true,
-          "gravitational_acceleration": [
-            0,
-            0,
-            -9.81
-          ],
-          "gpu_buffer_parameters": {},
-          "residuals": {}
-        }
-      }
+      "source": {
+        "object_name": "D00589 Par",
+        "part_name": "D00589 Par"
+      },
+      "volume": 0.00020573921497918455
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00589 Par",
-  "object_description": "A fixed-blade knife featuring a dark steel blade, a polished wooden handle, and brass bolsters at both ends.",
-  "object_semantic": {
-    "qid": null
-  },
-  "total_mass": 0.25,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies"
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  }
 }

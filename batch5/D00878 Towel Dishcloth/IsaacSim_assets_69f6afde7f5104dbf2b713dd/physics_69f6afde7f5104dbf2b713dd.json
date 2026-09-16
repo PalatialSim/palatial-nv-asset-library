@@ -1,102 +1,81 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.10320399701595306,
+        0.1498890072107315,
+        0.0428909994661808
+      ],
+      "min": [
+        -0.10238499939441681,
+        -0.12855899333953857,
+        -0.00021300000662449747
+      ],
+      "size": [
+        0.20558899641036987,
+        0.2784480005502701,
+        0.0431039994728053
+      ]
+    },
+    "description": "A folded off-white fabric towel with a waffle weave texture and fringed edges.",
+    "name": "D00878 Towel Dishcloth",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.1
+  },
+  "asset_id": "D00878",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00878 Towel Dishcloth",
-      "source_part_name": "D00878 Towel Dishcloth",
-      "source_object_name": "D00878 Towel Dishcloth",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "fabric",
-      "material": "fabric",
-      "non_visual_material": null,
-      "mass": 0.1,
-      "density": 400.0,
-      "inertia": [
-        0.00033107484696902974,
-        0.0006464877359995361,
-        0.0009543091246353674
-      ],
-      "inertia_axes": [
-        0.0028640975900855754,
-        0.7042437890838122,
-        0.7099325442698236,
-        -0.0053164902374255125
-      ],
-      "center_of_mass": [
-        -0.0013337536818624571,
-        0.013739336057514899,
-        0.01940258628663675
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.0020592973273035513,
       "bounds": {
-        "min": [
-          -0.10238499939441681,
-          -0.12855899333953857,
-          -0.00021300000662449747
+        "center": [
+          -0.0011306202774277357,
+          0.007270055953847987,
+          0.01641709720292052
         ],
         "max": [
           0.10320399701595306,
           0.1498890072107315,
           0.0428909994661808
         ],
-        "center": [
-          -0.0011306202774277357,
-          0.007270055953847987,
-          0.01641709720292052
+        "min": [
+          -0.10238499939441681,
+          -0.12855899333953857,
+          -0.00021300000662449747
         ]
       },
-      "description": "A folded off-white fabric towel with a waffle weave texture and fringed edges.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The object is visually identified as a folded cotton cloth or towel. Although fabric is highly deformable in reality, the prompt specifies estimating properties for a rigid body simulation. Therefore, it is approximated as a solid mass with fabric surface characteristics. The mass is estimated at 0.1 kg, typical for a small folded towel or washcloth. Density is set to 400 kg/m^3, reflecting tightly folded cotton fibers. Friction coefficients (0.6 static, 0.5 dynamic) are assigned to mimic the drag of rough fabric against solid surfaces. Restitution is near zero (0.05) because a folded towel will absorb almost all impact energy without bouncing. For collision geometry, a 'convex_hull' is recommended to wrap the overall folded shape efficiently while ignoring the complex micro-geometry of the fringes and weave.",
-      "static_friction": 0.6,
-      "dynamic_friction": 0.5,
-      "restitution": 0.05,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        -0.0013337536818624571,
+        0.013739336057514899,
+        0.01940258628663675
+      ],
+      "collision": {},
+      "density": 400.0,
+      "id": "part_00",
+      "inertia": [
+        0.00033107484696902974,
+        0.0006464877359995361,
+        0.0009543091246353674
+      ],
+      "mass": 0.1,
+      "material": "fabric",
+      "name": "D00878 Towel Dishcloth",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": "",
-      "appearance_properties": {},
-      "newton": {
-        "collisions": {
-          "collider_type": "convex_hull",
-          "rest_offset": 0,
-          "contact_offset": 0.005,
-          "explosion_view_distance": 0,
-          "collision_mesh_debug_visualization": false
-        },
-        "simulation_scene": {
-          "simulation_steps_per_second": 60,
-          "enable_ccd": false,
-          "gravitational_acceleration": [
-            0,
-            0,
-            -9.81
-          ],
-          "gpu_buffer_parameters": {},
-          "residuals": {}
-        }
-      }
+      "source": {
+        "object_name": "D00878 Towel Dishcloth",
+        "part_name": "D00878 Towel Dishcloth"
+      },
+      "volume": 0.0020592973273035513
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00878 Towel Dishcloth",
-  "object_description": "A folded off-white fabric towel with a waffle weave texture and fringed edges.",
-  "object_semantic": {
-    "qid": null
-  },
-  "total_mass": 0.1,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies"
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  }
 }

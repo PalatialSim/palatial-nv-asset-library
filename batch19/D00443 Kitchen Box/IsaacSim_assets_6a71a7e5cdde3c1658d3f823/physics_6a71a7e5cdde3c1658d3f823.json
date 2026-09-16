@@ -1,119 +1,83 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.27032775,
+        0.22117944,
+        0.19486877
+      ],
+      "min": [
+        -0.27145748,
+        0.0,
+        -0.19527236
+      ],
+      "size": [
+        0.5417852299999999,
+        0.22117944,
+        0.39014113
+      ]
+    },
+    "description": "A gray, rectangular plastic storage bin with a central dividing wall and a rolled top rim.",
+    "name": "specialist-current",
+    "object_type": "rigid_bodies",
+    "total_mass": 4.457
+  },
+  "asset_id": "D00443",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "specialist-current",
-      "source_part_name": "specialist-current",
-      "source_object_name": "specialist-current",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "plastic",
-      "material": "plastic",
-      "mass": 4.457,
-      "density": 1000.0,
-      "inertia": [
-        0.10528465040787735,
-        0.15416228226613798,
-        0.21143665686763638
-      ],
-      "inertia_axes": [
-        0.9999996212213328,
-        0.00012139965872750635,
-        -0.0005386858496181368,
-        0.0006727829288003696
-      ],
-      "center_of_mass": [
-        7.322524401522426e-05,
-        0.00021881859931784616,
-        0.08473904824766505
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.005469683809475063,
       "bounds": {
-        "min": [
-          -0.27145748,
-          0.0,
-          -0.19527236
+        "center": [
+          -0.0005863082998251693,
+          0.08967252955116085,
+          -0.00018529394617912044
         ],
         "max": [
           0.27032775,
           0.22117944,
           0.19486877
         ],
-        "center": [
-          -0.0005863082998251693,
-          0.08967252955116085,
-          -0.00018529394617912044
+        "min": [
+          -0.27145748,
+          0.0,
+          -0.19527236
         ]
       },
-      "description": "A gray, rectangular plastic storage bin with a central dividing wall and a rolled top rim.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The asset is a kitchen organizer box that visually matches molded rigid plastic. Based on the provided auto_scale_summary.json, the scaled external extents are approximately 0.54m x 0.22m x 0.39m, with a voxel volume of 0.00445 m^3. Assuming a standard rigid plastic (like polypropylene or ABS) density of 1000 kg/m^3, the calculated mass is approximately 4.45 kg. This suggests a sturdy, thick-walled construction. Material friction coefficients are set to typical values for smooth plastic (0.4 static, 0.35 dynamic) with moderate restitution (0.4). Because the bin has a concave interior and an internal divider, 'convex_decomposition' is absolutely required for the collider type so that other simulated objects can be placed inside it without colliding with a bounding hull.",
-      "static_friction": 0.4,
-      "dynamic_friction": 0.35,
-      "restitution": 0.4,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        7.322524401522426e-05,
+        0.00021881859931784616,
+        0.08473904824766505
+      ],
+      "collision": {},
+      "density": 1000.0,
+      "id": "part_00",
+      "inertia": [
+        0.10528465040787735,
+        0.15416228226613798,
+        0.21143665686763638
+      ],
+      "mass": 4.457,
+      "material": "plastic",
+      "name": "specialist-current",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": "",
-      "appearance_properties": {},
-      "newton": {
-        "collisions": {
-          "collider_type": "convex_decomposition",
-          "rest_offset": 0,
-          "contact_offset": 0.002,
-          "explosion_view_distance": 0.1,
-          "collision_mesh_debug_visualization": false
-        },
-        "simulation_scene": {
-          "simulation_steps_per_second": 60,
-          "enable_ccd": false,
-          "gravitational_acceleration": [
-            0,
-            -9.81,
-            0
-          ],
-          "gpu_buffer_parameters": {},
-          "residuals": {}
-        }
-      }
+      "source": {
+        "object_name": "specialist-current",
+        "part_name": "specialist-current"
+      },
+      "volume": 0.005469683809475063
     }
   ],
-  "joint_relations": [],
-  "base_link": "specialist-current",
-  "fix_base": false,
-  "object_description": "A gray, rectangular plastic storage bin with a central dividing wall and a rolled top rim.",
-  "object_semantic": {
-    "qid": null
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {
+    "fix_base": false
   },
-  "total_mass": 4.457,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies",
-  "total_object_mass_kg": 4.457,
-  "_authoritative_context_applied": {
-    "object": {},
-    "parts": [
-      {
-        "part_index": 0,
-        "part_id": "part_00",
-        "fields": [
-          "bounds",
-          "canonical_name",
-          "material",
-          "part_id",
-          "part_index",
-          "source_object_name",
-          "source_part_name"
-        ]
-      }
-    ]
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
   }
 }

@@ -1,132 +1,82 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.042913880199193954,
+        0.044606950134038925,
+        0.10678674280643463
+      ],
+      "min": [
+        -0.04342611879110336,
+        -8.90496012289077e-05,
+        -0.20926426351070404
+      ],
+      "size": [
+        0.08633999899029732,
+        0.04469599973526783,
+        0.31605100631713867
+      ]
+    },
+    "description": "A solid wooden kitchen ladle with a long curved handle and a deep rounded bowl. The handle features a small hanging hole near its top end.",
+    "name": "D00961 Wooden Ladle",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.05897
+  },
+  "asset_id": "D00961",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00961 Wooden Ladle",
-      "source_part_name": "D00961 Wooden Ladle",
-      "source_object_name": "D00961 Wooden Ladle",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "wood",
-      "material": "wood",
-      "non_visual_material": null,
-      "mass": 0.05897,
-      "density": 650.0,
-      "inertia": [
-        1.7467443289954136e-05,
-        0.0006013179914927136,
-        0.0006107047294397165
-      ],
-      "inertia_axes": [
-        0.7064532420274356,
-        -0.003249419648129987,
-        -0.06405812876618712,
-        0.7048473694636666
-      ],
-      "center_of_mass": [
-        -0.00034474394761548283,
-        0.029001822307183733,
-        0.02893359898822976
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.00011942345458906326,
       "bounds": {
-        "min": [
-          -0.04342611879110336,
-          -8.90496012289077e-05,
-          -0.20926426351070404
+        "center": [
+          2.4204870813519056e-05,
+          0.024628186944791658,
+          -0.005251263990383366
         ],
         "max": [
           0.042913880199193954,
           0.044606950134038925,
           0.10678674280643463
         ],
-        "center": [
-          2.4204870813519056e-05,
-          0.024628186944791658,
-          -0.005251263990383366
+        "min": [
+          -0.04342611879110336,
+          -8.90496012289077e-05,
+          -0.20926426351070404
         ]
       },
-      "description": "A solid wooden kitchen ladle with a long curved handle and a deep rounded bowl. The handle features a small hanging hole near its top end.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The asset is a standard wooden kitchen ladle. The dimensions from the provided telemetry (approximately 32.6 cm long, 11.5 cm wide) and voxel volume (9.07e-05 m^3) confirm its scale. The dominant material is wood. Assuming a typical hardwood density of 650 kg/m^3 for kitchen utensils, the total mass is calculated to be approximately 0.059 kg. Friction (static 0.5, dynamic 0.4) and restitution (0.4) coefficients are estimated based on standard physical properties of polished wood. For collision modeling in Isaac Sim, 'convex_decomposition' is strictly required to capture the concavity of the ladle's bowl, allowing objects or end-effectors to interact properly with the interior. Continuous Collision Detection (CCD) is enabled at both the body and scene levels because the handle is relatively thin and might otherwise tunnel through colliders during fast, forceful maneuvers. A small contact offset (1mm) ensures accurate contact points when grasping.",
-      "static_friction": 0.5,
-      "dynamic_friction": 0.4,
-      "restitution": 0.4,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        -0.00034474394761548283,
+        0.029001822307183733,
+        0.02893359898822976
+      ],
+      "collision": {},
+      "density": 650.0,
+      "id": "part_00",
+      "inertia": [
+        1.7467443289954136e-05,
+        0.0006013179914927136,
+        0.0006107047294397165
+      ],
+      "mass": 0.05897,
+      "material": "wood",
+      "name": "D00961 Wooden Ladle",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "enable_ccd": null,
-      "solver_position_iterations": null,
-      "solver_velocity_iterations": null,
-      "color_name": "",
-      "appearance_properties": {},
-      "newton": {
-        "collisions": {
-          "collider_type": "convex_decomposition",
-          "rest_offset": 0,
-          "contact_offset": 0.001,
-          "explosion_view_distance": 0,
-          "collision_mesh_debug_visualization": false
-        },
-        "simulation_scene": {
-          "simulation_steps_per_second": 60,
-          "enable_ccd": true,
-          "gravitational_acceleration": [
-            0,
-            0,
-            -9.81
-          ],
-          "gpu_buffer_parameters": {},
-          "residuals": {}
-        }
-      }
+      "source": {
+        "object_name": "D00961 Wooden Ladle",
+        "part_name": "D00961 Wooden Ladle"
+      },
+      "volume": 0.00011942345458906326
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00961 Wooden Ladle",
-  "base_link_recommendation": null,
-  "fix_base": false,
-  "source": null,
-  "authored_by": null,
-  "up_axis": null,
-  "coordinate_frames": null,
-  "solver_position_iterations": null,
-  "solver_velocity_iterations": null,
-  "object_description": "A solid wooden kitchen ladle with a long curved handle and a deep rounded bowl. The handle features a small hanging hole near its top end.",
-  "object_semantic": {
-    "qid": null
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {
+    "fix_base": false
   },
-  "total_mass": 0.05897,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies",
-  "total_object_mass_kg": 0.05897,
-  "_authoritative_context_applied": {
-    "object": {},
-    "parts": [
-      {
-        "part_index": 0,
-        "part_id": "part_00",
-        "fields": [
-          "bounds",
-          "canonical_name",
-          "material",
-          "part_id",
-          "part_index",
-          "source_object_name",
-          "source_part_name"
-        ]
-      }
-    ]
+  "units": {
+    "length": "m",
+    "mass": "kg"
   }
 }

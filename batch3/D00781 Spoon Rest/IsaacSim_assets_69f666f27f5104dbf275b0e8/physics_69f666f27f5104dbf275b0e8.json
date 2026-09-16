@@ -1,81 +1,81 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.11718200147151947,
+        0.048597998917102814,
+        0.02091600000858307
+      ],
+      "min": [
+        -0.07615000009536743,
+        -0.048082999885082245,
+        2.700000004551839e-05
+      ],
+      "size": [
+        0.1933320015668869,
+        0.09668099880218506,
+        0.02088900000853755
+      ]
+    },
+    "description": "A shallow spoon-shaped rest with a rounded concave bowl and a long raised curved handle. The pictured variants include polished or brushed metal, wood, ceramic, glass, and matte black cast-metal finishes.",
+    "name": "D00781 Spoon Rest",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.18
+  },
+  "asset_id": "D00781",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00781 Spoon Rest",
-      "source_part_name": "D00781 Spoon Rest",
-      "source_object_name": "D00781 Spoon Rest",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "stainless_steel",
-      "material": "stainless_steel",
-      "non_visual_material": null,
-      "mass": 0.18,
-      "density": 7850.0,
-      "inertia": [
-        0.00010009282505816217,
-        0.0005622032721004926,
-        0.0006424078246210007
-      ],
-      "inertia_axes": [
-        0.00040091995730127375,
-        0.9993530030332323,
-        -0.0007612417787918879,
-        0.03595601622263818
-      ],
-      "center_of_mass": [
-        0.0031943546844286495,
-        0.0002971860682418594,
-        0.017229373495574213
-      ],
-      "part_origin_world": [
-        0.0031943546844286495,
-        0.0002971860682418594,
-        0.017229373495574213
-      ],
-      "volume": 0.0001546054990268061,
       "bounds": {
-        "min": [
-          -0.07615000009536743,
-          -0.048082999885082245,
-          2.700000004551839e-05
+        "center": [
+          -0.0021687650534952785,
+          0.00025583764249179536,
+          0.007867067067698017
         ],
         "max": [
           0.11718200147151947,
           0.048597998917102814,
           0.02091600000858307
         ],
-        "center": [
-          -0.0021687650534952785,
-          0.00025583764249179536,
-          0.007867067067698017
+        "min": [
+          -0.07615000009536743,
+          -0.048082999885082245,
+          2.700000004551839e-05
         ]
       },
-      "description": "A shallow spoon-shaped rest with a rounded concave bowl and a long raised curved handle. The pictured variants include polished or brushed metal, wood, ceramic, glass, and matte black cast-metal finishes.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The object is a small spoon-rest/ladle-rest form: approximately 0.22\u20130.26 m long, 0.10\u20130.12 m wide at the bowl, and 0.03\u20130.05 m tall, with a shallow concave bowl and a curled/raised handle end. Because several variants are shown but no product data is provided, the root estimate uses the common polished/brushed stainless-steel variant as the representative rigid body. For a pressed stainless shell of roughly 1.0\u20131.5 mm wall thickness and about 0.018\u20130.022 m^2 developed surface area, the actual metal volume is roughly 2.0e-5\u20133.0e-5 m^3, giving a mass range near 0.15\u20130.24 kg at 7850 kg/m^3; 0.18 kg is a practical nominal value. The density is set to stainless-steel material density, but mass should be authored explicitly in USD/PhysX because using convex collision volume with material density would overestimate mass for this thin shell. The contact surface is smooth metal, so friction is moderate: static friction about 0.45 and dynamic friction about 0.35 for metal on typical table/conveyor/contact surfaces. Restitution is set to 0.50, lower than an ideal steel ball because the shallow shell shape, rim contact, and surface finish dissipate energy. Collision should not be a single convex hull because that would fill the concave bowl and remove useful interior contact; convex decomposition is the recommended dynamic rigid-body collider, using several hulls for the bowl, rim, handle, and curled tip. If exact interior nesting or liquid/particle contact is needed, an SDF mesh can be substituted at higher cost. Small contact offsets are recommended because the object is thin and has curved edges: rest offset around 0.5 mm and contact offset around 3 mm. CCD is enabled because the object has thin edges and could tunnel through surfaces if dropped or moved quickly. The body has no articulation joints; all articulation fields are therefore inactive.",
-      "static_friction": 0.45,
-      "dynamic_friction": 0.35,
-      "restitution": 0.5,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        0.0031943546844286495,
+        0.0002971860682418594,
+        0.017229373495574213
+      ],
+      "collision": {},
+      "density": 7850.0,
+      "id": "part_00",
+      "inertia": [
+        0.00010009282505816217,
+        0.0005622032721004926,
+        0.0006424078246210007
+      ],
+      "mass": 0.18,
+      "material": "stainless_steel",
+      "name": "D00781 Spoon Rest",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": ""
+      "source": {
+        "object_name": "D00781 Spoon Rest",
+        "part_name": "D00781 Spoon Rest"
+      },
+      "volume": 0.0001546054990268061
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00781 Spoon Rest",
-  "object_description": "A shallow spoon-shaped rest with a rounded concave bowl and a long raised curved handle. The pictured variants include polished or brushed metal, wood, ceramic, glass, and matte black cast-metal finishes.",
-  "object_semantic": {
-    "qid": null
-  },
-  "total_mass": 0.18,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies"
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  }
 }

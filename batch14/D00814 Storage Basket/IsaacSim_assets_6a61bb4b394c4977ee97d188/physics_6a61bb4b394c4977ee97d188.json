@@ -1,119 +1,83 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.14674974,
+        0.12591085,
+        0.10806036
+      ],
+      "min": [
+        -0.15077934,
+        0.0,
+        -0.11109831
+      ],
+      "size": [
+        0.29752908,
+        0.12591085,
+        0.21915867
+      ]
+    },
+    "description": "A rectangular, gray plastic storage basket with an open top and integrated side handle cutouts.",
+    "name": "generated reference 01",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.64
+  },
+  "asset_id": "D00814",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "generated reference 01",
-      "source_part_name": "generated reference 01",
-      "source_object_name": "generated reference 01",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "plastic",
-      "material": "plastic",
-      "mass": 0.64,
-      "density": 950.0,
-      "inertia": [
-        0.005053725418048157,
-        0.007345378846290627,
-        0.010133028474256645
-      ],
-      "inertia_axes": [
-        0.9999998410841082,
-        0.0005244647071228646,
-        -0.00010201578883750617,
-        -0.00017989249129171488
-      ],
-      "center_of_mass": [
-        -0.002146343464210724,
-        0.0012680965131722703,
-        0.04582641065961261
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.0004956123451094665,
       "bounds": {
-        "min": [
-          -0.15077934,
-          0.0,
-          -0.11109831
+        "center": [
+          -0.0020559570213862103,
+          0.04631509626496968,
+          -0.0015081444095094516
         ],
         "max": [
           0.14674974,
           0.12591085,
           0.10806036
         ],
-        "center": [
-          -0.0020559570213862103,
-          0.04631509626496968,
-          -0.0015081444095094516
+        "min": [
+          -0.15077934,
+          0.0,
+          -0.11109831
         ]
       },
-      "description": "A rectangular, gray plastic storage basket with an open top and integrated side handle cutouts.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The visual appearance and provided dimensions (0.3 x 0.2 x 0.15 m) indicate a standard molded plastic storage basket. The primary material is estimated to be a rigid polymer like polypropylene, which has a typical density of 950 kg/m^3. Using the provided voxel volume of approximately 0.000676 m^3, the overall mass is estimated at around 0.64 kg. For physics simulation, plastic-on-plastic or plastic-on-surface interactions typically exhibit moderate friction (static: 0.4, dynamic: 0.35) and low restitution (0.3) due to minimal elasticity on impact. Crucially, a 'convex_decomposition' collider type is necessary rather than a simple convex hull, as the basket's hollow interior and handle cutouts must be accurately modeled to allow objects to be placed inside it during simulation.",
-      "static_friction": 0.4,
-      "dynamic_friction": 0.35,
-      "restitution": 0.3,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        -0.002146343464210724,
+        0.0012680965131722703,
+        0.04582641065961261
+      ],
+      "collision": {},
+      "density": 950.0,
+      "id": "part_00",
+      "inertia": [
+        0.005053725418048157,
+        0.007345378846290627,
+        0.010133028474256645
+      ],
+      "mass": 0.64,
+      "material": "plastic",
+      "name": "generated reference 01",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": "",
-      "appearance_properties": {},
-      "newton": {
-        "collisions": {
-          "collider_type": "convex_decomposition",
-          "rest_offset": 0,
-          "contact_offset": 0.005,
-          "explosion_view_distance": 0,
-          "collision_mesh_debug_visualization": false
-        },
-        "simulation_scene": {
-          "simulation_steps_per_second": 60,
-          "enable_ccd": false,
-          "gravitational_acceleration": [
-            0,
-            0,
-            -9.81
-          ],
-          "gpu_buffer_parameters": {},
-          "residuals": {}
-        }
-      }
+      "source": {
+        "object_name": "generated reference 01",
+        "part_name": "generated reference 01"
+      },
+      "volume": 0.0004956123451094665
     }
   ],
-  "joint_relations": [],
-  "base_link": "generated reference 01",
-  "fix_base": false,
-  "object_description": "A rectangular, gray plastic storage basket with an open top and integrated side handle cutouts.",
-  "object_semantic": {
-    "qid": null
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {
+    "fix_base": false
   },
-  "total_mass": 0.64,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies",
-  "total_object_mass_kg": 0.64,
-  "_authoritative_context_applied": {
-    "object": {},
-    "parts": [
-      {
-        "part_index": 0,
-        "part_id": "part_00",
-        "fields": [
-          "bounds",
-          "canonical_name",
-          "material",
-          "part_id",
-          "part_index",
-          "source_object_name",
-          "source_part_name"
-        ]
-      }
-    ]
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
   }
 }

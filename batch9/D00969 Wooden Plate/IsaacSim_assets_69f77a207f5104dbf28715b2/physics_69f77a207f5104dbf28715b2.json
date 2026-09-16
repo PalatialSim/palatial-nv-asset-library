@@ -1,121 +1,81 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.12623900175094604,
+        0.12668199837207794,
+        0.02802800014615059
+      ],
+      "min": [
+        -0.1269019991159439,
+        -0.12649700045585632,
+        -2.9999999242136255e-05
+      ],
+      "size": [
+        0.25314100086688995,
+        0.25317899882793427,
+        0.028058000145392725
+      ]
+    },
+    "description": "A round wooden plate with a smooth, polished grain finish and a shallow, curved depression.",
+    "name": "D00969 Wooden Plate",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.25
+  },
+  "asset_id": "D00969",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00969 Wooden Plate",
-      "source_part_name": "D00969 Wooden Plate",
-      "source_object_name": "D00969 Wooden Plate",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "wood",
-      "material": "wood",
-      "non_visual_material": null,
-      "mass": 0.25,
-      "density": 600.0,
-      "inertia": [
-        0.0006080365033041189,
-        0.0006128526084896933,
-        0.001208901190569313
-      ],
-      "inertia_axes": [
-        0.9324646569225968,
-        -0.0002585991409103924,
-        -0.0004378767160764241,
-        0.361260854481481
-      ],
-      "center_of_mass": [
-        -0.0007406624444413382,
-        -5.409670905022181e-05,
-        0.007083035240943974
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.00025357619461035305,
       "bounds": {
-        "min": [
-          -0.1269019991159439,
-          -0.12649700045585632,
-          -2.9999999242136255e-05
+        "center": [
+          -0.00025993260479173963,
+          -4.550197263685761e-05,
+          0.009738092130627351
         ],
         "max": [
           0.12623900175094604,
           0.12668199837207794,
           0.02802800014615059
         ],
-        "center": [
-          -0.00025993260479173963,
-          -4.550197263685761e-05,
-          0.009738092130627351
+        "min": [
+          -0.1269019991159439,
+          -0.12649700045585632,
+          -2.9999999242136255e-05
         ]
       },
-      "description": "A round wooden plate with a smooth, polished grain finish and a shallow, curved depression.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "Based on visual analysis and provided metadata, the object is a 25.4 cm (10-inch) wooden plate. The material is solid wood, dictating a physical density of roughly 600 kg/m^3. Following the provided hint to prefer product mass priors for thin objects, the mass is estimated at 0.25 kg, a typical weight for a hardwood plate of this size, rather than relying strictly on voxel volume which often underestimates thin shells. Standard wooden surface friction (0.5 static) and low restitution (0.3) are applied. A 'convex_decomposition' collider is essential here; a simple convex hull would close off the plate's depression, preventing objects from realistically resting inside it. A standard contact offset of 1mm is used to ensure stable physics simulation during tabletop manipulation tasks.",
-      "static_friction": 0.5,
-      "dynamic_friction": 0.4,
-      "restitution": 0.3,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        -0.0007406624444413382,
+        -5.409670905022181e-05,
+        0.007083035240943974
+      ],
+      "collision": {},
+      "density": 600.0,
+      "id": "part_00",
+      "inertia": [
+        0.0006080365033041189,
+        0.0006128526084896933,
+        0.001208901190569313
+      ],
+      "mass": 0.25,
+      "material": "wood",
+      "name": "D00969 Wooden Plate",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": "",
-      "appearance_properties": {},
-      "newton": {
-        "collisions": {
-          "collider_type": "convex_decomposition",
-          "rest_offset": 0,
-          "contact_offset": 0.001,
-          "explosion_view_distance": 0,
-          "collision_mesh_debug_visualization": false
-        },
-        "simulation_scene": {
-          "simulation_steps_per_second": 60,
-          "enable_ccd": false,
-          "gravitational_acceleration": [
-            0,
-            0,
-            -9.81
-          ],
-          "gpu_buffer_parameters": {},
-          "residuals": {}
-        }
-      }
+      "source": {
+        "object_name": "D00969 Wooden Plate",
+        "part_name": "D00969 Wooden Plate"
+      },
+      "volume": 0.00025357619461035305
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00969 Wooden Plate",
-  "object_description": "A round wooden plate with a smooth, polished grain finish and a shallow, curved depression.",
-  "object_semantic": {
-    "qid": null
-  },
-  "total_mass": 0.25,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies",
-  "total_object_mass_kg": 0.25,
-  "_authoritative_context_applied": {
-    "object": {},
-    "parts": [
-      {
-        "part_index": 0,
-        "part_id": "part_00",
-        "fields": [
-          "bounds",
-          "canonical_name",
-          "material",
-          "part_id",
-          "part_index",
-          "source_object_name",
-          "source_part_name"
-        ]
-      }
-    ]
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
   }
 }

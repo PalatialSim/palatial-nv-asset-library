@@ -1,102 +1,81 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.08378836512565613,
+        0.08372516930103302,
+        0.08193416893482208
+      ],
+      "min": [
+        -0.08348645269870758,
+        -0.08325565606355667,
+        -0.00017972463683690876
+      ],
+      "size": [
+        0.1672748178243637,
+        0.1669808253645897,
+        0.08211389357165899
+      ]
+    },
+    "description": "A matte white ceramic bowl with a rolled rim and a flat, distinct circular base.",
+    "name": "D00506 Medium Bowl",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.4
+  },
+  "asset_id": "D00506",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00506 Medium Bowl",
-      "source_part_name": "D00506 Medium Bowl",
-      "source_object_name": "D00506 Medium Bowl",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "ceramic",
-      "material": "ceramic",
-      "non_visual_material": null,
-      "mass": 0.4,
-      "density": 2400.0,
-      "inertia": [
-        0.0010457701409742847,
-        0.0010473408737696871,
-        0.001620008945255264
-      ],
-      "inertia_axes": [
-        0.998773564676761,
-        0.001007273431370613,
-        -6.07266002993212e-05,
-        -0.049500992064707365
-      ],
-      "center_of_mass": [
-        0.00013721125857236064,
-        0.0007513323907299532,
-        0.03832962623413427
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.00029150314650095295,
       "bounds": {
-        "min": [
-          -0.08348645269870758,
-          -0.08325565606355667,
-          -0.00017972463683690876
+        "center": [
+          0.00012925310707759854,
+          6.94114662116986e-05,
+          0.04094364415025134
         ],
         "max": [
           0.08378836512565613,
           0.08372516930103302,
           0.08193416893482208
         ],
-        "center": [
-          0.00012925310707759854,
-          6.94114662116986e-05,
-          0.04094364415025134
+        "min": [
+          -0.08348645269870758,
+          -0.08325565606355667,
+          -0.00017972463683690876
         ]
       },
-      "description": "A matte white ceramic bowl with a rolled rim and a flat, distinct circular base.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The object is visually identified as a standard ceramic bowl. To simulate this accurately in Isaac Sim, capturing its concavity is the most critical factor; a standard 'convex_hull' would cap the opening, preventing objects from entering the bowl. Therefore, 'convex_decomposition' is heavily recommended to generate multiple convex shapes that approximate the hollow interior. Alternatively, an 'sdf_mesh' could be used for highly precise inner-surface collisions if computational budget allows. The material is estimated as ceramic, which typically has a density around 2400 kg/m\u00b3. Assuming standard dimensions (approx. 15cm diameter), the estimated mass is 0.4 kg. Ceramic has low restitution (it does not bounce well) and moderate friction coefficients. Continuous Collision Detection (CCD) is recommended if the bowl is expected to be dropped or thrown during simulation to prevent it from tunneling through the floor.",
-      "static_friction": 0.5,
-      "dynamic_friction": 0.4,
-      "restitution": 0.15,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        0.00013721125857236064,
+        0.0007513323907299532,
+        0.03832962623413427
+      ],
+      "collision": {},
+      "density": 2400.0,
+      "id": "part_00",
+      "inertia": [
+        0.0010457701409742847,
+        0.0010473408737696871,
+        0.001620008945255264
+      ],
+      "mass": 0.4,
+      "material": "ceramic",
+      "name": "D00506 Medium Bowl",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": "",
-      "appearance_properties": {},
-      "newton": {
-        "collisions": {
-          "collider_type": "convex_decomposition",
-          "rest_offset": 0,
-          "contact_offset": 0.002,
-          "explosion_view_distance": 0,
-          "collision_mesh_debug_visualization": false
-        },
-        "simulation_scene": {
-          "simulation_steps_per_second": 60,
-          "enable_ccd": true,
-          "gravitational_acceleration": [
-            0,
-            0,
-            -9.81
-          ],
-          "gpu_buffer_parameters": {},
-          "residuals": {}
-        }
-      }
+      "source": {
+        "object_name": "D00506 Medium Bowl",
+        "part_name": "D00506 Medium Bowl"
+      },
+      "volume": 0.00029150314650095295
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00506 Medium Bowl",
-  "object_description": "A matte white ceramic bowl with a rolled rim and a flat, distinct circular base.",
-  "object_semantic": {
-    "qid": null
-  },
-  "total_mass": 0.4,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies"
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  }
 }

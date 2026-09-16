@@ -1,81 +1,81 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.05935399979352951,
+        0.059415001422166824,
+        0.052636999636888504
+      ],
+      "min": [
+        -0.05956900119781494,
+        -0.05942299962043762,
+        -9.999999974752427e-07
+      ],
+      "size": [
+        0.11892300099134445,
+        0.11883800104260445,
+        0.05263799963688598
+      ]
+    },
+    "description": "A small round ceramic or stoneware bowl with a concave interior, rounded rim, and small foot ring. Finishes vary from glossy white and speckled gray to matte black and terracotta.",
+    "name": "D00270 Dish Bowl Plate",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.45
+  },
+  "asset_id": "D00270",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00270 Dish Bowl Plate",
-      "source_part_name": "D00270 Dish Bowl Plate",
-      "source_object_name": "D00270 Dish Bowl Plate",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "glazed_ceramic_stoneware",
-      "material": "glazed_ceramic_stoneware",
-      "non_visual_material": null,
-      "mass": 0.45,
-      "density": 2300.0,
-      "inertia": [
-        0.0005735213638639103,
-        0.0005808959290713508,
-        0.000946156958645202
-      ],
-      "inertia_axes": [
-        0.9998354171801936,
-        -4.163210867065211e-05,
-        0.0007405188316054188,
-        0.01812700887449463
-      ],
-      "center_of_mass": [
-        3.139157765860644e-05,
-        -3.112566445006852e-05,
-        0.023286627348189207
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 9.980559845757764e-05,
       "bounds": {
-        "min": [
-          -0.05956900119781494,
-          -0.05942299962043762,
-          -9.999999974752427e-07
+        "center": [
+          1.2729397574928415e-05,
+          -1.812630333758813e-05,
+          0.025442655510766726
         ],
         "max": [
           0.05935399979352951,
           0.059415001422166824,
           0.052636999636888504
         ],
-        "center": [
-          1.2729397574928415e-05,
-          -1.812630333758813e-05,
-          0.025442655510766726
+        "min": [
+          -0.05956900119781494,
+          -0.05942299962043762,
+          -9.999999974752427e-07
         ]
       },
-      "description": "A small round ceramic or stoneware bowl with a concave interior, rounded rim, and small foot ring. Finishes vary from glossy white and speckled gray to matte black and terracotta.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The object appears to be a small tableware bowl made from glazed ceramic, stoneware, or fired clay. For a typical bowl of this form, a reasonable physical size is about 0.12-0.16 m outer diameter, 0.055-0.08 m height, with a 3-5 mm wall thickness and a slightly thicker rounded rim and foot ring. Fired ceramic/stoneware has a material density around 2200-2500 kg/m^3; using approximately 2300 kg/m^3 and an estimated ceramic volume of about 1.7e-4 to 2.2e-4 m^3 gives a mass range of roughly 0.39-0.51 kg, so 0.45 kg is a practical single-bowl mass estimate. If the imported asset contains multiple bowls as separate visible objects, each should generally be authored as its own rigid body using similar per-bowl values; if all are intentionally one rigid body, scale the total mass by the number of bowls. The dominant contact material is ceramic/stoneware, with a hard glazed exterior and possibly a rougher unglazed foot ring. Static friction is estimated at 0.55 and dynamic friction at 0.42, reflecting ceramic contact with common surfaces and the slightly higher grip of the unglazed base ring. Restitution is set to 0.35: ceramic is hard and can rebound slightly, but tableware bowls lose energy quickly and are brittle, so a lower value is more stable and realistic than glass-like restitution. The bowl is geometrically concave, so a single convex hull would incorrectly cap the open top and prevent correct internal contact. For Isaac Sim rigid body use, convex decomposition is the best default collision method: use multiple convex pieces around the side wall, rim, interior, and foot ring to preserve the usable hollow cavity while remaining PhysX-compatible and performant. SDF mesh collision can be used for higher-fidelity concavity if the workflow supports it and performance cost is acceptable, but convex decomposition is safer for dynamic rigid bodies. Contact offset is set to 0.002 m to provide stable contact generation for a small object without visibly floating too much; rest offset is 0.0 m so the collision surface aligns closely with the visual mesh. CCD is recommended because the bowl has thin walls and a narrow rim, and a dropped or fast-moving bowl may otherwise tunnel through thin objects or tabletops. For non-deformable ceramic, compliant contacts should normally remain disabled; if solver jitter occurs in stacks or bowl-on-bowl contact, use very stiff, lightly damped compliant contact settings rather than soft deformation.",
-      "static_friction": 0.55,
-      "dynamic_friction": 0.42,
-      "restitution": 0.35,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        3.139157765860644e-05,
+        -3.112566445006852e-05,
+        0.023286627348189207
+      ],
+      "collision": {},
+      "density": 2300.0,
+      "id": "part_00",
+      "inertia": [
+        0.0005735213638639103,
+        0.0005808959290713508,
+        0.000946156958645202
+      ],
+      "mass": 0.45,
+      "material": "glazed_ceramic_stoneware",
+      "name": "D00270 Dish Bowl Plate",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": ""
+      "source": {
+        "object_name": "D00270 Dish Bowl Plate",
+        "part_name": "D00270 Dish Bowl Plate"
+      },
+      "volume": 9.980559845757764e-05
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00270 Dish Bowl Plate",
-  "object_description": "A small round ceramic or stoneware bowl with a concave interior, rounded rim, and small foot ring. Finishes vary from glossy white and speckled gray to matte black and terracotta.",
-  "object_semantic": {
-    "qid": null
-  },
-  "total_mass": 0.45,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies"
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  }
 }

@@ -1,81 +1,81 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.06976699829101562,
+        0.05360899865627289,
+        0.21671700477600098
+      ],
+      "min": [
+        -0.07012300193309784,
+        -0.05435999855399132,
+        9.999999974752427e-07
+      ],
+      "size": [
+        0.13989000022411346,
+        0.1079689972102642,
+        0.2167160047760035
+      ]
+    },
+    "description": "A set of small countertop storage canisters with cylindrical and box-like bodies made from brushed metal, clear glass, glazed ceramic, wood, cork, and plastic lids.",
+    "name": "D00852 Tea Container",
+    "object_type": "rigid_bodies",
+    "total_mass": 4.8
+  },
+  "asset_id": "D00852",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00852 Tea Container",
-      "source_part_name": "D00852 Tea Container",
-      "source_object_name": "D00852 Tea Container",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "mixed_hard_ceramic_glass_metal_surfaces",
-      "material": "mixed_hard_ceramic_glass_metal_surfaces",
-      "non_visual_material": null,
-      "mass": 4.8,
-      "density": 650.0,
-      "inertia": [
-        0.004253556885073384,
-        0.010331376898689291,
-        0.010798607453371276
-      ],
-      "inertia_axes": [
-        0.5155387987022941,
-        0.5033450593303082,
-        0.4890519833842992,
-        -0.4916214558257676
-      ],
-      "center_of_mass": [
-        0.00030371636461522624,
-        0.0007667157526015711,
-        0.07527523029453226
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.0008307701852091382,
       "bounds": {
-        "min": [
-          -0.07012300193309784,
-          -0.05435999855399132,
-          9.999999974752427e-07
+        "center": [
+          -0.0005092206181521263,
+          0.0002800434806228971,
+          0.11758414408101933
         ],
         "max": [
           0.06976699829101562,
           0.05360899865627289,
           0.21671700477600098
         ],
-        "center": [
-          -0.0005092206181521263,
-          0.0002800434806228971,
-          0.11758414408101933
+        "min": [
+          -0.07012300193309784,
+          -0.05435999855399132,
+          9.999999974752427e-07
         ]
       },
-      "description": "A set of small countertop storage canisters with cylindrical and box-like bodies made from brushed metal, clear glass, glazed ceramic, wood, cork, and plastic lids.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The image shows a mixed set of approximately nine small household canisters rather than one uniform material object. I estimate each container to be roughly 80\u2013120 mm in diameter or width and 90\u2013160 mm tall. Thin metal tins/canisters are likely 0.25\u20130.55 kg each, glass jars about 0.40\u20130.70 kg depending on wall thickness and contents, and ceramic jars about 0.60\u20130.90 kg with heavier lids. This gives an aggregate mass near 4.8 kg for the visible set, or about 0.5\u20130.6 kg per individual canister if imported as separate rigid bodies. The density is set to an effective PhysX density of 650 kg/m^3, not the solid material density, because the objects are mostly hollow with thin walls and large enclosed air volumes; if using exact mesh volumes, explicit mass overrides per object are preferred. Contact behavior is blended across hard glazed ceramic, glass, painted/unfinished metal, and wood/cork surfaces. Ceramic/metal surfaces generally use static friction around 0.4\u20130.6, glass around 0.2\u20130.4, and cork/wood around 0.5\u20130.7, so a set-level static friction of 0.48 and dynamic friction of 0.38 are reasonable for tabletop contact. Restitution is reduced to 0.32 even though glass/metal alone can be bouncier, because hollow bodies, lids, seams, contents, and slight surface deformation dissipate impact energy and lower bounce. For Isaac Sim/PhysX, convex decomposition is preferred because the collection contains cylinders, boxes, lip details, lids, recessed handles, corks, and latch hardware; a single convex hull would overfill concavities and make stacking/contact inaccurate. SDF or detailed triangle collision is unnecessary for normal rigid-body use unless precise lid openings or grasping inside the jar mouth is required. Recommended rest offset is 0.0 m and contact offset about 0.003 m for centimeter-scale props, giving stable contact generation without visibly floating. CCD is enabled because thin-walled jars/tins can tunnel during drops or fast manipulation. For stable stacking, 120 Hz stepping is recommended; default 60 Hz is acceptable for slow motion. Sleep thresholds should remain modest, about 0.005\u20130.02 mass-normalized kinetic energy equivalent, to let settled containers hibernate without prematurely sleeping during rolling or rocking. Compliant contacts are disabled because these are treated as rigid hard objects; if cork or soft plastic lids need damping, use a high stiffness/low compliance contact material locally rather than on the whole asset.",
-      "static_friction": 0.48,
-      "dynamic_friction": 0.38,
-      "restitution": 0.32,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        0.00030371636461522624,
+        0.0007667157526015711,
+        0.07527523029453226
+      ],
+      "collision": {},
+      "density": 650.0,
+      "id": "part_00",
+      "inertia": [
+        0.004253556885073384,
+        0.010331376898689291,
+        0.010798607453371276
+      ],
+      "mass": 4.8,
+      "material": "mixed_hard_ceramic_glass_metal_surfaces",
+      "name": "D00852 Tea Container",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": ""
+      "source": {
+        "object_name": "D00852 Tea Container",
+        "part_name": "D00852 Tea Container"
+      },
+      "volume": 0.0008307701852091382
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00852 Tea Container",
-  "object_description": "A set of small countertop storage canisters with cylindrical and box-like bodies made from brushed metal, clear glass, glazed ceramic, wood, cork, and plastic lids.",
-  "object_semantic": {
-    "qid": null
-  },
-  "total_mass": 4.8,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies"
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  }
 }

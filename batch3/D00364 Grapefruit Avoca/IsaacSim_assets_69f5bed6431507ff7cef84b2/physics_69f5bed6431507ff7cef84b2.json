@@ -1,81 +1,81 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.03982299938797951,
+        0.039861999452114105,
+        0.09724599868059158
+      ],
+      "min": [
+        -0.0401340015232563,
+        -0.03955100104212761,
+        -8.399999933317304e-05
+      ],
+      "size": [
+        0.07995700091123581,
+        0.07941300049424171,
+        0.09732999867992476
+      ]
+    },
+    "description": "A round green citrus fruit with a rough, dimpled rind and scattered brown surface blemishes. It has a waxy organic peel and a small stem scar at the top.",
+    "name": "D00364 Grapefruit Avoca",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.85
+  },
+  "asset_id": "D00364",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00364 Grapefruit Avoca",
-      "source_part_name": "D00364 Grapefruit Avoca",
-      "source_object_name": "D00364 Grapefruit Avoca",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "organic_citrus_rind",
-      "material": "organic_citrus_rind",
-      "non_visual_material": null,
-      "mass": 0.85,
-      "density": 650.0,
-      "inertia": [
-        0.0009557738978770141,
-        0.0010815718273958523,
-        0.001087414103805489
-      ],
-      "inertia_axes": [
-        0.677841479647303,
-        -0.20833326474366598,
-        -0.6897745101328415,
-        -0.1460797879304291
-      ],
-      "center_of_mass": [
-        0.00015759529632292977,
-        5.763029525453322e-06,
-        0.05193132568491675
-      ],
-      "part_origin_world": [
-        0.00015759529632292977,
-        5.763029525453322e-06,
-        0.05193132568491675
-      ],
-      "volume": 0.0006992666566985745,
       "bounds": {
-        "min": [
-          -0.0401340015232563,
-          -0.03955100104212761,
-          -8.399999933317304e-05
+        "center": [
+          6.907216139387486e-05,
+          9.943202268262792e-05,
+          0.04649187135211773
         ],
         "max": [
           0.03982299938797951,
           0.039861999452114105,
           0.09724599868059158
         ],
-        "center": [
-          6.907216139387486e-05,
-          9.943202268262792e-05,
-          0.04649187135211773
+        "min": [
+          -0.0401340015232563,
+          -0.03955100104212761,
+          -8.399999933317304e-05
         ]
       },
-      "description": "A round green citrus fruit with a rough, dimpled rind and scattered brown surface blemishes. It has a waxy organic peel and a small stem scar at the top.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The model appears to be a large green citrus fruit, similar to a pomelo or grapefruit, with a nearly spherical to slightly ovoid shape and a thick textured rind. No product data or scale reference is provided, so the estimates assume an approximate diameter of 0.14\u20130.16 m and a bulk volume around 0.0013 m\u00b3. A realistic mass for this size of citrus fruit is about 0.8\u20131.0 kg; 0.85 kg is used as a practical rigid-body value. This gives an effective bulk density of roughly 650 kg/m\u00b3, lower than water because citrus fruit includes porous pith and internal air spaces. The dominant contact material is the waxy, rough citrus rind, not the internal pulp. The bumpy peel should have moderate friction: higher than smooth plastic or glass, but lower than rubber, so static friction is estimated at 0.55 and dynamic friction at 0.43. Restitution is low because a fruit is internally damped and slightly compliant; it may bounce a little when dropped, but much less than rubber or hard plastic, so 0.18 is appropriate. For Isaac Sim/PhysX, the visual rind texture should not be used directly as collision geometry because the fine dimples would create noisy contacts and unstable rolling. A single simplified convex hull, preferably smoothed and low vertex count, is recommended. A sphere approximation would also be efficient, but a convex hull better preserves the slight ovoid form. Contact offset is set to 0.003 m, large enough for stable contact generation at this scale without visibly floating. Rest offset is 0.0 m so the collision surface aligns closely with the visible fruit. CCD is not necessary for normal rolling or tabletop handling, but should be enabled if the fruit is thrown or dropped at high speed. Because the real object is slightly compliant while the simulated body is rigid, light compliant contact settings are recommended to reduce unrealistic hard impacts without making the object numerically soft.",
-      "static_friction": 0.55,
-      "dynamic_friction": 0.43,
-      "restitution": 0.18,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        0.00015759529632292977,
+        5.763029525453322e-06,
+        0.05193132568491675
+      ],
+      "collision": {},
+      "density": 650.0,
+      "id": "part_00",
+      "inertia": [
+        0.0009557738978770141,
+        0.0010815718273958523,
+        0.001087414103805489
+      ],
+      "mass": 0.85,
+      "material": "organic_citrus_rind",
+      "name": "D00364 Grapefruit Avoca",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": ""
+      "source": {
+        "object_name": "D00364 Grapefruit Avoca",
+        "part_name": "D00364 Grapefruit Avoca"
+      },
+      "volume": 0.0006992666566985745
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00364 Grapefruit Avoca",
-  "object_description": "A round green citrus fruit with a rough, dimpled rind and scattered brown surface blemishes. It has a waxy organic peel and a small stem scar at the top.",
-  "object_semantic": {
-    "qid": null
-  },
-  "total_mass": 0.85,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies"
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  }
 }

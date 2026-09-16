@@ -1,81 +1,81 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.05304500088095665,
+        0.03588800132274628,
+        0.12408799678087234
+      ],
+      "min": [
+        -0.03847400099039078,
+        -0.03599400073289871,
+        -3.7000001611886546e-05
+      ],
+      "size": [
+        0.09151900187134743,
+        0.07188200205564499,
+        0.12412499678248423
+      ]
+    },
+    "description": "A small polished brown wooden shaker with a rounded cylindrical body and domed perforated cap. The surface has visible wood grain and a smooth varnished finish.",
+    "name": "D00841 Sugarshaker",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.12
+  },
+  "asset_id": "D00841",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00841 Sugarshaker",
-      "source_part_name": "D00841 Sugarshaker",
-      "source_object_name": "D00841 Sugarshaker",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "polished_hardwood",
-      "material": "polished_hardwood",
-      "non_visual_material": null,
-      "mass": 0.12,
-      "density": 650.0,
-      "inertia": [
-        7.244947964605886e-05,
-        0.00019634891262095258,
-        0.00019651002109962045
-      ],
-      "inertia_axes": [
-        0.5132130368770889,
-        0.4863829149351544,
-        0.5135517778123758,
-        -0.4861158404581427
-      ],
-      "center_of_mass": [
-        -0.00016384183887281542,
-        0.00039607280859481857,
-        0.0657087034066686
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.000490847175174592,
       "bounds": {
-        "min": [
-          -0.03847400099039078,
-          -0.03599400073289871,
-          -3.7000001611886546e-05
+        "center": [
+          0.0006534912184867938,
+          -6.444908432673511e-05,
+          0.0757935137575122
         ],
         "max": [
           0.05304500088095665,
           0.03588800132274628,
           0.12408799678087234
         ],
-        "center": [
-          0.0006534912184867938,
-          -6.444908432673511e-05,
-          0.0757935137575122
+        "min": [
+          -0.03847400099039078,
+          -0.03599400073289871,
+          -3.7000001611886546e-05
         ]
       },
-      "description": "A small polished brown wooden shaker with a rounded cylindrical body and domed perforated cap. The surface has visible wood grain and a smooth varnished finish.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The object appears to be a compact wooden salt/pepper-style shaker with a bulbous cylindrical body, a rounded cap, a narrow circumferential groove, and small perforations on the top. No product data is available, so SI estimates are based on a typical height of about 0.08-0.10 m and maximum diameter of about 0.045-0.055 m. A solid bounding cylinder of this size would occupy roughly 1.3e-4 to 1.8e-4 m^3; because the shape is tapered and likely partly hollow but made from dense polished hardwood, a realistic total rigid-body mass is estimated at 0.12 kg. The assigned density of 650 kg/m^3 represents medium hardwood/varnished wood and should be used as the dominant material density if mass is not explicitly overridden. The contact material is smooth finished wood, so friction is moderate: static friction about 0.52 and dynamic friction about 0.40 against common tabletop materials, with lower values on very smooth plastic/metal and higher values on rubber. Restitution is estimated at 0.35 because wood is hard but the rounded hollow body and varnished surface dissipate energy and should not bounce like rubber or glass. The center of mass should lie on the vertical symmetry axis and slightly below mid-height due to the larger lower body; for most uses the default inertia tensor computed from the collision volume is acceptable, though a custom inertia based on a tapered cylinder would improve rolling behavior. For collisions, a single convex hull would overfill the neck groove and cap transition, while the small top holes are not important for external contact. A convex decomposition using 3-6 hulls for the lower body, neck, cap, and top disk is the best balance of fidelity and performance for Isaac Sim/PhysX dynamic rigid bodies. SDF or detailed triangle mesh collision is unnecessary unless the perforation recesses must physically interact with tiny probes. A rest offset of 0.0 m and contact offset of 0.002 m are appropriate for a small object at meter scale; larger offsets could make the rounded base appear to float. CCD is recommended because the object is small and can be moved quickly by a manipulator or dropped, where discrete collision may otherwise tunnel through thin surfaces. Initial velocity should be zero. For stable manipulation, use about 120 Hz physics if contact-rich; 60 Hz is acceptable for simple falling/settling. Sleep/hibernation can remain enabled with a low sleep threshold because the object is light and should settle quickly; practical velocity limits would be around 5-10 m/s linear and 50-100 rad/s angular for typical tabletop scenes. Compliant contacts are disabled because the model is rigid varnished wood; if contact chatter appears, a very stiff optional compliance can be introduced rather than modeling deformability.",
-      "static_friction": 0.52,
-      "dynamic_friction": 0.4,
-      "restitution": 0.35,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        -0.00016384183887281542,
+        0.00039607280859481857,
+        0.0657087034066686
+      ],
+      "collision": {},
+      "density": 650.0,
+      "id": "part_00",
+      "inertia": [
+        7.244947964605886e-05,
+        0.00019634891262095258,
+        0.00019651002109962045
+      ],
+      "mass": 0.12,
+      "material": "polished_hardwood",
+      "name": "D00841 Sugarshaker",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": ""
+      "source": {
+        "object_name": "D00841 Sugarshaker",
+        "part_name": "D00841 Sugarshaker"
+      },
+      "volume": 0.000490847175174592
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00841 Sugarshaker",
-  "object_description": "A small polished brown wooden shaker with a rounded cylindrical body and domed perforated cap. The surface has visible wood grain and a smooth varnished finish.",
-  "object_semantic": {
-    "qid": null
-  },
-  "total_mass": 0.12,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies"
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  }
 }

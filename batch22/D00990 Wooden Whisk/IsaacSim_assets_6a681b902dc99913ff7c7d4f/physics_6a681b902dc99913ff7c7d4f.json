@@ -1,97 +1,72 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.021918000653386,
+        0.183766007423401,
+        0.048757580108941
+      ],
+      "min": [
+        -0.022041000425816,
+        -0.097281999886036,
+        0.000912579948249
+      ],
+      "size": [
+        0.043959001079202004,
+        0.281048007309437,
+        0.047845000160692
+      ]
+    },
+    "description": "A classic kitchen whisk carved entirely from polished dark wood. It features a solid cylindrical handle attached to a bulbous head made of thick, continuous wooden tines.",
+    "name": "generated reference 01",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.05
+  },
+  "asset_id": "D00990",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "generated reference 01",
-      "source_part_name": "generated reference 01",
-      "source_object_name": "generated reference 01",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "polished_wood",
-      "material": "polished_wood",
-      "mass": 0.05,
-      "density": 700,
       "bounds": {
-        "min": [
-          -0.022041000425816,
-          -0.097281999886036,
-          0.000912579948249
+        "center": [
+          -6.6012229533e-05,
+          0.011852795049288,
+          0.024825385110907
         ],
         "max": [
           0.021918000653386,
           0.183766007423401,
           0.048757580108941
         ],
-        "center": [
-          -6.6012229533e-05,
-          0.011852795049288,
-          0.024825385110907
+        "min": [
+          -0.022041000425816,
+          -0.097281999886036,
+          0.000912579948249
         ]
       },
-      "description": "A classic kitchen whisk carved entirely from polished dark wood. It features a solid cylindrical handle attached to a bulbous head made of thick, continuous wooden tines.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The object is identified as a wooden whisk with dimensions 0.06 x 0.06 x 0.28 m. Based on the provided voxel volume of ~6.81e-05 m^3 and assuming a typical hardwood density of 700 kg/m^3, the estimated mass is approximately 0.048 kg, which has been rounded to 0.05 kg for simulation stability. The material is polished wood, which dictates a moderate static friction of 0.45 and dynamic friction of 0.40. Wood has relatively low elasticity, so restitution is set to 0.3. Due to the complex, hollow structure of the whisk head, a convex_decomposition collider is recommended to approximate the spaces between the tines, and Continuous Collision Detection (CCD) is enabled to prevent this lightweight, thin-featured object from tunneling through surfaces at high velocities. Contact offsets are kept small (1mm) to ensure accurate interaction with flat surfaces like bowls or tables.",
-      "static_friction": 0.45,
-      "dynamic_friction": 0.4,
-      "restitution": 0.3,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "collision": {},
+      "density": 700,
+      "id": "part_00",
+      "mass": 0.05,
+      "material": "polished_wood",
+      "name": "generated reference 01",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": "",
-      "appearance_properties": {},
-      "newton": {
-        "collisions": {
-          "collider_type": "convex_decomposition",
-          "rest_offset": 0,
-          "contact_offset": 0.001,
-          "explosion_view_distance": 0,
-          "collision_mesh_debug_visualization": false
-        },
-        "simulation_scene": {
-          "simulation_steps_per_second": 60,
-          "enable_ccd": true,
-          "gravitational_acceleration": [
-            0,
-            0,
-            -9.81
-          ],
-          "gpu_buffer_parameters": {},
-          "residuals": {}
-        }
+      "source": {
+        "object_name": "generated reference 01",
+        "part_name": "generated reference 01"
       }
     }
   ],
-  "joint_relations": [],
-  "base_link": "generated reference 01",
-  "fix_base": false,
-  "object_description": "A classic kitchen whisk carved entirely from polished dark wood. It features a solid cylindrical handle attached to a bulbous head made of thick, continuous wooden tines.",
-  "object_semantic": {
-    "qid": null
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {
+    "fix_base": false
   },
-  "total_mass": 0.05,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies",
-  "total_object_mass_kg": 0.05,
-  "_authoritative_context_applied": {
-    "object": {},
-    "parts": [
-      {
-        "part_index": 0,
-        "part_id": "part_00",
-        "fields": [
-          "bounds",
-          "canonical_name",
-          "material",
-          "part_id",
-          "part_index",
-          "source_object_name",
-          "source_part_name"
-        ]
-      }
-    ]
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
   }
 }

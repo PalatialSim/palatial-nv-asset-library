@@ -1,81 +1,81 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.08688800036907196,
+        0.08301600068807602,
+        0.12725399434566498
+      ],
+      "min": [
+        -0.09190099686384201,
+        -0.07955099642276764,
+        1.1000000085914508e-05
+      ],
+      "size": [
+        0.17878899723291397,
+        0.16256699711084366,
+        0.12724299434557906
+      ]
+    },
+    "description": "A light tan bamboo steamer basket with stacked cylindrical bands, a woven lid, and a small loop handle. The surface shows natural bamboo grain, braided strips, and darker stitched/worn edge details.",
+    "name": "D00010 Bamboo Steamer",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.55
+  },
+  "asset_id": "D00010",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00010 Bamboo Steamer",
-      "source_part_name": "D00010 Bamboo Steamer",
-      "source_object_name": "D00010 Bamboo Steamer",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "wood",
-      "material": "wood",
-      "non_visual_material": null,
-      "mass": 0.55,
-      "density": 105.0,
-      "inertia": [
-        0.0016666141708497485,
-        0.0016949468385268694,
-        0.002561406042878477
-      ],
-      "inertia_axes": [
-        0.9999923970070528,
-        0.0002919240636195633,
-        -0.0006078609912976153,
-        -0.0038407308478116266
-      ],
-      "center_of_mass": [
-        0.002105599751806153,
-        0.0003886235743922732,
-        0.046789905379996666
-      ],
-      "part_origin_world": [
-        0.002105599751806153,
-        0.0003886235743922732,
-        0.046789905379996666
-      ],
-      "volume": 0.002777759991253496,
       "bounds": {
-        "min": [
-          -0.09190099686384201,
-          -0.07955099642276764,
-          1.1000000085914508e-05
+        "center": [
+          0.0009829334292591934,
+          -7.298275792118782e-05,
+          0.06723152958019404
         ],
         "max": [
           0.08688800036907196,
           0.08301600068807602,
           0.12725399434566498
         ],
-        "center": [
-          0.0009829334292591934,
-          -7.298275792118782e-05,
-          0.06723152958019404
+        "min": [
+          -0.09190099686384201,
+          -0.07955099642276764,
+          1.1000000085914508e-05
         ]
       },
-      "description": "A light tan bamboo steamer basket with stacked cylindrical bands, a woven lid, and a small loop handle. The surface shows natural bamboo grain, braided strips, and darker stitched/worn edge details.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The object appears to be a lightweight bamboo steamer made from thin laminated and woven bamboo strips. No exact product dimensions are provided, so I estimate a typical tabletop steamer at roughly 0.22\u20130.26 m diameter and 0.10\u20130.14 m overall height. Solid bamboo has a material density around 550\u2013750 kg/m^3, but this asset is mostly hollow air volume with thin walls, woven slats, and gaps; therefore the effective rigid-body density relative to an enclosing cylindrical collision volume is much lower. A realistic total mass for a small two-tier bamboo steamer with lid is about 0.45\u20130.70 kg, so 0.55 kg is a practical estimate. For PhysX mass authoring, if using a simple cylinder/convex hull that encloses the full object, an effective density near 90\u2013120 kg/m^3 is appropriate to reproduce that mass; if using detailed decomposed pieces, use bamboo material density closer to 650 kg/m^3 and assign thinner geometry. Friction is estimated as smooth dry bamboo/wood: static friction around 0.50\u20130.60 and dynamic friction around 0.35\u20130.45 on common lab/industrial surfaces. Restitution is kept low at 0.28 because thin bamboo and woven construction dissipate impact energy and should not bounce strongly. The geometry is mostly a short cylinder with concave internal cavities, raised rim, lid, and small handle; convex decomposition is the best general-purpose collision representation. A single convex hull or bounding cylinder would be faster but would overfill the hollow areas and handle detail. SDF mesh collision could capture the weave and concavities but is unnecessary unless precise contact with the rim/handle is required. Small contact/rest offsets are recommended because the asset is small and contact accuracy around the circular base and rim matters. CCD is usually unnecessary for a light basket at low speeds, but enabling it is safe if the object may be thrown or moved quickly. Compliant contacts are not required for true deformation, but a mild contact damping/stiffness model can approximate the slight energy absorption of thin bamboo without treating it as deformable.",
-      "static_friction": 0.55,
-      "dynamic_friction": 0.42,
-      "restitution": 0.28,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        0.002105599751806153,
+        0.0003886235743922732,
+        0.046789905379996666
+      ],
+      "collision": {},
+      "density": 105.0,
+      "id": "part_00",
+      "inertia": [
+        0.0016666141708497485,
+        0.0016949468385268694,
+        0.002561406042878477
+      ],
+      "mass": 0.55,
+      "material": "wood",
+      "name": "D00010 Bamboo Steamer",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": ""
+      "source": {
+        "object_name": "D00010 Bamboo Steamer",
+        "part_name": "D00010 Bamboo Steamer"
+      },
+      "volume": 0.002777759991253496
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00010 Bamboo Steamer",
-  "object_description": "A light tan bamboo steamer basket with stacked cylindrical bands, a woven lid, and a small loop handle. The surface shows natural bamboo grain, braided strips, and darker stitched/worn edge details.",
-  "object_semantic": {
-    "qid": null
-  },
-  "total_mass": 0.55,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies"
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  }
 }

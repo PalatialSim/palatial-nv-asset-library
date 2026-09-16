@@ -1,119 +1,83 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.05605093762278557,
+        0.08151595294475555,
+        0.03506023436784744
+      ],
+      "min": [
+        -0.040072061121463776,
+        -2.804762334562838e-05,
+        -0.03499176353216171
+      ],
+      "size": [
+        0.09612299874424934,
+        0.08154400056810118,
+        0.07005199790000916
+      ]
+    },
+    "description": "A solid blue ceramic mug with a cylindrical body that tapers slightly towards the base. It features a curved handle on one side and a smooth, glossy finish.",
+    "name": "generated reference 01",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.35
+  },
+  "asset_id": "D00180",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "generated reference 01",
-      "source_part_name": "generated reference 01",
-      "source_object_name": "generated reference 01",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "ceramic",
-      "material": "ceramic",
-      "mass": 0.35,
-      "density": 2500.0,
-      "inertia": [
-        0.000313406994292826,
-        0.00035120239361752595,
-        0.00039800478285089715
-      ],
-      "inertia_axes": [
-        0.5735266754107721,
-        -0.5726419489599748,
-        -0.41424817006899817,
-        -0.4141820909673366
-      ],
-      "center_of_mass": [
-        -0.0019432481272865915,
-        5.6521325489963835e-05,
-        0.0400371817292695
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 6.403137664220978e-05,
       "bounds": {
-        "min": [
-          -0.040072061121463776,
-          -2.804762334562838e-05,
-          -0.03499176353216171
+        "center": [
+          -0.002105171531594278,
+          0.0417484979958216,
+          -2.0825985215237905e-05
         ],
         "max": [
           0.05605093762278557,
           0.08151595294475555,
           0.03506023436784744
         ],
-        "center": [
-          -0.002105171531594278,
-          0.0417484979958216,
-          -2.0825985215237905e-05
+        "min": [
+          -0.040072061121463776,
+          -2.804762334562838e-05,
+          -0.03499176353216171
         ]
       },
-      "description": "A solid blue ceramic mug with a cylindrical body that tapers slightly towards the base. It features a curved handle on one side and a smooth, glossy finish.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "Based on the provided context and visual analysis, the object is a ceramic coffee mug. The provided dimensions (approximately 120 x 85 x 95 mm) and real-world scale context guide the mass estimation. While the voxel volume is small (likely due to the thin-walled nature of the mesh), relying on standard category priors for ceramic mugs yields an estimated mass of 0.35 kg, overriding pure volumetric calculation as suggested by the mass_estimation_hint. The density is set to a standard ceramic value of 2500 kg/m^3. Friction coefficients are estimated at 0.5 (static) and 0.4 (dynamic) to represent glazed ceramic resting on typical surfaces. Restitution is kept low at 0.2, as ceramic is hard and rigid but absorbs impacts rather than bouncing elastically. For collisions, the provided context specifically requested 'sdf' quality, making 'sdf_mesh' the ideal collider type. This perfectly supports the concave object shape, its handle, and the open container volume, ensuring accurate tabletop manipulation and internal collisions. Continuous Collision Detection (CCD) is enabled to prevent fast-moving or small objects from tunneling through the thin walls of the cup.",
-      "static_friction": 0.5,
-      "dynamic_friction": 0.4,
-      "restitution": 0.2,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        -0.0019432481272865915,
+        5.6521325489963835e-05,
+        0.0400371817292695
+      ],
+      "collision": {},
+      "density": 2500.0,
+      "id": "part_00",
+      "inertia": [
+        0.000313406994292826,
+        0.00035120239361752595,
+        0.00039800478285089715
+      ],
+      "mass": 0.35,
+      "material": "ceramic",
+      "name": "generated reference 01",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": "",
-      "appearance_properties": {},
-      "newton": {
-        "collisions": {
-          "collider_type": "sdf_mesh",
-          "rest_offset": 0,
-          "contact_offset": 0.001,
-          "explosion_view_distance": 0,
-          "collision_mesh_debug_visualization": false
-        },
-        "simulation_scene": {
-          "simulation_steps_per_second": 60,
-          "enable_ccd": true,
-          "gravitational_acceleration": [
-            0,
-            0,
-            -9.81
-          ],
-          "gpu_buffer_parameters": {},
-          "residuals": {}
-        }
-      }
+      "source": {
+        "object_name": "generated reference 01",
+        "part_name": "generated reference 01"
+      },
+      "volume": 6.403137664220978e-05
     }
   ],
-  "joint_relations": [],
-  "base_link": "generated reference 01",
-  "fix_base": false,
-  "object_description": "A solid blue ceramic mug with a cylindrical body that tapers slightly towards the base. It features a curved handle on one side and a smooth, glossy finish.",
-  "object_semantic": {
-    "qid": null
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {
+    "fix_base": false
   },
-  "total_mass": 0.35,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies",
-  "total_object_mass_kg": 0.35,
-  "_authoritative_context_applied": {
-    "object": {},
-    "parts": [
-      {
-        "part_index": 0,
-        "part_id": "part_00",
-        "fields": [
-          "bounds",
-          "canonical_name",
-          "material",
-          "part_id",
-          "part_index",
-          "source_object_name",
-          "source_part_name"
-        ]
-      }
-    ]
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
   }
 }

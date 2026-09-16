@@ -1,173 +1,138 @@
 {
+  "articulation": {
+    "has_joints": true,
+    "joints": [
+      {
+        "axis": [],
+        "child": "part_00",
+        "damping": 0.0,
+        "effort": 0.0,
+        "friction": 0.0,
+        "joint_rotation_local": [],
+        "joint_type": "floating",
+        "name": "joint_part_01__part_00",
+        "origin": [],
+        "parent": "part_01",
+        "rest_pose_state": "open",
+        "score": 0.95,
+        "stiffness": 0.0,
+        "velocity": 0.0
+      }
+    ]
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.037209,
+        0.048595,
+        0.123123
+      ],
+      "min": [
+        -0.038101,
+        -0.043876,
+        -3.2e-05
+      ],
+      "size": [
+        0.07531,
+        0.092471,
+        0.123155
+      ]
+    },
+    "description": "Small ceramic storage canister with a removable wooden lid, modeled as separate rigid pieces without active articulation. Physics assumes glazed ceramic body and varnished wood lid with ordinary contact behavior.",
+    "name": "part_00",
+    "total_mass": 0.31
+  },
+  "asset_id": "D00444",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "part_00",
-      "source_part_name": "part_00",
-      "source_object_name": "part_00",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "varnished wood with silicone gasket",
-      "material": "varnished wood with silicone gasket",
-      "non_visual_material": {
-        "base": "wood",
-        "coating": "varnish",
-        "attributes": [
-          "smooth"
-        ]
-      },
-      "mass": 0.05,
-      "density": 650.0,
-      "inertia": [
-        1.4136497943958466e-05,
-        1.4461876115064066e-05,
-        2.6605464480282233e-05
-      ],
-      "inertia_axes": [
-        0.8808791265035806,
-        -0.31119903246655944,
-        -0.09159759462343554,
-        -0.3446984295603433
-      ],
-      "center_of_mass": [
-        -0.00016045056100955898,
-        0.01829326221318939,
-        0.09760442521118105
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 5.2257810859605126e-05,
       "bounds": {
-        "min": [
-          -0.033716,
-          -0.011799,
-          0.072293
+        "center": [
+          -0.000569,
+          0.018398,
+          0.097708
         ],
         "max": [
           0.032577,
           0.048595,
           0.123123
         ],
-        "center": [
-          -0.000569,
-          0.018398,
-          0.097708
+        "min": [
+          -0.033716,
+          -0.011799,
+          0.072293
         ]
       },
-      "description": "Removable wooden lid with seal",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "Wood lid dominates; gasket increases contact friction.",
-      "static_friction": 0.55,
-      "dynamic_friction": 0.4,
-      "restitution": 0.22,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        -0.00016045056100955898,
+        0.01829326221318939,
+        0.09760442521118105
+      ],
+      "collision": {},
+      "density": 650.0,
+      "id": "part_00",
+      "inertia": [
+        1.4136497943958466e-05,
+        1.4461876115064066e-05,
+        2.6605464480282233e-05
+      ],
+      "mass": 0.05,
+      "material": "varnished wood with silicone gasket",
+      "name": "part_00",
       "physics_type": "rigid",
-      "is_structural_root": false,
-      "color_name": "Red"
+      "source": {
+        "object_name": "part_00",
+        "part_name": "part_00"
+      },
+      "volume": 5.2257810859605126e-05
     },
     {
-      "canonical_name": "part_01",
-      "part_name": "part_01",
-      "source_part_name": "part_01",
-      "source_object_name": "part_01",
-      "part_index": 1,
-      "part_id": "part_01",
-      "material_name": "glazed ceramic",
-      "material": "glazed ceramic",
-      "non_visual_material": {
-        "base": "ceramic",
-        "coating": "glaze",
-        "attributes": [
-          "smooth",
-          "matte"
-        ]
-      },
-      "mass": 0.26,
-      "density": 2400.0,
-      "inertia": [
-        0.0002148887970015577,
-        0.00028727742192146864,
-        0.00028999286021718165
-      ],
-      "inertia_axes": [
-        0.5010140568524187,
-        -0.4999834357793573,
-        -0.5025317282133597,
-        -0.4964507437011698
-      ],
-      "center_of_mass": [
-        -0.00041837949241546943,
-        -0.006704061379728213,
-        0.04539109766070942
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.0004786142703580943,
       "bounds": {
-        "min": [
-          -0.038101,
-          -0.043876,
-          -3.2e-05
+        "center": [
+          -0.000446,
+          -0.006755,
+          0.048065
         ],
         "max": [
           0.037209,
           0.030366,
           0.096162
         ],
-        "center": [
-          -0.000446,
-          -0.006755,
-          0.048065
+        "min": [
+          -0.038101,
+          -0.043876,
+          -3.2e-05
         ]
       },
-      "description": "Glazed ceramic storage body",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "Hollow ceramic shell lowers mass from solid volume.",
-      "static_friction": 0.42,
-      "dynamic_friction": 0.3,
-      "restitution": 0.18,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        -0.00041837949241546943,
+        -0.006704061379728213,
+        0.04539109766070942
+      ],
+      "collision": {},
+      "density": 2400.0,
+      "id": "part_01",
+      "inertia": [
+        0.0002148887970015577,
+        0.00028727742192146864,
+        0.00028999286021718165
+      ],
+      "mass": 0.26,
+      "material": "glazed ceramic",
+      "name": "part_01",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": "Blue"
+      "source": {
+        "object_name": "part_01",
+        "part_name": "part_01"
+      },
+      "volume": 0.0004786142703580943
     }
   ],
-  "joint_relations": [
-    {
-      "child": "part_00",
-      "parent": "part_01",
-      "joint_type": "floating",
-      "name": "joint_part_01__part_00",
-      "damping": 0.0,
-      "effort": 0.0,
-      "friction": 0.0,
-      "stiffness": 0.0,
-      "velocity": 0.0,
-      "origin": [],
-      "joint_rotation_local": [],
-      "axis": [],
-      "motion_limits": null,
-      "revolute_mode": null,
-      "score": 0.95,
-      "rest_pose_state": "open"
-    }
-  ],
-  "base_link": "part_01",
-  "object_description": "Small ceramic storage canister with a removable wooden lid, modeled as separate rigid pieces without active articulation. Physics assumes glazed ceramic body and varnished wood lid with ordinary contact behavior.",
-  "object_semantic": null,
-  "total_mass": 0.31,
-  "center_of_mass": null,
-  "inertia": null
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  }
 }

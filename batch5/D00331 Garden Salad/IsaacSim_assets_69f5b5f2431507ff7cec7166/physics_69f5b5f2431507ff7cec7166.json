@@ -1,102 +1,81 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.13038215041160583,
+        0.07677701860666275,
+        0.13149389624595642
+      ],
+      "min": [
+        -0.13262684643268585,
+        1.0016628039011266e-05,
+        -0.1316141039133072
+      ],
+      "size": [
+        0.2630089968442917,
+        0.07676700197862374,
+        0.2631080001592636
+      ]
+    },
+    "description": "A light-colored ceramic bowl filled with a fresh mixed salad containing lettuce, tomatoes, cucumbers, bell peppers, onions, radishes, and feta cheese.",
+    "name": "D00331 Garden Salad",
+    "object_type": "rigid_bodies",
+    "total_mass": 1.5
+  },
+  "asset_id": "D00331",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00331 Garden Salad",
-      "source_part_name": "D00331 Garden Salad",
-      "source_object_name": "D00331 Garden Salad",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "ceramic",
-      "material": "ceramic",
-      "non_visual_material": null,
-      "mass": 1.5,
-      "density": 2400.0,
-      "inertia": [
-        0.006434680510581551,
-        0.006444403069459834,
-        0.011837407346345514
-      ],
-      "inertia_axes": [
-        6.902156431318784e-05,
-        -0.5588719921823855,
-        -0.8292528134536243,
-        -0.0013649063572705271
-      ],
-      "center_of_mass": [
-        -0.0009494502602837661,
-        0.000923678380800522,
-        0.036356388641075016
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.002886414590298289,
       "bounds": {
-        "min": [
-          -0.13262684643268585,
-          1.0016628039011266e-05,
-          -0.1316141039133072
+        "center": [
+          3.592603485241621e-05,
+          0.03907356412745984,
+          -0.00010509079420626984
         ],
         "max": [
           0.13038215041160583,
           0.07677701860666275,
           0.13149389624595642
         ],
-        "center": [
-          3.592603485241621e-05,
-          0.03907356412745984,
-          -0.00010509079420626984
+        "min": [
+          -0.13262684643268585,
+          1.0016628039011266e-05,
+          -0.1316141039133072
         ]
       },
-      "description": "A light-colored ceramic bowl filled with a fresh mixed salad containing lettuce, tomatoes, cucumbers, bell peppers, onions, radishes, and feta cheese.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The object is a ceramic bowl acting as a container for food items. In a rigid body simulation context, unless the individual salad ingredients are simulated separately (which would be highly complex), the entire object is likely treated as a single rigid body or a few compound bodies. Assuming it's treated as a single object for manipulation (e.g., a robot picking up the bowl), the primary contact material is the ceramic exterior of the bowl. Ceramic has a relatively high density, low friction, and low restitution. I will estimate the mass based on a typical large ceramic salad bowl filled with food, approximately 1.5 kg. The density of ceramic is around 2400 kg/m^3. The physics properties will reflect the ceramic exterior. Since it's a concave shape (a bowl), convex decomposition is necessary for accurate collision modeling if objects are to interact with the inside of the bowl.",
-      "static_friction": 0.3,
-      "dynamic_friction": 0.2,
-      "restitution": 0.1,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        -0.0009494502602837661,
+        0.000923678380800522,
+        0.036356388641075016
+      ],
+      "collision": {},
+      "density": 2400.0,
+      "id": "part_00",
+      "inertia": [
+        0.006434680510581551,
+        0.006444403069459834,
+        0.011837407346345514
+      ],
+      "mass": 1.5,
+      "material": "ceramic",
+      "name": "D00331 Garden Salad",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": "",
-      "appearance_properties": {},
-      "newton": {
-        "collisions": {
-          "collider_type": "convex_decomposition",
-          "rest_offset": 0,
-          "contact_offset": 0.01,
-          "explosion_view_distance": 0,
-          "collision_mesh_debug_visualization": false
-        },
-        "simulation_scene": {
-          "simulation_steps_per_second": 60,
-          "enable_ccd": false,
-          "gravitational_acceleration": [
-            0,
-            -9.81,
-            0
-          ],
-          "gpu_buffer_parameters": {},
-          "residuals": {}
-        }
-      }
+      "source": {
+        "object_name": "D00331 Garden Salad",
+        "part_name": "D00331 Garden Salad"
+      },
+      "volume": 0.002886414590298289
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00331 Garden Salad",
-  "object_description": "A light-colored ceramic bowl filled with a fresh mixed salad containing lettuce, tomatoes, cucumbers, bell peppers, onions, radishes, and feta cheese.",
-  "object_semantic": {
-    "qid": null
-  },
-  "total_mass": 1.5,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies"
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  }
 }

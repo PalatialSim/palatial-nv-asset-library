@@ -1,81 +1,81 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.12135878205299377,
+        0.09925038367509842,
+        0.09813109040260315
+      ],
+      "min": [
+        -0.12163341045379639,
+        0.0,
+        -0.09494937211275101
+      ],
+      "size": [
+        0.24299219250679016,
+        0.09925038367509842,
+        0.19308046251535416
+      ]
+    },
+    "description": "A speckled white glazed ceramic colander with a rounded perforated bowl, two side handles, a beige rim, and three short feet.",
+    "name": "D00168 Colander Bowl Plate",
+    "object_type": "rigid_bodies",
+    "total_mass": 1.15
+  },
+  "asset_id": "D00168",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00168 Colander Bowl Plate",
-      "source_part_name": "D00168 Colander Bowl Plate",
-      "source_object_name": "D00168 Colander Bowl Plate",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "glazed_ceramic",
-      "material": "glazed_ceramic",
-      "non_visual_material": null,
-      "mass": 1.15,
-      "density": 2250.0,
-      "inertia": [
-        0.0035266751595717607,
-        0.004437802612833641,
-        0.006301914195365963
-      ],
-      "inertia_axes": [
-        0.9996914830731238,
-        -0.021122368153379607,
-        -0.003070335408772329,
-        -0.012702648350992602
-      ],
-      "center_of_mass": [
-        -0.0005605870819201244,
-        0.00044531675961554876,
-        0.054589316331821194
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.0003362531794434094,
       "bounds": {
-        "min": [
-          -0.12163341045379639,
-          0.0,
-          -0.09494937211275101
+        "center": [
+          -0.0006637548061419887,
+          0.05925110217584891,
+          0.000633348110352516
         ],
         "max": [
           0.12135878205299377,
           0.09925038367509842,
           0.09813109040260315
         ],
-        "center": [
-          -0.0006637548061419887,
-          0.05925110217584891,
-          0.000633348110352516
+        "min": [
+          -0.12163341045379639,
+          0.0,
+          -0.09494937211275101
         ]
       },
-      "description": "A speckled white glazed ceramic colander with a rounded perforated bowl, two side handles, a beige rim, and three short feet.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The object appears to be a medium-sized ceramic kitchen colander/strainer with a thin hemispherical bowl, many circular drainage holes, two integral handles, and short ceramic feet. No exact dimensions are provided, so I estimate an overall width including handles of about 0.30 m, bowl diameter about 0.23-0.25 m, height about 0.13-0.15 m including feet, and ceramic wall thickness about 5-7 mm. Fired stoneware/porcelain ceramic has a solid density around 2200-2400 kg/m^3; because the object is hollow and perforated, the mass is much lower than a solid bounding volume. A shell-area estimate for a 0.12 m radius bowl with 6 mm wall thickness gives roughly 0.00035-0.00045 m^3 of ceramic before details, or about 0.8-1.0 kg; subtracting perforations but adding the thick rim, handles, and feet gives a practical total mass near 1.1-1.3 kg, so 1.15 kg is a reasonable rigid-body mass override. The dominant contact material is glazed ceramic/stoneware. Smooth glazed ceramic has moderate friction on common hard surfaces; the unglazed foot bottoms and slightly rough speckled glaze may increase friction versus glass, so static friction is estimated at 0.48 and dynamic friction at 0.36. Ceramic is stiff but brittle and should not bounce much in a non-fracturing rigid-body approximation, so restitution is kept low at 0.18 to avoid unrealistic bouncing after drops. For collision geometry, a single convex hull would seal the bowl and ignore the concavity, handles, feet, and perforated shape. For a dynamic rigid body in Isaac Sim/PhysX, convex decomposition is the preferred robust option: use several convex parts for the bowl shell, rim, handles, and feet. The small drainage holes should usually be ignored for collision unless small objects must pass through them; exact perforations would require an SDF mesh or many small colliders and would be more expensive. A contact offset around 2 mm and rest offset 0 m are appropriate for a 25-30 cm ceramic asset, balancing stable contact generation against visible hovering. Continuous collision detection is recommended if the colander can be dropped or moved quickly because the shell and feet are thin relative to possible time-step motion; it can be disabled for purely static tabletop placement. Initial velocity is zero, gravity is standard Earth gravity, and compliant contacts are disabled because ceramic should be treated as effectively rigid. If available in the USD/PhysX setup, use sleep/hibernation with low default thresholds after settling, and limit very high angular velocities for stability during drops or impacts.",
-      "static_friction": 0.48,
-      "dynamic_friction": 0.36,
-      "restitution": 0.18,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        -0.0005605870819201244,
+        0.00044531675961554876,
+        0.054589316331821194
+      ],
+      "collision": {},
+      "density": 2250.0,
+      "id": "part_00",
+      "inertia": [
+        0.0035266751595717607,
+        0.004437802612833641,
+        0.006301914195365963
+      ],
+      "mass": 1.15,
+      "material": "glazed_ceramic",
+      "name": "D00168 Colander Bowl Plate",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": ""
+      "source": {
+        "object_name": "D00168 Colander Bowl Plate",
+        "part_name": "D00168 Colander Bowl Plate"
+      },
+      "volume": 0.0003362531794434094
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00168 Colander Bowl Plate",
-  "object_description": "A speckled white glazed ceramic colander with a rounded perforated bowl, two side handles, a beige rim, and three short feet.",
-  "object_semantic": {
-    "qid": null
-  },
-  "total_mass": 1.15,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies"
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  }
 }

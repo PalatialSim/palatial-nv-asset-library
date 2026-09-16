@@ -1,102 +1,81 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.14210247,
+        0.04117088,
+        0.11123596
+      ],
+      "min": [
+        -0.1428068,
+        0.0,
+        -0.11153346
+      ],
+      "size": [
+        0.28490927,
+        0.04117088,
+        0.22276942
+      ]
+    },
+    "description": "A rectangular wooden serving tray with raised edges and two integrated handles.",
+    "name": "generated reference 01",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.8
+  },
+  "asset_id": "D00044",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "generated reference 01",
-      "source_part_name": "generated reference 01",
-      "source_object_name": "generated reference 01",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "wood",
-      "material": "wood",
-      "non_visual_material": null,
-      "mass": 0.8,
-      "density": 700.0,
-      "inertia": [
-        0.003071379915389361,
-        0.005425042646566884,
-        0.008304910226160358
-      ],
-      "inertia_axes": [
-        0.9999999991421832,
-        4.0841547016563886e-05,
-        -5.286309124996613e-06,
-        4.4335911170133646e-06
-      ],
-      "center_of_mass": [
-        -0.000366652268202558,
-        0.0002720741318758694,
-        0.018648335148127332
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.0023210775581798035,
       "bounds": {
-        "min": [
-          -0.1428068,
-          0.0,
-          -0.11153346
+        "center": [
+          -0.00038708917883681327,
+          0.008866297961558366,
+          -0.0001453081632387692
         ],
         "max": [
           0.14210247,
           0.04117088,
           0.11123596
         ],
-        "center": [
-          -0.00038708917883681327,
-          0.008866297961558366,
-          -0.0001453081632387692
+        "min": [
+          -0.1428068,
+          0.0,
+          -0.11153346
         ]
       },
-      "description": "A rectangular wooden serving tray with raised edges and two integrated handles.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The object is a serving tray made entirely of wood (likely bamboo based on the grain pattern). For Isaac Sim rigid body simulation, wood properties should be applied. Wood typically has a density around 600-800 kg/m^3. Given the dimensions of a standard serving tray (approx. 40cm x 30cm x 5cm) and hollowed out center, the volume is relatively small. The mass is estimated at 0.8 kg. Wood has moderate friction (0.4-0.6) and low restitution (0.3-0.5). For collisions, a convex decomposition or bounding cube (if simplified) would be appropriate to capture the raised edges and flat interior. Continuous Collision Detection (CCD) might be needed if the tray is expected to interact with small, fast-moving objects (like dropped utensils). Rest and contact offsets are set to standard small values.",
-      "static_friction": 0.5,
-      "dynamic_friction": 0.4,
-      "restitution": 0.4,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        -0.000366652268202558,
+        0.0002720741318758694,
+        0.018648335148127332
+      ],
+      "collision": {},
+      "density": 700.0,
+      "id": "part_00",
+      "inertia": [
+        0.003071379915389361,
+        0.005425042646566884,
+        0.008304910226160358
+      ],
+      "mass": 0.8,
+      "material": "wood",
+      "name": "generated reference 01",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": "",
-      "appearance_properties": {},
-      "newton": {
-        "collisions": {
-          "collider_type": "convex_decomposition",
-          "rest_offset": 0,
-          "contact_offset": 0.005,
-          "explosion_view_distance": 0,
-          "collision_mesh_debug_visualization": false
-        },
-        "simulation_scene": {
-          "simulation_steps_per_second": 60,
-          "enable_ccd": false,
-          "gravitational_acceleration": [
-            0,
-            -9.81,
-            0
-          ],
-          "gpu_buffer_parameters": {},
-          "residuals": {}
-        }
-      }
+      "source": {
+        "object_name": "generated reference 01",
+        "part_name": "generated reference 01"
+      },
+      "volume": 0.0023210775581798035
     }
   ],
-  "joint_relations": [],
-  "base_link": "generated reference 01",
-  "object_description": "A rectangular wooden serving tray with raised edges and two integrated handles.",
-  "object_semantic": {
-    "qid": null
-  },
-  "total_mass": 0.8,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies"
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  }
 }

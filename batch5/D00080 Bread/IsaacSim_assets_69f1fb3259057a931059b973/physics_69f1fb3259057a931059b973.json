@@ -1,102 +1,81 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.10999079793691635,
+        0.12254887819290161,
+        0.1112031638622284
+      ],
+      "min": [
+        -0.10001619905233383,
+        1.875163661679835e-06,
+        -0.1265268325805664
+      ],
+      "size": [
+        0.21000699698925018,
+        0.12254700302923993,
+        0.2377299964427948
+      ]
+    },
+    "description": "A round loaf of artisan bread with a dark, crusty exterior, a prominent scored ridge on top, and a light dusting of white flour.",
+    "name": "D00080 Bread",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.8
+  },
+  "asset_id": "D00080",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00080 Bread",
-      "source_part_name": "D00080 Bread",
-      "source_object_name": "D00080 Bread",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "baked_bread_crust",
-      "material": "baked_bread_crust",
-      "non_visual_material": null,
-      "mass": 0.8,
-      "density": 250.0,
-      "inertia": [
-        0.0026211803545174396,
-        0.004054291270580167,
-        0.005472512446076076
-      ],
-      "inertia_axes": [
-        0.004831473913667069,
-        -0.6973959465316126,
-        0.7162938662983689,
-        -0.02320878550101955
-      ],
-      "center_of_mass": [
-        0.0057990963565053115,
-        0.007877634222387513,
-        0.04425689176332514
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.003952544778403394,
       "bounds": {
-        "min": [
-          -0.10001619905233383,
-          1.875163661679835e-06,
-          -0.1265268325805664
+        "center": [
+          0.00622627962742344,
+          0.046593725251870194,
+          -0.008170905507938133
         ],
         "max": [
           0.10999079793691635,
           0.12254887819290161,
           0.1112031638622284
         ],
-        "center": [
-          0.00622627962742344,
-          0.046593725251870194,
-          -0.008170905507938133
+        "min": [
+          -0.10001619905233383,
+          1.875163661679835e-06,
+          -0.1265268325805664
         ]
       },
-      "description": "A round loaf of artisan bread with a dark, crusty exterior, a prominent scored ridge on top, and a light dusting of white flour.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The object is a loaf of bread, likely a sourdough boule. The mass is estimated at 0.8 kg, typical for a medium-to-large artisan loaf. The density is relatively low (around 250 kg/m^3) because bread is porous and filled with air pockets. The crust is rough and dry, leading to moderate static and dynamic friction coefficients (0.5 and 0.45), though the presence of loose flour could slightly reduce grip in reality. Restitution is estimated to be very low (0.1) because bread is relatively soft and inelastic; it absorbs impacts rather than bouncing. For collision modeling in Isaac Sim, a convex hull or a low-resolution convex decomposition is suitable to capture its overall bulky, slightly irregular shape without wasting performance on the fine surface details of the crust.",
-      "static_friction": 0.5,
-      "dynamic_friction": 0.45,
-      "restitution": 0.1,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        0.0057990963565053115,
+        0.007877634222387513,
+        0.04425689176332514
+      ],
+      "collision": {},
+      "density": 250.0,
+      "id": "part_00",
+      "inertia": [
+        0.0026211803545174396,
+        0.004054291270580167,
+        0.005472512446076076
+      ],
+      "mass": 0.8,
+      "material": "baked_bread_crust",
+      "name": "D00080 Bread",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": "",
-      "appearance_properties": {},
-      "newton": {
-        "collisions": {
-          "collider_type": "convex_hull",
-          "rest_offset": 0,
-          "contact_offset": 0.005,
-          "explosion_view_distance": 0.1,
-          "collision_mesh_debug_visualization": false
-        },
-        "simulation_scene": {
-          "simulation_steps_per_second": 60,
-          "enable_ccd": false,
-          "gravitational_acceleration": [
-            0,
-            0,
-            -9.81
-          ],
-          "gpu_buffer_parameters": {},
-          "residuals": {}
-        }
-      }
+      "source": {
+        "object_name": "D00080 Bread",
+        "part_name": "D00080 Bread"
+      },
+      "volume": 0.003952544778403394
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00080 Bread",
-  "object_description": "A round loaf of artisan bread with a dark, crusty exterior, a prominent scored ridge on top, and a light dusting of white flour.",
-  "object_semantic": {
-    "qid": null
-  },
-  "total_mass": 0.8,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies"
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  }
 }

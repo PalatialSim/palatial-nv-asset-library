@@ -1,132 +1,82 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.11398528516292572,
+        0.03206399828195572,
+        0.03842783719301224
+      ],
+      "min": [
+        -0.16757671535015106,
+        -8.90023511601612e-05,
+        -0.0386381633579731
+      ],
+      "size": [
+        0.2815620005130768,
+        0.03215300063311588,
+        0.07706600055098534
+      ]
+    },
+    "description": "A polished stainless-steel serving spoon with a shallow oval bowl, tapered handle, and a hanging hole at the end. The surface is smooth and highly reflective with a silver finish.",
+    "name": "D00778 Spoon Kitchen",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.385
+  },
+  "asset_id": "D00778",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00778 Spoon Kitchen",
-      "source_part_name": "D00778 Spoon Kitchen",
-      "source_object_name": "D00778 Spoon Kitchen",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "stainless_steel",
-      "material": "stainless_steel",
-      "non_visual_material": null,
-      "mass": 0.385,
-      "density": 7900.0,
-      "inertia": [
-        9.455446857873959e-05,
-        0.002468451017675749,
-        0.0025274177686348286
-      ],
-      "inertia_axes": [
-        0.0006261814247713235,
-        0.9987604712537662,
-        0.0002058876081433431,
-        -0.0497703382354487
-      ],
-      "center_of_mass": [
-        -0.0025639721722502005,
-        8.145711620723897e-05,
-        0.01899178080819167
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 3.2210253120625356e-05,
       "bounds": {
-        "min": [
-          -0.16757671535015106,
-          -8.90023511601612e-05,
-          -0.0386381633579731
+        "center": [
+          -0.0018352630478707954,
+          0.016467103174831035,
+          -0.00013168478909650542
         ],
         "max": [
           0.11398528516292572,
           0.03206399828195572,
           0.03842783719301224
         ],
-        "center": [
-          -0.0018352630478707954,
-          0.016467103174831035,
-          -0.00013168478909650542
+        "min": [
+          -0.16757671535015106,
+          -8.90023511601612e-05,
+          -0.0386381633579731
         ]
       },
-      "description": "A polished stainless-steel serving spoon with a shallow oval bowl, tapered handle, and a hanging hole at the end. The surface is smooth and highly reflective with a silver finish.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "Based on the provided metrics and visual appearance, the object is a large serving spoon (0.267m in length) made of stainless steel. The density of stainless steel is set to 7900 kg/m^3. Multiplying this by the provided voxel volume (4.877e-05 m^3) yields a mass of approximately 0.385 kg. Friction and restitution coefficients are estimated based on smooth steel (static friction 0.5, dynamic 0.4, restitution 0.5). For collision geometry, 'convex_decomposition' is essential to accurately capture the concavity of the spoon's bowl, which is critical for realistic interaction and containment. Because the spoon is a thin object that may be subject to high velocities or drops, Continuous Collision Detection (CCD) is enabled to prevent tunneling through other surfaces. Contact offsets are set to a very low value (0.001m) to prevent visual floating, which is easily noticeable on small, thin objects.",
-      "static_friction": 0.5,
-      "dynamic_friction": 0.4,
-      "restitution": 0.5,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        -0.0025639721722502005,
+        8.145711620723897e-05,
+        0.01899178080819167
+      ],
+      "collision": {},
+      "density": 7900.0,
+      "id": "part_00",
+      "inertia": [
+        9.455446857873959e-05,
+        0.002468451017675749,
+        0.0025274177686348286
+      ],
+      "mass": 0.385,
+      "material": "stainless_steel",
+      "name": "D00778 Spoon Kitchen",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "enable_ccd": null,
-      "solver_position_iterations": null,
-      "solver_velocity_iterations": null,
-      "color_name": "",
-      "appearance_properties": {},
-      "newton": {
-        "collisions": {
-          "collider_type": "convex_decomposition",
-          "rest_offset": 0,
-          "contact_offset": 0.001,
-          "explosion_view_distance": 0.01,
-          "collision_mesh_debug_visualization": false
-        },
-        "simulation_scene": {
-          "simulation_steps_per_second": 60,
-          "enable_ccd": true,
-          "gravitational_acceleration": [
-            0,
-            0,
-            -9.81
-          ],
-          "gpu_buffer_parameters": {},
-          "residuals": {}
-        }
-      }
+      "source": {
+        "object_name": "D00778 Spoon Kitchen",
+        "part_name": "D00778 Spoon Kitchen"
+      },
+      "volume": 3.2210253120625356e-05
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00778 Spoon Kitchen",
-  "base_link_recommendation": null,
-  "fix_base": false,
-  "source": null,
-  "authored_by": null,
-  "up_axis": null,
-  "coordinate_frames": null,
-  "solver_position_iterations": null,
-  "solver_velocity_iterations": null,
-  "object_description": "A polished stainless-steel serving spoon with a shallow oval bowl, tapered handle, and a hanging hole at the end. The surface is smooth and highly reflective with a silver finish.",
-  "object_semantic": {
-    "qid": null
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {
+    "fix_base": false
   },
-  "total_mass": 0.385,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies",
-  "total_object_mass_kg": 0.385,
-  "_authoritative_context_applied": {
-    "object": {},
-    "parts": [
-      {
-        "part_index": 0,
-        "part_id": "part_00",
-        "fields": [
-          "bounds",
-          "canonical_name",
-          "material",
-          "part_id",
-          "part_index",
-          "source_object_name",
-          "source_part_name"
-        ]
-      }
-    ]
+  "units": {
+    "length": "m",
+    "mass": "kg"
   }
 }

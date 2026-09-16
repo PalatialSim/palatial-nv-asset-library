@@ -1,119 +1,83 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.21486378,
+        0.09355154,
+        0.1431858
+      ],
+      "min": [
+        -0.21325716,
+        0.0,
+        -0.14722993
+      ],
+      "size": [
+        0.42812094,
+        0.09355154,
+        0.29041573
+      ]
+    },
+    "description": "A rectangular, open-top storage container made of smooth white plastic. It features a flat base, low vertical walls, and a slightly flanged top edge.",
+    "name": "specialist-current",
+    "object_type": "rigid_bodies",
+    "total_mass": 1.37
+  },
+  "asset_id": "D00935",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "specialist-current",
-      "source_part_name": "specialist-current",
-      "source_object_name": "specialist-current",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "plastic",
-      "material": "plastic",
-      "mass": 1.37,
-      "density": 1000.0,
-      "inertia": [
-        0.014482630543852444,
-        0.026852492121845175,
-        0.03844969177632908
-      ],
-      "inertia_axes": [
-        0.9999997583359251,
-        0.0005580822560733819,
-        -0.000346347778456435,
-        0.00022784973783589402
-      ],
-      "center_of_mass": [
-        0.0013814983184661,
-        0.002508129425597582,
-        0.029305839862305408
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.001100254748300025,
       "bounds": {
-        "min": [
-          -0.21325716,
-          0.0,
-          -0.14722993
+        "center": [
+          0.0004402800486173963,
+          0.03380424476281693,
+          -0.0020107320561426095
         ],
         "max": [
           0.21486378,
           0.09355154,
           0.1431858
         ],
-        "center": [
-          0.0004402800486173963,
-          0.03380424476281693,
-          -0.0020107320561426095
+        "min": [
+          -0.21325716,
+          0.0,
+          -0.14722993
         ]
       },
-      "description": "A rectangular, open-top storage container made of smooth white plastic. It features a flat base, low vertical walls, and a slightly flanged top edge.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The asset is a simple, thin-walled storage tray visually consistent with molded plastic (e.g., polypropylene or ABS). Based on the provided metadata, the object has scaled extents of approximately 0.428m (L) x 0.093m (H) x 0.290m (W) and a highly accurate voxel volume of 0.00137 m^3. Assuming a standard plastic density of 1000 kg/m^3, the calculated mass is 1.37 kg. Friction and restitution coefficients are estimated based on smooth, rigid plastic material properties, assigning static friction at 0.4, dynamic friction at 0.3, and restitution at 0.4. For accurate interactions in Isaac Sim, 'convex_decomposition' is selected for the collider type; this is critical to preserve the hollow, open-top nature of the tray, allowing other simulated objects to rest inside it. Continuous Collision Detection (CCD) is enabled at both the body and scene levels due to the thin walls, which could otherwise suffer from tunneling during high-velocity impacts. Standard contact offsets (0.002m) are applied to ensure robust constraint generation. Gravity is configured along the Y-axis (-9.81 m/s^2) in accordance with the 'up_direction': 'y' metadata provided in the source JSON.",
-      "static_friction": 0.4,
-      "dynamic_friction": 0.3,
-      "restitution": 0.4,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        0.0013814983184661,
+        0.002508129425597582,
+        0.029305839862305408
+      ],
+      "collision": {},
+      "density": 1000.0,
+      "id": "part_00",
+      "inertia": [
+        0.014482630543852444,
+        0.026852492121845175,
+        0.03844969177632908
+      ],
+      "mass": 1.37,
+      "material": "plastic",
+      "name": "specialist-current",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": "",
-      "appearance_properties": {},
-      "newton": {
-        "collisions": {
-          "collider_type": "convex_decomposition",
-          "rest_offset": 0,
-          "contact_offset": 0.002,
-          "explosion_view_distance": 0,
-          "collision_mesh_debug_visualization": false
-        },
-        "simulation_scene": {
-          "simulation_steps_per_second": 60,
-          "enable_ccd": true,
-          "gravitational_acceleration": [
-            0,
-            -9.81,
-            0
-          ],
-          "gpu_buffer_parameters": {},
-          "residuals": {}
-        }
-      }
+      "source": {
+        "object_name": "specialist-current",
+        "part_name": "specialist-current"
+      },
+      "volume": 0.001100254748300025
     }
   ],
-  "joint_relations": [],
-  "base_link": "specialist-current",
-  "fix_base": false,
-  "object_description": "A rectangular, open-top storage container made of smooth white plastic. It features a flat base, low vertical walls, and a slightly flanged top edge.",
-  "object_semantic": {
-    "qid": null
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {
+    "fix_base": false
   },
-  "total_mass": 1.37,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies",
-  "total_object_mass_kg": 1.37,
-  "_authoritative_context_applied": {
-    "object": {},
-    "parts": [
-      {
-        "part_index": 0,
-        "part_id": "part_00",
-        "fields": [
-          "bounds",
-          "canonical_name",
-          "material",
-          "part_id",
-          "part_index",
-          "source_object_name",
-          "source_part_name"
-        ]
-      }
-    ]
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
   }
 }

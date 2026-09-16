@@ -1,39 +1,34 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.07067906856536865,
+        0.07291556149721146,
+        0.07054103165864944
+      ],
+      "min": [
+        -0.07064960896968842,
+        0.0,
+        -0.07068338990211487
+      ],
+      "size": [
+        0.14132867753505707,
+        0.07291556149721146,
+        0.1412244215607643
+      ]
+    },
+    "description": "A matte black ceramic bowl with a rounded body, open circular rim, and small raised foot ring. The surface appears glazed with subtle rough texture and a low sheen.",
+    "name": "D00025 Black Bowl",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.45
+  },
+  "asset_id": "D00025",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00025 Black Bowl",
-      "source_part_name": "D00025 Black Bowl",
-      "source_object_name": "D00025 Black Bowl",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "steel",
-      "material": "steel",
-      "non_visual_material": null,
-      "mass": 0.45,
-      "density": 2300.0,
-      "inertia": [
-        0.0006315941367493432,
-        0.0006345754134761963,
-        0.0009357256652472771
-      ],
-      "inertia_axes": [
-        3.5851142570144614e-05,
-        -0.7326778988643059,
-        -0.6805755104248697,
-        0.00026427336191035903
-      ],
-      "center_of_mass": [
-        9.984665270982614e-05,
-        0.000141960068353763,
-        0.042592287472663255
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.0008702812055571021,
       "bounds": {
         "center": [
           8.981237487142645e-06,
@@ -51,31 +46,36 @@
           -0.07068338990211487
         ]
       },
-      "description": "A matte black ceramic bowl with a rounded body, open circular rim, and small raised foot ring. The surface appears glazed with subtle rough texture and a low sheen.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The object appears to be a stoneware or glazed ceramic bowl rather than plastic or metal. With no product dimensions provided, I assume a typical small bowl size of about 0.14-0.16 m outer rim diameter, 0.08-0.09 m height, and 4-6 mm wall thickness. Dense ceramic/stoneware is typically 2200-2400 kg/m^3; using roughly 1.8e-4 to 2.1e-4 m^3 of ceramic including the thick rim and foot ring gives an estimated mass around 0.40-0.50 kg, so 0.45 kg is a stable explicit mass value. Because the shape is concave and hollow, automatic mass computation from a simple convex hull would overestimate occupied volume and close the bowl interior; explicit mass and inertia are recommended. Matte glazed ceramic has moderate friction: the glazed sides are smoother, while the unglazed or less-glossy foot ring can grip more, so static friction is estimated at 0.55 and dynamic friction at 0.42 against common tabletop materials. Restitution is kept low at 0.22 because ceramic is hard but brittle and dissipative in impacts; higher values would cause unrealistic bouncing. For collision, an SDF mesh is the best choice if objects may contact the inner cavity, rim, or foot ring; convex decomposition is the performance fallback, while a single convex hull is not appropriate because it would seal the bowl opening. Contact offset is set to a small 2.5 mm for a 15 cm-scale object to generate stable contacts without visible separation, with rest offset at 0 for visual-collision alignment. CCD is recommended for drops or fast handling because the rim and foot ring are thin features; for slow-only scenes it can be disabled to save performance. Compliant contacts are disabled because this is a hard rigid ceramic object, but a very stiff spring-damper contact can be used only if solver chatter occurs.",
-      "static_friction": 0.55,
-      "dynamic_friction": 0.42,
-      "restitution": 0.22,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        9.984665270982614e-05,
+        0.000141960068353763,
+        0.042592287472663255
+      ],
+      "collision": {},
+      "density": 2300.0,
+      "id": "part_00",
+      "inertia": [
+        0.0006315941367493432,
+        0.0006345754134761963,
+        0.0009357256652472771
+      ],
+      "mass": 0.45,
+      "material": "steel",
+      "name": "D00025 Black Bowl",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": ""
+      "source": {
+        "object_name": "D00025 Black Bowl",
+        "part_name": "D00025 Black Bowl"
+      },
+      "volume": 0.0008702812055571021
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00025 Black Bowl",
-  "object_description": "A matte black ceramic bowl with a rounded body, open circular rim, and small raised foot ring. The surface appears glazed with subtle rough texture and a low sheen.",
-  "object_semantic": {
-    "qid": null
-  },
-  "total_mass": 0.45,
-  "center_of_mass": null,
-  "inertia": null,
-  "num_parts": 1,
-  "object_type": "rigid_bodies",
-  "overall_assessment": ""
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  }
 }

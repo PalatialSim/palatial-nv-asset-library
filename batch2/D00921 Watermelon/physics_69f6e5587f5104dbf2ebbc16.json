@@ -1,81 +1,81 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.1058730036020279,
+        0.09500099718570709,
+        0.19542600214481354
+      ],
+      "min": [
+        -0.12773099541664124,
+        -0.09669499844312668,
+        -0.0014059999957680702
+      ],
+      "size": [
+        0.23360399901866913,
+        0.19169599562883377,
+        0.1968320021405816
+      ]
+    },
+    "description": "A round watermelon with a smooth dark green rind, pale green striping, and a small dry stem. The exterior appears waxy and firm with slight natural surface irregularity.",
+    "name": "D00921 Watermelon",
+    "object_type": "rigid_bodies",
+    "total_mass": 7.5
+  },
+  "asset_id": "D00921",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00921 Watermelon",
-      "source_part_name": "D00921 Watermelon",
-      "source_object_name": "D00921 Watermelon",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "waxy_organic_rind",
-      "material": "waxy_organic_rind",
-      "non_visual_material": null,
-      "mass": 7.5,
-      "density": 960.0,
-      "inertia": [
-        0.023513350486160642,
-        0.028337525404789597,
-        0.02936895052661022
-      ],
-      "inertia_axes": [
-        0.05178447995615234,
-        -0.6956442976356964,
-        0.7145174902152834,
-        -0.05349892502716402
-      ],
-      "center_of_mass": [
-        6.92094891834316e-05,
-        0.0001650513661034878,
-        0.08585177929590765
-      ],
-      "part_origin_world": [
-        6.92094891834316e-05,
-        0.0001650513661034878,
-        0.08585177929590765
-      ],
-      "volume": 0.0034981414409207506,
       "bounds": {
-        "min": [
-          -0.12773099541664124,
-          -0.09669499844312668,
-          -0.0014059999957680702
+        "center": [
+          0.0008372023569794153,
+          1.7970248953977434e-05,
+          0.09776095211655954
         ],
         "max": [
           0.1058730036020279,
           0.09500099718570709,
           0.19542600214481354
         ],
-        "center": [
-          0.0008372023569794153,
-          1.7970248953977434e-05,
-          0.09776095211655954
+        "min": [
+          -0.12773099541664124,
+          -0.09669499844312668,
+          -0.0014059999957680702
         ]
       },
-      "description": "A round watermelon with a smooth dark green rind, pale green striping, and a small dry stem. The exterior appears waxy and firm with slight natural surface irregularity.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The object is a medium-to-large watermelon, approximated as a nearly spherical/ovoid rigid body. With no measured scale provided, I assume an effective diameter of about 0.24\u20130.26 m; using a whole-fruit density near that of water but slightly lower due to rind/air content, about 960 kg/m\u00b3, gives a plausible mass of roughly 7.5 kg. The dominant contact surface is the smooth waxy rind, not the small stem, so friction is estimated similar to smooth organic/plastic-like material: moderate static friction and lower sliding friction. Restitution is low because a real watermelon has strong internal damping and a viscoelastic rind/flesh structure, so it should not bounce much despite being rigidly represented. For collision, a sphere approximation is recommended for stable, efficient rolling; if the asset mesh is visibly elongated, a single convex hull or convex decomposition can be substituted, while the small stem should generally be excluded from the main collider. Contact offset is set to a few millimeters for reliable PhysX contact generation without visible hovering, with zero rest offset for visual alignment. CCD is recommended when the melon may be dropped, thrown, or roll quickly, because the object is heavy and round and can reach high contact speeds. For non-deformable simulation, optional compliant contacts with moderate stiffness and damping can approximate the soft organic impact response while preserving a rigid body representation. Suggested velocity limits, if authored separately, are about 20 m/s linear and 60 rad/s angular; a low sleep threshold is appropriate so the fruit can settle naturally after rolling.",
-      "static_friction": 0.42,
-      "dynamic_friction": 0.32,
-      "restitution": 0.12,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        6.92094891834316e-05,
+        0.0001650513661034878,
+        0.08585177929590765
+      ],
+      "collision": {},
+      "density": 960.0,
+      "id": "part_00",
+      "inertia": [
+        0.023513350486160642,
+        0.028337525404789597,
+        0.02936895052661022
+      ],
+      "mass": 7.5,
+      "material": "waxy_organic_rind",
+      "name": "D00921 Watermelon",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": ""
+      "source": {
+        "object_name": "D00921 Watermelon",
+        "part_name": "D00921 Watermelon"
+      },
+      "volume": 0.0034981414409207506
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00921 Watermelon",
-  "object_description": "A round watermelon with a smooth dark green rind, pale green striping, and a small dry stem. The exterior appears waxy and firm with slight natural surface irregularity.",
-  "object_semantic": {
-    "qid": null
-  },
-  "total_mass": 7.5,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies"
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  }
 }

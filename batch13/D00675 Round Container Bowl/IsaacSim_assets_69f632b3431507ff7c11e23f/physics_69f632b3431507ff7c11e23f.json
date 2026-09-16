@@ -1,81 +1,81 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.10640737414360046,
+        0.11727648228406906,
+        0.10644061118364334
+      ],
+      "min": [
+        -0.10663864016532898,
+        0.0,
+        -0.1064528152346611
+      ],
+      "size": [
+        0.21304601430892944,
+        0.11727648228406906,
+        0.21289342641830444
+      ]
+    },
+    "description": "A plain white ceramic bowl with a smooth exterior and a flat circular base.",
+    "name": "D00675 Round Container Bowl",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.4
+  },
+  "asset_id": "D00675",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00675 Round Container Bowl",
-      "source_part_name": "D00675 Round Container Bowl",
-      "source_object_name": "D00675 Round Container Bowl",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "ceramic",
-      "material": "ceramic",
-      "non_visual_material": null,
-      "mass": 0.4,
-      "density": 2500.0,
-      "inertia": [
-        0.0018968093252213958,
-        0.001911768387383969,
-        0.0029220357484094055
-      ],
-      "inertia_axes": [
-        0.7001053820070349,
-        0.7010929255756866,
-        -0.09563176533173301,
-        0.09579002689239181
-      ],
-      "center_of_mass": [
-        0.0001790131216480305,
-        -0.054279288550200915,
-        0.00017802592444924963
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.0008326286145427782,
       "bounds": {
-        "min": [
-          -0.10663864016532898,
-          0.0,
-          -0.1064528152346611
+        "center": [
+          -6.39753042168258e-05,
+          0.05733076844129987,
+          -1.3883403140866353e-05
         ],
         "max": [
           0.10640737414360046,
           0.11727648228406906,
           0.10644061118364334
         ],
-        "center": [
-          -6.39753042168258e-05,
-          0.05733076844129987,
-          -1.3883403140866353e-05
+        "min": [
+          -0.10663864016532898,
+          0.0,
+          -0.1064528152346611
         ]
       },
-      "description": "A plain white ceramic bowl with a smooth exterior and a flat circular base.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The object is visually identified as a standard ceramic or porcelain bowl. The mass (0.4 kg) and density (2500 kg/m^3) reflect typical ceramic materials used in household dishware. The friction coefficients (static 0.5, dynamic 0.4) represent smooth ceramic interacting with typical tabletop surfaces. The restitution (0.2) is kept low because ceramic is highly rigid and inelastic, absorbing most kinetic energy upon impact rather than bouncing. Crucially, for Isaac Sim PhysX, the collision geometry must be set to 'convex_decomposition' (or 'sdf_mesh') rather than a simple 'convex_hull'; a standard convex hull would span across the open top, preventing objects from being placed inside the bowl. Continuous Collision Detection (CCD) is recommended if the bowl is expected to be dropped or thrown, to prevent its relatively thin walls from tunneling through other colliders.",
-      "static_friction": 0.5,
-      "dynamic_friction": 0.4,
-      "restitution": 0.2,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        0.0001790131216480305,
+        -0.054279288550200915,
+        0.00017802592444924963
+      ],
+      "collision": {},
+      "density": 2500.0,
+      "id": "part_00",
+      "inertia": [
+        0.0018968093252213958,
+        0.001911768387383969,
+        0.0029220357484094055
+      ],
+      "mass": 0.4,
+      "material": "ceramic",
+      "name": "D00675 Round Container Bowl",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": ""
+      "source": {
+        "object_name": "D00675 Round Container Bowl",
+        "part_name": "D00675 Round Container Bowl"
+      },
+      "volume": 0.0008326286145427782
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00675 Round Container Bowl",
-  "object_description": "A plain white ceramic bowl with a smooth exterior and a flat circular base.",
-  "object_semantic": {
-    "qid": null
-  },
-  "total_mass": 0.4,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies"
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  }
 }

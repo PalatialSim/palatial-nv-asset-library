@@ -1,81 +1,81 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.0408206544816494,
+        0.040248360484838486,
+        0.22198864817619324
+      ],
+      "min": [
+        -0.040902718901634216,
+        0.0,
+        -0.14356064796447754
+      ],
+      "size": [
+        0.08172337338328362,
+        0.040248360484838486,
+        0.3655492961406708
+      ]
+    },
+    "description": "A stainless-steel spoon with a rounded reflective bowl and a light wooden handle. The handle has visible grain, rounded edges, and metal rivets fastening it to the steel tang.",
+    "name": "D00749 Spat Spoon",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.065
+  },
+  "asset_id": "D00749",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00749 Spat Spoon",
-      "source_part_name": "D00749 Spat Spoon",
-      "source_object_name": "D00749 Spat Spoon",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "wood",
-      "material": "wood",
-      "non_visual_material": null,
-      "mass": 0.065,
-      "density": 650.0,
-      "inertia": [
-        2.225259333381701e-05,
-        0.000526597874494576,
-        0.0005390384072908444
-      ],
-      "inertia_axes": [
-        0.012225604831011068,
-        -0.7069503416321443,
-        -0.7070462099021733,
-        -0.012546159399689238
-      ],
-      "center_of_mass": [
-        -1.8232641506100944e-05,
-        -0.00979449481669031,
-        0.019639483021410605
-      ],
-      "part_origin_world": [
-        -1.8232641506100944e-05,
-        -0.00979449481669031,
-        0.019639483021410605
-      ],
-      "volume": 0.0005141773495757672,
       "bounds": {
-        "min": [
-          -0.040902718901634216,
-          0.0,
-          -0.14356064796447754
+        "center": [
+          -2.0252263947457185e-05,
+          0.015460288026579904,
+          0.006678314624661577
         ],
         "max": [
           0.0408206544816494,
           0.040248360484838486,
           0.22198864817619324
         ],
-        "center": [
-          -2.0252263947457185e-05,
-          0.015460288026579904,
-          0.006678314624661577
+        "min": [
+          -0.040902718901634216,
+          0.0,
+          -0.14356064796447754
         ]
       },
-      "description": "A stainless-steel spoon with a rounded reflective bowl and a light wooden handle. The handle has visible grain, rounded edges, and metal rivets fastening it to the steel tang.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The object appears to be a composite utensil: a thin stainless-steel spoon head/tang joined to a rounded wooden handle with two metal rivets. With no product data available, dimensions are estimated at roughly 0.23-0.26 m long, 0.045-0.055 m wide at the bowl, and 0.015-0.025 m thick at the handle/bowl curvature. A plausible mass is about 0.065 kg: approximately 20-25 g of hardwood handle material plus 35-45 g of stainless steel bowl, tang, and rivets. The root-level material is set to wood because the wooden handle is the largest external/contact surface, although the metal parts likely dominate a substantial fraction of the mass. The density value of 650 kg/m^3 represents typical finished hardwood and is suitable as the dominant-material density; the explicit mass should be used for accurate rigid-body behavior because the composite steel/wood construction is not represented by one uniform density. Wood-on-common-surfaces static friction is typically 0.4-0.6, so 0.52 static and 0.38 dynamic are appropriate effective values; polished steel portions would be lower, but the handle contact area and rounded wood surface justify a wood-dominant coefficient. Restitution is modest at 0.32 because the object is lightweight but not elastomeric; impacts will be slightly lively due to the steel bowl, but the wooden handle and thin geometry dissipate energy. For collision, convex decomposition is recommended over a single convex hull because a single hull would overfill the concave spoon bowl and the narrow neck/handle transition. A small set of convexes should approximate the wooden rounded handle, steel tang/neck, and spoon bowl rim/shell; if bowl concavity is critical for containing small objects, an SDF mesh can be used at higher cost, but convex decomposition is a better dynamic rigid-body default in Isaac Sim/PhysX. Contact offset is set to 2 mm to improve contact generation for the thin metal bowl and rounded edges, with a near-zero rest offset to avoid visible hovering. CCD is enabled because the spoon has thin sheet-metal regions that can tunnel through surfaces during drops or fast manipulation. For stable contact stacking, 120 Hz simulation is recommended; velocity should generally be initialized at zero and kept within ordinary rigid-body limits, with sleep/hibernation enabled in the scene for performance when the spoon comes to rest. Compliant contacts are disabled because the model is treated as a rigid non-deformable composite, though a very high stiffness/low damping compliance could be added only if contact jitter appears on the thin rim.",
-      "static_friction": 0.52,
-      "dynamic_friction": 0.38,
-      "restitution": 0.32,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        -1.8232641506100944e-05,
+        -0.00979449481669031,
+        0.019639483021410605
+      ],
+      "collision": {},
+      "density": 650.0,
+      "id": "part_00",
+      "inertia": [
+        2.225259333381701e-05,
+        0.000526597874494576,
+        0.0005390384072908444
+      ],
+      "mass": 0.065,
+      "material": "wood",
+      "name": "D00749 Spat Spoon",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": ""
+      "source": {
+        "object_name": "D00749 Spat Spoon",
+        "part_name": "D00749 Spat Spoon"
+      },
+      "volume": 0.0005141773495757672
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00749 Spat Spoon",
-  "object_description": "A stainless-steel spoon with a rounded reflective bowl and a light wooden handle. The handle has visible grain, rounded edges, and metal rivets fastening it to the steel tang.",
-  "object_semantic": {
-    "qid": null
-  },
-  "total_mass": 0.065,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies"
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  }
 }

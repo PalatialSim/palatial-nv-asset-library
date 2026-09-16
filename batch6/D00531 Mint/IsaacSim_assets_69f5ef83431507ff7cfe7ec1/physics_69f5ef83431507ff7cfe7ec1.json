@@ -1,102 +1,81 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.05966700613498688,
+        0.08115504682064056,
+        0.12885697185993195
+      ],
+      "min": [
+        -0.0749180018901825,
+        -0.05346199870109558,
+        7.999999979801942e-06
+      ],
+      "size": [
+        0.13458500802516937,
+        0.13461704552173615,
+        0.12884897185995214
+      ]
+    },
+    "description": "A sprig of fresh mint with bright green, textured leaves and a slightly fuzzy stem.",
+    "name": "D00531 Mint",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.002
+  },
+  "asset_id": "D00531",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00531 Mint",
-      "source_part_name": "D00531 Mint",
-      "source_object_name": "D00531 Mint",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "plant_matter",
-      "material": "plant_matter",
-      "non_visual_material": null,
-      "mass": 0.002,
-      "density": 850.0,
-      "inertia": [
-        2.5929702554876053e-06,
-        2.81318598213912e-06,
-        3.1038870159917062e-06
-      ],
-      "inertia_axes": [
-        0.6726409424151442,
-        0.24180551914099774,
-        -0.560633218755105,
-        0.4180605787778967
-      ],
-      "center_of_mass": [
-        -0.0007252221746333177,
-        0.0022679410869005916,
-        0.06362740282187913
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.0008046612059553512,
       "bounds": {
-        "min": [
-          -0.0749180018901825,
-          -0.05346199870109558,
-          7.999999979801942e-06
+        "center": [
+          -0.000631512945085146,
+          0.0005864957324822279,
+          0.06757843882850603
         ],
         "max": [
           0.05966700613498688,
           0.08115504682064056,
           0.12885697185993195
         ],
-        "center": [
-          -0.000631512945085146,
-          0.0005864957324822279,
-          0.06757843882850603
+        "min": [
+          -0.0749180018901825,
+          -0.05346199870109558,
+          7.999999979801942e-06
         ]
       },
-      "description": "A sprig of fresh mint with bright green, textured leaves and a slightly fuzzy stem.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The object is a small plant cutting (mint sprig). It is predominantly made of plant matter (cellulose and water). Due to its very small size and lightweight nature, its mass is very low. The density of fresh plant matter is roughly comparable to water but slightly less due to trapped air and structure, estimated around 800-900 kg/m^3. It has high static friction when resting on surfaces due to the rough, slightly hairy texture of the leaves and stem, but low restitution (bounciness) because it is soft and flexible. For collision in a rigid body simulation, a complex shape like this requires either a highly simplified bounding box/hull if considered a single rigid object, or a convex decomposition if trying to capture the general shape of the leaves, though a bounding box is often sufficient for such a small, lightweight debris-like object. In this case, we'll estimate a lightweight rigid body, though in reality, it would be highly deformable.",
-      "static_friction": 0.7,
-      "dynamic_friction": 0.5,
-      "restitution": 0.1,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        -0.0007252221746333177,
+        0.0022679410869005916,
+        0.06362740282187913
+      ],
+      "collision": {},
+      "density": 850.0,
+      "id": "part_00",
+      "inertia": [
+        2.5929702554876053e-06,
+        2.81318598213912e-06,
+        3.1038870159917062e-06
+      ],
+      "mass": 0.002,
+      "material": "plant_matter",
+      "name": "D00531 Mint",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": "",
-      "appearance_properties": {},
-      "newton": {
-        "collisions": {
-          "collider_type": "convex_decomposition",
-          "rest_offset": 0,
-          "contact_offset": 0.001,
-          "explosion_view_distance": 0.01,
-          "collision_mesh_debug_visualization": false
-        },
-        "simulation_scene": {
-          "simulation_steps_per_second": 60,
-          "enable_ccd": true,
-          "gravitational_acceleration": [
-            0,
-            0,
-            -9.81
-          ],
-          "gpu_buffer_parameters": {},
-          "residuals": {}
-        }
-      }
+      "source": {
+        "object_name": "D00531 Mint",
+        "part_name": "D00531 Mint"
+      },
+      "volume": 0.0008046612059553512
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00531 Mint",
-  "object_description": "A sprig of fresh mint with bright green, textured leaves and a slightly fuzzy stem.",
-  "object_semantic": {
-    "qid": null
-  },
-  "total_mass": 0.002,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies"
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  }
 }

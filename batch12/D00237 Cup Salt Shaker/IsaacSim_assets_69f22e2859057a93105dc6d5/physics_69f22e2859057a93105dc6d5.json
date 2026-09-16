@@ -1,119 +1,83 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.03063613,
+        0.06966748,
+        0.02628501
+      ],
+      "min": [
+        -0.02750488,
+        0.0,
+        -0.02655306
+      ],
+      "size": [
+        0.05814101,
+        0.06966748,
+        0.05283807
+      ]
+    },
+    "description": "A cylindrical brushed stainless steel shaker with a flat wooden lid featuring dispensing holes and a small protruding tab.",
+    "name": "D00237 Cup Salt Shaker",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.05
+  },
+  "asset_id": "D00237",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00237 Cup Salt Shaker",
-      "source_part_name": "D00237 Cup Salt Shaker",
-      "source_object_name": "D00237 Cup Salt Shaker",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "stainless_steel",
-      "material": "stainless_steel",
-      "mass": 0.05,
-      "density": 7800.0,
-      "inertia": [
-        1.3916508588467978e-05,
-        2.4533927413502287e-05,
-        2.5306899832589874e-05
-      ],
-      "inertia_axes": [
-        0.49972238781861894,
-        -0.5128277341126949,
-        -0.48651759129178035,
-        -0.5005855407433792
-      ],
-      "center_of_mass": [
-        -0.00025381105774035796,
-        0.00011353768624212237,
-        0.03900764453700384
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.0001144859603651084,
       "bounds": {
-        "min": [
-          -0.02750488,
-          0.0,
-          -0.02655306
+        "center": [
+          -0.00026349166700467743,
+          0.038969674211592975,
+          -0.00011233140628470367
         ],
         "max": [
           0.03063613,
           0.06966748,
           0.02628501
         ],
-        "center": [
-          -0.00026349166700467743,
-          0.038969674211592975,
-          -0.00011233140628470367
+        "min": [
+          -0.02750488,
+          0.0,
+          -0.02655306
         ]
       },
-      "description": "A cylindrical brushed stainless steel shaker with a flat wooden lid featuring dispensing holes and a small protruding tab.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The object is visually identified as a salt shaker made primarily of stainless steel, topped with a wooden lid. The context data provides bounding box dimensions of approximately 7.5x7.0x7.5 cm and a solid voxel volume of 6.98e-06 m\u00b3. Assuming the structural volume is mostly stainless steel (approx. 7800 kg/m\u00b3) with a smaller portion being the lightweight wooden lid (approx. 600 kg/m\u00b3), the calculated mass is approximately 0.045 kg to 0.055 kg; it is estimated here at 0.05 kg (50g). The dominant external contact surface is stainless steel, determining the root-level physics: static friction of 0.4, dynamic friction of 0.3, and a restitution of 0.3. For Isaac Sim collisions, 'convex_decomposition' is selected to accurately resolve the protruding tab on the lid without generating a highly simplified, oversized bounding hull. A standard contact offset of 0.002m is applied for stable resting on simulation ground planes.",
-      "static_friction": 0.4,
-      "dynamic_friction": 0.3,
-      "restitution": 0.3,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        -0.00025381105774035796,
+        0.00011353768624212237,
+        0.03900764453700384
+      ],
+      "collision": {},
+      "density": 7800.0,
+      "id": "part_00",
+      "inertia": [
+        1.3916508588467978e-05,
+        2.4533927413502287e-05,
+        2.5306899832589874e-05
+      ],
+      "mass": 0.05,
+      "material": "stainless_steel",
+      "name": "D00237 Cup Salt Shaker",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": "",
-      "appearance_properties": {},
-      "newton": {
-        "collisions": {
-          "collider_type": "convex_decomposition",
-          "rest_offset": 0,
-          "contact_offset": 0.002,
-          "explosion_view_distance": 0,
-          "collision_mesh_debug_visualization": false
-        },
-        "simulation_scene": {
-          "simulation_steps_per_second": 60,
-          "enable_ccd": false,
-          "gravitational_acceleration": [
-            0,
-            0,
-            -9.81
-          ],
-          "gpu_buffer_parameters": {},
-          "residuals": {}
-        }
-      }
+      "source": {
+        "object_name": "D00237 Cup Salt Shaker",
+        "part_name": "D00237 Cup Salt Shaker"
+      },
+      "volume": 0.0001144859603651084
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00237 Cup Salt Shaker",
-  "fix_base": false,
-  "object_description": "A cylindrical brushed stainless steel shaker with a flat wooden lid featuring dispensing holes and a small protruding tab.",
-  "object_semantic": {
-    "qid": null
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {
+    "fix_base": false
   },
-  "total_mass": 0.05,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies",
-  "total_object_mass_kg": 0.05,
-  "_authoritative_context_applied": {
-    "object": {},
-    "parts": [
-      {
-        "part_index": 0,
-        "part_id": "part_00",
-        "fields": [
-          "bounds",
-          "canonical_name",
-          "material",
-          "part_id",
-          "part_index",
-          "source_object_name",
-          "source_part_name"
-        ]
-      }
-    ]
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
   }
 }

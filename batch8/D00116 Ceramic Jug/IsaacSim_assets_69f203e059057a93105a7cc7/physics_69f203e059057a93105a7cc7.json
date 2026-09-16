@@ -1,81 +1,81 @@
 {
-  "parts": [
-    {
-      "canonical_name": "part_00",
-      "part_name": "D00116 Ceramic Jug",
-      "source_part_name": "D00116 Ceramic Jug",
-      "source_object_name": "D00116 Ceramic Jug",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "glazed_ceramic",
-      "material": "glazed_ceramic",
-      "non_visual_material": null,
-      "mass": 4.6,
-      "density": 900.0,
-      "inertia": [
-        0.0046035519674974285,
-        0.006193226592521277,
-        0.006649049569838688
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.05525600165128708,
+        0.038805000483989716,
+        0.1002269983291626
       ],
-      "inertia_axes": [
-        0.5353823624693111,
-        -0.5443818080231334,
-        -0.452782530355897,
-        -0.4604369156081587
-      ],
-      "center_of_mass": [
-        -0.0009647538062474247,
-        8.246281715321705e-05,
-        0.044764721687527834
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
+      "min": [
+        -0.04217600077390671,
+        -0.038697000592947006,
         0.0
       ],
-      "volume": 9.844403431088591e-05,
+      "size": [
+        0.09743200242519379,
+        0.07750200107693672,
+        0.1002269983291626
+      ]
+    },
+    "description": "A collection of hollow pitchers and bottles with glazed ceramic bodies, clear and tinted glass vessels, and one transparent plastic bottle. The forms include handled pouring jugs, cylindrical bottles, a square glass flask with cork, and narrow-neck bottles in brown, blue, gray, cream, amber, green, and clear finishes.",
+    "name": "D00116 Ceramic Jug",
+    "object_type": "rigid_bodies",
+    "total_mass": 4.6
+  },
+  "asset_id": "D00116",
+  "parts": [
+    {
       "bounds": {
-        "min": [
-          -0.04217600077390671,
-          -0.038697000592947006,
-          0.0
+        "center": [
+          -0.0012028801236877431,
+          6.680453461802668e-05,
+          0.04666713045401236
         ],
         "max": [
           0.05525600165128708,
           0.038805000483989716,
           0.1002269983291626
         ],
-        "center": [
-          -0.0012028801236877431,
-          6.680453461802668e-05,
-          0.04666713045401236
+        "min": [
+          -0.04217600077390671,
+          -0.038697000592947006,
+          0.0
         ]
       },
-      "description": "A collection of hollow pitchers and bottles with glazed ceramic bodies, clear and tinted glass vessels, and one transparent plastic bottle. The forms include handled pouring jugs, cylindrical bottles, a square glass flask with cork, and narrow-neck bottles in brown, blue, gray, cream, amber, green, and clear finishes.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The image shows a mixed set of hollow household vessels: several glazed ceramic pitchers, several soda-lime glass bottles/flasks, and one thin PET-style plastic bottle. With no exact scale data, I estimate typical tabletop dimensions: pitchers about 0.18\u20130.28 m tall and 0.09\u20130.13 m diameter, glass bottles about 0.18\u20130.32 m tall and 0.06\u20130.09 m diameter, and the plastic bottle about 0.25 m tall. Typical empty masses are approximately 0.55\u20130.95 kg for each ceramic pitcher depending on size and wall thickness, 0.25\u20130.65 kg for each glass bottle, and 0.03\u20130.06 kg for a PET bottle. For the visible set, a practical aggregate rigid-body mass is estimated at about 4.6 kg. If each vessel is authored as a separate rigid body, recommended masses are approximately: small/medium ceramic pitcher 0.65\u20130.85 kg, tall ceramic pitcher 0.8\u20131.0 kg, glass milk bottle 0.35 kg, amber medicine bottle 0.45 kg, square flask with cork 0.55 kg, wine bottle 0.45\u20130.60 kg, and PET bottle 0.04 kg. The dominant structural/contact materials are glazed ceramic and soda-lime glass; I use glazed ceramic as the root-level dominant material because the pitchers occupy a large visible/contact area and are among the heaviest objects. Dense solid ceramic/glass materials are around 2300\u20132600 kg/m^3, but these vessels are hollow. For PhysX mass generation using closed simplified colliders, an effective density around 900 kg/m^3 is more appropriate for the aggregate because convex hulls include internal air volume. For accurate behavior, explicitly set the mass per object rather than relying only on material density. Glazed ceramic/glass on typical dry surfaces has moderate friction: static friction around 0.45\u20130.55 and dynamic around 0.30\u20130.42. I choose root static friction 0.50 and dynamic friction 0.38 as a stable average. Restitution is set low-to-moderate at 0.28 because hollow ceramic/glass vessels are hard but do not behave like rubber; they may rebound slightly but impacts should be damped to avoid unrealistic bouncing and stacking instability. For collision geometry, the shapes are hollow, thin-walled, and include concave openings, handles, spouts, bottle shoulders, ribs, and threaded necks. For robust rigid-body contacts in Isaac Sim, convex decomposition is preferred over a single convex hull because a single hull would seal handles, fill spouts, and overestimate contact regions. If the interiors must interact with other objects or fluids are represented geometrically, an SDF mesh or carefully prepared concave/static mesh may be used, but for dynamic rigid bodies convex decomposition is the safer performant default. Contact offsets use meter-scale defaults suitable for small tabletop objects: rest_offset 0.0 m and contact_offset 0.002 m. CCD is recommended because narrow glass/plastic bottles have thin walls and can tunnel during fast motion or drops. Compliant contacts are not needed for the hard vessels, but a small damping value is useful to suppress chatter when many bottles rest on a surface. The object has no articulations or joints; handles and cork should be separate rigid bodies only if intentionally removable, otherwise they can be part of the same rigid body or fixed with a joint.",
-      "static_friction": 0.5,
-      "dynamic_friction": 0.38,
-      "restitution": 0.28,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        -0.0009647538062474247,
+        8.246281715321705e-05,
+        0.044764721687527834
+      ],
+      "collision": {},
+      "density": 900.0,
+      "id": "part_00",
+      "inertia": [
+        0.0046035519674974285,
+        0.006193226592521277,
+        0.006649049569838688
+      ],
+      "mass": 4.6,
+      "material": "glazed_ceramic",
+      "name": "D00116 Ceramic Jug",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": ""
+      "source": {
+        "object_name": "D00116 Ceramic Jug",
+        "part_name": "D00116 Ceramic Jug"
+      },
+      "volume": 9.844403431088591e-05
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00116 Ceramic Jug",
-  "object_description": "A collection of hollow pitchers and bottles with glazed ceramic bodies, clear and tinted glass vessels, and one transparent plastic bottle. The forms include handled pouring jugs, cylindrical bottles, a square glass flask with cork, and narrow-neck bottles in brown, blue, gray, cream, amber, green, and clear finishes.",
-  "object_semantic": {
-    "qid": null
-  },
-  "total_mass": 4.6,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies"
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  }
 }

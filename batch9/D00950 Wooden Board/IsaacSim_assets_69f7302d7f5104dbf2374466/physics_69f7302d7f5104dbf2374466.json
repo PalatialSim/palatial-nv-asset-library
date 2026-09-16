@@ -1,121 +1,81 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.24037499725818634,
+        0.17692099511623383,
+        0.046792998909950256
+      ],
+      "min": [
+        -0.25694599747657776,
+        -0.17630000412464142,
+        -0.0004459999909158796
+      ],
+      "size": [
+        0.4973209947347641,
+        0.35322099924087524,
+        0.047238998900866136
+      ]
+    },
+    "description": "A thick rectangular wooden cutting board featuring rounded edges and a curved metal handle on one side.",
+    "name": "D00950 Wooden Board",
+    "object_type": "rigid_bodies",
+    "total_mass": 5.5
+  },
+  "asset_id": "D00950",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00950 Wooden Board",
-      "source_part_name": "D00950 Wooden Board",
-      "source_object_name": "D00950 Wooden Board",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "wood",
-      "material": "wood",
-      "non_visual_material": null,
-      "mass": 5.5,
-      "density": 700.0,
-      "inertia": [
-        0.053170647854108175,
-        0.09788374626295841,
-        0.1491330127407447
-      ],
-      "inertia_axes": [
-        9.080216644840408e-06,
-        -0.9999999992719744,
-        1.2577621833143766e-05,
-        -3.486265205740432e-05
-      ],
-      "center_of_mass": [
-        0.004702428507935409,
-        -0.0002922498620987715,
-        0.023203038364490294
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.00724265199785368,
       "bounds": {
-        "min": [
-          -0.25694599747657776,
-          -0.17630000412464142,
-          -0.0004459999909158796
+        "center": [
+          0.005800452432339096,
+          0.0004679559521846777,
+          0.02324115761587694
         ],
         "max": [
           0.24037499725818634,
           0.17692099511623383,
           0.046792998909950256
         ],
-        "center": [
-          0.005800452432339096,
-          0.0004679559521846777,
-          0.02324115761587694
+        "min": [
+          -0.25694599747657776,
+          -0.17630000412464142,
+          -0.0004459999909158796
         ]
       },
-      "description": "A thick rectangular wooden cutting board featuring rounded edges and a curved metal handle on one side.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The object is predominantly made of solid hardwood, which dictates its root-level surface physics, with a minor stainless steel handle component. Based on the provided physical extents (0.485m x 0.047m x 0.342m) forming a bounding volume of roughly 0.0078 m\u00b3, and an estimated hardwood density of 700 kg/m\u00b3, the total mass is calculated to be approximately 5.5 kg. For collision geometry, 'convex_decomposition' is selected to accurately represent the solid board while preserving the void space created by the handle. Wood-on-generic surface interactions typically yield moderate friction (0.5) and low restitution (0.3). Continuous Collision Detection (CCD) is disabled as the object is relatively thick and unlikely to tunnel at normal interaction speeds.",
-      "static_friction": 0.5,
-      "dynamic_friction": 0.5,
-      "restitution": 0.3,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        0.004702428507935409,
+        -0.0002922498620987715,
+        0.023203038364490294
+      ],
+      "collision": {},
+      "density": 700.0,
+      "id": "part_00",
+      "inertia": [
+        0.053170647854108175,
+        0.09788374626295841,
+        0.1491330127407447
+      ],
+      "mass": 5.5,
+      "material": "wood",
+      "name": "D00950 Wooden Board",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": "",
-      "appearance_properties": {},
-      "newton": {
-        "collisions": {
-          "collider_type": "convex_decomposition",
-          "rest_offset": 0,
-          "contact_offset": 0.005,
-          "explosion_view_distance": 0,
-          "collision_mesh_debug_visualization": false
-        },
-        "simulation_scene": {
-          "simulation_steps_per_second": 60,
-          "enable_ccd": false,
-          "gravitational_acceleration": [
-            0,
-            0,
-            -9.81
-          ],
-          "gpu_buffer_parameters": {},
-          "residuals": {}
-        }
-      }
+      "source": {
+        "object_name": "D00950 Wooden Board",
+        "part_name": "D00950 Wooden Board"
+      },
+      "volume": 0.00724265199785368
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00950 Wooden Board",
-  "object_description": "A thick rectangular wooden cutting board featuring rounded edges and a curved metal handle on one side.",
-  "object_semantic": {
-    "qid": null
-  },
-  "total_mass": 5.5,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies",
-  "total_object_mass_kg": 5.5,
-  "_authoritative_context_applied": {
-    "object": {},
-    "parts": [
-      {
-        "part_index": 0,
-        "part_id": "part_00",
-        "fields": [
-          "bounds",
-          "canonical_name",
-          "material",
-          "part_id",
-          "part_index",
-          "source_object_name",
-          "source_part_name"
-        ]
-      }
-    ]
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
   }
 }

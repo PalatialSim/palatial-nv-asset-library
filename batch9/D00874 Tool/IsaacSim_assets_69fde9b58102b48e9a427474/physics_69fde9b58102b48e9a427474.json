@@ -1,121 +1,81 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.023917991667985916,
+        0.03552112728357315,
+        0.18568478524684906
+      ],
+      "min": [
+        -0.022056007757782936,
+        3.1265906272892607e-06,
+        -0.1357962191104889
+      ],
+      "size": [
+        0.04597399942576885,
+        0.03551800069294586,
+        0.32148100435733795
+      ]
+    },
+    "description": "An offset kitchen spatula featuring a long, flat stainless steel blade and a wooden handle secured with brass rivets.",
+    "name": "D00874 Tool",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.11
+  },
+  "asset_id": "D00874",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00874 Tool",
-      "source_part_name": "D00874 Tool",
-      "source_object_name": "D00874 Tool",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "stainless_steel_and_wood",
-      "material": "stainless_steel_and_wood",
-      "non_visual_material": null,
-      "mass": 0.11,
-      "density": 1438.0,
-      "inertia": [
-        1.76528532640939e-05,
-        0.0007977674715431741,
-        0.0008020365212586501
-      ],
-      "inertia_axes": [
-        0.7077047507423353,
-        -0.01071000523396968,
-        0.00034138254418936137,
-        -0.7064270415425616
-      ],
-      "center_of_mass": [
-        -0.00020041204467932902,
-        0.0004760934869988547,
-        0.019637437879180614
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.0002723242112951175,
       "bounds": {
-        "min": [
-          -0.022056007757782936,
-          3.1265906272892607e-06,
-          -0.1357962191104889
+        "center": [
+          0.00010148108808169894,
+          0.012377829372564736,
+          0.018654578176208372
         ],
         "max": [
           0.023917991667985916,
           0.03552112728357315,
           0.18568478524684906
         ],
-        "center": [
-          0.00010148108808169894,
-          0.012377829372564736,
-          0.018654578176208372
+        "min": [
+          -0.022056007757782936,
+          3.1265906272892607e-06,
+          -0.1357962191104889
         ]
       },
-      "description": "An offset kitchen spatula featuring a long, flat stainless steel blade and a wooden handle secured with brass rivets.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The object is an offset spatula of approximately 36cm in length, with a voxel volume of 7.65e-05 m^3. Assuming a wooden handle (~72 cm^3 at 600 kg/m^3) and a stainless steel blade (~8.5 cm^3 at 7800 kg/m^3), the estimated mass is approximately 0.11 kg, yielding an average density of 1438 kg/m^3. The materials present are wood and stainless steel; friction coefficients are estimated around 0.45 (static) and 0.4 (dynamic), with a low restitution of 0.3 since neither material is particularly bouncy in this composite form. Convex decomposition is critical for the collision mesh to accurately represent the 'offset' bend in the blade and prevent the object from rolling unnaturally. Continuous Collision Detection (CCD) is enabled due to the extremely thin profile of the metal blade, which could otherwise tunnel through surfaces at high velocities. A contact offset of 1mm is used to provide stable contact generation without visible gaps.",
-      "static_friction": 0.45,
-      "dynamic_friction": 0.4,
-      "restitution": 0.3,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        -0.00020041204467932902,
+        0.0004760934869988547,
+        0.019637437879180614
+      ],
+      "collision": {},
+      "density": 1438.0,
+      "id": "part_00",
+      "inertia": [
+        1.76528532640939e-05,
+        0.0007977674715431741,
+        0.0008020365212586501
+      ],
+      "mass": 0.11,
+      "material": "stainless_steel_and_wood",
+      "name": "D00874 Tool",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": "",
-      "appearance_properties": {},
-      "newton": {
-        "collisions": {
-          "collider_type": "convex_decomposition",
-          "rest_offset": 0,
-          "contact_offset": 0.001,
-          "explosion_view_distance": 0.05,
-          "collision_mesh_debug_visualization": false
-        },
-        "simulation_scene": {
-          "simulation_steps_per_second": 60,
-          "enable_ccd": true,
-          "gravitational_acceleration": [
-            0,
-            0,
-            -9.81
-          ],
-          "gpu_buffer_parameters": {},
-          "residuals": {}
-        }
-      }
+      "source": {
+        "object_name": "D00874 Tool",
+        "part_name": "D00874 Tool"
+      },
+      "volume": 0.0002723242112951175
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00874 Tool",
-  "object_description": "An offset kitchen spatula featuring a long, flat stainless steel blade and a wooden handle secured with brass rivets.",
-  "object_semantic": {
-    "qid": null
-  },
-  "total_mass": 0.11,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies",
-  "total_object_mass_kg": 0.11,
-  "_authoritative_context_applied": {
-    "object": {},
-    "parts": [
-      {
-        "part_index": 0,
-        "part_id": "part_00",
-        "fields": [
-          "bounds",
-          "canonical_name",
-          "material",
-          "part_id",
-          "part_index",
-          "source_object_name",
-          "source_part_name"
-        ]
-      }
-    ]
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
   }
 }

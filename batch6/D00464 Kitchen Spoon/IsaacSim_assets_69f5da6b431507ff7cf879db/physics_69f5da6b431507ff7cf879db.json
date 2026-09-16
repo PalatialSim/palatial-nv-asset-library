@@ -1,102 +1,81 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.12865136563777924,
+        0.026142677292227745,
+        0.018462324514985085
+      ],
+      "min": [
+        -0.09070099890232086,
+        -0.025968927890062332,
+        -1.700359098322224e-05
+      ],
+      "size": [
+        0.2193523645401001,
+        0.05211160518229008,
+        0.018479328105968307
+      ]
+    },
+    "description": "A spoon featuring a brushed metal bowl and a smooth, tapered wooden handle.",
+    "name": "D00464 Kitchen Spoon",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.05
+  },
+  "asset_id": "D00464",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00464 Kitchen Spoon",
-      "source_part_name": "D00464 Kitchen Spoon",
-      "source_object_name": "D00464 Kitchen Spoon",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "wood",
-      "material": "wood",
-      "non_visual_material": null,
-      "mass": 0.05,
-      "density": 1800.0,
-      "inertia": [
-        3.3604136945720708e-06,
-        0.00018901134030470255,
-        0.0001907650962686906
-      ],
-      "inertia_axes": [
-        0.0002233625185502175,
-        -0.9999770629266354,
-        0.0008211238275343995,
-        -0.006719336683418153
-      ],
-      "center_of_mass": [
-        0.03827811243278222,
-        4.501668242568076e-05,
-        0.008509761008747901
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 2.7909701578603098e-05,
       "bounds": {
-        "min": [
-          -0.09070099890232086,
-          -0.025968927890062332,
-          -1.700359098322224e-05
+        "center": [
+          0.0025222117723154515,
+          6.478623971117943e-05,
+          0.007700345339549263
         ],
         "max": [
           0.12865136563777924,
           0.026142677292227745,
           0.018462324514985085
         ],
-        "center": [
-          0.0025222117723154515,
-          6.478623971117943e-05,
-          0.007700345339549263
+        "min": [
+          -0.09070099890232086,
+          -0.025968927890062332,
+          -1.700359098322224e-05
         ]
       },
-      "description": "A spoon featuring a brushed metal bowl and a smooth, tapered wooden handle.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The object is a single rigid body composed of two distinct materials: a metal (likely stainless steel) bowl and a wooden handle. The mass is estimated at 0.05 kg (50 grams), typical for a solid, high-quality dining utensil. Because the object is highly asymmetric with a concave bowl, 'convex_decomposition' is absolutely critical for the collider type; a simple convex hull would enclose the bowl, preventing it from holding simulated objects or interacting correctly with edges. Continuous Collision Detection (CCD) is enabled at both the body and scene levels because the thin edges of the metal bowl are highly susceptible to tunneling through other colliders during fast movements or drops. The contact offset is kept small (0.001m) to maintain precise contact points on the thin geometry. Friction and restitution values represent an average between the hard, smooth metal and the slightly softer, porous wood, resulting in moderate sliding resistance and low bounciness.",
-      "static_friction": 0.5,
-      "dynamic_friction": 0.4,
-      "restitution": 0.3,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        0.03827811243278222,
+        4.501668242568076e-05,
+        0.008509761008747901
+      ],
+      "collision": {},
+      "density": 1800.0,
+      "id": "part_00",
+      "inertia": [
+        3.3604136945720708e-06,
+        0.00018901134030470255,
+        0.0001907650962686906
+      ],
+      "mass": 0.05,
+      "material": "wood",
+      "name": "D00464 Kitchen Spoon",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": "",
-      "appearance_properties": {},
-      "newton": {
-        "collisions": {
-          "collider_type": "convex_decomposition",
-          "rest_offset": 0,
-          "contact_offset": 0.001,
-          "explosion_view_distance": 0,
-          "collision_mesh_debug_visualization": false
-        },
-        "simulation_scene": {
-          "simulation_steps_per_second": 60,
-          "enable_ccd": true,
-          "gravitational_acceleration": [
-            0,
-            0,
-            -9.81
-          ],
-          "gpu_buffer_parameters": {},
-          "residuals": {}
-        }
-      }
+      "source": {
+        "object_name": "D00464 Kitchen Spoon",
+        "part_name": "D00464 Kitchen Spoon"
+      },
+      "volume": 2.7909701578603098e-05
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00464 Kitchen Spoon",
-  "object_description": "A spoon featuring a brushed metal bowl and a smooth, tapered wooden handle.",
-  "object_semantic": {
-    "qid": null
-  },
-  "total_mass": 0.05,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies"
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  }
 }

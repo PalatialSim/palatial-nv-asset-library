@@ -1,102 +1,81 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.0928250327706337,
+        0.08390200138092041,
+        0.05049898475408554
+      ],
+      "min": [
+        -0.0890839621424675,
+        -0.08417899906635284,
+        -6.3126203713181894e-06
+      ],
+      "size": [
+        0.1819089949131012,
+        0.16808100044727325,
+        0.05050529737445686
+      ]
+    },
+    "description": "A pastry blender featuring a thick, curved wooden handle attached to a U-shaped stainless steel frame with multiple parallel, semi-circular blades.",
+    "name": "D00594 Pastry Cutter",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.21
+  },
+  "asset_id": "D00594",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00594 Pastry Cutter",
-      "source_part_name": "D00594 Pastry Cutter",
-      "source_object_name": "D00594 Pastry Cutter",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "stainless_steel",
-      "material": "stainless_steel",
-      "non_visual_material": null,
-      "mass": 0.21,
-      "density": 7900.0,
-      "inertia": [
-        0.00045399450960555675,
-        0.0004783271767468775,
-        0.0008594300507902403
-      ],
-      "inertia_axes": [
-        0.9998863588261842,
-        2.772467621286184e-05,
-        0.014788445681286119,
-        0.002927548289842991
-      ],
-      "center_of_mass": [
-        0.0017184613013462643,
-        -5.8908689596524394e-05,
-        0.024835241625109254
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.0011891860271353934,
       "bounds": {
-        "min": [
-          -0.0890839621424675,
-          -0.08417899906635284,
-          -6.3126203713181894e-06
+        "center": [
+          0.006700479608491491,
+          -3.9199616208092434e-05,
+          0.02487488145457372
         ],
         "max": [
           0.0928250327706337,
           0.08390200138092041,
           0.05049898475408554
         ],
-        "center": [
-          0.006700479608491491,
-          -3.9199616208092434e-05,
-          0.02487488145457372
+        "min": [
+          -0.0890839621424675,
+          -0.08417899906635284,
+          -6.3126203713181894e-06
         ]
       },
-      "description": "A pastry blender featuring a thick, curved wooden handle attached to a U-shaped stainless steel frame with multiple parallel, semi-circular blades.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The pastry blender's mass is estimated at roughly 0.21 kg, consisting of a dense hardwood handle (~50g) and a larger volume of relatively thin stainless steel components (~160g). While the wood handle is prominent, the stainless steel frame and blades define the object's primary structural envelope and most functional contact surfaces, so steel is selected as the dominant material for density and friction. The complex, hollow U-shape with slotted blades mandates a 'convex_decomposition' collider; a simple convex hull would enclose the negative space, causing unrealistic collisions. Continuous Collision Detection (CCD) is enabled due to the thin nature of the blades, which could otherwise tunnel through surfaces during high-velocity impacts or drops.",
-      "static_friction": 0.5,
-      "dynamic_friction": 0.4,
-      "restitution": 0.4,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        0.0017184613013462643,
+        -5.8908689596524394e-05,
+        0.024835241625109254
+      ],
+      "collision": {},
+      "density": 7900.0,
+      "id": "part_00",
+      "inertia": [
+        0.00045399450960555675,
+        0.0004783271767468775,
+        0.0008594300507902403
+      ],
+      "mass": 0.21,
+      "material": "stainless_steel",
+      "name": "D00594 Pastry Cutter",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": "",
-      "appearance_properties": {},
-      "newton": {
-        "collisions": {
-          "collider_type": "convex_decomposition",
-          "rest_offset": 0,
-          "contact_offset": 0.005,
-          "explosion_view_distance": 0,
-          "collision_mesh_debug_visualization": false
-        },
-        "simulation_scene": {
-          "simulation_steps_per_second": 60,
-          "enable_ccd": true,
-          "gravitational_acceleration": [
-            0,
-            0,
-            -9.81
-          ],
-          "gpu_buffer_parameters": {},
-          "residuals": {}
-        }
-      }
+      "source": {
+        "object_name": "D00594 Pastry Cutter",
+        "part_name": "D00594 Pastry Cutter"
+      },
+      "volume": 0.0011891860271353934
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00594 Pastry Cutter",
-  "object_description": "A pastry blender featuring a thick, curved wooden handle attached to a U-shaped stainless steel frame with multiple parallel, semi-circular blades.",
-  "object_semantic": {
-    "qid": null
-  },
-  "total_mass": 0.21,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies"
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  }
 }

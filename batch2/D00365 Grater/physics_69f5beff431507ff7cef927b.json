@@ -1,81 +1,81 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.062182001769542694,
+        0.0475739985704422,
+        0.2552410066127777
+      ],
+      "min": [
+        -0.062105998396873474,
+        -0.047839999198913574,
+        -3.999999989900971e-06
+      ],
+      "size": [
+        0.12428800016641617,
+        0.09541399776935577,
+        0.2552450066127676
+      ]
+    },
+    "description": "A trapezoidal stainless steel box grater with perforated faces, black rubberized plastic handle and base trim, and a translucent plastic collection drawer.",
+    "name": "D00365 Grater",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.5
+  },
+  "asset_id": "D00365",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00365 Grater",
-      "source_part_name": "D00365 Grater",
-      "source_object_name": "D00365 Grater",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "stainless_steel_body_with_rubberized_plastic_contact_trim",
-      "material": "stainless_steel_body_with_rubberized_plastic_contact_trim",
-      "non_visual_material": null,
-      "mass": 0.5,
-      "density": 170.0,
-      "inertia": [
-        0.0009589699921818082,
-        0.002880720996834259,
-        0.003157120012054312
-      ],
-      "inertia_axes": [
-        0.4999537923894713,
-        -0.49990465318589994,
-        -0.5001656412720605,
-        -0.49997587390731074
-      ],
-      "center_of_mass": [
-        -1.1566645154221637e-05,
-        0.00015731151861648178,
-        0.11012931284871054
-      ],
-      "part_origin_world": [
-        -1.1566645154221637e-05,
-        0.00015731151861648178,
-        0.11012931284871054
-      ],
-      "volume": 0.0027287551957138217,
       "bounds": {
-        "min": [
-          -0.062105998396873474,
-          -0.047839999198913574,
-          -3.999999989900971e-06
+        "center": [
+          6.998108956122204e-05,
+          -0.00021842862656090847,
+          0.10566449808365402
         ],
         "max": [
           0.062182001769542694,
           0.0475739985704422,
           0.2552410066127777
         ],
-        "center": [
-          6.998108956122204e-05,
-          -0.00021842862656090847,
-          0.10566449808365402
+        "min": [
+          -0.062105998396873474,
+          -0.047839999198913574,
+          -3.999999989900971e-06
         ]
       },
-      "description": "A trapezoidal stainless steel box grater with perforated faces, black rubberized plastic handle and base trim, and a translucent plastic collection drawer.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "Estimated as a medium kitchen box grater approximately 0.24 m tall with a 0.13 m x 0.10 m base footprint and a narrower top. The visible structure is mostly thin stainless steel sheet with added plastic/rubber handle, base trim, and a small translucent plastic drawer. A typical object of this size and construction is about 0.4-0.6 kg; 0.50 kg is a realistic working mass including the metal shell, molded handle/base, and drawer. Because the collision representation should be a simplified solid envelope rather than the true thin sheet volume, the density is set as an effective bulk density of about 170 kg/m^3, not stainless steel's material density of ~7850 kg/m^3. This produces the correct mass when using convex decomposition over the occupied volume. The resting contact is mostly the black rubberized/plastic base trim, so friction is higher than bare stainless steel: static friction is estimated at 0.75 and dynamic friction at 0.60. Restitution is kept low at 0.30 because the object is a hollow metal/plastic assembly that may ring or rattle but should not bounce strongly. For Isaac Sim/PhysX, convex decomposition is preferred over a single convex hull because the handle opening, recessed drawer area, flared trapezoidal body, and base trim are meaningfully non-convex. The many grater holes should generally be ignored in collision for performance and contact stability; representing every perforation would create excessive tiny contact patches and unstable snagging. If exact interaction with holes or sharp blades is required, a separate high-resolution SDF mesh may be used, but this is much more expensive for a dynamic rigid body. Recommended rest offset is 0.0 m and contact offset is about 0.003 m, small enough to avoid visible floating while still generating robust contacts on a 20-25 cm object. Initial velocity is zero. CCD is disabled by default for performance because the object is not expected to be fast-moving and the simplified colliders have finite thickness; enable CCD if it is dropped, thrown, or moved above roughly 1-2 m/s near thin obstacles. Mild compliant contact values are suggested only to approximate the rubberized base and reduce chatter; they can be disabled for a purely rigid metal collider. For stable robotic/contact-rich scenes, 60 Hz is acceptable, while 120 Hz may be preferable if grasping the handle or interacting with the drawer recess. A practical sleep threshold would be low/default so the object hibernates after settling; avoid overly large thresholds because the low mass and narrow base can otherwise freeze small rocking motions prematurely.",
-      "static_friction": 0.75,
-      "dynamic_friction": 0.6,
-      "restitution": 0.3,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        -1.1566645154221637e-05,
+        0.00015731151861648178,
+        0.11012931284871054
+      ],
+      "collision": {},
+      "density": 170.0,
+      "id": "part_00",
+      "inertia": [
+        0.0009589699921818082,
+        0.002880720996834259,
+        0.003157120012054312
+      ],
+      "mass": 0.5,
+      "material": "stainless_steel_body_with_rubberized_plastic_contact_trim",
+      "name": "D00365 Grater",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": ""
+      "source": {
+        "object_name": "D00365 Grater",
+        "part_name": "D00365 Grater"
+      },
+      "volume": 0.0027287551957138217
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00365 Grater",
-  "object_description": "A trapezoidal stainless steel box grater with perforated faces, black rubberized plastic handle and base trim, and a translucent plastic collection drawer.",
-  "object_semantic": {
-    "qid": null
-  },
-  "total_mass": 0.5,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies"
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  }
 }

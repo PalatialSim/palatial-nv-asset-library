@@ -1,81 +1,81 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.17429094016551971,
+        0.028015809133648872,
+        0.03598897531628609
+      ],
+      "min": [
+        -0.10797116905450821,
+        0.0,
+        -0.03606322407722473
+      ],
+      "size": [
+        0.2822621092200279,
+        0.028015809133648872,
+        0.07205219939351082
+      ]
+    },
+    "description": "A light natural wooden spoon with an oval concave bowl, long tapered handle, rounded end, and small hanging hole. The surface is smooth with visible wood grain.",
+    "name": "D00982 Wooden Spoon W",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.042
+  },
+  "asset_id": "D00982",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00982 Wooden Spoon W",
-      "source_part_name": "D00982 Wooden Spoon W",
-      "source_object_name": "D00982 Wooden Spoon W",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "smooth_finished_hardwood",
-      "material": "smooth_finished_hardwood",
-      "non_visual_material": null,
-      "mass": 0.042,
-      "density": 650.0,
-      "inertia": [
-        1.0895363608295701e-05,
-        0.00020362041571087738,
-        0.00021134874238773758
-      ],
-      "inertia_axes": [
-        5.5045270103564385e-05,
-        0.9999177196967525,
-        5.582344716779063e-05,
-        -0.012827614361524665
-      ],
-      "center_of_mass": [
-        0.0044026692745509875,
-        2.6516399187989245e-05,
-        0.012545316174240932
-      ],
-      "part_origin_world": [
-        0.0044026692745509875,
-        2.6516399187989245e-05,
-        0.012545316174240932
-      ],
-      "volume": 0.00026345200726511094,
       "bounds": {
-        "min": [
-          -0.10797116905450821,
-          0.0,
-          -0.03606322407722473
+        "center": [
+          0.0027203281109733934,
+          0.011125114106886479,
+          -3.4038346248578605e-05
         ],
         "max": [
           0.17429094016551971,
           0.028015809133648872,
           0.03598897531628609
         ],
-        "center": [
-          0.0027203281109733934,
-          0.011125114106886479,
-          -3.4038346248578605e-05
+        "min": [
+          -0.10797116905450821,
+          0.0,
+          -0.03606322407722473
         ]
       },
-      "description": "A light natural wooden spoon with an oval concave bowl, long tapered handle, rounded end, and small hanging hole. The surface is smooth with visible wood grain.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The object appears to be a single-piece wooden kitchen spoon, likely beech, maple, or bamboo-like hardwood. A typical size for this form is approximately 0.30-0.34 m long, 0.055-0.070 m wide at the bowl, and 0.008-0.018 m thick depending on section. Estimating an effective solid wood volume of roughly 55-70 cm^3 and using a hardwood density of about 600-750 kg/m^3 gives a mass range of about 0.033-0.053 kg; 0.042 kg is a realistic nominal value for a medium wooden spoon. The root density is set to 650 kg/m^3, representative of smooth dry hardwood and suitable for PhysX mass computation if the mesh is scaled in meters. The dominant contact material is smooth finished wood, so static friction is moderate at about 0.48 and dynamic friction about 0.38; these values are appropriate for wood sliding on common lab/table surfaces and are within the expected 0.4-0.6 wood friction range. Restitution is low-to-moderate at 0.35 because a wooden utensil is stiff but lightweight and loses energy through contact geometry, surface finish, and rotational impacts. The spoon is long, thin, and has a concave bowl and a small through-hole at the handle end. A single convex hull would incorrectly fill the bowl cavity and handle hole, so convex decomposition is the preferred rigid-body collision representation. Use multiple convex pieces for the handle, bowl rim, bowl underside, and rounded end; this gives good contact stability without the cost of an exact SDF. SDF or high-resolution triangle-based collision would only be justified if precise interaction with the bowl cavity or hanging hole is critical. Because the handle is thin, a contact offset around 0.0015-0.002 m is large enough to generate stable contacts while remaining small relative to the visual thickness. Rest offset should remain 0.0 m for close visual alignment. CCD is recommended if the spoon may be dropped, spun, or moved quickly by another body, since the thin handle can otherwise tunnel through surfaces at high angular or linear velocities. Initial velocity is zero. For practical rigid-body use, keep linear velocity limits around 5-10 m/s and angular velocity limits around 50-80 rad/s unless higher-speed impacts are required. Sleep thresholds should be conservative for this light object, roughly 1e-5 to 5e-5 in mass-normalized kinetic-energy terms, to avoid premature hibernation while it is rocking or settling. Compliant contacts are not needed for a non-deformable wooden spoon; if contact chatter occurs, prefer higher solver iterations or a smaller time step before adding artificial compliance.",
-      "static_friction": 0.48,
-      "dynamic_friction": 0.38,
-      "restitution": 0.35,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        0.0044026692745509875,
+        2.6516399187989245e-05,
+        0.012545316174240932
+      ],
+      "collision": {},
+      "density": 650.0,
+      "id": "part_00",
+      "inertia": [
+        1.0895363608295701e-05,
+        0.00020362041571087738,
+        0.00021134874238773758
+      ],
+      "mass": 0.042,
+      "material": "smooth_finished_hardwood",
+      "name": "D00982 Wooden Spoon W",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": ""
+      "source": {
+        "object_name": "D00982 Wooden Spoon W",
+        "part_name": "D00982 Wooden Spoon W"
+      },
+      "volume": 0.00026345200726511094
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00982 Wooden Spoon W",
-  "object_description": "A light natural wooden spoon with an oval concave bowl, long tapered handle, rounded end, and small hanging hole. The surface is smooth with visible wood grain.",
-  "object_semantic": {
-    "qid": null
-  },
-  "total_mass": 0.042,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies"
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  }
 }

@@ -1,39 +1,34 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.05838010460138321,
+        0.034956734627485275,
+        0.016324883326888084
+      ],
+      "min": [
+        -0.055626362562179565,
+        0.0,
+        -0.018726160749793053
+      ],
+      "size": [
+        0.11400646716356277,
+        0.034956734627485275,
+        0.03505104407668114
+      ]
+    },
+    "description": "A pale yellow rectangular block of butter with rounded edges, a glossy waxy surface, and small dents and smears. The material appears soft, fatty, and slightly slippery.",
+    "name": "D00090 Butter",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.113
+  },
+  "asset_id": "D00090",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00090 Butter",
-      "source_part_name": "D00090 Butter",
-      "source_object_name": "D00090 Butter",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "wood",
-      "material": "wood",
-      "non_visual_material": null,
-      "mass": 0.113,
-      "density": 920.0,
-      "inertia": [
-        2.1946663347851627e-05,
-        0.0001292009742357604,
-        0.00012948071283217297
-      ],
-      "inertia_axes": [
-        0.00828305330411255,
-        0.9999652635181059,
-        0.00015214186516466537,
-        -0.000916317619289444
-      ],
-      "center_of_mass": [
-        0.001324634441564563,
-        0.0011789458101878194,
-        0.017377348919443907
-      ],
-      "part_origin_world": [
-        0.001324634441564563,
-        0.0011789458101878194,
-        0.017377348919443907
-      ],
-      "volume": 0.0001331236805599228,
       "bounds": {
         "center": [
           0.001280162885234977,
@@ -51,31 +46,36 @@
           -0.018726160749793053
         ]
       },
-      "description": "A pale yellow rectangular block of butter with rounded edges, a glossy waxy surface, and small dents and smears. The material appears soft, fatty, and slightly slippery.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The object appears to be a standard stick/block of butter: a rounded rectangular cuboid made of dense edible fat with a smooth, waxy, slightly oily surface. With no explicit product data or scale, I estimate dimensions close to a common butter stick, approximately 0.12 m x 0.032 m x 0.032 m, giving a volume of about 1.23e-4 m^3. Butter density is typically around 900-950 kg/m^3 depending on water/air content, so a mass near 0.11 kg is realistic. The chosen mass of 0.113 kg matches a common 4 oz stick and is consistent with a density of about 920 kg/m^3. For contact behavior, butter should be modeled as a rigid body with low restitution because it dissipates impact energy and does not bounce. The surface is oily and smooth, so friction is lower than rubber, wood, or dry plastic; a static friction coefficient of 0.22 and dynamic friction coefficient of 0.16 are suitable for butter on typical smooth kitchen/industrial surfaces. Collision geometry can be represented efficiently by a convex hull because the visible shape is globally convex, with only shallow surface dents and rounded edges that do not require expensive triangle-mesh or SDF collision for most rigid-body interactions. A small positive rest offset and contact offset are recommended because the asset is relatively small; using a large default contact offset would make the block appear to hover or contact too early. CCD is not required for normal placement or low-speed sliding, but should be enabled if the block is dropped or launched at high speed. Because real butter is locally compliant, optional compliant contacts with modest stiffness and damping help approximate slight squish/contact softness while still treating the object as non-deformable.",
-      "static_friction": 0.22,
-      "dynamic_friction": 0.16,
-      "restitution": 0.04,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        0.001324634441564563,
+        0.0011789458101878194,
+        0.017377348919443907
+      ],
+      "collision": {},
+      "density": 920.0,
+      "id": "part_00",
+      "inertia": [
+        2.1946663347851627e-05,
+        0.0001292009742357604,
+        0.00012948071283217297
+      ],
+      "mass": 0.113,
+      "material": "wood",
+      "name": "D00090 Butter",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": ""
+      "source": {
+        "object_name": "D00090 Butter",
+        "part_name": "D00090 Butter"
+      },
+      "volume": 0.0001331236805599228
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00090 Butter",
-  "object_description": "A pale yellow rectangular block of butter with rounded edges, a glossy waxy surface, and small dents and smears. The material appears soft, fatty, and slightly slippery.",
-  "object_semantic": {
-    "qid": null
-  },
-  "total_mass": 0.113,
-  "center_of_mass": null,
-  "inertia": null,
-  "num_parts": 1,
-  "object_type": "rigid_bodies",
-  "overall_assessment": ""
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  }
 }

@@ -1,119 +1,83 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.10873357,
+        0.09530752,
+        0.08297167
+      ],
+      "min": [
+        -0.10899137,
+        0.0,
+        -0.08341374
+      ],
+      "size": [
+        0.21772494,
+        0.09530752,
+        0.16638541
+      ]
+    },
+    "description": "A speckled light gray ceramic colander with symmetrical side handles and circular drainage holes.",
+    "name": "generated reference 01",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.52
+  },
+  "asset_id": "D00171",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "generated reference 01",
-      "source_part_name": "generated reference 01",
-      "source_object_name": "generated reference 01",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "ceramic",
-      "material": "ceramic",
-      "mass": 0.52,
-      "density": 2400.0,
-      "inertia": [
-        0.0011090849917788643,
-        0.0013671826885175047,
-        0.0017933412248785341
-      ],
-      "inertia_axes": [
-        0.999978485053934,
-        0.00018260199480865818,
-        0.00012572101391827847,
-        -0.006555934714216632
-      ],
-      "center_of_mass": [
-        -7.707775135693921e-05,
-        0.00017140670047947052,
-        0.05389757610053761
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.001899636873086365,
       "bounds": {
-        "min": [
-          -0.10899137,
-          0.0,
-          -0.08341374
+        "center": [
+          -7.241430853103625e-05,
+          0.04329845516012886,
+          -0.00012558389308462627
         ],
         "max": [
           0.10873357,
           0.09530752,
           0.08297167
         ],
-        "center": [
-          -7.241430853103625e-05,
-          0.04329845516012886,
-          -0.00012558389308462627
+        "min": [
+          -0.10899137,
+          0.0,
+          -0.08341374
         ]
       },
-      "description": "A speckled light gray ceramic colander with symmetrical side handles and circular drainage holes.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The asset is a kitchen colander made of ceramic or porcelain, as indicated by its texture, context metadata, and typical use. The mass is estimated at 0.52 kg based on the reported voxel volume (0.000217 m\u00b3) and a standard ceramic/porcelain density of 2400 kg/m\u00b3. As a ceramic object, friction coefficients are set moderately low (static 0.4, dynamic 0.3) reflecting a smooth glazed surface, and restitution is minimal (0.15) reflecting a rigid, brittle material. Given the hollow bowl shape with holes and the explicit 'sdf' collision quality hint in the metadata, 'sdf_mesh' is selected for the collider_type to ensure highly accurate physical interaction, such as allowing smaller objects to rest inside the bowl without floating on a simplified convex hull. Continuous Collision Detection (CCD) is enabled to prevent tunneling during physics-based tabletop manipulation.",
-      "static_friction": 0.4,
-      "dynamic_friction": 0.3,
-      "restitution": 0.15,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        -7.707775135693921e-05,
+        0.00017140670047947052,
+        0.05389757610053761
+      ],
+      "collision": {},
+      "density": 2400.0,
+      "id": "part_00",
+      "inertia": [
+        0.0011090849917788643,
+        0.0013671826885175047,
+        0.0017933412248785341
+      ],
+      "mass": 0.52,
+      "material": "ceramic",
+      "name": "generated reference 01",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": "",
-      "appearance_properties": {},
-      "newton": {
-        "collisions": {
-          "collider_type": "sdf_mesh",
-          "rest_offset": 0,
-          "contact_offset": 0.002,
-          "explosion_view_distance": 0,
-          "collision_mesh_debug_visualization": false
-        },
-        "simulation_scene": {
-          "simulation_steps_per_second": 60,
-          "enable_ccd": true,
-          "gravitational_acceleration": [
-            0,
-            0,
-            -9.81
-          ],
-          "gpu_buffer_parameters": {},
-          "residuals": {}
-        }
-      }
+      "source": {
+        "object_name": "generated reference 01",
+        "part_name": "generated reference 01"
+      },
+      "volume": 0.001899636873086365
     }
   ],
-  "joint_relations": [],
-  "base_link": "generated reference 01",
-  "fix_base": false,
-  "object_description": "A speckled light gray ceramic colander with symmetrical side handles and circular drainage holes.",
-  "object_semantic": {
-    "qid": null
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {
+    "fix_base": false
   },
-  "total_mass": 0.52,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies",
-  "total_object_mass_kg": 0.52,
-  "_authoritative_context_applied": {
-    "object": {},
-    "parts": [
-      {
-        "part_index": 0,
-        "part_id": "part_00",
-        "fields": [
-          "bounds",
-          "canonical_name",
-          "material",
-          "part_id",
-          "part_index",
-          "source_object_name",
-          "source_part_name"
-        ]
-      }
-    ]
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
   }
 }

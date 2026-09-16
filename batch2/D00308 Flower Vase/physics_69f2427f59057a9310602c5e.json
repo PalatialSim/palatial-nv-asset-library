@@ -1,81 +1,81 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.08986099809408188,
+        0.09073399752378464,
+        0.2732200026512146
+      ],
+      "min": [
+        -0.09374699741601944,
+        -0.0899600014090538,
+        -2.9999999242136255e-05
+      ],
+      "size": [
+        0.18360799551010132,
+        0.18069399893283844,
+        0.27325000265045674
+      ]
+    },
+    "description": "A mixed set of hollow decorative vases and goblets made from glazed ceramic, clear and frosted glass, brushed metal, and patinated copper. The forms have rounded bodies, narrow necks, flared rims, and smooth or carved textured surfaces.",
+    "name": "D00308 Flower Vase",
+    "object_type": "rigid_bodies",
+    "total_mass": 5.8
+  },
+  "asset_id": "D00308",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00308 Flower Vase",
-      "source_part_name": "D00308 Flower Vase",
-      "source_object_name": "D00308 Flower Vase",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "mixed_glazed_ceramic_and_glass",
-      "material": "mixed_glazed_ceramic_and_glass",
-      "non_visual_material": null,
-      "mass": 5.8,
-      "density": 2400.0,
-      "inertia": [
-        0.03369741198565556,
-        0.03920692615793781,
-        0.04944521466779851
-      ],
-      "inertia_axes": [
-        0.49166242811110916,
-        0.4917737124750178,
-        0.5081699678511347,
-        -0.5081239575896846
-      ],
-      "center_of_mass": [
-        -0.005312230785307369,
-        0.0001816502088045388,
-        0.1066818128790204
-      ],
-      "part_origin_world": [
-        -0.005312230785307369,
-        0.0001816502088045388,
-        0.1066818128790204
-      ],
-      "volume": 0.0009744372987478703,
       "bounds": {
-        "min": [
-          -0.09374699741601944,
-          -0.0899600014090538,
-          -2.9999999242136255e-05
+        "center": [
+          -9.62793390169802e-05,
+          -2.4433285495744932e-05,
+          0.1204298268587514
         ],
         "max": [
           0.08986099809408188,
           0.09073399752378464,
           0.2732200026512146
         ],
-        "center": [
-          -9.62793390169802e-05,
-          -2.4433285495744932e-05,
-          0.1204298268587514
+        "min": [
+          -0.09374699741601944,
+          -0.0899600014090538,
+          -2.9999999242136255e-05
         ]
       },
-      "description": "A mixed set of hollow decorative vases and goblets made from glazed ceramic, clear and frosted glass, brushed metal, and patinated copper. The forms have rounded bodies, narrow necks, flared rims, and smooth or carved textured surfaces.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The image appears to show a collection of approximately nine small-to-medium hollow vessels rather than one homogeneous object. I estimate the root mass as the total for the visible set if imported as one combined rigid body: roughly 5.8 kg, with individual vessels likely ranging from about 0.25 kg for a thin metal goblet to 1.1 kg for a thick crystal or large ceramic vase. For best PhysX behavior, these should ideally be separated into individual rigid bodies so disconnected pieces do not move as one object. The dominant hard contact materials are glazed ceramic and glass, with some metal pieces; a material density of about 2400 kg/m\u00b3 represents porcelain/ceramic/glass wall material. If a solid convex outer hull is used instead of true hollow wall geometry, mass should be explicitly overridden because the effective density of a hollow vase envelope would be much lower, approximately 400-700 kg/m\u00b3. Static friction is estimated at 0.45 and dynamic friction at 0.34 for smooth glazed ceramic/glass/metal on common tabletop surfaces; this is lower than rubber but higher than very polished glass. Restitution is set to 0.35: glass and metal can be springy, but hollow vessels lose significant energy through contact geometry and should not bounce excessively in a rigid-body scene. The geometry is concave because of open rims, hollow interiors, necks, and carved details, so a single convex hull would be inaccurate. Convex decomposition is the recommended default for dynamic use, using multiple low-resolution convex pieces per vessel; SDF mesh collision can be used only when accurate interior/rim interaction is essential and the performance cost is acceptable. Thin rims and small bases require small contact offsets, around 0.002 m, with rest offset near 0.0 m. CCD is recommended for falling or knocked vessels to reduce tunneling through thin rims and bases. Initial velocity is assumed zero; practical limits would be about 5 m/s linear and 15-25 rad/s angular for tabletop-scale motion. Use sleep/hibernation for performance, with low sleep thresholds so stationary vessels settle rather than jitter. Compliant contacts are not required for these hard non-deformable materials; if impact chatter occurs, use a high-stiffness, moderate-damping compliant contact profile rather than soft-body behavior.",
-      "static_friction": 0.45,
-      "dynamic_friction": 0.34,
-      "restitution": 0.35,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        -0.005312230785307369,
+        0.0001816502088045388,
+        0.1066818128790204
+      ],
+      "collision": {},
+      "density": 2400.0,
+      "id": "part_00",
+      "inertia": [
+        0.03369741198565556,
+        0.03920692615793781,
+        0.04944521466779851
+      ],
+      "mass": 5.8,
+      "material": "mixed_glazed_ceramic_and_glass",
+      "name": "D00308 Flower Vase",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": ""
+      "source": {
+        "object_name": "D00308 Flower Vase",
+        "part_name": "D00308 Flower Vase"
+      },
+      "volume": 0.0009744372987478703
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00308 Flower Vase",
-  "object_description": "A mixed set of hollow decorative vases and goblets made from glazed ceramic, clear and frosted glass, brushed metal, and patinated copper. The forms have rounded bodies, narrow necks, flared rims, and smooth or carved textured surfaces.",
-  "object_semantic": {
-    "qid": null
-  },
-  "total_mass": 5.8,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies"
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  }
 }

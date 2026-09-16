@@ -1,112 +1,82 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.04905573682461555,
+        0.014139344400626417,
+        0.08933505310401908
+      ],
+      "min": [
+        -0.049207446251390126,
+        3.4196840347203075e-06,
+        -0.0891720036316343
+      ],
+      "size": [
+        0.09826318307600568,
+        0.014135924716591697,
+        0.17850705673565337
+      ]
+    },
+    "description": "A dark brown rectangular solid divided into a grid of smaller, raised rectangular segments.",
+    "name": "D00127 Chocolate",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.1
+  },
+  "asset_id": "D00127",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00127 Chocolate",
-      "source_part_name": "D00127 Chocolate",
-      "source_object_name": "D00127 Chocolate",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "chocolate",
-      "material": "chocolate",
-      "non_visual_material": null,
-      "mass": 0.1,
-      "density": 1300.0,
-      "inertia": [
-        7.98678328415007e-05,
-        0.00025646802221719275,
-        0.000333137483006369
-      ],
-      "inertia_axes": [
-        0.7070806365801545,
-        4.454688368029383e-05,
-        4.2975819286694694e-05,
-        0.7071329221172338
-      ],
-      "center_of_mass": [
-        -0.00010517475366099695,
-        0.0002046440943857906,
-        0.006860045640941223
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.0002367044580750668,
       "bounds": {
-        "min": [
-          -0.049207446251390126,
-          3.4196840347203075e-06,
-          -0.0891720036316343
+        "center": [
+          -9.514360960495075e-05,
+          0.006790726169642401,
+          6.146216438373682e-05
         ],
         "max": [
           0.04905573682461555,
           0.014139344400626417,
           0.08933505310401908
         ],
-        "center": [
-          -9.514360960495075e-05,
-          0.006790726169642401,
-          6.146216438373682e-05
+        "min": [
+          -0.049207446251390126,
+          3.4196840347203075e-06,
+          -0.0891720036316343
         ]
       },
-      "description": "A dark brown rectangular solid divided into a grid of smaller, raised rectangular segments.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "Based on the visual appearance, the object is a standard chocolate bar. Solid chocolate has a typical density of approximately 1300 kg/m\u00b3. Assuming standard dimensions (roughly 15cm x 7cm x 0.7cm), the mass is estimated at 0.1 kg (100 grams). The surface of chocolate is relatively smooth but slightly waxy, yielding moderate friction coefficients (estimated static 0.4, dynamic 0.3). Restitution is low (0.15) due to the dense, inelastic nature of solid chocolate at room temperature. For simulation, continuous collision detection (CCD) is enabled to prevent this relatively thin object from tunneling through surfaces at high velocities. A convex hull is chosen for the collider type to balance performance with the general shape, although convex decomposition could be used if precise interaction with the surface grooves is required.",
-      "static_friction": 0.4,
-      "dynamic_friction": 0.3,
-      "restitution": 0.15,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        -0.00010517475366099695,
+        0.0002046440943857906,
+        0.006860045640941223
+      ],
+      "collision": {},
+      "density": 1300.0,
+      "id": "part_00",
+      "inertia": [
+        7.98678328415007e-05,
+        0.00025646802221719275,
+        0.000333137483006369
+      ],
+      "mass": 0.1,
+      "material": "chocolate",
+      "name": "D00127 Chocolate",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "enable_ccd": null,
-      "solver_position_iterations": null,
-      "solver_velocity_iterations": null,
-      "color_name": "",
-      "appearance_properties": {},
-      "newton": {
-        "collisions": {
-          "collider_type": "convex_hull",
-          "rest_offset": 0,
-          "contact_offset": 0.002,
-          "explosion_view_distance": 0,
-          "collision_mesh_debug_visualization": false
-        },
-        "simulation_scene": {
-          "simulation_steps_per_second": 60,
-          "enable_ccd": true,
-          "gravitational_acceleration": [
-            0,
-            -9.81,
-            0
-          ],
-          "gpu_buffer_parameters": {},
-          "residuals": {}
-        }
-      }
+      "source": {
+        "object_name": "D00127 Chocolate",
+        "part_name": "D00127 Chocolate"
+      },
+      "volume": 0.0002367044580750668
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00127 Chocolate",
-  "base_link_recommendation": null,
-  "fix_base": false,
-  "source": null,
-  "authored_by": null,
-  "up_axis": null,
-  "solver_position_iterations": null,
-  "solver_velocity_iterations": null,
-  "object_description": "A dark brown rectangular solid divided into a grid of smaller, raised rectangular segments.",
-  "object_semantic": {
-    "qid": null
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {
+    "fix_base": false
   },
-  "total_mass": 0.1,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies"
+  "units": {
+    "length": "m",
+    "mass": "kg"
+  }
 }

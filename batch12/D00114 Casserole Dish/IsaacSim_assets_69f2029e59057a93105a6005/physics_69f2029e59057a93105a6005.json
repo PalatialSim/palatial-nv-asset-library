@@ -1,363 +1,237 @@
 {
+  "articulation": {
+    "has_joints": true,
+    "joints": [
+      {
+        "axis": [],
+        "behavior_type": "normal",
+        "child": "right side handle",
+        "damping": 0.0,
+        "effort": 0.0,
+        "friction": 0.0,
+        "joint_rotation_local": [],
+        "joint_type": "fixed",
+        "name": "joint_pot_body__right_side_handle",
+        "origin": [],
+        "parent": "pot body",
+        "score": 0.98,
+        "stiffness": 0.0,
+        "velocity": 0.0
+      },
+      {
+        "axis": [],
+        "behavior_type": "normal",
+        "child": "left side handle",
+        "damping": 0.0,
+        "effort": 0.0,
+        "friction": 0.0,
+        "joint_rotation_local": [],
+        "joint_type": "fixed",
+        "name": "joint_pot_body__left_side_handle",
+        "origin": [],
+        "parent": "pot body",
+        "score": 0.98,
+        "stiffness": 0.0,
+        "velocity": 0.0
+      }
+    ]
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.150017,
+        0.126086,
+        0.142871
+      ],
+      "min": [
+        -0.140561,
+        -0.120833,
+        -0.000135
+      ],
+      "size": [
+        0.290578,
+        0.246919,
+        0.143006
+      ]
+    },
+    "description": "A stainless-steel cooking pot with two fixed side handles and a removable lid. Simulation treats the thin metal vessel and handles as rigid welded parts, while the lid is a separate lift-off rigid body.",
+    "name": "removable pot lid",
+    "object_type": "rigid_bodies",
+    "total_mass": 1.75
+  },
+  "asset_id": "D00114",
   "parts": [
     {
-      "canonical_name": "part_0",
-      "part_name": "removable pot lid",
-      "source_part_name": "part_0",
-      "source_object_name": "part_0",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "brushed_stainless_steel",
-      "material": "brushed_stainless_steel",
-      "non_visual_material": {
-        "base": "steel",
-        "coating": "polish",
-        "attributes": [
-          "smooth",
-          "reflective"
-        ]
-      },
-      "mass": 0.5,
-      "density": 8000.0,
-      "inertia": [
-        0.0013669855201604434,
-        0.0015143026576307542,
-        0.0028147637308048572
-      ],
-      "inertia_axes": [
-        0.9967172425125672,
-        -0.026608346435511243,
-        -0.015845638071940726,
-        0.07480407831265071
-      ],
-      "center_of_mass": [
-        -0.008733941491893516,
-        0.021466238293446096,
-        0.1061404849071178
-      ],
-      "part_origin_world": [
-        -0.008733941491893516,
-        0.021466238293446096,
-        0.1061404849071178
-      ],
-      "volume": 0.00012336042939096377,
       "bounds": {
-        "min": [
-          -0.118582,
-          -0.083945,
-          0.089896
+        "center": [
+          -0.00862,
+          0.02107,
+          0.116383
         ],
         "max": [
           0.101342,
           0.126086,
           0.142871
         ],
-        "center": [
-          -0.00862,
-          0.02107,
-          0.116383
+        "min": [
+          -0.118582,
+          -0.083945,
+          0.089896
         ]
       },
-      "description": "Thin stainless-steel lid with an integrated top loop handle that rests on the pot rim and can be lifted off.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The reference shows a brushed stainless cookware lid with a rolled rim and raised metal handle. It is a thin shell rather than a solid disk, so mass is estimated from a roughly 22 cm metal lid plus handle, not from full bounding-box volume. Because it simply rests on the pot rim and can be lifted off, it is modeled as a separate floating rigid body.",
-      "static_friction": 0.45,
-      "dynamic_friction": 0.32,
-      "restitution": 0.3,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        -0.008733941491893516,
+        0.021466238293446096,
+        0.1061404849071178
+      ],
+      "collision": {},
+      "density": 8000.0,
+      "id": "part_00",
+      "inertia": [
+        0.0013669855201604434,
+        0.0015143026576307542,
+        0.0028147637308048572
+      ],
+      "mass": 0.5,
+      "material": "brushed_stainless_steel",
+      "name": "removable pot lid",
       "physics_type": "rigid",
-      "is_structural_root": false,
-      "color_name": "Red"
+      "source": {
+        "object_name": "part_0",
+        "part_name": "part_0"
+      },
+      "volume": 0.00012336042939096377
     },
     {
-      "canonical_name": "part_1",
-      "part_name": "right side handle",
-      "source_part_name": "part_1",
-      "source_object_name": "part_1",
-      "part_index": 1,
-      "part_id": "part_01",
-      "material_name": "polished_stainless_steel",
-      "material": "polished_stainless_steel",
-      "non_visual_material": {
-        "base": "steel",
-        "coating": "polish",
-        "attributes": [
-          "polished",
-          "smooth",
-          "reflective"
-        ]
-      },
-      "mass": 0.1,
-      "density": 8000.0,
-      "inertia": [
-        3.797168269872921e-05,
-        7.435904957303971e-05,
-        0.00010892302729190066
-      ],
-      "inertia_axes": [
-        0.6794974798548153,
-        -0.18298541615908098,
-        -0.1762085721125599,
-        0.6882950322776532
-      ],
-      "center_of_mass": [
-        0.12758326561249808,
-        -0.01742939465549066,
-        0.0811348081576354
-      ],
-      "part_origin_world": [
-        0.12758326561249808,
-        -0.01742939465549066,
-        0.0811348081576354
-      ],
-      "volume": 1.0227744602378686e-05,
       "bounds": {
-        "min": [
-          0.098338,
-          -0.056286,
-          0.053999
+        "center": [
+          0.124177,
+          -0.015695,
+          0.072993
         ],
         "max": [
           0.150017,
           0.024896,
           0.091988
         ],
-        "center": [
-          0.124177,
-          -0.015695,
-          0.072993
+        "min": [
+          0.098338,
+          -0.056286,
+          0.053999
         ]
       },
-      "description": "Curved stainless-steel side grip fixed to the pot wall for lifting the vessel.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "This is a small polished metal loop handle matching the side grips in the reference image. It is visually attached to the pot wall by welded or riveted mounts, so it should be fixed to the vessel. Its mass is low because the handle is a compact loop or hollow/formed metal section.",
-      "static_friction": 0.42,
-      "dynamic_friction": 0.3,
-      "restitution": 0.35,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        0.12758326561249808,
+        -0.01742939465549066,
+        0.0811348081576354
+      ],
+      "collision": {},
+      "density": 8000.0,
+      "id": "part_01",
+      "inertia": [
+        3.797168269872921e-05,
+        7.435904957303971e-05,
+        0.00010892302729190066
+      ],
+      "mass": 0.1,
+      "material": "polished_stainless_steel",
+      "name": "right side handle",
       "physics_type": "rigid",
-      "is_structural_root": false,
-      "color_name": "Blue"
+      "source": {
+        "object_name": "part_1",
+        "part_name": "part_1"
+      },
+      "volume": 1.0227744602378686e-05
     },
     {
-      "canonical_name": "part_2",
-      "part_name": "left side handle",
-      "source_part_name": "part_2",
-      "source_object_name": "part_2",
-      "part_index": 2,
-      "part_id": "part_02",
-      "material_name": "polished_stainless_steel",
-      "material": "polished_stainless_steel",
-      "non_visual_material": {
-        "base": "steel",
-        "coating": "polish",
-        "attributes": [
-          "polished",
-          "smooth",
-          "reflective"
-        ]
-      },
-      "mass": 0.1,
-      "density": 8000.0,
-      "inertia": [
-        3.826985144610469e-05,
-        7.489283485597046e-05,
-        0.00010972705375292434
-      ],
-      "inertia_axes": [
-        0.17674672705509759,
-        -0.6896281003643516,
-        -0.6773863316651139,
-        0.18526045270496083
-      ],
-      "center_of_mass": [
-        -0.11794039425801034,
-        -0.017347965616205403,
-        0.08097926914495478
-      ],
-      "part_origin_world": [
-        -0.11794039425801034,
-        -0.017347965616205403,
-        0.08097926914495478
-      ],
-      "volume": 1.0314733347193674e-05,
       "bounds": {
-        "min": [
-          -0.140561,
-          -0.056276,
-          0.054012
+        "center": [
+          -0.114755,
+          -0.015642,
+          0.073022
         ],
         "max": [
           -0.08895,
           0.024992,
           0.092031
         ],
-        "center": [
-          -0.114755,
-          -0.015642,
-          0.073022
+        "min": [
+          -0.140561,
+          -0.056276,
+          0.054012
         ]
       },
-      "description": "Opposite curved stainless-steel side grip fixed to the pot wall for lifting the vessel.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "This is the matching side handle on the other side of the cookware. The render and reference indicate a rigid metal handle permanently attached to the pot wall, not a moving or removable part. Stainless steel friction and restitution are used, with a small mass appropriate for a compact handle.",
-      "static_friction": 0.42,
-      "dynamic_friction": 0.3,
-      "restitution": 0.35,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        -0.11794039425801034,
+        -0.017347965616205403,
+        0.08097926914495478
+      ],
+      "collision": {},
+      "density": 8000.0,
+      "id": "part_02",
+      "inertia": [
+        3.826985144610469e-05,
+        7.489283485597046e-05,
+        0.00010972705375292434
+      ],
+      "mass": 0.1,
+      "material": "polished_stainless_steel",
+      "name": "left side handle",
       "physics_type": "rigid",
-      "is_structural_root": false,
-      "color_name": "Green"
+      "source": {
+        "object_name": "part_2",
+        "part_name": "part_2"
+      },
+      "volume": 1.0314733347193674e-05
     },
     {
-      "canonical_name": "part_3",
-      "part_name": "pot body",
-      "source_part_name": "part_3",
-      "source_object_name": "part_3",
-      "part_index": 3,
-      "part_id": "part_03",
-      "material_name": "brushed_stainless_steel",
-      "material": "brushed_stainless_steel",
-      "non_visual_material": {
-        "base": "steel",
-        "coating": "polish",
-        "attributes": [
-          "smooth",
-          "reflective"
-        ]
-      },
-      "mass": 1.05,
-      "density": 8000.0,
-      "inertia": [
-        0.0035818242735616867,
-        0.0036007719063388816,
-        0.005717361797480046
-      ],
-      "inertia_axes": [
-        0.0002093380799982847,
-        -0.6775576629515865,
-        -0.735469624877991,
-        2.085617658520777e-05
-      ],
-      "center_of_mass": [
-        0.004438233361991293,
-        -0.011877495757656087,
-        0.04756867353385777
-      ],
-      "part_origin_world": [
-        0.004438233361991293,
-        -0.011877495757656087,
-        0.04756867353385777
-      ],
-      "volume": 0.0031452426847934298,
       "bounds": {
-        "min": [
-          -0.104083,
-          -0.120833,
-          -0.000135
+        "center": [
+          0.004411,
+          -0.011723,
+          0.045966
         ],
         "max": [
           0.112905,
           0.097387,
           0.092067
         ],
-        "center": [
-          0.004411,
-          -0.011723,
-          0.045966
+        "min": [
+          -0.104083,
+          -0.120833,
+          -0.000135
         ]
       },
-      "description": "Main cylindrical stainless-steel cooking vessel with thin walls, rolled rim, and heavier base.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The yellow part is the main cylindrical vessel and provides the structural base for the attached side handles. The brushed stainless body is modeled as a thin shell with a heavier base, so the mass uses cookware product priors and shell assumptions rather than solid bounding-box volume. It is the sole structural root.",
-      "static_friction": 0.45,
-      "dynamic_friction": 0.32,
-      "restitution": 0.25,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        0.004438233361991293,
+        -0.011877495757656087,
+        0.04756867353385777
+      ],
+      "collision": {},
+      "density": 8000.0,
+      "id": "part_03",
+      "inertia": [
+        0.0035818242735616867,
+        0.0036007719063388816,
+        0.005717361797480046
+      ],
+      "mass": 1.05,
+      "material": "brushed_stainless_steel",
+      "name": "pot body",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": "Yellow"
-    }
-  ],
-  "joint_relations": [
-    {
-      "child": "right side handle",
-      "parent": "pot body",
-      "joint_type": "fixed",
-      "name": "joint_pot_body__right_side_handle",
-      "damping": 0.0,
-      "effort": 0.0,
-      "friction": 0.0,
-      "stiffness": 0.0,
-      "velocity": 0.0,
-      "origin": [],
-      "joint_rotation_local": [],
-      "axis": [],
-      "motion_limits": null,
-      "revolute_mode": null,
-      "score": 0.98,
-      "behavior_type": "normal"
-    },
-    {
-      "child": "left side handle",
-      "parent": "pot body",
-      "joint_type": "fixed",
-      "name": "joint_pot_body__left_side_handle",
-      "damping": 0.0,
-      "effort": 0.0,
-      "friction": 0.0,
-      "stiffness": 0.0,
-      "velocity": 0.0,
-      "origin": [],
-      "joint_rotation_local": [],
-      "axis": [],
-      "motion_limits": null,
-      "revolute_mode": null,
-      "score": 0.98,
-      "behavior_type": "normal"
-    }
-  ],
-  "base_link": "pot body",
-  "object_description": "A stainless-steel cooking pot with two fixed side handles and a removable lid. Simulation treats the thin metal vessel and handles as rigid welded parts, while the lid is a separate lift-off rigid body.",
-  "object_semantic": {
-    "qid": null
-  },
-  "total_mass": 1.75,
-  "center_of_mass": null,
-  "inertia": null,
-  "behavior_type": "normal",
-  "overall_assessment": "Stable first-pass simulation setup with fixed handle joints and an independent removable lid. No driven articulated mechanism is required.",
-  "num_parts": 4,
-  "object_type": "rigid_bodies",
-  "_metadata": {
-    "openai_response": {
-      "model": "gpt-5.5",
-      "usage": {
-        "input_tokens": 20640,
-        "input_tokens_details": {
-          "cached_tokens": 2816
-        },
-        "output_tokens": 5730,
-        "output_tokens_details": {
-          "reasoning_tokens": 4035
-        },
-        "total_tokens": 26370
+      "source": {
+        "object_name": "part_3",
+        "part_name": "part_3"
       },
-      "web_search_tool_calls": 0,
-      "estimated_cost_usd": 0.262428,
-      "pricing_note": "Estimated from response usage and public token/tool prices. OpenAI organization Costs API is authoritative for billing."
+      "volume": 0.0031452426847934298
     }
+  ],
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
   }
 }
