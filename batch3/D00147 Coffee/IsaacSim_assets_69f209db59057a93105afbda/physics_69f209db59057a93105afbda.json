@@ -1,108 +1,81 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.061068,
+        0.040564,
+        0.079347
+      ],
+      "min": [
+        -0.049655,
+        -0.040035,
+        -2.2e-05
+      ],
+      "size": [
+        0.11072299999999999,
+        0.080599,
+        0.079369
+      ]
+    },
+    "description": "Matte stoneware coffee mug with an integral handle and no articulated mechanisms. Simulated as a single rigid ceramic body carrying its contents.",
+    "name": "mug body with handle",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.48
+  },
+  "asset_id": "D00147",
   "parts": [
     {
-      "canonical_name": "part_0",
-      "part_name": "mug body with handle",
-      "source_part_name": "part_0",
-      "source_object_name": "part_0",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "matte_glazed_stoneware_ceramic",
-      "material": "matte_glazed_stoneware_ceramic",
-      "non_visual_material": {
-        "base": "ceramic",
-        "coating": "glaze",
-        "attributes": [
-          "matte",
-          "smooth"
-        ]
-      },
-      "mass": 0.48,
-      "density": 2300.0,
-      "inertia": [
-        0.0004045206043427891,
-        0.00046394118294522537,
-        0.0005173030382533997
-      ],
-      "inertia_axes": [
-        0.7029613722029807,
-        0.6994752874809771,
-        -0.09047709216021914,
-        0.09161619501015167
-      ],
-      "center_of_mass": [
-        -0.0041082421622608365,
-        0.00021967548902726547,
-        0.04099228663035589
-      ],
-      "part_origin_world": [
-        -0.0041082421622608365,
-        0.00021967548902726547,
-        0.04099228663035589
-      ],
-      "volume": 0.00044512673579906025,
       "bounds": {
-        "min": [
-          -0.049655,
-          -0.040035,
-          -2.2e-05
+        "center": [
+          0.005707,
+          0.000264,
+          0.039662
         ],
         "max": [
           0.061068,
           0.040564,
           0.079347
         ],
-        "center": [
-          0.005707,
-          0.000264,
-          0.039662
+        "min": [
+          -0.049655,
+          -0.040035,
+          -2.2e-05
         ]
       },
-      "description": "Single-piece ceramic mug shell with an integrated handle, serving as the complete rigid body for the cup.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The reference image shows a small matte black stoneware or ceramic mug with an integral handle. The segmentation contains only one part, so the mug body, handle, and visible beverage load are represented as one rigid body rather than a separate fluid system. Friction is set moderately high for matte glazed ceramic, restitution is low to avoid unrealistic bouncing for a brittle vessel, and mass is estimated from a small ceramic mug plus filled contents.",
-      "static_friction": 0.58,
-      "dynamic_friction": 0.46,
-      "restitution": 0.08,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        -0.0041082421622608365,
+        0.00021967548902726547,
+        0.04099228663035589
+      ],
+      "collision": {},
+      "density": 2300.0,
+      "id": "part_00",
+      "inertia": [
+        0.0004045206043427891,
+        0.00046394118294522537,
+        0.0005173030382533997
+      ],
+      "mass": 0.48,
+      "material": "matte_glazed_stoneware_ceramic",
+      "name": "mug body with handle",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": "Red"
+      "source": {
+        "object_name": "part_0",
+        "part_name": "part_0"
+      },
+      "volume": 0.00044512673579906025
     }
   ],
-  "joint_relations": [],
-  "base_link": "mug body with handle",
-  "object_description": "Matte stoneware coffee mug with an integral handle and no articulated mechanisms. Simulated as a single rigid ceramic body carrying its contents.",
-  "object_semantic": {
-    "qid": null
-  },
-  "total_mass": 0.48,
-  "center_of_mass": null,
-  "inertia": null,
-  "behavior_type": "normal",
-  "overall_assessment": "Stable single rigid-body setup suitable for a small ceramic mug; no articulation or particle-fluid behavior is generated because the manifest contains only one part.",
-  "num_parts": 1,
-  "object_type": "rigid_bodies",
-  "_metadata": {
-    "openai_response": {
-      "model": "gpt-5.5",
-      "usage": {
-        "input_tokens": 19634,
-        "input_tokens_details": {
-          "cached_tokens": 2816
-        },
-        "output_tokens": 4649,
-        "output_tokens_details": {
-          "reasoning_tokens": 4142
-        },
-        "total_tokens": 24283
-      },
-      "web_search_tool_calls": 0,
-      "estimated_cost_usd": 0.224968,
-      "pricing_note": "Estimated from response usage and public token/tool prices. OpenAI organization Costs API is authoritative for billing."
-    }
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
   }
 }

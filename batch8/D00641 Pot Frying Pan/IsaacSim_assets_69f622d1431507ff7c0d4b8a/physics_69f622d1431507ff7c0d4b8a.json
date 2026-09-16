@@ -1,102 +1,81 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.2465595006942749,
+        0.11453083157539368,
+        0.05328300595283508
+      ],
+      "min": [
+        -0.1351245790719986,
+        -0.11311571300029755,
+        -2.5947741960408166e-05
+      ],
+      "size": [
+        0.3816840797662735,
+        0.22764654457569122,
+        0.05330895369479549
+      ]
+    },
+    "description": "A 10-inch stainless steel frying pan with a black, heat-resistant handle grip.",
+    "name": "D00641 Pot Frying Pan",
+    "object_type": "rigid_bodies",
+    "total_mass": 1.2
+  },
+  "asset_id": "D00641",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00641 Pot Frying Pan",
-      "source_part_name": "D00641 Pot Frying Pan",
-      "source_object_name": "D00641 Pot Frying Pan",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "stainless_steel",
-      "material": "stainless_steel",
-      "non_visual_material": null,
-      "mass": 1.2,
-      "density": 8000.0,
-      "inertia": [
-        0.003204142740823263,
-        0.00748044566337241,
-        0.010292465247165063
-      ],
-      "inertia_axes": [
-        0.9997242798778733,
-        0.00010482826886554768,
-        -0.023347986248479228,
-        0.00249494926654038
-      ],
-      "center_of_mass": [
-        0.0101517943927074,
-        0.000797071434829105,
-        0.026799932471625484
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.0020920102775311175,
       "bounds": {
-        "min": [
-          -0.1351245790719986,
-          -0.11311571300029755,
-          -2.5947741960408166e-05
+        "center": [
+          -0.007079092202194757,
+          0.000713620057945845,
+          0.016949279533724364
         ],
         "max": [
           0.2465595006942749,
           0.11453083157539368,
           0.05328300595283508
         ],
-        "center": [
-          -0.007079092202194757,
-          0.000713620057945845,
-          0.016949279533724364
+        "min": [
+          -0.1351245790719986,
+          -0.11311571300029755,
+          -2.5947741960408166e-05
         ]
       },
-      "description": "A 10-inch stainless steel frying pan with a black, heat-resistant handle grip.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The object is a standard 10-inch (26cm) frying pan, predominantly made of stainless steel as indicated by its visual appearance and engraved text. The handle features a black grip, likely silicone or heat-resistant plastic, but the primary structural and contact material for the bulk of the object is stainless steel. For physics simulation, the mass is estimated at 1.2 kg, which is typical for a pan of this size and material gauge. The density reflects standard stainless steel (approximately 8000 kg/m^3). Friction coefficients are set for steel interacting with standard surfaces (0.4 static, 0.35 dynamic). Restitution is kept low (0.3) as the object is a rigid metal structure that absorbs impact energy rather than bouncing significantly. For collision modeling in Isaac Sim, 'convex_decomposition' is essential to accurately capture the concave cooking surface, allowing other simulated objects (like food items or spatulas) to rest and interact inside the pan without floating on a simplified convex hull.",
-      "static_friction": 0.4,
-      "dynamic_friction": 0.35,
-      "restitution": 0.3,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        0.0101517943927074,
+        0.000797071434829105,
+        0.026799932471625484
+      ],
+      "collision": {},
+      "density": 8000.0,
+      "id": "part_00",
+      "inertia": [
+        0.003204142740823263,
+        0.00748044566337241,
+        0.010292465247165063
+      ],
+      "mass": 1.2,
+      "material": "stainless_steel",
+      "name": "D00641 Pot Frying Pan",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": "",
-      "appearance_properties": {},
-      "newton": {
-        "collisions": {
-          "collider_type": "convex_decomposition",
-          "rest_offset": 0,
-          "contact_offset": 0.002,
-          "explosion_view_distance": 0,
-          "collision_mesh_debug_visualization": false
-        },
-        "simulation_scene": {
-          "simulation_steps_per_second": 60,
-          "enable_ccd": true,
-          "gravitational_acceleration": [
-            0,
-            0,
-            -9.81
-          ],
-          "gpu_buffer_parameters": {},
-          "residuals": {}
-        }
-      }
+      "source": {
+        "object_name": "D00641 Pot Frying Pan",
+        "part_name": "D00641 Pot Frying Pan"
+      },
+      "volume": 0.0020920102775311175
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00641 Pot Frying Pan",
-  "object_description": "A 10-inch stainless steel frying pan with a black, heat-resistant handle grip.",
-  "object_semantic": {
-    "qid": null
-  },
-  "total_mass": 1.2,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies"
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  }
 }

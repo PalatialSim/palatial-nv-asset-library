@@ -1,119 +1,83 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.19948036,
+        0.05545147,
+        0.05134307
+      ],
+      "min": [
+        -0.09004771,
+        0.0,
+        -0.05203847
+      ],
+      "size": [
+        0.28952807,
+        0.05545147,
+        0.10338154
+      ]
+    },
+    "description": "A stainless steel ladle featuring a deep bowl with a pouring spout and a riveted wooden handle.",
+    "name": "D00780 Spoon Ladle",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.2
+  },
+  "asset_id": "D00780",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00780 Spoon Ladle",
-      "source_part_name": "D00780 Spoon Ladle",
-      "source_object_name": "D00780 Spoon Ladle",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "stainless_steel",
-      "material": "stainless_steel",
-      "mass": 0.2,
-      "density": 2198.0,
-      "inertia": [
-        0.00010805386023960176,
-        0.0009006143699491787,
-        0.0009490536957963001
-      ],
-      "inertia_axes": [
-        0.005839113765736536,
-        -0.9999185389359689,
-        0.0010427653632186715,
-        -0.011301897317945033
-      ],
-      "center_of_mass": [
-        0.01609788983480571,
-        8.760931814432868e-05,
-        0.032407152862450224
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.0006442805824675271,
       "bounds": {
-        "min": [
-          -0.09004771,
-          0.0,
-          -0.05203847
+        "center": [
+          0.0015973640213210068,
+          0.027526720003942864,
+          -0.00018808813999642766
         ],
         "max": [
           0.19948036,
           0.05545147,
           0.05134307
         ],
-        "center": [
-          0.0015973640213210068,
-          0.027526720003942864,
-          -0.00018808813999642766
+        "min": [
+          -0.09004771,
+          0.0,
+          -0.05203847
         ]
       },
-      "description": "A stainless steel ladle featuring a deep bowl with a pouring spout and a riveted wooden handle.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The model represents a standard kitchen ladle with a measured length of approximately 0.30 meters. Based on visual inspection, the dominant structural material is stainless steel, with a wooden handle attached via rivets. Real-world ladles of this size and construction typically weigh around 0.20 kg. Using the provided voxel volume of 9.097e-05 m^3, an estimated mass of 0.20 kg yields an effective average density of roughly 2198 kg/m^3. This lower-than-steel density accounts for the thin-walled geometry of the bowl and the lighter wooden handle. Friction (0.4 static, 0.3 dynamic) and restitution (0.3) values are set to simulate typical interactions of smooth steel and finished wood with kitchen countertops or pots. For collision detection in Isaac Sim, 'convex_decomposition' is heavily recommended to accurately capture the concavity of the ladle's bowl, which would otherwise be closed off by a standard convex hull. Continuous Collision Detection (CCD) is enabled because the thin-walled geometry can easily tunnel through other objects during fast movements (e.g., stirring or dropping).",
-      "static_friction": 0.4,
-      "dynamic_friction": 0.3,
-      "restitution": 0.3,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        0.01609788983480571,
+        8.760931814432868e-05,
+        0.032407152862450224
+      ],
+      "collision": {},
+      "density": 2198.0,
+      "id": "part_00",
+      "inertia": [
+        0.00010805386023960176,
+        0.0009006143699491787,
+        0.0009490536957963001
+      ],
+      "mass": 0.2,
+      "material": "stainless_steel",
+      "name": "D00780 Spoon Ladle",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": "",
-      "appearance_properties": {},
-      "newton": {
-        "collisions": {
-          "collider_type": "convex_decomposition",
-          "rest_offset": 0,
-          "contact_offset": 0.001,
-          "explosion_view_distance": 0,
-          "collision_mesh_debug_visualization": false
-        },
-        "simulation_scene": {
-          "simulation_steps_per_second": 60,
-          "enable_ccd": true,
-          "gravitational_acceleration": [
-            0,
-            0,
-            -9.81
-          ],
-          "gpu_buffer_parameters": {},
-          "residuals": {}
-        }
-      }
+      "source": {
+        "object_name": "D00780 Spoon Ladle",
+        "part_name": "D00780 Spoon Ladle"
+      },
+      "volume": 0.0006442805824675271
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00780 Spoon Ladle",
-  "fix_base": false,
-  "object_description": "A stainless steel ladle featuring a deep bowl with a pouring spout and a riveted wooden handle.",
-  "object_semantic": {
-    "qid": null
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {
+    "fix_base": false
   },
-  "total_mass": 0.2,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies",
-  "total_object_mass_kg": 0.2,
-  "_authoritative_context_applied": {
-    "object": {},
-    "parts": [
-      {
-        "part_index": 0,
-        "part_id": "part_00",
-        "fields": [
-          "bounds",
-          "canonical_name",
-          "material",
-          "part_id",
-          "part_index",
-          "source_object_name",
-          "source_part_name"
-        ]
-      }
-    ]
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
   }
 }

@@ -1,102 +1,81 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.15135028958320618,
+        0.10858213901519775,
+        0.04294363036751747
+      ],
+      "min": [
+        -0.15297414362430573,
+        -0.10809282958507538,
+        -2.4127471988322213e-05
+      ],
+      "size": [
+        0.3043244332075119,
+        0.21667496860027313,
+        0.042967757839505794
+      ]
+    },
+    "description": "A rectangular white tray with raised edges and two cutout handles on the shorter sides. It features a smooth, matte finish and rounded corners.",
+    "name": "D00467 Kitchen Tray",
+    "object_type": "rigid_bodies",
+    "total_mass": 1.5
+  },
+  "asset_id": "D00467",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00467 Kitchen Tray",
-      "source_part_name": "D00467 Kitchen Tray",
-      "source_object_name": "D00467 Kitchen Tray",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "dense_plastic",
-      "material": "dense_plastic",
-      "non_visual_material": null,
-      "mass": 1.5,
-      "density": 1500.0,
-      "inertia": [
-        0.007192048053705657,
-        0.01291414301415184,
-        0.019790199612463366
-      ],
-      "inertia_axes": [
-        8.448271455541673e-05,
-        0.9999999957043381,
-        2.4596269571449714e-06,
-        -3.80518751069989e-05
-      ],
-      "center_of_mass": [
-        -0.0007225709313402961,
-        0.00017693060879925583,
-        0.012106539711499201
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.0009653407051533548,
       "bounds": {
-        "min": [
-          -0.15297414362430573,
-          -0.10809282958507538,
-          -2.4127471988322213e-05
+        "center": [
+          -0.0007818446027475676,
+          0.00025359132470944575,
+          0.013558697530380486
         ],
         "max": [
           0.15135028958320618,
           0.10858213901519775,
           0.04294363036751747
         ],
-        "center": [
-          -0.0007818446027475676,
-          0.00025359132470944575,
-          0.013558697530380486
+        "min": [
+          -0.15297414362430573,
+          -0.10809282958507538,
+          -2.4127471988322213e-05
         ]
       },
-      "description": "A rectangular white tray with raised edges and two cutout handles on the shorter sides. It features a smooth, matte finish and rounded corners.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "Based on the visual appearance, the object is a standard serving tray made of a dense, smooth material such as melamine (high-density plastic) or matte ceramic. Assuming dimensions of approximately 0.4m x 0.3m x 0.05m and a wall thickness of about 1cm, a density of 1500 kg/m^3 (typical for melamine) yields an estimated mass of roughly 1.5 kg. The smooth finish implies moderate friction coefficients (static 0.4, dynamic 0.3) and a low restitution (0.2) to prevent excessive bouncing upon contact. Crucially for simulation, the collider geometry must use 'convex_decomposition' rather than a standard 'convex_hull'; a single convex hull would stretch across the top opening, preventing other objects from being placed inside the tray. Standard contact offsets (0.001m) are used to ensure stable stacking and grasping without noticeable floating.",
-      "static_friction": 0.4,
-      "dynamic_friction": 0.3,
-      "restitution": 0.2,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        -0.0007225709313402961,
+        0.00017693060879925583,
+        0.012106539711499201
+      ],
+      "collision": {},
+      "density": 1500.0,
+      "id": "part_00",
+      "inertia": [
+        0.007192048053705657,
+        0.01291414301415184,
+        0.019790199612463366
+      ],
+      "mass": 1.5,
+      "material": "dense_plastic",
+      "name": "D00467 Kitchen Tray",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": "",
-      "appearance_properties": {},
-      "newton": {
-        "collisions": {
-          "collider_type": "convex_decomposition",
-          "rest_offset": 0,
-          "contact_offset": 0.001,
-          "explosion_view_distance": 0,
-          "collision_mesh_debug_visualization": false
-        },
-        "simulation_scene": {
-          "simulation_steps_per_second": 60,
-          "enable_ccd": false,
-          "gravitational_acceleration": [
-            0,
-            0,
-            -9.81
-          ],
-          "gpu_buffer_parameters": {},
-          "residuals": {}
-        }
-      }
+      "source": {
+        "object_name": "D00467 Kitchen Tray",
+        "part_name": "D00467 Kitchen Tray"
+      },
+      "volume": 0.0009653407051533548
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00467 Kitchen Tray",
-  "object_description": "A rectangular white tray with raised edges and two cutout handles on the shorter sides. It features a smooth, matte finish and rounded corners.",
-  "object_semantic": {
-    "qid": null
-  },
-  "total_mass": 1.5,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies"
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  }
 }

@@ -1,119 +1,83 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.15627112984657288,
+        0.12660621106624603,
+        0.12332095950841904
+      ],
+      "min": [
+        -0.15579287707805634,
+        -1.5783605704200454e-05,
+        -0.12131304293870926
+      ],
+      "size": [
+        0.3120640069246292,
+        0.12662199467195023,
+        0.2446340024471283
+      ]
+    },
+    "description": "A brushed stainless steel mixing bowl with two riveted side handles and a pouring spout.",
+    "name": "D00208 Cookware Bowl",
+    "object_type": "rigid_bodies",
+    "total_mass": 4.46
+  },
+  "asset_id": "D00208",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00208 Cookware Bowl",
-      "source_part_name": "D00208 Cookware Bowl",
-      "source_object_name": "D00208 Cookware Bowl",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "stainless_steel",
-      "material": "stainless_steel",
-      "mass": 4.46,
-      "density": 7900.0,
-      "inertia": [
-        0.01780679400075945,
-        0.022299744041005282,
-        0.029738977490548893
-      ],
-      "inertia_axes": [
-        0.9999997708861664,
-        -0.00014802642951499263,
-        -0.00011999986109245683,
-        -0.0006495504786519232
-      ],
-      "center_of_mass": [
-        0.00022487918810294984,
-        0.00043697116696936273,
-        0.07360343946875872
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.0048028720532020935,
       "bounds": {
-        "min": [
-          -0.15579287707805634,
-          -1.5783605704200454e-05,
-          -0.12131304293870926
+        "center": [
+          0.00014789454577257655,
+          0.060640209019357176,
+          -0.0006050985396358809
         ],
         "max": [
           0.15627112984657288,
           0.12660621106624603,
           0.12332095950841904
         ],
-        "center": [
-          0.00014789454577257655,
-          0.060640209019357176,
-          -0.0006050985396358809
+        "min": [
+          -0.15579287707805634,
+          -1.5783605704200454e-05,
+          -0.12131304293870926
         ]
       },
-      "description": "A brushed stainless steel mixing bowl with two riveted side handles and a pouring spout.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "Visual analysis indicates the object is made entirely of stainless steel. The material properties (density, friction, restitution) are chosen based on standard physical values for steel. The provided JSON artifact indicates a voxel volume of 0.000565 m^3. Using a standard stainless steel density of 7900 kg/m^3, the calculated mass is approximately 4.46 kg, which is reasonable for a heavy-duty or commercial-grade metal bowl of its dimensions (0.36m width). For Isaac Sim collisions, a 'convex_decomposition' collider is absolutely necessary; a simple 'convex_hull' would span across the rim, closing off the bowl's interior and preventing objects from being placed inside. Continuous Collision Detection (CCD) is recommended as thin-walled metal objects can sometimes tunnel through surfaces during high-velocity impacts.",
-      "static_friction": 0.5,
-      "dynamic_friction": 0.4,
-      "restitution": 0.3,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        0.00022487918810294984,
+        0.00043697116696936273,
+        0.07360343946875872
+      ],
+      "collision": {},
+      "density": 7900.0,
+      "id": "part_00",
+      "inertia": [
+        0.01780679400075945,
+        0.022299744041005282,
+        0.029738977490548893
+      ],
+      "mass": 4.46,
+      "material": "stainless_steel",
+      "name": "D00208 Cookware Bowl",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": "",
-      "appearance_properties": {},
-      "newton": {
-        "collisions": {
-          "collider_type": "convex_decomposition",
-          "rest_offset": 0,
-          "contact_offset": 0.002,
-          "explosion_view_distance": 0,
-          "collision_mesh_debug_visualization": false
-        },
-        "simulation_scene": {
-          "simulation_steps_per_second": 60,
-          "enable_ccd": true,
-          "gravitational_acceleration": [
-            0,
-            -9.81,
-            0
-          ],
-          "gpu_buffer_parameters": {},
-          "residuals": {}
-        }
-      }
+      "source": {
+        "object_name": "D00208 Cookware Bowl",
+        "part_name": "D00208 Cookware Bowl"
+      },
+      "volume": 0.0048028720532020935
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00208 Cookware Bowl",
-  "fix_base": false,
-  "object_description": "A brushed stainless steel mixing bowl with two riveted side handles and a pouring spout.",
-  "object_semantic": {
-    "qid": null
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {
+    "fix_base": false
   },
-  "total_mass": 4.46,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies",
-  "total_object_mass_kg": 4.46,
-  "_authoritative_context_applied": {
-    "object": {},
-    "parts": [
-      {
-        "part_index": 0,
-        "part_id": "part_00",
-        "fields": [
-          "bounds",
-          "canonical_name",
-          "material",
-          "part_id",
-          "part_index",
-          "source_object_name",
-          "source_part_name"
-        ]
-      }
-    ]
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
   }
 }

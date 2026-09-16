@@ -1,81 +1,81 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.18697099387645721,
+        0.15314899384975433,
+        0.04475399851799011
+      ],
+      "min": [
+        -0.15023399889469147,
+        -0.10223200172185898,
+        -0.00010299999848939478
+      ],
+      "size": [
+        0.3372049927711487,
+        0.2553809955716133,
+        0.04485699851647951
+      ]
+    },
+    "description": "A collection of shallow glazed ceramic serving plates and trays in rectangular, oval, square, and round forms. The pieces have glossy white, black, blue, gray, and earthy brown finishes with raised rims and slightly irregular handmade edges.",
+    "name": "D00844 Sushi Platter",
+    "object_type": "rigid_bodies",
+    "total_mass": 4.8
+  },
+  "asset_id": "D00844",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00844 Sushi Platter",
-      "source_part_name": "D00844 Sushi Platter",
-      "source_object_name": "D00844 Sushi Platter",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "glazed_ceramic_stoneware",
-      "material": "glazed_ceramic_stoneware",
-      "non_visual_material": null,
-      "mass": 4.8,
-      "density": 2300.0,
-      "inertia": [
-        0.00936175527999952,
-        0.026083184125324076,
-        0.034839341061734155
-      ],
-      "inertia_axes": [
-        0.9999827839004273,
-        -5.46320241180193e-06,
-        -0.0006795238821520888,
-        0.005828389159829638
-      ],
-      "center_of_mass": [
-        -0.0009796128006835706,
-        -0.0004438602001139289,
-        0.012763589086116614
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.00047848149914649475,
       "bounds": {
-        "min": [
-          -0.15023399889469147,
-          -0.10223200172185898,
-          -0.00010299999848939478
+        "center": [
+          0.0024193314993769957,
+          -0.0005091272862322175,
+          0.02065451391812385
         ],
         "max": [
           0.18697099387645721,
           0.15314899384975433,
           0.04475399851799011
         ],
-        "center": [
-          0.0024193314993769957,
-          -0.0005091272862322175,
-          0.02065451391812385
+        "min": [
+          -0.15023399889469147,
+          -0.10223200172185898,
+          -0.00010299999848939478
         ]
       },
-      "description": "A collection of shallow glazed ceramic serving plates and trays in rectangular, oval, square, and round forms. The pieces have glossy white, black, blue, gray, and earthy brown finishes with raised rims and slightly irregular handmade edges.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The visible objects are predominantly glazed ceramic or stoneware dishes with relatively thin plate bodies and raised lips. No product dimensions are provided, so values are estimated from common tabletop dishware. A single medium ceramic serving plate/tray of this type is typically about 0.35\u20130.75 kg, while the pictured collection of roughly nine pieces would be approximately 4.5\u20135.5 kg; the root mass is therefore set to 4.8 kg if imported as one grouped rigid body. If each dish is separated into its own rigid body, assign about 0.4 kg for small rectangular plates, 0.45\u20130.55 kg for oval/round shallow plates, and 0.8\u20131.0 kg for the thicker dark round dish. The dominant material is glazed ceramic/stoneware, with a true material density around 2200\u20132500 kg/m^3; 2300 kg/m^3 is used. Because glazed ceramic is hard and smooth, friction against a typical table surface is moderate: static friction around 0.45 and dynamic friction around 0.35. Restitution is low-to-moderate because ceramic is stiff but does not absorb much impact before fracture; for non-fracturing rigid simulation, 0.25 is a stable value that avoids unrealistic bouncing. The shapes are shallow concave trays with raised rims. For accurate contact with the interior bowl/tray surfaces, convex decomposition is preferred over a single convex hull, because a single hull would fill the concavity and prevent objects from resting inside the dish. For the thick round dish or any high-resolution ceramic scan, SDF mesh can also be used for maximum fidelity, but convex decomposition is generally faster and robust in Isaac Sim v4.5. Recommended offsets are small because the object is tableware-sized: rest_offset near 0 and contact_offset around 0.002 m to generate stable contacts without visible hovering. CCD is usually unnecessary for slow tabletop placement, but enabled here because ceramic plates can be thin and may tunnel during fast drops or scripted motion. Compliant contacts are set very stiff with moderate damping to emulate hard ceramic contact without deformation while improving solver stability for thin rims.",
-      "static_friction": 0.45,
-      "dynamic_friction": 0.35,
-      "restitution": 0.25,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        -0.0009796128006835706,
+        -0.0004438602001139289,
+        0.012763589086116614
+      ],
+      "collision": {},
+      "density": 2300.0,
+      "id": "part_00",
+      "inertia": [
+        0.00936175527999952,
+        0.026083184125324076,
+        0.034839341061734155
+      ],
+      "mass": 4.8,
+      "material": "glazed_ceramic_stoneware",
+      "name": "D00844 Sushi Platter",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": ""
+      "source": {
+        "object_name": "D00844 Sushi Platter",
+        "part_name": "D00844 Sushi Platter"
+      },
+      "volume": 0.00047848149914649475
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00844 Sushi Platter",
-  "object_description": "A collection of shallow glazed ceramic serving plates and trays in rectangular, oval, square, and round forms. The pieces have glossy white, black, blue, gray, and earthy brown finishes with raised rims and slightly irregular handmade edges.",
-  "object_semantic": {
-    "qid": null
-  },
-  "total_mass": 4.8,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies"
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  }
 }

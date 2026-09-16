@@ -1,102 +1,81 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.193122997879982,
+        0.21745699644088745,
+        0.1029449999332428
+      ],
+      "min": [
+        -0.1903820037841797,
+        -0.21775799989700317,
+        1.4999999621068127e-05
+      ],
+      "size": [
+        0.3835050016641617,
+        0.4352149963378906,
+        0.10292999993362173
+      ]
+    },
+    "description": "A neatly folded rectangular piece of light grey woven fabric with visible creases and texture.",
+    "name": "D00877 Towel",
+    "object_type": "rigid_bodies",
+    "total_mass": 1.5
+  },
+  "asset_id": "D00877",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00877 Towel",
-      "source_part_name": "D00877 Towel",
-      "source_object_name": "D00877 Towel",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "fabric",
-      "material": "fabric",
-      "non_visual_material": null,
-      "mass": 1.5,
-      "density": 150.0,
-      "inertia": [
-        0.015702048792163064,
-        0.023784140756077276,
-        0.03718598738285641
-      ],
-      "inertia_axes": [
-        0.001173908067502082,
-        0.7120633584810726,
-        0.7021140702200623,
-        -0.0004773337636954905
-      ],
-      "center_of_mass": [
-        0.0002377527462362819,
-        -0.0016901684412219495,
-        0.049140018086859916
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.014410897093458344,
       "bounds": {
-        "min": [
-          -0.1903820037841797,
-          -0.21775799989700317,
-          1.4999999621068127e-05
+        "center": [
+          0.0021551556594912873,
+          0.0018928984682826764,
+          0.047504045061670094
         ],
         "max": [
           0.193122997879982,
           0.21745699644088745,
           0.1029449999332428
         ],
-        "center": [
-          0.0021551556594912873,
-          0.0018928984682826764,
-          0.047504045061670094
+        "min": [
+          -0.1903820037841797,
+          -0.21775799989700317,
+          1.4999999621068127e-05
         ]
       },
-      "description": "A neatly folded rectangular piece of light grey woven fabric with visible creases and texture.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The object is a folded textile, likely cotton or linen. Although naturally deformable, treating it as a rigid body requires specific contact parameter tuning. The mass is estimated at 1.5 kg, typical for a folded throw blanket or large towel. The density is relatively low (150 kg/m^3) due to air trapped between the folds. Friction coefficients are set moderately high (0.6 static, 0.5 dynamic) to reflect the rough woven texture. Restitution is near zero (0.05) as the material is highly absorptive and will not bounce. To approximate its soft nature in a rigid body simulation, compliant contacts should be utilized with high damping to prevent harsh, rigid collisions. A convex decomposition collider is recommended to capture the general bulky, folded shape while ignoring micro-wrinkles.",
-      "static_friction": 0.6,
-      "dynamic_friction": 0.5,
-      "restitution": 0.05,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        0.0002377527462362819,
+        -0.0016901684412219495,
+        0.049140018086859916
+      ],
+      "collision": {},
+      "density": 150.0,
+      "id": "part_00",
+      "inertia": [
+        0.015702048792163064,
+        0.023784140756077276,
+        0.03718598738285641
+      ],
+      "mass": 1.5,
+      "material": "fabric",
+      "name": "D00877 Towel",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": "",
-      "appearance_properties": {},
-      "newton": {
-        "collisions": {
-          "collider_type": "convex_decomposition",
-          "rest_offset": 0,
-          "contact_offset": 0.02,
-          "explosion_view_distance": 0.1,
-          "collision_mesh_debug_visualization": false
-        },
-        "simulation_scene": {
-          "simulation_steps_per_second": 60,
-          "enable_ccd": false,
-          "gravitational_acceleration": [
-            0,
-            0,
-            -9.81
-          ],
-          "gpu_buffer_parameters": {},
-          "residuals": {}
-        }
-      }
+      "source": {
+        "object_name": "D00877 Towel",
+        "part_name": "D00877 Towel"
+      },
+      "volume": 0.014410897093458344
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00877 Towel",
-  "object_description": "A neatly folded rectangular piece of light grey woven fabric with visible creases and texture.",
-  "object_semantic": {
-    "qid": null
-  },
-  "total_mass": 1.5,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies"
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  }
 }

@@ -1,102 +1,81 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.13862945139408112,
+        0.10704965144395828,
+        0.09096229821443558
+      ],
+      "min": [
+        -0.1383487731218338,
+        -0.10693316161632538,
+        -0.00019379319564905018
+      ],
+      "size": [
+        0.2769782245159149,
+        0.21398281306028366,
+        0.09115609141008463
+      ]
+    },
+    "description": "A black cast iron pot with a cylindrical body, flat base, and two small loop handles on opposite sides.",
+    "name": "D00639 Pot Bowl",
+    "object_type": "rigid_bodies",
+    "total_mass": 4.5
+  },
+  "asset_id": "D00639",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00639 Pot Bowl",
-      "source_part_name": "D00639 Pot Bowl",
-      "source_object_name": "D00639 Pot Bowl",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "cast_iron",
-      "material": "cast_iron",
-      "non_visual_material": null,
-      "mass": 4.5,
-      "density": 7200.0,
-      "inertia": [
-        0.02012514525984547,
-        0.02689441348182289,
-        0.03786268637569096
-      ],
-      "inertia_axes": [
-        0.9999979538302863,
-        -0.0006522941563687,
-        -0.001315854053581145,
-        0.0013911778045316338
-      ],
-      "center_of_mass": [
-        -0.00015645979138775764,
-        0.00011441999619754629,
-        0.04127349974244557
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.00043320772056416667,
       "bounds": {
-        "min": [
-          -0.1383487731218338,
-          -0.10693316161632538,
-          -0.00019379319564905018
+        "center": [
+          -0.0003150864193952027,
+          -2.9765923144313074e-05,
+          0.038353915208748285
         ],
         "max": [
           0.13862945139408112,
           0.10704965144395828,
           0.09096229821443558
         ],
-        "center": [
-          -0.0003150864193952027,
-          -2.9765923144313074e-05,
-          0.038353915208748285
+        "min": [
+          -0.1383487731218338,
+          -0.10693316161632538,
+          -0.00019379319564905018
         ]
       },
-      "description": "A black cast iron pot with a cylindrical body, flat base, and two small loop handles on opposite sides.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "Based on the visual appearance of thick, textured black metal, the object is identified as a cast iron pot or small dutch oven. Cast iron has a high density (~7200 kg/m\u00b3), resulting in a substantial estimated mass of 4.5 kg assuming a typical diameter of 20-24cm. The friction coefficients (0.5 static, 0.4 dynamic) reflect the rough, seasoned surface interacting with common kitchen counters or metallic surfaces. Restitution is set very low (0.15) as cast iron is highly rigid, heavy, and inelastic, absorbing impact energy rather than bouncing. For collision geometry in Isaac Sim, 'convex_decomposition' is strictly required to accurately model the interior cavity; a simple convex hull would cap the top opening, preventing other simulated objects (like food or utensils) from being placed inside.",
-      "static_friction": 0.5,
-      "dynamic_friction": 0.4,
-      "restitution": 0.15,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        -0.00015645979138775764,
+        0.00011441999619754629,
+        0.04127349974244557
+      ],
+      "collision": {},
+      "density": 7200.0,
+      "id": "part_00",
+      "inertia": [
+        0.02012514525984547,
+        0.02689441348182289,
+        0.03786268637569096
+      ],
+      "mass": 4.5,
+      "material": "cast_iron",
+      "name": "D00639 Pot Bowl",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": "",
-      "appearance_properties": {},
-      "newton": {
-        "collisions": {
-          "collider_type": "convex_decomposition",
-          "rest_offset": 0,
-          "contact_offset": 0.005,
-          "explosion_view_distance": 0,
-          "collision_mesh_debug_visualization": false
-        },
-        "simulation_scene": {
-          "simulation_steps_per_second": 60,
-          "enable_ccd": false,
-          "gravitational_acceleration": [
-            0,
-            0,
-            -9.81
-          ],
-          "gpu_buffer_parameters": {},
-          "residuals": {}
-        }
-      }
+      "source": {
+        "object_name": "D00639 Pot Bowl",
+        "part_name": "D00639 Pot Bowl"
+      },
+      "volume": 0.00043320772056416667
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00639 Pot Bowl",
-  "object_description": "A black cast iron pot with a cylindrical body, flat base, and two small loop handles on opposite sides.",
-  "object_semantic": {
-    "qid": null
-  },
-  "total_mass": 4.5,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies"
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  }
 }

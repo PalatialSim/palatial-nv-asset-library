@@ -1,119 +1,83 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.01942991,
+        0.02398946,
+        0.01941128
+      ],
+      "min": [
+        -0.01942176,
+        0.0,
+        -0.01943832
+      ],
+      "size": [
+        0.038851670000000005,
+        0.02398946,
+        0.0388496
+      ]
+    },
+    "description": "A cup-shaped cookie with a baked, textured golden-brown surface, featuring a flat base and a hollow cylindrical cavity.",
+    "name": "generated reference 01",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.02
+  },
+  "asset_id": "D00227",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "generated reference 01",
-      "source_part_name": "generated reference 01",
-      "source_object_name": "generated reference 01",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "baked_dough",
-      "material": "baked_dough",
-      "mass": 0.02,
-      "density": 600.0,
-      "inertia": [
-        3.1211131323207416e-06,
-        3.1571818691384605e-06,
-        4.193050552384399e-06
-      ],
-      "inertia_axes": [
-        0.004269024757540679,
-        -0.8032010920424838,
-        -0.5956895036101482,
-        0.0019484501729128533
-      ],
-      "center_of_mass": [
-        -0.00015225027955944345,
-        5.318582512158681e-05,
-        0.011206295097708494
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 1.0908423779754155e-05,
       "bounds": {
-        "min": [
-          -0.01942176,
-          0.0,
-          -0.01943832
+        "center": [
+          -1.2653549350167612e-05,
+          0.012044337703991617,
+          1.12703533036714e-05
         ],
         "max": [
           0.01942991,
           0.02398946,
           0.01941128
         ],
-        "center": [
-          -1.2653549350167612e-05,
-          0.012044337703991617,
-          1.12703533036714e-05
+        "min": [
+          -0.01942176,
+          0.0,
+          -0.01943832
         ]
       },
-      "description": "A cup-shaped cookie with a baked, textured golden-brown surface, featuring a flat base and a hollow cylindrical cavity.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "Based on the provided artifact dimensions of 0.05 x 0.05 x 0.04 m, the object has an external bounding volume of 100 cm^3. Assuming a standard wall and base thickness for a cookie cup, the physical volume is approximately 35 cm^3. Applying an estimated density of 600 kg/m^3 for baked shortbread or dough, the mass is calculated at roughly 0.02 kg (20 grams). Friction coefficients (0.5 static, 0.4 dynamic) reflect the slightly porous, dry surface of baked goods, providing moderate grip. Restitution is set very low (0.1) because cookies are highly inelastic and tend to crumble rather than bounce upon impact. A 'convex_decomposition' collider type is strictly required to capture the concavity of the cup, enabling other simulated objects to be placed inside. Continuous Collision Detection (CCD) is enabled globally and locally to prevent this small, lightweight mesh from tunneling through surfaces. A contact offset of 0.001 m is used to provide stable contact generation without visible floating.",
-      "static_friction": 0.5,
-      "dynamic_friction": 0.4,
-      "restitution": 0.1,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        -0.00015225027955944345,
+        5.318582512158681e-05,
+        0.011206295097708494
+      ],
+      "collision": {},
+      "density": 600.0,
+      "id": "part_00",
+      "inertia": [
+        3.1211131323207416e-06,
+        3.1571818691384605e-06,
+        4.193050552384399e-06
+      ],
+      "mass": 0.02,
+      "material": "baked_dough",
+      "name": "generated reference 01",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": "",
-      "appearance_properties": {},
-      "newton": {
-        "collisions": {
-          "collider_type": "convex_decomposition",
-          "rest_offset": 0,
-          "contact_offset": 0.001,
-          "explosion_view_distance": 0,
-          "collision_mesh_debug_visualization": false
-        },
-        "simulation_scene": {
-          "simulation_steps_per_second": 60,
-          "enable_ccd": true,
-          "gravitational_acceleration": [
-            0,
-            0,
-            -9.81
-          ],
-          "gpu_buffer_parameters": {},
-          "residuals": {}
-        }
-      }
+      "source": {
+        "object_name": "generated reference 01",
+        "part_name": "generated reference 01"
+      },
+      "volume": 1.0908423779754155e-05
     }
   ],
-  "joint_relations": [],
-  "base_link": "generated reference 01",
-  "fix_base": false,
-  "object_description": "A cup-shaped cookie with a baked, textured golden-brown surface, featuring a flat base and a hollow cylindrical cavity.",
-  "object_semantic": {
-    "qid": null
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {
+    "fix_base": false
   },
-  "total_mass": 0.02,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies",
-  "total_object_mass_kg": 0.02,
-  "_authoritative_context_applied": {
-    "object": {},
-    "parts": [
-      {
-        "part_index": 0,
-        "part_id": "part_00",
-        "fields": [
-          "bounds",
-          "canonical_name",
-          "material",
-          "part_id",
-          "part_index",
-          "source_object_name",
-          "source_part_name"
-        ]
-      }
-    ]
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
   }
 }

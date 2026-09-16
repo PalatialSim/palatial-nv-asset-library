@@ -1,464 +1,272 @@
 {
+  "articulation": {
+    "has_joints": true,
+    "joints": [
+      {
+        "axis": [],
+        "child": "part_00",
+        "damping": 0.0,
+        "effort": 0.0,
+        "friction": 0.0,
+        "joint_rotation_local": [],
+        "joint_type": "fixed",
+        "name": "joint_part_01__part_00",
+        "origin": [],
+        "parent": "part_01",
+        "rest_pose_state": "unknown",
+        "score": 0.65,
+        "stiffness": 0.0,
+        "velocity": 0.0
+      },
+      {
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "child": "part_02",
+        "damping": 1.8,
+        "effort": 6.0,
+        "friction": 0.8,
+        "joint_origin_world": [
+          0.021062999963760376,
+          9.649991989135742e-05,
+          0.10190600156784058
+        ],
+        "joint_rotation_local": [],
+        "joint_type": "revolute",
+        "motion_limits": {
+          "max": 0.0,
+          "min": -110.0
+        },
+        "name": "joint_part_00__part_02",
+        "origin": [
+          0.021062999963760376,
+          9.649991989135742e-05,
+          0.10190600156784058
+        ],
+        "parent": "part_00",
+        "rest_pose_state": "open",
+        "revolute_mode": "hinge",
+        "score": 0.95,
+        "stiffness": 0.0,
+        "velocity": 3.0
+      },
+      {
+        "axis": [],
+        "child": "part_03",
+        "damping": 0.0,
+        "effort": 0.0,
+        "friction": 0.0,
+        "joint_rotation_local": [],
+        "joint_type": "fixed",
+        "name": "joint_part_01__part_03",
+        "origin": [],
+        "parent": "part_01",
+        "rest_pose_state": "unknown",
+        "score": 0.95,
+        "stiffness": 0.0,
+        "velocity": 0.0
+      }
+    ]
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.099583,
+        0.170278,
+        0.055364
+      ],
+      "min": [
+        -0.118045,
+        -9.5e-05,
+        -0.055416
+      ],
+      "size": [
+        0.217628,
+        0.17037300000000002,
+        0.11077999999999999
+      ]
+    },
+    "description": "A realistic cast iron teapot with a main body, pouring spout, handle, and a removable lid.",
+    "name": "hinge",
+    "object_type": "rigid_bodies",
+    "total_mass": 2.2
+  },
+  "asset_id": "D00854",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "hinge",
-      "source_part_name": "part_0",
-      "source_object_name": "part_0",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "cast iron",
-      "material": "cast iron",
-      "non_visual_material": {
-        "base": "iron",
-        "coating": "none",
-        "attributes": [
-          "rough",
-          "matte"
-        ]
-      },
-      "mass": 0.01,
-      "density": 7200.0,
-      "inertia": [
-        2.0580240687516836e-07,
-        2.2441135082920008e-07,
-        2.936021486906644e-07
-      ],
-      "inertia_axes": [
-        0.660328371704822,
-        0.030554185240710553,
-        0.7498561195142699,
-        0.027362078008371003
-      ],
-      "center_of_mass": [
-        0.02380922966450082,
-        0.0001653793558718438,
-        0.09828747721395345
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 5.198480717085023e-07,
       "bounds": {
-        "min": [
-          0.018824,
-          0.090062,
-          -0.006729
+        "center": [
+          0.023656,
+          0.09813,
+          -0.000121
         ],
         "max": [
           0.028487,
           0.106198,
           0.006488
         ],
-        "center": [
-          0.023656,
-          0.09813,
-          -0.000121
+        "min": [
+          0.018824,
+          0.090062,
+          -0.006729
         ]
       },
-      "description": "Small hinge piece connecting the lid.",
-      "semantic": {
-        "qid": "Q288427"
-      },
-      "reasoning": "Small metal component serving as the pivot point.",
-      "static_friction": 0.6,
-      "dynamic_friction": 0.5,
-      "restitution": 0.1,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        0.02380922966450082,
+        0.0001653793558718438,
+        0.09828747721395345
+      ],
+      "collision": {},
+      "density": 7200.0,
+      "id": "part_00",
+      "inertia": [
+        2.0580240687516836e-07,
+        2.2441135082920008e-07,
+        2.936021486906644e-07
+      ],
+      "mass": 0.01,
+      "material": "cast iron",
+      "name": "hinge",
       "physics_type": "rigid",
-      "is_structural_root": false,
-      "enable_ccd": null,
-      "solver_position_iterations": null,
-      "solver_velocity_iterations": null,
-      "color_name": "Red",
-      "kinematic_properties": {}
+      "source": {
+        "object_name": "part_0",
+        "part_name": "part_0"
+      },
+      "volume": 5.198480717085023e-07
     },
     {
-      "canonical_name": "part_01",
-      "part_name": "body",
-      "source_part_name": "part_1",
-      "source_object_name": "part_1",
-      "part_index": 1,
-      "part_id": "part_01",
-      "material_name": "cast iron",
-      "material": "cast iron",
-      "non_visual_material": {
-        "base": "iron",
-        "coating": "none",
-        "attributes": [
-          "rough",
-          "matte"
-        ]
-      },
-      "mass": 1.6,
-      "density": 7200.0,
-      "inertia": [
-        0.0020964845612653727,
-        0.0030301218579793627,
-        0.0031122509963248455
-      ],
-      "inertia_axes": [
-        0.7045152368442108,
-        -0.6985783648884246,
-        0.08843807332718323,
-        0.08846047903067418
-      ],
-      "center_of_mass": [
-        -0.02140444093037611,
-        5.683208771748854e-05,
-        0.047701584718893825
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.0010233996731155656,
       "bounds": {
-        "min": [
-          -0.118045,
-          -9.5e-05,
-          -0.055416
+        "center": [
+          -0.030364,
+          0.050481,
+          -2.6e-05
         ],
         "max": [
           0.057317,
           0.101056,
           0.055364
         ],
-        "center": [
-          -0.030364,
-          0.050481,
-          -2.6e-05
+        "min": [
+          -0.118045,
+          -9.5e-05,
+          -0.055416
         ]
       },
-      "description": "Main liquid containment vessel and spout.",
-      "semantic": {
-        "qid": "Q244341"
-      },
-      "reasoning": "Thick-walled cast iron main vessel that carries the water weight.",
-      "static_friction": 0.6,
-      "dynamic_friction": 0.5,
-      "restitution": 0.1,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        -0.02140444093037611,
+        5.683208771748854e-05,
+        0.047701584718893825
+      ],
+      "collision": {},
+      "density": 7200.0,
+      "id": "part_01",
+      "inertia": [
+        0.0020964845612653727,
+        0.0030301218579793627,
+        0.0031122509963248455
+      ],
+      "mass": 1.6,
+      "material": "cast iron",
+      "name": "body",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "enable_ccd": null,
-      "solver_position_iterations": null,
-      "solver_velocity_iterations": null,
-      "color_name": "Blue",
-      "kinematic_properties": {}
+      "source": {
+        "object_name": "part_1",
+        "part_name": "part_1"
+      },
+      "volume": 0.0010233996731155656
     },
     {
-      "canonical_name": "part_02",
-      "part_name": "lid",
-      "source_part_name": "part_2",
-      "source_object_name": "part_2",
-      "part_index": 2,
-      "part_id": "part_02",
-      "material_name": "cast iron",
-      "material": "cast iron",
-      "non_visual_material": {
-        "base": "iron",
-        "coating": "none",
-        "attributes": [
-          "rough",
-          "matte"
-        ]
-      },
-      "mass": 0.3,
-      "density": 7200.0,
-      "inertia": [
-        8.034763638532273e-05,
-        8.402717740279214e-05,
-        0.00014175042401925425
-      ],
-      "inertia_axes": [
-        0.5623955254200264,
-        -0.4215695696083166,
-        -0.4054990361227716,
-        0.584432119814863
-      ],
-      "center_of_mass": [
-        0.017769065459778154,
-        2.179145914072787e-05,
-        0.03354240667954345
-      ],
-      "part_origin_world": [
-        0.021062999963760376,
-        9.649991989135742e-05,
-        0.10190600156784058
-      ],
-      "volume": 5.9532688285859546e-05,
       "bounds": {
-        "min": [
-          0.021008,
-          0.101904,
-          -0.036586
+        "center": [
+          0.039344,
+          0.136091,
+          -4.7e-05
         ],
         "max": [
           0.05768,
           0.170278,
           0.036492
         ],
-        "center": [
-          0.039344,
-          0.136091,
-          -4.7e-05
+        "min": [
+          0.021008,
+          0.101904,
+          -0.036586
         ]
       },
-      "description": "Top cover for the teapot.",
-      "semantic": {
-        "qid": "Q1633513"
-      },
-      "reasoning": "Solid cast iron top cover with lifting knob.",
-      "static_friction": 0.6,
-      "dynamic_friction": 0.5,
-      "restitution": 0.1,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        0.017769065459778154,
+        2.179145914072787e-05,
+        0.03354240667954345
+      ],
+      "collision": {},
+      "density": 7200.0,
+      "id": "part_02",
+      "inertia": [
+        8.034763638532273e-05,
+        8.402717740279214e-05,
+        0.00014175042401925425
+      ],
+      "mass": 0.3,
+      "material": "cast iron",
+      "name": "lid",
       "physics_type": "rigid",
-      "is_structural_root": false,
-      "enable_ccd": null,
-      "solver_position_iterations": null,
-      "solver_velocity_iterations": null,
-      "color_name": "Green",
-      "kinematic_properties": {}
+      "source": {
+        "object_name": "part_2",
+        "part_name": "part_2"
+      },
+      "volume": 5.9532688285859546e-05
     },
     {
-      "canonical_name": "part_03",
-      "part_name": "handle",
-      "source_part_name": "part_3",
-      "source_object_name": "part_3",
-      "part_index": 3,
-      "part_id": "part_03",
-      "material_name": "cast iron",
-      "material": "cast iron",
-      "non_visual_material": {
-        "base": "iron",
-        "coating": "none",
-        "attributes": [
-          "rough",
-          "matte"
-        ]
-      },
-      "mass": 0.29,
-      "density": 7200.0,
-      "inertia": [
-        6.201938625228628e-05,
-        0.00021423598585434134,
-        0.00026417310953508844
-      ],
-      "inertia_axes": [
-        0.497293574877931,
-        0.4975427108134286,
-        0.5025512892222647,
-        -0.502585866298081
-      ],
-      "center_of_mass": [
-        0.0767069662251142,
-        4.85433662214971e-05,
-        0.06931178860591922
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 8.356795105589591e-06,
       "bounds": {
-        "min": [
-          0.045309,
-          0.01673,
-          -0.006883
+        "center": [
+          0.072446,
+          0.061435,
+          -3e-06
         ],
         "max": [
           0.099583,
           0.106139,
           0.006877
         ],
-        "center": [
-          0.072446,
-          0.061435,
-          -3e-06
+        "min": [
+          0.045309,
+          0.01673,
+          -0.006883
         ]
       },
-      "description": "Curved gripping handle for pouring.",
-      "semantic": {
-        "qid": "Q30071477"
-      },
-      "reasoning": "Sturdy metallic handle matched to the body material.",
-      "static_friction": 0.6,
-      "dynamic_friction": 0.5,
-      "restitution": 0.1,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        0.0767069662251142,
+        4.85433662214971e-05,
+        0.06931178860591922
+      ],
+      "collision": {},
+      "density": 7200.0,
+      "id": "part_03",
+      "inertia": [
+        6.201938625228628e-05,
+        0.00021423598585434134,
+        0.00026417310953508844
+      ],
+      "mass": 0.29,
+      "material": "cast iron",
+      "name": "handle",
       "physics_type": "rigid",
-      "is_structural_root": false,
-      "enable_ccd": null,
-      "solver_position_iterations": null,
-      "solver_velocity_iterations": null,
-      "color_name": "Yellow",
-      "kinematic_properties": {}
+      "source": {
+        "object_name": "part_3",
+        "part_name": "part_3"
+      },
+      "volume": 8.356795105589591e-06
     }
   ],
-  "joint_relations": [
-    {
-      "child": "part_00",
-      "parent": "part_01",
-      "joint_type": "fixed",
-      "name": "joint_part_01__part_00",
-      "damping": 0.0,
-      "effort": 0.0,
-      "friction": 0.0,
-      "stiffness": 0.0,
-      "velocity": 0.0,
-      "drive_target_velocity": null,
-      "origin": [],
-      "joint_origin_world": null,
-      "joint_rotation_local": [],
-      "axis": [],
-      "axis_world": null,
-      "motion_limits": null,
-      "revolute_mode": null,
-      "score": 0.65,
-      "rest_pose_state": "unknown"
-    },
-    {
-      "child": "part_02",
-      "parent": "part_00",
-      "joint_type": "revolute",
-      "name": "joint_part_00__part_02",
-      "damping": 1.8,
-      "effort": 6.0,
-      "friction": 0.8,
-      "stiffness": 0.0,
-      "velocity": 3.0,
-      "drive_target_velocity": null,
-      "origin": [
-        0.021062999963760376,
-        9.649991989135742e-05,
-        0.10190600156784058
-      ],
-      "joint_origin_world": [
-        0.021062999963760376,
-        9.649991989135742e-05,
-        0.10190600156784058
-      ],
-      "joint_rotation_local": [],
-      "axis": [
-        0.0,
-        1.0,
-        0.0
-      ],
-      "axis_world": null,
-      "motion_limits": {
-        "min": -110.0,
-        "max": 0.0
-      },
-      "revolute_mode": "hinge",
-      "score": 0.95,
-      "rest_pose_state": "open"
-    },
-    {
-      "child": "part_03",
-      "parent": "part_01",
-      "joint_type": "fixed",
-      "name": "joint_part_01__part_03",
-      "damping": 0.0,
-      "effort": 0.0,
-      "friction": 0.0,
-      "stiffness": 0.0,
-      "velocity": 0.0,
-      "drive_target_velocity": null,
-      "origin": [],
-      "joint_origin_world": null,
-      "joint_rotation_local": [],
-      "axis": [],
-      "axis_world": null,
-      "motion_limits": null,
-      "revolute_mode": null,
-      "score": 0.95,
-      "rest_pose_state": "unknown"
-    }
-  ],
-  "base_link": "part_01",
-  "base_link_recommendation": null,
-  "fix_base": false,
-  "source": null,
-  "authored_by": null,
-  "up_axis": null,
-  "coordinate_frames": null,
-  "solver_position_iterations": null,
-  "solver_velocity_iterations": null,
-  "object_description": "A realistic cast iron teapot with a main body, pouring spout, handle, and a removable lid.",
-  "object_semantic": null,
-  "total_mass": 2.2,
-  "center_of_mass": null,
-  "inertia": null,
-  "total_object_mass_kg": 2.2,
-  "behavior_type": "normal",
-  "overall_assessment": "Simulation properties are optimized for a weighty, rigid object with low restitution and high friction.",
-  "num_parts": 4,
-  "object_type": "rigid_bodies",
-  "_authoritative_context_applied": {
-    "object": {},
-    "parts": [
-      {
-        "part_index": 0,
-        "part_id": "part_00",
-        "fields": [
-          "bounds",
-          "canonical_name",
-          "color_name",
-          "part_id",
-          "part_index",
-          "source_object_name",
-          "source_part_name"
-        ]
-      },
-      {
-        "part_index": 1,
-        "part_id": "part_01",
-        "fields": [
-          "bounds",
-          "canonical_name",
-          "color_name",
-          "part_id",
-          "part_index",
-          "source_object_name",
-          "source_part_name"
-        ]
-      },
-      {
-        "part_index": 2,
-        "part_id": "part_02",
-        "fields": [
-          "bounds",
-          "canonical_name",
-          "color_name",
-          "part_id",
-          "part_index",
-          "source_object_name",
-          "source_part_name"
-        ]
-      },
-      {
-        "part_index": 3,
-        "part_id": "part_03",
-        "fields": [
-          "bounds",
-          "canonical_name",
-          "color_name",
-          "part_id",
-          "part_index",
-          "source_object_name",
-          "source_part_name"
-        ]
-      }
-    ]
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {
+    "fix_base": false
+  },
+  "units": {
+    "length": "m",
+    "mass": "kg"
   }
 }

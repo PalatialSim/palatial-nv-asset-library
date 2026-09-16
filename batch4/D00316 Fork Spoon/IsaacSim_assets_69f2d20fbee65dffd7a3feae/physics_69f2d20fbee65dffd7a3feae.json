@@ -1,82 +1,81 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.12686499953269958,
+        0.023082999512553215,
+        0.012373999692499638
+      ],
+      "min": [
+        -0.051895998418331146,
+        -0.022957999259233475,
+        -1.4999999621068127e-05
+      ],
+      "size": [
+        0.17876099795103073,
+        0.04604099877178669,
+        0.012388999692120706
+      ]
+    },
+    "description": "A spoon-fork hybrid utensil with a shallow oval bowl, short fork tines, and a slender curved handle. The shown variants include polished or brushed stainless steel and natural wood finishes.",
+    "name": "D00316 Fork Spoon",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.045
+  },
+  "asset_id": "D00316",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00316 Fork Spoon",
-      "source_part_name": "D00316 Fork Spoon",
-      "source_object_name": "D00316 Fork Spoon",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "stainless_steel",
-      "material": "stainless_steel",
-      "non_visual_material": null,
-      "mass": 0.045,
-      "density": 7850.0,
-      "inertia": [
-        3.5800490779105118e-06,
-        7.892198780896945e-05,
-        8.171538539370465e-05
-      ],
-      "inertia_axes": [
-        6.026981472093042e-05,
-        -0.9997162082326583,
-        0.00016718848053259155,
-        -0.023821658474538227
-      ],
-      "center_of_mass": [
-        -0.002711678019957575,
-        4.7809674321866285e-05,
-        0.00632677269588275
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 4.286223020285779e-05,
       "bounds": {
-        "min": [
-          -0.051895998418331146,
-          -0.022957999259233475,
-          -1.4999999621068127e-05
+        "center": [
+          0.004703644641958138,
+          5.798844232853119e-05,
+          0.004324726254325758
         ],
         "max": [
           0.12686499953269958,
           0.023082999512553215,
           0.012373999692499638
         ],
-        "center": [
-          0.004703644641958138,
-          5.798844232853119e-05,
-          0.004324726254325758
+        "min": [
+          -0.051895998418331146,
+          -0.022957999259233475,
+          -1.4999999621068127e-05
         ]
       },
-      "description": "A spoon-fork hybrid utensil with a shallow oval bowl, short fork tines, and a slender curved handle. The shown variants include polished or brushed stainless steel and natural wood finishes.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The asset appears to be a single lightweight eating utensil, commonly called a spork, with thin curved geometry, a shallow concave spoon bowl, several fork tines, and a narrow handle. Because most variants shown are metallic and the largest rigid structural/contact surface is polished or brushed metal, the root-level estimate assumes a stainless-steel utensil. A typical full-size stainless-steel spork is about 0.18-0.22 m long, 0.035-0.055 m wide at the bowl, and roughly 1-2 mm thick except at rolled or reinforced edges. Pressed stainless flatware of this size usually weighs about 30-60 g; 0.045 kg is a realistic central estimate. Stainless steel material density is approximately 7700-8000 kg/m^3, so 7850 kg/m^3 is used. The visual part volume implied by 0.045 kg at this density is about 5.7e-6 m^3, which is plausible for a thin stamped utensil including the bowl curvature and handle. If the wooden variant is used instead, mass should be reduced to roughly 0.015-0.025 kg and density to about 600-800 kg/m^3, with slightly higher friction and lower restitution.\n\nFor contact behavior, stainless steel on common industrial/tabletop materials has moderate friction. A static friction coefficient of 0.45 and dynamic friction coefficient of 0.35 are appropriate root-level values; these fall within the expected 0.4-0.6 range for steel while accounting for the smooth polished finish. Restitution is estimated at 0.55: metal is fairly elastic in hard impacts, but this thin utensil will dissipate energy through vibration, flexure, and multiple small contacts along the rim or handle, so it should not be modeled as highly bouncy. The object should remain a rigid body unless intentional bending is required; no compliant contact model is needed for the dominant stainless-steel version.\n\nCollision geometry should not be represented by a single convex hull because the spoon bowl is concave, the fork tines have gaps, and the handle-to-bowl transition is narrow. A single hull would overfill the tines and the bowl cavity, causing unrealistic early contact. For Isaac Sim v4.5/PhysX, convex decomposition is the best general-purpose collider choice: use separate convex pieces for the handle, spoon bowl/rim, and individual tine regions. This gives stable rigid-body contacts while preserving the main silhouette and avoiding the cost of a high-resolution triangle or SDF collider. If very accurate nesting, scooping, or tine insertion is required, an SDF mesh collider can be substituted, but convex decomposition is usually preferable for performance. Because the utensil is thin, contact_offset should be small, around 0.002 m, and rest_offset should remain near 0.0 m so the visible mesh does not appear to float above surfaces. Continuous collision detection is recommended if the utensil may be dropped, tossed, or moved quickly by a manipulator, because the 1-2 mm thickness is prone to tunneling at normal simulation time steps.",
-      "static_friction": 0.45,
-      "dynamic_friction": 0.35,
-      "restitution": 0.55,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        -0.002711678019957575,
+        4.7809674321866285e-05,
+        0.00632677269588275
+      ],
+      "collision": {},
+      "density": 7850.0,
+      "id": "part_00",
+      "inertia": [
+        3.5800490779105118e-06,
+        7.892198780896945e-05,
+        8.171538539370465e-05
+      ],
+      "mass": 0.045,
+      "material": "stainless_steel",
+      "name": "D00316 Fork Spoon",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": ""
+      "source": {
+        "object_name": "D00316 Fork Spoon",
+        "part_name": "D00316 Fork Spoon"
+      },
+      "volume": 4.286223020285779e-05
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00316 Fork Spoon",
-  "object_description": "A spoon-fork hybrid utensil with a shallow oval bowl, short fork tines, and a slender curved handle. The shown variants include polished or brushed stainless steel and natural wood finishes.",
-  "object_semantic": {
-    "qid": null
-  },
-  "total_mass": 0.045,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies",
-  "sdf_collision_resolution": 64
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  }
 }

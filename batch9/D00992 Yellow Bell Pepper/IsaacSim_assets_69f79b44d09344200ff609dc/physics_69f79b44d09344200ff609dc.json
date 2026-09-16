@@ -1,132 +1,82 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.050443168729543686,
+        0.127444326877594,
+        0.05306573584675789
+      ],
+      "min": [
+        -0.05315282940864563,
+        -8.669626367918681e-06,
+        -0.055339265614748
+      ],
+      "size": [
+        0.10359599813818932,
+        0.1274529965039619,
+        0.10840500146150589
+      ]
+    },
+    "description": "A yellow bell pepper with a smooth, lobed surface and a thick, curved green stem. The exterior exhibits a glossy, waxy finish characteristic of fresh produce.",
+    "name": "D00992 Yellow Bell Pepper",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.18
+  },
+  "asset_id": "D00992",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00992 Yellow Bell Pepper",
-      "source_part_name": "D00992 Yellow Bell Pepper",
-      "source_object_name": "D00992 Yellow Bell Pepper",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "waxy_organic",
-      "material": "waxy_organic",
-      "non_visual_material": null,
-      "mass": 0.18,
-      "density": 300.0,
-      "inertia": [
-        0.00012908315587413012,
-        0.0001513374816852976,
-        0.00015394256928927746
-      ],
-      "inertia_axes": [
-        0.6297785387221786,
-        0.4327391441315352,
-        -0.2985538008579267,
-        -0.5718229212741907
-      ],
-      "center_of_mass": [
-        -0.00036954539868344947,
-        -0.04327703029815173,
-        0.0001915149097067734
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.0003647567889948689,
       "bounds": {
-        "min": [
-          -0.05315282940864563,
-          -8.669626367918681e-06,
-          -0.055339265614748
+        "center": [
+          -0.0007399837992088917,
+          0.055620312973151564,
+          -0.0006146499170587019
         ],
         "max": [
           0.050443168729543686,
           0.127444326877594,
           0.05306573584675789
         ],
-        "center": [
-          -0.0007399837992088917,
-          0.055620312973151564,
-          -0.0006146499170587019
+        "min": [
+          -0.05315282940864563,
+          -8.669626367918681e-06,
+          -0.055339265614748
         ]
       },
-      "description": "A yellow bell pepper with a smooth, lobed surface and a thick, curved green stem. The exterior exhibits a glossy, waxy finish characteristic of fresh produce.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "Based on the provided bounding box extents (approx 12cm x 9cm x 12cm), the object represents a large, realistic bell pepper. The mass is estimated at 0.18 kg, relying on typical grocery produce priors as suggested by the metadata, rather than the raw voxel volume, which underestimates the bounding volume due to the thin shell. Because bell peppers are mostly hollow, the macroscopic density (using the convex hull volume of approx 0.0006 m^3) is roughly 300 kg/m^3. The waxy, smooth skin behaves similarly to soft plastics or treated organic material in simulation, resulting in moderate friction (0.4 static, 0.3 dynamic) and low restitution (0.2) since vegetables absorb impact energy without significant bouncing. A convex decomposition collider is strongly recommended to accurately capture the lobed geometry and the top indentation surrounding the stem, providing stable resting poses on varied surfaces.",
-      "static_friction": 0.4,
-      "dynamic_friction": 0.3,
-      "restitution": 0.2,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        -0.00036954539868344947,
+        -0.04327703029815173,
+        0.0001915149097067734
+      ],
+      "collision": {},
+      "density": 300.0,
+      "id": "part_00",
+      "inertia": [
+        0.00012908315587413012,
+        0.0001513374816852976,
+        0.00015394256928927746
+      ],
+      "mass": 0.18,
+      "material": "waxy_organic",
+      "name": "D00992 Yellow Bell Pepper",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "enable_ccd": null,
-      "solver_position_iterations": null,
-      "solver_velocity_iterations": null,
-      "color_name": "",
-      "appearance_properties": {},
-      "newton": {
-        "collisions": {
-          "collider_type": "convex_decomposition",
-          "rest_offset": 0,
-          "contact_offset": 0.002,
-          "explosion_view_distance": 0.01,
-          "collision_mesh_debug_visualization": false
-        },
-        "simulation_scene": {
-          "simulation_steps_per_second": 60,
-          "enable_ccd": false,
-          "gravitational_acceleration": [
-            0,
-            0,
-            -9.81
-          ],
-          "gpu_buffer_parameters": {},
-          "residuals": {}
-        }
-      }
+      "source": {
+        "object_name": "D00992 Yellow Bell Pepper",
+        "part_name": "D00992 Yellow Bell Pepper"
+      },
+      "volume": 0.0003647567889948689
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00992 Yellow Bell Pepper",
-  "base_link_recommendation": null,
-  "fix_base": false,
-  "source": null,
-  "authored_by": null,
-  "up_axis": null,
-  "coordinate_frames": null,
-  "solver_position_iterations": null,
-  "solver_velocity_iterations": null,
-  "object_description": "A yellow bell pepper with a smooth, lobed surface and a thick, curved green stem. The exterior exhibits a glossy, waxy finish characteristic of fresh produce.",
-  "object_semantic": {
-    "qid": null
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {
+    "fix_base": false
   },
-  "total_mass": 0.18,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies",
-  "total_object_mass_kg": 0.18,
-  "_authoritative_context_applied": {
-    "object": {},
-    "parts": [
-      {
-        "part_index": 0,
-        "part_id": "part_00",
-        "fields": [
-          "bounds",
-          "canonical_name",
-          "material",
-          "part_id",
-          "part_index",
-          "source_object_name",
-          "source_part_name"
-        ]
-      }
-    ]
+  "units": {
+    "length": "m",
+    "mass": "kg"
   }
 }

@@ -1,81 +1,81 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.07198400050401688,
+        0.06940499693155289,
+        0.1786549985408783
+      ],
+      "min": [
+        -0.09968400001525879,
+        -0.06944900006055832,
+        -6.000000212225132e-06
+      ],
+      "size": [
+        0.17166800051927567,
+        0.1388539969921112,
+        0.17866099854109052
+      ]
+    },
+    "description": "A matte black cast-iron teapot with a rounded bulbous body, short spout, fitted lid, and arched metal handle wrapped in tan woven material.",
+    "name": "D00240 Cup Teapot",
+    "object_type": "rigid_bodies",
+    "total_mass": 1.6
+  },
+  "asset_id": "D00240",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00240 Cup Teapot",
-      "source_part_name": "D00240 Cup Teapot",
-      "source_object_name": "D00240 Cup Teapot",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "black_enamel_coated_cast_iron",
-      "material": "black_enamel_coated_cast_iron",
-      "non_visual_material": null,
-      "mass": 1.6,
-      "density": 7200.0,
-      "inertia": [
-        0.0017239998253402904,
-        0.0018226914546230755,
-        0.002092652262944233
-      ],
-      "inertia_axes": [
-        0.6503117826136168,
-        0.6575591607348686,
-        0.2685510533610521,
-        -0.26942692379609134
-      ],
-      "center_of_mass": [
-        0.002176371964222682,
-        2.9079759315769214e-05,
-        0.043463116322151454
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.0006032943270404807,
       "bounds": {
-        "min": [
-          -0.09968400001525879,
-          -0.06944900006055832,
-          -6.000000212225132e-06
+        "center": [
+          0.0023538409550693425,
+          -2.2492733010267415e-06,
+          0.060851662460700985
         ],
         "max": [
           0.07198400050401688,
           0.06940499693155289,
           0.1786549985408783
         ],
-        "center": [
-          0.0023538409550693425,
-          -2.2492733010267415e-06,
-          0.060851662460700985
+        "min": [
+          -0.09968400001525879,
+          -0.06944900006055832,
+          -6.000000212225132e-06
         ]
       },
-      "description": "A matte black cast-iron teapot with a rounded bulbous body, short spout, fitted lid, and arched metal handle wrapped in tan woven material.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The object appears to be an empty cast-iron teapot/tetsubin with a hollow rounded body, lid, knob, spout, and a relatively thin arched handle. The dominant exterior/contact material is black enamel-coated or oxidized cast iron; the tan wrap on the handle is a minor external material and should not drive root-level friction or density. A typical teapot of this apparent size is approximately 0.17\u20130.20 m in body diameter, 0.10\u20130.13 m body height, about 0.23\u20130.26 m long including the spout, and about 0.20\u20130.24 m tall including the handle. Empty mass is estimated at about 1.6 kg, consistent with a 2.5\u20133.5 mm cast-iron shell plus lid, spout, and handle hardware. The listed density is the material density of cast iron, about 7200 kg/m^3; however, for Isaac Sim it is better to assign the mass explicitly because using this density on a closed convex hull of the entire teapot would overestimate mass due to the hollow interior. A practical effective density for an automatically mass-computed single closed collision envelope would be much lower, roughly 300\u2013700 kg/m^3 depending on the chosen collision volume. Static friction is estimated at 0.55 and dynamic friction at 0.43 for rough enamel/cast iron against common tabletops or metal fixtures. Restitution is set low at 0.25 because the hollow cast-iron body is hard but not very elastic in practical impacts, and low bounce improves stable resting contacts. For collision geometry, a single convex hull is not recommended because it would fill the handle arch, spout gap, and body concavities. Convex decomposition or manually authored primitive hulls/capsules are recommended: 1\u20133 hulls for the rounded body, a shallow cylinder/hull for the lid, a sphere or capsule for the knob, tapered hulls for the spout, and capsule-like hulls for the arched handle. SDF mesh collision is only needed if the open spout/mouth or exact concave handle clearance must be physically accessible; otherwise convex decomposition is faster and more stable. Contact offset around 0.004 m is appropriate for a 20 cm object with small curved features; rest offset should remain 0.0 m to avoid visible floating. CCD is normally not required for a slowly handled heavy tabletop object, but should be enabled if the teapot is thrown, dropped from height with thin spout/handle collision enabled, or moved faster than several centimeters per physics step. Compliant contacts should be disabled for this non-deformable cast-iron asset; if contact jitter appears, increase solver iterations rather than softening the material.",
-      "static_friction": 0.55,
-      "dynamic_friction": 0.43,
-      "restitution": 0.25,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        0.002176371964222682,
+        2.9079759315769214e-05,
+        0.043463116322151454
+      ],
+      "collision": {},
+      "density": 7200.0,
+      "id": "part_00",
+      "inertia": [
+        0.0017239998253402904,
+        0.0018226914546230755,
+        0.002092652262944233
+      ],
+      "mass": 1.6,
+      "material": "black_enamel_coated_cast_iron",
+      "name": "D00240 Cup Teapot",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": ""
+      "source": {
+        "object_name": "D00240 Cup Teapot",
+        "part_name": "D00240 Cup Teapot"
+      },
+      "volume": 0.0006032943270404807
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00240 Cup Teapot",
-  "object_description": "A matte black cast-iron teapot with a rounded bulbous body, short spout, fitted lid, and arched metal handle wrapped in tan woven material.",
-  "object_semantic": {
-    "qid": null
-  },
-  "total_mass": 1.6,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies"
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  }
 }

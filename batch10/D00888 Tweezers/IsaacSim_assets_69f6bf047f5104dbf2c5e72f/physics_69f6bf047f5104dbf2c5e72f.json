@@ -1,132 +1,82 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.07319226861000061,
+        0.013054179027676582,
+        0.01348084770143032
+      ],
+      "min": [
+        -0.06522972881793976,
+        3.1786137242306722e-06,
+        -0.013562152162194252
+      ],
+      "size": [
+        0.13842199742794037,
+        0.013051000413952352,
+        0.027042999863624573
+      ]
+    },
+    "description": "A pair of stainless steel tweezers with textured, ridged finger grips. The object features a long, tapered body that ends in fine, serrated tips.",
+    "name": "D00888 Tweezers",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.043
+  },
+  "asset_id": "D00888",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00888 Tweezers",
-      "source_part_name": "D00888 Tweezers",
-      "source_object_name": "D00888 Tweezers",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "stainless_steel",
-      "material": "stainless_steel",
-      "non_visual_material": null,
-      "mass": 0.043,
-      "density": 7800.0,
-      "inertia": [
-        1.7308968203449e-06,
-        4.8395869030198145e-05,
-        4.922543565495611e-05
-      ],
-      "inertia_axes": [
-        0.001458385591802624,
-        0.7051326110290177,
-        0.7090739547790156,
-        -2.507812150234454e-05
-      ],
-      "center_of_mass": [
-        8.671722088769628e-05,
-        -0.002358062775245183,
-        0.007177748917643329
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 2.4184974112676926e-05,
       "bounds": {
-        "min": [
-          -0.06522972881793976,
-          3.1786137242306722e-06,
-          -0.013562152162194252
+        "center": [
+          -0.002196515851374862,
+          0.0065030632668759605,
+          -1.6372251700555125e-05
         ],
         "max": [
           0.07319226861000061,
           0.013054179027676582,
           0.01348084770143032
         ],
-        "center": [
-          -0.002196515851374862,
-          0.0065030632668759605,
-          -1.6372251700555125e-05
+        "min": [
+          -0.06522972881793976,
+          3.1786137242306722e-06,
+          -0.013562152162194252
         ]
       },
-      "description": "A pair of stainless steel tweezers with textured, ridged finger grips. The object features a long, tapered body that ends in fine, serrated tips.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The visual evidence and the provided JSON context strongly indicate stainless steel culinary or medical tweezers. The 'metrics_after' data shows extents of roughly 2.7cm x 1.7cm x 14.0cm and a volume of 5.51e-06 m^3. Assuming a standard stainless steel density of 7800 kg/m^3, the calculated mass is approximately 0.043 kg (43 grams), which is highly accurate for this type of object. For Isaac Sim physics, 'convex_decomposition' is selected for the collider type because a standard convex hull would fill in the functional gap between the two tines. Continuous Collision Detection (CCD) is enabled globally and on the rigid body due to the extremely thin profile of the tips, which could otherwise tunnel through surfaces during high-velocity impacts or drops. A small contact offset of 0.001m is used to ensure stable resting without floating. Friction and restitution coefficients are estimated based on standard steel properties.",
-      "static_friction": 0.5,
-      "dynamic_friction": 0.4,
-      "restitution": 0.5,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        8.671722088769628e-05,
+        -0.002358062775245183,
+        0.007177748917643329
+      ],
+      "collision": {},
+      "density": 7800.0,
+      "id": "part_00",
+      "inertia": [
+        1.7308968203449e-06,
+        4.8395869030198145e-05,
+        4.922543565495611e-05
+      ],
+      "mass": 0.043,
+      "material": "stainless_steel",
+      "name": "D00888 Tweezers",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "enable_ccd": null,
-      "solver_position_iterations": null,
-      "solver_velocity_iterations": null,
-      "color_name": "",
-      "appearance_properties": {},
-      "newton": {
-        "collisions": {
-          "collider_type": "convex_decomposition",
-          "rest_offset": 0,
-          "contact_offset": 0.001,
-          "explosion_view_distance": 0,
-          "collision_mesh_debug_visualization": false
-        },
-        "simulation_scene": {
-          "simulation_steps_per_second": 60,
-          "enable_ccd": true,
-          "gravitational_acceleration": [
-            0,
-            0,
-            -9.81
-          ],
-          "gpu_buffer_parameters": {},
-          "residuals": {}
-        }
-      }
+      "source": {
+        "object_name": "D00888 Tweezers",
+        "part_name": "D00888 Tweezers"
+      },
+      "volume": 2.4184974112676926e-05
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00888 Tweezers",
-  "base_link_recommendation": null,
-  "fix_base": false,
-  "source": null,
-  "authored_by": null,
-  "up_axis": null,
-  "coordinate_frames": null,
-  "solver_position_iterations": null,
-  "solver_velocity_iterations": null,
-  "object_description": "A pair of stainless steel tweezers with textured, ridged finger grips. The object features a long, tapered body that ends in fine, serrated tips.",
-  "object_semantic": {
-    "qid": null
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {
+    "fix_base": false
   },
-  "total_mass": 0.043,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies",
-  "total_object_mass_kg": 0.043,
-  "_authoritative_context_applied": {
-    "object": {},
-    "parts": [
-      {
-        "part_index": 0,
-        "part_id": "part_00",
-        "fields": [
-          "bounds",
-          "canonical_name",
-          "material",
-          "part_id",
-          "part_index",
-          "source_object_name",
-          "source_part_name"
-        ]
-      }
-    ]
+  "units": {
+    "length": "m",
+    "mass": "kg"
   }
 }

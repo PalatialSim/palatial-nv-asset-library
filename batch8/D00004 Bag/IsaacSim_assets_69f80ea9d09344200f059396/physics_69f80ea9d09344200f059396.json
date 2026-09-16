@@ -1,102 +1,81 @@
 {
-  "parts": [
-    {
-      "canonical_name": "part_00",
-      "part_name": "D00004 Bag",
-      "source_part_name": "D00004 Bag",
-      "source_object_name": "D00004 Bag",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "canvas",
-      "material": "canvas",
-      "non_visual_material": null,
-      "mass": 0.25,
-      "density": 1200.0,
-      "inertia": [
-        0.004328514525918516,
-        0.004899426256507933,
-        0.005370957643937055
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.1559000015258789,
+        0.15080399811267853,
+        0.2985300123691559
       ],
-      "inertia_axes": [
-        0.6895544470833044,
-        -0.72412429080635,
-        -0.005121960318824614,
-        -0.011508322828781276
-      ],
-      "center_of_mass": [
-        -0.0007585617690461945,
-        0.0013611043232081466,
-        0.14540162737854279
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
+      "min": [
+        -0.15970399975776672,
+        -0.1440179944038391,
         0.0
       ],
-      "volume": 0.001272648547616943,
+      "size": [
+        0.31560400128364563,
+        0.29482199251651764,
+        0.2985300123691559
+      ]
+    },
+    "description": "A structured, tan canvas tote bag with an open top and two fabric handles.",
+    "name": "D00004 Bag",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.25
+  },
+  "asset_id": "D00004",
+  "parts": [
+    {
       "bounds": {
-        "min": [
-          -0.15970399975776672,
-          -0.1440179944038391,
-          0.0
+        "center": [
+          -0.0017557981127226607,
+          0.001975372797565107,
+          0.13227559966969463
         ],
         "max": [
           0.1559000015258789,
           0.15080399811267853,
           0.2985300123691559
         ],
-        "center": [
-          -0.0017557981127226607,
-          0.001975372797565107,
-          0.13227559966969463
+        "min": [
+          -0.15970399975776672,
+          -0.1440179944038391,
+          0.0
         ]
       },
-      "description": "A structured, tan canvas tote bag with an open top and two fabric handles.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "While a real tote bag is highly deformable, this asset is being analyzed for a rigid body simulation. It is treated as a stiff, thin-walled shell made of heavy canvas material. The mass is estimated at 0.25 kg, typical for an empty fabric bag of this volume. Canvas has a rough texture, resulting in relatively high friction coefficients (0.6 static, 0.5 dynamic) and almost zero restitution (0.05) as it absorbs impact without bouncing. The most critical simulation parameter is the collider_type; it must be set to 'convex_decomposition' or 'sdf_mesh'. A standard 'convex_hull' would span across the top opening, creating an invisible lid and preventing objects from being placed inside the bag.",
-      "static_friction": 0.6,
-      "dynamic_friction": 0.5,
-      "restitution": 0.05,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        -0.0007585617690461945,
+        0.0013611043232081466,
+        0.14540162737854279
+      ],
+      "collision": {},
+      "density": 1200.0,
+      "id": "part_00",
+      "inertia": [
+        0.004328514525918516,
+        0.004899426256507933,
+        0.005370957643937055
+      ],
+      "mass": 0.25,
+      "material": "canvas",
+      "name": "D00004 Bag",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": "",
-      "appearance_properties": {},
-      "newton": {
-        "collisions": {
-          "collider_type": "convex_decomposition",
-          "rest_offset": 0,
-          "contact_offset": 0.005,
-          "explosion_view_distance": 0,
-          "collision_mesh_debug_visualization": false
-        },
-        "simulation_scene": {
-          "simulation_steps_per_second": 60,
-          "enable_ccd": false,
-          "gravitational_acceleration": [
-            0,
-            0,
-            -9.81
-          ],
-          "gpu_buffer_parameters": {},
-          "residuals": {}
-        }
-      }
+      "source": {
+        "object_name": "D00004 Bag",
+        "part_name": "D00004 Bag"
+      },
+      "volume": 0.001272648547616943
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00004 Bag",
-  "object_description": "A structured, tan canvas tote bag with an open top and two fabric handles.",
-  "object_semantic": {
-    "qid": null
-  },
-  "total_mass": 0.25,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies"
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  }
 }

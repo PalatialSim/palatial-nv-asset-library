@@ -1,119 +1,83 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.19496983,
+        0.08877633,
+        0.08152371
+      ],
+      "min": [
+        -0.10010492,
+        0.0,
+        -0.08092996
+      ],
+      "size": [
+        0.29507475,
+        0.08877633,
+        0.16245367
+      ]
+    },
+    "description": "A stainless steel saucepan with a cylindrical body and a flat base. It features an elongated, slightly curved black plastic handle attached to one side.",
+    "name": "generated reference 01",
+    "object_type": "rigid_bodies",
+    "total_mass": 1.2
+  },
+  "asset_id": "D00698",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "generated reference 01",
-      "source_part_name": "generated reference 01",
-      "source_object_name": "generated reference 01",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "stainless_steel",
-      "material": "stainless_steel",
-      "mass": 1.2,
-      "density": 7800.0,
-      "inertia": [
-        0.0021823223698135812,
-        0.005113658674343495,
-        0.006092376406914036
-      ],
-      "inertia_axes": [
-        5.551552140488865e-05,
-        -0.9982863054420608,
-        1.054081529221207e-06,
-        -0.05851879427804599
-      ],
-      "center_of_mass": [
-        0.009991552812992594,
-        -0.0003136412227112291,
-        0.04624312495791647
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.002067854913217621,
       "bounds": {
-        "min": [
-          -0.10010492,
-          0.0,
-          -0.08092996
+        "center": [
+          -0.005805194500892549,
+          0.03568759819348234,
+          0.00031195582081651235
         ],
         "max": [
           0.19496983,
           0.08877633,
           0.08152371
         ],
-        "center": [
-          -0.005805194500892549,
-          0.03568759819348234,
-          0.00031195582081651235
+        "min": [
+          -0.10010492,
+          0.0,
+          -0.08092996
         ]
       },
-      "description": "A stainless steel saucepan with a cylindrical body and a flat base. It features an elongated, slightly curved black plastic handle attached to one side.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The object is a saucepan composed primarily of stainless steel, with a plastic handle. Stainless steel is chosen as the dominant material for physics properties because it constitutes the vast majority of the object's surface area, structural mass, and contact interfaces (bottom and sides). Based on the provided dimensions (35 x 20 x 12 cm) which corresponds to a standard 2 to 3-quart saucepan, and the hint to prefer product mass priors over strict mesh-volume, a mass of 1.2 kg is estimated, which is typical for a multi-ply stainless steel pan of this size. The density is set to 7800 kg/m\u00b3, standard for stainless steel. Friction coefficients are estimated at 0.5 (static) and 0.4 (dynamic), reflecting steel interacting with standard surfaces like countertops or stove grates. Restitution is kept low (0.3) as metal pots do not bounce significantly. Crucially, for the collider type, 'convex_decomposition' must be used; a simple convex hull would enclose the open top of the pan, preventing it from functioning as a container in the simulation. Continuous Collision Detection (CCD) is enabled to prevent tunneling if the object is dropped or manipulated quickly.",
-      "static_friction": 0.5,
-      "dynamic_friction": 0.4,
-      "restitution": 0.3,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        0.009991552812992594,
+        -0.0003136412227112291,
+        0.04624312495791647
+      ],
+      "collision": {},
+      "density": 7800.0,
+      "id": "part_00",
+      "inertia": [
+        0.0021823223698135812,
+        0.005113658674343495,
+        0.006092376406914036
+      ],
+      "mass": 1.2,
+      "material": "stainless_steel",
+      "name": "generated reference 01",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": "",
-      "appearance_properties": {},
-      "newton": {
-        "collisions": {
-          "collider_type": "convex_decomposition",
-          "rest_offset": 0,
-          "contact_offset": 0.002,
-          "explosion_view_distance": 0,
-          "collision_mesh_debug_visualization": false
-        },
-        "simulation_scene": {
-          "simulation_steps_per_second": 60,
-          "enable_ccd": true,
-          "gravitational_acceleration": [
-            0,
-            0,
-            -9.81
-          ],
-          "gpu_buffer_parameters": {},
-          "residuals": {}
-        }
-      }
+      "source": {
+        "object_name": "generated reference 01",
+        "part_name": "generated reference 01"
+      },
+      "volume": 0.002067854913217621
     }
   ],
-  "joint_relations": [],
-  "base_link": "generated reference 01",
-  "fix_base": false,
-  "object_description": "A stainless steel saucepan with a cylindrical body and a flat base. It features an elongated, slightly curved black plastic handle attached to one side.",
-  "object_semantic": {
-    "qid": null
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {
+    "fix_base": false
   },
-  "total_mass": 1.2,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies",
-  "total_object_mass_kg": 1.2,
-  "_authoritative_context_applied": {
-    "object": {},
-    "parts": [
-      {
-        "part_index": 0,
-        "part_id": "part_00",
-        "fields": [
-          "bounds",
-          "canonical_name",
-          "material",
-          "part_id",
-          "part_index",
-          "source_object_name",
-          "source_part_name"
-        ]
-      }
-    ]
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
   }
 }

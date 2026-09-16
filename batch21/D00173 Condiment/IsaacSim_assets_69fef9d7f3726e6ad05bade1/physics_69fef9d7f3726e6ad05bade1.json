@@ -1,81 +1,81 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.036419931799173355,
+        0.1742141842842102,
+        0.03602805361151695
+      ],
+      "min": [
+        -0.03637772053480148,
+        0.0,
+        -0.03630312159657478
+      ],
+      "size": [
+        0.07279765233397484,
+        0.1742141842842102,
+        0.07233117520809174
+      ]
+    },
+    "description": "A yellow translucent plastic mustard squeeze bottle with a matching flip-top cap and a paper label. It has a rounded cylindrical body, tapered shoulder, and visible yellow contents.",
+    "name": "D00173 Condiment",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.62
+  },
+  "asset_id": "D00173",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00173 Condiment",
-      "source_part_name": "D00173 Condiment",
-      "source_object_name": "D00173 Condiment",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "plastic_hdpe_pp",
-      "material": "plastic_hdpe_pp",
-      "non_visual_material": null,
-      "mass": 0.62,
-      "density": 950.0,
-      "inertia": [
-        0.00036343588574724845,
-        0.0012872490811638782,
-        0.0012885834104733951
-      ],
-      "inertia_axes": [
-        0.5004823724587205,
-        -0.49958987249575976,
-        -0.49782517944863625,
-        -0.5020930639480038
-      ],
-      "center_of_mass": [
-        2.5396953514671733e-05,
-        1.4371897274970773e-05,
-        0.0706194967183468
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.0005551445627535887,
       "bounds": {
-        "min": [
-          -0.03637772053480148,
-          0.0,
-          -0.03630312159657478
+        "center": [
+          2.1088914925468848e-05,
+          0.07103519013368419,
+          -7.25719440521564e-05
         ],
         "max": [
           0.036419931799173355,
           0.1742141842842102,
           0.03602805361151695
         ],
-        "center": [
-          2.1088914925468848e-05,
-          0.07103519013368419,
-          -7.25719440521564e-05
+        "min": [
+          -0.03637772053480148,
+          0.0,
+          -0.03630312159657478
         ]
       },
-      "description": "A yellow translucent plastic mustard squeeze bottle with a matching flip-top cap and a paper label. It has a rounded cylindrical body, tapered shoulder, and visible yellow contents.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The label gives a net contents mass of 20 oz / 567 g, so the rigid-body mass should be based on that exact contents value plus a small allowance for the plastic bottle, cap, seal, and paper label. A typical 20 oz HDPE/PET squeeze bottle and PP cap add roughly 40-60 g, giving an estimated total mass of about 0.62 kg. The dominant structural and contact material is plastic; the paper label is visually large but thin and should not drive root-level density or friction. A typical bottle height is approximately 0.20-0.23 m with a 0.065-0.075 m body diameter, giving an external displacement volume around 0.0006-0.0007 m^3; the resulting effective filled-object density is near 900-1000 kg/m^3, consistent with water/mustard-like contents plus plastic packaging. The center of mass should be on the central vertical axis and somewhat below mid-height because most mass is in the filled cylindrical body rather than the cap. Plastic-on-table contact normally has static friction around 0.35-0.50 and dynamic friction around 0.25-0.40; values of 0.45 static and 0.35 dynamic are appropriate for a lightly textured plastic base or side. Restitution is lower than an empty plastic container because the viscous contents dissipate impact energy, so a low value around 0.18 is more realistic than a purely elastic plastic value. For Isaac Sim / PhysX, convex decomposition is recommended rather than a single convex hull because the bottle has a shoulder, neck, cap rim, and nozzle geometry; a single hull would overfill the neck and reduce contact accuracy. A decomposition of the main cylinder, lower rounded base, shoulder frustum, neck ring, cap cylinder, and top nozzle is usually sufficient. SDF mesh can be used for high-fidelity visual matching, but convex decomposition is faster and more robust for a dynamic tabletop object. Rest offset should remain at 0 m for accurate visual contact, with a contact offset around 0.002 m to generate stable constraints without visibly floating the object. CCD is not necessary for normal handling or falling speeds at this scale, but should be enabled if the bottle is launched or moved faster than roughly 3-5 m/s or if thin colliders are used. Compliant contacts should generally be disabled for this non-deformable rigid approximation; the low restitution already captures most damping from the filled container. If simulating very soft squeeze behavior is desired, that should be handled with a deformable or custom compliance model rather than root rigid-body contact compliance. Default gravity is appropriate, and 60 Hz simulation is acceptable; 120 Hz may improve stability if the object is grasped, stacked, or impacted repeatedly. Practical velocity limits would be about 5 m/s linear and 25 rad/s angular for stable manipulation-scale scenes, with standard sleep thresholds acceptable once the bottle is resting.",
-      "static_friction": 0.45,
-      "dynamic_friction": 0.35,
-      "restitution": 0.18,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        2.5396953514671733e-05,
+        1.4371897274970773e-05,
+        0.0706194967183468
+      ],
+      "collision": {},
+      "density": 950.0,
+      "id": "part_00",
+      "inertia": [
+        0.00036343588574724845,
+        0.0012872490811638782,
+        0.0012885834104733951
+      ],
+      "mass": 0.62,
+      "material": "plastic_hdpe_pp",
+      "name": "D00173 Condiment",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": ""
+      "source": {
+        "object_name": "D00173 Condiment",
+        "part_name": "D00173 Condiment"
+      },
+      "volume": 0.0005551445627535887
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00173 Condiment",
-  "object_description": "A yellow translucent plastic mustard squeeze bottle with a matching flip-top cap and a paper label. It has a rounded cylindrical body, tapered shoulder, and visible yellow contents.",
-  "object_semantic": {
-    "qid": null
-  },
-  "total_mass": 0.62,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies"
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  }
 }

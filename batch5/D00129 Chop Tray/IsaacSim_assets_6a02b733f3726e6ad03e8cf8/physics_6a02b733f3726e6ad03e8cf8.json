@@ -1,100 +1,81 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.10947518050670624,
+        0.03136506676673889,
+        0.1097230613231659
+      ],
+      "min": [
+        -0.10939381271600723,
+        6.548503961312235e-08,
+        -0.10436394065618515
+      ],
+      "size": [
+        0.21886899322271347,
+        0.03136500128169928,
+        0.21408700197935104
+      ]
+    },
+    "description": "A square, light beige ceramic or melamine divided tray with a speckled pattern. It features three distinct recessed compartments.",
+    "name": "D00129 Chop Tray",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.84
+  },
+  "asset_id": "D00129",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00129 Chop Tray",
-      "source_part_name": "D00129 Chop Tray",
-      "source_object_name": "D00129 Chop Tray",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "melamine_heavy_plastic",
-      "material": "melamine_heavy_plastic",
-      "non_visual_material": null,
-      "mass": 0.84,
-      "density": 1500.0,
-      "inertia": [
-        0.003234021357298491,
-        0.0033173056541489962,
-        0.006447739209272324
-      ],
-      "inertia_axes": [
-        0.9994474706777945,
-        2.354854702362495e-05,
-        3.9030382284033216e-05,
-        -0.03323779893215447
-      ],
-      "center_of_mass": [
-        0.00030974393941321965,
-        -0.0025955074114942874,
-        0.013648868536058605
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.001263648591480293,
       "bounds": {
-        "min": [
-          -0.10939381271600723,
-          6.548503961312235e-08,
-          -0.10436394065618515
+        "center": [
+          4.262301001228119e-05,
+          0.011718646448418954,
+          0.002017263587357175
         ],
         "max": [
           0.10947518050670624,
           0.03136506676673889,
           0.1097230613231659
         ],
-        "center": [
-          4.262301001228119e-05,
-          0.011718646448418954,
-          0.002017263587357175
+        "min": [
+          -0.10939381271600723,
+          6.548503961312235e-08,
+          -0.10436394065618515
         ]
       },
-      "description": "A square, light beige ceramic or melamine divided tray with a speckled pattern. It features three distinct recessed compartments.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The object appears to be a divided serving tray, commonly made of either ceramic, melamine, or a heavy composite plastic. Given the matte finish and speckled texture, it resembles ceramic or melamine. I will assume melamine/composite plastic for a slightly lower density and better durability in typical use, but the physics values would be similar for a thick ceramic. I estimate its size to be roughly 25cm x 25cm x 3cm, with a wall thickness of about 0.5cm. Volume estimation: Solid block = 25*25*3 = 1875 cm^3. The recesses remove a significant portion of this. Let's estimate the actual volume is about 30% of the bounding box, so ~560 cm^3. Density of melamine/heavy plastic is around 1.3 - 1.5 g/cm^3 (1300 - 1500 kg/m^3). Mass = 560 cm^3 * 1.5 g/cm^3 = 840g = 0.84kg. Friction values for smooth plastic/ceramic are moderate (0.3-0.5). Restitution is low (0.2-0.4) due to rigidity. In Isaac Sim, a convex decomposition is required to capture the hollow compartments; a simple convex hull would enclose the entire tray, making the compartments unusable for containment. CCD is unnecessary unless it's thrown at high speeds.",
-      "static_friction": 0.45,
-      "dynamic_friction": 0.35,
-      "restitution": 0.3,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        0.00030974393941321965,
+        -0.0025955074114942874,
+        0.013648868536058605
+      ],
+      "collision": {},
+      "density": 1500.0,
+      "id": "part_00",
+      "inertia": [
+        0.003234021357298491,
+        0.0033173056541489962,
+        0.006447739209272324
+      ],
+      "mass": 0.84,
+      "material": "melamine_heavy_plastic",
+      "name": "D00129 Chop Tray",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": "",
-      "appearance_properties": {},
-      "newton": {
-        "collisions": {
-          "collider_type": "convex_decomposition",
-          "rest_offset": 0,
-          "contact_offset": 0.002,
-          "explosion_view_distance": 0.05,
-          "collision_mesh_debug_visualization": false
-        },
-        "simulation_scene": {
-          "simulation_steps_per_second": 60,
-          "enable_ccd": false,
-          "gravitational_acceleration": [
-            0,
-            0,
-            -9.81
-          ]
-        }
-      }
+      "source": {
+        "object_name": "D00129 Chop Tray",
+        "part_name": "D00129 Chop Tray"
+      },
+      "volume": 0.001263648591480293
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00129 Chop Tray",
-  "object_description": "A square, light beige ceramic or melamine divided tray with a speckled pattern. It features three distinct recessed compartments.",
-  "object_semantic": {
-    "qid": null
-  },
-  "total_mass": 0.84,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies"
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  }
 }

@@ -1,81 +1,81 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.1670421063899994,
+        0.2817900478839874,
+        0.03622371703386307
+      ],
+      "min": [
+        -0.18551743030548096,
+        0.0,
+        -0.039120521396398544
+      ],
+      "size": [
+        0.35255953669548035,
+        0.2817900478839874,
+        0.07534423843026161
+      ]
+    },
+    "description": "A light varnished wooden horse figure with visible carved grain, segmented limbs, mane, tail, head, and round peg-like joints.",
+    "name": "D00949 Wooden",
+    "object_type": "rigid_bodies",
+    "total_mass": 2.8
+  },
+  "asset_id": "D00949",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00949 Wooden",
-      "source_part_name": "D00949 Wooden",
-      "source_object_name": "D00949 Wooden",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "varnished_wood",
-      "material": "varnished_wood",
-      "non_visual_material": null,
-      "mass": 2.8,
-      "density": 560.0,
-      "inertia": [
-        0.010757802055609268,
-        0.019930154429143407,
-        0.028952601337108756
-      ],
-      "inertia_axes": [
-        0.6887635142688836,
-        0.6821152703033181,
-        -0.16682363880753337,
-        0.18025940465346657
-      ],
-      "center_of_mass": [
-        0.003523125898047038,
-        -0.0002882791853341386,
-        0.12453792182394427
-      ],
-      "part_origin_world": [
-        0.003523125898047038,
-        -0.0002882791853341386,
-        0.12453792182394427
-      ],
-      "volume": 0.0037675700174370397,
       "bounds": {
-        "min": [
-          -0.18551743030548096,
-          0.0,
-          -0.039120521396398544
+        "center": [
+          -0.0023700237266918002,
+          0.14678317027716942,
+          -0.00033882830178900807
         ],
         "max": [
           0.1670421063899994,
           0.2817900478839874,
           0.03622371703386307
         ],
-        "center": [
-          -0.0023700237266918002,
-          0.14678317027716942,
-          -0.00033882830178900807
+        "min": [
+          -0.18551743030548096,
+          0.0,
+          -0.039120521396398544
         ]
       },
-      "description": "A light varnished wooden horse figure with visible carved grain, segmented limbs, mane, tail, head, and round peg-like joints.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "No exact product dimensions or mass are provided, so the values are estimated from the visible object as a tabletop-scale articulated wooden horse figure rather than a full-size animal. The dominant material is varnished hardwood or soft hardwood such as beech, basswood, or maple. A realistic material density for finished carved wood is approximately 500\u2013650 kg/m\u00b3; 560 kg/m\u00b3 is used as a representative value. Assuming a model roughly 0.55\u20130.70 m long and 0.40\u20130.50 m tall, with a solid but highly non-box-like carved volume made from ellipsoidal body, head/neck, limb, tail, and joint sections, the effective wood volume is estimated around 0.0045\u20130.0055 m\u00b3, giving a total mass near 2.5\u20133.1 kg. A mass of 2.8 kg is therefore appropriate for a medium wooden articulated display model. The external contact material is smooth finished wood, so the root friction is set in the wood range but slightly lower than unfinished wood: static friction about 0.50 and dynamic friction about 0.38 on a typical dry surface. Restitution is moderate-low at 0.35 because wood is hard but the segmented geometry and joints dissipate energy. For Isaac Sim / PhysX, a single convex hull would incorrectly fill the gaps under the body, between legs, around the neck, and near the tail, so convex decomposition is the preferred collision representation. If the model is imported as separate articulated pieces, each major piece should use a convex hull or small convex decomposition rather than one global hull. SDF mesh collision could give higher visual fidelity, but convex decomposition is usually more stable and faster for dynamic rigid bodies. Rest offset is kept at 0.0 m for accurate contact placement, while contact offset is set to 0.005 m to generate stable contact constraints without visibly inflating the thin limbs and hooves too much. CCD is recommended because the hooves, ears, legs, and tail are relatively thin and could tunnel during drops or fast manipulation; it can be disabled for purely static or slow pose-display use. Initial velocity is zero. For an articulated version, passive revolute or spherical-approximated joints should have light damping and small Coulomb friction to prevent jitter while preserving the poseable wooden-joint behavior. Sleep/hibernation should be enabled in practice with modest thresholds because the object is mostly decorative and should settle quickly; suggested practical values are linear sleep threshold around 0.02 m/s, angular sleep threshold around 0.05 rad/s, maximum linear velocity around 20 m/s, and maximum angular velocity around 50 rad/s. For hard non-deformable wood, compliant contacts should generally be disabled; if grasp stability requires compliance, use high stiffness with moderate damping so the object behaves nearly rigid.",
-      "static_friction": 0.5,
-      "dynamic_friction": 0.38,
-      "restitution": 0.35,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        0.003523125898047038,
+        -0.0002882791853341386,
+        0.12453792182394427
+      ],
+      "collision": {},
+      "density": 560.0,
+      "id": "part_00",
+      "inertia": [
+        0.010757802055609268,
+        0.019930154429143407,
+        0.028952601337108756
+      ],
+      "mass": 2.8,
+      "material": "varnished_wood",
+      "name": "D00949 Wooden",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": ""
+      "source": {
+        "object_name": "D00949 Wooden",
+        "part_name": "D00949 Wooden"
+      },
+      "volume": 0.0037675700174370397
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00949 Wooden",
-  "object_description": "A light varnished wooden horse figure with visible carved grain, segmented limbs, mane, tail, head, and round peg-like joints.",
-  "object_semantic": {
-    "qid": null
-  },
-  "total_mass": 2.8,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies"
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  }
 }

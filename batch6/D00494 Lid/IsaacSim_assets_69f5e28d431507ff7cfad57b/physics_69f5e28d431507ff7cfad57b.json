@@ -1,102 +1,81 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.14888834953308105,
+        0.14899560809135437,
+        0.10188452899456024
+      ],
+      "min": [
+        -0.1499808132648468,
+        -0.14914293587207794,
+        -0.00013468337419908494
+      ],
+      "size": [
+        0.29886916279792786,
+        0.2981385439634323,
+        0.10201921236875933
+      ]
+    },
+    "description": "A circular, brushed stainless steel pot lid featuring a raised dome, a flat rim, and an arched metal handle attached by two top rivets.",
+    "name": "D00494 Lid",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.4
+  },
+  "asset_id": "D00494",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00494 Lid",
-      "source_part_name": "D00494 Lid",
-      "source_object_name": "D00494 Lid",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "stainless_steel",
-      "material": "stainless_steel",
-      "non_visual_material": null,
-      "mass": 0.4,
-      "density": 7900.0,
-      "inertia": [
-        0.0017677182146619713,
-        0.0018505535898261439,
-        0.003253772491580415
-      ],
-      "inertia_axes": [
-        0.99999925241456,
-        9.737605811449756e-05,
-        -3.0717912697708634e-05,
-        -0.0012185009784039305
-      ],
-      "center_of_mass": [
-        -0.0005006292458516133,
-        -0.00014499556270078617,
-        0.03054068789158183
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.0034609757336545185,
       "bounds": {
-        "min": [
-          -0.1499808132648468,
-          -0.14914293587207794,
-          -0.00013468337419908494
+        "center": [
+          -0.0005277136447685659,
+          -0.00013435147290538315,
+          0.021529495033194155
         ],
         "max": [
           0.14888834953308105,
           0.14899560809135437,
           0.10188452899456024
         ],
-        "center": [
-          -0.0005277136447685659,
-          -0.00013435147290538315,
-          0.021529495033194155
+        "min": [
+          -0.1499808132648468,
+          -0.14914293587207794,
+          -0.00013468337419908494
         ]
       },
-      "description": "A circular, brushed stainless steel pot lid featuring a raised dome, a flat rim, and an arched metal handle attached by two top rivets.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The visual appearance clearly indicates brushed stainless steel construction for both the main dome and the handle. Density is estimated at 7900 kg/m\u00b3, typical for standard culinary stainless steel. Assuming a standard diameter of ~24 cm, the mass is estimated at 0.4 kg given its thin sheet metal form. Friction coefficients (0.5 static, 0.4 dynamic) reflect the moderately smooth metallic surface. Restitution is estimated low (0.3) because while metal is hard, the thin dome shape will dissipate impact energy through acoustic vibration rather than elastic bouncing. For collision modeling, 'convex_decomposition' is highly recommended; a single convex hull would incorrectly enclose the handle, preventing an object or hook from passing underneath it, and would obscure the slight concavity of the lid's interior. Continuous Collision Detection (CCD) should be enabled due to the thinness of the metal rim to prevent tunneling during high-velocity impacts.",
-      "static_friction": 0.5,
-      "dynamic_friction": 0.4,
-      "restitution": 0.3,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        -0.0005006292458516133,
+        -0.00014499556270078617,
+        0.03054068789158183
+      ],
+      "collision": {},
+      "density": 7900.0,
+      "id": "part_00",
+      "inertia": [
+        0.0017677182146619713,
+        0.0018505535898261439,
+        0.003253772491580415
+      ],
+      "mass": 0.4,
+      "material": "stainless_steel",
+      "name": "D00494 Lid",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": "",
-      "appearance_properties": {},
-      "newton": {
-        "collisions": {
-          "collider_type": "convex_decomposition",
-          "rest_offset": 0,
-          "contact_offset": 0.002,
-          "explosion_view_distance": 0.1,
-          "collision_mesh_debug_visualization": false
-        },
-        "simulation_scene": {
-          "simulation_steps_per_second": 60,
-          "enable_ccd": true,
-          "gravitational_acceleration": [
-            0,
-            0,
-            -9.81
-          ],
-          "gpu_buffer_parameters": {},
-          "residuals": {}
-        }
-      }
+      "source": {
+        "object_name": "D00494 Lid",
+        "part_name": "D00494 Lid"
+      },
+      "volume": 0.0034609757336545185
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00494 Lid",
-  "object_description": "A circular, brushed stainless steel pot lid featuring a raised dome, a flat rim, and an arched metal handle attached by two top rivets.",
-  "object_semantic": {
-    "qid": null
-  },
-  "total_mass": 0.4,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies"
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  }
 }

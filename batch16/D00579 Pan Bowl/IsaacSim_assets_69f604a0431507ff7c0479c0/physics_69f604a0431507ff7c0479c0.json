@@ -1,102 +1,81 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.12338792532682419,
+        0.2206554114818573,
+        0.07553042471408844
+      ],
+      "min": [
+        -0.12290516495704651,
+        -0.11481351405382156,
+        -1.9001656255568378e-05
+      ],
+      "size": [
+        0.2462930902838707,
+        0.33546892553567886,
+        0.07554942637034401
+      ]
+    },
+    "description": "A stainless steel saucepan with a long primary handle, a smaller helper handle opposite to it, and dual pour spouts.",
+    "name": "D00579 Pan Bowl",
+    "object_type": "rigid_bodies",
+    "total_mass": 1.8
+  },
+  "asset_id": "D00579",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00579 Pan Bowl",
-      "source_part_name": "D00579 Pan Bowl",
-      "source_object_name": "D00579 Pan Bowl",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "stainless_steel",
-      "material": "stainless_steel",
-      "non_visual_material": null,
-      "mass": 1.8,
-      "density": 7900.0,
-      "inertia": [
-        0.004889687172066475,
-        0.008129222683087968,
-        0.011720201534522051
-      ],
-      "inertia_axes": [
-        0.02717490768908368,
-        -0.7068830743717063,
-        -0.7062799844606003,
-        -0.027320818238639622
-      ],
-      "center_of_mass": [
-        0.0002161456724645535,
-        0.012891127142434487,
-        0.04395160357380082
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.002408298455429926,
       "bounds": {
-        "min": [
-          -0.12290516495704651,
-          -0.11481351405382156,
-          -1.9001656255568378e-05
+        "center": [
+          0.00022936997986596172,
+          -0.003508787613929144,
+          0.03376001315655433
         ],
         "max": [
           0.12338792532682419,
           0.2206554114818573,
           0.07553042471408844
         ],
-        "center": [
-          0.00022936997986596172,
-          -0.003508787613929144,
-          0.03376001315655433
+        "min": [
+          -0.12290516495704651,
+          -0.11481351405382156,
+          -1.9001656255568378e-05
         ]
       },
-      "description": "A stainless steel saucepan with a long primary handle, a smaller helper handle opposite to it, and dual pour spouts.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The object is visibly constructed entirely from brushed stainless steel, which dictates its high density and moderate friction characteristics. For Isaac Sim, the most critical physics consideration is the collider type: because the pan has a deep concavity (the interior volume meant to hold liquids/food), a simple 'convex_hull' would incorrectly cap the top, preventing objects from being placed inside. Therefore, 'convex_decomposition' is highly recommended to accurately represent the hollow interior and the protruding handles while maintaining PhysX performance. Continuous Collision Detection (CCD) should be enabled, as dropping or aggressively manipulating this relatively heavy, rigid metal object can cause high velocities leading to tunneling. A standard steel density of 7900 kg/m\u00b3 is applied, and mass is estimated at 1.8 kg for a medium-to-large saucepan. Restitution is kept moderate (0.5) to simulate the clang of solid metal without excessive bouncing.",
-      "static_friction": 0.5,
-      "dynamic_friction": 0.4,
-      "restitution": 0.5,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        0.0002161456724645535,
+        0.012891127142434487,
+        0.04395160357380082
+      ],
+      "collision": {},
+      "density": 7900.0,
+      "id": "part_00",
+      "inertia": [
+        0.004889687172066475,
+        0.008129222683087968,
+        0.011720201534522051
+      ],
+      "mass": 1.8,
+      "material": "stainless_steel",
+      "name": "D00579 Pan Bowl",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": "",
-      "appearance_properties": {},
-      "newton": {
-        "collisions": {
-          "collider_type": "convex_decomposition",
-          "rest_offset": 0,
-          "contact_offset": 0.002,
-          "explosion_view_distance": 0,
-          "collision_mesh_debug_visualization": false
-        },
-        "simulation_scene": {
-          "simulation_steps_per_second": 60,
-          "enable_ccd": true,
-          "gravitational_acceleration": [
-            0,
-            0,
-            -9.81
-          ],
-          "gpu_buffer_parameters": {},
-          "residuals": {}
-        }
-      }
+      "source": {
+        "object_name": "D00579 Pan Bowl",
+        "part_name": "D00579 Pan Bowl"
+      },
+      "volume": 0.002408298455429926
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00579 Pan Bowl",
-  "object_description": "A stainless steel saucepan with a long primary handle, a smaller helper handle opposite to it, and dual pour spouts.",
-  "object_semantic": {
-    "qid": null
-  },
-  "total_mass": 1.8,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies"
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  }
 }

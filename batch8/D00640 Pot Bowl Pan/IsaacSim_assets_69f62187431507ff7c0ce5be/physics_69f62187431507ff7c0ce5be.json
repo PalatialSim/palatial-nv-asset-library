@@ -1,90 +1,81 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.1076425313949585,
+        0.07527599483728409,
+        0.06497462093830109
+      ],
+      "min": [
+        -0.17213687300682068,
+        -0.07440418004989624,
+        -3.0425007935264148e-06
+      ],
+      "size": [
+        0.2797794044017792,
+        0.14968017488718033,
+        0.06497766343909461
+      ]
+    },
+    "description": "A brushed stainless steel saucepan with a long primary handle, a smaller loop-style helper handle, and internal etched volume markings up to 3L.",
+    "name": "D00640 Pot Bowl Pan",
+    "object_type": "rigid_bodies",
+    "total_mass": 1.8
+  },
+  "asset_id": "D00640",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00640 Pot Bowl Pan",
-      "source_part_name": "D00640 Pot Bowl Pan",
-      "source_object_name": "D00640 Pot Bowl Pan",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "stainless_steel",
-      "material": "stainless_steel",
-      "non_visual_material": null,
-      "mass": 1.8,
-      "density": 8000.0,
-      "inertia": [
-        0.0024026084031636675,
-        0.005601093695514633,
-        0.006936641983899872
-      ],
-      "inertia_axes": [
-        3.3567322216973507e-05,
-        -0.9998409845429906,
-        -4.468660945234835e-05,
-        0.017832624721139917
-      ],
-      "center_of_mass": [
-        -0.009173887637503394,
-        0.0004170807794108134,
-        0.037135776349081634
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.001215720856632045,
       "bounds": {
-        "min": [
-          -0.17213687300682068,
-          -0.07440418004989624,
-          -3.0425007935264148e-06
+        "center": [
+          0.0010049216140706246,
+          0.00041911617212195013,
+          0.02924794332459051
         ],
         "max": [
           0.1076425313949585,
           0.07527599483728409,
           0.06497462093830109
         ],
-        "center": [
-          0.0010049216140706246,
-          0.00041911617212195013,
-          0.02924794332459051
+        "min": [
+          -0.17213687300682068,
+          -0.07440418004989624,
+          -3.0425007935264148e-06
         ]
       },
-      "description": "A brushed stainless steel saucepan with a long primary handle, a smaller loop-style helper handle, and internal etched volume markings up to 3L.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The object is a saucepan visually determined to be constructed entirely of stainless steel. Based on the 3-liter capacity marking, a typical multi-ply or thick-based stainless steel pot of this size has a mass of approximately 1.8 kg. The density of stainless steel is around 8000 kg/m\u00b3, which applies to the solid volume of the metal walls. Friction coefficients are estimated for smooth steel (0.5 static, 0.4 dynamic), and a relatively low restitution (0.3) reflects a rigid, non-bouncy metallic structure. Crucially, for collision modeling in Isaac Sim, a 'convex_decomposition' collider type is required. A simple 'convex_hull' would enclose the top opening, preventing objects from being placed inside and interfering with grasping kinematics around the rim or through the helper handle.",
-      "static_friction": 0.5,
-      "dynamic_friction": 0.4,
-      "restitution": 0.3,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        -0.009173887637503394,
+        0.0004170807794108134,
+        0.037135776349081634
+      ],
+      "collision": {},
+      "density": 8000.0,
+      "id": "part_00",
+      "inertia": [
+        0.0024026084031636675,
+        0.005601093695514633,
+        0.006936641983899872
+      ],
+      "mass": 1.8,
+      "material": "stainless_steel",
+      "name": "D00640 Pot Bowl Pan",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": "",
-      "appearance_properties": {},
-      "newton": {
-        "collisions": {
-          "collider_type": "convex_decomposition",
-          "rest_offset": 0,
-          "contact_offset": 0.01,
-          "collision_mesh_debug_visualization": false
-        }
-      }
+      "source": {
+        "object_name": "D00640 Pot Bowl Pan",
+        "part_name": "D00640 Pot Bowl Pan"
+      },
+      "volume": 0.001215720856632045
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00640 Pot Bowl Pan",
-  "object_description": "A brushed stainless steel saucepan with a long primary handle, a smaller loop-style helper handle, and internal etched volume markings up to 3L.",
-  "object_semantic": {
-    "qid": null
-  },
-  "total_mass": 1.8,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies"
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  }
 }

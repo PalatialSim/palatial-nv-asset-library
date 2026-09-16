@@ -1,292 +1,196 @@
 {
+  "articulation": {
+    "has_joints": true,
+    "joints": [
+      {
+        "axis": [],
+        "behavior_type": "normal",
+        "child": "long handle",
+        "damping": 0.0,
+        "effort": 0.0,
+        "friction": 0.0,
+        "joint_rotation_local": [],
+        "joint_type": "fixed",
+        "name": "joint_pan_body__long_handle",
+        "origin": [],
+        "parent": "pan body",
+        "score": 0.95,
+        "stiffness": 0.0,
+        "velocity": 0.0
+      },
+      {
+        "axis": [],
+        "behavior_type": "normal",
+        "child": "helper handle",
+        "damping": 0.0,
+        "effort": 0.0,
+        "friction": 0.0,
+        "joint_rotation_local": [],
+        "joint_type": "fixed",
+        "name": "joint_pan_body__helper_handle",
+        "origin": [],
+        "parent": "pan body",
+        "score": 0.95,
+        "stiffness": 0.0,
+        "velocity": 0.0
+      }
+    ]
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.289313,
+        0.131677,
+        0.093103
+      ],
+      "min": [
+        -0.184154,
+        -0.131865,
+        -3.6e-05
+      ],
+      "size": [
+        0.47346699999999997,
+        0.263542,
+        0.093139
+      ]
+    },
+    "description": "A stainless-steel saut\u00e9 pan with fixed long and helper handles. The simulation treats the bowl and handles as rigid bolted metal components with no articulated motion.",
+    "name": "pan body",
+    "object_type": "rigid_bodies",
+    "total_mass": 1.45
+  },
+  "asset_id": "D00066",
   "parts": [
     {
-      "canonical_name": "part_0",
-      "part_name": "pan body",
-      "source_part_name": "part_0",
-      "source_object_name": "part_0",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "brushed_stainless_steel",
-      "material": "brushed_stainless_steel",
-      "non_visual_material": {
-        "base": "steel",
-        "coating": "polish",
-        "attributes": [
-          "smooth",
-          "polished",
-          "reflective"
-        ]
-      },
-      "mass": 1.05,
-      "density": 7900.0,
-      "inertia": [
-        0.0060007811541885545,
-        0.006208618613282332,
-        0.010994397580042944
-      ],
-      "inertia_axes": [
-        0.00048045938420835526,
-        -0.6998979518383568,
-        -0.7142425583376872,
-        0.0004404889202309605
-      ],
-      "center_of_mass": [
-        -0.013925072657608846,
-        0.00014281295207983964,
-        0.025990104595473077
-      ],
-      "part_origin_world": [
-        -0.013925072657608846,
-        0.00014281295207983964,
-        0.025990104595473077
-      ],
-      "volume": 0.0004537366686764902,
       "bounds": {
-        "min": [
-          -0.142967,
-          -0.131865,
-          -3.6e-05
+        "center": [
+          -0.013943,
+          -9.4e-05,
+          0.03642
         ],
         "max": [
           0.115082,
           0.131677,
           0.072876
         ],
-        "center": [
-          -0.013943,
-          -9.4e-05,
-          0.03642
+        "min": [
+          -0.142967,
+          -0.131865,
+          -3.6e-05
         ]
       },
-      "description": "Primary rounded saut\u00e9-pan bowl and rim that holds food and carries the handle attachments.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The reference shows a thin, reflective brushed stainless-steel cookware shell rather than plastic or ceramic. Mass is estimated from a 26 cm metal saut\u00e9-pan body as a thin formed shell with a heavier base, not from the full bounding box volume.",
-      "static_friction": 0.42,
-      "dynamic_friction": 0.32,
-      "restitution": 0.25,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        -0.013925072657608846,
+        0.00014281295207983964,
+        0.025990104595473077
+      ],
+      "collision": {},
+      "density": 7900.0,
+      "id": "part_00",
+      "inertia": [
+        0.0060007811541885545,
+        0.006208618613282332,
+        0.010994397580042944
+      ],
+      "mass": 1.05,
+      "material": "brushed_stainless_steel",
+      "name": "pan body",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": "Red"
+      "source": {
+        "object_name": "part_0",
+        "part_name": "part_0"
+      },
+      "volume": 0.0004537366686764902
     },
     {
-      "canonical_name": "part_1",
-      "part_name": "long handle",
-      "source_part_name": "part_1",
-      "source_object_name": "part_1",
-      "part_index": 1,
-      "part_id": "part_01",
-      "material_name": "brushed_stainless_steel",
-      "material": "brushed_stainless_steel",
-      "non_visual_material": {
-        "base": "steel",
-        "coating": "polish",
-        "attributes": [
-          "smooth",
-          "polished",
-          "reflective"
-        ]
-      },
-      "mass": 0.28,
-      "density": 7900.0,
-      "inertia": [
-        4.979080635530821e-05,
-        0.0007615990019508304,
-        0.0007964809762078954
-      ],
-      "inertia_axes": [
-        0.00033459268469907135,
-        0.9947506708768405,
-        -0.0006435806857678777,
-        0.1023258356511786
-      ],
-      "center_of_mass": [
-        0.1988980291917617,
-        -6.175571529732224e-05,
-        0.07613936264686813
-      ],
-      "part_origin_world": [
-        0.1988980291917617,
-        -6.175571529732224e-05,
-        0.07613936264686813
-      ],
-      "volume": 5.553775659897785e-05,
       "bounds": {
-        "min": [
-          0.094862,
-          -0.040847,
-          0.039233
+        "center": [
+          0.192087,
+          -0.000121,
+          0.066168
         ],
         "max": [
           0.289313,
           0.040605,
           0.093103
         ],
-        "center": [
-          0.192087,
-          -0.000121,
-          0.066168
+        "min": [
+          0.094862,
+          -0.040847,
+          0.039233
         ]
       },
-      "description": "Elongated stainless-steel grip handle fixed to one side of the pan body by riveted or welded attachment points.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The long side grip matches the same brushed stainless-steel construction as the pan, with visible fixed attachment points. It is a rigid cookware handle, not a hinged or removable part.",
-      "static_friction": 0.4,
-      "dynamic_friction": 0.3,
-      "restitution": 0.28,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        0.1988980291917617,
+        -6.175571529732224e-05,
+        0.07613936264686813
+      ],
+      "collision": {},
+      "density": 7900.0,
+      "id": "part_01",
+      "inertia": [
+        4.979080635530821e-05,
+        0.0007615990019508304,
+        0.0007964809762078954
+      ],
+      "mass": 0.28,
+      "material": "brushed_stainless_steel",
+      "name": "long handle",
       "physics_type": "rigid",
-      "is_structural_root": false,
-      "color_name": "Blue"
+      "source": {
+        "object_name": "part_1",
+        "part_name": "part_1"
+      },
+      "volume": 5.553775659897785e-05
     },
     {
-      "canonical_name": "part_2",
-      "part_name": "helper handle",
-      "source_part_name": "part_2",
-      "source_object_name": "part_2",
-      "part_index": 2,
-      "part_id": "part_02",
-      "material_name": "brushed_stainless_steel",
-      "material": "brushed_stainless_steel",
-      "non_visual_material": {
-        "base": "steel",
-        "coating": "polish",
-        "attributes": [
-          "smooth",
-          "polished",
-          "reflective"
-        ]
-      },
-      "mass": 0.12,
-      "density": 7900.0,
-      "inertia": [
-        6.105942788525078e-05,
-        9.806439039848963e-05,
-        0.00015517603600195262
-      ],
-      "inertia_axes": [
-        0.16055102052143763,
-        0.6890366018038588,
-        -0.6882066429642395,
-        -0.16069706831179917
-      ],
-      "center_of_mass": [
-        -0.15701111876885626,
-        -4.639541491883418e-05,
-        0.0662466008001968
-      ],
-      "part_origin_world": [
-        -0.15701111876885626,
-        -4.639541491883418e-05,
-        0.0662466008001968
-      ],
-      "volume": 2.009514029044866e-05,
       "bounds": {
-        "min": [
-          -0.184154,
-          -0.048175,
-          0.040322
+        "center": [
+          -0.152788,
+          -0.000167,
+          0.060096
         ],
         "max": [
           -0.121422,
           0.047842,
           0.07987
         ],
-        "center": [
-          -0.152788,
-          -0.000167,
-          0.060096
+        "min": [
+          -0.184154,
+          -0.048175,
+          0.040322
         ]
       },
-      "description": "Short loop-style auxiliary stainless-steel handle fixed to the opposite side of the pan body for two-handed lifting.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The compact loop handle is a fixed metal auxiliary grip attached to the pan wall. Its small size and thin loop geometry make it much lighter than the main body while retaining stainless-steel density and contact behavior.",
-      "static_friction": 0.4,
-      "dynamic_friction": 0.3,
-      "restitution": 0.28,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        -0.15701111876885626,
+        -4.639541491883418e-05,
+        0.0662466008001968
+      ],
+      "collision": {},
+      "density": 7900.0,
+      "id": "part_02",
+      "inertia": [
+        6.105942788525078e-05,
+        9.806439039848963e-05,
+        0.00015517603600195262
+      ],
+      "mass": 0.12,
+      "material": "brushed_stainless_steel",
+      "name": "helper handle",
       "physics_type": "rigid",
-      "is_structural_root": false,
-      "color_name": "Green"
-    }
-  ],
-  "joint_relations": [
-    {
-      "child": "long handle",
-      "parent": "pan body",
-      "joint_type": "fixed",
-      "name": "joint_pan_body__long_handle",
-      "damping": 0.0,
-      "effort": 0.0,
-      "friction": 0.0,
-      "stiffness": 0.0,
-      "velocity": 0.0,
-      "origin": [],
-      "joint_rotation_local": [],
-      "axis": [],
-      "motion_limits": null,
-      "revolute_mode": null,
-      "score": 0.95,
-      "behavior_type": "normal"
-    },
-    {
-      "child": "helper handle",
-      "parent": "pan body",
-      "joint_type": "fixed",
-      "name": "joint_pan_body__helper_handle",
-      "damping": 0.0,
-      "effort": 0.0,
-      "friction": 0.0,
-      "stiffness": 0.0,
-      "velocity": 0.0,
-      "origin": [],
-      "joint_rotation_local": [],
-      "axis": [],
-      "motion_limits": null,
-      "revolute_mode": null,
-      "score": 0.95,
-      "behavior_type": "normal"
-    }
-  ],
-  "base_link": "pan body",
-  "object_description": "A stainless-steel saut\u00e9 pan with fixed long and helper handles. The simulation treats the bowl and handles as rigid bolted metal components with no articulated motion.",
-  "object_semantic": {
-    "qid": null
-  },
-  "total_mass": 1.45,
-  "center_of_mass": null,
-  "inertia": null,
-  "behavior_type": "normal",
-  "overall_assessment": "The resulting setup is a stable rigid cookware assembly with realistic polished stainless-steel contact properties and conservative fixed joints for the riveted handle connections.",
-  "num_parts": 3,
-  "object_type": "rigid_bodies",
-  "_metadata": {
-    "openai_response": {
-      "model": "gpt-5.5",
-      "usage": {
-        "input_tokens": 20308,
-        "input_tokens_details": {
-          "cached_tokens": 2816
-        },
-        "output_tokens": 3914,
-        "output_tokens_details": {
-          "reasoning_tokens": 2588
-        },
-        "total_tokens": 24222
+      "source": {
+        "object_name": "part_2",
+        "part_name": "part_2"
       },
-      "web_search_tool_calls": 0,
-      "estimated_cost_usd": 0.206288,
-      "pricing_note": "Estimated from response usage and public token/tool prices. OpenAI organization Costs API is authoritative for billing."
+      "volume": 2.009514029044866e-05
     }
+  ],
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
   }
 }

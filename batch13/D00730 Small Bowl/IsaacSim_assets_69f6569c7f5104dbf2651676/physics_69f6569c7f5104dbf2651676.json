@@ -1,81 +1,81 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.05863751471042633,
+        0.061234768480062485,
+        0.05822718143463135
+      ],
+      "min": [
+        -0.05907755345106125,
+        0.0,
+        -0.059244513511657715
+      ],
+      "size": [
+        0.11771506816148758,
+        0.061234768480062485,
+        0.11747169494628906
+      ]
+    },
+    "description": "A white glazed ceramic bowl with rounded sides, a thick rolled rim, and a small foot ring. The glossy surface has subtle gray marbling and fine speckling.",
+    "name": "D00730 Small Bowl",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.32
+  },
+  "asset_id": "D00730",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00730 Small Bowl",
-      "source_part_name": "D00730 Small Bowl",
-      "source_object_name": "D00730 Small Bowl",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "baked_bread",
-      "material": "baked_bread",
-      "non_visual_material": null,
-      "mass": 0.32,
-      "density": 2350.0,
-      "inertia": [
-        0.00039901579939258404,
-        0.00040247553535805385,
-        0.0005968679761518063
-      ],
-      "inertia_axes": [
-        0.6226905864251827,
-        -0.6252473064777693,
-        -0.33397245897329214,
-        -0.33133764646820524
-      ],
-      "center_of_mass": [
-        -3.8207746757698235e-05,
-        -0.02876629869541981,
-        0.0007656299584124719
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.00014682886160501026,
       "bounds": {
-        "min": [
-          -0.05907755345106125,
-          0.0,
-          -0.059244513511657715
+        "center": [
+          -0.00012316232283839953,
+          0.03189417656149122,
+          -4.336707685631655e-05
         ],
         "max": [
           0.05863751471042633,
           0.061234768480062485,
           0.05822718143463135
         ],
-        "center": [
-          -0.00012316232283839953,
-          0.03189417656149122,
-          -4.336707685631655e-05
+        "min": [
+          -0.05907755345106125,
+          0.0,
+          -0.059244513511657715
         ]
       },
-      "description": "A white glazed ceramic bowl with rounded sides, a thick rolled rim, and a small foot ring. The glossy surface has subtle gray marbling and fine speckling.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The object appears to be a small porcelain or glazed ceramic bowl, likely about 12\u201314 cm in top diameter and 7\u20138 cm tall with a 3\u20135 mm wall thickness, a thicker rolled rim, and a denser foot ring. Solid porcelain/stoneware density is typically 2200\u20132400 kg/m^3; using a hollow shell volume estimate plus the heavier rim and base gives a realistic mass near 0.30\u20130.40 kg, so 0.32 kg is a reasonable rigid-body mass. The center of mass should be below mid-height because of the foot ring and thicker lower body. The glazed ceramic exterior is smooth, but the foot ring often has a less-glazed contact surface, so static friction is estimated moderately high at 0.55 and dynamic friction at 0.42. Restitution is kept moderate-low at 0.38 because ceramic is hard but dissipative and would chip/fracture in reality rather than behaving like a very bouncy elastic material. For collision geometry, a single convex hull is not recommended because it would seal the bowl opening and remove the concave interior. Convex decomposition is the best general-purpose PhysX choice for a dynamic bowl: it preserves the hollow form better than a single hull while remaining more robust and performant than a high-resolution triangle/SDF mesh. If accurate small-object containment inside the bowl is critical, an SDF mesh can be substituted at higher cost. Rest offset is set to 0 to avoid artificial hovering, while a 0.003 m contact offset provides stable contact generation for the rounded foot and rim without excessive early contact. CCD is recommended because the bowl has thin walls and curved edges that can tunnel during drops or fast manipulation. For stable contacts, limit typical linear speed to roughly below 5 m/s and angular speed below about 40\u201360 rad/s unless using smaller time steps. Sleep/hibernation can use default PhysX behavior, with low sleep thresholds appropriate for a lightweight tabletop ceramic object; increase solver iterations or run at 120 Hz if rim/foot jitter is observed.",
-      "static_friction": 0.55,
-      "dynamic_friction": 0.42,
-      "restitution": 0.38,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        -3.8207746757698235e-05,
+        -0.02876629869541981,
+        0.0007656299584124719
+      ],
+      "collision": {},
+      "density": 2350.0,
+      "id": "part_00",
+      "inertia": [
+        0.00039901579939258404,
+        0.00040247553535805385,
+        0.0005968679761518063
+      ],
+      "mass": 0.32,
+      "material": "baked_bread",
+      "name": "D00730 Small Bowl",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": ""
+      "source": {
+        "object_name": "D00730 Small Bowl",
+        "part_name": "D00730 Small Bowl"
+      },
+      "volume": 0.00014682886160501026
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00730 Small Bowl",
-  "object_description": "A white glazed ceramic bowl with rounded sides, a thick rolled rim, and a small foot ring. The glossy surface has subtle gray marbling and fine speckling.",
-  "object_semantic": {
-    "qid": null
-  },
-  "total_mass": 0.32,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies"
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  }
 }

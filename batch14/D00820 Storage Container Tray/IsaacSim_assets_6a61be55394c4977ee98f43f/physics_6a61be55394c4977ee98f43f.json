@@ -1,119 +1,83 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.14980365,
+        0.07993281,
+        0.10672027
+      ],
+      "min": [
+        -0.14520763,
+        0.0,
+        -0.10904436
+      ],
+      "size": [
+        0.29501128,
+        0.07993281,
+        0.21576463
+      ]
+    },
+    "description": "A light gray plastic storage container tray with rectangular structural ribs along its exterior walls. The tray features a smooth interior cavity and a reinforced, rolled upper rim.",
+    "name": "generated reference 01",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.6
+  },
+  "asset_id": "D00820",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "generated reference 01",
-      "source_part_name": "generated reference 01",
-      "source_object_name": "generated reference 01",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "plastic",
-      "material": "plastic",
-      "mass": 0.6,
-      "density": 950.0,
-      "inertia": [
-        0.002617991708201692,
-        0.004622802633288553,
-        0.006605114726795145
-      ],
-      "inertia_axes": [
-        0.9999999963211252,
-        -1.4393647539462715e-05,
-        -2.6327266045345077e-05,
-        -8.035824704636717e-05
-      ],
-      "center_of_mass": [
-        0.002309554968646505,
-        0.0011462163213471503,
-        0.040047511506327585
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.005047614492218466,
       "bounds": {
-        "min": [
-          -0.14520763,
-          0.0,
-          -0.10904436
+        "center": [
+          0.0011556407588609145,
+          0.02971455514906321,
+          -0.0011717941620813653
         ],
         "max": [
           0.14980365,
           0.07993281,
           0.10672027
         ],
-        "center": [
-          0.0011556407588609145,
-          0.02971455514906321,
-          -0.0011717941620813653
+        "min": [
+          -0.14520763,
+          0.0,
+          -0.10904436
         ]
       },
-      "description": "A light gray plastic storage container tray with rectangular structural ribs along its exterior walls. The tray features a smooth interior cavity and a reinforced, rolled upper rim.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The provided JSON artifacts define this as a 'Storage Container Tray' made of plastic with physical dimensions of 0.3 x 0.2 x 0.1 m and a post-scale voxel volume of 0.000624 m\u00b3. Applying a typical density for rigid structural plastics (such as HDPE or Polypropylene, ~950 kg/m\u00b3) yields a calculated mass of approximately 0.59 kg (rounded to 0.6 kg). Friction and restitution values are chosen based on standard plastic properties (0.4 and 0.3 respectively). For Isaac Sim v4.5 physics, the 'convex_decomposition' collider type is absolutely necessary, as the object is hollow and a standard convex hull would cover the opening, preventing items from being placed inside the tray. Standard contact offsets (0.002m) are applied to ensure stable resting contact.",
-      "static_friction": 0.4,
-      "dynamic_friction": 0.4,
-      "restitution": 0.3,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        0.002309554968646505,
+        0.0011462163213471503,
+        0.040047511506327585
+      ],
+      "collision": {},
+      "density": 950.0,
+      "id": "part_00",
+      "inertia": [
+        0.002617991708201692,
+        0.004622802633288553,
+        0.006605114726795145
+      ],
+      "mass": 0.6,
+      "material": "plastic",
+      "name": "generated reference 01",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": "",
-      "appearance_properties": {},
-      "newton": {
-        "collisions": {
-          "collider_type": "convex_decomposition",
-          "rest_offset": 0,
-          "contact_offset": 0.002,
-          "explosion_view_distance": 0,
-          "collision_mesh_debug_visualization": false
-        },
-        "simulation_scene": {
-          "simulation_steps_per_second": 60,
-          "enable_ccd": false,
-          "gravitational_acceleration": [
-            0,
-            0,
-            -9.81
-          ],
-          "gpu_buffer_parameters": {},
-          "residuals": {}
-        }
-      }
+      "source": {
+        "object_name": "generated reference 01",
+        "part_name": "generated reference 01"
+      },
+      "volume": 0.005047614492218466
     }
   ],
-  "joint_relations": [],
-  "base_link": "generated reference 01",
-  "fix_base": false,
-  "object_description": "A light gray plastic storage container tray with rectangular structural ribs along its exterior walls. The tray features a smooth interior cavity and a reinforced, rolled upper rim.",
-  "object_semantic": {
-    "qid": null
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {
+    "fix_base": false
   },
-  "total_mass": 0.6,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies",
-  "total_object_mass_kg": 0.6,
-  "_authoritative_context_applied": {
-    "object": {},
-    "parts": [
-      {
-        "part_index": 0,
-        "part_id": "part_00",
-        "fields": [
-          "bounds",
-          "canonical_name",
-          "material",
-          "part_id",
-          "part_index",
-          "source_object_name",
-          "source_part_name"
-        ]
-      }
-    ]
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
   }
 }

@@ -1,328 +1,178 @@
 {
- "parts": [
-  {
-   "canonical_name": "part_00",
-   "part_name": "D00557 Sugar Dispenser",
-   "source_part_name": "D00557 Sugar Dispenser",
-   "source_object_name": "D00557 Sugar Dispenser",
-   "part_index": 0,
-   "part_id": "part_00",
-   "material_name": "ceramic_or_glass",
-   "material": "ceramic_or_glass",
-   "mass": 0.25,
-   "density": 2500.0,
-   "inertia": [
-    0.00015256858023349196,
-    0.0002464797580614686,
-    0.00024880815180949867
-   ],
-   "inertia_axes": [
-    0.4938494861125946,
-    0.5059816241264343,
-    -0.49408796429634094,
-    0.5059370994567871
-   ],
-   "center_of_mass": [
-    6.888870120747015e-05,
-    4.490356150199659e-05,
-    0.04633806645870209
-   ],
-   "part_origin_world": [
-    0.0,
-    0.0,
-    0.0
-   ],
-   "volume": 0.0001,
-   "bounds": {
-    "min": [
-     -0.035613998770713806,
-     0.0004978781216777861,
-     -0.03516799956560135
-    ],
-    "max": [
-     0.03577699884772301,
-     0.0926588773727417,
-     0.03497200086712837
-    ],
-    "center": [
-     8.150003850460052e-05,
-     0.04657837774720974,
-     -9.799934923648834e-05
+  "articulation": {
+    "has_joints": true,
+    "joints": [
+      {
+        "body0": "/World/textured_mesh_6a828bbeb7a9c4204ac5ea89/part_00",
+        "body1": "/World/textured_mesh_6a828bbeb7a9c4204ac5ea89/part_01",
+        "joint_path": "/World/textured_mesh_6a828bbeb7a9c4204ac5ea89/Joints/joint_jar_body__dispenser_lid",
+        "type": "fixed"
+      },
+      {
+        "body0": "/World/textured_mesh_6a828bbeb7a9c4204ac5ea89/part_01",
+        "body1": "/World/textured_mesh_6a828bbeb7a9c4204ac5ea89/part_02",
+        "joint_path": "/World/textured_mesh_6a828bbeb7a9c4204ac5ea89/Joints/joint_dispenser_lid__spout_flap",
+        "type": "fixed"
+      }
     ]
-   },
-   "description": "D00557 Sugar Dispenser",
-   "semantic": {
-    "qid": null
-   },
-   "reasoning": "Metadata migrated 2026-08-18 from delivered USD physics authoring (MassAPI/collision/physics-material attributes) for the 8-19 USD-only batch. Mass/density/center_of_mass/inertia/principal_axes/friction/restitution/offsets read verbatim from USD; bounds measured from the delivered render mesh (Z-up world) and expressed in the reference Y-up frame; material_name and collider_type inferred (not present in USD-only delivery).",
-   "static_friction": 0.5,
-   "dynamic_friction": 0.4000000059604645,
-   "restitution": 0.10000000149011612,
-   "friction_combine_mode": "average",
-   "restitution_combine_mode": "average",
-   "physics_type": "rigid",
-   "is_structural_root": true,
-   "color_name": "",
-   "appearance_properties": {},
-   "newton": {
-    "collisions": {
-     "collider_type": "convex_decomposition",
-     "rest_offset": 0.0,
-     "contact_offset": 0.0020000000949949026,
-     "explosion_view_distance": 0,
-     "collision_mesh_debug_visualization": false
-    },
-    "simulation_scene": {
-     "simulation_steps_per_second": 60,
-     "enable_ccd": true,
-     "gravitational_acceleration": [
-      0,
-      -9.81,
-      0
-     ],
-     "gpu_buffer_parameters": {},
-     "residuals": {}
-    }
-   }
   },
-  {
-   "canonical_name": "part_01",
-   "part_name": "D00557 Sugar Dispenser",
-   "source_part_name": "D00557 Sugar Dispenser",
-   "source_object_name": "D00557 Sugar Dispenser",
-   "part_index": 1,
-   "part_id": "part_01",
-   "material_name": "metal",
-   "material": "metal",
-   "mass": 0.048,
-   "density": 8000.0,
-   "inertia": [
-    1.4196287338563707e-05,
-    1.4543187717208639e-05,
-    1.9934384908992797e-05
-   ],
-   "inertia_axes": [
-    0.9995617866516113,
-    0.018844136968255043,
-    0.016785014420747757,
-    0.015472358092665672
-   ],
-   "center_of_mass": [
-    -0.00012814527144655585,
-    0.00036716819158755243,
-    0.10306251049041748
-   ],
-   "part_origin_world": [
-    0.0,
-    0.0,
-    0.0
-   ],
-   "volume": 6.000000052154064e-06,
-   "bounds": {
-    "min": [
-     -0.033142998814582825,
-     0.08903788030147552,
-     -0.032910000532865524
-    ],
-    "max": [
-     0.033410001546144485,
-     0.1343148797750473,
-     0.03263700008392334
-    ],
-    "center": [
-     0.00013350136578083038,
-     0.11167638003826141,
-     -0.00013650022447109222
-    ]
-   },
-   "description": "D00557 Sugar Dispenser",
-   "semantic": {
-    "qid": null
-   },
-   "reasoning": "Metadata migrated 2026-08-18 from delivered USD physics authoring (MassAPI/collision/physics-material attributes) for the 8-19 USD-only batch. Mass/density/center_of_mass/inertia/principal_axes/friction/restitution/offsets read verbatim from USD; bounds measured from the delivered render mesh (Z-up world) and expressed in the reference Y-up frame; material_name and collider_type inferred (not present in USD-only delivery).",
-   "static_friction": 0.4000000059604645,
-   "dynamic_friction": 0.30000001192092896,
-   "restitution": 0.30000001192092896,
-   "friction_combine_mode": "average",
-   "restitution_combine_mode": "average",
-   "physics_type": "rigid",
-   "is_structural_root": false,
-   "color_name": "",
-   "appearance_properties": {},
-   "newton": {
-    "collisions": {
-     "collider_type": "convex_decomposition",
-     "rest_offset": 0.0,
-     "contact_offset": 0.0020000000949949026,
-     "explosion_view_distance": 0,
-     "collision_mesh_debug_visualization": false
+  "asset": {
+    "bounds": {
+      "max": [
+        0.03577699884772301,
+        0.1343148797750473,
+        0.03497200086712837
+      ],
+      "min": [
+        -0.035613998770713806,
+        0.0004978781216777861,
+        -0.03516799956560135
+      ],
+      "size": [
+        0.07139099761843681,
+        0.13381700165336952,
+        0.07014000043272972
+      ]
     },
-    "simulation_scene": {
-     "simulation_steps_per_second": 60,
-     "enable_ccd": true,
-     "gravitational_acceleration": [
-      0,
-      -9.81,
-      0
-     ],
-     "gpu_buffer_parameters": {},
-     "residuals": {}
-    }
-   }
+    "description": "D00557 Sugar Dispenser",
+    "name": "D00557 Sugar Dispenser",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.3
   },
-  {
-   "canonical_name": "part_02",
-   "part_name": "D00557 Sugar Dispenser",
-   "source_part_name": "D00557 Sugar Dispenser",
-   "source_object_name": "D00557 Sugar Dispenser",
-   "part_index": 2,
-   "part_id": "part_02",
-   "material_name": "metal",
-   "material": "metal",
-   "mass": 0.002,
-   "density": 8000.0,
-   "inertia": [
-    2.771503559984012e-08,
-    3.1453563309469246e-08,
-    5.8946703518358845e-08
-   ],
-   "inertia_axes": [
-    0.00045581121230497956,
-    0.7122816443443298,
-    0.7018933892250061,
-    0.0005177795537747443
-   ],
-   "center_of_mass": [
-    0.00010369929077569395,
-    0.00017063223640434444,
-    0.1082305759191513
-   ],
-   "part_origin_world": [
-    0.0,
-    0.0,
-    0.0
-   ],
-   "volume": 2.500000118743628e-07,
-   "bounds": {
-    "min": [
-     -0.007615999784320593,
-     0.1077948808670044,
-     -0.008313000202178955
-    ],
-    "max": [
-     0.00784900039434433,
-     0.10864688456058502,
-     0.007981999777257442
-    ],
-    "center": [
-     0.00011650030501186848,
-     0.10822088271379471,
-     -0.0001655002124607563
-    ]
-   },
-   "description": "D00557 Sugar Dispenser",
-   "semantic": {
-    "qid": null
-   },
-   "reasoning": "Metadata migrated 2026-08-18 from delivered USD physics authoring (MassAPI/collision/physics-material attributes) for the 8-19 USD-only batch. Mass/density/center_of_mass/inertia/principal_axes/friction/restitution/offsets read verbatim from USD; bounds measured from the delivered render mesh (Z-up world) and expressed in the reference Y-up frame; material_name and collider_type inferred (not present in USD-only delivery).",
-   "static_friction": 0.30000001192092896,
-   "dynamic_friction": 0.20000000298023224,
-   "restitution": 0.10000000149011612,
-   "friction_combine_mode": "average",
-   "restitution_combine_mode": "average",
-   "physics_type": "rigid",
-   "is_structural_root": false,
-   "color_name": "",
-   "appearance_properties": {},
-   "newton": {
-    "collisions": {
-     "collider_type": "convex_decomposition",
-     "rest_offset": 0.0,
-     "contact_offset": 0.0020000000949949026,
-     "explosion_view_distance": 0,
-     "collision_mesh_debug_visualization": false
-    },
-    "simulation_scene": {
-     "simulation_steps_per_second": 60,
-     "enable_ccd": true,
-     "gravitational_acceleration": [
-      0,
-      -9.81,
-      0
-     ],
-     "gpu_buffer_parameters": {},
-     "residuals": {}
-    }
-   }
-  }
- ],
- "joint_relations": [
-  {
-   "joint_path": "/World/textured_mesh_6a828bbeb7a9c4204ac5ea89/Joints/joint_jar_body__dispenser_lid",
-   "type": "fixed",
-   "body0": "/World/textured_mesh_6a828bbeb7a9c4204ac5ea89/part_00",
-   "body1": "/World/textured_mesh_6a828bbeb7a9c4204ac5ea89/part_01"
-  },
-  {
-   "joint_path": "/World/textured_mesh_6a828bbeb7a9c4204ac5ea89/Joints/joint_dispenser_lid__spout_flap",
-   "type": "fixed",
-   "body0": "/World/textured_mesh_6a828bbeb7a9c4204ac5ea89/part_01",
-   "body1": "/World/textured_mesh_6a828bbeb7a9c4204ac5ea89/part_02"
-  }
- ],
- "base_link": "D00557 Sugar Dispenser",
- "fix_base": false,
- "object_description": "D00557 Sugar Dispenser",
- "object_semantic": {
-  "qid": null
- },
- "total_mass": 0.3,
- "overall_assessment": "Generated from delivered USD physics authoring (USD-only -> metadata format migration; no USD modified).",
- "num_parts": 3,
- "object_type": "rigid_bodies",
- "total_object_mass_kg": 0.3,
- "_authoritative_context_applied": {
-  "object": {},
+  "asset_id": "D00557",
   "parts": [
-   {
-    "part_index": 0,
-    "part_id": "part_00",
-    "fields": [
-     "bounds",
-     "canonical_name",
-     "material",
-     "part_id",
-     "part_index",
-     "source_object_name",
-     "source_part_name"
-    ]
-   },
-   {
-    "part_index": 1,
-    "part_id": "part_01",
-    "fields": [
-     "bounds",
-     "canonical_name",
-     "material",
-     "part_id",
-     "part_index",
-     "source_object_name",
-     "source_part_name"
-    ]
-   },
-   {
-    "part_index": 2,
-    "part_id": "part_02",
-    "fields": [
-     "bounds",
-     "canonical_name",
-     "material",
-     "part_id",
-     "part_index",
-     "source_object_name",
-     "source_part_name"
-    ]
-   }
-  ]
- }
+    {
+      "bounds": {
+        "center": [
+          8.150003850460052e-05,
+          0.04657837774720974,
+          -9.799934923648834e-05
+        ],
+        "max": [
+          0.03577699884772301,
+          0.0926588773727417,
+          0.03497200086712837
+        ],
+        "min": [
+          -0.035613998770713806,
+          0.0004978781216777861,
+          -0.03516799956560135
+        ]
+      },
+      "center_of_mass": [
+        6.888870120747015e-05,
+        4.490356150199659e-05,
+        0.04633806645870209
+      ],
+      "collision": {},
+      "density": 2500.0,
+      "id": "part_00",
+      "inertia": [
+        0.00015256858023349196,
+        0.0002464797580614686,
+        0.00024880815180949867
+      ],
+      "mass": 0.25,
+      "material": "ceramic_or_glass",
+      "name": "D00557 Sugar Dispenser",
+      "physics_type": "rigid",
+      "source": {
+        "object_name": "D00557 Sugar Dispenser",
+        "part_name": "D00557 Sugar Dispenser"
+      },
+      "volume": 0.0001
+    },
+    {
+      "bounds": {
+        "center": [
+          0.00013350136578083038,
+          0.11167638003826141,
+          -0.00013650022447109222
+        ],
+        "max": [
+          0.033410001546144485,
+          0.1343148797750473,
+          0.03263700008392334
+        ],
+        "min": [
+          -0.033142998814582825,
+          0.08903788030147552,
+          -0.032910000532865524
+        ]
+      },
+      "center_of_mass": [
+        -0.00012814527144655585,
+        0.00036716819158755243,
+        0.10306251049041748
+      ],
+      "collision": {},
+      "density": 8000.0,
+      "id": "part_01",
+      "inertia": [
+        1.4196287338563707e-05,
+        1.4543187717208639e-05,
+        1.9934384908992797e-05
+      ],
+      "mass": 0.048,
+      "material": "metal",
+      "name": "D00557 Sugar Dispenser",
+      "physics_type": "rigid",
+      "source": {
+        "object_name": "D00557 Sugar Dispenser",
+        "part_name": "D00557 Sugar Dispenser"
+      },
+      "volume": 6.000000052154064e-06
+    },
+    {
+      "bounds": {
+        "center": [
+          0.00011650030501186848,
+          0.10822088271379471,
+          -0.0001655002124607563
+        ],
+        "max": [
+          0.00784900039434433,
+          0.10864688456058502,
+          0.007981999777257442
+        ],
+        "min": [
+          -0.007615999784320593,
+          0.1077948808670044,
+          -0.008313000202178955
+        ]
+      },
+      "center_of_mass": [
+        0.00010369929077569395,
+        0.00017063223640434444,
+        0.1082305759191513
+      ],
+      "collision": {},
+      "density": 8000.0,
+      "id": "part_02",
+      "inertia": [
+        2.771503559984012e-08,
+        3.1453563309469246e-08,
+        5.8946703518358845e-08
+      ],
+      "mass": 0.002,
+      "material": "metal",
+      "name": "D00557 Sugar Dispenser",
+      "physics_type": "rigid",
+      "source": {
+        "object_name": "D00557 Sugar Dispenser",
+        "part_name": "D00557 Sugar Dispenser"
+      },
+      "volume": 2.500000118743628e-07
+    }
+  ],
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {
+    "fix_base": false
+  },
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  }
 }

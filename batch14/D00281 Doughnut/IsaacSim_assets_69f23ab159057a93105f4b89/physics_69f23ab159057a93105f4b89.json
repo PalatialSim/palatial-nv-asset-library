@@ -1,119 +1,83 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.03521559,
+        0.02759083,
+        0.0334905
+      ],
+      "min": [
+        -0.03357037,
+        0.0,
+        -0.03503008
+      ],
+      "size": [
+        0.06878596000000001,
+        0.02759083,
+        0.06852058
+      ]
+    },
+    "description": "A torus-shaped baked pastry with a glossy, semi-translucent glaze. The exterior has a golden-brown textured surface with slight irregularities and a central hole.",
+    "name": "D00281 Doughnut",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.06
+  },
+  "asset_id": "D00281",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00281 Doughnut",
-      "source_part_name": "D00281 Doughnut",
-      "source_object_name": "D00281 Doughnut",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "glazed_baked_dough",
-      "material": "glazed_baked_dough",
-      "mass": 0.06,
-      "density": 500.0,
-      "inertia": [
-        1.9388347122548616e-05,
-        1.9546948079646534e-05,
-        3.232957209298535e-05
-      ],
-      "inertia_axes": [
-        0.9996471430712941,
-        -0.0011197662370165157,
-        -0.002835693980684952,
-        -0.026387389272567098
-      ],
-      "center_of_mass": [
-        0.0007249333892766465,
-        0.0006788549728752789,
-        0.01321369032242255
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 9.051903358484471e-05,
       "bounds": {
-        "min": [
-          -0.03357037,
-          0.0,
-          -0.03503008
+        "center": [
+          0.0007524667568077284,
+          0.012957682686681677,
+          -0.0007238482877390893
         ],
         "max": [
           0.03521559,
           0.02759083,
           0.0334905
         ],
-        "center": [
-          0.0007524667568077284,
-          0.012957682686681677,
-          -0.0007238482877390893
+        "min": [
+          -0.03357037,
+          0.0,
+          -0.03503008
         ]
       },
-      "description": "A torus-shaped baked pastry with a glossy, semi-translucent glaze. The exterior has a golden-brown textured surface with slight irregularities and a central hole.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The payload indicates dimensions of approximately 9cm x 9cm x 2.8cm, which perfectly aligns with a standard-sized doughnut. The reported voxel volume in the JSON is anomalous and likely an artifact of sparse voxelization, so mass and density are estimated using real-world priors for baked goods. A typical glazed doughnut weighs about 60 grams (0.06 kg), yielding an effective density of roughly 500 kg/m\u00b3 for porous dough. The sugar glaze provides a slightly sticky surface, justifying moderately high friction coefficients (0.6 static, 0.5 dynamic). Restitution is set very low (0.1) because dough is soft and inelastic, absorbing most impact energy. For collisions, 'convex_decomposition' is selected to accurately preserve the central hole, which is critical for robotic manipulation tasks like grasping or peg insertion. A small contact offset (1mm) is used given the object's small scale.",
-      "static_friction": 0.6,
-      "dynamic_friction": 0.5,
-      "restitution": 0.1,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        0.0007249333892766465,
+        0.0006788549728752789,
+        0.01321369032242255
+      ],
+      "collision": {},
+      "density": 500.0,
+      "id": "part_00",
+      "inertia": [
+        1.9388347122548616e-05,
+        1.9546948079646534e-05,
+        3.232957209298535e-05
+      ],
+      "mass": 0.06,
+      "material": "glazed_baked_dough",
+      "name": "D00281 Doughnut",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": "",
-      "appearance_properties": {},
-      "newton": {
-        "collisions": {
-          "collider_type": "convex_decomposition",
-          "rest_offset": 0,
-          "contact_offset": 0.001,
-          "explosion_view_distance": 0,
-          "collision_mesh_debug_visualization": false
-        },
-        "simulation_scene": {
-          "simulation_steps_per_second": 60,
-          "enable_ccd": false,
-          "gravitational_acceleration": [
-            0,
-            -9.81,
-            0
-          ],
-          "gpu_buffer_parameters": {},
-          "residuals": {}
-        }
-      }
+      "source": {
+        "object_name": "D00281 Doughnut",
+        "part_name": "D00281 Doughnut"
+      },
+      "volume": 9.051903358484471e-05
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00281 Doughnut",
-  "fix_base": false,
-  "object_description": "A torus-shaped baked pastry with a glossy, semi-translucent glaze. The exterior has a golden-brown textured surface with slight irregularities and a central hole.",
-  "object_semantic": {
-    "qid": null
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {
+    "fix_base": false
   },
-  "total_mass": 0.06,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies",
-  "total_object_mass_kg": 0.06,
-  "_authoritative_context_applied": {
-    "object": {},
-    "parts": [
-      {
-        "part_index": 0,
-        "part_id": "part_00",
-        "fields": [
-          "bounds",
-          "canonical_name",
-          "material",
-          "part_id",
-          "part_index",
-          "source_object_name",
-          "source_part_name"
-        ]
-      }
-    ]
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
   }
 }

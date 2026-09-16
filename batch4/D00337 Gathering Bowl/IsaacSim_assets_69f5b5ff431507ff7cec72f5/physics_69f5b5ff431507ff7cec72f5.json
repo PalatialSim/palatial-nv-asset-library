@@ -1,81 +1,81 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.09306400269269943,
+        0.09344100207090378,
+        0.0974460020661354
+      ],
+      "min": [
+        -0.09410800039768219,
+        -0.0935320034623146,
+        -0.00010299999848939478
+      ],
+      "size": [
+        0.18717200309038162,
+        0.18697300553321838,
+        0.0975490020646248
+      ]
+    },
+    "description": "A white glazed ceramic bowl with a rounded hemispherical body, thick rolled rim, and small raised foot ring. The surface has subtle gray marbling, speckling, and handmade texture variations.",
+    "name": "D00337 Gathering Bowl",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.55
+  },
+  "asset_id": "D00337",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00337 Gathering Bowl",
-      "source_part_name": "D00337 Gathering Bowl",
-      "source_object_name": "D00337 Gathering Bowl",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "baked_bread",
-      "material": "baked_bread",
-      "non_visual_material": null,
-      "mass": 0.55,
-      "density": 2300.0,
-      "inertia": [
-        0.0026766183602666854,
-        0.0026925491161032215,
-        0.003971971078618366
-      ],
-      "inertia_axes": [
-        0.9888250833254636,
-        -0.0041356811458747485,
-        -0.0018117536999917578,
-        -0.14901197360071572
-      ],
-      "center_of_mass": [
-        -1.0824649496916192e-05,
-        5.833416790643937e-05,
-        0.05622787751167993
-      ],
-      "part_origin_world": [
-        -1.0824649496916192e-05,
-        5.833416790643937e-05,
-        0.05622787751167993
-      ],
-      "volume": 0.0007852889287726059,
       "bounds": {
-        "min": [
-          -0.09410800039768219,
-          -0.0935320034623146,
-          -0.00010299999848939478
+        "center": [
+          -0.0005570166558248278,
+          4.372362329465207e-05,
+          0.04959057473400102
         ],
         "max": [
           0.09306400269269943,
           0.09344100207090378,
           0.0974460020661354
         ],
-        "center": [
-          -0.0005570166558248278,
-          4.372362329465207e-05,
-          0.04959057473400102
+        "min": [
+          -0.09410800039768219,
+          -0.0935320034623146,
+          -0.00010299999848939478
         ]
       },
-      "description": "A white glazed ceramic bowl with a rounded hemispherical body, thick rolled rim, and small raised foot ring. The surface has subtle gray marbling, speckling, and handmade texture variations.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The object appears to be a medium ceramic or stoneware bowl. With no product data supplied, I assumed a typical tabletop bowl approximately 0.16\u20130.18 m in diameter, 0.085\u20130.10 m tall, with 4\u20136 mm wall thickness and a thicker rolled rim/foot ring. Fired stoneware/porcelain density is commonly about 2200\u20132500 kg/m^3; because a bowl is hollow, the effective occupied bounding volume density is much lower, but the actual material density for USD/PhysX mass computation should remain near ceramic material density. A realistic mass for this size and construction is about 0.55 kg. The glazed ceramic surface is hard and moderately smooth: static friction is estimated around 0.45 and dynamic friction around 0.35 against common tabletops or rubberized grippers. Restitution is kept low-to-moderate at 0.32 because ceramic is stiff but not elastically bouncy in practical impacts and may dissipate energy through micro-slip and ringing. The shape is concave, so a single convex hull would incorrectly fill the bowl cavity; convex decomposition is recommended for a dynamic rigid body, ideally using separate hulls around the outer wall, inner wall, rim, and foot ring. If accurate containment of objects inside the bowl is critical and performance allows, an SDF mesh can be considered, but convex decomposition is the safer general-purpose PhysX rigid-body choice. Small contact/rest offsets are recommended because the bowl has thin walls and a visible rim; a 0.0 m rest offset and 0.002 m contact offset give good visual alignment while still generating contacts early enough for stable stacking and placement. CCD is recommended for this asset if it can be dropped, thrown, or moved quickly, since thin ceramic walls and the foot ring are susceptible to tunneling with discrete collision detection. Compliant contacts are disabled because the bowl should behave as a rigid, hard ceramic object; if contact jitter occurs in high-force interactions, a very stiff spring-damper contact model could be added, but that would be a stabilization approximation rather than true material compliance.",
-      "static_friction": 0.45,
-      "dynamic_friction": 0.35,
-      "restitution": 0.32,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        -1.0824649496916192e-05,
+        5.833416790643937e-05,
+        0.05622787751167993
+      ],
+      "collision": {},
+      "density": 2300.0,
+      "id": "part_00",
+      "inertia": [
+        0.0026766183602666854,
+        0.0026925491161032215,
+        0.003971971078618366
+      ],
+      "mass": 0.55,
+      "material": "baked_bread",
+      "name": "D00337 Gathering Bowl",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": ""
+      "source": {
+        "object_name": "D00337 Gathering Bowl",
+        "part_name": "D00337 Gathering Bowl"
+      },
+      "volume": 0.0007852889287726059
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00337 Gathering Bowl",
-  "object_description": "A white glazed ceramic bowl with a rounded hemispherical body, thick rolled rim, and small raised foot ring. The surface has subtle gray marbling, speckling, and handmade texture variations.",
-  "object_semantic": {
-    "qid": null
-  },
-  "total_mass": 0.55,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies"
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  }
 }

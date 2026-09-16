@@ -1,102 +1,81 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.01695915122737494,
+        0.042137222016519586,
+        0.016945721109907483
+      ],
+      "min": [
+        -0.016953350018150196,
+        -1.3845701663402908e-07,
+        -0.016963675650023054
+      ],
+      "size": [
+        0.03391250124552514,
+        0.04213736047353622,
+        0.03390939675993054
+      ]
+    },
+    "description": "A brown, ovoid object with a smooth, faintly speckled surface.",
+    "name": "D00287 Egg",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.055
+  },
+  "asset_id": "D00287",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00287 Egg",
-      "source_part_name": "D00287 Egg",
-      "source_object_name": "D00287 Egg",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "calcium_carbonate",
-      "material": "calcium_carbonate",
-      "non_visual_material": null,
-      "mass": 0.055,
-      "density": 1050.0,
-      "inertia": [
-        6.2051897536119465e-06,
-        8.016912512191391e-06,
-        8.037261132534842e-06
-      ],
-      "inertia_axes": [
-        0.5065041345769445,
-        -0.49325108684141206,
-        -0.506314401856722,
-        -0.4937637628043354
-      ],
-      "center_of_mass": [
-        1.40069029991126e-05,
-        -5.568618536856115e-07,
-        0.020385982189601116
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 2.4956012589052084e-05,
       "bounds": {
-        "min": [
-          -0.016953350018150196,
-          -1.3845701663402908e-07,
-          -0.016963675650023054
+        "center": [
+          1.2778691785377001e-05,
+          0.019602125037621706,
+          -8.971711887976398e-06
         ],
         "max": [
           0.01695915122737494,
           0.042137222016519586,
           0.016945721109907483
         ],
-        "center": [
-          1.2778691785377001e-05,
-          0.019602125037621706,
-          -8.971711887976398e-06
+        "min": [
+          -0.016953350018150196,
+          -1.3845701663402908e-07,
+          -0.016963675650023054
         ]
       },
-      "description": "A brown, ovoid object with a smooth, faintly speckled surface.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The object is visually identified as a standard chicken egg. The mass is estimated at 0.055 kg (55 grams), typical for a large egg. Density is estimated at 1050 kg/m\u00b3, slightly denser than water due to the calcium carbonate shell and internal fluids. The shell's smooth surface suggests moderate friction (0.35 static, 0.3 dynamic). Restitution is set very low (0.15) because the internal fluid will heavily dampen any impact, despite the hard exterior shell. For Isaac Sim, Continuous Collision Detection (CCD) is highly recommended for small objects like this to prevent tunneling through surfaces during dynamic events (e.g., dropping into a bowl). A 'convex_hull' collider is perfect as the ovoid shape is naturally convex, providing an accurate and computationally cheap collision mesh.",
-      "static_friction": 0.35,
-      "dynamic_friction": 0.3,
-      "restitution": 0.15,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        1.40069029991126e-05,
+        -5.568618536856115e-07,
+        0.020385982189601116
+      ],
+      "collision": {},
+      "density": 1050.0,
+      "id": "part_00",
+      "inertia": [
+        6.2051897536119465e-06,
+        8.016912512191391e-06,
+        8.037261132534842e-06
+      ],
+      "mass": 0.055,
+      "material": "calcium_carbonate",
+      "name": "D00287 Egg",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": "",
-      "appearance_properties": {},
-      "newton": {
-        "collisions": {
-          "collider_type": "convex_hull",
-          "rest_offset": 0,
-          "contact_offset": 0.002,
-          "explosion_view_distance": 0,
-          "collision_mesh_debug_visualization": false
-        },
-        "simulation_scene": {
-          "simulation_steps_per_second": 60,
-          "enable_ccd": true,
-          "gravitational_acceleration": [
-            0,
-            0,
-            -9.81
-          ],
-          "gpu_buffer_parameters": {},
-          "residuals": {}
-        }
-      }
+      "source": {
+        "object_name": "D00287 Egg",
+        "part_name": "D00287 Egg"
+      },
+      "volume": 2.4956012589052084e-05
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00287 Egg",
-  "object_description": "A brown, ovoid object with a smooth, faintly speckled surface.",
-  "object_semantic": {
-    "qid": null
-  },
-  "total_mass": 0.055,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies"
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  }
 }

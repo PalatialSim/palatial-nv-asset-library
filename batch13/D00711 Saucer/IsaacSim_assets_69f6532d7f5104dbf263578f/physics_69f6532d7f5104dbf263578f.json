@@ -1,121 +1,81 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.05815032461106436,
+        0.058106435149690834,
+        0.01886197924146795
+      ],
+      "min": [
+        -0.05803197605948676,
+        -0.05802178618320991,
+        -0.00029626146014521406
+      ],
+      "size": [
+        0.11618230067055113,
+        0.11612822133290074,
+        0.019158240701613163
+      ]
+    },
+    "description": "A round, white ceramic saucer with a raised rim and a shallow central depression.",
+    "name": "D00711 Saucer",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.15
+  },
+  "asset_id": "D00711",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00711 Saucer",
-      "source_part_name": "D00711 Saucer",
-      "source_object_name": "D00711 Saucer",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "ceramic",
-      "material": "ceramic",
-      "non_visual_material": null,
-      "mass": 0.15,
-      "density": 2400.0,
-      "inertia": [
-        0.00013702835899131235,
-        0.00013754504293068476,
-        0.0002674626887682856
-      ],
-      "inertia_axes": [
-        0.0002828243739885734,
-        0.7220581173894868,
-        0.6918323459187853,
-        -1.621215897237544e-05
-      ],
-      "center_of_mass": [
-        5.5659561494119195e-05,
-        7.281095462954298e-05,
-        0.007499518451537378
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 6.175974914934075e-05,
       "bounds": {
-        "min": [
-          -0.05803197605948676,
-          -0.05802178618320991,
-          -0.00029626146014521406
+        "center": [
+          3.902873972827706e-05,
+          4.1854048368208055e-05,
+          0.007591612951411109
         ],
         "max": [
           0.05815032461106436,
           0.058106435149690834,
           0.01886197924146795
         ],
-        "center": [
-          3.902873972827706e-05,
-          4.1854048368208055e-05,
-          0.007591612951411109
+        "min": [
+          -0.05803197605948676,
+          -0.05802178618320991,
+          -0.00029626146014521406
         ]
       },
-      "description": "A round, white ceramic saucer with a raised rim and a shallow central depression.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The asset is a saucer with dimensions of approximately 15cm in diameter and 1.9cm in height. The visual appearance and metadata indicate it is made of ceramic or porcelain. The primary material density for ceramic is estimated at 2400 kg/m^3. While a strict voxel volume calculation yields a very light mass (~57g), relying on category priors (as suggested by the context) gives a more realistic mass of 150g (0.15 kg) for a standard 15cm ceramic saucer. Ceramic has moderate friction (estimated at 0.4 static, 0.3 dynamic) and low restitution (0.2) as it is rigid and brittle. For accurate physical interaction in Isaac Sim, particularly for objects resting in the saucer's depression, a convex_decomposition collider is chosen to approximate the concave shape. The bounding box dimensions clearly show the smallest axis is Y, indicating a Y-up coordinate system for gravity.",
-      "static_friction": 0.4,
-      "dynamic_friction": 0.3,
-      "restitution": 0.2,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        5.5659561494119195e-05,
+        7.281095462954298e-05,
+        0.007499518451537378
+      ],
+      "collision": {},
+      "density": 2400.0,
+      "id": "part_00",
+      "inertia": [
+        0.00013702835899131235,
+        0.00013754504293068476,
+        0.0002674626887682856
+      ],
+      "mass": 0.15,
+      "material": "ceramic",
+      "name": "D00711 Saucer",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": "",
-      "appearance_properties": {},
-      "newton": {
-        "collisions": {
-          "collider_type": "convex_decomposition",
-          "rest_offset": 0,
-          "contact_offset": 0.001,
-          "explosion_view_distance": 0,
-          "collision_mesh_debug_visualization": false
-        },
-        "simulation_scene": {
-          "simulation_steps_per_second": 60,
-          "enable_ccd": false,
-          "gravitational_acceleration": [
-            0,
-            -9.81,
-            0
-          ],
-          "gpu_buffer_parameters": {},
-          "residuals": {}
-        }
-      }
+      "source": {
+        "object_name": "D00711 Saucer",
+        "part_name": "D00711 Saucer"
+      },
+      "volume": 6.175974914934075e-05
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00711 Saucer",
-  "object_description": "A round, white ceramic saucer with a raised rim and a shallow central depression.",
-  "object_semantic": {
-    "qid": null
-  },
-  "total_mass": 0.15,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies",
-  "total_object_mass_kg": 0.15,
-  "_authoritative_context_applied": {
-    "object": {},
-    "parts": [
-      {
-        "part_index": 0,
-        "part_id": "part_00",
-        "fields": [
-          "bounds",
-          "canonical_name",
-          "material",
-          "part_id",
-          "part_index",
-          "source_object_name",
-          "source_part_name"
-        ]
-      }
-    ]
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
   }
 }

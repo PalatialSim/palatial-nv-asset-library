@@ -1,81 +1,81 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.068743996322155,
+        0.06920500099658966,
+        0.07406000047922134
+      ],
+      "min": [
+        -0.06909000128507614,
+        -0.06859699636697769,
+        -3.999999989900971e-06
+      ],
+      "size": [
+        0.13783399760723114,
+        0.13780199736356735,
+        0.07406400047921124
+      ]
+    },
+    "description": "A set of small glazed ceramic bowls in green and teal tones, with rounded hollow bodies, raised foot rings, and smooth glossy or lightly speckled finishes. Some bowls have subtly irregular handmade rims, surface texture, or small worn/chipped glaze areas.",
+    "name": "D00368 Green Bowl",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.42
+  },
+  "asset_id": "D00368",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00368 Green Bowl",
-      "source_part_name": "D00368 Green Bowl",
-      "source_object_name": "D00368 Green Bowl",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "glazed_ceramic",
-      "material": "glazed_ceramic",
-      "non_visual_material": null,
-      "mass": 0.42,
-      "density": 2200.0,
-      "inertia": [
-        0.0007976146068469359,
-        0.0008148721504874321,
-        0.001209168387015328
-      ],
-      "inertia_axes": [
-        0.9373311821539368,
-        -0.002646123232821028,
-        -0.002384339146763726,
-        -0.34842153768183337
-      ],
-      "center_of_mass": [
-        -5.619545692906471e-06,
-        0.0007596347803038686,
-        0.03339972619043749
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.00019291363858735884,
       "bounds": {
-        "min": [
-          -0.06909000128507614,
-          -0.06859699636697769,
-          -3.999999989900971e-06
+        "center": [
+          -1.1067488018121722e-05,
+          0.00020381311274953275,
+          0.03646185770910603
         ],
         "max": [
           0.068743996322155,
           0.06920500099658966,
           0.07406000047922134
         ],
-        "center": [
-          -1.1067488018121722e-05,
-          0.00020381311274953275,
-          0.03646185770910603
+        "min": [
+          -0.06909000128507614,
+          -0.06859699636697769,
+          -3.999999989900971e-06
         ]
       },
-      "description": "A set of small glazed ceramic bowls in green and teal tones, with rounded hollow bodies, raised foot rings, and smooth glossy or lightly speckled finishes. Some bowls have subtly irregular handmade rims, surface texture, or small worn/chipped glaze areas.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The visible objects are representative small ceramic/stoneware bowls. No exact dimensions or product data are provided, so the estimates assume a typical rice/cereal bowl size: about 0.13\u20130.16 m outer diameter, 0.065\u20130.085 m height, a 0.045\u20130.07 m foot-ring diameter, and a wall thickness of roughly 3\u20136 mm. Fired stoneware/porcelain material density is commonly about 2100\u20132400 kg/m^3; 2200 kg/m^3 is a suitable material-density value for USD/PhysX when geometry represents the actual shell. A bowl of this size and wall thickness typically weighs 0.30\u20130.55 kg, so 0.42 kg is a realistic representative mass. The dominant external/contact material is glazed ceramic: hard, smooth, non-deformable, and somewhat slippery compared with unglazed clay. Static friction is estimated at 0.42 and dynamic friction at 0.32 for glazed ceramic against common tabletop/industrial surfaces; polished glaze can be lower, while rough unglazed foot rings can be higher. Restitution is set to 0.38: ceramic is hard and can produce a sharp impact, but real bowls dissipate energy through ringing, micro-slip, and possible chipping, so it should not behave like highly elastic rubber or ideal glass. For collision, a single convex hull is not recommended because it would seal the bowl cavity and prevent realistic contact with the interior. A convex decomposition using multiple hulls for the curved wall, rim, and foot ring is the best default for a dynamic rigid body in Isaac Sim/PhysX because it preserves the hollow shape with good performance. If exact interior contact fidelity is essential and GPU resources allow it, an SDF mesh collider can be substituted, but convex decomposition is generally more robust for robotic/industrial rigid-body scenes. Contact offset is kept small at 0.002 m to avoid visible hovering while still generating stable contacts before penetration; rest offset is 0.0 m so the visual ceramic surface aligns closely with the collision surface. CCD is enabled because the bowl has thin rims and a small raised foot ring that may tunnel during drops or fast manipulation. Initial velocities are zero. Recommended scene stepping is 120 Hz for more stable contacts with a thin concave shell, though 60 Hz can be used for lower-performance scenes. Compliant contacts are disabled because the model is a rigid ceramic object; if a slightly damped contact response is desired to reduce chatter, use only very stiff, lightly damped contact compliance.",
-      "static_friction": 0.42,
-      "dynamic_friction": 0.32,
-      "restitution": 0.38,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        -5.619545692906471e-06,
+        0.0007596347803038686,
+        0.03339972619043749
+      ],
+      "collision": {},
+      "density": 2200.0,
+      "id": "part_00",
+      "inertia": [
+        0.0007976146068469359,
+        0.0008148721504874321,
+        0.001209168387015328
+      ],
+      "mass": 0.42,
+      "material": "glazed_ceramic",
+      "name": "D00368 Green Bowl",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": ""
+      "source": {
+        "object_name": "D00368 Green Bowl",
+        "part_name": "D00368 Green Bowl"
+      },
+      "volume": 0.00019291363858735884
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00368 Green Bowl",
-  "object_description": "A set of small glazed ceramic bowls in green and teal tones, with rounded hollow bodies, raised foot rings, and smooth glossy or lightly speckled finishes. Some bowls have subtly irregular handmade rims, surface texture, or small worn/chipped glaze areas.",
-  "object_semantic": {
-    "qid": null
-  },
-  "total_mass": 0.42,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies"
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  }
 }

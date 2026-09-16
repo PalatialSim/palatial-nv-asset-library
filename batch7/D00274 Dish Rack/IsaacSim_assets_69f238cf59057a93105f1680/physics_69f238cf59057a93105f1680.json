@@ -1,81 +1,81 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.17766499519348145,
+        0.12858499586582184,
+        0.15559899806976318
+      ],
+      "min": [
+        -0.17497199773788452,
+        -0.15880799293518066,
+        -0.0005189999938011169
+      ],
+      "size": [
+        0.35263699293136597,
+        0.2873929888010025,
+        0.1561179980635643
+      ]
+    },
+    "description": "A rectangular molded plastic dish-drying tray with rounded corners, raised rim walls, and vertical plate dividers. The surface is smooth glossy plastic in light neutral colors, with some variants showing side ventilation slots or compartment dividers.",
+    "name": "D00274 Dish Rack",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.6
+  },
+  "asset_id": "D00274",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00274 Dish Rack",
-      "source_part_name": "D00274 Dish Rack",
-      "source_object_name": "D00274 Dish Rack",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "plastic",
-      "material": "plastic",
-      "non_visual_material": null,
-      "mass": 0.6,
-      "density": 950.0,
-      "inertia": [
-        0.0043293854043072785,
-        0.005557085412155599,
-        0.008944716893924868
-      ],
-      "inertia_axes": [
-        0.7072215085716728,
-        0.00015126997527992693,
-        0.00028477779299285183,
-        0.7069919616463903
-      ],
-      "center_of_mass": [
-        -0.00011875001432511332,
-        -0.00015715735181090203,
-        0.040344248139058285
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.0004915853721629807,
       "bounds": {
-        "min": [
-          -0.17497199773788452,
-          -0.15880799293518066,
-          -0.0005189999938011169
+        "center": [
+          -0.0032028052619476723,
+          0.0002803973303709006,
+          0.05128829829820076
         ],
         "max": [
           0.17766499519348145,
           0.12858499586582184,
           0.15559899806976318
         ],
-        "center": [
-          -0.0032028052619476723,
-          0.0002803973303709006,
-          0.05128829829820076
+        "min": [
+          -0.17497199773788452,
+          -0.15880799293518066,
+          -0.0005189999938011169
         ]
       },
-      "description": "A rectangular molded plastic dish-drying tray with rounded corners, raised rim walls, and vertical plate dividers. The surface is smooth glossy plastic in light neutral colors, with some variants showing side ventilation slots or compartment dividers.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The object appears to be a household dish drainer or drying rack made primarily from injection-molded plastic, most likely polypropylene or ABS. A typical size for this form factor is approximately 0.35-0.42 m long, 0.25-0.32 m wide, and 0.09-0.13 m tall. Although the bounding box volume is around 0.010-0.016 m^3, the body is thin-walled and open, with ribs and dividers; the actual plastic volume is much smaller, roughly 0.00045-0.00075 m^3. Using polypropylene/ABS density of about 900-1100 kg/m^3 gives an estimated mass range of 0.4-0.8 kg, so 0.6 kg is a reasonable default mass for a medium molded tray. The dominant external/contact material is smooth plastic, so a static friction coefficient around 0.42 and dynamic friction around 0.34 are appropriate for dry plastic on common rigid surfaces. If the tray is wet, effective friction may decrease, but the dry value is more stable for general rigid-body simulation. Plastic has moderate damping and low-to-moderate bounce; restitution is estimated at 0.35, avoiding excessive bouncing while still allowing small impacts to rebound slightly. For Isaac Sim / PhysX, the object is concave due to its open basin, internal ribs, and side slots, so a single convex hull would incorrectly fill the tray and prevent realistic interaction with objects inside. Convex decomposition is the preferred dynamic rigid-body collider: separate convex pieces should approximate the outer tray walls, bottom panel, rim, and each divider rib. If this asset is only static scenery, an SDF or detailed triangle-derived collision may be used, but for a movable rigid body convex decomposition is more robust and performant. Rounded plastic edges justify small positive contact offsets; a rest offset of 0.001 m and contact offset of 0.005 m provide stable contact generation without visibly floating the tray. CCD is not necessary for normal tabletop motion because the object is relatively large and light, but it should be enabled globally or per-body if the rack can be thrown, dropped at high velocity, or interact with fast robotic grippers. Compliant contacts are left effectively disabled because the model is non-deformable; if mild plastic compliance is desired, a high stiffness/low damping contact model can be used, but rigid contacts are recommended for performance. The center of mass should be near the geometric center in plan view but low in height due to the heavier base and rim, roughly 35-45% of total height above the bottom.",
-      "static_friction": 0.42,
-      "dynamic_friction": 0.34,
-      "restitution": 0.35,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        -0.00011875001432511332,
+        -0.00015715735181090203,
+        0.040344248139058285
+      ],
+      "collision": {},
+      "density": 950.0,
+      "id": "part_00",
+      "inertia": [
+        0.0043293854043072785,
+        0.005557085412155599,
+        0.008944716893924868
+      ],
+      "mass": 0.6,
+      "material": "plastic",
+      "name": "D00274 Dish Rack",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": ""
+      "source": {
+        "object_name": "D00274 Dish Rack",
+        "part_name": "D00274 Dish Rack"
+      },
+      "volume": 0.0004915853721629807
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00274 Dish Rack",
-  "object_description": "A rectangular molded plastic dish-drying tray with rounded corners, raised rim walls, and vertical plate dividers. The surface is smooth glossy plastic in light neutral colors, with some variants showing side ventilation slots or compartment dividers.",
-  "object_semantic": {
-    "qid": null
-  },
-  "total_mass": 0.6,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies"
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  }
 }

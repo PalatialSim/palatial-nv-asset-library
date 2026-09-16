@@ -1,108 +1,81 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.045126,
+        0.02219,
+        0.06066
+      ],
+      "min": [
+        -0.042947,
+        -0.035232,
+        2.6e-05
+      ],
+      "size": [
+        0.088073,
+        0.057422,
+        0.060634
+      ]
+    },
+    "description": "A single fresh chili pepper modeled as one rigid organic body with no articulated joints. Simulation assumes smooth, damped produce collision rather than deformable tissue.",
+    "name": "whole chili pepper",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.02
+  },
+  "asset_id": "D00125",
   "parts": [
     {
-      "canonical_name": "part_0",
-      "part_name": "whole chili pepper",
-      "source_part_name": "part_0",
-      "source_object_name": "part_0",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "fresh_chili_pepper_tissue",
-      "material": "fresh_chili_pepper_tissue",
-      "non_visual_material": {
-        "base": "organic",
-        "coating": "none",
-        "attributes": [
-          "smooth",
-          "reflective"
-        ]
-      },
-      "mass": 0.02,
-      "density": 850.0,
-      "inertia": [
-        1.5480907588797885e-06,
-        1.1692795306173714e-05,
-        1.1922530680313267e-05
-      ],
-      "inertia_axes": [
-        0.9308698320306787,
-        -0.150821325398077,
-        0.27853328715136616,
-        -0.18208100276799316
-      ],
-      "center_of_mass": [
-        -0.0002032312679149351,
-        2.2484637672517285e-05,
-        0.02692635968624647
-      ],
-      "part_origin_world": [
-        -0.0002032312679149351,
-        2.2484637672517285e-05,
-        0.02692635968624647
-      ],
-      "volume": 3.87534603144048e-05,
       "bounds": {
-        "min": [
-          -0.042947,
-          -0.035232,
-          2.6e-05
+        "center": [
+          0.001089,
+          -0.006521,
+          0.030343
         ],
         "max": [
           0.045126,
           0.02219,
           0.06066
         ],
-        "center": [
-          0.001089,
-          -0.006521,
-          0.030343
+        "min": [
+          -0.042947,
+          -0.035232,
+          2.6e-05
         ]
       },
-      "description": "Complete fresh chili pepper, including the tapered fruit body and curved stem, treated as one rigid produce item.",
-      "semantic": {
-        "qid": "Q10998"
-      },
-      "reasoning": "The reference image shows a glossy fresh red chili pepper with an attached green stem, but the segmentation contains only one mesh part, so the entire pepper is modeled as a single rigid organic body. At roughly 9 cm maximum dimension, a realistic fresh chili mass is about 20 g. Fresh pepper tissue is water-rich and slightly compliant, so it uses low restitution, moderate friction from smooth waxy skin, and an effective density below water because the pepper is hollow and contains internal air space.",
-      "static_friction": 0.55,
-      "dynamic_friction": 0.43,
-      "restitution": 0.08,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        -0.0002032312679149351,
+        2.2484637672517285e-05,
+        0.02692635968624647
+      ],
+      "collision": {},
+      "density": 850.0,
+      "id": "part_00",
+      "inertia": [
+        1.5480907588797885e-06,
+        1.1692795306173714e-05,
+        1.1922530680313267e-05
+      ],
+      "mass": 0.02,
+      "material": "fresh_chili_pepper_tissue",
+      "name": "whole chili pepper",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": "Red"
+      "source": {
+        "object_name": "part_0",
+        "part_name": "part_0"
+      },
+      "volume": 3.87534603144048e-05
     }
   ],
-  "joint_relations": [],
-  "base_link": "whole chili pepper",
-  "object_description": "A single fresh chili pepper modeled as one rigid organic body with no articulated joints. Simulation assumes smooth, damped produce collision rather than deformable tissue.",
-  "object_semantic": {
-    "qid": "Q10998"
-  },
-  "total_mass": 0.02,
-  "center_of_mass": null,
-  "inertia": null,
-  "behavior_type": "normal",
-  "overall_assessment": "Stable first-pass setup for a single-piece rigid chili pepper; suitable for grasping, contact, and simple drop simulations without articulation.",
-  "num_parts": 1,
-  "object_type": "rigid_bodies",
-  "_metadata": {
-    "openai_response": {
-      "model": "gpt-5.5",
-      "usage": {
-        "input_tokens": 19634,
-        "input_tokens_details": {
-          "cached_tokens": 2816
-        },
-        "output_tokens": 1578,
-        "output_tokens_details": {
-          "reasoning_tokens": 1034
-        },
-        "total_tokens": 21212
-      },
-      "web_search_tool_calls": 0,
-      "estimated_cost_usd": 0.132838,
-      "pricing_note": "Estimated from response usage and public token/tool prices. OpenAI organization Costs API is authoritative for billing."
-    }
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
   }
 }

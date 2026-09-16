@@ -1,92 +1,82 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.07573079317808151,
+        0.07301368564367294,
+        0.07554581016302109
+      ],
+      "min": [
+        -0.07565032690763474,
+        0.0,
+        -0.07581111788749695
+      ],
+      "size": [
+        0.15138112008571625,
+        0.07301368564367294,
+        0.15135692805051804
+      ]
+    },
+    "description": "A white glazed ceramic bowl with a rounded body, small foot ring, and subtle gray speckling around the rim.",
+    "name": "D00937 White Grey Bowl",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.38
+  },
+  "asset_id": "D00937",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00937 White Grey Bowl",
-      "source_part_name": "D00937 White Grey Bowl",
-      "source_object_name": "D00937 White Grey Bowl",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "glass",
-      "material": "glass",
-      "non_visual_material": null,
-      "mass": 0.38,
-      "density": 2400.0,
-      "inertia": [
-        0.0007923803869816646,
-        0.0007964581042608962,
-        0.0012787096959398087
-      ],
-      "inertia_axes": [
-        0.3081133231258982,
-        0.3094415423631185,
-        0.6354214823601911,
-        -0.6368293741085032
-      ],
-      "center_of_mass": [
-        -0.0001890027228450086,
-        -0.03363679449359209,
-        5.9613312130664705e-05
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.00022458067838906226,
       "bounds": {
-        "min": [
-          -0.07565032690763474,
-          0.0,
-          -0.07581111788749695
+        "center": [
+          2.597131077014378e-05,
+          0.03672222779976956,
+          -0.00013933769314995102
         ],
         "max": [
           0.07573079317808151,
           0.07301368564367294,
           0.07554581016302109
         ],
-        "center": [
-          2.597131077014378e-05,
-          0.03672222779976956,
-          -0.00013933769314995102
+        "min": [
+          -0.07565032690763474,
+          0.0,
+          -0.07581111788749695
         ]
       },
-      "description": "A white glazed ceramic bowl with a rounded body, small foot ring, and subtle gray speckling around the rim.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The object appears to be a small-to-medium stoneware or porcelain bowl with a glossy glazed surface, rounded concave shell, thickened rim, and raised foot ring. With no product data supplied, I estimate typical dimensions of roughly 0.14\u20130.16 m outer rim diameter, 0.07\u20130.08 m height, 4\u20136 mm wall thickness, and a 0.055\u20130.07 m foot diameter. Dense fired ceramic/stoneware has a material density around 2200\u20132600 kg/m^3; using 2400 kg/m^3 and a shell material volume on the order of 1.4e-4 to 1.8e-4 m^3 gives a mass around 0.33\u20130.43 kg, so 0.38 kg is a realistic rigid-body mass. The center of mass should lie on the vertical symmetry axis below mid-height because of the thicker lower bowl and foot ring. The glazed ceramic contact surface is hard and relatively smooth: static friction is estimated at 0.42 and dynamic friction at 0.32 for ceramic-on-typical-table contacts, lower than unglazed ceramic but higher than glass. Restitution is set to 0.35 because ceramic is stiff but brittle and dissipative; if fracture is not modeled, a lower restitution prevents unrealistic bouncing. A single convex hull is not appropriate because it would close the open bowl and eliminate the interior cavity. For Isaac Sim v4.5 / PhysX, an SDF mesh collider is the best high-fidelity option for the concave hollow shape, provided the visual mesh is watertight and the SDF resolution is high enough to preserve the 4\u20136 mm wall and rim thickness. For faster large-scene use, approximate the bowl with convex decomposition into multiple radial hulls for the side wall plus a separate foot-ring hull. Contact offset is kept small at 0.003 m and rest offset at 0.0005 m so contacts are generated early without visibly floating or sealing the bowl opening. CCD is enabled because the rim and wall are thin relative to possible drop velocities; it may be disabled for slow quasi-static placement. Compliant contacts are disabled for the default rigid ceramic behavior; if contact chatter occurs, use very stiff compliance only, with stiffness in the 1e7\u20135e7 N/m range and damping around 800\u20131500 N*s/m. A 120 Hz scene step is recommended for stable hard-contact stacking or impacts; 60 Hz can be used for slower scenes. Practical velocity limits for stable manipulation are about 2\u20133 m/s linear and 15\u201325 rad/s angular, with sleep/hibernation enabled after the bowl settles to reduce jitter and cost.",
-      "static_friction": 0.42,
-      "dynamic_friction": 0.32,
-      "restitution": 0.35,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        -0.0001890027228450086,
+        -0.03363679449359209,
+        5.9613312130664705e-05
+      ],
+      "collision": {},
+      "density": 2400.0,
+      "id": "part_00",
+      "inertia": [
+        0.0007923803869816646,
+        0.0007964581042608962,
+        0.0012787096959398087
+      ],
+      "mass": 0.38,
+      "material": "glass",
+      "name": "D00937 White Grey Bowl",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "enable_ccd": null,
-      "solver_position_iterations": null,
-      "solver_velocity_iterations": null,
-      "color_name": ""
+      "source": {
+        "object_name": "D00937 White Grey Bowl",
+        "part_name": "D00937 White Grey Bowl"
+      },
+      "volume": 0.00022458067838906226
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00937 White Grey Bowl",
-  "base_link_recommendation": null,
-  "fix_base": false,
-  "source": null,
-  "authored_by": null,
-  "up_axis": null,
-  "coordinate_frames": null,
-  "solver_position_iterations": null,
-  "solver_velocity_iterations": null,
-  "object_description": "A white glazed ceramic bowl with a rounded body, small foot ring, and subtle gray speckling around the rim.",
-  "object_semantic": {
-    "qid": null
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {
+    "fix_base": false
   },
-  "total_mass": 0.38,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies"
+  "units": {
+    "length": "m",
+    "mass": "kg"
+  }
 }

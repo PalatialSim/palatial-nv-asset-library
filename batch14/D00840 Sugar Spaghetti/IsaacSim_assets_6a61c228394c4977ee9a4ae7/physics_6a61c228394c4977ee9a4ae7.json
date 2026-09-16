@@ -1,119 +1,83 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.13706585,
+        0.00823786,
+        0.04413411
+      ],
+      "min": [
+        -0.13724208,
+        -0.00797885,
+        -0.04383076
+      ],
+      "size": [
+        0.27430793,
+        0.01621671,
+        0.08796487
+      ]
+    },
+    "description": "A single strand of red gelatin candy coated with coarse sugar crystals, featuring a twisted, rope-like structure.",
+    "name": "generated reference 01",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.059
+  },
+  "asset_id": "D00840",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "generated reference 01",
-      "source_part_name": "generated reference 01",
-      "source_object_name": "generated reference 01",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "sugar_coated_gelatin",
-      "material": "sugar_coated_gelatin",
-      "mass": 0.059,
-      "density": 1300.0,
-      "inertia": [
-        2.1474592993716286e-05,
-        0.0003803006177026059,
-        0.0003987813524257434
-      ],
-      "inertia_axes": [
-        0.992956115834574,
-        0.004409313081579173,
-        -0.0003300331842261972,
-        0.11840017340765228
-      ],
-      "center_of_mass": [
-        -0.004118267624332317,
-        0.003552846536139203,
-        -0.00025119683312589116
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 4.55454915650604e-06,
       "bounds": {
-        "min": [
-          -0.13724208,
-          -0.00797885,
-          -0.04383076
+        "center": [
+          -0.0038740104941756125,
+          -0.000715110728809044,
+          -0.003602100733003602
         ],
         "max": [
           0.13706585,
           0.00823786,
           0.04413411
         ],
-        "center": [
-          -0.0038740104941756125,
-          -0.000715110728809044,
-          -0.003602100733003602
+        "min": [
+          -0.13724208,
+          -0.00797885,
+          -0.04383076
         ]
       },
-      "description": "A single strand of red gelatin candy coated with coarse sugar crystals, featuring a twisted, rope-like structure.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "Based on the provided context, the object is a gelatin candy strand measuring 0.3 x 0.005 x 0.005 m. Using a standard gelatin/sugar density of 1300 kg/m^3 and the provided mesh volume of 4.52e-5 m^3, the mass is calculated to be approximately 0.059 kg. The granular sugar coating provides a relatively rough texture, leading to a static friction of 0.65 and dynamic friction of 0.6. The restitution is set to 0.3, which is typical for moderately elastic, soft gummy materials simulated as rigid bodies. Because the object is extremely thin (5mm), Continuous Collision Detection (CCD) is critical and therefore enabled to prevent tunneling during simulation. Contact offsets are reduced to 0.0005m to ensure precise contact without noticeable floating, and convex decomposition is used for collisions to handle the non-convex S-curve geometry.",
-      "static_friction": 0.65,
-      "dynamic_friction": 0.6,
-      "restitution": 0.3,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        -0.004118267624332317,
+        0.003552846536139203,
+        -0.00025119683312589116
+      ],
+      "collision": {},
+      "density": 1300.0,
+      "id": "part_00",
+      "inertia": [
+        2.1474592993716286e-05,
+        0.0003803006177026059,
+        0.0003987813524257434
+      ],
+      "mass": 0.059,
+      "material": "sugar_coated_gelatin",
+      "name": "generated reference 01",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": "",
-      "appearance_properties": {},
-      "newton": {
-        "collisions": {
-          "collider_type": "convex_decomposition",
-          "rest_offset": 0,
-          "contact_offset": 0.0005,
-          "explosion_view_distance": 0,
-          "collision_mesh_debug_visualization": false
-        },
-        "simulation_scene": {
-          "simulation_steps_per_second": 60,
-          "enable_ccd": true,
-          "gravitational_acceleration": [
-            0,
-            0,
-            -9.81
-          ],
-          "gpu_buffer_parameters": {},
-          "residuals": {}
-        }
-      }
+      "source": {
+        "object_name": "generated reference 01",
+        "part_name": "generated reference 01"
+      },
+      "volume": 4.55454915650604e-06
     }
   ],
-  "joint_relations": [],
-  "base_link": "generated reference 01",
-  "fix_base": false,
-  "object_description": "A single strand of red gelatin candy coated with coarse sugar crystals, featuring a twisted, rope-like structure.",
-  "object_semantic": {
-    "qid": null
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {
+    "fix_base": false
   },
-  "total_mass": 0.059,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies",
-  "total_object_mass_kg": 0.059,
-  "_authoritative_context_applied": {
-    "object": {},
-    "parts": [
-      {
-        "part_index": 0,
-        "part_id": "part_00",
-        "fields": [
-          "bounds",
-          "canonical_name",
-          "material",
-          "part_id",
-          "part_index",
-          "source_object_name",
-          "source_part_name"
-        ]
-      }
-    ]
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
   }
 }

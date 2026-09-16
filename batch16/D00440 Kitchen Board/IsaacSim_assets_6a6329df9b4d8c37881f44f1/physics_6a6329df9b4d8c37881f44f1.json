@@ -1,119 +1,83 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.14529045,
+        0.02045927,
+        0.10627723
+      ],
+      "min": [
+        -0.14494153,
+        0.0,
+        -0.10758953
+      ],
+      "size": [
+        0.29023198,
+        0.02045927,
+        0.21386676
+      ]
+    },
+    "description": "A rectangular dark wood cutting board with rounded corners and edges. It features a smooth finish and a prominent natural wood grain pattern.",
+    "name": "generated reference 01",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.78
+  },
+  "asset_id": "D00440",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "generated reference 01",
-      "source_part_name": "generated reference 01",
-      "source_object_name": "generated reference 01",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "wood",
-      "material": "wood",
-      "mass": 0.78,
-      "density": 650.0,
-      "inertia": [
-        0.0029548855803859047,
-        0.005427597038529523,
-        0.008328832491123716
-      ],
-      "inertia_axes": [
-        0.9999999958878384,
-        4.399466566913878e-06,
-        3.164256486831717e-06,
-        -9.052599289566016e-05
-      ],
-      "center_of_mass": [
-        -2.5098996271202017e-05,
-        0.0006563216456344021,
-        0.010234767527989696
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.0012528590004331833,
       "bounds": {
-        "min": [
-          -0.14494153,
-          0.0,
-          -0.10758953
+        "center": [
+          0.000182121072273065,
+          0.01024302501150988,
+          -0.0006544640432906831
         ],
         "max": [
           0.14529045,
           0.02045927,
           0.10627723
         ],
-        "center": [
-          0.000182121072273065,
-          0.01024302501150988,
-          -0.0006544640432906831
+        "min": [
+          -0.14494153,
+          0.0,
+          -0.10758953
         ]
       },
-      "description": "A rectangular dark wood cutting board with rounded corners and edges. It features a smooth finish and a prominent natural wood grain pattern.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "Based on the provided metadata and image, the object is a solid wooden kitchen cutting board. The dimensions are specified as 300 x 200 x 20 mm (0.3 x 0.2 x 0.02 m), which gives a bounding volume of 0.0012 m^3. Assuming it is made of a common hardwood like walnut or acacia, the density is estimated at 650 kg/m^3. This yields a total mass of approximately 0.78 kg (0.0012 m^3 * 650 kg/m^3). The dominant material is finished wood, so the friction coefficients are set moderately (0.5 static, 0.4 dynamic) to reflect typical interactions with kitchen countertops or utensils. The restitution is set to 0.35, as wood is hard but absorbs some impact energy. For Isaac Sim collision physics, a 'convex_hull' collider is optimal because the object is essentially a flat box with rounded edges, and convex hulls compute this efficiently without needing decomposition. A small contact offset (2mm) ensures stable resting contacts without visual hovering.",
-      "static_friction": 0.5,
-      "dynamic_friction": 0.4,
-      "restitution": 0.35,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        -2.5098996271202017e-05,
+        0.0006563216456344021,
+        0.010234767527989696
+      ],
+      "collision": {},
+      "density": 650.0,
+      "id": "part_00",
+      "inertia": [
+        0.0029548855803859047,
+        0.005427597038529523,
+        0.008328832491123716
+      ],
+      "mass": 0.78,
+      "material": "wood",
+      "name": "generated reference 01",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": "",
-      "appearance_properties": {},
-      "newton": {
-        "collisions": {
-          "collider_type": "convex_hull",
-          "rest_offset": 0,
-          "contact_offset": 0.002,
-          "explosion_view_distance": 0,
-          "collision_mesh_debug_visualization": false
-        },
-        "simulation_scene": {
-          "simulation_steps_per_second": 60,
-          "enable_ccd": false,
-          "gravitational_acceleration": [
-            0,
-            0,
-            -9.81
-          ],
-          "gpu_buffer_parameters": {},
-          "residuals": {}
-        }
-      }
+      "source": {
+        "object_name": "generated reference 01",
+        "part_name": "generated reference 01"
+      },
+      "volume": 0.0012528590004331833
     }
   ],
-  "joint_relations": [],
-  "base_link": "generated reference 01",
-  "fix_base": false,
-  "object_description": "A rectangular dark wood cutting board with rounded corners and edges. It features a smooth finish and a prominent natural wood grain pattern.",
-  "object_semantic": {
-    "qid": null
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {
+    "fix_base": false
   },
-  "total_mass": 0.78,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies",
-  "total_object_mass_kg": 0.78,
-  "_authoritative_context_applied": {
-    "object": {},
-    "parts": [
-      {
-        "part_index": 0,
-        "part_id": "part_00",
-        "fields": [
-          "bounds",
-          "canonical_name",
-          "material",
-          "part_id",
-          "part_index",
-          "source_object_name",
-          "source_part_name"
-        ]
-      }
-    ]
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
   }
 }

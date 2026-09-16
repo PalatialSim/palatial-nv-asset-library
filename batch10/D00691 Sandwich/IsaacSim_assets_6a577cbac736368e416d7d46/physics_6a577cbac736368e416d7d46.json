@@ -1,132 +1,82 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.06266547,
+        0.07366385,
+        0.05538477
+      ],
+      "min": [
+        -0.06009811,
+        0.0,
+        -0.06001753
+      ],
+      "size": [
+        0.12276358000000001,
+        0.07366385,
+        0.1154023
+      ]
+    },
+    "description": "A multi-layered sandwich with toasted bread, cheese, tomato, and lettuce. The dimensions are approximately 120 x 120 x 80 mm.",
+    "name": "generated reference 01",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.25
+  },
+  "asset_id": "D00691",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "generated reference 01",
-      "source_part_name": "generated reference 01",
-      "source_object_name": "generated reference 01",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "toasted_bread",
-      "material": "toasted_bread",
-      "non_visual_material": null,
-      "mass": 0.25,
-      "density": 250.0,
-      "inertia": [
-        0.00029932994539818094,
-        0.00034764370157603877,
-        0.0004376983085034921
-      ],
-      "inertia_axes": [
-        0.9997423937393803,
-        -0.016522322319673054,
-        -0.0015821727285654234,
-        -0.01548081893427718
-      ],
-      "center_of_mass": [
-        0.0011511791501928556,
-        0.0015224267120763945,
-        0.03556645344179668
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.0007900811679286083,
       "bounds": {
-        "min": [
-          -0.06009811,
-          0.0,
-          -0.06001753
+        "center": [
+          0.001047625313597096,
+          0.03473540607257124,
+          -0.001326906931862296
         ],
         "max": [
           0.06266547,
           0.07366385,
           0.05538477
         ],
-        "center": [
-          0.001047625313597096,
-          0.03473540607257124,
-          -0.001326906931862296
+        "min": [
+          -0.06009811,
+          0.0,
+          -0.06001753
         ]
       },
-      "description": "A multi-layered sandwich with toasted bread, cheese, tomato, and lettuce. The dimensions are approximately 120 x 120 x 80 mm.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The physical dimensions provided are 0.12 x 0.12 x 0.08 m. The bounding box volume is roughly 0.00115 cubic meters. Assuming a realistic mass for a dense double-decker sandwich of around 0.25 kg, the density is estimated to be approximately 250 kg/m^3. The dominant contact material is toasted bread, which is organic, slightly porous, and non-slip, so static friction is estimated at 0.6 and dynamic at 0.5. Food items like this have very low restitution (0.1), absorbing impacts rather than bouncing. For Isaac Sim, although simulated as a rigid body, the object would realistically deform slightly on impact; therefore, a small compliant contact damping and stiffness could be introduced in advanced PhysX settings to simulate its softness. Convex decomposition is recommended for the collider to capture the uneven layered structure accurately.",
-      "static_friction": 0.6,
-      "dynamic_friction": 0.5,
-      "restitution": 0.1,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        0.0011511791501928556,
+        0.0015224267120763945,
+        0.03556645344179668
+      ],
+      "collision": {},
+      "density": 250.0,
+      "id": "part_00",
+      "inertia": [
+        0.00029932994539818094,
+        0.00034764370157603877,
+        0.0004376983085034921
+      ],
+      "mass": 0.25,
+      "material": "toasted_bread",
+      "name": "generated reference 01",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "enable_ccd": null,
-      "solver_position_iterations": null,
-      "solver_velocity_iterations": null,
-      "color_name": "",
-      "appearance_properties": {},
-      "newton": {
-        "collisions": {
-          "collider_type": "convex_decomposition",
-          "rest_offset": 0,
-          "contact_offset": 0.002,
-          "explosion_view_distance": 0.02,
-          "collision_mesh_debug_visualization": false
-        },
-        "simulation_scene": {
-          "simulation_steps_per_second": 60,
-          "enable_ccd": false,
-          "gravitational_acceleration": [
-            0,
-            0,
-            -9.81
-          ],
-          "gpu_buffer_parameters": {},
-          "residuals": {}
-        }
-      }
+      "source": {
+        "object_name": "generated reference 01",
+        "part_name": "generated reference 01"
+      },
+      "volume": 0.0007900811679286083
     }
   ],
-  "joint_relations": [],
-  "base_link": "generated reference 01",
-  "base_link_recommendation": null,
-  "fix_base": false,
-  "source": null,
-  "authored_by": null,
-  "up_axis": null,
-  "coordinate_frames": null,
-  "solver_position_iterations": null,
-  "solver_velocity_iterations": null,
-  "object_description": "A multi-layered sandwich with toasted bread, cheese, tomato, and lettuce. The dimensions are approximately 120 x 120 x 80 mm.",
-  "object_semantic": {
-    "qid": null
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {
+    "fix_base": false
   },
-  "total_mass": 0.25,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies",
-  "total_object_mass_kg": 0.25,
-  "_authoritative_context_applied": {
-    "object": {},
-    "parts": [
-      {
-        "part_index": 0,
-        "part_id": "part_00",
-        "fields": [
-          "bounds",
-          "canonical_name",
-          "material",
-          "part_id",
-          "part_index",
-          "source_object_name",
-          "source_part_name"
-        ]
-      }
-    ]
+  "units": {
+    "length": "m",
+    "mass": "kg"
   }
 }

@@ -1,102 +1,81 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.1419716477394104,
+        0.01680787280201912,
+        0.06215677782893181
+      ],
+      "min": [
+        -0.10960935056209564,
+        -1.7127553292084485e-05,
+        -0.06198522076010704
+      ],
+      "size": [
+        0.25158099830150604,
+        0.016825000355311204,
+        0.12414199858903885
+      ]
+    },
+    "description": "A rectangular white ceramic serving tray with a raised rim and a handle featuring a small circular hole.",
+    "name": "D00041 Board Plate",
+    "object_type": "rigid_bodies",
+    "total_mass": 1.0
+  },
+  "asset_id": "D00041",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00041 Board Plate",
-      "source_part_name": "D00041 Board Plate",
-      "source_object_name": "D00041 Board Plate",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "ceramic",
-      "material": "ceramic",
-      "non_visual_material": null,
-      "mass": 1.0,
-      "density": 2300.0,
-      "inertia": [
-        0.0020120943472990804,
-        0.005752040826157596,
-        0.007716570323372402
-      ],
-      "inertia_axes": [
-        0.00025862750779411274,
-        0.9999933298426419,
-        -0.00041875976668864784,
-        0.0036191189943587483
-      ],
-      "center_of_mass": [
-        -0.011861050326774298,
-        -0.00016507146387081446,
-        0.008929587605455197
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.0006578051944731458,
       "bounds": {
-        "min": [
-          -0.10960935056209564,
-          -1.7127553292084485e-05,
-          -0.06198522076010704
+        "center": [
+          -0.008073529080398552,
+          0.007620212733026362,
+          0.00010379404903531823
         ],
         "max": [
           0.1419716477394104,
           0.01680787280201912,
           0.06215677782893181
         ],
-        "center": [
-          -0.008073529080398552,
-          0.007620212733026362,
-          0.00010379404903531823
+        "min": [
+          -0.10960935056209564,
+          -1.7127553292084485e-05,
+          -0.06198522076010704
         ]
       },
-      "description": "A rectangular white ceramic serving tray with a raised rim and a handle featuring a small circular hole.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The object is a serving board/tray made of a solid, hard material that appears to be ceramic or stoneware given its matte white finish, thickness, and slightly rounded edges. It is a single rigid body with no moving parts. \n\nFor Isaac Sim physics properties:\n- Material: Ceramic/Stoneware. This is the only material present.\n- Mass: Typical ceramic serving trays of this size (approx. 12-14 inches long) weigh between 0.8 to 1.2 kg. I estimate 1.0 kg.\n- Density: Ceramic/stoneware generally has a density of around 2000-2500 kg/m^3.\n- Friction: Ceramic is smooth but not as slick as glass. Static friction is estimated at 0.5, dynamic at 0.4.\n- Restitution: Ceramic is brittle and hard, so it does not bounce much. Restitution is set low, around 0.2.\n- Collisions: Convex decomposition is required because the tray is not perfectly convex (it has a raised rim and a hole in the handle). SDF meshes could also be used for very high fidelity, but convex decomposition is a good balance of performance and accuracy for an object with a simple rim and handle hole.\n- Rigid Bodies: Needs standard contact offsets. CCD might be useful if dropped from a height due to its relatively thin profile, though not strictly necessary for slow manipulation.",
-      "static_friction": 0.5,
-      "dynamic_friction": 0.4,
-      "restitution": 0.2,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        -0.011861050326774298,
+        -0.00016507146387081446,
+        0.008929587605455197
+      ],
+      "collision": {},
+      "density": 2300.0,
+      "id": "part_00",
+      "inertia": [
+        0.0020120943472990804,
+        0.005752040826157596,
+        0.007716570323372402
+      ],
+      "mass": 1.0,
+      "material": "ceramic",
+      "name": "D00041 Board Plate",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": "",
-      "appearance_properties": {},
-      "newton": {
-        "collisions": {
-          "collider_type": "convex_decomposition",
-          "rest_offset": 0,
-          "contact_offset": 0.01,
-          "explosion_view_distance": 0,
-          "collision_mesh_debug_visualization": false
-        },
-        "simulation_scene": {
-          "simulation_steps_per_second": 60,
-          "enable_ccd": false,
-          "gravitational_acceleration": [
-            0,
-            0,
-            -9.81
-          ],
-          "gpu_buffer_parameters": {},
-          "residuals": {}
-        }
-      }
+      "source": {
+        "object_name": "D00041 Board Plate",
+        "part_name": "D00041 Board Plate"
+      },
+      "volume": 0.0006578051944731458
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00041 Board Plate",
-  "object_description": "A rectangular white ceramic serving tray with a raised rim and a handle featuring a small circular hole.",
-  "object_semantic": {
-    "qid": null
-  },
-  "total_mass": 1.0,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies"
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  }
 }

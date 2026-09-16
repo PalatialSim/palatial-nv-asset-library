@@ -1,102 +1,81 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.19132983684539795,
+        0.053821735084056854,
+        0.04177146777510643
+      ],
+      "min": [
+        -0.1317427009344101,
+        -0.05346754193305969,
+        -4.929514761897735e-05
+      ],
+      "size": [
+        0.32307253777980804,
+        0.10728927701711655,
+        0.04182076292272541
+      ]
+    },
+    "description": "A solid metal serving spoon with a wide, shallow bowl and a thick, tapered handle. The handle features a brushed silver finish and terminates in a curled, hook-like end.",
+    "name": "D00483 Lad Spoon",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.15
+  },
+  "asset_id": "D00483",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00483 Lad Spoon",
-      "source_part_name": "D00483 Lad Spoon",
-      "source_object_name": "D00483 Lad Spoon",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "stainless_steel",
-      "material": "stainless_steel",
-      "non_visual_material": null,
-      "mass": 0.15,
-      "density": 8000.0,
-      "inertia": [
-        7.307143761473521e-05,
-        0.0009709547632553407,
-        0.001014791422304038
-      ],
-      "inertia_axes": [
-        0.9999933836753115,
-        0.0008326944758937726,
-        0.0035229808016330475,
-        -0.0003575357078942401
-      ],
-      "center_of_mass": [
-        0.009095914871139652,
-        0.00017124653716269205,
-        0.021179430448126844
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.0006398474445889399,
       "bounds": {
-        "min": [
-          -0.1317427009344101,
-          -0.05346754193305969,
-          -4.929514761897735e-05
+        "center": [
+          -0.0006906062133039571,
+          0.00015990570338612583,
+          0.01965703637547296
         ],
         "max": [
           0.19132983684539795,
           0.053821735084056854,
           0.04177146777510643
         ],
-        "center": [
-          -0.0006906062133039571,
-          0.00015990570338612583,
-          0.01965703637547296
+        "min": [
+          -0.1317427009344101,
+          -0.05346754193305969,
+          -4.929514761897735e-05
         ]
       },
-      "description": "A solid metal serving spoon with a wide, shallow bowl and a thick, tapered handle. The handle features a brushed silver finish and terminates in a curled, hook-like end.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "Visual analysis indicates the object is a spoon made entirely of brushed metal, almost certainly stainless steel. This dictates a high density (8000 kg/m^3) and typical metal-on-metal/surface friction coefficients (around 0.4-0.5). The mass is estimated at 0.15 kg, representing a sturdy serving utensil. For Isaac Sim, two settings are critical for this geometry: 1) Continuous Collision Detection (CCD) must be enabled because the bowl and handle are thin, making the object highly susceptible to tunneling through surfaces during physics steps. 2) The collider type must be set to 'convex_decomposition' (or 'sdf_mesh'). If a basic 'convex_hull' is used, the physics engine will draw a flat plane across the rim of the spoon's bowl, eliminating its concavity and making it impossible to scoop or hold other objects. The contact offset is kept relatively low (0.002m) to prevent visible hovering of the thin edges above surfaces.",
-      "static_friction": 0.5,
-      "dynamic_friction": 0.4,
-      "restitution": 0.4,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        0.009095914871139652,
+        0.00017124653716269205,
+        0.021179430448126844
+      ],
+      "collision": {},
+      "density": 8000.0,
+      "id": "part_00",
+      "inertia": [
+        7.307143761473521e-05,
+        0.0009709547632553407,
+        0.001014791422304038
+      ],
+      "mass": 0.15,
+      "material": "stainless_steel",
+      "name": "D00483 Lad Spoon",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": "",
-      "appearance_properties": {},
-      "newton": {
-        "collisions": {
-          "collider_type": "convex_decomposition",
-          "rest_offset": 0,
-          "contact_offset": 0.002,
-          "explosion_view_distance": 0,
-          "collision_mesh_debug_visualization": false
-        },
-        "simulation_scene": {
-          "simulation_steps_per_second": 120,
-          "enable_ccd": true,
-          "gravitational_acceleration": [
-            0,
-            0,
-            -9.81
-          ],
-          "gpu_buffer_parameters": {},
-          "residuals": {}
-        }
-      }
+      "source": {
+        "object_name": "D00483 Lad Spoon",
+        "part_name": "D00483 Lad Spoon"
+      },
+      "volume": 0.0006398474445889399
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00483 Lad Spoon",
-  "object_description": "A solid metal serving spoon with a wide, shallow bowl and a thick, tapered handle. The handle features a brushed silver finish and terminates in a curled, hook-like end.",
-  "object_semantic": {
-    "qid": null
-  },
-  "total_mass": 0.15,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies"
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  }
 }

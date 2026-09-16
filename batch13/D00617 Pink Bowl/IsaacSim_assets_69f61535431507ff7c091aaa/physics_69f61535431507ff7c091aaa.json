@@ -1,91 +1,81 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.10188225656747818,
+        0.10130712389945984,
+        0.09995778650045395
+      ],
+      "min": [
+        -0.10137662291526794,
+        -0.10153849422931671,
+        -6.192599539645016e-05
+      ],
+      "size": [
+        0.20325887948274612,
+        0.20284561812877655,
+        0.1000197124958504
+      ]
+    },
+    "description": "A small, round pink ceramic bowl with a matte finish and a slightly flared rim.",
+    "name": "D00617 Pink Bowl",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.4
+  },
+  "asset_id": "D00617",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00617 Pink Bowl",
-      "source_part_name": "D00617 Pink Bowl",
-      "source_object_name": "D00617 Pink Bowl",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "ceramic",
-      "material": "ceramic",
-      "non_visual_material": null,
-      "mass": 0.4,
-      "density": 2400.0,
-      "inertia": [
-        0.0015536626362463587,
-        0.0015652931044169258,
-        0.002506367734533582
-      ],
-      "inertia_axes": [
-        0.5128544906001835,
-        0.512240578034027,
-        0.48714798188224223,
-        -0.48711056797676955
-      ],
-      "center_of_mass": [
-        0.0002859382883441957,
-        -0.04510521556875926,
-        2.9688205960549496e-05
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.0006308897374838348,
       "bounds": {
-        "min": [
-          -0.10137662291526794,
-          -0.10153849422931671,
-          -6.192599539645016e-05
+        "center": [
+          0.00036442828465821066,
+          -0.0001110177294151857,
+          0.049668747919283364
         ],
         "max": [
           0.10188225656747818,
           0.10130712389945984,
           0.09995778650045395
         ],
-        "center": [
-          0.00036442828465821066,
-          -0.0001110177294151857,
-          0.049668747919283364
+        "min": [
+          -0.10137662291526794,
+          -0.10153849422931671,
+          -6.192599539645016e-05
         ]
       },
-      "description": "A small, round pink ceramic bowl with a matte finish and a slightly flared rim.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "Visual analysis indicates a ceramic or earthenware bowl due to its matte finish and thick walls. The density for typical ceramics is estimated around 2400 kg/m^3. Assuming standard dimensions for a cereal or soup bowl (roughly 15 cm in diameter), the mass is estimated at 0.4 kg. Friction coefficients are set to 0.5 (static) and 0.4 (dynamic), which are characteristic of unglazed or matte ceramic sliding against typical surfaces like wood or plastic. The restitution is kept low (0.2) because ceramic is a rigid, brittle material that does not exhibit significant bounce. For Isaac Sim collision handling, it is critical to use 'convex_decomposition' rather than a standard 'convex_hull'; a convex hull would create a flat cover over the opening, preventing objects from interacting with the inside of the bowl. Standard contact offsets (0.005m) are applied to ensure stable contact generation without visible gap artifacts.",
-      "static_friction": 0.5,
-      "dynamic_friction": 0.4,
-      "restitution": 0.2,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        0.0002859382883441957,
+        -0.04510521556875926,
+        2.9688205960549496e-05
+      ],
+      "collision": {},
+      "density": 2400.0,
+      "id": "part_00",
+      "inertia": [
+        0.0015536626362463587,
+        0.0015652931044169258,
+        0.002506367734533582
+      ],
+      "mass": 0.4,
+      "material": "ceramic",
+      "name": "D00617 Pink Bowl",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": "",
-      "appearance_properties": {},
-      "newton": {
-        "collisions": {
-          "collider_type": "convex_decomposition",
-          "rest_offset": 0,
-          "contact_offset": 0.005,
-          "explosion_view_distance": 0,
-          "collision_mesh_debug_visualization": false
-        }
-      }
+      "source": {
+        "object_name": "D00617 Pink Bowl",
+        "part_name": "D00617 Pink Bowl"
+      },
+      "volume": 0.0006308897374838348
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00617 Pink Bowl",
-  "object_description": "A small, round pink ceramic bowl with a matte finish and a slightly flared rim.",
-  "object_semantic": {
-    "qid": null
-  },
-  "total_mass": 0.4,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies"
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  }
 }

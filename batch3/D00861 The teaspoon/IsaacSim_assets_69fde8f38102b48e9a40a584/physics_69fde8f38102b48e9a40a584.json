@@ -1,81 +1,81 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.06295077502727509,
+        0.09684325009584427,
+        0.09787864983081818
+      ],
+      "min": [
+        -0.08265316486358643,
+        0.0,
+        -0.07648728787899017
+      ],
+      "size": [
+        0.1456039398908615,
+        0.09684325009584427,
+        0.17436593770980835
+      ]
+    },
+    "description": "An unglazed terracotta ceramic teapot with a rounded body, short pouring spout, fitted lid, and knob. It has a tubular side handle with a darker wrapped grip and a rough speckled clay surface.",
+    "name": "D00861 The Response",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.52
+  },
+  "asset_id": "D00861",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00861 The Response",
-      "source_part_name": "D00861 The Response",
-      "source_object_name": "D00861 The Response",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "unglazed_terracotta_ceramic",
-      "material": "unglazed_terracotta_ceramic",
-      "non_visual_material": null,
-      "mass": 0.52,
-      "density": 1900.0,
-      "inertia": [
-        0.0006586443568923576,
-        0.0009517695663054195,
-        0.0011522691794189088
-      ],
-      "inertia_axes": [
-        0.7305139040349651,
-        -0.04099271028113698,
-        0.17187832327678343,
-        0.6596414751233902
-      ],
-      "center_of_mass": [
-        0.00032918001185693865,
-        0.004421945398019324,
-        0.04864260994948839
-      ],
-      "part_origin_world": [
-        0.00032918001185693865,
-        0.004421945398019324,
-        0.04864260994948839
-      ],
-      "volume": 0.000985601419197895,
       "bounds": {
-        "min": [
-          -0.08265316486358643,
-          0.0,
-          -0.07648728787899017
+        "center": [
+          0.002558382074292375,
+          0.04600225677626188,
+          -0.007780695831324541
         ],
         "max": [
           0.06295077502727509,
           0.09684325009584427,
           0.09787864983081818
         ],
-        "center": [
-          0.002558382074292375,
-          0.04600225677626188,
-          -0.007780695831324541
+        "min": [
+          -0.08265316486358643,
+          0.0,
+          -0.07648728787899017
         ]
       },
-      "description": "An unglazed terracotta ceramic teapot with a rounded body, short pouring spout, fitted lid, and knob. It has a tubular side handle with a darker wrapped grip and a rough speckled clay surface.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The asset appears to be a small hollow ceramic/terracotta teapot with a bulbous body, protruding spout, side handle, lid, rim details, and a small knob. No product data is provided, so values are estimated in SI units. A plausible external size is roughly 0.20-0.24 m from spout to handle, 0.12-0.15 m body diameter, and 0.10-0.13 m tall. Unglazed fired clay/terracotta has a solid material density around 1700-2200 kg/m^3; 1900 kg/m^3 is used as the dominant material density. Because the object is hollow with thin walls, the total dry mass is much lower than a solid ceramic volume. Assuming 3-5 mm wall thickness, a separate lid, and added spout/handle mass, a realistic dry mass is about 0.45-0.60 kg; 0.52 kg is selected. If mass is generated from closed convex collision volume rather than explicitly set, an equivalent bulk density closer to 350-550 kg/m^3 would be needed to avoid overestimating mass, but an explicit mass override is recommended. The center of mass should be near the center of the round body, slightly below the mid-height due to the heavier lower shell and possibly shifted slightly toward the handle side depending on geometry; the spout and handle partly counterbalance. The dominant contact material is rough unglazed ceramic, so friction is moderately high: static friction is estimated at 0.62 and dynamic friction at 0.48 against common hard tabletop materials. Restitution is kept low at 0.28 because rough ceramic dissipates energy and should not behave bouncy, even though it is hard. For PhysX collision, a single convex hull would overfill the concave teapot shape and ignore the handle/spout details, while a full SDF mesh would be more accurate but heavier. Convex decomposition is the best default for a dynamic rigid body: use separate convex parts for the main rounded body, spout, handle, lid/knob, and rim, with simplified exterior-only collision unless internal pouring/containment interactions are required. Thin holes, mesh strainer detail, and decorative surface scratches should not be modeled as collision. Rest offset is set to 0.0 m for visual alignment, and a 0.003 m contact offset gives stable constraint generation at this object scale without excessive hovering. CCD is enabled because the teapot has thin protruding geometry and brittle-looking features that can tunnel during drops or fast gripper motions; it may be disabled for purely slow tabletop placement. Compliant contacts are disabled for the ceramic material because the object should be treated as rigid; if contact chatter occurs, use high-stiffness, low-compliance contact damping rather than soft-body behavior. A 120 Hz simulation step rate is recommended for stable contact on the rounded base, spout, and handle, although 60 Hz is acceptable for slow quasi-static scenes. Reasonable runtime limits would be linear speeds below about 5 m/s and angular speeds below about 30 rad/s for stable manipulation; use sleep/hibernation defaults or a low sleep threshold so the teapot rests quietly on flat surfaces.",
-      "static_friction": 0.62,
-      "dynamic_friction": 0.48,
-      "restitution": 0.28,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        0.00032918001185693865,
+        0.004421945398019324,
+        0.04864260994948839
+      ],
+      "collision": {},
+      "density": 1900.0,
+      "id": "part_00",
+      "inertia": [
+        0.0006586443568923576,
+        0.0009517695663054195,
+        0.0011522691794189088
+      ],
+      "mass": 0.52,
+      "material": "unglazed_terracotta_ceramic",
+      "name": "D00861 The Response",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": ""
+      "source": {
+        "object_name": "D00861 The Response",
+        "part_name": "D00861 The Response"
+      },
+      "volume": 0.000985601419197895
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00861 The Response",
-  "object_description": "An unglazed terracotta ceramic teapot with a rounded body, short pouring spout, fitted lid, and knob. It has a tubular side handle with a darker wrapped grip and a rough speckled clay surface.",
-  "object_semantic": {
-    "qid": null
-  },
-  "total_mass": 0.52,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies"
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  }
 }

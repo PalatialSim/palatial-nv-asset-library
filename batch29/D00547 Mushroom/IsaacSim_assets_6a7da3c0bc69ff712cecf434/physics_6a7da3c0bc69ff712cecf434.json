@@ -1,119 +1,83 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.05408876,
+        0.12163383,
+        0.0539367
+      ],
+      "min": [
+        -0.05334009,
+        0.0,
+        -0.05484165
+      ],
+      "size": [
+        0.10742884999999999,
+        0.12163383,
+        0.10877835
+      ]
+    },
+    "description": "A large brown mushroom with a smooth domed cap and a thick, textured stem. Ribbed gills are visible on the underside of the cap.",
+    "name": "specialist-current",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.15
+  },
+  "asset_id": "D00547",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "specialist-current",
-      "source_part_name": "specialist-current",
-      "source_object_name": "specialist-current",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "organic_plant_matter",
-      "material": "organic_plant_matter",
-      "mass": 0.15,
-      "density": 800.0,
-      "inertia": [
-        0.00015078572604379964,
-        0.00018373766588692137,
-        0.00018652853475785016
-      ],
-      "inertia_axes": [
-        0.7311046200654775,
-        0.060308397391273846,
-        0.6769127949280799,
-        -0.06031583362323196
-      ],
-      "center_of_mass": [
-        0.0002081858480606753,
-        0.0004689781441037092,
-        0.07405688353599217
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.0005808727280437816,
       "bounds": {
-        "min": [
-          -0.05334009,
-          0.0,
-          -0.05484165
+        "center": [
+          0.00010908533739691292,
+          0.08120488121200509,
+          0.00011815398030438433
         ],
         "max": [
           0.05408876,
           0.12163383,
           0.0539367
         ],
-        "center": [
-          0.00010908533739691292,
-          0.08120488121200509,
-          0.00011815398030438433
+        "min": [
+          -0.05334009,
+          0.0,
+          -0.05484165
         ]
       },
-      "description": "A large brown mushroom with a smooth domed cap and a thick, textured stem. Ribbed gills are visible on the underside of the cap.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The object is a single rigid body representing a large mushroom with dimensions of approximately 16x18x16 cm (based on provided auto_scale_summary.json extents). The dominant material is organic plant matter, which in a rigid body physics context behaves somewhat like low-density soft wood or a dense sponge. The density is estimated at 800 kg/m\u00b3. A bounding box of this size with the typical concave shape of a mushroom yields an effective mass estimate of around 0.15 kg. Static and dynamic friction are set moderately high (0.6 and 0.5) to reflect a slightly damp, organic surface. Restitution is kept very low (0.1) because a mushroom is highly inelastic and absorbs impact. For collisions, convex decomposition is essential to accurately capture the concavity under the cap (where the stem meets the gills) without generating false collisions in that empty space.",
-      "static_friction": 0.6,
-      "dynamic_friction": 0.5,
-      "restitution": 0.1,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        0.0002081858480606753,
+        0.0004689781441037092,
+        0.07405688353599217
+      ],
+      "collision": {},
+      "density": 800.0,
+      "id": "part_00",
+      "inertia": [
+        0.00015078572604379964,
+        0.00018373766588692137,
+        0.00018652853475785016
+      ],
+      "mass": 0.15,
+      "material": "organic_plant_matter",
+      "name": "specialist-current",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": "",
-      "appearance_properties": {},
-      "newton": {
-        "collisions": {
-          "collider_type": "convex_decomposition",
-          "rest_offset": 0,
-          "contact_offset": 0.002,
-          "explosion_view_distance": 0,
-          "collision_mesh_debug_visualization": false
-        },
-        "simulation_scene": {
-          "simulation_steps_per_second": 60,
-          "enable_ccd": true,
-          "gravitational_acceleration": [
-            0,
-            -9.81,
-            0
-          ],
-          "gpu_buffer_parameters": {},
-          "residuals": {}
-        }
-      }
+      "source": {
+        "object_name": "specialist-current",
+        "part_name": "specialist-current"
+      },
+      "volume": 0.0005808727280437816
     }
   ],
-  "joint_relations": [],
-  "base_link": "specialist-current",
-  "fix_base": false,
-  "object_description": "A large brown mushroom with a smooth domed cap and a thick, textured stem. Ribbed gills are visible on the underside of the cap.",
-  "object_semantic": {
-    "qid": null
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {
+    "fix_base": false
   },
-  "total_mass": 0.15,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies",
-  "total_object_mass_kg": 0.15,
-  "_authoritative_context_applied": {
-    "object": {},
-    "parts": [
-      {
-        "part_index": 0,
-        "part_id": "part_00",
-        "fields": [
-          "bounds",
-          "canonical_name",
-          "material",
-          "part_id",
-          "part_index",
-          "source_object_name",
-          "source_part_name"
-        ]
-      }
-    ]
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
   }
 }

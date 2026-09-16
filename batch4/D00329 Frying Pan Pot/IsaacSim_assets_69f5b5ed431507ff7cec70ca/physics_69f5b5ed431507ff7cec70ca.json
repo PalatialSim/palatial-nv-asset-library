@@ -1,81 +1,81 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.1881529986858368,
+        0.09549099951982498,
+        0.14105699956417084
+      ],
+      "min": [
+        -0.12027999758720398,
+        -0.12888599932193756,
+        -3.000000106112566e-06
+      ],
+      "size": [
+        0.30843299627304077,
+        0.22437699884176254,
+        0.14105999956427695
+      ]
+    },
+    "description": "A shallow gray nonstick-coated metal frying pan with a rounded rim, riveted side bracket, and a black molded plastic handle with a hanging hole.",
+    "name": "D00329 Frying Pan Pot",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.95
+  },
+  "asset_id": "D00329",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00329 Frying Pan Pot",
-      "source_part_name": "D00329 Frying Pan Pot",
-      "source_object_name": "D00329 Frying Pan Pot",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "nonstick_coated_aluminum",
-      "material": "nonstick_coated_aluminum",
-      "non_visual_material": null,
-      "mass": 0.95,
-      "density": 2400.0,
-      "inertia": [
-        0.0028153103737880657,
-        0.005928006216500972,
-        0.008387203674369351
-      ],
-      "inertia_axes": [
-        3.767701362700037e-05,
-        0.9994477929953227,
-        -2.613633808178084e-05,
-        0.033228105183911186
-      ],
-      "center_of_mass": [
-        0.011559467462285023,
-        -0.0002088537474104842,
-        0.028118916065357834
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.002386555972770306,
       "bounds": {
-        "min": [
-          -0.12027999758720398,
-          -0.12888599932193756,
-          -3.000000106112566e-06
+        "center": [
+          -0.0006542382104019469,
+          0.0003657999324974841,
+          0.040745206867311
         ],
         "max": [
           0.1881529986858368,
           0.09549099951982498,
           0.14105699956417084
         ],
-        "center": [
-          -0.0006542382104019469,
-          0.0003657999324974841,
-          0.040745206867311
+        "min": [
+          -0.12027999758720398,
+          -0.12888599932193756,
+          -3.000000106112566e-06
         ]
       },
-      "description": "A shallow gray nonstick-coated metal frying pan with a rounded rim, riveted side bracket, and a black molded plastic handle with a hanging hole.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The object appears to be a typical 26\u201328 cm nonstick skillet with a shallow aluminum pan body and a polymer handle. A realistic total length is about 0.45\u20130.50 m including handle, pan diameter about 0.27\u20130.29 m, rim height about 0.045\u20130.060 m, and wall/base thickness roughly 2\u20134 mm. Comparable nonstick aluminum pans of this size are commonly 0.75\u20131.15 kg; 0.95 kg is a reasonable rigid-body mass estimate including the aluminum body, steel/aluminum rivets/bracket, and plastic handle. The dominant structural/contact material is nonstick-coated aluminum: the pan bowl and outer bottom occupy most of the surface and mass, while the black handle is a secondary plastic component. A composite material density of about 2400 kg/m^3 is used to represent aluminum substrate with coating and minor polymer parts; if mass is computed from a closed convex volume instead of true shell volume, the explicit mass should override automatic density-derived mass because the pan is hollow and thin-walled. Friction is estimated lower than bare metal because of the nonstick/anodized coating, but not as low as ideal PTFE due to roughness, edge contact, and possible textured exterior: static friction about 0.35 and dynamic friction about 0.28 are suitable general-purpose values. Restitution is set to 0.25 because the object is a thin metal/plastic assembly that may ring but dissipates energy through deformation, coating, handle compliance, and multi-point contact. The pan is concave, so a single convex hull would incorrectly fill the bowl and prevent objects from contacting the interior. For Isaac Sim/PhysX rigid-body use, convex decomposition is the recommended default: several convex hulls can represent the bottom disk, side wall/rim, handle, bracket, and rivet bumps with good performance. If high-fidelity interior contact is required for small objects resting inside the pan, an SDF mesh can be considered, but convex decomposition is more robust and efficient for most dynamic rigid-body scenes. Contact offset is kept small at 0.002 m for a 25\u201350 cm object to avoid visible hovering while maintaining stable contact generation; rest offset is 0.0 m so the collision surface aligns with the visual mesh. CCD is enabled at the body level because the pan has thin rim/wall features and a long handle that may be moved quickly, though it can be disabled for slow tabletop-only scenes. Gravity is given in Isaac Sim's typical Z-up convention. No articulation properties are physically active because this is a single rigid object with fixed rivets and no joints.",
-      "static_friction": 0.35,
-      "dynamic_friction": 0.28,
-      "restitution": 0.25,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        0.011559467462285023,
+        -0.0002088537474104842,
+        0.028118916065357834
+      ],
+      "collision": {},
+      "density": 2400.0,
+      "id": "part_00",
+      "inertia": [
+        0.0028153103737880657,
+        0.005928006216500972,
+        0.008387203674369351
+      ],
+      "mass": 0.95,
+      "material": "nonstick_coated_aluminum",
+      "name": "D00329 Frying Pan Pot",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": ""
+      "source": {
+        "object_name": "D00329 Frying Pan Pot",
+        "part_name": "D00329 Frying Pan Pot"
+      },
+      "volume": 0.002386555972770306
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00329 Frying Pan Pot",
-  "object_description": "A shallow gray nonstick-coated metal frying pan with a rounded rim, riveted side bracket, and a black molded plastic handle with a hanging hole.",
-  "object_semantic": {
-    "qid": null
-  },
-  "total_mass": 0.95,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies"
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  }
 }

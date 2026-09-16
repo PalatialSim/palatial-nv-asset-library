@@ -1,102 +1,81 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.12121091783046722,
+        0.12487965077161789,
+        0.24407504498958588
+      ],
+      "min": [
+        -0.1236402690410614,
+        -0.1219349056482315,
+        -7.869782712077722e-05
+      ],
+      "size": [
+        0.24485118687152863,
+        0.2468145564198494,
+        0.24415374281670665
+      ]
+    },
+    "description": "A medium-sized orange pumpkin with characteristic vertical ribbing and a brown, woody stem at the top.",
+    "name": "D00658 Pumpkin",
+    "object_type": "rigid_bodies",
+    "total_mass": 5.0
+  },
+  "asset_id": "D00658",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00658 Pumpkin",
-      "source_part_name": "D00658 Pumpkin",
-      "source_object_name": "D00658 Pumpkin",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "organic_rind",
-      "material": "organic_rind",
-      "non_visual_material": null,
-      "mass": 5.0,
-      "density": 550.0,
-      "inertia": [
-        0.025969619936854847,
-        0.026411257800849332,
-        0.03198866320211006
-      ],
-      "inertia_axes": [
-        0.00037058153573349466,
-        0.7141087768738398,
-        0.7000279709722174,
-        0.0030589732909232746
-      ],
-      "center_of_mass": [
-        -0.0011171370024361175,
-        0.0011038558268001914,
-        0.08965398697239434
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.006660988880813079,
       "bounds": {
-        "min": [
-          -0.1236402690410614,
-          -0.1219349056482315,
-          -7.869782712077722e-05
+        "center": [
+          -0.0005853550009490196,
+          0.0006646096310038825,
+          0.09460404788255951
         ],
         "max": [
           0.12121091783046722,
           0.12487965077161789,
           0.24407504498958588
         ],
-        "center": [
-          -0.0005853550009490196,
-          0.0006646096310038825,
-          0.09460404788255951
+        "min": [
+          -0.1236402690410614,
+          -0.1219349056482315,
+          -7.869782712077722e-05
         ]
       },
-      "description": "A medium-sized orange pumpkin with characteristic vertical ribbing and a brown, woody stem at the top.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The object is an organic pumpkin. For rigid body simulation, it can be approximated as a mostly hollow structure with a relatively dense rind. A standard medium carving pumpkin has a bulk density lower than water due to its hollow interior, estimated here around 550 kg/m\u00b3. For a diameter of roughly 25-30 cm, this yields a mass of approximately 5 kg. The external surface is a smooth but slightly textured organic rind, which interacts similarly to semi-hard plastics or soft woods, leading to moderate static and dynamic friction coefficients. Pumpkins exhibit very little elasticity, so restitution is kept low to ensure a heavy 'thud' rather than a bounce. For collision modeling in Isaac Sim, a 'convex_decomposition' is highly recommended over a simple 'convex_hull'; a single hull would stretch from the top of the stem to the sides of the pumpkin, creating an unnatural 'tent' shape that would completely ruin rolling dynamics. Convex decomposition allows the main spherical body to act independently from the protruding stem during contact resolution.",
-      "static_friction": 0.5,
-      "dynamic_friction": 0.4,
-      "restitution": 0.2,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        -0.0011171370024361175,
+        0.0011038558268001914,
+        0.08965398697239434
+      ],
+      "collision": {},
+      "density": 550.0,
+      "id": "part_00",
+      "inertia": [
+        0.025969619936854847,
+        0.026411257800849332,
+        0.03198866320211006
+      ],
+      "mass": 5.0,
+      "material": "organic_rind",
+      "name": "D00658 Pumpkin",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": "",
-      "appearance_properties": {},
-      "newton": {
-        "collisions": {
-          "collider_type": "convex_decomposition",
-          "rest_offset": 0,
-          "contact_offset": 0.02,
-          "explosion_view_distance": 0,
-          "collision_mesh_debug_visualization": false
-        },
-        "simulation_scene": {
-          "simulation_steps_per_second": 60,
-          "enable_ccd": true,
-          "gravitational_acceleration": [
-            0,
-            0,
-            -9.81
-          ],
-          "gpu_buffer_parameters": {},
-          "residuals": {}
-        }
-      }
+      "source": {
+        "object_name": "D00658 Pumpkin",
+        "part_name": "D00658 Pumpkin"
+      },
+      "volume": 0.006660988880813079
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00658 Pumpkin",
-  "object_description": "A medium-sized orange pumpkin with characteristic vertical ribbing and a brown, woody stem at the top.",
-  "object_semantic": {
-    "qid": null
-  },
-  "total_mass": 5.0,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies"
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  }
 }

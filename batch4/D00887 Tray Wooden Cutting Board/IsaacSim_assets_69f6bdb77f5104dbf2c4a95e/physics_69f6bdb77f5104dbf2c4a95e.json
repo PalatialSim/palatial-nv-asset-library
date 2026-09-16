@@ -1,81 +1,81 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.3027209937572479,
+        0.197953999042511,
+        0.06584099680185318
+      ],
+      "min": [
+        -0.2980929911136627,
+        -0.19665899872779846,
+        -0.00030700000934302807
+      ],
+      "size": [
+        0.6008139848709106,
+        0.39461299777030945,
+        0.06614799681119621
+      ]
+    },
+    "description": "A thick rectangular hardwood cutting board with rounded edges, visible light-brown wood grain, and a smooth oiled finish. Brushed stainless-steel tubular handles are mounted to the short sides with small metal plates and screws.",
+    "name": "D00887 Tray Wooden Cutting Board",
+    "object_type": "rigid_bodies",
+    "total_mass": 7.8
+  },
+  "asset_id": "D00887",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00887 Tray Wooden Cutting Board",
-      "source_part_name": "D00887 Tray Wooden Cutting Board",
-      "source_object_name": "D00887 Tray Wooden Cutting Board",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "steel",
-      "material": "steel",
-      "non_visual_material": null,
-      "mass": 7.8,
-      "density": 720.0,
-      "inertia": [
-        0.10261768019584518,
-        0.1734389711586628,
-        0.2691834498308621
-      ],
-      "inertia_axes": [
-        0.9999997742291284,
-        1.551206794725656e-05,
-        -0.0004930613463791644,
-        0.0004562801513766236
-      ],
-      "center_of_mass": [
-        -0.0003482845091380278,
-        0.001012740280007546,
-        0.03670352406695307
-      ],
-      "part_origin_world": [
-        -0.0003482845091380278,
-        0.001012740280007546,
-        0.03670352406695307
-      ],
-      "volume": 0.014631624201326505,
       "bounds": {
-        "min": [
-          -0.2980929911136627,
-          -0.19665899872779846,
-          -0.00030700000934302807
+        "center": [
+          0.001694232230494106,
+          0.0004926936261639765,
+          0.03331466770755663
         ],
         "max": [
           0.3027209937572479,
           0.197953999042511,
           0.06584099680185318
         ],
-        "center": [
-          0.001694232230494106,
-          0.0004926936261639765,
-          0.03331466770755663
+        "min": [
+          -0.2980929911136627,
+          -0.19665899872779846,
+          -0.00030700000934302807
         ]
       },
-      "description": "A thick rectangular hardwood cutting board with rounded edges, visible light-brown wood grain, and a smooth oiled finish. Brushed stainless-steel tubular handles are mounted to the short sides with small metal plates and screws.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "No exact product data is visible, so the values are estimated from the apparent form factor and materials. The board appears to be a dense hardwood butcher-block style slab, approximately 0.50-0.60 m long, 0.32-0.38 m wide, and 0.045-0.065 m thick. Using a representative size of about 0.55 x 0.35 x 0.055 m gives a wood volume near 0.0106 m^3; maple/beech/cherry-type hardwood is typically 600-750 kg/m^3, giving roughly 6.5-7.5 kg for the wood. The stainless handle assemblies add an estimated 0.6-1.0 kg depending on whether the rods are hollow or solid, so an explicit rigid-body mass of 7.8 kg is a realistic working value. The effective density is higher than raw wood because the asset includes metal hardware, but the dominant contact material is still finished hardwood. Friction is set for smooth finished wood: high enough to resist sliding on common surfaces but lower than rubber; the metal handles would have lower friction if they contact the environment, but the broad wooden body dominates most support contacts. Restitution is low-to-moderate because a heavy hardwood block does not bounce much in practice, and impact energy will be dissipated through wood damping, handle mounts, and contact deformation. For Isaac Sim v4.5 / PhysX, a single convex hull would incorrectly fill the empty spaces around the handles, so the best performant representation is a convex-decomposition or compound-convex setup: one rounded-box convex collider for the wooden slab, box colliders for the mounting plates, and cylinder/capsule-like convex colliders for handle rods and standoffs. A dynamic triangle mesh should be avoided unless converted to SDF, and SDF is only justified if exact concave handle clearance is required. Rest offset is kept at 0 m for visual alignment, with a small 0.003 m contact offset to generate stable contacts without creating a visible hover gap. CCD is recommended because the handle rods are thin relative to the board size and could otherwise tunnel during drops or fast motion; for slow-only placement it may be disabled for performance. Recommended additional PhysX settings not represented as explicit fields here: start asleep when initially placed, use 4-8 position solver iterations and 1-2 velocity iterations for stable stacking/contact, limit linear velocity to roughly 5-10 m/s and angular velocity to roughly 25-40 rad/s for this household-scale rigid body, and use the default sleep threshold unless small contact jitter is observed, in which case slightly increase sleep/stabilization thresholds.",
-      "static_friction": 0.55,
-      "dynamic_friction": 0.42,
-      "restitution": 0.32,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        -0.0003482845091380278,
+        0.001012740280007546,
+        0.03670352406695307
+      ],
+      "collision": {},
+      "density": 720.0,
+      "id": "part_00",
+      "inertia": [
+        0.10261768019584518,
+        0.1734389711586628,
+        0.2691834498308621
+      ],
+      "mass": 7.8,
+      "material": "steel",
+      "name": "D00887 Tray Wooden Cutting Board",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": ""
+      "source": {
+        "object_name": "D00887 Tray Wooden Cutting Board",
+        "part_name": "D00887 Tray Wooden Cutting Board"
+      },
+      "volume": 0.014631624201326505
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00887 Tray Wooden Cutting Board",
-  "object_description": "A thick rectangular hardwood cutting board with rounded edges, visible light-brown wood grain, and a smooth oiled finish. Brushed stainless-steel tubular handles are mounted to the short sides with small metal plates and screws.",
-  "object_semantic": {
-    "qid": null
-  },
-  "total_mass": 7.8,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies"
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  }
 }

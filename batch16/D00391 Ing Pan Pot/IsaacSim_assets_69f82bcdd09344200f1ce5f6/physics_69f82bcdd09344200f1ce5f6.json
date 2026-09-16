@@ -1,121 +1,81 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.304744690656662,
+        0.11730773746967316,
+        0.14882875978946686
+      ],
+      "min": [
+        -0.1977963149547577,
+        -7.2610473580425605e-06,
+        -0.1489812433719635
+      ],
+      "size": [
+        0.5025410056114197,
+        0.1173149985170312,
+        0.29781000316143036
+      ]
+    },
+    "description": "A dark grey metallic wok with a large curved bowl, a long wooden handle, and a small metal helper loop on the opposite side.",
+    "name": "D00391 Ing Pan Pot",
+    "object_type": "rigid_bodies",
+    "total_mass": 6.04
+  },
+  "asset_id": "D00391",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00391 Ing Pan Pot",
-      "source_part_name": "D00391 Ing Pan Pot",
-      "source_object_name": "D00391 Ing Pan Pot",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "steel",
-      "material": "steel",
-      "non_visual_material": null,
-      "mass": 6.04,
-      "density": 7850.0,
-      "inertia": [
-        0.030955899927056465,
-        0.09955152760007033,
-        0.1212630327178324
-      ],
-      "inertia_axes": [
-        0.9976914561852172,
-        -1.2516107088057345e-05,
-        -0.06790748302454508,
-        0.0005760621835813507
-      ],
-      "center_of_mass": [
-        0.03343051635270398,
-        -0.00035345502894673923,
-        0.04378929675262897
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.00044340379133518074,
       "bounds": {
-        "min": [
-          -0.1977963149547577,
-          -7.2610473580425605e-06,
-          -0.1489812433719635
+        "center": [
+          -0.0027827681375769096,
+          0.03342938086667887,
+          -7.846690615119442e-05
         ],
         "max": [
           0.304744690656662,
           0.11730773746967316,
           0.14882875978946686
         ],
-        "center": [
-          -0.0027827681375769096,
-          0.03342938086667887,
-          -7.846690615119442e-05
+        "min": [
+          -0.1977963149547577,
+          -7.2610473580425605e-06,
+          -0.1489812433719635
         ]
       },
-      "description": "A dark grey metallic wok with a large curved bowl, a long wooden handle, and a small metal helper loop on the opposite side.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The object is a large wok primarily composed of metal (likely carbon steel or cast iron), which dictates its structural and contact properties. The physical dimensions (approx 53cm length, 45cm width) and the provided voxel volume of 0.000769 m^3 suggest a substantial mass. Using a typical steel density of 7850 kg/m^3, the estimated mass is approximately 6.0 kg, which aligns with a heavy-duty or cast iron pan of this size. The dominant contact material is steel, so static and dynamic friction coefficients are set to 0.5 and 0.4 respectively, with a modest restitution of 0.3 to account for structural damping. For accurate simulation in Isaac Sim v4.5, a 'convex_decomposition' collider type is essential to capture the concavity of the bowl, as a simple convex hull would artificially close off the opening. Continuous Collision Detection (CCD) is enabled to prevent the thin walls of the pan from tunneling through other objects during high-speed impacts or manipulations.",
-      "static_friction": 0.5,
-      "dynamic_friction": 0.4,
-      "restitution": 0.3,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        0.03343051635270398,
+        -0.00035345502894673923,
+        0.04378929675262897
+      ],
+      "collision": {},
+      "density": 7850.0,
+      "id": "part_00",
+      "inertia": [
+        0.030955899927056465,
+        0.09955152760007033,
+        0.1212630327178324
+      ],
+      "mass": 6.04,
+      "material": "steel",
+      "name": "D00391 Ing Pan Pot",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": "",
-      "appearance_properties": {},
-      "newton": {
-        "collisions": {
-          "collider_type": "convex_decomposition",
-          "rest_offset": 0,
-          "contact_offset": 0.002,
-          "explosion_view_distance": 0,
-          "collision_mesh_debug_visualization": false
-        },
-        "simulation_scene": {
-          "simulation_steps_per_second": 60,
-          "enable_ccd": true,
-          "gravitational_acceleration": [
-            0,
-            0,
-            -9.81
-          ],
-          "gpu_buffer_parameters": {},
-          "residuals": {}
-        }
-      }
+      "source": {
+        "object_name": "D00391 Ing Pan Pot",
+        "part_name": "D00391 Ing Pan Pot"
+      },
+      "volume": 0.00044340379133518074
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00391 Ing Pan Pot",
-  "object_description": "A dark grey metallic wok with a large curved bowl, a long wooden handle, and a small metal helper loop on the opposite side.",
-  "object_semantic": {
-    "qid": null
-  },
-  "total_mass": 6.04,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies",
-  "total_object_mass_kg": 6.04,
-  "_authoritative_context_applied": {
-    "object": {},
-    "parts": [
-      {
-        "part_index": 0,
-        "part_id": "part_00",
-        "fields": [
-          "bounds",
-          "canonical_name",
-          "material",
-          "part_id",
-          "part_index",
-          "source_object_name",
-          "source_part_name"
-        ]
-      }
-    ]
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
   }
 }

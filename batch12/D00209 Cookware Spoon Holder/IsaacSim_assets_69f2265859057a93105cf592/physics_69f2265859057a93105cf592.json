@@ -1,119 +1,83 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.09384725,
+        0.02906228,
+        0.05946321
+      ],
+      "min": [
+        -0.07523305,
+        0.0,
+        -0.05917723
+      ],
+      "size": [
+        0.1690803,
+        0.02906228,
+        0.11864044
+      ]
+    },
+    "description": "A brushed stainless steel spoon rest with a shallow oval bowl and a raised, curved handle.",
+    "name": "D00209 Cookware Spoon Holder",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.393
+  },
+  "asset_id": "D00209",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00209 Cookware Spoon Holder",
-      "source_part_name": "D00209 Cookware Spoon Holder",
-      "source_object_name": "D00209 Cookware Spoon Holder",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "stainless_steel",
-      "material": "stainless_steel",
-      "mass": 0.393,
-      "density": 8000.0,
-      "inertia": [
-        0.00027243272376146306,
-        0.0006785950024978016,
-        0.0009118916526930867
-      ],
-      "inertia_axes": [
-        0.0004720102823719689,
-        0.9999979173035216,
-        0.0005419621911846224,
-        -0.0019102020562604724
-      ],
-      "center_of_mass": [
-        0.006934255815501663,
-        0.00023687879044139722,
-        0.014724896732129004
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.0003139743223345456,
       "bounds": {
-        "min": [
-          -0.07523305,
-          0.0,
-          -0.05917723
+        "center": [
+          -0.0009340510115139052,
+          0.011855875340587138,
+          -9.33138097072234e-05
         ],
         "max": [
           0.09384725,
           0.02906228,
           0.05946321
         ],
-        "center": [
-          -0.0009340510115139052,
-          0.011855875340587138,
-          -9.33138097072234e-05
+        "min": [
+          -0.07523305,
+          0.0,
+          -0.05917723
         ]
       },
-      "description": "A brushed stainless steel spoon rest with a shallow oval bowl and a raised, curved handle.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "Based on the visual evidence and the provided metadata, the object is a stainless steel spoon holder. The dominant material is assigned as stainless steel with a standard density of 8000 kg/m^3. Using the provided voxel volume of 4.917e-05 m^3, the calculated mass is approximately 0.393 kg, which is realistic for a solid metal kitchen accessory of this size (roughly 20cm x 17.7cm x 3.2cm). Friction (static 0.5, dynamic 0.4) and restitution (0.5) reflect standard values for machined stainless steel. For collisions, 'convex_decomposition' is absolutely critical here; a simple 'convex_hull' would cover the concave bowl, preventing a spoon from actually resting inside it. CCD is enabled at the rigid body level due to the relatively thin metal profile, which could be susceptible to tunneling if dropped from a height.",
-      "static_friction": 0.5,
-      "dynamic_friction": 0.4,
-      "restitution": 0.5,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        0.006934255815501663,
+        0.00023687879044139722,
+        0.014724896732129004
+      ],
+      "collision": {},
+      "density": 8000.0,
+      "id": "part_00",
+      "inertia": [
+        0.00027243272376146306,
+        0.0006785950024978016,
+        0.0009118916526930867
+      ],
+      "mass": 0.393,
+      "material": "stainless_steel",
+      "name": "D00209 Cookware Spoon Holder",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": "",
-      "appearance_properties": {},
-      "newton": {
-        "collisions": {
-          "collider_type": "convex_decomposition",
-          "rest_offset": 0,
-          "contact_offset": 0.002,
-          "explosion_view_distance": 0,
-          "collision_mesh_debug_visualization": false
-        },
-        "simulation_scene": {
-          "simulation_steps_per_second": 60,
-          "enable_ccd": true,
-          "gravitational_acceleration": [
-            0,
-            0,
-            -9.81
-          ],
-          "gpu_buffer_parameters": {},
-          "residuals": {}
-        }
-      }
+      "source": {
+        "object_name": "D00209 Cookware Spoon Holder",
+        "part_name": "D00209 Cookware Spoon Holder"
+      },
+      "volume": 0.0003139743223345456
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00209 Cookware Spoon Holder",
-  "fix_base": false,
-  "object_description": "A brushed stainless steel spoon rest with a shallow oval bowl and a raised, curved handle.",
-  "object_semantic": {
-    "qid": null
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {
+    "fix_base": false
   },
-  "total_mass": 0.393,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies",
-  "total_object_mass_kg": 0.393,
-  "_authoritative_context_applied": {
-    "object": {},
-    "parts": [
-      {
-        "part_index": 0,
-        "part_id": "part_00",
-        "fields": [
-          "bounds",
-          "canonical_name",
-          "material",
-          "part_id",
-          "part_index",
-          "source_object_name",
-          "source_part_name"
-        ]
-      }
-    ]
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
   }
 }

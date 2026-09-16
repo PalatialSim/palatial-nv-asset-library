@@ -1,92 +1,82 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.1687128245830536,
+        0.1336497813463211,
+        0.16976873576641083
+      ],
+      "min": [
+        -0.16993823647499084,
+        0.0,
+        -0.16925449669361115
+      ],
+      "size": [
+        0.33865106105804443,
+        0.1336497813463211,
+        0.339023232460022
+      ]
+    },
+    "description": "An off-white round woven basket bowl made from smooth wicker or resin strands, with a thick braided rim and open lattice walls.",
+    "name": "D00815 Storage Basket Bowl",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.75
+  },
+  "asset_id": "D00815",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00815 Storage Basket Bowl",
-      "source_part_name": "D00815 Storage Basket Bowl",
-      "source_object_name": "D00815 Storage Basket Bowl",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "wicker",
-      "material": "wicker",
-      "non_visual_material": null,
-      "mass": 0.75,
-      "density": 550.0,
-      "inertia": [
-        0.008058408607904025,
-        0.008184352968357138,
-        0.013372556783910628
-      ],
-      "inertia_axes": [
-        0.705622461081454,
-        0.7057480829785406,
-        0.044465833634361296,
-        -0.04515944451239953
-      ],
-      "center_of_mass": [
-        -0.0003259346134844419,
-        -0.05314566920588247,
-        -0.0004691907094576141
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.0015466439945581944,
       "bounds": {
-        "min": [
-          -0.16993823647499084,
-          0.0,
-          -0.16925449669361115
+        "center": [
+          -0.0006535164728211935,
+          0.056663773116688784,
+          0.00022765652907947678
         ],
         "max": [
           0.1687128245830536,
           0.1336497813463211,
           0.16976873576641083
         ],
-        "center": [
-          -0.0006535164728211935,
-          0.056663773116688784,
-          0.00022765652907947678
+        "min": [
+          -0.16993823647499084,
+          0.0,
+          -0.16925449669361115
         ]
       },
-      "description": "An off-white round woven basket bowl made from smooth wicker or resin strands, with a thick braided rim and open lattice walls.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The model appears to be a hollow woven basket/bowl with many thin interlaced strands and a thicker rim. With no product data or scale reference, I assume a typical tabletop/storage basket about 0.45-0.55 m in diameter and 0.18-0.22 m tall, made from bleached wicker, rattan, or synthetic resin wicker. A realistic material density for natural wicker/resin composite is roughly 450-900 kg/m^3, but because the object is mostly void space, the total mass is much lower than a solid bowl of the same outer dimensions; an explicit mass of about 0.75 kg is appropriate for stable PhysX behavior. The center of mass should be on the vertical centerline and slightly below mid-height because of the base and lower wall material. Friction is set moderately high because woven wicker has a textured surface, while restitution is low because wicker/resin basket structures dissipate impact energy and should not bounce strongly. A single convex hull is not recommended because it would close the opening and remove the usable concavity. For a dynamic rigid body in Isaac Sim v4.5, use convex decomposition or a compound approximation: separate convex pieces for the base disk/ring, outer wall segments, inner wall segments, and rim ring. Avoid per-strand collision unless absolutely necessary, because the detailed weave would create excessive contact pairs and jitter. SDF mesh collision can preserve more concavity but is heavier; convex decomposition is the preferred rigid-body choice here. Rest/contact offsets are kept small relative to the visible strand thickness, with contact_offset greater than rest_offset to generate stable contacts without making the basket appear to float. CCD is off by default because this is a light, slow household-style object, but it should be enabled if the basket is thrown, dropped at high speed, or if thin contents must not tunnel through the rim. Sleep thresholds and modest damping are useful because the hollow curved shell may otherwise micro-jitter on small contact patches. Slight compliant contact stiffness/damping is recommended to approximate the small give of wicker/resin and reduce chatter while still treating the object as non-deformable.",
-      "static_friction": 0.62,
-      "dynamic_friction": 0.48,
-      "restitution": 0.25,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        -0.0003259346134844419,
+        -0.05314566920588247,
+        -0.0004691907094576141
+      ],
+      "collision": {},
+      "density": 550.0,
+      "id": "part_00",
+      "inertia": [
+        0.008058408607904025,
+        0.008184352968357138,
+        0.013372556783910628
+      ],
+      "mass": 0.75,
+      "material": "wicker",
+      "name": "D00815 Storage Basket Bowl",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "enable_ccd": null,
-      "solver_position_iterations": null,
-      "solver_velocity_iterations": null,
-      "color_name": ""
+      "source": {
+        "object_name": "D00815 Storage Basket Bowl",
+        "part_name": "D00815 Storage Basket Bowl"
+      },
+      "volume": 0.0015466439945581944
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00815 Storage Basket Bowl",
-  "base_link_recommendation": null,
-  "fix_base": false,
-  "source": null,
-  "authored_by": null,
-  "up_axis": null,
-  "coordinate_frames": null,
-  "solver_position_iterations": null,
-  "solver_velocity_iterations": null,
-  "object_description": "An off-white round woven basket bowl made from smooth wicker or resin strands, with a thick braided rim and open lattice walls.",
-  "object_semantic": {
-    "qid": null
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {
+    "fix_base": false
   },
-  "total_mass": 0.75,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies"
+  "units": {
+    "length": "m",
+    "mass": "kg"
+  }
 }

@@ -1,81 +1,81 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.10041700303554535,
+        0.132533997297287,
+        0.03781700134277344
+      ],
+      "min": [
+        -0.10279399901628494,
+        -0.1320520043373108,
+        -0.00010900000052060932
+      ],
+      "size": [
+        0.2032110020518303,
+        0.2645860016345978,
+        0.03792600134329405
+      ]
+    },
+    "description": "A thick rectangular cookbook made from stacked white paper pages with a laminated paperboard or cloth-covered outer cover. The object has a flat book block, squared spine, printed cover graphics, and slightly softened corners and edges.",
+    "name": "D00188 Cookbook",
+    "object_type": "rigid_bodies",
+    "total_mass": 1.1
+  },
+  "asset_id": "D00188",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00188 Cookbook",
-      "source_part_name": "D00188 Cookbook",
-      "source_object_name": "D00188 Cookbook",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "coated_paperboard_paper",
-      "material": "coated_paperboard_paper",
-      "non_visual_material": null,
-      "mass": 1.1,
-      "density": 650.0,
-      "inertia": [
-        0.0038519626677942266,
-        0.006530136579074929,
-        0.010125135852841702
-      ],
-      "inertia_axes": [
-        0.00013724284567833122,
-        0.7069888382307732,
-        0.7072246909183859,
-        1.8354745044799737e-05
-      ],
-      "center_of_mass": [
-        -0.0007896649551408847,
-        0.00025606777269777123,
-        0.018897777845124347
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.002002572054930283,
       "bounds": {
-        "min": [
-          -0.10279399901628494,
-          -0.1320520043373108,
-          -0.00010900000052060932
+        "center": [
+          0.00043096262698388344,
+          0.0002049558668174966,
+          0.01895474746257118
         ],
         "max": [
           0.10041700303554535,
           0.132533997297287,
           0.03781700134277344
         ],
-        "center": [
-          0.00043096262698388344,
-          0.0002049558668174966,
-          0.01895474746257118
+        "min": [
+          -0.10279399901628494,
+          -0.1320520043373108,
+          -0.00010900000052060932
         ]
       },
-      "description": "A thick rectangular cookbook made from stacked white paper pages with a laminated paperboard or cloth-covered outer cover. The object has a flat book block, squared spine, printed cover graphics, and slightly softened corners and edges.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "No exact product data is provided, so the estimates use a typical medium-to-large cookbook: approximately 0.26 m x 0.20 m x 0.032 m, giving a bounding volume near 0.0017 m^3. A dense cookbook with coated paper pages and a hard or semi-hard paperboard cover commonly weighs about 0.9-1.4 kg; 1.1 kg is a realistic central estimate. This corresponds to an effective bulk density of about 650 kg/m^3, lower than solid cellulose because the book includes page gaps, cover voids, glue, and slightly rounded geometry. The dominant contact material is coated paperboard/paper, not the printed ink or minor binding details. Coated paper/cardboard has moderate friction on common work surfaces: static friction is estimated at 0.58 and dynamic friction at 0.47. Restitution is low, about 0.12, because stacked paper and cardboard dissipate impact energy and do not rebound like hard plastic, glass, or metal. For Isaac Sim/PhysX, this book should be treated as one rigid body with the center of mass close to the geometric center. A single convex hull or beveled box-style collider is recommended for performance; individual pages, cover wrinkles, and printed details should not be collision geometry. If the specific mesh includes a spiral binding, the spiral can usually be ignored for contact unless it is a manipulation target; otherwise approximate it with a few simple capsule/convex shapes rather than an SDF mesh. Rest offset is set to 0.0 m for accurate visual/contact alignment, with a small 0.0025 m contact offset to generate stable contacts without visibly floating. CCD is not necessary for normal placement, sliding, or low-speed drops because the object is relatively thick, but it should be enabled if the book is thrown rapidly or impacts thin edges at high velocity. Recommended practical velocity limits, if authored in the USD/PhysX attributes, are roughly 20 m/s linear and 50 rad/s angular for a tabletop/industrial scene. Sleeping/hibernation should remain enabled with default or slightly conservative thresholds because the object is a passive rigid prop. Compliant contacts are disabled by default; if slight cardboard softness or reduced impact jitter is desired, use a high stiffness around 1e5 N/m with damping around 500 N*s/m.",
-      "static_friction": 0.58,
-      "dynamic_friction": 0.47,
-      "restitution": 0.12,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        -0.0007896649551408847,
+        0.00025606777269777123,
+        0.018897777845124347
+      ],
+      "collision": {},
+      "density": 650.0,
+      "id": "part_00",
+      "inertia": [
+        0.0038519626677942266,
+        0.006530136579074929,
+        0.010125135852841702
+      ],
+      "mass": 1.1,
+      "material": "coated_paperboard_paper",
+      "name": "D00188 Cookbook",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": ""
+      "source": {
+        "object_name": "D00188 Cookbook",
+        "part_name": "D00188 Cookbook"
+      },
+      "volume": 0.002002572054930283
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00188 Cookbook",
-  "object_description": "A thick rectangular cookbook made from stacked white paper pages with a laminated paperboard or cloth-covered outer cover. The object has a flat book block, squared spine, printed cover graphics, and slightly softened corners and edges.",
-  "object_semantic": {
-    "qid": null
-  },
-  "total_mass": 1.1,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies"
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  }
 }

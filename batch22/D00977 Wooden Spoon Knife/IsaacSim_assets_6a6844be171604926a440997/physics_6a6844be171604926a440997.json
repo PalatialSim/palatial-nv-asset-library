@@ -1,97 +1,72 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.087071999907494,
+        0.015777999535203,
+        0.032571740448475
+      ],
+      "min": [
+        -0.08746899664402,
+        -0.015886999666691,
+        0.000675740922816
+      ],
+      "size": [
+        0.174540996551514,
+        0.031664999201894,
+        0.031895999525659004
+      ]
+    },
+    "description": "A carving tool featuring a curved metal blade attached to a smooth, contoured wooden handle.",
+    "name": "generated reference 01",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.05
+  },
+  "asset_id": "D00977",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "generated reference 01",
-      "source_part_name": "generated reference 01",
-      "source_object_name": "generated reference 01",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "wood",
-      "material": "wood",
-      "mass": 0.05,
-      "density": 2924,
       "bounds": {
-        "min": [
-          -0.08746899664402,
-          -0.015886999666691,
-          0.000675740922816
+        "center": [
+          0.001565519708676,
+          3.5728987359e-05,
+          0.013566538852518
         ],
         "max": [
           0.087071999907494,
           0.015777999535203,
           0.032571740448475
         ],
-        "center": [
-          0.001565519708676,
-          3.5728987359e-05,
-          0.013566538852518
+        "min": [
+          -0.08746899664402,
+          -0.015886999666691,
+          0.000675740922816
         ]
       },
-      "description": "A carving tool featuring a curved metal blade attached to a smooth, contoured wooden handle.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The object is a wooden spoon knife with provided dimensions of approximately 0.18 x 0.043 x 0.043 m based on extents. The structure is a composite of wood (handle) and steel (blade). The dominant exterior surface is wood. Given the calculated voxel volume of 1.71e-05 m^3, a mass of 0.05 kg (typical for a small hand carving tool) implies an overall density of about 2924 kg/m^3, accounting for the heavy steel blade mixed with the lighter wooden handle. Friction (0.5 static / 0.4 dynamic) and restitution (0.3) values reflect hard polished wood and steel interacting with typical environments. Continuous Collision Detection (CCD) is enabled due to the object's small profile, which could cause tunneling during physics simulation if dropped. Convex decomposition is strictly required for the collision mesh to ensure the concave 'hook' section of the blade is accurately represented without being filled in by a simple convex hull.",
-      "static_friction": 0.5,
-      "dynamic_friction": 0.4,
-      "restitution": 0.3,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "collision": {},
+      "density": 2924,
+      "id": "part_00",
+      "mass": 0.05,
+      "material": "wood",
+      "name": "generated reference 01",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": "",
-      "appearance_properties": {},
-      "newton": {
-        "collisions": {
-          "collider_type": "convex_decomposition",
-          "rest_offset": 0,
-          "contact_offset": 0.002,
-          "explosion_view_distance": 0,
-          "collision_mesh_debug_visualization": false
-        },
-        "simulation_scene": {
-          "simulation_steps_per_second": 60,
-          "enable_ccd": true,
-          "gravitational_acceleration": [
-            0,
-            0,
-            -9.81
-          ],
-          "gpu_buffer_parameters": {},
-          "residuals": {}
-        }
+      "source": {
+        "object_name": "generated reference 01",
+        "part_name": "generated reference 01"
       }
     }
   ],
-  "joint_relations": [],
-  "base_link": "generated reference 01",
-  "fix_base": false,
-  "object_description": "A carving tool featuring a curved metal blade attached to a smooth, contoured wooden handle.",
-  "object_semantic": {
-    "qid": null
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {
+    "fix_base": false
   },
-  "total_mass": 0.05,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies",
-  "total_object_mass_kg": 0.05,
-  "_authoritative_context_applied": {
-    "object": {},
-    "parts": [
-      {
-        "part_index": 0,
-        "part_id": "part_00",
-        "fields": [
-          "bounds",
-          "canonical_name",
-          "material",
-          "part_id",
-          "part_index",
-          "source_object_name",
-          "source_part_name"
-        ]
-      }
-    ]
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
   }
 }

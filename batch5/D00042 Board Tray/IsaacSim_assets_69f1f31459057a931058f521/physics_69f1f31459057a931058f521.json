@@ -1,102 +1,81 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.17168200016021729,
+        0.12207300215959549,
+        0.03663000091910362
+      ],
+      "min": [
+        -0.18589499592781067,
+        -0.12190400063991547,
+        -0.00012799999967683107
+      ],
+      "size": [
+        0.35757699608802795,
+        0.24397700279951096,
+        0.036758000918780454
+      ]
+    },
+    "description": "A flat, rectangular white ceramic tray with raised edges and a single loop handle on one end. It features a smooth, matte finish typical of stoneware or porcelain.",
+    "name": "D00042 Board Tray",
+    "object_type": "rigid_bodies",
+    "total_mass": 1.0
+  },
+  "asset_id": "D00042",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00042 Board Tray",
-      "source_part_name": "D00042 Board Tray",
-      "source_object_name": "D00042 Board Tray",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "ceramic",
-      "material": "ceramic",
-      "non_visual_material": null,
-      "mass": 1.0,
-      "density": 2400.0,
-      "inertia": [
-        0.006171341963766915,
-        0.011504900978569559,
-        0.017616086526191586
-      ],
-      "inertia_axes": [
-        0.9999916357217733,
-        -3.6918333587712066e-06,
-        0.0018751487279221597,
-        -0.003634871402251006
-      ],
-      "center_of_mass": [
-        0.007526109432118022,
-        -0.00017344073667883517,
-        0.007062230942938342
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.0009910805011513447,
       "bounds": {
-        "min": [
-          -0.18589499592781067,
-          -0.12190400063991547,
-          -0.00012799999967683107
+        "center": [
+          0.005529665893342607,
+          3.011720536774315e-05,
+          0.014624004251352084
         ],
         "max": [
           0.17168200016021729,
           0.12207300215959549,
           0.03663000091910362
         ],
-        "center": [
-          0.005529665893342607,
-          3.011720536774315e-05,
-          0.014624004251352084
+        "min": [
+          -0.18589499592781067,
+          -0.12190400063991547,
+          -0.00012799999967683107
         ]
       },
-      "description": "A flat, rectangular white ceramic tray with raised edges and a single loop handle on one end. It features a smooth, matte finish typical of stoneware or porcelain.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The object appears to be a solid ceramic or stoneware tray. Ceramic density is typically estimated around 2400 kg/m^3. Assuming a standard dimension of approximately 30cm x 20cm x 2cm with a 5mm material thickness, the mass is estimated at roughly 1.0 kg. The matte ceramic surface suggests moderate frictional properties; therefore, static and dynamic friction coefficients are assigned values of 0.5 and 0.4, respectively. Restitution is estimated at 0.3, characteristic of hard, brittle materials that do not bounce significantly. For collision geometry, 'convex_decomposition' is necessary instead of a basic convex hull to accurately capture the concavity of the tray's resting area and the hole within the handle. Continuous Collision Detection (CCD) is enabled because the tray's thin walls and base are susceptible to tunneling effects in physics engines if subjected to high velocities or stacked under heavy loads. Contact offset is set to a standard 0.002m for PhysX stability, with a rest offset of 0.0m to maintain visual fidelity at contact.",
-      "static_friction": 0.5,
-      "dynamic_friction": 0.4,
-      "restitution": 0.3,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        0.007526109432118022,
+        -0.00017344073667883517,
+        0.007062230942938342
+      ],
+      "collision": {},
+      "density": 2400.0,
+      "id": "part_00",
+      "inertia": [
+        0.006171341963766915,
+        0.011504900978569559,
+        0.017616086526191586
+      ],
+      "mass": 1.0,
+      "material": "ceramic",
+      "name": "D00042 Board Tray",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": "",
-      "appearance_properties": {},
-      "newton": {
-        "collisions": {
-          "collider_type": "convex_decomposition",
-          "rest_offset": 0,
-          "contact_offset": 0.002,
-          "explosion_view_distance": 0,
-          "collision_mesh_debug_visualization": false
-        },
-        "simulation_scene": {
-          "simulation_steps_per_second": 60,
-          "enable_ccd": true,
-          "gravitational_acceleration": [
-            0,
-            0,
-            -9.81
-          ],
-          "gpu_buffer_parameters": {},
-          "residuals": {}
-        }
-      }
+      "source": {
+        "object_name": "D00042 Board Tray",
+        "part_name": "D00042 Board Tray"
+      },
+      "volume": 0.0009910805011513447
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00042 Board Tray",
-  "object_description": "A flat, rectangular white ceramic tray with raised edges and a single loop handle on one end. It features a smooth, matte finish typical of stoneware or porcelain.",
-  "object_semantic": {
-    "qid": null
-  },
-  "total_mass": 1.0,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies"
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  }
 }

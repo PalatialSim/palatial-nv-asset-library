@@ -1,119 +1,83 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.04712491,
+        0.01344046,
+        0.04845846
+      ],
+      "min": [
+        -0.04762803,
+        0.0,
+        -0.05652743
+      ],
+      "size": [
+        0.09475294000000001,
+        0.01344046,
+        0.10498589
+      ]
+    },
+    "description": "A single, square slice of golden-brown toasted bread with a textured, porous surface and slightly darker crust edges.",
+    "name": "generated reference 01",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.0375
+  },
+  "asset_id": "D00865",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "generated reference 01",
-      "source_part_name": "generated reference 01",
-      "source_object_name": "generated reference 01",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "toasted_bread",
-      "material": "toasted_bread",
-      "mass": 0.0375,
-      "density": 250.0,
-      "inertia": [
-        2.6430639284002796e-05,
-        3.203187683566298e-05,
-        5.7355185026175136e-05
-      ],
-      "inertia_axes": [
-        0.0003599314824911384,
-        0.6827860703330422,
-        0.7306181860575529,
-        -0.00034468893373999375
-      ],
-      "center_of_mass": [
-        -0.000561587840663684,
-        0.0019141445982874738,
-        0.006698520796524674
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.00012441874646948537,
       "bounds": {
-        "min": [
-          -0.04762803,
-          0.0,
-          -0.05652743
+        "center": [
+          -0.0005019434184590674,
+          0.006268171331778461,
+          -0.0023750069509203917
         ],
         "max": [
           0.04712491,
           0.01344046,
           0.04845846
         ],
-        "center": [
-          -0.0005019434184590674,
-          0.006268171331778461,
-          -0.0023750069509203917
+        "min": [
+          -0.04762803,
+          0.0,
+          -0.05652743
         ]
       },
-      "description": "A single, square slice of golden-brown toasted bread with a textured, porous surface and slightly darker crust edges.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The asset is a slice of toasted bread. Authoritative dimensions from the context are 0.1 x 0.015 x 0.1 m, giving a bounding volume of 0.00015 m^3. Using a standard density for baked bread of approximately 250 kg/m^3, the total mass is estimated at 0.0375 kg. The rough, dry, and porous nature of toasted bread dictates moderate friction coefficients (static 0.5, dynamic 0.4) and a very low restitution (0.1) since the material is inelastic and absorbs impacts rather than bouncing. Due to its thin profile (15 mm), Continuous Collision Detection (CCD) is enabled to prevent tunneling during physical interactions. A convex hull collision geometry is highly efficient and accurately encapsulates its block-like form factor.",
-      "static_friction": 0.5,
-      "dynamic_friction": 0.4,
-      "restitution": 0.1,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        -0.000561587840663684,
+        0.0019141445982874738,
+        0.006698520796524674
+      ],
+      "collision": {},
+      "density": 250.0,
+      "id": "part_00",
+      "inertia": [
+        2.6430639284002796e-05,
+        3.203187683566298e-05,
+        5.7355185026175136e-05
+      ],
+      "mass": 0.0375,
+      "material": "toasted_bread",
+      "name": "generated reference 01",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": "",
-      "appearance_properties": {},
-      "newton": {
-        "collisions": {
-          "collider_type": "convex_hull",
-          "rest_offset": 0,
-          "contact_offset": 0.001,
-          "explosion_view_distance": 0,
-          "collision_mesh_debug_visualization": false
-        },
-        "simulation_scene": {
-          "simulation_steps_per_second": 60,
-          "enable_ccd": true,
-          "gravitational_acceleration": [
-            0,
-            -9.81,
-            0
-          ],
-          "gpu_buffer_parameters": {},
-          "residuals": {}
-        }
-      }
+      "source": {
+        "object_name": "generated reference 01",
+        "part_name": "generated reference 01"
+      },
+      "volume": 0.00012441874646948537
     }
   ],
-  "joint_relations": [],
-  "base_link": "generated reference 01",
-  "fix_base": false,
-  "object_description": "A single, square slice of golden-brown toasted bread with a textured, porous surface and slightly darker crust edges.",
-  "object_semantic": {
-    "qid": null
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {
+    "fix_base": false
   },
-  "total_mass": 0.0375,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies",
-  "total_object_mass_kg": 0.0375,
-  "_authoritative_context_applied": {
-    "object": {},
-    "parts": [
-      {
-        "part_index": 0,
-        "part_id": "part_00",
-        "fields": [
-          "bounds",
-          "canonical_name",
-          "material",
-          "part_id",
-          "part_index",
-          "source_object_name",
-          "source_part_name"
-        ]
-      }
-    ]
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
   }
 }

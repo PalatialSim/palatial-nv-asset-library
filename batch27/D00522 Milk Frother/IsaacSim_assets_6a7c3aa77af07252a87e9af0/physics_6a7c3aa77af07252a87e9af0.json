@@ -1,119 +1,83 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.02501425,
+        0.02431141,
+        0.13258948
+      ],
+      "min": [
+        -0.02503173,
+        -0.02389495,
+        -0.13251027
+      ],
+      "size": [
+        0.05004598,
+        0.048206360000000004,
+        0.26509975
+      ]
+    },
+    "description": "A handheld milk frother featuring a cylindrical brushed metal handle with black plastic end caps and a rubberized power button. A thin metal shaft extends from the handle, terminating in a coiled wire whisk.",
+    "name": "D00522 Milk Frother",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.12
+  },
+  "asset_id": "D00522",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00522 Milk Frother",
-      "source_part_name": "D00522 Milk Frother",
-      "source_object_name": "D00522 Milk Frother",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "stainless_steel",
-      "material": "stainless_steel",
-      "mass": 0.12,
-      "density": 1954.0,
-      "inertia": [
-        2.7987756941562776e-05,
-        0.0006707471917363907,
-        0.0006713875833954645
-      ],
-      "inertia_axes": [
-        0.1767031947953283,
-        -0.6846414931438338,
-        0.6883340598217245,
-        -0.161982186996746
-      ],
-      "center_of_mass": [
-        -7.545526054288909e-05,
-        -0.012494878054149672,
-        0.0022080210765636978
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.00036962023211904076,
       "bounds": {
-        "min": [
-          -0.02503173,
-          -0.02389495,
-          -0.13251027
+        "center": [
+          2.665997074619382e-05,
+          0.0027686408450941003,
+          -0.027073300395717353
         ],
         "max": [
           0.02501425,
           0.02431141,
           0.13258948
         ],
-        "center": [
-          2.665997074619382e-05,
-          0.0027686408450941003,
-          -0.027073300395717353
+        "min": [
+          -0.02503173,
+          -0.02389495,
+          -0.13251027
         ]
       },
-      "description": "A handheld milk frother featuring a cylindrical brushed metal handle with black plastic end caps and a rubberized power button. A thin metal shaft extends from the handle, terminating in a coiled wire whisk.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The dominant material is brushed stainless steel for the handle and shaft. Mass is estimated at 0.12 kg, which is typical for such a device including internal batteries. Given the provided voxel volume of 6.14e-05 cubic meters, the density is calculated to be 1954 kg/m^3, accounting for the hollow casing and dense internal motor components. Friction coefficients (static: 0.45, dynamic: 0.4) reflect the smooth metal handle. Restitution is low (0.2) because the internal assembly dampens impacts. A convex_decomposition collider is essential to capture the thin shaft and whisk accurately without encapsulating the empty space around them. Continuous Collision Detection (CCD) is enabled to prevent the thin shaft from tunneling through solid objects during rapid movement. A small contact offset of 0.001m (1mm) is used for precision on this small item.",
-      "static_friction": 0.45,
-      "dynamic_friction": 0.4,
-      "restitution": 0.2,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        -7.545526054288909e-05,
+        -0.012494878054149672,
+        0.0022080210765636978
+      ],
+      "collision": {},
+      "density": 1954.0,
+      "id": "part_00",
+      "inertia": [
+        2.7987756941562776e-05,
+        0.0006707471917363907,
+        0.0006713875833954645
+      ],
+      "mass": 0.12,
+      "material": "stainless_steel",
+      "name": "D00522 Milk Frother",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": "",
-      "appearance_properties": {},
-      "newton": {
-        "collisions": {
-          "collider_type": "convex_decomposition",
-          "rest_offset": 0,
-          "contact_offset": 0.001,
-          "explosion_view_distance": 0,
-          "collision_mesh_debug_visualization": false
-        },
-        "simulation_scene": {
-          "simulation_steps_per_second": 60,
-          "enable_ccd": true,
-          "gravitational_acceleration": [
-            0,
-            0,
-            -9.81
-          ],
-          "gpu_buffer_parameters": {},
-          "residuals": {}
-        }
-      }
+      "source": {
+        "object_name": "D00522 Milk Frother",
+        "part_name": "D00522 Milk Frother"
+      },
+      "volume": 0.00036962023211904076
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00522 Milk Frother",
-  "fix_base": false,
-  "object_description": "A handheld milk frother featuring a cylindrical brushed metal handle with black plastic end caps and a rubberized power button. A thin metal shaft extends from the handle, terminating in a coiled wire whisk.",
-  "object_semantic": {
-    "qid": null
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {
+    "fix_base": false
   },
-  "total_mass": 0.12,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies",
-  "total_object_mass_kg": 0.12,
-  "_authoritative_context_applied": {
-    "object": {},
-    "parts": [
-      {
-        "part_index": 0,
-        "part_id": "part_00",
-        "fields": [
-          "bounds",
-          "canonical_name",
-          "material",
-          "part_id",
-          "part_index",
-          "source_object_name",
-          "source_part_name"
-        ]
-      }
-    ]
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
   }
 }

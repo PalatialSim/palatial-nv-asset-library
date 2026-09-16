@@ -1,75 +1,81 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.036947984248399734,
+        0.029177729040384293,
+        0.18614257872104645
+      ],
+      "min": [
+        -0.03688224032521248,
+        0.0,
+        -0.11660858243703842
+      ],
+      "size": [
+        0.07383022457361221,
+        0.029177729040384293,
+        0.30275116115808487
+      ]
+    },
+    "description": "A kitchen utensil featuring a light-colored wooden head with a shallow concave bowl and a flat leading edge, attached to a brushed stainless steel handle with a hanging hole.",
+    "name": "D00203 Cooking Spoon Spatula",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.12
+  },
+  "asset_id": "D00203",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00203 Cooking Spoon Spatula",
-      "source_part_name": "D00203 Cooking Spoon Spatula",
-      "source_object_name": "D00203 Cooking Spoon Spatula",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "stainless_steel",
-      "material": "stainless_steel",
-      "mass": 0.12,
-      "density": 1200.0,
-      "inertia": [
-        3.402792144881705e-05,
-        0.0006491001919579834,
-        0.000671264822216931
-      ],
-      "inertia_axes": [
-        0.707134699423685,
-        0.0031240196825553165,
-        0.003396450662125239,
-        -0.7070638029873241
-      ],
-      "center_of_mass": [
-        4.390531169350831e-05,
-        -0.003943719195583981,
-        0.016779813384378065
-      ],
-      "part_origin_world": [
-        4.390531169350831e-05,
-        -0.003943719195583981,
-        0.016779813384378065
-      ],
-      "volume": 0.000320146047631542,
       "bounds": {
-        "min": [
-          -0.03688224032521248,
-          0.0,
-          -0.11660858243703842
+        "center": [
+          3.8592517360596244e-05,
+          0.015814094944781094,
+          -0.0014591195323656288
         ],
         "max": [
           0.036947984248399734,
           0.029177729040384293,
           0.18614257872104645
         ],
-        "center": [
-          3.8592517360596244e-05,
-          0.015814094944781094,
-          -0.0014591195323656288
+        "min": [
+          -0.03688224032521248,
+          0.0,
+          -0.11660858243703842
         ]
       },
-      "description": "A kitchen utensil featuring a light-colored wooden head with a shallow concave bowl and a flat leading edge, attached to a brushed stainless steel handle with a hanging hole.",
-      "reasoning": "The object is a rigid, composite tool made of finished wood and stainless steel. The mass is estimated at 0.12 kg, which is typical for a sturdy kitchen utensil of this size (~30cm). The overall density is estimated at 1200 kg/m\u00b3, balancing the dense steel (which is likely hollow in the handle to maintain ergonomic balance) with the moderately dense wood. Friction coefficients are set moderately low (0.35 dynamic) reflecting the smooth, finished surfaces of both materials. Restitution is also low (0.4), as neither material is highly elastic. For Isaac Sim, the most critical parameter is the 'collider_type'. It must be set to 'convex_decomposition' to accurately capture the concave shape of the wooden bowl; a standard 'convex_hull' would span the gap, preventing the object from interacting properly with loose items (e.g., scooping). CCD is enabled to prevent tunneling during potentially fast manipulation tasks.",
-      "static_friction": 0.45,
-      "dynamic_friction": 0.35,
-      "restitution": 0.4,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        4.390531169350831e-05,
+        -0.003943719195583981,
+        0.016779813384378065
+      ],
+      "collision": {},
+      "density": 1200.0,
+      "id": "part_00",
+      "inertia": [
+        3.402792144881705e-05,
+        0.0006491001919579834,
+        0.000671264822216931
+      ],
+      "mass": 0.12,
+      "material": "stainless_steel",
+      "name": "D00203 Cooking Spoon Spatula",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": "",
-      "confidence": ""
+      "source": {
+        "object_name": "D00203 Cooking Spoon Spatula",
+        "part_name": "D00203 Cooking Spoon Spatula"
+      },
+      "volume": 0.000320146047631542
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00203 Cooking Spoon Spatula",
-  "object_description": "A kitchen utensil featuring a light-colored wooden head with a shallow concave bowl and a flat leading edge, attached to a brushed stainless steel handle with a hanging hole.",
-  "total_mass": 0.12,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies"
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  }
 }

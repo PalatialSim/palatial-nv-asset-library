@@ -1,81 +1,81 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.07457393407821655,
+        0.01928558759391308,
+        0.021981297060847282
+      ],
+      "min": [
+        -0.11302174627780914,
+        0.0,
+        -0.0220908522605896
+      ],
+      "size": [
+        0.1875956803560257,
+        0.01928558759391308,
+        0.04407214932143688
+      ]
+    },
+    "description": "A brushed stainless-steel spoon with an elongated tapered handle and a shallow oval bowl. The surface is silver, reflective, and smoothly rounded at the rim and handle end.",
+    "name": "D00900 Utensils Spoon",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.045
+  },
+  "asset_id": "D00900",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00900 Utensils Spoon",
-      "source_part_name": "D00900 Utensils Spoon",
-      "source_object_name": "D00900 Utensils Spoon",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "brushed_stainless_steel",
-      "material": "brushed_stainless_steel",
-      "non_visual_material": null,
-      "mass": 0.045,
-      "density": 7800.0,
-      "inertia": [
-        4.2169890494188536e-06,
-        9.141397427983246e-05,
-        9.444605361240344e-05
-      ],
-      "inertia_axes": [
-        0.00017396226486852647,
-        -0.999788312542468,
-        0.00012724395262677865,
-        -0.020573858403113238
-      ],
-      "center_of_mass": [
-        -0.003424226042392185,
-        6.31707495967397e-05,
-        0.008291043791505198
-      ],
-      "part_origin_world": [
-        -0.003424226042392185,
-        6.31707495967397e-05,
-        0.008291043791505198
-      ],
-      "volume": 5.9753294271181704e-05,
       "bounds": {
-        "min": [
-          -0.11302174627780914,
-          0.0,
-          -0.0220908522605896
+        "center": [
+          -0.0010425046528593739,
+          0.007233662801427796,
+          -6.483896016031526e-05
         ],
         "max": [
           0.07457393407821655,
           0.01928558759391308,
           0.021981297060847282
         ],
-        "center": [
-          -0.0010425046528593739,
-          0.007233662801427796,
-          -6.483896016031526e-05
+        "min": [
+          -0.11302174627780914,
+          0.0,
+          -0.0220908522605896
         ]
       },
-      "description": "A brushed stainless-steel spoon with an elongated tapered handle and a shallow oval bowl. The surface is silver, reflective, and smoothly rounded at the rim and handle end.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The object appears to be a single-piece stainless-steel table spoon. A typical dinner spoon of this form is about 0.18-0.20 m long, with an oval bowl roughly 0.055-0.065 m long, 0.040-0.045 m wide, and thin stamped metal thickness around 1.0-1.8 mm. Stainless steel density is approximately 7700-8000 kg/m^3; using 7800 kg/m^3 and an estimated solid metal volume of about 5.5-6.0 cm^3 gives a total mass near 0.043-0.047 kg, so 0.045 kg is a realistic rigid-body mass. The center of mass would lie closer to the bowl than the handle end, approximately 55-60% of the length from the handle tip, because the bowl and neck contain more material than the tapered handle. The dominant material is brushed stainless steel, so dry contact friction is moderate: a static coefficient around 0.50 and dynamic coefficient around 0.40 are suitable for generic hard surfaces. Restitution is set to 0.55: polished steel can rebound, but a thin spoon dissipates energy through vibration and ringing, so it should be less bouncy than a compact steel ball. For collision geometry, convex decomposition is preferred over a single convex hull because a single hull would bridge the concave spoon bowl and over-thicken the narrow handle. A multi-hull decomposition should use several hulls for the bowl, rim/neck, and handle; an SDF mesh would be more accurate for retaining the bowl cavity but is more expensive and usually unnecessary unless small objects must settle inside the bowl. The spoon is thin, so contact_offset is kept small at about 0.002 m with rest_offset 0.0 m to avoid excessive hovering while still generating stable contacts. CCD is recommended because the thin bowl rim and handle can tunnel through tables or bins when dropped or thrown at high velocity. For a small light metal object, 120 simulation steps per second improves contact stability during tumbling; 60 Hz is acceptable for slow handling. Compliant contacts are disabled because the spoon is treated as rigid stainless steel; any audible/elastic vibration is not modeled as deformation here. In practice, velocity limits such as roughly 10-15 m/s linear and 100-150 rad/s angular are reasonable for stability, with normal rigid-body sleep enabled after settling to improve performance.",
-      "static_friction": 0.5,
-      "dynamic_friction": 0.4,
-      "restitution": 0.55,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        -0.003424226042392185,
+        6.31707495967397e-05,
+        0.008291043791505198
+      ],
+      "collision": {},
+      "density": 7800.0,
+      "id": "part_00",
+      "inertia": [
+        4.2169890494188536e-06,
+        9.141397427983246e-05,
+        9.444605361240344e-05
+      ],
+      "mass": 0.045,
+      "material": "brushed_stainless_steel",
+      "name": "D00900 Utensils Spoon",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": ""
+      "source": {
+        "object_name": "D00900 Utensils Spoon",
+        "part_name": "D00900 Utensils Spoon"
+      },
+      "volume": 5.9753294271181704e-05
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00900 Utensils Spoon",
-  "object_description": "A brushed stainless-steel spoon with an elongated tapered handle and a shallow oval bowl. The surface is silver, reflective, and smoothly rounded at the rim and handle end.",
-  "object_semantic": {
-    "qid": null
-  },
-  "total_mass": 0.045,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies"
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  }
 }

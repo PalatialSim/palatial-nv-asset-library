@@ -1,102 +1,81 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.18304748,
+        0.24095803,
+        0.15265845
+      ],
+      "min": [
+        -0.18510106,
+        0.0,
+        -0.11928533
+      ],
+      "size": [
+        0.36814854,
+        0.24095803,
+        0.27194377999999997
+      ]
+    },
+    "description": "A white painted wooden bread box with a distressed finish. It features a curved roll-top door with a small handle and a hollow rectangular base.",
+    "name": "generated reference 01",
+    "object_type": "rigid_bodies",
+    "total_mass": 2.0
+  },
+  "asset_id": "D00082",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "generated reference 01",
-      "source_part_name": "generated reference 01",
-      "source_object_name": "generated reference 01",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "wood",
-      "material": "wood",
-      "non_visual_material": null,
-      "mass": 2.0,
-      "density": 500.0,
-      "inertia": [
-        0.02041764233645254,
-        0.030968137020776984,
-        0.03452986054030067
-      ],
-      "inertia_axes": [
-        0.21257332823939554,
-        -0.9771451135330405,
-        5.902252220674198e-05,
-        -6.112339557789461e-05
-      ],
-      "center_of_mass": [
-        -0.00102587423863265,
-        -0.009231260728653762,
-        0.11420990417585694
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.02243708420067457,
       "bounds": {
-        "min": [
-          -0.18510106,
-          0.0,
-          -0.11928533
+        "center": [
+          -0.000789614131818144,
+          0.12572915922748978,
+          -0.011686242969420944
         ],
         "max": [
           0.18304748,
           0.24095803,
           0.15265845
         ],
-        "center": [
-          -0.000789614131818144,
-          0.12572915922748978,
-          -0.011686242969420944
+        "min": [
+          -0.18510106,
+          0.0,
+          -0.11928533
         ]
       },
-      "description": "A white painted wooden bread box with a distressed finish. It features a curved roll-top door with a small handle and a hollow rectangular base.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The object is visibly constructed entirely from wood, likely a medium-density timber such as pine, finished with paint. Estimating standard dimensions of roughly 40x25x20cm and a panel thickness of ~1cm, a mass of 2.0 kg and density of 500 kg/m\u00b3 are appropriate. Wood friction is typically moderate (static 0.5, dynamic 0.4) and restitution is relatively low (0.4) as it absorbs impact without significant bounce. For Isaac Sim, the collision geometry must be set to 'convex_decomposition' to properly represent the hollow interior chamber; a standard convex hull would seal the front opening. If the roll-top door is rigged for physics, it represents a complex articulation requiring either a constraint path or modeled as interconnected hinged slats. Standard contact/rest offsets (e.g., 0.005m, 0.0m) are sufficient for stable resting behavior.",
-      "static_friction": 0.5,
-      "dynamic_friction": 0.4,
-      "restitution": 0.4,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        -0.00102587423863265,
+        -0.009231260728653762,
+        0.11420990417585694
+      ],
+      "collision": {},
+      "density": 500.0,
+      "id": "part_00",
+      "inertia": [
+        0.02041764233645254,
+        0.030968137020776984,
+        0.03452986054030067
+      ],
+      "mass": 2.0,
+      "material": "wood",
+      "name": "generated reference 01",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": "",
-      "appearance_properties": {},
-      "newton": {
-        "collisions": {
-          "collider_type": "convex_decomposition",
-          "rest_offset": 0,
-          "contact_offset": 0.005,
-          "explosion_view_distance": 0,
-          "collision_mesh_debug_visualization": false
-        },
-        "simulation_scene": {
-          "simulation_steps_per_second": 60,
-          "enable_ccd": false,
-          "gravitational_acceleration": [
-            0,
-            0,
-            -9.81
-          ],
-          "gpu_buffer_parameters": {},
-          "residuals": {}
-        }
-      }
+      "source": {
+        "object_name": "generated reference 01",
+        "part_name": "generated reference 01"
+      },
+      "volume": 0.02243708420067457
     }
   ],
-  "joint_relations": [],
-  "base_link": "generated reference 01",
-  "object_description": "A white painted wooden bread box with a distressed finish. It features a curved roll-top door with a small handle and a hollow rectangular base.",
-  "object_semantic": {
-    "qid": null
-  },
-  "total_mass": 2.0,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies"
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  }
 }

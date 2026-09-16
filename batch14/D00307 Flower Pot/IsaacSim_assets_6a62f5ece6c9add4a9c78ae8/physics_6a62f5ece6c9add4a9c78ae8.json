@@ -1,119 +1,83 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.09610471,
+        0.17212188,
+        0.09532969
+      ],
+      "min": [
+        -0.09655022,
+        0.0,
+        -0.09682886
+      ],
+      "size": [
+        0.19265493,
+        0.17212188,
+        0.19215854999999998
+      ]
+    },
+    "description": "A cylindrical terracotta flower pot with a tapered body and a thickened upper rim. The pot features a matte, earthy orange-brown surface texture.",
+    "name": "generated reference 01",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.54
+  },
+  "asset_id": "D00307",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "generated reference 01",
-      "source_part_name": "generated reference 01",
-      "source_object_name": "generated reference 01",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "terracotta",
-      "material": "terracotta",
-      "mass": 0.54,
-      "density": 1900.0,
-      "inertia": [
-        0.0028656052522260966,
-        0.0029383294037689327,
-        0.002945556323850981
-      ],
-      "inertia_axes": [
-        0.5436569442782178,
-        -0.4456229252992174,
-        -0.47679812196378385,
-        -0.5277507804614293
-      ],
-      "center_of_mass": [
-        -0.00015101286531951,
-        0.0020806004383920745,
-        0.08966017883719339
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.0009822161220982538,
       "bounds": {
-        "min": [
-          -0.09655022,
-          0.0,
-          -0.09682886
+        "center": [
+          -0.0002773212553525936,
+          0.08980643085374489,
+          -0.00048407050377293474
         ],
         "max": [
           0.09610471,
           0.17212188,
           0.09532969
         ],
-        "center": [
-          -0.0002773212553525936,
-          0.08980643085374489,
-          -0.00048407050377293474
+        "min": [
+          -0.09655022,
+          0.0,
+          -0.09682886
         ]
       },
-      "description": "A cylindrical terracotta flower pot with a tapered body and a thickened upper rim. The pot features a matte, earthy orange-brown surface texture.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "Based on the provided metadata, the asset is a standard terracotta flower pot with approximate dimensions of 0.2 x 0.17 x 0.2 meters (Y-up configuration). The voxel volume is reported as 0.000283 m^3. Terracotta (fired clay) has a typical density of roughly 1900 kg/m^3, which yields an estimated mass of approximately 0.54 kg. For Isaac Sim simulation, the collision geometry must use 'convex_decomposition' rather than a standard convex hull; this ensures the hollow interior is preserved, allowing other physics objects (like soil or plants) to be placed inside. The friction coefficients (static 0.65, dynamic 0.55) reflect the rough, unglazed, porous nature of terracotta. Restitution is kept low (0.15) because terracotta is rigid and brittle, exhibiting minimal bounce. A standard contact offset of 2mm (0.002) is applied to ensure stable resting behavior without noticeable visual floating. Continuous Collision Detection (CCD) is enabled to prevent the relatively thin walls from tunneling through other colliders if dropped or impacted at high velocities.",
-      "static_friction": 0.65,
-      "dynamic_friction": 0.55,
-      "restitution": 0.15,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        -0.00015101286531951,
+        0.0020806004383920745,
+        0.08966017883719339
+      ],
+      "collision": {},
+      "density": 1900.0,
+      "id": "part_00",
+      "inertia": [
+        0.0028656052522260966,
+        0.0029383294037689327,
+        0.002945556323850981
+      ],
+      "mass": 0.54,
+      "material": "terracotta",
+      "name": "generated reference 01",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": "",
-      "appearance_properties": {},
-      "newton": {
-        "collisions": {
-          "collider_type": "convex_decomposition",
-          "rest_offset": 0,
-          "contact_offset": 0.002,
-          "explosion_view_distance": 0,
-          "collision_mesh_debug_visualization": false
-        },
-        "simulation_scene": {
-          "simulation_steps_per_second": 60,
-          "enable_ccd": true,
-          "gravitational_acceleration": [
-            0,
-            0,
-            -9.81
-          ],
-          "gpu_buffer_parameters": {},
-          "residuals": {}
-        }
-      }
+      "source": {
+        "object_name": "generated reference 01",
+        "part_name": "generated reference 01"
+      },
+      "volume": 0.0009822161220982538
     }
   ],
-  "joint_relations": [],
-  "base_link": "generated reference 01",
-  "fix_base": false,
-  "object_description": "A cylindrical terracotta flower pot with a tapered body and a thickened upper rim. The pot features a matte, earthy orange-brown surface texture.",
-  "object_semantic": {
-    "qid": null
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {
+    "fix_base": false
   },
-  "total_mass": 0.54,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies",
-  "total_object_mass_kg": 0.54,
-  "_authoritative_context_applied": {
-    "object": {},
-    "parts": [
-      {
-        "part_index": 0,
-        "part_id": "part_00",
-        "fields": [
-          "bounds",
-          "canonical_name",
-          "material",
-          "part_id",
-          "part_index",
-          "source_object_name",
-          "source_part_name"
-        ]
-      }
-    ]
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
   }
 }

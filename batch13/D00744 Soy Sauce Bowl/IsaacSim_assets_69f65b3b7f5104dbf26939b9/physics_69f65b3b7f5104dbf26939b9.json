@@ -1,81 +1,81 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.044098999351263046,
+        0.04426800087094307,
+        0.044450998306274414
+      ],
+      "min": [
+        -0.044126998633146286,
+        -0.04394000023603439,
+        -3.000000106112566e-06
+      ],
+      "size": [
+        0.08822599798440933,
+        0.08820800110697746,
+        0.04445399830638053
+      ]
+    },
+    "description": "A small speckled cream-and-brown ceramic bowl with a rounded body, thick rolled rim, and narrow foot ring. The surface appears glazed with darker unglazed or stained ceramic exposed around the rim and base.",
+    "name": "D00744 Soy Sauce Bowl",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.35
+  },
+  "asset_id": "D00744",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00744 Soy Sauce Bowl",
-      "source_part_name": "D00744 Soy Sauce Bowl",
-      "source_object_name": "D00744 Soy Sauce Bowl",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "baked_bread",
-      "material": "baked_bread",
-      "non_visual_material": null,
-      "mass": 0.35,
-      "density": 2300.0,
-      "inertia": [
-        0.00025526779695668207,
-        0.00025804839779095277,
-        0.00040188354913600567
-      ],
-      "inertia_axes": [
-        0.6639552599447216,
-        -0.6645930056344608,
-        0.24214625954849459,
-        0.2425793450402649
-      ],
-      "center_of_mass": [
-        0.0003439203652718866,
-        -0.02141456717458293,
-        5.904506791441065e-05
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 5.327770268991963e-05,
       "bounds": {
-        "min": [
-          -0.044126998633146286,
-          -0.04394000023603439,
-          -3.000000106112566e-06
+        "center": [
+          -7.034335144884952e-05,
+          4.699380297318377e-05,
+          0.02277311562177068
         ],
         "max": [
           0.044098999351263046,
           0.04426800087094307,
           0.044450998306274414
         ],
-        "center": [
-          -7.034335144884952e-05,
-          4.699380297318377e-05,
-          0.02277311562177068
+        "min": [
+          -0.044126998633146286,
+          -0.04394000023603439,
+          -3.000000106112566e-06
         ]
       },
-      "description": "A small speckled cream-and-brown ceramic bowl with a rounded body, thick rolled rim, and narrow foot ring. The surface appears glazed with darker unglazed or stained ceramic exposed around the rim and base.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The object is a hollow ceramic/stoneware bowl with an open concave interior, thick rounded rim, and small circular foot. No product data is provided, so dimensions are estimated from appearance as approximately 0.12 m outer rim diameter, 0.055-0.065 m height, 4-6 mm wall thickness, and a 0.055-0.065 m base/foot diameter. Stoneware/ceramic material density is typically 2200-2400 kg/m^3; using 2300 kg/m^3 and an estimated shell material volume of roughly 1.4e-4 to 1.7e-4 m^3 gives a mass near 0.32-0.39 kg, so 0.35 kg is a realistic rigid-body mass. The bowl is concave, so a simple convex hull would seal the open top and prevent realistic interior contacts. For accurate contact with objects inside the bowl, an SDF mesh collider is preferred in Isaac Sim/PhysX; for higher performance, convex decomposition into several radial shell pieces plus a foot collider would be the recommended fallback. Ceramic/glazed surfaces are hard and moderately slippery, while the unglazed foot ring is rougher; a static friction of about 0.55 and dynamic friction of about 0.42 are appropriate for the whole object on common tabletop surfaces. Restitution is intentionally low at 0.20 because real ceramic is hard but dissipative and would chip or break rather than bounce significantly; this also improves simulation stability. Contact offset is set to 0.003 m, large enough for stable contact generation at this scale while still preserving visual alignment; rest offset is 0.0 m to avoid artificial hovering or shrinkage. CCD is enabled because the bowl has thin walls and a narrow foot that can tunnel during fast drops or robot-induced impacts. Compliant contacts are disabled for the nominal material because the bowl should behave as a rigid, brittle ceramic body; if impact softness is needed, use very stiff compliant contacts with high damping rather than low stiffness.",
-      "static_friction": 0.55,
-      "dynamic_friction": 0.42,
-      "restitution": 0.2,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        0.0003439203652718866,
+        -0.02141456717458293,
+        5.904506791441065e-05
+      ],
+      "collision": {},
+      "density": 2300.0,
+      "id": "part_00",
+      "inertia": [
+        0.00025526779695668207,
+        0.00025804839779095277,
+        0.00040188354913600567
+      ],
+      "mass": 0.35,
+      "material": "baked_bread",
+      "name": "D00744 Soy Sauce Bowl",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": ""
+      "source": {
+        "object_name": "D00744 Soy Sauce Bowl",
+        "part_name": "D00744 Soy Sauce Bowl"
+      },
+      "volume": 5.327770268991963e-05
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00744 Soy Sauce Bowl",
-  "object_description": "A small speckled cream-and-brown ceramic bowl with a rounded body, thick rolled rim, and narrow foot ring. The surface appears glazed with darker unglazed or stained ceramic exposed around the rim and base.",
-  "object_semantic": {
-    "qid": null
-  },
-  "total_mass": 0.35,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies"
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  }
 }

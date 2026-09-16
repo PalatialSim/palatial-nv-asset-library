@@ -1,119 +1,83 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.04444304,
+        0.09001918,
+        0.04468903
+      ],
+      "min": [
+        -0.04437272,
+        0.0,
+        -0.04466158
+      ],
+      "size": [
+        0.08881576,
+        0.09001918,
+        0.08935061
+      ]
+    },
+    "description": "A smooth, highly reflective polished metal sphere.",
+    "name": "specialist-current",
+    "object_type": "rigid_bodies",
+    "total_mass": 4.11
+  },
+  "asset_id": "D00509",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "specialist-current",
-      "source_part_name": "specialist-current",
-      "source_object_name": "specialist-current",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "polished_metal",
-      "material": "polished_metal",
-      "mass": 4.11,
-      "density": 7850.0,
-      "inertia": [
-        0.003275148550830151,
-        0.003296380171331466,
-        0.0033176910468336158
-      ],
-      "inertia_axes": [
-        0.711388132871027,
-        0.00355034740955838,
-        0.7027874407700715,
-        -0.0020328648254824603
-      ],
-      "center_of_mass": [
-        3.766254551481727e-05,
-        -1.0209379163112901e-05,
-        0.04508953695929932
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.00037605917765236427,
       "bounds": {
-        "min": [
-          -0.04437272,
-          0.0,
-          -0.04466158
+        "center": [
+          3.770314449254679e-05,
+          0.04508976634741509,
+          9.29107541738191e-06
         ],
         "max": [
           0.04444304,
           0.09001918,
           0.04468903
         ],
-        "center": [
-          3.770314449254679e-05,
-          0.04508976634741509,
-          9.29107541738191e-06
+        "min": [
+          -0.04437272,
+          0.0,
+          -0.04466158
         ]
       },
-      "description": "A smooth, highly reflective polished metal sphere.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The asset is defined as a polished metal sphere with dimensions 10 x 10 x 10 cm (0.1 x 0.1 x 0.1 m). Assuming it is solid steel or chrome, the volume of a 0.1m diameter sphere is approximately 0.0005236 m^3. Using a standard steel density of 7850 kg/m^3, the estimated mass is 4.11 kg. As a polished metal object, it has low friction coefficients (0.3 static, 0.2 dynamic) and a high coefficient of restitution (0.8) typical for hard steel collisions. Continuous Collision Detection (CCD) is enabled because a small, dense, spherical object is prone to high velocities and could otherwise tunnel through surfaces. A sphere approximation collider is chosen as it perfectly represents the object's geometry with optimal simulation performance.",
-      "static_friction": 0.3,
-      "dynamic_friction": 0.2,
-      "restitution": 0.8,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        3.766254551481727e-05,
+        -1.0209379163112901e-05,
+        0.04508953695929932
+      ],
+      "collision": {},
+      "density": 7850.0,
+      "id": "part_00",
+      "inertia": [
+        0.003275148550830151,
+        0.003296380171331466,
+        0.0033176910468336158
+      ],
+      "mass": 4.11,
+      "material": "polished_metal",
+      "name": "specialist-current",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": "",
-      "appearance_properties": {},
-      "newton": {
-        "collisions": {
-          "collider_type": "sphere_approximation",
-          "rest_offset": 0,
-          "contact_offset": 0.002,
-          "explosion_view_distance": 0,
-          "collision_mesh_debug_visualization": false
-        },
-        "simulation_scene": {
-          "simulation_steps_per_second": 60,
-          "enable_ccd": true,
-          "gravitational_acceleration": [
-            0,
-            0,
-            -9.81
-          ],
-          "gpu_buffer_parameters": {},
-          "residuals": {}
-        }
-      }
+      "source": {
+        "object_name": "specialist-current",
+        "part_name": "specialist-current"
+      },
+      "volume": 0.00037605917765236427
     }
   ],
-  "joint_relations": [],
-  "base_link": "specialist-current",
-  "fix_base": false,
-  "object_description": "A smooth, highly reflective polished metal sphere.",
-  "object_semantic": {
-    "qid": null
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {
+    "fix_base": false
   },
-  "total_mass": 4.11,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies",
-  "total_object_mass_kg": 4.11,
-  "_authoritative_context_applied": {
-    "object": {},
-    "parts": [
-      {
-        "part_index": 0,
-        "part_id": "part_00",
-        "fields": [
-          "bounds",
-          "canonical_name",
-          "material",
-          "part_id",
-          "part_index",
-          "source_object_name",
-          "source_part_name"
-        ]
-      }
-    ]
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
   }
 }

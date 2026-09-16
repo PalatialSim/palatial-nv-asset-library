@@ -1,119 +1,83 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.25993689,
+        0.08234499,
+        0.1287021
+      ],
+      "min": [
+        -0.15756309,
+        0.0,
+        -0.12813496
+      ],
+      "size": [
+        0.41749998,
+        0.08234499,
+        0.25683706
+      ]
+    },
+    "description": "A stainless steel frying pan with a circular, slightly tapered cooking vessel and an elongated, riveted metal handle.",
+    "name": "D00271 Dish Frying Pan",
+    "object_type": "rigid_bodies",
+    "total_mass": 4.24
+  },
+  "asset_id": "D00271",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00271 Dish Frying Pan",
-      "source_part_name": "D00271 Dish Frying Pan",
-      "source_object_name": "D00271 Dish Frying Pan",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "stainless_steel",
-      "material": "stainless_steel",
-      "mass": 4.24,
-      "density": 7900.0,
-      "inertia": [
-        0.014556467102242343,
-        0.03160168993691265,
-        0.04377227668961027
-      ],
-      "inertia_axes": [
-        0.9990117398906084,
-        -2.643196281405565e-05,
-        -0.044447019177678126,
-        7.31321410032925e-05
-      ],
-      "center_of_mass": [
-        0.007802396882346815,
-        -0.00023041661058937916,
-        0.03508726370887317
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.003365343919251707,
       "bounds": {
-        "min": [
-          -0.15756309,
-          0.0,
-          -0.12813496
+        "center": [
+          -0.009047772096925132,
+          0.020330077116146282,
+          0.00028747337812856985
         ],
         "max": [
           0.25993689,
           0.08234499,
           0.1287021
         ],
-        "center": [
-          -0.009047772096925132,
-          0.020330077116146282,
-          0.00028747337812856985
+        "min": [
+          -0.15756309,
+          0.0,
+          -0.12813496
         ]
       },
-      "description": "A stainless steel frying pan with a circular, slightly tapered cooking vessel and an elongated, riveted metal handle.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "Visual analysis indicates the object is a single piece of cookware, specifically a frying pan, constructed entirely of stainless steel. The provided telemetry indicates bounding box extents of approximately 0.47m x 0.10m x 0.40m, suggesting a large, professional-grade pan (roughly 12-14 inch diameter). Using the provided voxel volume of 0.000537 m^3 and a standard density for stainless steel (7900 kg/m^3), the estimated mass is approximately 4.24 kg, which aligns with heavy-duty, multi-clad commercial cookware. For collision geometry in Isaac Sim, a 'convex_decomposition' is highly recommended over a simple convex hull; a convex hull would cap the top of the pan, preventing objects from being placed inside it. Continuous Collision Detection (CCD) is enabled due to the thin walls of the pan and the narrow handle, which could be susceptible to tunneling at high velocities. Standard metallic friction (0.4) and low restitution (0.3) are applied.",
-      "static_friction": 0.4,
-      "dynamic_friction": 0.3,
-      "restitution": 0.3,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        0.007802396882346815,
+        -0.00023041661058937916,
+        0.03508726370887317
+      ],
+      "collision": {},
+      "density": 7900.0,
+      "id": "part_00",
+      "inertia": [
+        0.014556467102242343,
+        0.03160168993691265,
+        0.04377227668961027
+      ],
+      "mass": 4.24,
+      "material": "stainless_steel",
+      "name": "D00271 Dish Frying Pan",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": "",
-      "appearance_properties": {},
-      "newton": {
-        "collisions": {
-          "collider_type": "convex_decomposition",
-          "rest_offset": 0,
-          "contact_offset": 0.002,
-          "explosion_view_distance": 0,
-          "collision_mesh_debug_visualization": false
-        },
-        "simulation_scene": {
-          "simulation_steps_per_second": 60,
-          "enable_ccd": true,
-          "gravitational_acceleration": [
-            0,
-            -9.81,
-            0
-          ],
-          "gpu_buffer_parameters": {},
-          "residuals": {}
-        }
-      }
+      "source": {
+        "object_name": "D00271 Dish Frying Pan",
+        "part_name": "D00271 Dish Frying Pan"
+      },
+      "volume": 0.003365343919251707
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00271 Dish Frying Pan",
-  "fix_base": false,
-  "object_description": "A stainless steel frying pan with a circular, slightly tapered cooking vessel and an elongated, riveted metal handle.",
-  "object_semantic": {
-    "qid": null
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {
+    "fix_base": false
   },
-  "total_mass": 4.24,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies",
-  "total_object_mass_kg": 4.24,
-  "_authoritative_context_applied": {
-    "object": {},
-    "parts": [
-      {
-        "part_index": 0,
-        "part_id": "part_00",
-        "fields": [
-          "bounds",
-          "canonical_name",
-          "material",
-          "part_id",
-          "part_index",
-          "source_object_name",
-          "source_part_name"
-        ]
-      }
-    ]
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
   }
 }

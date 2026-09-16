@@ -1,97 +1,72 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.06207200139761,
+        0.176025003194809,
+        0.016121309716254
+      ],
+      "min": [
+        -0.062474001199007,
+        -0.135453999042511,
+        0.001147309963471
+      ],
+      "size": [
+        0.124546002596617,
+        0.31147900223731995,
+        0.014973999752783
+      ]
+    },
+    "description": "A rectangular wooden cutting board with rounded corners and a paddle-style handle featuring a hanging hole.",
+    "name": "generated reference 01",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.3
+  },
+  "asset_id": "D00972",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "generated reference 01",
-      "source_part_name": "generated reference 01",
-      "source_object_name": "generated reference 01",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "wood",
-      "material": "wood",
-      "mass": 0.3,
-      "density": 700,
       "bounds": {
-        "min": [
-          -0.062474001199007,
-          -0.135453999042511,
-          0.001147309963471
+        "center": [
+          -0.000200999900699,
+          0.020285502076149,
+          0.008634309839863
         ],
         "max": [
           0.06207200139761,
           0.176025003194809,
           0.016121309716254
         ],
-        "center": [
-          -0.000200999900699,
-          0.020285502076149,
-          0.008634309839863
+        "min": [
+          -0.062474001199007,
+          -0.135453999042511,
+          0.001147309963471
         ]
       },
-      "description": "A rectangular wooden cutting board with rounded corners and a paddle-style handle featuring a hanging hole.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The object is a solid wooden board (likely bamboo, based on the grain pattern) intended for use as a cutting or serving board. The provided metadata specifies dimensions of approximately 0.3m x 0.15m x 0.015m. Hardwood and bamboo typically have a density around 700 kg/m\u00b3. Accounting for the handle shape and rounded corners, the actual volume is roughly 70% of its bounding box (approx 0.00043 m\u00b3), yielding a mass of approximately 0.3 kg. Wood has moderate friction properties, suitable for resting stably on countertops but allowing sliding when pushed, leading to an estimated static friction of 0.5 and dynamic friction of 0.4. Restitution is kept relatively low (0.3) because wood absorbs impacts well. Continuous Collision Detection (CCD) is enabled since this is a relatively thin and lightweight object that could be manipulated quickly in robotic simulations. Convex decomposition is selected for the collider to accurately represent the handle profile and the hole, which might be necessary for manipulation tasks like grasping or hanging.",
-      "static_friction": 0.5,
-      "dynamic_friction": 0.4,
-      "restitution": 0.3,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "collision": {},
+      "density": 700,
+      "id": "part_00",
+      "mass": 0.3,
+      "material": "wood",
+      "name": "generated reference 01",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": "",
-      "appearance_properties": {},
-      "newton": {
-        "collisions": {
-          "collider_type": "convex_decomposition",
-          "rest_offset": 0,
-          "contact_offset": 0.002,
-          "explosion_view_distance": 0,
-          "collision_mesh_debug_visualization": false
-        },
-        "simulation_scene": {
-          "simulation_steps_per_second": 60,
-          "enable_ccd": true,
-          "gravitational_acceleration": [
-            0,
-            -9.81,
-            0
-          ],
-          "gpu_buffer_parameters": {},
-          "residuals": {}
-        }
+      "source": {
+        "object_name": "generated reference 01",
+        "part_name": "generated reference 01"
       }
     }
   ],
-  "joint_relations": [],
-  "base_link": "generated reference 01",
-  "fix_base": false,
-  "object_description": "A rectangular wooden cutting board with rounded corners and a paddle-style handle featuring a hanging hole.",
-  "object_semantic": {
-    "qid": null
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {
+    "fix_base": false
   },
-  "total_mass": 0.3,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies",
-  "total_object_mass_kg": 0.3,
-  "_authoritative_context_applied": {
-    "object": {},
-    "parts": [
-      {
-        "part_index": 0,
-        "part_id": "part_00",
-        "fields": [
-          "bounds",
-          "canonical_name",
-          "material",
-          "part_id",
-          "part_index",
-          "source_object_name",
-          "source_part_name"
-        ]
-      }
-    ]
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
   }
 }

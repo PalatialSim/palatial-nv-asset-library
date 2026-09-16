@@ -1,102 +1,81 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.2162315994501114,
+        0.13911673426628113,
+        0.038261529058218
+      ],
+      "min": [
+        -0.18939557671546936,
+        -0.13900543749332428,
+        3.3891105886141304e-06
+      ],
+      "size": [
+        0.40562717616558075,
+        0.2781221717596054,
+        0.03825813994762939
+      ]
+    },
+    "description": "A rectangular, dark grey metallic 12-cup muffin pan with a wide flange on one end containing a hanging hole.",
+    "name": "D00541 Muffin Tray",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.6
+  },
+  "asset_id": "D00541",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00541 Muffin Tray",
-      "source_part_name": "D00541 Muffin Tray",
-      "source_object_name": "D00541 Muffin Tray",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "non_stick_coated_carbon_steel",
-      "material": "non_stick_coated_carbon_steel",
-      "non_visual_material": null,
-      "mass": 0.6,
-      "density": 7850.0,
-      "inertia": [
-        0.003347361650071927,
-        0.00656517401256658,
-        0.009772980359102994
-      ],
-      "inertia_axes": [
-        2.6217466665832225e-05,
-        -0.9999997398550271,
-        0.0001918371568080678,
-        -0.0006948388503307705
-      ],
-      "center_of_mass": [
-        0.0014716592675083817,
-        4.155019062649599e-05,
-        0.020093955962805596
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.003559558878712945,
       "bounds": {
-        "min": [
-          -0.18939557671546936,
-          -0.13900543749332428,
-          3.3891105886141304e-06
+        "center": [
+          -0.0008486794648220641,
+          1.356573010443729e-05,
+          0.0226381747151459
         ],
         "max": [
           0.2162315994501114,
           0.13911673426628113,
           0.038261529058218
         ],
-        "center": [
-          -0.0008486794648220641,
-          1.356573010443729e-05,
-          0.0226381747151459
+        "min": [
+          -0.18939557671546936,
+          -0.13900543749332428,
+          3.3891105886141304e-06
         ]
       },
-      "description": "A rectangular, dark grey metallic 12-cup muffin pan with a wide flange on one end containing a hanging hole.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The object is a standard 12-cup baking pan, typically constructed from carbon steel or aluminum with a non-stick (Teflon or similar) coating. The dark, slightly matte finish is characteristic of non-stick carbon steel, which dictates its density and mass. A typical pan of this size and material weighs approximately 0.6 kg. The non-stick coating significantly lowers the friction coefficients compared to raw metal, resulting in estimated static and dynamic friction of 0.3 and 0.2, respectively. The thin-walled metallic structure will have moderate to low restitution (0.3) due to energy dissipation upon impact. For rigid body simulation in Isaac Sim, capturing the concavity of the 12 cups is crucial if objects are to interact with or be placed inside them; therefore, a 'convex_decomposition' collider is necessary rather than a simple convex hull. Continuous Collision Detection (CCD) is recommended if the simulation involves small or fast-moving objects (like simulated ingredients) interacting with the pan.",
-      "static_friction": 0.3,
-      "dynamic_friction": 0.2,
-      "restitution": 0.3,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        0.0014716592675083817,
+        4.155019062649599e-05,
+        0.020093955962805596
+      ],
+      "collision": {},
+      "density": 7850.0,
+      "id": "part_00",
+      "inertia": [
+        0.003347361650071927,
+        0.00656517401256658,
+        0.009772980359102994
+      ],
+      "mass": 0.6,
+      "material": "non_stick_coated_carbon_steel",
+      "name": "D00541 Muffin Tray",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": "",
-      "appearance_properties": {},
-      "newton": {
-        "collisions": {
-          "collider_type": "convex_decomposition",
-          "rest_offset": 0,
-          "contact_offset": 0.001,
-          "explosion_view_distance": 0,
-          "collision_mesh_debug_visualization": false
-        },
-        "simulation_scene": {
-          "simulation_steps_per_second": 60,
-          "enable_ccd": true,
-          "gravitational_acceleration": [
-            0,
-            0,
-            -9.81
-          ],
-          "gpu_buffer_parameters": {},
-          "residuals": {}
-        }
-      }
+      "source": {
+        "object_name": "D00541 Muffin Tray",
+        "part_name": "D00541 Muffin Tray"
+      },
+      "volume": 0.003559558878712945
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00541 Muffin Tray",
-  "object_description": "A rectangular, dark grey metallic 12-cup muffin pan with a wide flange on one end containing a hanging hole.",
-  "object_semantic": {
-    "qid": null
-  },
-  "total_mass": 0.6,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies"
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  }
 }

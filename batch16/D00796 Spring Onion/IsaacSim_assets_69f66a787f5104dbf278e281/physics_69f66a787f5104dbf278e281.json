@@ -1,102 +1,81 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.173483997583389,
+        0.04891100153327,
+        0.112812876729474
+      ],
+      "min": [
+        -0.209049999713898,
+        -0.057463001459837,
+        0.001027875375182
+      ],
+      "size": [
+        0.382533997297287,
+        0.10637400299310701,
+        0.11178500135429201
+      ]
+    },
+    "description": "A fresh green onion featuring a white bulb with fine fibrous roots at the base, transitioning into long, tubular green leaves.",
+    "name": "D00796 Spring Onion",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.02
+  },
+  "asset_id": "D00796",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00796 Spring Onion",
-      "source_part_name": "D00796 Spring Onion",
-      "source_object_name": "D00796 Spring Onion",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "organic_plant_matter",
-      "material": "organic_plant_matter",
-      "non_visual_material": null,
-      "mass": 0.02,
-      "density": 800.0,
-      "inertia": [
-        1.6271077964858345e-05,
-        0.00019763945901872735,
-        0.00019805571691832772
-      ],
-      "inertia_axes": [
-        0.7866814028374632,
-        -0.6166846530988688,
-        0.020911943171491254,
-        0.019877114851033252
-      ],
-      "center_of_mass": [
-        -0.044939339160919,
-        -0.000707548402715,
-        0.056637600064278
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.0006470994240323475,
       "bounds": {
-        "min": [
-          -0.209049999713898,
-          -0.057463001459837,
-          0.001027875375182
+        "center": [
+          -0.056017283886358,
+          -0.00040682334187,
+          0.060167874065486
         ],
         "max": [
           0.173483997583389,
           0.04891100153327,
           0.112812876729474
         ],
-        "center": [
-          -0.056017283886358,
-          -0.00040682334187,
-          0.060167874065486
+        "min": [
+          -0.209049999713898,
+          -0.057463001459837,
+          0.001027875375182
         ]
       },
-      "description": "A fresh green onion featuring a white bulb with fine fibrous roots at the base, transitioning into long, tubular green leaves.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The mass (0.02 kg) and density (800 kg/m\u00b3) are estimated based on typical fresh produce, which has high water content but is partially hollow in the leafy sections. The friction coefficients (static 0.4, dynamic 0.3) are chosen to simulate a smooth, slightly waxy organic surface that provides moderate grip. Restitution is set very low (0.1) because plant matter tends to absorb impacts and deform rather than bounce. Continuous Collision Detection (CCD) is enabled due to the thinness of the leaves and roots, which are prone to tunneling through other colliders at high velocities. A convex decomposition collider is highly recommended over a simple convex hull; a single hull would bridge the gaps between the individual green leaves, preventing a robotic gripper from correctly interlacing or grasping individual stalks.",
-      "static_friction": 0.4,
-      "dynamic_friction": 0.3,
-      "restitution": 0.1,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        -0.044939339160919,
+        -0.000707548402715,
+        0.056637600064278
+      ],
+      "collision": {},
+      "density": 800.0,
+      "id": "part_00",
+      "inertia": [
+        1.6271077964858345e-05,
+        0.00019763945901872735,
+        0.00019805571691832772
+      ],
+      "mass": 0.02,
+      "material": "organic_plant_matter",
+      "name": "D00796 Spring Onion",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": "",
-      "appearance_properties": {},
-      "newton": {
-        "collisions": {
-          "collider_type": "convex_decomposition",
-          "rest_offset": 0,
-          "contact_offset": 0.002,
-          "explosion_view_distance": 0,
-          "collision_mesh_debug_visualization": false
-        },
-        "simulation_scene": {
-          "simulation_steps_per_second": 60,
-          "enable_ccd": true,
-          "gravitational_acceleration": [
-            0,
-            0,
-            -9.81
-          ],
-          "gpu_buffer_parameters": {},
-          "residuals": {}
-        }
-      }
+      "source": {
+        "object_name": "D00796 Spring Onion",
+        "part_name": "D00796 Spring Onion"
+      },
+      "volume": 0.0006470994240323475
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00796 Spring Onion",
-  "object_description": "A fresh green onion featuring a white bulb with fine fibrous roots at the base, transitioning into long, tubular green leaves.",
-  "object_semantic": {
-    "qid": null
-  },
-  "total_mass": 0.02,
-  "center_of_mass": null,
-  "inertia": null,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies"
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  }
 }

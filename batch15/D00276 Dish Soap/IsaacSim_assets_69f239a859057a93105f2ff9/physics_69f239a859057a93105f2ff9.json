@@ -1,119 +1,83 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.04537414,
+        0.23144188,
+        0.02888257
+      ],
+      "min": [
+        -0.04397307,
+        0.0,
+        -0.03601025
+      ],
+      "size": [
+        0.08934721000000001,
+        0.23144188,
+        0.06489282
+      ]
+    },
+    "description": "A white plastic bottle with a grey plastic flip-top cap and a paper label. The body features ergonomic indentations on the sides for grip.",
+    "name": "D00276 Dish Soap",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.55
+  },
+  "asset_id": "D00276",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00276 Dish Soap",
-      "source_part_name": "D00276 Dish Soap",
-      "source_object_name": "D00276 Dish Soap",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "plastic",
-      "material": "plastic",
-      "mass": 0.55,
-      "density": 1030.0,
-      "inertia": [
-        0.0003683375702412413,
-        0.0020587328340202723,
-        0.0021912886786976792
-      ],
-      "inertia_axes": [
-        0.4738013044578263,
-        -0.5153413813601014,
-        -0.5063451379222107,
-        -0.5035376707401963
-      ],
-      "center_of_mass": [
-        -0.0003212803352240017,
-        0.0005253964333701436,
-        0.10295418545478628
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.0008200657138539496,
       "bounds": {
-        "min": [
-          -0.04397307,
-          0.0,
-          -0.03601025
+        "center": [
+          0.00020159357112511735,
+          0.10138256071215822,
+          0.0005325289228594695
         ],
         "max": [
           0.04537414,
           0.23144188,
           0.02888257
         ],
-        "center": [
-          0.00020159357112511735,
-          0.10138256071215822,
-          0.0005325289228594695
+        "min": [
+          -0.04397307,
+          0.0,
+          -0.03601025
         ]
       },
-      "description": "A white plastic bottle with a grey plastic flip-top cap and a paper label. The body features ergonomic indentations on the sides for grip.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The object is a dish soap bottle with a clear '500ml' label. Assuming it is full, 500ml of liquid dish soap (density ~1.03 g/cm\u00b3) weighs approximately 0.515 kg. Factoring in the weight of the plastic bottle and cap, the total mass is estimated at 0.55 kg. The dominant contact material is plastic. The friction coefficients (0.4 static, 0.35 dynamic) are typical for smooth plastic surfaces. Restitution is kept low (0.3) because a liquid-filled plastic bottle absorbs impact energy rather than bouncing elastically. For collision geometry, 'convex_decomposition' is recommended to capture the concave neck area beneath the cap, ensuring accurate grasping and resting behavior. Continuous Collision Detection (CCD) is enabled to prevent tunneling if the object is dropped.",
-      "static_friction": 0.4,
-      "dynamic_friction": 0.35,
-      "restitution": 0.3,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        -0.0003212803352240017,
+        0.0005253964333701436,
+        0.10295418545478628
+      ],
+      "collision": {},
+      "density": 1030.0,
+      "id": "part_00",
+      "inertia": [
+        0.0003683375702412413,
+        0.0020587328340202723,
+        0.0021912886786976792
+      ],
+      "mass": 0.55,
+      "material": "plastic",
+      "name": "D00276 Dish Soap",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": "",
-      "appearance_properties": {},
-      "newton": {
-        "collisions": {
-          "collider_type": "convex_decomposition",
-          "rest_offset": 0,
-          "contact_offset": 0.002,
-          "explosion_view_distance": 0.05,
-          "collision_mesh_debug_visualization": false
-        },
-        "simulation_scene": {
-          "simulation_steps_per_second": 60,
-          "enable_ccd": true,
-          "gravitational_acceleration": [
-            0,
-            -9.81,
-            0
-          ],
-          "gpu_buffer_parameters": {},
-          "residuals": {}
-        }
-      }
+      "source": {
+        "object_name": "D00276 Dish Soap",
+        "part_name": "D00276 Dish Soap"
+      },
+      "volume": 0.0008200657138539496
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00276 Dish Soap",
-  "fix_base": false,
-  "object_description": "A white plastic bottle with a grey plastic flip-top cap and a paper label. The body features ergonomic indentations on the sides for grip.",
-  "object_semantic": {
-    "qid": null
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {
+    "fix_base": false
   },
-  "total_mass": 0.55,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies",
-  "total_object_mass_kg": 0.55,
-  "_authoritative_context_applied": {
-    "object": {},
-    "parts": [
-      {
-        "part_index": 0,
-        "part_id": "part_00",
-        "fields": [
-          "bounds",
-          "canonical_name",
-          "material",
-          "part_id",
-          "part_index",
-          "source_object_name",
-          "source_part_name"
-        ]
-      }
-    ]
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
   }
 }

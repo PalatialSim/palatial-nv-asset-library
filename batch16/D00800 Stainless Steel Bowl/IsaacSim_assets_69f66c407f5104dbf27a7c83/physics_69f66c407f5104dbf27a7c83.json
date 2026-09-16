@@ -1,119 +1,83 @@
 {
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "asset": {
+    "bounds": {
+      "max": [
+        0.09958347053777489,
+        0.08300615604227224,
+        0.09948951955329541
+      ],
+      "min": [
+        -0.0994640253494133,
+        -1.409470008784119e-05,
+        -0.09942354036914666
+      ],
+      "size": [
+        0.19904749588718817,
+        0.08302025074236008,
+        0.19891305992244207
+      ]
+    },
+    "description": "A bowl with an off-white matte ceramic body and a thick brushed stainless steel rim.",
+    "name": "D00800 Stainless Steel Bowl",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.5
+  },
+  "asset_id": "D00800",
   "parts": [
     {
-      "canonical_name": "part_00",
-      "part_name": "D00800 Stainless Steel Bowl",
-      "source_part_name": "D00800 Stainless Steel Bowl",
-      "source_object_name": "D00800 Stainless Steel Bowl",
-      "part_index": 0,
-      "part_id": "part_00",
-      "material_name": "ceramic",
-      "material": "ceramic",
-      "mass": 0.5,
-      "density": 2500.0,
-      "inertia": [
-        0.0011776473097289762,
-        0.0011783518215138494,
-        0.001870519394959494
-      ],
-      "inertia_axes": [
-        0.958391281657496,
-        0.00012305245375338668,
-        -0.00020326184809049685,
-        0.28545769351274597
-      ],
-      "center_of_mass": [
-        -2.945841942059735e-05,
-        -0.00012056491960281887,
-        0.04795514614287768
-      ],
-      "part_origin_world": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "volume": 0.0017459513882129869,
       "bounds": {
-        "min": [
-          -0.0994640253494133,
-          -1.409470008784119e-05,
-          -0.09942354036914666
+        "center": [
+          2.9421550040085868e-05,
+          0.04104970660551623,
+          2.564280382454958e-05
         ],
         "max": [
           0.09958347053777489,
           0.08300615604227224,
           0.09948951955329541
         ],
-        "center": [
-          2.9421550040085868e-05,
-          0.04104970660551623,
-          2.564280382454958e-05
+        "min": [
+          -0.0994640253494133,
+          -1.409470008784119e-05,
+          -0.09942354036914666
         ]
       },
-      "description": "A bowl with an off-white matte ceramic body and a thick brushed stainless steel rim.",
-      "semantic": {
-        "qid": null
-      },
-      "reasoning": "The asset is described as a 'stainless steel bowl, ceramic or porcelain' and visually features a dominant off-white ceramic body with a metal rim. The object bounds are approximately 20x20x8 cm. Based on the provided voxel volume of 0.000186 m^3 and assuming ceramic as the primary structural and contact material (density ~2500 kg/m^3), the estimated mass is approximately 0.47 kg, which is rounded to 0.5 kg. Ceramic surfaces typically exhibit moderate friction and low restitution due to their rigidity. For collision geometry in Isaac Sim, a 'convex_decomposition' is necessary to preserve the concave interior cavity of the bowl; a standard convex hull would artificially close off the opening. Continuous Collision Detection (CCD) is recommended to prevent tunneling of small or fast-moving objects through the bowl's relatively thin walls.",
-      "static_friction": 0.5,
-      "dynamic_friction": 0.4,
-      "restitution": 0.25,
-      "friction_combine_mode": "average",
-      "restitution_combine_mode": "average",
+      "center_of_mass": [
+        -2.945841942059735e-05,
+        -0.00012056491960281887,
+        0.04795514614287768
+      ],
+      "collision": {},
+      "density": 2500.0,
+      "id": "part_00",
+      "inertia": [
+        0.0011776473097289762,
+        0.0011783518215138494,
+        0.001870519394959494
+      ],
+      "mass": 0.5,
+      "material": "ceramic",
+      "name": "D00800 Stainless Steel Bowl",
       "physics_type": "rigid",
-      "is_structural_root": true,
-      "color_name": "",
-      "appearance_properties": {},
-      "newton": {
-        "collisions": {
-          "collider_type": "convex_decomposition",
-          "rest_offset": 0,
-          "contact_offset": 0.002,
-          "explosion_view_distance": 0,
-          "collision_mesh_debug_visualization": false
-        },
-        "simulation_scene": {
-          "simulation_steps_per_second": 60,
-          "enable_ccd": true,
-          "gravitational_acceleration": [
-            0,
-            0,
-            -9.81
-          ],
-          "gpu_buffer_parameters": {},
-          "residuals": {}
-        }
-      }
+      "source": {
+        "object_name": "D00800 Stainless Steel Bowl",
+        "part_name": "D00800 Stainless Steel Bowl"
+      },
+      "volume": 0.0017459513882129869
     }
   ],
-  "joint_relations": [],
-  "base_link": "D00800 Stainless Steel Bowl",
-  "fix_base": false,
-  "object_description": "A bowl with an off-white matte ceramic body and a thick brushed stainless steel rim.",
-  "object_semantic": {
-    "qid": null
+  "provenance": {},
+  "schema_version": "1.0",
+  "simulation": {
+    "fix_base": false
   },
-  "total_mass": 0.5,
-  "overall_assessment": "",
-  "num_parts": 1,
-  "object_type": "rigid_bodies",
-  "total_object_mass_kg": 0.5,
-  "_authoritative_context_applied": {
-    "object": {},
-    "parts": [
-      {
-        "part_index": 0,
-        "part_id": "part_00",
-        "fields": [
-          "bounds",
-          "canonical_name",
-          "material",
-          "part_id",
-          "part_index",
-          "source_object_name",
-          "source_part_name"
-        ]
-      }
-    ]
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
   }
 }
