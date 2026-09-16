@@ -42,6 +42,8 @@ jobs:
               cp -a "$batch" _site/
             fi
           done
+          # The gallery is published at the site root; remove the source-tree parent hop.
+          sed -i 's#\.\./batch#batch#g; s#\.\./validation-videos#validation-videos#g' _site/index.html _site/assets.json
           touch _site/.nojekyll
       - name: Upload gallery artifact
         uses: actions/upload-pages-artifact@v3
