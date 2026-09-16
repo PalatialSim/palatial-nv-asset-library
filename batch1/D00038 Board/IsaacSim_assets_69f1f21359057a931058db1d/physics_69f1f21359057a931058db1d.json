@@ -1,0 +1,139 @@
+{
+  "schema_version": "1.0",
+  "asset_id": "D00038",
+  "asset": {
+    "name": "D00038 Board",
+    "description": "A glossy white rectangular tray with rounded corners, a shallow recessed center, and a raised rim. The surface appears to be glazed ceramic or porcelain with a smooth, hard finish.",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.75,
+    "bounds": {
+      "min": [
+        -0.076049,
+        -0.126915,
+        -0.000144
+      ],
+      "max": [
+        0.076412,
+        0.12768,
+        0.018352
+      ],
+      "size": [
+        0.152461,
+        0.254595,
+        0.018496
+      ]
+    }
+  },
+  "parts": [
+    {
+      "id": "part_00",
+      "name": "D00038 Board",
+      "mass": 0.75,
+      "density": 2300.0,
+      "volume": 0.0006632057664544364,
+      "inertia": [
+        0.0014165533798542627,
+        0.003962586531552945,
+        0.0053412811147653455
+      ],
+      "inertia_axes": [
+        0.0017648199185307941,
+        -0.7054841526603464,
+        -0.7087234909976309,
+        -9.520451281468123e-05
+      ],
+      "center_of_mass": [
+        0.00045430010633421036,
+        -0.00014315977163105667,
+        0.009199397081458182
+      ],
+      "bounds": {
+        "min": [
+          -0.076049,
+          -0.126915,
+          -0.000144
+        ],
+        "max": [
+          0.076412,
+          0.12768,
+          0.018352
+        ],
+        "size": [
+          0.152461,
+          0.254595,
+          0.018496
+        ]
+      },
+      "material": "glazed_ceramic",
+      "physics_type": "rigid",
+      "source": {
+        "object_name": "D00038 Board",
+        "part_name": "D00038 Board"
+      },
+      "collision": {},
+      "reasoning": "The object appears to be a shallow rectangular serving tray/platter with rounded edges and a raised lip. No product dimensions are provided, so I estimate a typical size of roughly 0.28–0.32 m long, 0.18–0.22 m wide, and 0.025–0.035 m tall. The glossy white finish and rounded molded form are consistent with glazed ceramic/porcelain; if the asset is known to be molded plastic, mass and density should be reduced substantially. For a ceramic tray, the actual material density is about 2200–2400 kg/m^3, but the object is hollow/shallow rather than a solid box. Estimating a base thickness of about 4–6 mm plus a raised rim around the perimeter gives an actual ceramic volume on the order of 0.00025–0.00040 m^3, resulting in a mass around 0.55–0.95 kg. I choose 0.75 kg as a reasonable midpoint for a small-to-medium glazed ceramic tray. The dominant contact surface is smooth glazed ceramic, so friction is lower than rubber or unfinished wood but higher than polished glass; static friction around 0.35 and dynamic friction around 0.28 are appropriate for ceramic on common lab/table surfaces. Restitution is kept modest at 0.35 because ceramic is hard but the tray shape and contact damping reduce usable bounce; also, fragile ceramics should generally not be simulated as highly elastic. For Isaac Sim / PhysX, a convex hull would overfill the recessed center but is adequate if only outer contact stability is needed. For more accurate tray interactions, use convex decomposition with several simple convex parts: bottom slab plus four rim segments and rounded-corner approximations. SDF mesh collision can be used for high-fidelity contact with the recessed bowl-like region, but it is more expensive and best reserved for cases where small objects must rest inside the tray. Contact offset of 0.003 m and rest offset of 0.0005 m are suitable for a centimeter-scale hard object, avoiding visual interpenetration while maintaining stable contacts. CCD is not required for normal quasi-static placement but is enabled here as a safe default if the tray may be dropped or moved quickly. Gravity uses the standard Isaac Sim scene vector [0, 0, -9.81]. Compliant contacts are set with high stiffness and moderate damping only to regularize hard ceramic contact; the object itself should still be treated as rigid and non-deformable. Since this is a single rigid tray with no joints, articulation parameters are effectively unused.",
+      "static_friction": 0.35,
+      "dynamic_friction": 0.28,
+      "restitution": 0.35,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "is_structural_root": true,
+      "description": "A glossy white rectangular tray with rounded corners, a shallow recessed center, and a raised rim. The surface appears to be glazed ceramic or porcelain with a smooth, hard finish.",
+      "semantic": {
+        "qid": null
+      },
+      "non_visual_material": null
+    }
+  ],
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "units": {
+    "length": "m",
+    "mass": "kg"
+  },
+  "simulation": {
+    "fix_base": false
+  },
+  "provenance": {
+    "source_schema": "legacy_batch1_physics",
+    "legacy_reasoning_preserved": true,
+    "legacy_overall_assessment": "",
+    "verification_note": "Bounds and collision geometry were read from the delivered USD; runtime drop/contact behavior remains unverified.",
+    "usd_world_bounds_source": "USD visual mesh extent",
+    "collision_source": "USD PhysicsCollisionAPI geometry"
+  },
+  "validation": {
+    "overall": "partial",
+    "scale": {
+      "status": "recorded",
+      "confidence": "medium",
+      "units": "m",
+      "up_axis": "Z",
+      "bounds_m": [
+        0.152461,
+        0.254595,
+        0.018496
+      ]
+    },
+    "mass": {
+      "status": "not_checked",
+      "confidence": "low",
+      "value_kg": 0.75
+    },
+    "collision": {
+      "status": "recorded",
+      "confidence": "medium",
+      "shape_count": 1,
+      "approximations": [
+        "sdf"
+      ]
+    },
+    "articulation": {
+      "status": "not_checked",
+      "confidence": "low",
+      "moving_joints": 0
+    }
+  }
+}

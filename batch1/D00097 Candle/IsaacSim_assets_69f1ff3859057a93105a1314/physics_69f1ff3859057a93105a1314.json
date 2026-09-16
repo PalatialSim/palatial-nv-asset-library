@@ -1,0 +1,139 @@
+{
+  "schema_version": "1.0",
+  "asset_id": "D00097",
+  "asset": {
+    "name": "D00097 Candle",
+    "description": "A cream-colored cylindrical wax candle with a small charred wick seated in a speckled gray ceramic cup with a rounded handle. The cup has a matte glazed stoneware finish and the candle surface appears smooth and slightly translucent.",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.82,
+    "bounds": {
+      "min": [
+        -0.043349,
+        -0.036782,
+        -1.8e-05
+      ],
+      "max": [
+        0.051318,
+        0.042208,
+        0.085129
+      ],
+      "size": [
+        0.094667,
+        0.07899,
+        0.085147
+      ]
+    }
+  },
+  "parts": [
+    {
+      "id": "part_00",
+      "name": "D00097 Candle",
+      "mass": 0.82,
+      "density": 1200.0,
+      "volume": 0.0004017676662905973,
+      "inertia": [
+        0.0006628887722186478,
+        0.000712437299275887,
+        0.0008165816746455187
+      ],
+      "inertia_axes": [
+        0.5111400113920938,
+        0.17045647717762347,
+        -0.6918342615625296,
+        0.4806722715848234
+      ],
+      "center_of_mass": [
+        -0.0006195897916289686,
+        0.0006409963031602785,
+        0.03782267062545224
+      ],
+      "bounds": {
+        "min": [
+          -0.07027500122785568,
+          -0.05795200169086456,
+          -4.8999998398358e-05
+        ],
+        "max": [
+          0.07315699756145477,
+          0.05882300063967705,
+          0.13504700362682343
+        ],
+        "center": [
+          -0.005950700238741078,
+          0.0005943784100799326,
+          0.05675234970498145
+        ]
+      },
+      "material": "ceramic",
+      "physics_type": "rigid",
+      "source": {
+        "object_name": "D00097 Candle",
+        "part_name": "D00097 Candle"
+      },
+      "collision": {},
+      "reasoning": "The object appears to be a wax pillar candle held in a small ceramic mug-like cup. With no product data provided, the estimates assume an outer cup diameter of roughly 90–100 mm, cup height of 60–70 mm, candle diameter of 75–85 mm, and total wax height of about 90–110 mm including the portion inside the cup. Paraffin/soy candle wax typically has density near 850–950 kg/m^3; glazed stoneware/ceramic is typically 2000–2400 kg/m^3. A plausible wax mass is about 0.35–0.50 kg and the ceramic holder including handle is about 0.30–0.45 kg, giving a total rigid body mass estimate of approximately 0.82 kg. The reported density is an effective mixed density for assigning a single USD Physics material to the combined rigid body rather than the true density of either wax or ceramic alone. External contact is dominated by the glazed ceramic base, so friction is set in the ceramic/plastic-like range: static friction about 0.55 and dynamic friction about 0.45 on a typical tabletop. Restitution is low because the wax core and ceramic cup dissipate energy and the object should not bounce noticeably; 0.12 is appropriate for stable contact behavior. For Isaac Sim v4.5/PhysX, convex decomposition is preferred because the visible shape contains a mostly cylindrical body plus a handle with a hole and concave regions around the cup rim. A single convex hull would overfill the handle opening and cup profile, while an SDF or triangle mesh collider is usually unnecessary for a dynamic rigid body of this size unless very high geometric fidelity is required. Recommended decomposition would use separate convex parts for the wax cylinder, ceramic cup shell/body, handle, and bottom foot/rim. Contact offset of 0.002 m and rest offset of 0.0 m are suitable for a 0.1 m scale object, balancing stable contact generation against visible hovering. CCD is not required for normal tabletop motion but should be enabled if the asset is dropped, thrown, or moved faster than about 2–3 m/s, especially because the handle and rim are relatively thin. Initial velocity is set to zero. Practical velocity limits for stable industrial-scale scenes would be about 5 m/s linear and 20 rad/s angular, with sleep enabled using default PhysX thresholds or a mass-normalized sleep threshold around 0.005–0.02 to allow the object to hibernate when resting. Compliant contacts should remain disabled for this non-deformable rigid approximation; the wax is soft relative to ceramic, but modeling it as compliant would usually add instability and cost unless indentation behavior is specifically needed.",
+      "static_friction": 0.55,
+      "dynamic_friction": 0.45,
+      "restitution": 0.12,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "is_structural_root": true,
+      "description": "A cream-colored cylindrical wax candle with a small charred wick seated in a speckled gray ceramic cup with a rounded handle. The cup has a matte glazed stoneware finish and the candle surface appears smooth and slightly translucent.",
+      "semantic": {
+        "qid": null
+      },
+      "non_visual_material": null
+    }
+  ],
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "units": {
+    "length": "m",
+    "mass": "kg"
+  },
+  "simulation": {
+    "fix_base": false
+  },
+  "provenance": {
+    "source_schema": "legacy_batch1_physics",
+    "legacy_reasoning_preserved": true,
+    "legacy_overall_assessment": "",
+    "verification_note": "Bounds and collision geometry were read from the delivered USD; runtime drop/contact behavior remains unverified.",
+    "usd_world_bounds_source": "USD visual mesh extent",
+    "collision_source": "USD PhysicsCollisionAPI geometry"
+  },
+  "validation": {
+    "overall": "partial",
+    "scale": {
+      "status": "recorded",
+      "confidence": "medium",
+      "units": "m",
+      "up_axis": "Z",
+      "bounds_m": [
+        0.094667,
+        0.07899,
+        0.085147
+      ]
+    },
+    "mass": {
+      "status": "not_checked",
+      "confidence": "low",
+      "value_kg": 0.82
+    },
+    "collision": {
+      "status": "recorded",
+      "confidence": "medium",
+      "shape_count": 59,
+      "approximations": [
+        "convexHull"
+      ]
+    },
+    "articulation": {
+      "status": "not_checked",
+      "confidence": "low",
+      "moving_joints": 0
+    }
+  }
+}

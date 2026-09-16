@@ -6,7 +6,7 @@ Large binary files (`.usd`, `.png`, `.mp4`, `.jpeg`, etc.) are stored with [Git 
 
 ## Visual previews and simulation videos
 
-Browse the [batch montage images](gallery/montages/) directly on GitHub. The [interactive gallery](gallery/) covers **963 assets across 39 populated batches (Batch 2–Batch 40)**, with search, batch and joint-type filters, rendered/collision views, and simulation videos.
+Browse the [batch montage images](gallery/montages/) directly on GitHub. The [interactive gallery](gallery/) covers **977 assets across 40 populated batches (Batch 1–Batch 40)**, with search, batch and joint-type filters, rendered/collision views, and simulation videos.
 
 To browse the interactive gallery locally, run this from the repository root:
 
@@ -14,7 +14,7 @@ To browse the interactive gallery locally, run this from the repository root:
 python3 -m http.server 8000
 ```
 
-Then open <http://localhost:8000/gallery/>. Isaac Sim is not needed to view the gallery. Collision images show authored geometry; videos show the recorded test behavior, including tipping when it occurs.
+Then open <http://localhost:8000/gallery/>. Isaac Sim is not needed to view the gallery. Collision images show authored geometry; Batch 1 collision previews are generated from its delivered USD collision prims. Videos show the recorded test behavior, including tipping when it occurs.
 
 ## 1. Install Git LFS
 

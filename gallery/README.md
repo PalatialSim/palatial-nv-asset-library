@@ -1,7 +1,7 @@
 # Asset gallery
 
-963 assets across 39 batches, with rendered views, collision views, and simulation videos. Search by name or ID, filter by batch or moving joints, and toggle collision views.
+977 assets across 40 batches (Batch 1 through Batch 40), with rendered views, collision views, and simulation videos. Search by name or ID, filter by batch or moving joints, and toggle collision views.
 
-From the repository root, run `python3 -m http.server 8000`, then open `http://localhost:8000/gallery/`. Isaac Sim is not needed to browse. Keep this directory beside the repository batch folders: existing media is linked by relative path.
+From the repository root, run `python3 -m http.server 8000`, then open `http://localhost:8000/gallery/`. Isaac Sim is not needed to browse. Keep this directory beside the repository batch folders: media is linked by relative path.
 
-Colors distinguish authored collision pieces; each convex hull has a different color. Videos show the recorded test behavior, including tipping where it occurs; they do not assert universal physical stability.
+Collision images show the authored USD collision geometry. Batch 1 uses the delivered `PhysicsCollisionAPI` meshes (convex hulls where authored and SDF meshes where authored), with each rendered collision mesh assigned a distinct color. Videos show the recorded test behavior, including tipping where it occurs; they do not assert universal physical stability.

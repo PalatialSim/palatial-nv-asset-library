@@ -1,0 +1,139 @@
+{
+  "schema_version": "1.0",
+  "asset_id": "D00023",
+  "asset": {
+    "name": "D00023 Berry Apple",
+    "description": "A glossy red apple with pale speckling, a shallow top dimple, and a thin brown-green stem with a small wilted leaf.",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.18,
+    "bounds": {
+      "min": [
+        -0.036953,
+        -0.036046,
+        2e-05
+      ],
+      "max": [
+        0.034591,
+        0.037178,
+        0.088584
+      ],
+      "size": [
+        0.071544,
+        0.07322400000000001,
+        0.08856399999999999
+      ]
+    }
+  },
+  "parts": [
+    {
+      "id": "part_00",
+      "name": "D00023 Berry Apple",
+      "mass": 0.18,
+      "density": 850.0,
+      "volume": 0.00021461730310242387,
+      "inertia": [
+        9.286354009518667e-05,
+        0.00010429136995820938,
+        0.00010610672373854726
+      ],
+      "inertia_axes": [
+        0.8144304691714803,
+        0.11752167472555632,
+        -0.5650774344092753,
+        -0.0598260810705043
+      ],
+      "center_of_mass": [
+        -0.0002032278202948886,
+        0.0003284349234438385,
+        0.03798057057353088
+      ],
+      "bounds": {
+        "min": [
+          -0.037018999457359314,
+          -0.03437399864196777,
+          3.999999989900971e-06
+        ],
+        "max": [
+          0.03511599823832512,
+          0.03647900000214577,
+          0.08904100209474564
+        ],
+        "center": [
+          -0.00040541530478320357,
+          0.0006403840742071486,
+          0.037395593581089216
+        ]
+      },
+      "material": "organic_fruit_tissue",
+      "physics_type": "rigid",
+      "source": {
+        "object_name": "D00023 Berry Apple",
+        "part_name": "D00023 Berry Apple"
+      },
+      "collision": {},
+      "reasoning": "The object is a medium red apple with a mostly rounded, slightly oblate body, shallow concavities at the top and bottom, and a lightweight dry stem/leaf. No exact scale or product data is provided, so estimates use a typical apple diameter of about 75–85 mm, height of about 70–80 mm, and mass of about 0.18 kg. Apple tissue is mostly water with cellular air space, so bulk density is slightly below water; a practical rigid-body density estimate is 830–900 kg/m^3, with 850 kg/m^3 selected. The stem and leaf contribute negligible mass but can create troublesome thin collision geometry; for stable PhysX rigid-body behavior, the main apple should dominate mass and inertia, while the stem/leaf should either be ignored for collision or approximated with low-resolution convex/capsule pieces. The glossy waxy skin is smoother than wood or rubber but not as slippery as glass; static friction around 0.35 and dynamic friction around 0.28 are appropriate against common plastic/metal/table materials. Real apples deform and dissipate energy on impact, so restitution should be low, approximately 0.10–0.20; 0.15 is chosen. Because the visual shape includes concavities, a single convex hull would fill the top dimple and reduce contact fidelity. Convex decomposition is recommended for the full visible asset, ideally using a near-spherical convex piece for the apple body plus simplified convex/capsule pieces for the stem. If performance is more important than visual contact accuracy, a sphere or ellipsoid approximation is acceptable. Contact offsets are set small relative to an ~0.08 m object: 1 mm rest offset and 3 mm contact offset. CCD is enabled because the object is small and can tunnel if dropped or thrown. Compliant contacts are recommended with moderate stiffness and high damping to approximate the slight softness of fruit while still treating it as non-deformable in rigid-body simulation.",
+      "static_friction": 0.35,
+      "dynamic_friction": 0.28,
+      "restitution": 0.15,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "is_structural_root": true,
+      "description": "A glossy red apple with pale speckling, a shallow top dimple, and a thin brown-green stem with a small wilted leaf.",
+      "semantic": {
+        "qid": null
+      },
+      "non_visual_material": null
+    }
+  ],
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "units": {
+    "length": "m",
+    "mass": "kg"
+  },
+  "simulation": {
+    "fix_base": false
+  },
+  "provenance": {
+    "source_schema": "legacy_batch1_physics",
+    "legacy_reasoning_preserved": true,
+    "legacy_overall_assessment": "",
+    "verification_note": "Bounds and collision geometry were read from the delivered USD; runtime drop/contact behavior remains unverified.",
+    "usd_world_bounds_source": "USD visual mesh extent",
+    "collision_source": "USD PhysicsCollisionAPI geometry"
+  },
+  "validation": {
+    "overall": "partial",
+    "scale": {
+      "status": "recorded",
+      "confidence": "medium",
+      "units": "m",
+      "up_axis": "Z",
+      "bounds_m": [
+        0.071544,
+        0.07322400000000001,
+        0.08856399999999999
+      ]
+    },
+    "mass": {
+      "status": "not_checked",
+      "confidence": "low",
+      "value_kg": 0.18
+    },
+    "collision": {
+      "status": "recorded",
+      "confidence": "medium",
+      "shape_count": 103,
+      "approximations": [
+        "convexHull"
+      ]
+    },
+    "articulation": {
+      "status": "not_checked",
+      "confidence": "low",
+      "moving_joints": 0
+    }
+  }
+}

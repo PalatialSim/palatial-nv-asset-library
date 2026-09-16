@@ -1,0 +1,139 @@
+{
+  "schema_version": "1.0",
+  "asset_id": "D00055",
+  "asset": {
+    "name": "D00055 Bowl Basket",
+    "description": "An off-white glazed ceramic basket with an open woven lattice body, rounded foot ring, thick rim, and a single arched handle. The surface is smooth, hard, and slightly glossy with rounded strand details.",
+    "object_type": "rigid_bodies",
+    "total_mass": 1.6,
+    "bounds": {
+      "min": [
+        -0.135524,
+        -0.135242,
+        -0.00014399737
+      ],
+      "max": [
+        0.135418,
+        0.135552,
+        0.20872599
+      ],
+      "size": [
+        0.270942,
+        0.270794,
+        0.20886998737
+      ]
+    }
+  },
+  "parts": [
+    {
+      "id": "part_00",
+      "name": "D00055 Bowl Basket",
+      "mass": 1.6,
+      "density": 2400.0,
+      "volume": 0.0008773653132094004,
+      "inertia": [
+        0.002123803141534698,
+        0.002209619040369463,
+        0.0026806670255261843
+      ],
+      "inertia_axes": [
+        0.9999838237956993,
+        -0.00045953960783983236,
+        0.000509499639985367,
+        0.005646359924553482
+      ],
+      "center_of_mass": [
+        -6.395099671807202e-05,
+        7.42073874844673e-05,
+        -0.004684915128859667
+      ],
+      "bounds": {
+        "min": [
+          -0.135524,
+          -0.135242,
+          -0.00014399737
+        ],
+        "max": [
+          0.135418,
+          0.135552,
+          0.20872599
+        ],
+        "size": [
+          0.270942,
+          0.270794,
+          0.20886998737
+        ]
+      },
+      "material": "glazed_ceramic",
+      "physics_type": "rigid",
+      "source": {
+        "object_name": "D00055 Bowl Basket",
+        "part_name": "D00055 Bowl Basket"
+      },
+      "collision": {},
+      "reasoning": "The object appears to be a decorative woven basket made from glazed ceramic or porcelain rather than flexible wicker: the strands are uniformly molded, opaque, smooth, off-white, and integrated with a solid foot, rim, and handle. I estimated an overall size of roughly 0.30-0.35 m rim diameter, 0.18-0.22 m bowl height, and 0.32-0.40 m total height including the handle. A porcelain/ceramic material density is typically about 2200-2500 kg/m^3; however, because this is a hollow open-lattice object, the total solid material volume is much smaller than the visual bounding volume. Using an estimated ceramic solid volume of about 0.0006-0.0008 m^3 gives a realistic total mass near 1.4-1.9 kg, so 1.6 kg is a reasonable rigid-body mass. The root density is set to 2400 kg/m^3 as the dominant physical material density; in Isaac Sim, the mass should preferably be authored explicitly because using a filled convex collision volume with ceramic density would greatly overestimate the mass. Glazed ceramic contact is hard and moderately smooth: static friction is estimated around 0.45 and dynamic friction around 0.35 against common surfaces. Restitution is set to 0.35: ceramic is hard but brittle, and real impacts dissipate energy through micro-slip and possible chipping/fracture, which is not modeled by a simple rigid body. Collision geometry should use convex decomposition rather than a single convex hull if the bowl opening, rim, handle, and foot need credible contacts. A single convex hull would fill the basket interior and ignore the open lattice; an exact triangle mesh is not appropriate for a dynamic PhysX rigid body unless using SDF-style collision for high-fidelity, higher-cost cases. For general Isaac Sim v4.5 use, a compound convex decomposition with separate simplified parts for the foot ring, bowl shell, rim, and handle is the best balance of stability and performance. Thin lattice holes should usually be simplified for contact because exact strand-level collision is expensive and may cause solver jitter. Rest offset is kept at 0.0 m and contact offset at 0.005 m to generate stable contacts without visibly floating too far from surfaces. CCD is recommended because the basket has thin ceramic strands, a narrow foot, and a raised handle that can tunnel during fast drops or robot interactions. No compliant contact is enabled because the object is a rigid, non-deformable ceramic body; if impact noise needs damping, use low restitution and solver iteration tuning rather than soft contacts.",
+      "static_friction": 0.45,
+      "dynamic_friction": 0.35,
+      "restitution": 0.35,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "is_structural_root": true,
+      "description": "An off-white glazed ceramic basket with an open woven lattice body, rounded foot ring, thick rim, and a single arched handle. The surface is smooth, hard, and slightly glossy with rounded strand details.",
+      "semantic": {
+        "qid": null
+      },
+      "non_visual_material": null
+    }
+  ],
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "units": {
+    "length": "m",
+    "mass": "kg"
+  },
+  "simulation": {
+    "fix_base": false
+  },
+  "provenance": {
+    "source_schema": "legacy_batch1_physics",
+    "legacy_reasoning_preserved": true,
+    "legacy_overall_assessment": "",
+    "verification_note": "Bounds and collision geometry were read from the delivered USD; runtime drop/contact behavior remains unverified.",
+    "usd_world_bounds_source": "USD visual mesh extent",
+    "collision_source": "USD PhysicsCollisionAPI geometry"
+  },
+  "validation": {
+    "overall": "partial",
+    "scale": {
+      "status": "recorded",
+      "confidence": "medium",
+      "units": "m",
+      "up_axis": "Z",
+      "bounds_m": [
+        0.270942,
+        0.270794,
+        0.20886998737
+      ]
+    },
+    "mass": {
+      "status": "not_checked",
+      "confidence": "low",
+      "value_kg": 1.6
+    },
+    "collision": {
+      "status": "recorded",
+      "confidence": "medium",
+      "shape_count": 117,
+      "approximations": [
+        "convexHull"
+      ]
+    },
+    "articulation": {
+      "status": "not_checked",
+      "confidence": "low",
+      "moving_joints": 0
+    }
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "schema_version": "1.0",
+  "asset_id": "D00048",
+  "asset": {
+    "name": "D00048 Bottle Container",
+    "description": "A collection of upright glass and plastic bottles, jars, and dispensers with transparent, green, amber, and frosted bodies. The containers include cork stoppers, screw caps, metal lids, a pump top, and a pour spout.",
+    "object_type": "rigid_bodies",
+    "total_mass": 2.4,
+    "bounds": {
+      "min": [
+        -0.034822,
+        -0.034634,
+        -4.3e-05
+      ],
+      "max": [
+        0.035148,
+        0.034824,
+        0.198155
+      ],
+      "size": [
+        0.06997,
+        0.06945799999999999,
+        0.19819799999999999
+      ]
+    }
+  },
+  "parts": [
+    {
+      "id": "part_00",
+      "name": "D00048 Bottle Container",
+      "mass": 2.4,
+      "density": 2400.0,
+      "volume": 0.0007446147240174061,
+      "inertia": [
+        0.0016017370135064158,
+        0.00681077019691036,
+        0.006822766368041073
+      ],
+      "inertia_axes": [
+        0.5069146993128869,
+        0.4929992853783338,
+        -0.5068485406283532,
+        0.4930453823938384
+      ],
+      "center_of_mass": [
+        0.00015886435661818693,
+        9.921214497573865e-05,
+        0.08603149352729458
+      ],
+      "bounds": {
+        "min": [
+          -0.034822,
+          -0.034634,
+          -4.3e-05
+        ],
+        "max": [
+          0.035148,
+          0.034824,
+          0.198155
+        ],
+        "size": [
+          0.06997,
+          0.06945799999999999,
+          0.19819799999999999
+        ]
+      },
+      "material": "glass",
+      "physics_type": "rigid",
+      "source": {
+        "object_name": "D00048 Bottle Container",
+        "part_name": "D00048 Bottle Container"
+      },
+      "collision": {},
+      "reasoning": "The image shows multiple empty bottle/container variants. The numeric mass is estimated as the aggregate mass of the visible set if imported under one rigid-body root: several medium glass bottles/jars at roughly 0.30–0.55 kg each, plus lighter PET/HDPE squeeze or water bottles at roughly 0.04–0.12 kg each, for a total near 2.4 kg. If each bottle is simulated independently, use approximately 0.04–0.08 kg for thin PET/HDPE bottles, 0.20–0.35 kg for small glass/pump/cruet bottles, and 0.35–0.55 kg for wine, milk, decanter, or jar forms. The dominant external structural material across the set is soda-lime glass, so root friction and restitution are glass-like; plastic caps and metal lids are smaller contact contributors. A material density near 2400 kg/m^3 represents glass, but for PhysX auto-mass using solid convex hulls around hollow bottles, an effective collider density would need to be reduced substantially, often to about 250–600 kg/m^3 per bottle, or explicit mass should be authored. Static friction around 0.32 and dynamic friction around 0.25 are suitable for smooth glass on common industrial/table surfaces; plastic squeeze bottles would be slightly higher, about 0.4/0.32, and rubber pump details would be higher but are not dominant. Restitution is set to 0.60 as a glass-like value, though reducing it to 0.25–0.40 improves numerical stability for stacking or drop tests where breakage is not modeled. Collision should use convex decomposition rather than one convex hull, because a single hull would overfill necks, shoulders, pump handles, spouts, and jar lips. A practical setup is 3–8 convex parts per bottle: base/body, shoulder, neck, cap/lid, and any pump or spout; use SDF mesh only if accurate concave interior or thin-mouth interaction is required. Rest offset should remain near zero to avoid visible floating, with a 3–5 mm contact offset for stable contact generation on small curved rims and bases. CCD is recommended because narrow necks, spouts, and small caps can tunnel during drops or fast manipulator motions. Initial velocity is zero; for robust handling, keep linear speeds below roughly 3–5 m/s and angular speeds below roughly 20–30 rad/s unless CCD and higher substepping are enabled. Sleep thresholds should be low-to-moderate for tall upright bottles to prevent jitter after settling, e.g. around 0.005–0.02 m^2/s^2, with increased solver iterations for stacked or densely contacting bottles. Compliant contacts are not needed for rigid glass/plastic; if approximating soft squeeze bottles as non-deforming rigid objects, only a small contact compliance should be introduced at the material level.",
+      "static_friction": 0.32,
+      "dynamic_friction": 0.25,
+      "restitution": 0.6,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "is_structural_root": true,
+      "description": "A collection of upright glass and plastic bottles, jars, and dispensers with transparent, green, amber, and frosted bodies. The containers include cork stoppers, screw caps, metal lids, a pump top, and a pour spout.",
+      "semantic": {
+        "qid": null
+      },
+      "non_visual_material": null
+    }
+  ],
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "units": {
+    "length": "m",
+    "mass": "kg"
+  },
+  "simulation": {
+    "fix_base": false
+  },
+  "provenance": {
+    "source_schema": "legacy_batch1_physics",
+    "legacy_reasoning_preserved": true,
+    "legacy_overall_assessment": "",
+    "verification_note": "Bounds and collision geometry were read from the delivered USD; runtime drop/contact behavior remains unverified.",
+    "usd_world_bounds_source": "USD visual mesh extent",
+    "collision_source": "USD PhysicsCollisionAPI geometry"
+  },
+  "validation": {
+    "overall": "partial",
+    "scale": {
+      "status": "recorded",
+      "confidence": "medium",
+      "units": "m",
+      "up_axis": "Z",
+      "bounds_m": [
+        0.06997,
+        0.06945799999999999,
+        0.19819799999999999
+      ]
+    },
+    "mass": {
+      "status": "not_checked",
+      "confidence": "low",
+      "value_kg": 2.4
+    },
+    "collision": {
+      "status": "recorded",
+      "confidence": "medium",
+      "shape_count": 59,
+      "approximations": [
+        "convexHull"
+      ]
+    },
+    "articulation": {
+      "status": "not_checked",
+      "confidence": "low",
+      "moving_joints": 0
+    }
+  }
+}

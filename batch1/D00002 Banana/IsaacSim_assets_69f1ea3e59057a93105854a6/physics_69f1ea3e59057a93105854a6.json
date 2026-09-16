@@ -1,0 +1,139 @@
+{
+  "schema_version": "1.0",
+  "asset_id": "D00002",
+  "asset": {
+    "name": "D00002 Banana",
+    "description": "A ripe yellow banana with a smooth slightly waxy peel, scattered brown speckles, and dark fibrous stem and tip ends.",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.13,
+    "bounds": {
+      "min": [
+        -0.079632,
+        -0.01591,
+        -3.2e-05
+      ],
+      "max": [
+        0.088104,
+        0.018569,
+        0.092654
+      ],
+      "size": [
+        0.167736,
+        0.034478999999999996,
+        0.092686
+      ]
+    }
+  },
+  "parts": [
+    {
+      "id": "part_00",
+      "name": "D00002 Banana",
+      "mass": 0.13,
+      "density": 950.0,
+      "volume": 0.00013883712129603008,
+      "inertia": [
+        3.407437342828591e-05,
+        0.00022697872813859984,
+        0.0002446566603341889
+      ],
+      "inertia_axes": [
+        0.6857554831873724,
+        0.7277950542310673,
+        0.004579182679014693,
+        -0.005727774545455313
+      ],
+      "center_of_mass": [
+        0.0036150456150347214,
+        0.00019445347695765895,
+        0.028254225606177037
+      ],
+      "bounds": {
+        "min": [
+          -0.07962862402200699,
+          0.0,
+          -0.01851416751742363
+        ],
+        "max": [
+          0.08810680359601974,
+          0.09267234802246094,
+          0.015923935920000076
+        ],
+        "center": [
+          0.0015507414203978346,
+          0.03196307193464727,
+          -0.0001020566883121857
+        ]
+      },
+      "material": "organic_fruit_tissue",
+      "physics_type": "rigid",
+      "source": {
+        "object_name": "D00002 Banana",
+        "part_name": "D00002 Banana"
+      },
+      "collision": {},
+      "reasoning": "The asset appears to be a single medium banana, an elongated curved organic body with a smooth peel and small stem features. A typical whole banana is about 0.18-0.22 m long along the curve, roughly 0.03-0.04 m in diameter, and weighs about 0.11-0.16 kg; 0.13 kg is a realistic nominal value. Banana flesh/peel bulk density is close to water but slightly lower due to internal porosity, so 900-1000 kg/m^3 is appropriate; 950 kg/m^3 is used. The exterior peel is smooth and waxy but not hard-polished, so contact friction is moderate: static friction about 0.45 and dynamic friction about 0.35 against common tabletop/industrial surfaces. Because the object is soft, wet organic material with high internal damping and a peel that absorbs impact, restitution should be low, about 0.10-0.15; 0.12 is selected to avoid unrealistic bouncing. The banana is curved and non-convex, so a single convex hull would incorrectly fill the crescent-shaped inner gap and produce inaccurate contact behavior. For a dynamic rigid body in Isaac Sim/PhysX, convex decomposition is preferred: approximate the banana as several overlapping convex hull segments or capsules along the curve, with small convex hulls for the stem and tip. An SDF mesh can give higher fidelity if the asset must match the visual surface closely, but convex decomposition is generally more stable and faster for grasping, placement, and rolling. Contact offset is kept small relative to object size, about 0.004 m, with rest offset 0.0 m to align collision and render geometry without visible hovering. CCD is not necessary for ordinary low-speed handling, but should be enabled if the banana is thrown, dropped from height, or moved by a fast end effector. For stable PhysX behavior, cap linear velocities around 5-10 m/s and angular velocities around 25-50 rad/s in application logic if needed; this model uses zero initial velocity. Sleep/hibernation can be left enabled with standard thresholds because the object is light and should settle quickly. Optional compliant contact settings are useful to mimic slight peel/flesh softness without using a deformable solver: moderate stiffness with strong damping reduces chatter and bounce while preserving rigid-body performance.",
+      "static_friction": 0.45,
+      "dynamic_friction": 0.35,
+      "restitution": 0.12,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "is_structural_root": true,
+      "description": "A ripe yellow banana with a smooth slightly waxy peel, scattered brown speckles, and dark fibrous stem and tip ends.",
+      "semantic": {
+        "qid": null
+      },
+      "non_visual_material": null
+    }
+  ],
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "units": {
+    "length": "m",
+    "mass": "kg"
+  },
+  "simulation": {
+    "fix_base": false
+  },
+  "provenance": {
+    "source_schema": "legacy_batch1_physics",
+    "legacy_reasoning_preserved": true,
+    "legacy_overall_assessment": "",
+    "verification_note": "Bounds and collision geometry were read from the delivered USD; runtime drop/contact behavior remains unverified.",
+    "usd_world_bounds_source": "USD visual mesh extent",
+    "collision_source": "USD PhysicsCollisionAPI geometry"
+  },
+  "validation": {
+    "overall": "partial",
+    "scale": {
+      "status": "recorded",
+      "confidence": "medium",
+      "units": "m",
+      "up_axis": "Z",
+      "bounds_m": [
+        0.167736,
+        0.034478999999999996,
+        0.092686
+      ]
+    },
+    "mass": {
+      "status": "not_checked",
+      "confidence": "low",
+      "value_kg": 0.13
+    },
+    "collision": {
+      "status": "recorded",
+      "confidence": "medium",
+      "shape_count": 56,
+      "approximations": [
+        "convexHull"
+      ]
+    },
+    "articulation": {
+      "status": "not_checked",
+      "confidence": "low",
+      "moving_joints": 0
+    }
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "schema_version": "1.0",
+  "asset_id": "D00090",
+  "asset": {
+    "name": "D00090 Butter",
+    "description": "A pale yellow rectangular block of butter with rounded edges, a glossy waxy surface, and small dents and smears. The material appears soft, fatty, and slightly slippery.",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.113,
+    "bounds": {
+      "min": [
+        -0.055647,
+        -0.016411,
+        -4.2e-05
+      ],
+      "max": [
+        0.058438,
+        0.018738,
+        0.03494
+      ],
+      "size": [
+        0.11408499999999999,
+        0.035149,
+        0.034982
+      ]
+    }
+  },
+  "parts": [
+    {
+      "id": "part_00",
+      "name": "D00090 Butter",
+      "mass": 0.113,
+      "density": 920.0,
+      "volume": 0.0001331236805599228,
+      "inertia": [
+        2.1946663347851627e-05,
+        0.0001292009742357604,
+        0.00012948071283217297
+      ],
+      "inertia_axes": [
+        0.00828305330411255,
+        0.9999652635181059,
+        0.00015214186516466537,
+        -0.000916317619289444
+      ],
+      "center_of_mass": [
+        0.001324634441564563,
+        0.0011789458101878194,
+        0.017377348919443907
+      ],
+      "bounds": {
+        "center": [
+          0.001280162885234977,
+          0.017290383175936615,
+          -0.0012382004220117422
+        ],
+        "max": [
+          0.05838010460138321,
+          0.034956734627485275,
+          0.016324883326888084
+        ],
+        "min": [
+          -0.055626362562179565,
+          0.0,
+          -0.018726160749793053
+        ]
+      },
+      "material": "wood",
+      "physics_type": "rigid",
+      "source": {
+        "object_name": "D00090 Butter",
+        "part_name": "D00090 Butter"
+      },
+      "collision": {},
+      "reasoning": "The object appears to be a standard stick/block of butter: a rounded rectangular cuboid made of dense edible fat with a smooth, waxy, slightly oily surface. With no explicit product data or scale, I estimate dimensions close to a common butter stick, approximately 0.12 m x 0.032 m x 0.032 m, giving a volume of about 1.23e-4 m^3. Butter density is typically around 900-950 kg/m^3 depending on water/air content, so a mass near 0.11 kg is realistic. The chosen mass of 0.113 kg matches a common 4 oz stick and is consistent with a density of about 920 kg/m^3. For contact behavior, butter should be modeled as a rigid body with low restitution because it dissipates impact energy and does not bounce. The surface is oily and smooth, so friction is lower than rubber, wood, or dry plastic; a static friction coefficient of 0.22 and dynamic friction coefficient of 0.16 are suitable for butter on typical smooth kitchen/industrial surfaces. Collision geometry can be represented efficiently by a convex hull because the visible shape is globally convex, with only shallow surface dents and rounded edges that do not require expensive triangle-mesh or SDF collision for most rigid-body interactions. A small positive rest offset and contact offset are recommended because the asset is relatively small; using a large default contact offset would make the block appear to hover or contact too early. CCD is not required for normal placement or low-speed sliding, but should be enabled if the block is dropped or launched at high speed. Because real butter is locally compliant, optional compliant contacts with modest stiffness and damping help approximate slight squish/contact softness while still treating the object as non-deformable.",
+      "static_friction": 0.22,
+      "dynamic_friction": 0.16,
+      "restitution": 0.04,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "is_structural_root": true,
+      "description": "A pale yellow rectangular block of butter with rounded edges, a glossy waxy surface, and small dents and smears. The material appears soft, fatty, and slightly slippery.",
+      "semantic": {
+        "qid": null
+      },
+      "non_visual_material": null
+    }
+  ],
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "units": {
+    "length": "m",
+    "mass": "kg"
+  },
+  "simulation": {
+    "fix_base": false
+  },
+  "provenance": {
+    "source_schema": "legacy_batch1_physics",
+    "legacy_reasoning_preserved": true,
+    "legacy_overall_assessment": "",
+    "verification_note": "Bounds and collision geometry were read from the delivered USD; runtime drop/contact behavior remains unverified.",
+    "usd_world_bounds_source": "USD visual mesh extent",
+    "collision_source": "USD PhysicsCollisionAPI geometry"
+  },
+  "validation": {
+    "overall": "partial",
+    "scale": {
+      "status": "recorded",
+      "confidence": "medium",
+      "units": "m",
+      "up_axis": "Z",
+      "bounds_m": [
+        0.11408499999999999,
+        0.035149,
+        0.034982
+      ]
+    },
+    "mass": {
+      "status": "not_checked",
+      "confidence": "low",
+      "value_kg": 0.113
+    },
+    "collision": {
+      "status": "recorded",
+      "confidence": "medium",
+      "shape_count": 1,
+      "approximations": [
+        "convexHull"
+      ]
+    },
+    "articulation": {
+      "status": "not_checked",
+      "confidence": "low",
+      "moving_joints": 0
+    }
+  }
+}

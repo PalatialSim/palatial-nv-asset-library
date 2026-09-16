@@ -1,0 +1,135 @@
+{
+  "schema_version": "1.0",
+  "asset_id": "D00089",
+  "asset": {
+    "name": "D00089 Burger",
+    "description": "A multi-layered hamburger consisting of a sesame seed bun, beef patty, melted cheese, sliced red onions, tomatoes, and lettuce.",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.3,
+    "bounds": {
+      "min": [
+        -0.040323,
+        -0.038091,
+        2e-06
+      ],
+      "max": [
+        0.0398,
+        0.041654,
+        0.055697
+      ],
+      "size": [
+        0.080123,
+        0.079745,
+        0.055695
+      ]
+    }
+  },
+  "parts": [
+    {
+      "id": "part_00",
+      "name": "D00089 Burger",
+      "mass": 0.3,
+      "density": 500.0,
+      "volume": 0.0001965962248876269,
+      "inertia": [
+        0.0001522863603347408,
+        0.0001538402164884674,
+        0.00018136427707352113
+      ],
+      "inertia_axes": [
+        0.9895921429212007,
+        -0.011489305040656322,
+        -0.008058338230346962,
+        -0.1432146980001505
+      ],
+      "center_of_mass": [
+        -0.00012678901502594206,
+        0.0017958674833313737,
+        0.024697476539945216
+      ],
+      "bounds": {
+        "min": [
+          -0.04032904654741287,
+          0.0,
+          -0.0416550412774086
+        ],
+        "max": [
+          0.03980650007724762,
+          0.05569959431886673,
+          0.03810647502541542
+        ],
+        "center": [
+          -3.565299310527814e-05,
+          0.022900058688842415,
+          -0.0016388162321967358
+        ]
+      },
+      "material": "organic_vegetable_tissue",
+      "physics_type": "rigid",
+      "source": {
+        "object_name": "D00089 Burger",
+        "part_name": "D00089 Burger"
+      },
+      "collision": {},
+      "reasoning": "For rigid body simulation, this composite organic object must be approximated as a single solid entity. The mass is estimated at 0.3 kg, representing a standard large burger. The density (500 kg/m^3) is an average, balancing the lightweight porous bun with the denser, moisture-rich meat and vegetables. Since food items are highly inelastic and absorb impact energy, the restitution is set very low (0.1). Friction coefficients are estimated based on the dry, slightly textured surface of baked bread interacting with typical surfaces. A convex decomposition is recommended for the collision geometry to roughly match the cylindrical shape while enveloping the irregular protrusions of the lettuce and patty.",
+      "static_friction": 0.6,
+      "dynamic_friction": 0.5,
+      "restitution": 0.1,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "is_structural_root": true,
+      "description": "A multi-layered hamburger consisting of a sesame seed bun, beef patty, melted cheese, sliced red onions, tomatoes, and lettuce."
+    }
+  ],
+  "articulation": {
+    "has_joints": false,
+    "joints": []
+  },
+  "units": {
+    "length": "m",
+    "mass": "kg"
+  },
+  "simulation": {
+    "fix_base": false
+  },
+  "provenance": {
+    "source_schema": "legacy_batch1_physics",
+    "legacy_reasoning_preserved": true,
+    "legacy_overall_assessment": "",
+    "verification_note": "Bounds and collision geometry were read from the delivered USD; runtime drop/contact behavior remains unverified.",
+    "usd_world_bounds_source": "USD visual mesh extent",
+    "collision_source": "USD PhysicsCollisionAPI geometry"
+  },
+  "validation": {
+    "overall": "partial",
+    "scale": {
+      "status": "recorded",
+      "confidence": "medium",
+      "units": "m",
+      "up_axis": "Z",
+      "bounds_m": [
+        0.080123,
+        0.079745,
+        0.055695
+      ]
+    },
+    "mass": {
+      "status": "not_checked",
+      "confidence": "low",
+      "value_kg": 0.3
+    },
+    "collision": {
+      "status": "recorded",
+      "confidence": "medium",
+      "shape_count": 59,
+      "approximations": [
+        "convexHull"
+      ]
+    },
+    "articulation": {
+      "status": "not_checked",
+      "confidence": "low",
+      "moving_joints": 0
+    }
+  }
+}
