@@ -1,0 +1,152 @@
+{
+  "schema_version": "1.0",
+  "asset_id": "D01061",
+  "asset": {
+    "name": "D01061 Waffle Maker",
+    "object_type": "articulated",
+    "total_mass": 1.4000000357627869,
+    "bounds": {
+      "min": [
+        -0.20270965109528927,
+        -0.101500004529953,
+        0.0
+      ],
+      "max": [
+        0.1014999970793724,
+        0.1014999970793724,
+        0.28931320432974306
+      ],
+      "size": [
+        0.3042096481746617,
+        0.2030000016093254,
+        0.28931320432974306
+      ]
+    }
+  },
+  "parts": [
+    {
+      "id": "Base",
+      "name": "Base",
+      "mass": 0.8820000290870667,
+      "density": null,
+      "inertia": [
+        0.0019036501180380583,
+        0.0019036501180380583,
+        0.003572100307792425
+      ],
+      "center_of_mass": [
+        0.01081340666860342,
+        0.0,
+        0.03200000151991844
+      ],
+      "physics_type": "rigid",
+      "source": {
+        "prim_path": "/WaffleMaker/Base"
+      },
+      "collision": {
+        "shape_count": 176,
+        "approximations": [
+          "convexHull"
+        ]
+      },
+      "reasoning": null
+    },
+    {
+      "id": "Lid",
+      "name": "Lid",
+      "mass": 0.5180000066757202,
+      "density": null,
+      "inertia": [
+        0.00109885074198246,
+        0.00109885074198246,
+        0.0020979002583771944
+      ],
+      "center_of_mass": [
+        0.11599999666213989,
+        0.0,
+        0.012240900658071041
+      ],
+      "physics_type": "rigid",
+      "source": {
+        "prim_path": "/WaffleMaker/Lid"
+      },
+      "collision": {
+        "shape_count": 249,
+        "approximations": [
+          "convexHull"
+        ]
+      },
+      "reasoning": null
+    }
+  ],
+  "articulation": {
+    "has_joints": true,
+    "joints": [
+      {
+        "id": "LidHinge",
+        "path": "/WaffleMaker/Joints/LidHinge",
+        "type": "PhysicsRevoluteJoint",
+        "enabled": true,
+        "body0": [
+          "/WaffleMaker/Base"
+        ],
+        "body1": [
+          "/WaffleMaker/Lid"
+        ],
+        "lower_limit": -110.0,
+        "upper_limit": 0.0
+      }
+    ]
+  },
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  },
+  "simulation": {
+    "fix_base": null
+  },
+  "provenance": {
+    "source_schema": "authored_usd",
+    "usd_path": "batch41/D01061_Waffle_Maker/D01061_Waffle_Maker.usd",
+    "usd_sha256": "c8463e83fc83d4f6a3a80fa6001206d06e54d743a523be4be2a12161434028e3",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "bounds_method": "transformed_visual_mesh_points",
+    "reasoning_available": false,
+    "verification_note": "Authored USD properties and transformed visual bounds only. Real-world dimensions, mass, and runtime stability are not independently verified by this extraction."
+  },
+  "validation": {
+    "overall": "partial",
+    "scale": {
+      "status": "recorded",
+      "confidence": "medium",
+      "units": "m",
+      "up_axis": "Z",
+      "bounds_m": [
+        0.3042096481746617,
+        0.2030000016093254,
+        0.28931320432974306
+      ]
+    },
+    "mass": {
+      "status": "recorded",
+      "confidence": "medium",
+      "value_kg": 1.4000000357627869
+    },
+    "collision": {
+      "status": "recorded",
+      "confidence": "medium",
+      "shape_count": 425,
+      "approximations": [
+        "convexHull"
+      ]
+    },
+    "articulation": {
+      "status": "recorded",
+      "confidence": "medium",
+      "moving_joints": 1
+    }
+  }
+}

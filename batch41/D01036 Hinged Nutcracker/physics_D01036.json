@@ -1,0 +1,152 @@
+{
+  "schema_version": "1.0",
+  "asset_id": "D01036",
+  "asset": {
+    "name": "D01036 Hinged Nutcracker",
+    "object_type": "articulated",
+    "total_mass": 0.17999999970197678,
+    "bounds": {
+      "min": [
+        -0.07711129814797493,
+        -0.025309231693721946,
+        0.0
+      ],
+      "max": [
+        0.07792111058596916,
+        0.025364701726279335,
+        0.011692372246738423
+      ],
+      "size": [
+        0.15503240873394408,
+        0.05067393342000128,
+        0.011692372246738423
+      ]
+    }
+  },
+  "parts": [
+    {
+      "id": "Arm_L",
+      "name": "Arm_L",
+      "mass": 0.09097974002361298,
+      "density": null,
+      "inertia": [
+        2.755172999968636e-06,
+        0.00015183632785920054,
+        0.00015357922529801726
+      ],
+      "center_of_mass": [
+        -0.061408814042806625,
+        0.014297290705144405,
+        0.0003049404767807573
+      ],
+      "physics_type": "rigid",
+      "source": {
+        "prim_path": "/World/Nutcracker/Arm_L"
+      },
+      "collision": {
+        "shape_count": 144,
+        "approximations": [
+          "convexHull"
+        ]
+      },
+      "reasoning": null
+    },
+    {
+      "id": "Arm_R",
+      "name": "Arm_R",
+      "mass": 0.0890202596783638,
+      "density": null,
+      "inertia": [
+        2.649123189257807e-06,
+        0.0001439075276721269,
+        0.00014561059651896358
+      ],
+      "center_of_mass": [
+        -0.06276052445173264,
+        -0.01461199764162302,
+        -0.000304391433019191
+      ],
+      "physics_type": "rigid",
+      "source": {
+        "prim_path": "/World/Nutcracker/Arm_R"
+      },
+      "collision": {
+        "shape_count": 142,
+        "approximations": [
+          "convexHull"
+        ]
+      },
+      "reasoning": null
+    }
+  ],
+  "articulation": {
+    "has_joints": true,
+    "joints": [
+      {
+        "id": "Pivot",
+        "path": "/World/Nutcracker/Joints/Pivot",
+        "type": "PhysicsRevoluteJoint",
+        "enabled": true,
+        "body0": [
+          "/World/Nutcracker/Arm_L"
+        ],
+        "body1": [
+          "/World/Nutcracker/Arm_R"
+        ],
+        "lower_limit": 0.0,
+        "upper_limit": 100.0
+      }
+    ]
+  },
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  },
+  "simulation": {
+    "fix_base": null
+  },
+  "provenance": {
+    "source_schema": "authored_usd",
+    "usd_path": "batch41/D01036 Hinged Nutcracker/D01036 Hinged Nutcracker.usd",
+    "usd_sha256": "0be6e5822de50bdd7f7f2c98bb44538f17555663395015b3732074b5e8a1d77a",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "bounds_method": "transformed_visual_mesh_points",
+    "reasoning_available": false,
+    "verification_note": "Authored USD properties and transformed visual bounds only. Real-world dimensions, mass, and runtime stability are not independently verified by this extraction."
+  },
+  "validation": {
+    "overall": "partial",
+    "scale": {
+      "status": "recorded",
+      "confidence": "medium",
+      "units": "m",
+      "up_axis": "Z",
+      "bounds_m": [
+        0.15503240873394408,
+        0.05067393342000128,
+        0.011692372246738423
+      ]
+    },
+    "mass": {
+      "status": "recorded",
+      "confidence": "medium",
+      "value_kg": 0.17999999970197678
+    },
+    "collision": {
+      "status": "recorded",
+      "confidence": "medium",
+      "shape_count": 286,
+      "approximations": [
+        "convexHull"
+      ]
+    },
+    "articulation": {
+      "status": "recorded",
+      "confidence": "medium",
+      "moving_joints": 1
+    }
+  }
+}

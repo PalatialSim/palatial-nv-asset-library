@@ -1,0 +1,358 @@
+{
+  "schema_version": "1.0",
+  "asset_id": "D01058",
+  "asset": {
+    "name": "D01058 Countertop Vacuum Sealer",
+    "object_type": "articulated",
+    "total_mass": 30.000000022351742,
+    "bounds": {
+      "min": [
+        -0.18000000715255737,
+        -0.20000000298023224,
+        0.0
+      ],
+      "max": [
+        0.18000000715255737,
+        0.20000000298023224,
+        0.1899999976158142
+      ],
+      "size": [
+        0.36000001430511475,
+        0.4000000059604645,
+        0.1899999976158142
+      ]
+    }
+  },
+  "parts": [
+    {
+      "id": "Base",
+      "name": "Base",
+      "mass": 28.0,
+      "density": null,
+      "inertia": [
+        0.33063334226608276,
+        0.259758323431015,
+        0.5339249968528748
+      ],
+      "center_of_mass": [
+        -0.004999999888241291,
+        0.0,
+        0.061000000685453415
+      ],
+      "physics_type": "rigid",
+      "source": {
+        "prim_path": "/ElianiSealer/Base"
+      },
+      "collision": {
+        "shape_count": 124,
+        "approximations": [
+          "convexHull"
+        ]
+      },
+      "reasoning": null
+    },
+    {
+      "id": "Lid",
+      "name": "Lid",
+      "mass": 1.600000023841858,
+      "density": null,
+      "inertia": [
+        0.020919600501656532,
+        0.016157999634742737,
+        0.03705599904060364
+      ],
+      "center_of_mass": [
+        0.1705000102519989,
+        0.0,
+        0.0020000056829303503
+      ],
+      "physics_type": "rigid",
+      "source": {
+        "prim_path": "/ElianiSealer/Lid"
+      },
+      "collision": {
+        "shape_count": 73,
+        "approximations": [
+          "convexHull"
+        ]
+      },
+      "reasoning": null
+    },
+    {
+      "id": "LeftCylinder",
+      "name": "LeftCylinder",
+      "mass": 0.14000000059604645,
+      "density": null,
+      "inertia": [
+        0.00013613859482575208,
+        0.00013613859482575208,
+        2.3333334411290707e-06
+      ],
+      "center_of_mass": [
+        0.0,
+        0.0,
+        0.05377969518303871
+      ],
+      "physics_type": "rigid",
+      "source": {
+        "prim_path": "/ElianiSealer/LeftCylinder"
+      },
+      "collision": {
+        "shape_count": 1,
+        "approximations": [
+          "convexHull"
+        ]
+      },
+      "reasoning": null
+    },
+    {
+      "id": "LeftPiston",
+      "name": "LeftPiston",
+      "mass": 0.05999999865889549,
+      "density": null,
+      "inertia": [
+        7.605279824929312e-05,
+        7.605279824929312e-05,
+        9.999999974752427e-07
+      ],
+      "center_of_mass": [
+        0.0,
+        0.0,
+        -0.06146250665187836
+      ],
+      "physics_type": "rigid",
+      "source": {
+        "prim_path": "/ElianiSealer/LeftPiston"
+      },
+      "collision": {
+        "shape_count": 2,
+        "approximations": [
+          "convexHull"
+        ]
+      },
+      "reasoning": null
+    },
+    {
+      "id": "RightCylinder",
+      "name": "RightCylinder",
+      "mass": 0.14000000059604645,
+      "density": null,
+      "inertia": [
+        0.00013613859482575208,
+        0.00013613859482575208,
+        2.3333334411290707e-06
+      ],
+      "center_of_mass": [
+        0.0,
+        0.0,
+        0.05377969518303871
+      ],
+      "physics_type": "rigid",
+      "source": {
+        "prim_path": "/ElianiSealer/RightCylinder"
+      },
+      "collision": {
+        "shape_count": 1,
+        "approximations": [
+          "convexHull"
+        ]
+      },
+      "reasoning": null
+    },
+    {
+      "id": "RightPiston",
+      "name": "RightPiston",
+      "mass": 0.05999999865889549,
+      "density": null,
+      "inertia": [
+        7.605279824929312e-05,
+        7.605279824929312e-05,
+        9.999999974752427e-07
+      ],
+      "center_of_mass": [
+        0.0,
+        0.0,
+        -0.06146250665187836
+      ],
+      "physics_type": "rigid",
+      "source": {
+        "prim_path": "/ElianiSealer/RightPiston"
+      },
+      "collision": {
+        "shape_count": 2,
+        "approximations": [
+          "convexHull"
+        ]
+      },
+      "reasoning": null
+    }
+  ],
+  "articulation": {
+    "has_joints": true,
+    "joints": [
+      {
+        "id": "FixedBase_to_World",
+        "path": "/ElianiSealer/Joints/FixedBase_to_World",
+        "type": "PhysicsFixedJoint",
+        "enabled": false,
+        "body0": [
+          "/ElianiSealer"
+        ],
+        "body1": [
+          "/ElianiSealer/Base"
+        ],
+        "lower_limit": null,
+        "upper_limit": null
+      },
+      {
+        "id": "Lid_Hinge",
+        "path": "/ElianiSealer/Joints/Lid_Hinge",
+        "type": "PhysicsRevoluteJoint",
+        "enabled": true,
+        "body0": [
+          "/ElianiSealer/Base"
+        ],
+        "body1": [
+          "/ElianiSealer/Lid"
+        ],
+        "lower_limit": 0.0,
+        "upper_limit": 105.0
+      },
+      {
+        "id": "Left_Cylinder_BasePin",
+        "path": "/ElianiSealer/Joints/Left_Cylinder_BasePin",
+        "type": "PhysicsRevoluteJoint",
+        "enabled": true,
+        "body0": [
+          "/ElianiSealer/Base"
+        ],
+        "body1": [
+          "/ElianiSealer/LeftCylinder"
+        ],
+        "lower_limit": -45.0,
+        "upper_limit": 45.0
+      },
+      {
+        "id": "Left_GasSpring_Stroke",
+        "path": "/ElianiSealer/Joints/Left_GasSpring_Stroke",
+        "type": "PhysicsPrismaticJoint",
+        "enabled": true,
+        "body0": [
+          "/ElianiSealer/LeftCylinder"
+        ],
+        "body1": [
+          "/ElianiSealer/LeftPiston"
+        ],
+        "lower_limit": 0.0,
+        "upper_limit": 0.05040835961699486
+      },
+      {
+        "id": "Left_Rod_LidPin_LOOP",
+        "path": "/ElianiSealer/Joints/Left_Rod_LidPin_LOOP",
+        "type": "PhysicsRevoluteJoint",
+        "enabled": true,
+        "body0": [
+          "/ElianiSealer/LeftPiston"
+        ],
+        "body1": [
+          "/ElianiSealer/Lid"
+        ],
+        "lower_limit": -120.0,
+        "upper_limit": 120.0
+      },
+      {
+        "id": "Right_Cylinder_BasePin",
+        "path": "/ElianiSealer/Joints/Right_Cylinder_BasePin",
+        "type": "PhysicsRevoluteJoint",
+        "enabled": true,
+        "body0": [
+          "/ElianiSealer/Base"
+        ],
+        "body1": [
+          "/ElianiSealer/RightCylinder"
+        ],
+        "lower_limit": -45.0,
+        "upper_limit": 45.0
+      },
+      {
+        "id": "Right_GasSpring_Stroke",
+        "path": "/ElianiSealer/Joints/Right_GasSpring_Stroke",
+        "type": "PhysicsPrismaticJoint",
+        "enabled": true,
+        "body0": [
+          "/ElianiSealer/RightCylinder"
+        ],
+        "body1": [
+          "/ElianiSealer/RightPiston"
+        ],
+        "lower_limit": 0.0,
+        "upper_limit": 0.05040835961699486
+      },
+      {
+        "id": "Right_Rod_LidPin_LOOP",
+        "path": "/ElianiSealer/Joints/Right_Rod_LidPin_LOOP",
+        "type": "PhysicsRevoluteJoint",
+        "enabled": true,
+        "body0": [
+          "/ElianiSealer/RightPiston"
+        ],
+        "body1": [
+          "/ElianiSealer/Lid"
+        ],
+        "lower_limit": -120.0,
+        "upper_limit": 120.0
+      }
+    ]
+  },
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  },
+  "simulation": {
+    "fix_base": null
+  },
+  "provenance": {
+    "source_schema": "authored_usd",
+    "usd_path": "batch41/D01058_Countertop_Vacuum_Sealer/D01058_Countertop_Vacuum_Sealer/D01058_Countertop_Vacuum_Sealer.usd",
+    "usd_sha256": "e2ed2bb9e46a8f58f278a8d2de7763121f038b03d574238e78b4f912558799e4",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "bounds_method": "transformed_visual_mesh_points",
+    "reasoning_available": false,
+    "verification_note": "Authored USD properties and transformed visual bounds only. Real-world dimensions, mass, and runtime stability are not independently verified by this extraction."
+  },
+  "validation": {
+    "overall": "partial",
+    "scale": {
+      "status": "recorded",
+      "confidence": "medium",
+      "units": "m",
+      "up_axis": "Z",
+      "bounds_m": [
+        0.36000001430511475,
+        0.4000000059604645,
+        0.1899999976158142
+      ]
+    },
+    "mass": {
+      "status": "recorded",
+      "confidence": "medium",
+      "value_kg": 30.000000022351742
+    },
+    "collision": {
+      "status": "recorded",
+      "confidence": "medium",
+      "shape_count": 203,
+      "approximations": [
+        "convexHull"
+      ]
+    },
+    "articulation": {
+      "status": "recorded",
+      "confidence": "medium",
+      "moving_joints": 7
+    }
+  }
+}

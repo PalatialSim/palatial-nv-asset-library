@@ -1,0 +1,195 @@
+{
+  "schema_version": "1.0",
+  "asset_id": "D01060",
+  "asset": {
+    "name": "D01060 Ice Cream Maker",
+    "object_type": "articulated",
+    "total_mass": 2.719999996945262,
+    "bounds": {
+      "min": [
+        -0.1014999970793724,
+        -0.1014999970793724,
+        0.0
+      ],
+      "max": [
+        0.1014999970793724,
+        0.1014999970793724,
+        0.22200000286102295
+      ],
+      "size": [
+        0.2029999941587448,
+        0.2029999941587448,
+        0.22200000286102295
+      ]
+    }
+  },
+  "parts": [
+    {
+      "id": "Chassis",
+      "name": "Chassis",
+      "mass": 2.7039999961853027,
+      "density": null,
+      "inertia": [
+        0.011599999852478504,
+        0.01209999993443489,
+        0.011500000022351742
+      ],
+      "center_of_mass": [
+        -0.007000000216066837,
+        0.0,
+        0.08500000089406967
+      ],
+      "physics_type": "rigid",
+      "source": {
+        "prim_path": "/IceCreamMaker/Chassis"
+      },
+      "collision": {
+        "shape_count": 545,
+        "approximations": [
+          "convexDecomposition",
+          "convexHull"
+        ]
+      },
+      "reasoning": null
+    },
+    {
+      "id": "Button_OFF",
+      "name": "Button_OFF",
+      "mass": 0.00800000037997961,
+      "density": null,
+      "inertia": [
+        6.999999868639861e-08,
+        1.0000000116860974e-07,
+        1.3999999737279722e-07
+      ],
+      "center_of_mass": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "physics_type": "rigid",
+      "source": {
+        "prim_path": "/IceCreamMaker/Button_OFF"
+      },
+      "collision": {
+        "shape_count": 1,
+        "approximations": [
+          "convexHull"
+        ]
+      },
+      "reasoning": null
+    },
+    {
+      "id": "Button_ON",
+      "name": "Button_ON",
+      "mass": 0.00800000037997961,
+      "density": null,
+      "inertia": [
+        6.999999868639861e-08,
+        1.0000000116860974e-07,
+        1.3999999737279722e-07
+      ],
+      "center_of_mass": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "physics_type": "rigid",
+      "source": {
+        "prim_path": "/IceCreamMaker/Button_ON"
+      },
+      "collision": {
+        "shape_count": 1,
+        "approximations": [
+          "convexHull"
+        ]
+      },
+      "reasoning": null
+    }
+  ],
+  "articulation": {
+    "has_joints": true,
+    "joints": [
+      {
+        "id": "Button_OFF_press",
+        "path": "/IceCreamMaker/Joints/Button_OFF_press",
+        "type": "PhysicsPrismaticJoint",
+        "enabled": true,
+        "body0": [
+          "/IceCreamMaker/Chassis"
+        ],
+        "body1": [
+          "/IceCreamMaker/Button_OFF"
+        ],
+        "lower_limit": -0.001500000013038516,
+        "upper_limit": 0.0
+      },
+      {
+        "id": "Button_ON_press",
+        "path": "/IceCreamMaker/Joints/Button_ON_press",
+        "type": "PhysicsPrismaticJoint",
+        "enabled": true,
+        "body0": [
+          "/IceCreamMaker/Chassis"
+        ],
+        "body1": [
+          "/IceCreamMaker/Button_ON"
+        ],
+        "lower_limit": -0.001500000013038516,
+        "upper_limit": 0.0
+      }
+    ]
+  },
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  },
+  "simulation": {
+    "fix_base": null
+  },
+  "provenance": {
+    "source_schema": "authored_usd",
+    "usd_path": "batch41/D01060_Ice_Cream_Maker/D01060_Ice_Cream_Maker.usd",
+    "usd_sha256": "6db5e5713e7f9d4a9cee0b73268da0eebedf0bd7f0fc7c8f6050f00f0325997b",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "bounds_method": "transformed_visual_mesh_points",
+    "reasoning_available": false,
+    "verification_note": "Authored USD properties and transformed visual bounds only. Real-world dimensions, mass, and runtime stability are not independently verified by this extraction."
+  },
+  "validation": {
+    "overall": "partial",
+    "scale": {
+      "status": "recorded",
+      "confidence": "medium",
+      "units": "m",
+      "up_axis": "Z",
+      "bounds_m": [
+        0.2029999941587448,
+        0.2029999941587448,
+        0.22200000286102295
+      ]
+    },
+    "mass": {
+      "status": "recorded",
+      "confidence": "medium",
+      "value_kg": 2.719999996945262
+    },
+    "collision": {
+      "status": "recorded",
+      "confidence": "medium",
+      "shape_count": 547,
+      "approximations": [
+        "convexDecomposition",
+        "convexHull"
+      ]
+    },
+    "articulation": {
+      "status": "recorded",
+      "confidence": "medium",
+      "moving_joints": 2
+    }
+  }
+}

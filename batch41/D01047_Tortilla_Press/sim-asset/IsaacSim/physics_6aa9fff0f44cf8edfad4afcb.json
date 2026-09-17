@@ -1,0 +1,234 @@
+{
+  "schema_version": "1.0",
+  "asset_id": "D01047",
+  "asset": {
+    "name": "D01047 Tortilla Press",
+    "object_type": "articulated",
+    "total_mass": 3.5000000596046448,
+    "bounds": {
+      "min": [
+        -0.14597900211811066,
+        -0.12761899828910828,
+        -0.00025499999173916876
+      ],
+      "max": [
+        0.14999400079250336,
+        0.12624099850654602,
+        0.2638770043849945
+      ],
+      "size": [
+        0.295973002910614,
+        0.2538599967956543,
+        0.2641320043767337
+      ]
+    }
+  },
+  "parts": [
+    {
+      "id": "part_0",
+      "name": "part_0",
+      "mass": 1.2000000476837158,
+      "density": 7200.0,
+      "inertia": [
+        0.004141512792557478,
+        0.005201177671551704,
+        0.009295427240431309
+      ],
+      "center_of_mass": [
+        -0.1143612489104271,
+        -0.05178867653012276,
+        0.08609099686145782
+      ],
+      "physics_type": "rigid",
+      "source": {
+        "prim_path": "/World/textured_mesh_6aa9fff0f44cf8edfad4afcb/part_0"
+      },
+      "collision": {
+        "shape_count": 1,
+        "approximations": [
+          "sdf"
+        ]
+      },
+      "reasoning": null
+    },
+    {
+      "id": "part_1",
+      "name": "part_1",
+      "mass": 1.5,
+      "density": 7200.0,
+      "inertia": [
+        0.005317018833011389,
+        0.006702972110360861,
+        0.011930751614272594
+      ],
+      "center_of_mass": [
+        -0.0011174717219546437,
+        -0.000690973422024399,
+        0.009305720217525959
+      ],
+      "physics_type": "rigid",
+      "source": {
+        "prim_path": "/World/textured_mesh_6aa9fff0f44cf8edfad4afcb/part_1"
+      },
+      "collision": {
+        "shape_count": 1,
+        "approximations": [
+          "sdf"
+        ]
+      },
+      "reasoning": null
+    },
+    {
+      "id": "part_2",
+      "name": "part_2",
+      "mass": 0.5,
+      "density": 7200.0,
+      "inertia": [
+        3.552556881913915e-05,
+        0.002762079006060958,
+        0.002763862954452634
+      ],
+      "center_of_mass": [
+        0.0585227906703949,
+        0.01011867169290781,
+        0.12505075335502625
+      ],
+      "physics_type": "rigid",
+      "source": {
+        "prim_path": "/World/textured_mesh_6aa9fff0f44cf8edfad4afcb/part_2"
+      },
+      "collision": {
+        "shape_count": 1,
+        "approximations": [
+          "sdf"
+        ]
+      },
+      "reasoning": null
+    },
+    {
+      "id": "part_3",
+      "name": "part_3",
+      "mass": 0.30000001192092896,
+      "density": 7200.0,
+      "inertia": [
+        0.00015631713904440403,
+        0.0002684655482880771,
+        0.00040354052907787263
+      ],
+      "center_of_mass": [
+        0.1127668172121048,
+        -0.00020960811525583267,
+        0.00963977724313736
+      ],
+      "physics_type": "rigid",
+      "source": {
+        "prim_path": "/World/textured_mesh_6aa9fff0f44cf8edfad4afcb/part_3"
+      },
+      "collision": {
+        "shape_count": 1,
+        "approximations": [
+          "sdf"
+        ]
+      },
+      "reasoning": null
+    }
+  ],
+  "articulation": {
+    "has_joints": true,
+    "joints": [
+      {
+        "id": "joint_part_3__part_0",
+        "path": "/World/textured_mesh_6aa9fff0f44cf8edfad4afcb/Joints/joint_part_3__part_0",
+        "type": "PhysicsRevoluteJoint",
+        "enabled": true,
+        "body0": [
+          "/World/textured_mesh_6aa9fff0f44cf8edfad4afcb/part_3"
+        ],
+        "body1": [
+          "/World/textured_mesh_6aa9fff0f44cf8edfad4afcb/part_0"
+        ],
+        "lower_limit": -35.0,
+        "upper_limit": 0.0
+      },
+      {
+        "id": "joint_part_1__part_2",
+        "path": "/World/textured_mesh_6aa9fff0f44cf8edfad4afcb/Joints/joint_part_1__part_2",
+        "type": "PhysicsRevoluteJoint",
+        "enabled": true,
+        "body0": [
+          "/World/textured_mesh_6aa9fff0f44cf8edfad4afcb/part_1"
+        ],
+        "body1": [
+          "/World/textured_mesh_6aa9fff0f44cf8edfad4afcb/part_2"
+        ],
+        "lower_limit": -95.0,
+        "upper_limit": 90.0
+      },
+      {
+        "id": "joint_part_1__part_3",
+        "path": "/World/textured_mesh_6aa9fff0f44cf8edfad4afcb/Joints/joint_part_1__part_3",
+        "type": "PhysicsFixedJoint",
+        "enabled": true,
+        "body0": [
+          "/World/textured_mesh_6aa9fff0f44cf8edfad4afcb/part_1"
+        ],
+        "body1": [
+          "/World/textured_mesh_6aa9fff0f44cf8edfad4afcb/part_3"
+        ],
+        "lower_limit": null,
+        "upper_limit": null
+      }
+    ]
+  },
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  },
+  "simulation": {
+    "fix_base": null
+  },
+  "provenance": {
+    "source_schema": "authored_usd",
+    "usd_path": "batch41/D01047_Tortilla_Press/sim-asset/IsaacSim/IsaacSim_asset_6aa9fff0f44cf8edfad4afcb.usd",
+    "usd_sha256": "6f38241af3ee81899913b3f52b7271e5e4589c70e9a84c4c71349a6989bc2fb0",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "bounds_method": "transformed_visual_mesh_points",
+    "reasoning_available": false,
+    "verification_note": "Authored USD properties and transformed visual bounds only. Real-world dimensions, mass, and runtime stability are not independently verified by this extraction."
+  },
+  "validation": {
+    "overall": "partial",
+    "scale": {
+      "status": "recorded",
+      "confidence": "medium",
+      "units": "m",
+      "up_axis": "Z",
+      "bounds_m": [
+        0.295973002910614,
+        0.2538599967956543,
+        0.2641320043767337
+      ]
+    },
+    "mass": {
+      "status": "recorded",
+      "confidence": "medium",
+      "value_kg": 3.5000000596046448
+    },
+    "collision": {
+      "status": "recorded",
+      "confidence": "medium",
+      "shape_count": 4,
+      "approximations": [
+        "sdf"
+      ]
+    },
+    "articulation": {
+      "status": "recorded",
+      "confidence": "medium",
+      "moving_joints": 2
+    }
+  }
+}

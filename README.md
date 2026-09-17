@@ -6,15 +6,22 @@ Large binary files (`.usd`, `.png`, `.mp4`, `.jpeg`, etc.) are stored with [Git 
 
 ## Visual previews and simulation videos
 
-Browse the [batch montage images](gallery/montages/) directly on GitHub. The [interactive gallery](gallery/) covers **977 assets across 40 populated batches (Batch 1–Batch 40)**, with search, batch and joint-type filters, rendered/collision views, and simulation videos.
+Open the [live asset gallery](https://palatialsim.github.io/palatial-nv-asset-library/) to browse **1,013 assets across 41 batches (Batch 1–Batch 41)** without downloading the repository or installing Isaac Sim. [Batch 41](https://palatialsim.github.io/palatial-nv-asset-library/?batch=batch41) adds **36 assets (D01028–D01063)**, each with a rendered preview, collision preview, simulation video, USD package, and physics JSON.
 
-To browse the interactive gallery locally, run this from the repository root:
+Choose a batch or use the previous/next arrows. Search by name or ID, filter by moving joints, switch between rendered and collision views, and open a full-size montage. Hover a card to preview its video. [Batch montage images](gallery/montages/) are also in the repository.
+
+To browse locally, run this from the repository root:
 
 ```bash
 python3 -m http.server 8000
 ```
 
-Then open <http://localhost:8000/gallery/>. Isaac Sim is not needed to view the gallery. Collision images show authored geometry; Batch 1 collision previews are generated from its delivered USD collision prims. Videos show the recorded test behavior, including tipping when it occurs.
+Then open <http://localhost:8000/gallery/>. Isaac Sim is not needed to view the gallery.
+
+- **Scale:** Gallery dimensions are transformed visual-mesh bounds in X × Y × Z order, in metres. Batch 41 USDs declare `metersPerUnit = 1` and Z up.
+- **Joints:** The moving-joints filter describes authored USD joints. Batch 41 has 16 assets with moving joints (40 joints total) and 20 without. A video may not exercise every joint.
+- **Collisions:** Collision images show authored collision geometry. Colors distinguish collision pieces.
+- **Simulation videos:** Videos show recorded test behavior, including tipping where it occurs.
 
 ## 1. Install Git LFS
 
@@ -92,7 +99,3 @@ D00060 Bowl Dish/
 │   ├── texture_metallic.png
 │   └── texture_roughness.png
 ```
-
-## Visual previews
-
-Browse the [asset preview gallery](gallery/index.html) for searchable per-asset renders, collision views, and validation videos. Batch montage sheets are in [gallery/montages](gallery/montages/).

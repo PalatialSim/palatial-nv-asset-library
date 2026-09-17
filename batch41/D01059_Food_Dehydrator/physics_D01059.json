@@ -1,0 +1,247 @@
+{
+  "schema_version": "1.0",
+  "asset_id": "D01059",
+  "asset": {
+    "name": "D01059 Food Dehydrator",
+    "object_type": "articulated",
+    "total_mass": 1.6000000378116965,
+    "bounds": {
+      "min": [
+        -0.16899999976158142,
+        -0.16899999976158142,
+        0.0
+      ],
+      "max": [
+        0.16864778273118397,
+        0.16899999976158142,
+        0.25248541864446206
+      ],
+      "size": [
+        0.3376477824927654,
+        0.33799999952316284,
+        0.25248541864446206
+      ]
+    }
+  },
+  "parts": [
+    {
+      "id": "Base",
+      "name": "Base",
+      "mass": 1.100000023841858,
+      "density": null,
+      "inertia": [
+        0.008218100294470787,
+        0.008218100294470787,
+        0.015708550810813904
+      ],
+      "center_of_mass": [
+        0.0,
+        0.0,
+        0.027089999988675117
+      ],
+      "physics_type": "rigid",
+      "source": {
+        "prim_path": "/Dehydrator/Appliance/Base"
+      },
+      "collision": {
+        "shape_count": 242,
+        "approximations": [
+          "convexHull"
+        ]
+      },
+      "reasoning": null
+    },
+    {
+      "id": "Power_Rocker",
+      "name": "Power_Rocker",
+      "mass": 0.006000000052154064,
+      "density": null,
+      "inertia": [
+        2.920000099493336e-07,
+        5.721999940533351e-08,
+        2.4921999397520267e-07
+      ],
+      "center_of_mass": [
+        0.0010000000474974513,
+        0.0,
+        0.0
+      ],
+      "physics_type": "rigid",
+      "source": {
+        "prim_path": "/Dehydrator/Appliance/Power_Rocker"
+      },
+      "collision": {
+        "shape_count": 1,
+        "approximations": [
+          "convexHull"
+        ]
+      },
+      "reasoning": null
+    },
+    {
+      "id": "Timer_Dial",
+      "name": "Timer_Dial",
+      "mass": 0.024000000208616257,
+      "density": null,
+      "inertia": [
+        3.4679999316722387e-06,
+        1.958720076800091e-06,
+        1.958720076800091e-06
+      ],
+      "center_of_mass": [
+        0.0035000001080334187,
+        0.0,
+        0.0
+      ],
+      "physics_type": "rigid",
+      "source": {
+        "prim_path": "/Dehydrator/Appliance/Timer_Dial"
+      },
+      "collision": {
+        "shape_count": 1,
+        "approximations": [
+          "convexHull"
+        ]
+      },
+      "reasoning": null
+    },
+    {
+      "id": "Tray_Stack",
+      "name": "Tray_Stack",
+      "mass": 0.20000000298023224,
+      "density": null,
+      "inertia": [
+        0.21626411378383636,
+        0.2159106433391571,
+        0.3399772644042969
+      ],
+      "center_of_mass": [
+        -0.0058792890049517155,
+        0.023874681442975998,
+        0.13664864003658295
+      ],
+      "physics_type": "rigid",
+      "source": {
+        "prim_path": "/Dehydrator/Tray_Stack/Tray_Stack"
+      },
+      "collision": {
+        "shape_count": 2,
+        "approximations": [
+          "convexHull"
+        ]
+      },
+      "reasoning": null
+    },
+    {
+      "id": "Lid",
+      "name": "Lid",
+      "mass": 0.27000001072883606,
+      "density": null,
+      "inertia": [
+        0.002131717512384057,
+        0.002131717512384057,
+        0.004263435024768114
+      ],
+      "center_of_mass": [
+        0.0,
+        0.0,
+        0.014000000432133675
+      ],
+      "physics_type": "rigid",
+      "source": {
+        "prim_path": "/Dehydrator/Lid"
+      },
+      "collision": {
+        "shape_count": 400,
+        "approximations": [
+          "convexHull"
+        ]
+      },
+      "reasoning": null
+    }
+  ],
+  "articulation": {
+    "has_joints": true,
+    "joints": [
+      {
+        "id": "Timer_Revolute",
+        "path": "/Dehydrator/Appliance/Joints/Timer_Revolute",
+        "type": "PhysicsRevoluteJoint",
+        "enabled": true,
+        "body0": [
+          "/Dehydrator/Appliance/Base"
+        ],
+        "body1": [
+          "/Dehydrator/Appliance/Timer_Dial"
+        ],
+        "lower_limit": -270.0,
+        "upper_limit": 0.0
+      },
+      {
+        "id": "Power_Rocker_Revolute",
+        "path": "/Dehydrator/Appliance/Joints/Power_Rocker_Revolute",
+        "type": "PhysicsRevoluteJoint",
+        "enabled": true,
+        "body0": [
+          "/Dehydrator/Appliance/Base"
+        ],
+        "body1": [
+          "/Dehydrator/Appliance/Power_Rocker"
+        ],
+        "lower_limit": -24.0,
+        "upper_limit": 0.0
+      }
+    ]
+  },
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  },
+  "simulation": {
+    "fix_base": null
+  },
+  "provenance": {
+    "source_schema": "authored_usd",
+    "usd_path": "batch41/D01059_Food_Dehydrator/D01059_Food_Dehydrator.usd",
+    "usd_sha256": "73bc96193a4a246b5b7dd70d168b11fd1b0c7d814b321ad2e0bad6941b2def89",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "bounds_method": "transformed_visual_mesh_points",
+    "reasoning_available": false,
+    "verification_note": "Authored USD properties and transformed visual bounds only. Real-world dimensions, mass, and runtime stability are not independently verified by this extraction."
+  },
+  "validation": {
+    "overall": "partial",
+    "scale": {
+      "status": "recorded",
+      "confidence": "medium",
+      "units": "m",
+      "up_axis": "Z",
+      "bounds_m": [
+        0.3376477824927654,
+        0.33799999952316284,
+        0.25248541864446206
+      ]
+    },
+    "mass": {
+      "status": "recorded",
+      "confidence": "medium",
+      "value_kg": 1.6000000378116965
+    },
+    "collision": {
+      "status": "recorded",
+      "confidence": "medium",
+      "shape_count": 646,
+      "approximations": [
+        "convexHull"
+      ]
+    },
+    "articulation": {
+      "status": "recorded",
+      "confidence": "medium",
+      "moving_joints": 2
+    }
+  }
+}

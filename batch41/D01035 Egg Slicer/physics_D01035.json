@@ -1,0 +1,152 @@
+{
+  "schema_version": "1.0",
+  "asset_id": "D01035",
+  "asset": {
+    "name": "D01035 Egg Slicer",
+    "object_type": "articulated",
+    "total_mass": 0.22500430420041084,
+    "bounds": {
+      "min": [
+        -0.0700016189366579,
+        -0.049993715792254534,
+        0.0
+      ],
+      "max": [
+        0.06999838165938854,
+        0.04999309071962443,
+        0.057999998331069946
+      ],
+      "size": [
+        0.14000000059604645,
+        0.09998680651187897,
+        0.057999998331069946
+      ]
+    }
+  },
+  "parts": [
+    {
+      "id": "Base",
+      "name": "Base",
+      "mass": 0.17983278632164001,
+      "density": null,
+      "inertia": [
+        0.00032422138610854745,
+        0.00022915643057785928,
+        0.00014540058327838778
+      ],
+      "center_of_mass": [
+        -0.008936501108109951,
+        -4.65502125734929e-08,
+        0.021970681846141815
+      ],
+      "physics_type": "rigid",
+      "source": {
+        "prim_path": "/World/EggSlicer/Base"
+      },
+      "collision": {
+        "shape_count": 333,
+        "approximations": [
+          "convexHull"
+        ]
+      },
+      "reasoning": null
+    },
+    {
+      "id": "Lid",
+      "name": "Lid",
+      "mass": 0.04517151787877083,
+      "density": null,
+      "inertia": [
+        0.00011015459313057363,
+        6.914580444572493e-05,
+        4.1791339754126966e-05
+      ],
+      "center_of_mass": [
+        0.0499437116086483,
+        -9.978329273963027e-08,
+        -0.0010094011668115854
+      ],
+      "physics_type": "rigid",
+      "source": {
+        "prim_path": "/World/EggSlicer/Lid"
+      },
+      "collision": {
+        "shape_count": 76,
+        "approximations": [
+          "convexHull"
+        ]
+      },
+      "reasoning": null
+    }
+  ],
+  "articulation": {
+    "has_joints": true,
+    "joints": [
+      {
+        "id": "RearSpringHinge",
+        "path": "/World/EggSlicer/Joints/RearSpringHinge",
+        "type": "PhysicsRevoluteJoint",
+        "enabled": true,
+        "body0": [
+          "/World/EggSlicer/Base"
+        ],
+        "body1": [
+          "/World/EggSlicer/Lid"
+        ],
+        "lower_limit": -180.0,
+        "upper_limit": 0.0
+      }
+    ]
+  },
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  },
+  "simulation": {
+    "fix_base": null
+  },
+  "provenance": {
+    "source_schema": "authored_usd",
+    "usd_path": "batch41/D01035 Egg Slicer/D01035 Egg Slicer.usd",
+    "usd_sha256": "d60fe3e454c980b8c68b38fcbcf80d8bd02e566fd25ee10ecff015289df809da",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "bounds_method": "transformed_visual_mesh_points",
+    "reasoning_available": false,
+    "verification_note": "Authored USD properties and transformed visual bounds only. Real-world dimensions, mass, and runtime stability are not independently verified by this extraction."
+  },
+  "validation": {
+    "overall": "partial",
+    "scale": {
+      "status": "recorded",
+      "confidence": "medium",
+      "units": "m",
+      "up_axis": "Z",
+      "bounds_m": [
+        0.14000000059604645,
+        0.09998680651187897,
+        0.057999998331069946
+      ]
+    },
+    "mass": {
+      "status": "recorded",
+      "confidence": "medium",
+      "value_kg": 0.22500430420041084
+    },
+    "collision": {
+      "status": "recorded",
+      "confidence": "medium",
+      "shape_count": 409,
+      "approximations": [
+        "convexHull"
+      ]
+    },
+    "articulation": {
+      "status": "recorded",
+      "confidence": "medium",
+      "moving_joints": 1
+    }
+  }
+}
