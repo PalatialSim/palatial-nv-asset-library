@@ -1,0 +1,136 @@
+{
+  "schema_version": "1.0",
+  "asset_id": "D01042",
+  "asset": {
+    "name": "D01042 Dough Docker",
+    "object_type": "articulated",
+    "total_mass": 0.369999997317791,
+    "bounds": {
+      "min": [
+        -0.043949998915195465,
+        -0.03099999949336052,
+        0.0
+      ],
+      "max": [
+        0.043949998915195465,
+        0.22900009155273438,
+        0.05896550416946411
+      ],
+      "size": [
+        0.08789999783039093,
+        0.2600000910460949,
+        0.05896550416946411
+      ]
+    }
+  },
+  "parts": [
+    {
+      "id": "handle_yoke",
+      "name": "handle_yoke",
+      "mass": 0.25,
+      "density": null,
+      "inertia": null,
+      "center_of_mass": null,
+      "physics_type": "rigid",
+      "source": {
+        "prim_path": "/World/handle_yoke"
+      },
+      "collision": {
+        "shape_count": 13,
+        "approximations": [
+          "convexHull"
+        ]
+      },
+      "reasoning": null
+    },
+    {
+      "id": "roller",
+      "name": "roller",
+      "mass": 0.11999999731779099,
+      "density": null,
+      "inertia": null,
+      "center_of_mass": null,
+      "physics_type": "rigid",
+      "source": {
+        "prim_path": "/World/roller"
+      },
+      "collision": {
+        "shape_count": 104,
+        "approximations": [
+          "convexHull"
+        ]
+      },
+      "reasoning": null
+    }
+  ],
+  "articulation": {
+    "has_joints": true,
+    "joints": [
+      {
+        "id": "roller_spin",
+        "path": "/World/Joints/roller_spin",
+        "type": "PhysicsRevoluteJoint",
+        "enabled": true,
+        "body0": [
+          "/World/handle_yoke"
+        ],
+        "body1": [
+          "/World/roller"
+        ],
+        "lower_limit": null,
+        "upper_limit": null
+      }
+    ]
+  },
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  },
+  "simulation": {
+    "fix_base": null
+  },
+  "provenance": {
+    "source_schema": "authored_usd",
+    "usd_path": "batch41/D01042_Dough_Docker_simready/D01042_Dough_Docker.usd",
+    "usd_sha256": "b52a777275502259160e5e9281195652cd2fec210a8c57a967003c22092241fc",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "bounds_method": "transformed_visual_mesh_points",
+    "reasoning_available": false,
+    "verification_note": "Authored USD properties and transformed visual bounds only. Real-world dimensions, mass, and runtime stability are not independently verified by this extraction."
+  },
+  "validation": {
+    "overall": "partial",
+    "scale": {
+      "status": "recorded",
+      "confidence": "medium",
+      "units": "m",
+      "up_axis": "Z",
+      "bounds_m": [
+        0.08789999783039093,
+        0.2600000910460949,
+        0.05896550416946411
+      ]
+    },
+    "mass": {
+      "status": "recorded",
+      "confidence": "medium",
+      "value_kg": 0.369999997317791
+    },
+    "collision": {
+      "status": "recorded",
+      "confidence": "medium",
+      "shape_count": 117,
+      "approximations": [
+        "convexHull"
+      ]
+    },
+    "articulation": {
+      "status": "recorded",
+      "confidence": "medium",
+      "moving_joints": 1
+    }
+  }
+}

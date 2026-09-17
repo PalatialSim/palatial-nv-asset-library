@@ -1,0 +1,234 @@
+{
+  "schema_version": "1.0",
+  "asset_id": "D01049",
+  "asset": {
+    "name": "D01049 Vacuum Wine Stopper Pump",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.11999999918043613,
+    "bounds": {
+      "min": [
+        -0.0507659986615181,
+        -0.0289280004799366,
+        3.7999998312443495e-05
+      ],
+      "max": [
+        0.050579000264406204,
+        0.029486000537872314,
+        0.23884299397468567
+      ],
+      "size": [
+        0.1013449989259243,
+        0.058414001017808914,
+        0.23880499397637323
+      ]
+    }
+  },
+  "parts": [
+    {
+      "id": "part_0",
+      "name": "part_0",
+      "mass": 0.029999999329447746,
+      "density": 1100.0,
+      "inertia": [
+        6.846043561381521e-06,
+        2.3447515559382737e-05,
+        2.3722281184745952e-05
+      ],
+      "center_of_mass": [
+        -0.000157243077410385,
+        -0.0003188034170307219,
+        0.22417239844799042
+      ],
+      "physics_type": "rigid",
+      "source": {
+        "prim_path": "/World/textured_mesh_6aaa9f34f44cf8edfae4759b/part_0"
+      },
+      "collision": {
+        "shape_count": 1,
+        "approximations": [
+          "sdf"
+        ]
+      },
+      "reasoning": null
+    },
+    {
+      "id": "part_1",
+      "name": "part_1",
+      "mass": 0.05000000074505806,
+      "density": 1100.0,
+      "inertia": [
+        2.7882031645276584e-05,
+        9.205560490954667e-05,
+        9.242304076906294e-05
+      ],
+      "center_of_mass": [
+        -1.1860999620694201e-05,
+        0.00024273661256302148,
+        0.09182500094175339
+      ],
+      "physics_type": "rigid",
+      "source": {
+        "prim_path": "/World/textured_mesh_6aaa9f34f44cf8edfae4759b/part_1"
+      },
+      "collision": {
+        "shape_count": 1,
+        "approximations": [
+          "sdf"
+        ]
+      },
+      "reasoning": null
+    },
+    {
+      "id": "part_2",
+      "name": "part_2",
+      "mass": 0.019999999552965164,
+      "density": 1200.0,
+      "inertia": [
+        7.177160568971885e-06,
+        7.203826044133166e-06,
+        1.170522409665864e-05
+      ],
+      "center_of_mass": [
+        -0.00014992852811701596,
+        0.0003130551485810429,
+        0.010876958258450031
+      ],
+      "physics_type": "rigid",
+      "source": {
+        "prim_path": "/World/textured_mesh_6aaa9f34f44cf8edfae4759b/part_2"
+      },
+      "collision": {
+        "shape_count": 1,
+        "approximations": [
+          "sdf"
+        ]
+      },
+      "reasoning": null
+    },
+    {
+      "id": "part_3",
+      "name": "part_3",
+      "mass": 0.019999999552965164,
+      "density": 1100.0,
+      "inertia": [
+        5.644199063681299e-06,
+        5.846641670359531e-06,
+        6.065462457627291e-06
+      ],
+      "center_of_mass": [
+        -0.00014194307732395828,
+        0.00020579541160259396,
+        0.17332948744297028
+      ],
+      "physics_type": "rigid",
+      "source": {
+        "prim_path": "/World/textured_mesh_6aaa9f34f44cf8edfae4759b/part_3"
+      },
+      "collision": {
+        "shape_count": 1,
+        "approximations": [
+          "sdf"
+        ]
+      },
+      "reasoning": null
+    }
+  ],
+  "articulation": {
+    "has_joints": false,
+    "joints": [
+      {
+        "id": "joint_part_1__part_0",
+        "path": "/World/textured_mesh_6aaa9f34f44cf8edfae4759b/Joints/joint_part_1__part_0",
+        "type": "PhysicsFixedJoint",
+        "enabled": true,
+        "body0": [
+          "/World/textured_mesh_6aaa9f34f44cf8edfae4759b/part_1"
+        ],
+        "body1": [
+          "/World/textured_mesh_6aaa9f34f44cf8edfae4759b/part_0"
+        ],
+        "lower_limit": null,
+        "upper_limit": null
+      },
+      {
+        "id": "joint_part_1__part_2",
+        "path": "/World/textured_mesh_6aaa9f34f44cf8edfae4759b/Joints/joint_part_1__part_2",
+        "type": "PhysicsFixedJoint",
+        "enabled": true,
+        "body0": [
+          "/World/textured_mesh_6aaa9f34f44cf8edfae4759b/part_1"
+        ],
+        "body1": [
+          "/World/textured_mesh_6aaa9f34f44cf8edfae4759b/part_2"
+        ],
+        "lower_limit": null,
+        "upper_limit": null
+      },
+      {
+        "id": "joint_part_1__part_3",
+        "path": "/World/textured_mesh_6aaa9f34f44cf8edfae4759b/Joints/joint_part_1__part_3",
+        "type": "PhysicsFixedJoint",
+        "enabled": true,
+        "body0": [
+          "/World/textured_mesh_6aaa9f34f44cf8edfae4759b/part_1"
+        ],
+        "body1": [
+          "/World/textured_mesh_6aaa9f34f44cf8edfae4759b/part_3"
+        ],
+        "lower_limit": null,
+        "upper_limit": null
+      }
+    ]
+  },
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  },
+  "simulation": {
+    "fix_base": null
+  },
+  "provenance": {
+    "source_schema": "authored_usd",
+    "usd_path": "batch41/D01049 Vacuum Wine Stopper Pump/sim-asset/IsaacSim/IsaacSim_asset_6aaa9f34f44cf8edfae4759b.usd",
+    "usd_sha256": "9e6f7837d1b8de79a3e97c7c9be5ae5233a5f858659748e1d5a88103b158552d",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "bounds_method": "transformed_visual_mesh_points",
+    "reasoning_available": false,
+    "verification_note": "Authored USD properties and transformed visual bounds only. Real-world dimensions, mass, and runtime stability are not independently verified by this extraction."
+  },
+  "validation": {
+    "overall": "partial",
+    "scale": {
+      "status": "recorded",
+      "confidence": "medium",
+      "units": "m",
+      "up_axis": "Z",
+      "bounds_m": [
+        0.1013449989259243,
+        0.058414001017808914,
+        0.23880499397637323
+      ]
+    },
+    "mass": {
+      "status": "recorded",
+      "confidence": "medium",
+      "value_kg": 0.11999999918043613
+    },
+    "collision": {
+      "status": "recorded",
+      "confidence": "medium",
+      "shape_count": 4,
+      "approximations": [
+        "sdf"
+      ]
+    },
+    "articulation": {
+      "status": "recorded",
+      "confidence": "medium",
+      "moving_joints": 0
+    }
+  }
+}

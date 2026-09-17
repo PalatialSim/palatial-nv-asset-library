@@ -1,0 +1,202 @@
+{
+  "schema_version": "1.0",
+  "asset_id": "D01041",
+  "asset": {
+    "name": "D01041 Kitchen Blowtorch",
+    "object_type": "articulated",
+    "total_mass": 0.1799999929498881,
+    "bounds": {
+      "min": [
+        -0.0383400022983551,
+        -0.03200000151991844,
+        0.0
+      ],
+      "max": [
+        0.09870000183582306,
+        0.03200000151991844,
+        0.19009999930858612
+      ],
+      "size": [
+        0.13704000413417816,
+        0.06400000303983688,
+        0.19009999930858612
+      ]
+    }
+  },
+  "parts": [
+    {
+      "id": "MainBody",
+      "name": "MainBody",
+      "mass": 0.17299999296665192,
+      "density": null,
+      "inertia": null,
+      "center_of_mass": null,
+      "physics_type": "rigid",
+      "source": {
+        "prim_path": "/World/MainBody"
+      },
+      "collision": {
+        "shape_count": 441,
+        "approximations": [
+          "convexHull"
+        ]
+      },
+      "reasoning": null
+    },
+    {
+      "id": "FlameDial",
+      "name": "FlameDial",
+      "mass": 0.0024999999441206455,
+      "density": null,
+      "inertia": null,
+      "center_of_mass": null,
+      "physics_type": "rigid",
+      "source": {
+        "prim_path": "/World/FlameDial"
+      },
+      "collision": {
+        "shape_count": 98,
+        "approximations": [
+          "convexHull"
+        ]
+      },
+      "reasoning": null
+    },
+    {
+      "id": "IgnitionTrigger",
+      "name": "IgnitionTrigger",
+      "mass": 0.003000000026077032,
+      "density": null,
+      "inertia": null,
+      "center_of_mass": null,
+      "physics_type": "rigid",
+      "source": {
+        "prim_path": "/World/IgnitionTrigger"
+      },
+      "collision": {
+        "shape_count": 8,
+        "approximations": [
+          "convexHull"
+        ]
+      },
+      "reasoning": null
+    },
+    {
+      "id": "SafetySlider",
+      "name": "SafetySlider",
+      "mass": 0.001500000013038516,
+      "density": null,
+      "inertia": null,
+      "center_of_mass": null,
+      "physics_type": "rigid",
+      "source": {
+        "prim_path": "/World/SafetySlider"
+      },
+      "collision": {
+        "shape_count": 4,
+        "approximations": [
+          "convexHull"
+        ]
+      },
+      "reasoning": null
+    }
+  ],
+  "articulation": {
+    "has_joints": true,
+    "joints": [
+      {
+        "id": "flame_dial",
+        "path": "/World/Joints/flame_dial",
+        "type": "PhysicsRevoluteJoint",
+        "enabled": true,
+        "body0": [
+          "/World/MainBody"
+        ],
+        "body1": [
+          "/World/FlameDial"
+        ],
+        "lower_limit": 0.0,
+        "upper_limit": 240.0
+      },
+      {
+        "id": "ignition_trigger",
+        "path": "/World/Joints/ignition_trigger",
+        "type": "PhysicsPrismaticJoint",
+        "enabled": true,
+        "body0": [
+          "/World/MainBody"
+        ],
+        "body1": [
+          "/World/IgnitionTrigger"
+        ],
+        "lower_limit": 0.0,
+        "upper_limit": 0.0031999999191612005
+      },
+      {
+        "id": "safety_slide",
+        "path": "/World/Joints/safety_slide",
+        "type": "PhysicsPrismaticJoint",
+        "enabled": true,
+        "body0": [
+          "/World/MainBody"
+        ],
+        "body1": [
+          "/World/SafetySlider"
+        ],
+        "lower_limit": -0.004999999888241291,
+        "upper_limit": 0.0
+      }
+    ]
+  },
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  },
+  "simulation": {
+    "fix_base": null
+  },
+  "provenance": {
+    "source_schema": "authored_usd",
+    "usd_path": "batch41/D01041_Kitchen_Blowtorch/D01041_Kitchen_Blowtorch.usd",
+    "usd_sha256": "d52bc7814da1d5b311a856f5447e8a39edaa764296ff8816c4925a14dea68219",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "bounds_method": "transformed_visual_mesh_points",
+    "reasoning_available": false,
+    "verification_note": "Authored USD properties and transformed visual bounds only. Real-world dimensions, mass, and runtime stability are not independently verified by this extraction."
+  },
+  "validation": {
+    "overall": "partial",
+    "scale": {
+      "status": "recorded",
+      "confidence": "medium",
+      "units": "m",
+      "up_axis": "Z",
+      "bounds_m": [
+        0.13704000413417816,
+        0.06400000303983688,
+        0.19009999930858612
+      ]
+    },
+    "mass": {
+      "status": "recorded",
+      "confidence": "medium",
+      "value_kg": 0.1799999929498881
+    },
+    "collision": {
+      "status": "recorded",
+      "confidence": "medium",
+      "shape_count": 551,
+      "approximations": [
+        "convexHull"
+      ]
+    },
+    "articulation": {
+      "status": "recorded",
+      "confidence": "medium",
+      "moving_joints": 3
+    }
+  }
+}

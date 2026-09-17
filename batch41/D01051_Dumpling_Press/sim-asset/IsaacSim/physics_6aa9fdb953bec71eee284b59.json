@@ -1,0 +1,153 @@
+{
+  "schema_version": "1.0",
+  "asset_id": "D01051",
+  "asset": {
+    "name": "D01051 Dumpling Press",
+    "object_type": "articulated",
+    "total_mass": 0.28999999910593033,
+    "bounds": {
+      "min": [
+        -0.05705000087618828,
+        -0.08714400231838226,
+        -6.1062266023511365e-18
+      ],
+      "max": [
+        0.05705000087618828,
+        0.08714400231838226,
+        0.10477100312709808
+      ],
+      "size": [
+        0.11410000175237656,
+        0.17428800463676453,
+        0.10477100312709808
+      ]
+    }
+  },
+  "parts": [
+    {
+      "id": "folding_jaw",
+      "name": "folding_jaw",
+      "mass": 0.10000000149011612,
+      "density": 17413.0859375,
+      "inertia": [
+        7.261963037308306e-05,
+        9.824684093473479e-05,
+        0.00016492100257892162
+      ],
+      "center_of_mass": [
+        -9.457892883801833e-05,
+        -0.004490767139941454,
+        0.036324549466371536
+      ],
+      "physics_type": "rigid",
+      "source": {
+        "prim_path": "/World/textured_mesh_6aa9fdb953bec71eee284b59/folding_jaw"
+      },
+      "collision": {
+        "shape_count": 67,
+        "approximations": [
+          "convexHull"
+        ]
+      },
+      "reasoning": null
+    },
+    {
+      "id": "lower_cradle",
+      "name": "lower_cradle",
+      "mass": 0.1899999976158142,
+      "density": 14745.2060546875,
+      "inertia": [
+        0.00019986976985819638,
+        0.0003826239553745836,
+        0.000569319527130574
+      ],
+      "center_of_mass": [
+        -8.428611909039319e-05,
+        -5.44882204849273e-05,
+        0.010813779197633266
+      ],
+      "physics_type": "rigid",
+      "source": {
+        "prim_path": "/World/textured_mesh_6aa9fdb953bec71eee284b59/lower_cradle"
+      },
+      "collision": {
+        "shape_count": 1,
+        "approximations": [
+          "convexDecomposition"
+        ]
+      },
+      "reasoning": null
+    }
+  ],
+  "articulation": {
+    "has_joints": true,
+    "joints": [
+      {
+        "id": "joint_fold",
+        "path": "/World/textured_mesh_6aa9fdb953bec71eee284b59/Joints/joint_fold",
+        "type": "PhysicsRevoluteJoint",
+        "enabled": true,
+        "body0": [
+          "/World/textured_mesh_6aa9fdb953bec71eee284b59/lower_cradle"
+        ],
+        "body1": [
+          "/World/textured_mesh_6aa9fdb953bec71eee284b59/folding_jaw"
+        ],
+        "lower_limit": 0.0,
+        "upper_limit": 72.0
+      }
+    ]
+  },
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  },
+  "simulation": {
+    "fix_base": null
+  },
+  "provenance": {
+    "source_schema": "authored_usd",
+    "usd_path": "batch41/D01051_Dumpling_Press/sim-asset/IsaacSim/IsaacSim_asset_6aa9fdb953bec71eee284b59.usd",
+    "usd_sha256": "40bc08b024bb147e7adc100660f9c67c95de9a7c353a0e1a67d928e514cf6bf1",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "bounds_method": "transformed_visual_mesh_points",
+    "reasoning_available": false,
+    "verification_note": "Authored USD properties and transformed visual bounds only. Real-world dimensions, mass, and runtime stability are not independently verified by this extraction."
+  },
+  "validation": {
+    "overall": "partial",
+    "scale": {
+      "status": "recorded",
+      "confidence": "medium",
+      "units": "m",
+      "up_axis": "Z",
+      "bounds_m": [
+        0.11410000175237656,
+        0.17428800463676453,
+        0.10477100312709808
+      ]
+    },
+    "mass": {
+      "status": "recorded",
+      "confidence": "medium",
+      "value_kg": 0.28999999910593033
+    },
+    "collision": {
+      "status": "recorded",
+      "confidence": "medium",
+      "shape_count": 68,
+      "approximations": [
+        "convexDecomposition",
+        "convexHull"
+      ]
+    },
+    "articulation": {
+      "status": "recorded",
+      "confidence": "medium",
+      "moving_joints": 1
+    }
+  }
+}

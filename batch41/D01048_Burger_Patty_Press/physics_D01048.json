@@ -1,0 +1,136 @@
+{
+  "schema_version": "1.0",
+  "asset_id": "D01048",
+  "asset": {
+    "name": "D01048 Burger Patty Press",
+    "object_type": "articulated",
+    "total_mass": 0.569999985396862,
+    "bounds": {
+      "min": [
+        -0.06000002101063728,
+        -0.05999999865889549,
+        0.0
+      ],
+      "max": [
+        0.05999999865889549,
+        0.060000043362379074,
+        0.11998193711042404
+      ],
+      "size": [
+        0.12000001966953278,
+        0.12000004202127457,
+        0.11998193711042404
+      ]
+    }
+  },
+  "parts": [
+    {
+      "id": "barrel",
+      "name": "barrel",
+      "mass": 0.44999998807907104,
+      "density": null,
+      "inertia": null,
+      "center_of_mass": null,
+      "physics_type": "rigid",
+      "source": {
+        "prim_path": "/World/barrel"
+      },
+      "collision": {
+        "shape_count": 96,
+        "approximations": [
+          "convexHull"
+        ]
+      },
+      "reasoning": null
+    },
+    {
+      "id": "plunger",
+      "name": "plunger",
+      "mass": 0.11999999731779099,
+      "density": null,
+      "inertia": null,
+      "center_of_mass": null,
+      "physics_type": "rigid",
+      "source": {
+        "prim_path": "/World/plunger"
+      },
+      "collision": {
+        "shape_count": 50,
+        "approximations": [
+          "convexHull"
+        ]
+      },
+      "reasoning": null
+    }
+  ],
+  "articulation": {
+    "has_joints": true,
+    "joints": [
+      {
+        "id": "plunger_slide",
+        "path": "/World/Joints/plunger_slide",
+        "type": "PhysicsPrismaticJoint",
+        "enabled": true,
+        "body0": [
+          "/World/barrel"
+        ],
+        "body1": [
+          "/World/plunger"
+        ],
+        "lower_limit": -0.05999999865889549,
+        "upper_limit": 0.0
+      }
+    ]
+  },
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  },
+  "simulation": {
+    "fix_base": null
+  },
+  "provenance": {
+    "source_schema": "authored_usd",
+    "usd_path": "batch41/D01048_Burger_Patty_Press/D01048_Burger_Patty_Press.usd",
+    "usd_sha256": "eaff5e93e32b68ae30bffede2251429a60d60bc6ba34bb8c160d757eb9447c63",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "bounds_method": "transformed_visual_mesh_points",
+    "reasoning_available": false,
+    "verification_note": "Authored USD properties and transformed visual bounds only. Real-world dimensions, mass, and runtime stability are not independently verified by this extraction."
+  },
+  "validation": {
+    "overall": "partial",
+    "scale": {
+      "status": "recorded",
+      "confidence": "medium",
+      "units": "m",
+      "up_axis": "Z",
+      "bounds_m": [
+        0.12000001966953278,
+        0.12000004202127457,
+        0.11998193711042404
+      ]
+    },
+    "mass": {
+      "status": "recorded",
+      "confidence": "medium",
+      "value_kg": 0.569999985396862
+    },
+    "collision": {
+      "status": "recorded",
+      "confidence": "medium",
+      "shape_count": 146,
+      "approximations": [
+        "convexHull"
+      ]
+    },
+    "articulation": {
+      "status": "recorded",
+      "confidence": "medium",
+      "moving_joints": 1
+    }
+  }
+}

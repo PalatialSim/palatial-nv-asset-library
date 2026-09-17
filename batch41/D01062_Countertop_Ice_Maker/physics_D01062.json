@@ -1,0 +1,152 @@
+{
+  "schema_version": "1.0",
+  "asset_id": "D01062",
+  "asset": {
+    "name": "D01062 Countertop Ice Maker",
+    "object_type": "articulated",
+    "total_mass": 7.800000011920929,
+    "bounds": {
+      "min": [
+        -0.17000000178813934,
+        -0.11999999731779099,
+        0.0
+      ],
+      "max": [
+        0.17000000178813934,
+        0.11999999731779099,
+        0.3199999928474426
+      ],
+      "size": [
+        0.3400000035762787,
+        0.23999999463558197,
+        0.3199999928474426
+      ]
+    }
+  },
+  "parts": [
+    {
+      "id": "Base",
+      "name": "Base",
+      "mass": 7.480000019073486,
+      "density": null,
+      "inertia": [
+        0.07561033219099045,
+        0.10927033424377441,
+        0.09399866312742233
+      ],
+      "center_of_mass": [
+        -0.012000000104308128,
+        0.0,
+        0.12600000202655792
+      ],
+      "physics_type": "rigid",
+      "source": {
+        "prim_path": "/IKICH_IceMaker/Base"
+      },
+      "collision": {
+        "shape_count": 190,
+        "approximations": [
+          "convexHull"
+        ]
+      },
+      "reasoning": null
+    },
+    {
+      "id": "Lid",
+      "name": "Lid",
+      "mass": 0.3199999928474426,
+      "density": null,
+      "inertia": [
+        0.0015249333810061216,
+        0.0012458666460588574,
+        0.0027673866134136915
+      ],
+      "center_of_mass": [
+        0.1080000028014183,
+        0.0,
+        -0.023439999669790268
+      ],
+      "physics_type": "rigid",
+      "source": {
+        "prim_path": "/IKICH_IceMaker/Lid"
+      },
+      "collision": {
+        "shape_count": 38,
+        "approximations": [
+          "convexHull"
+        ]
+      },
+      "reasoning": null
+    }
+  ],
+  "articulation": {
+    "has_joints": true,
+    "joints": [
+      {
+        "id": "Lid_Hinge",
+        "path": "/IKICH_IceMaker/Joints/Lid_Hinge",
+        "type": "PhysicsRevoluteJoint",
+        "enabled": true,
+        "body0": [
+          "/IKICH_IceMaker/Base"
+        ],
+        "body1": [
+          "/IKICH_IceMaker/Lid"
+        ],
+        "lower_limit": 0.0,
+        "upper_limit": 105.0
+      }
+    ]
+  },
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  },
+  "simulation": {
+    "fix_base": null
+  },
+  "provenance": {
+    "source_schema": "authored_usd",
+    "usd_path": "batch41/D01062_Countertop_Ice_Maker/D01062_Countertop_Ice_Maker.usd",
+    "usd_sha256": "791dbe425797b263c77b8bc7fdbdb56635c0df1db7ebed7ab08f905f9d8aeae1",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "bounds_method": "transformed_visual_mesh_points",
+    "reasoning_available": false,
+    "verification_note": "Authored USD properties and transformed visual bounds only. Real-world dimensions, mass, and runtime stability are not independently verified by this extraction."
+  },
+  "validation": {
+    "overall": "partial",
+    "scale": {
+      "status": "recorded",
+      "confidence": "medium",
+      "units": "m",
+      "up_axis": "Z",
+      "bounds_m": [
+        0.3400000035762787,
+        0.23999999463558197,
+        0.3199999928474426
+      ]
+    },
+    "mass": {
+      "status": "recorded",
+      "confidence": "medium",
+      "value_kg": 7.800000011920929
+    },
+    "collision": {
+      "status": "recorded",
+      "confidence": "medium",
+      "shape_count": 228,
+      "approximations": [
+        "convexHull"
+      ]
+    },
+    "articulation": {
+      "status": "recorded",
+      "confidence": "medium",
+      "moving_joints": 1
+    }
+  }
+}

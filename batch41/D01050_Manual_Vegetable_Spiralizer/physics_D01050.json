@@ -1,0 +1,202 @@
+{
+  "schema_version": "1.0",
+  "asset_id": "D01050",
+  "asset": {
+    "name": "D01050 Manual Vegetable Spiralizer",
+    "object_type": "articulated",
+    "total_mass": 0.2499999962747097,
+    "bounds": {
+      "min": [
+        -0.14400000870227814,
+        -0.06185000017285347,
+        0.0
+      ],
+      "max": [
+        0.06599999964237213,
+        0.04320000112056732,
+        0.08640000224113464
+      ],
+      "size": [
+        0.21000000834465027,
+        0.10505000129342079,
+        0.08640000224113464
+      ]
+    }
+  },
+  "parts": [
+    {
+      "id": "Housing",
+      "name": "Housing",
+      "mass": 0.11999999731779099,
+      "density": null,
+      "inertia": null,
+      "center_of_mass": null,
+      "physics_type": "rigid",
+      "source": {
+        "prim_path": "/World/Housing"
+      },
+      "collision": {
+        "shape_count": 446,
+        "approximations": [
+          "convexHull"
+        ]
+      },
+      "reasoning": null
+    },
+    {
+      "id": "Crank",
+      "name": "Crank",
+      "mass": 0.019999999552965164,
+      "density": null,
+      "inertia": null,
+      "center_of_mass": null,
+      "physics_type": "rigid",
+      "source": {
+        "prim_path": "/World/Crank"
+      },
+      "collision": {
+        "shape_count": 18,
+        "approximations": [
+          "convexHull"
+        ]
+      },
+      "reasoning": null
+    },
+    {
+      "id": "InnerDrum",
+      "name": "InnerDrum",
+      "mass": 0.05999999865889549,
+      "density": null,
+      "inertia": null,
+      "center_of_mass": null,
+      "physics_type": "rigid",
+      "source": {
+        "prim_path": "/World/InnerDrum"
+      },
+      "collision": {
+        "shape_count": 249,
+        "approximations": [
+          "convexHull"
+        ]
+      },
+      "reasoning": null
+    },
+    {
+      "id": "Pusher",
+      "name": "Pusher",
+      "mass": 0.05000000074505806,
+      "density": null,
+      "inertia": null,
+      "center_of_mass": null,
+      "physics_type": "rigid",
+      "source": {
+        "prim_path": "/World/Pusher"
+      },
+      "collision": {
+        "shape_count": 15,
+        "approximations": [
+          "convexHull"
+        ]
+      },
+      "reasoning": null
+    }
+  ],
+  "articulation": {
+    "has_joints": true,
+    "joints": [
+      {
+        "id": "crank_spin",
+        "path": "/World/Joints/crank_spin",
+        "type": "PhysicsRevoluteJoint",
+        "enabled": true,
+        "body0": [
+          "/World/Housing"
+        ],
+        "body1": [
+          "/World/Crank"
+        ],
+        "lower_limit": null,
+        "upper_limit": null
+      },
+      {
+        "id": "drum_spin",
+        "path": "/World/Joints/drum_spin",
+        "type": "PhysicsRevoluteJoint",
+        "enabled": true,
+        "body0": [
+          "/World/Housing"
+        ],
+        "body1": [
+          "/World/InnerDrum"
+        ],
+        "lower_limit": null,
+        "upper_limit": null
+      },
+      {
+        "id": "pusher_slide",
+        "path": "/World/Joints/pusher_slide",
+        "type": "PhysicsPrismaticJoint",
+        "enabled": true,
+        "body0": [
+          "/World/InnerDrum"
+        ],
+        "body1": [
+          "/World/Pusher"
+        ],
+        "lower_limit": -0.029999999329447746,
+        "upper_limit": 0.054999999701976776
+      }
+    ]
+  },
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  },
+  "simulation": {
+    "fix_base": null
+  },
+  "provenance": {
+    "source_schema": "authored_usd",
+    "usd_path": "batch41/D01050_Manual_Vegetable_Spiralizer/D01050_Manual_Vegetable_Spiralizer.usd",
+    "usd_sha256": "cb162db94f0eb7e1e686576b227f1af4de885b35f3962d0448e5bab7d88c416b",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "bounds_method": "transformed_visual_mesh_points",
+    "reasoning_available": false,
+    "verification_note": "Authored USD properties and transformed visual bounds only. Real-world dimensions, mass, and runtime stability are not independently verified by this extraction."
+  },
+  "validation": {
+    "overall": "partial",
+    "scale": {
+      "status": "recorded",
+      "confidence": "medium",
+      "units": "m",
+      "up_axis": "Z",
+      "bounds_m": [
+        0.21000000834465027,
+        0.10505000129342079,
+        0.08640000224113464
+      ]
+    },
+    "mass": {
+      "status": "recorded",
+      "confidence": "medium",
+      "value_kg": 0.2499999962747097
+    },
+    "collision": {
+      "status": "recorded",
+      "confidence": "medium",
+      "shape_count": 728,
+      "approximations": [
+        "convexHull"
+      ]
+    },
+    "articulation": {
+      "status": "recorded",
+      "confidence": "medium",
+      "moving_joints": 3
+    }
+  }
+}

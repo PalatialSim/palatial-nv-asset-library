@@ -1,0 +1,193 @@
+{
+  "schema_version": "1.0",
+  "asset_id": "D01032",
+  "asset": {
+    "name": "D01032 Cherry Pitter",
+    "object_type": "articulated",
+    "total_mass": 0.07500000222353265,
+    "bounds": {
+      "min": [
+        -0.10570000112056732,
+        -0.01679999940097332,
+        0.0
+      ],
+      "max": [
+        0.08399999886751175,
+        0.01679999940097332,
+        0.14233371590680224
+      ],
+      "size": [
+        0.18969999998807907,
+        0.03359999880194664,
+        0.14233371590680224
+      ]
+    }
+  },
+  "parts": [
+    {
+      "id": "UpperLever",
+      "name": "UpperLever",
+      "mass": 0.034796155989170074,
+      "density": null,
+      "inertia": [
+        8.694050848134793e-06,
+        0.00012628070544451475,
+        0.00013323473103810102
+      ],
+      "center_of_mass": [
+        0.08649659901857376,
+        -3.4448105452611344e-06,
+        0.014477874152362347
+      ],
+      "physics_type": "rigid",
+      "source": {
+        "prim_path": "/World/CherryOlivePitter/UpperLever"
+      },
+      "collision": {
+        "shape_count": 61,
+        "approximations": [
+          "convexHull"
+        ]
+      },
+      "reasoning": null
+    },
+    {
+      "id": "StorageLatch",
+      "name": "StorageLatch",
+      "mass": 0.000592711556237191,
+      "density": null,
+      "inertia": [
+        4.417913590515354e-09,
+        2.521510111819225e-08,
+        2.610670080116506e-08
+      ],
+      "center_of_mass": [
+        -0.009152235463261604,
+        -8.148817620678983e-09,
+        0.0009046576451510191
+      ],
+      "physics_type": "rigid",
+      "source": {
+        "prim_path": "/World/CherryOlivePitter/StorageLatch"
+      },
+      "collision": {
+        "shape_count": 8,
+        "approximations": [
+          "convexHull"
+        ]
+      },
+      "reasoning": null
+    },
+    {
+      "id": "LowerBody",
+      "name": "LowerBody",
+      "mass": 0.03961113467812538,
+      "density": null,
+      "inertia": [
+        9.53225935518276e-06,
+        0.0001409851829521358,
+        0.00014554892550222576
+      ],
+      "center_of_mass": [
+        0.013293834403157234,
+        -1.2396284546412062e-05,
+        0.05112388730049133
+      ],
+      "physics_type": "rigid",
+      "source": {
+        "prim_path": "/World/CherryOlivePitter/LowerBody"
+      },
+      "collision": {
+        "shape_count": 285,
+        "approximations": [
+          "convexHull"
+        ]
+      },
+      "reasoning": null
+    }
+  ],
+  "articulation": {
+    "has_joints": true,
+    "joints": [
+      {
+        "id": "SqueezeHinge",
+        "path": "/World/CherryOlivePitter/Joints/SqueezeHinge",
+        "type": "PhysicsRevoluteJoint",
+        "enabled": true,
+        "body0": [
+          "/World/CherryOlivePitter/LowerBody"
+        ],
+        "body1": [
+          "/World/CherryOlivePitter/UpperLever"
+        ],
+        "lower_limit": -20.0,
+        "upper_limit": 0.0
+      },
+      {
+        "id": "StorageLatchHinge",
+        "path": "/World/CherryOlivePitter/Joints/StorageLatchHinge",
+        "type": "PhysicsRevoluteJoint",
+        "enabled": true,
+        "body0": [
+          "/World/CherryOlivePitter/LowerBody"
+        ],
+        "body1": [
+          "/World/CherryOlivePitter/StorageLatch"
+        ],
+        "lower_limit": 0.0,
+        "upper_limit": 90.0
+      }
+    ]
+  },
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  },
+  "simulation": {
+    "fix_base": null
+  },
+  "provenance": {
+    "source_schema": "authored_usd",
+    "usd_path": "batch41/D01032 Cherry Pitter/D01032 Cherry Pitter.usd",
+    "usd_sha256": "6c9087d6313559d4c5636589d7052615c9f9805180dac2a8f4e07b6d103d2db3",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "bounds_method": "transformed_visual_mesh_points",
+    "reasoning_available": false,
+    "verification_note": "Authored USD properties and transformed visual bounds only. Real-world dimensions, mass, and runtime stability are not independently verified by this extraction."
+  },
+  "validation": {
+    "overall": "partial",
+    "scale": {
+      "status": "recorded",
+      "confidence": "medium",
+      "units": "m",
+      "up_axis": "Z",
+      "bounds_m": [
+        0.18969999998807907,
+        0.03359999880194664,
+        0.14233371590680224
+      ]
+    },
+    "mass": {
+      "status": "recorded",
+      "confidence": "medium",
+      "value_kg": 0.07500000222353265
+    },
+    "collision": {
+      "status": "recorded",
+      "confidence": "medium",
+      "shape_count": 354,
+      "approximations": [
+        "convexHull"
+      ]
+    },
+    "articulation": {
+      "status": "recorded",
+      "confidence": "medium",
+      "moving_joints": 2
+    }
+  }
+}

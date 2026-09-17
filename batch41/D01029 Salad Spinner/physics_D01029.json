@@ -1,0 +1,329 @@
+{
+  "schema_version": "1.0",
+  "asset_id": "D01029",
+  "asset": {
+    "name": "D01029 Salad Spinner",
+    "object_type": "articulated",
+    "total_mass": 0.9869999969378114,
+    "bounds": {
+      "min": [
+        -0.13297163439846788,
+        -0.1330012702770026,
+        -1.6180757513859583e-05
+      ],
+      "max": [
+        0.13304810974618175,
+        0.13300823276428692,
+        0.19536911761308856
+      ],
+      "size": [
+        0.26601974414464963,
+        0.2660095030412895,
+        0.19538529837060242
+      ]
+    }
+  },
+  "parts": [
+    {
+      "id": "Pump",
+      "name": "Pump",
+      "mass": 0.07800000160932541,
+      "density": null,
+      "inertia": [
+        2.8000000384054147e-05,
+        2.8000000384054147e-05,
+        4.400000034365803e-05
+      ],
+      "center_of_mass": [
+        0.0,
+        0.0,
+        -0.00800000037997961
+      ],
+      "physics_type": "rigid",
+      "source": {
+        "prim_path": "/World/SaladSpinner/Pump"
+      },
+      "collision": {
+        "shape_count": 2,
+        "approximations": [
+          "convexHull"
+        ]
+      },
+      "reasoning": null
+    },
+    {
+      "id": "Bowl",
+      "name": "Bowl",
+      "mass": 0.4449999928474426,
+      "density": null,
+      "inertia": [
+        0.002099999925121665,
+        0.002099999925121665,
+        0.0034000000450760126
+      ],
+      "center_of_mass": [
+        0.0,
+        0.0,
+        0.054999999701976776
+      ],
+      "physics_type": "rigid",
+      "source": {
+        "prim_path": "/World/SaladSpinner/Bowl"
+      },
+      "collision": {
+        "shape_count": 35,
+        "approximations": [
+          "convexHull"
+        ]
+      },
+      "reasoning": null
+    },
+    {
+      "id": "Basket",
+      "name": "Basket",
+      "mass": 0.20499999821186066,
+      "density": null,
+      "inertia": [
+        0.0011599999852478504,
+        0.0011599999852478504,
+        0.0019499999471008778
+      ],
+      "center_of_mass": [
+        0.0,
+        0.0,
+        0.0729999989271164
+      ],
+      "physics_type": "rigid",
+      "source": {
+        "prim_path": "/World/SaladSpinner/Basket"
+      },
+      "collision": {
+        "shape_count": 44,
+        "approximations": [
+          "convexHull"
+        ]
+      },
+      "reasoning": null
+    },
+    {
+      "id": "Lid",
+      "name": "Lid",
+      "mass": 0.1850000023841858,
+      "density": null,
+      "inertia": [
+        0.0007600000244565308,
+        0.0007600000244565308,
+        0.0014600000577047467
+      ],
+      "center_of_mass": [
+        0.0,
+        0.0,
+        -0.004000000189989805
+      ],
+      "physics_type": "rigid",
+      "source": {
+        "prim_path": "/World/SaladSpinner/Lid"
+      },
+      "collision": {
+        "shape_count": 9,
+        "approximations": [
+          "convexHull"
+        ]
+      },
+      "reasoning": null
+    },
+    {
+      "id": "Rotor",
+      "name": "Rotor",
+      "mass": 0.052000001072883606,
+      "density": null,
+      "inertia": [
+        0.00014000000373926014,
+        0.00014000000373926014,
+        0.0002699999895412475
+      ],
+      "center_of_mass": [
+        0.0,
+        0.0,
+        0.03400000184774399
+      ],
+      "physics_type": "rigid",
+      "source": {
+        "prim_path": "/World/SaladSpinner/Rotor"
+      },
+      "collision": {
+        "shape_count": 6,
+        "approximations": [
+          "convexHull"
+        ]
+      },
+      "reasoning": null
+    },
+    {
+      "id": "Handle",
+      "name": "Handle",
+      "mass": 0.014000000432133675,
+      "density": null,
+      "inertia": [
+        3.3999999686784577e-06,
+        4.4999998749517545e-07,
+        3.5999998999614036e-06
+      ],
+      "center_of_mass": [
+        0.0,
+        -0.017999999225139618,
+        0.0010000000474974513
+      ],
+      "physics_type": "rigid",
+      "source": {
+        "prim_path": "/World/SaladSpinner/Handle"
+      },
+      "collision": {
+        "shape_count": 1,
+        "approximations": [
+          "convexHull"
+        ]
+      },
+      "reasoning": null
+    },
+    {
+      "id": "Brake",
+      "name": "Brake",
+      "mass": 0.00800000037997961,
+      "density": null,
+      "inertia": [
+        3.7999998880877683e-07,
+        3.7999998880877683e-07,
+        2.200000039920269e-07
+      ],
+      "center_of_mass": [
+        0.0,
+        0.0,
+        -0.0020000000949949026
+      ],
+      "physics_type": "rigid",
+      "source": {
+        "prim_path": "/World/SaladSpinner/Brake"
+      },
+      "collision": {
+        "shape_count": 2,
+        "approximations": [
+          "convexHull"
+        ]
+      },
+      "reasoning": null
+    }
+  ],
+  "articulation": {
+    "has_joints": true,
+    "joints": [
+      {
+        "id": "PumpPrismatic",
+        "path": "/World/SaladSpinner/Joints/PumpPrismatic",
+        "type": "PhysicsPrismaticJoint",
+        "enabled": true,
+        "body0": [
+          "/World/SaladSpinner/Lid"
+        ],
+        "body1": [
+          "/World/SaladSpinner/Pump"
+        ],
+        "lower_limit": -0.0430000014603138,
+        "upper_limit": 0.0
+      },
+      {
+        "id": "HandleHinge",
+        "path": "/World/SaladSpinner/Joints/HandleHinge",
+        "type": "PhysicsRevoluteJoint",
+        "enabled": true,
+        "body0": [
+          "/World/SaladSpinner/Lid"
+        ],
+        "body1": [
+          "/World/SaladSpinner/Handle"
+        ],
+        "lower_limit": -105.0,
+        "upper_limit": 0.0
+      },
+      {
+        "id": "BrakePrismatic",
+        "path": "/World/SaladSpinner/Joints/BrakePrismatic",
+        "type": "PhysicsPrismaticJoint",
+        "enabled": true,
+        "body0": [
+          "/World/SaladSpinner/Lid"
+        ],
+        "body1": [
+          "/World/SaladSpinner/Brake"
+        ],
+        "lower_limit": -0.0031999999191612005,
+        "upper_limit": 0.0
+      },
+      {
+        "id": "DriveRotorRevolute",
+        "path": "/World/SaladSpinner/Joints/DriveRotorRevolute",
+        "type": "PhysicsRevoluteJoint",
+        "enabled": true,
+        "body0": [
+          "/World/SaladSpinner/Lid"
+        ],
+        "body1": [
+          "/World/SaladSpinner/Rotor"
+        ],
+        "lower_limit": null,
+        "upper_limit": null
+      }
+    ]
+  },
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  },
+  "simulation": {
+    "fix_base": null
+  },
+  "provenance": {
+    "source_schema": "authored_usd",
+    "usd_path": "batch41/D01029 Salad Spinner/D01029 Salad Spinner.usd",
+    "usd_sha256": "3a0c80cdbd2a0e34aaaebdad0cc60735cdbec50a7c1784da5538ddb6880cf198",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "bounds_method": "transformed_visual_mesh_points",
+    "reasoning_available": false,
+    "verification_note": "Authored USD properties and transformed visual bounds only. Real-world dimensions, mass, and runtime stability are not independently verified by this extraction."
+  },
+  "validation": {
+    "overall": "partial",
+    "scale": {
+      "status": "recorded",
+      "confidence": "medium",
+      "units": "m",
+      "up_axis": "Z",
+      "bounds_m": [
+        0.26601974414464963,
+        0.2660095030412895,
+        0.19538529837060242
+      ]
+    },
+    "mass": {
+      "status": "recorded",
+      "confidence": "medium",
+      "value_kg": 0.9869999969378114
+    },
+    "collision": {
+      "status": "recorded",
+      "confidence": "medium",
+      "shape_count": 99,
+      "approximations": [
+        "convexHull"
+      ]
+    },
+    "articulation": {
+      "status": "recorded",
+      "confidence": "medium",
+      "moving_joints": 4
+    }
+  }
+}
