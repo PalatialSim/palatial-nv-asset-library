@@ -1,6 +1,6 @@
 # Asset gallery
 
-1,013 assets across 41 batches (Batch 1 through Batch 41), with rendered views, collision views, and simulation videos. Search by name or ID, filter by batch or moving joints, and toggle collision views.
+1,013 assets across 41 batches (Batch 1 through Batch 41), with rendered views, collision views, and simulation videos. Search by name or ID, step through batches with previous/next, filter by moving joints, and toggle collision views. The live gallery is at https://palatialsim.github.io/palatial-nv-asset-library/.
 
 From the repository root, run `python3 -m http.server 8000`, then open `http://localhost:8000/gallery/`. Isaac Sim is not needed to browse. Keep this directory beside the repository batch folders: media is linked by relative path.
 
