@@ -14,3 +14,7 @@ Repaired and standardized metadata for 154 assets across the library. This inclu
 The [machine-readable repair report](reports/metadata-repair-20261008.json) preserves original fields, hashes, per-asset evidence and verification scope. [Verification policy](VERIFICATION.md) explains how to reproduce the checks.
 
 The 2026-10-08 Drive handoff also updates 64 asset names using exact source asset IDs and the supplied final names. All matching entries are name-only changes; covers and model packages remain as delivered. The other 141 handoff entries do not match this repository by source ID. [Name repair evidence](reports/name-repair-20261008.json) records the matches.
+
+## Original Library reconciliation — 2026-10-08
+
+All 205 handoff originals have been located and their current source names match the supplied final names. 64 original IDs are included in this NV export. The model-package comparison confirms one further match: Masticating Juicer maps to D00423, whose name is updated in physics metadata, gallery and catalogs. 140 originals have no confirmed NV mapping. The [205-record register](reports/rename-register-20261008.csv) preserves original IDs, old and corrected names, and original preview links; the [reconciliation report](reports/rename-reconciliation-20261008.md) records verification scope. No additional original models were added, and existing model, drive, cover, and recording bytes are preserved.

@@ -64,3 +64,9 @@ Asset layouts vary; the original supplied paths are retained. `gallery/` contain
 Copyright 2026 Palatial Platforms. Asset files, metadata, previews, and recordings are licensed under [CC BY 4.0](LICENSE). Software and automation are licensed under [Apache 2.0](LICENSE-CODE). See [LICENSING.md](LICENSING.md) for attribution and scope.
 
 The 2026-10-08 Drive handoff also updates 64 asset names using exact source asset IDs and the supplied final names. All matching entries are name-only changes; covers and model packages remain as delivered. The other 141 handoff entries do not match this repository by source ID. [Name repair evidence](reports/name-repair-20261008.json) records the matches.
+
+## Asset name update register
+
+The complete [205-record handoff register](reports/rename-register-20261008.csv) includes original asset IDs, old and corrected names, and preview links. [Browse the searchable register](https://palatialsim.github.io/palatial-nv-asset-library/rename-register.html).
+
+All 205 originals were found in the canonical Palatial Library with their corrected names. 65 are matched to this NV export: 64 by original ID and Masticating Juicer (D00423) by verified package content. The other 140 have no confirmed NV mapping; use their original preview links. [Reconciliation evidence](reports/rename-reconciliation-20261008.md) documents the checks and remaining metadata gaps. The broader Library retains its own per-asset license and attribution.
