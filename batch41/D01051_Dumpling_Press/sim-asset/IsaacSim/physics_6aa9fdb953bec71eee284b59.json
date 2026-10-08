@@ -20,8 +20,11 @@
         0.11410000175237656,
         0.17428800463676453,
         0.10477100312709808
-      ]
-    }
+      ],
+      "units": "m"
+    },
+    "bounds_frame": "USD stage world axes, metres, default authored pose",
+    "description": "3D model of dumpling press for robotics simulation research. The delivered USD contains 2 rigid bodies and 1 enabled moving joint constraint."
   },
   "parts": [
     {
@@ -49,7 +52,27 @@
           "convexHull"
         ]
       },
-      "reasoning": null
+      "reasoning": null,
+      "source_prim_path": "/World/textured_mesh_6aa9fdb953bec71eee284b59/folding_jaw",
+      "bounds": {
+        "min": [
+          -0.054999999701976776,
+          -0.019857000559568405,
+          0.013706999830901623
+        ],
+        "max": [
+          0.054999999701976776,
+          0.012364000082015991,
+          0.10477100312709808
+        ],
+        "size": [
+          0.10999999940395355,
+          0.032221000641584396,
+          0.09106400329619646
+        ],
+        "units": "m"
+      },
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     },
     {
       "id": "lower_cradle",
@@ -76,7 +99,27 @@
           "convexDecomposition"
         ]
       },
-      "reasoning": null
+      "reasoning": null,
+      "source_prim_path": "/World/textured_mesh_6aa9fdb953bec71eee284b59/lower_cradle",
+      "bounds": {
+        "min": [
+          -0.05705000087618828,
+          -0.08714400231838226,
+          -6.1062266023511365e-18
+        ],
+        "max": [
+          0.05705000087618828,
+          0.08714400231838226,
+          0.02449999935925007
+        ],
+        "size": [
+          0.11410000175237656,
+          0.17428800463676453,
+          0.024499999359250076
+        ],
+        "units": "m"
+      },
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
   "articulation": {
@@ -94,9 +137,57 @@
           "/World/textured_mesh_6aa9fdb953bec71eee284b59/folding_jaw"
         ],
         "lower_limit": 0.0,
-        "upper_limit": 72.0
+        "upper_limit": 72.0,
+        "usd_type": "PhysicsRevoluteJoint",
+        "body0_targets": [
+          "/World/textured_mesh_6aa9fdb953bec71eee284b59/lower_cradle"
+        ],
+        "body1_targets": [
+          "/World/textured_mesh_6aa9fdb953bec71eee284b59/folding_jaw"
+        ],
+        "authored_usd": {
+          "id": "joint_fold",
+          "source_prim_path": "/World/textured_mesh_6aa9fdb953bec71eee284b59/Joints/joint_fold",
+          "joint_type": "PhysicsRevoluteJoint",
+          "body0": [
+            "/World/textured_mesh_6aa9fdb953bec71eee284b59/lower_cradle"
+          ],
+          "body1": [
+            "/World/textured_mesh_6aa9fdb953bec71eee284b59/folding_jaw"
+          ],
+          "joint_enabled": true,
+          "axis": "X",
+          "lowerLimit": 0.0,
+          "upperLimit": 72.0,
+          "localPos0": [
+            0.0,
+            0.0,
+            0.01899999938905239
+          ],
+          "localPos1": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "localRot0": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "localRot1": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "static_frames": []
+        }
       }
-    ]
+    ],
+    "moving_joints": 1,
+    "rigid_body_count": 2,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "units": {
     "length": "m",
@@ -113,41 +204,78 @@
     "source_meters_per_unit": 1.0,
     "source_kilograms_per_unit": 1.0,
     "source_up_axis": "Z",
-    "bounds_method": "transformed_visual_mesh_points",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
     "reasoning_available": false,
-    "verification_note": "Authored USD properties and transformed visual bounds only. Real-world dimensions, mass, and runtime stability are not independently verified by this extraction."
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification.",
+    "metadata_repair": {
+      "date": "2026-10-08T04:48:10.976448+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/metadata-repair-20261008.json",
+      "original_physics_sha256": "eddb43f0beb10e0cf6f3ab4998715bdef756e8dbdb17ad919e59793406505d49"
+    },
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes"
   },
   "validation": {
-    "overall": "partial",
+    "overall": "verified",
     "scale": {
-      "status": "recorded",
-      "confidence": "medium",
+      "status": "verified",
+      "confidence": "high",
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
         0.11410000175237656,
         0.17428800463676453,
         0.10477100312709808
-      ]
+      ],
+      "checked_at": "2026-10-08T04:48:10.976448+00:00",
+      "evidence": "reports/metadata-repair-20261008.json",
+      "usd_sha256": "40bc08b024bb147e7adc100660f9c67c95de9a7c353a0e1a67d928e514cf6bf1",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
-      "status": "recorded",
-      "confidence": "medium",
-      "value_kg": 0.28999999910593033
+      "status": "verified",
+      "confidence": "high",
+      "value_kg": 0.28999999910593033,
+      "checked_at": "2026-10-08T04:48:10.976448+00:00",
+      "evidence": "reports/metadata-repair-20261008.json",
+      "usd_sha256": "40bc08b024bb147e7adc100660f9c67c95de9a7c353a0e1a67d928e514cf6bf1",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.28999999910593033,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
+      "status": "verified",
+      "confidence": "high",
       "shape_count": 68,
       "approximations": [
         "convexDecomposition",
         "convexHull"
-      ]
+      ],
+      "checked_at": "2026-10-08T04:48:10.976448+00:00",
+      "evidence": "reports/metadata-repair-20261008.json",
+      "usd_sha256": "40bc08b024bb147e7adc100660f9c67c95de9a7c353a0e1a67d928e514cf6bf1",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 68,
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
-      "status": "recorded",
-      "confidence": "medium",
-      "moving_joints": 1
+      "status": "verified",
+      "confidence": "high",
+      "moving_joints": 1,
+      "checked_at": "2026-10-08T04:48:10.976448+00:00",
+      "evidence": "reports/metadata-repair-20261008.json",
+      "usd_sha256": "40bc08b024bb147e7adc100660f9c67c95de9a7c353a0e1a67d928e514cf6bf1",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 1,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "not_revalidated",
+      "scope": "native_simulation",
+      "note": "Existing simulation videos remain available. This repair does not claim new drop/contact, friction, stability or joint-actuation tests."
     }
   }
 }

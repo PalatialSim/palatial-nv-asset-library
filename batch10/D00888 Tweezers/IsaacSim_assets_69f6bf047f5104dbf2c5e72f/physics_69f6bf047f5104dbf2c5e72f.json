@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.07319226861000061,
-        0.013054179027676582,
-        0.01348084770143032
-      ],
       "min": [
-        -0.06522972881793976,
-        3.1786137242306722e-06,
-        -0.013562152162194252
+        -0.011792000383138657,
+        -0.07232099771499634,
+        -6.191491966302796e-18
+      ],
+      "max": [
+        0.013116000220179558,
+        0.06763000041246414,
+        0.013970999978482723
       ],
       "size": [
-        0.13842199742794037,
-        0.013051000413952352,
-        0.027042999863624573
-      ]
+        0.024908000603318214,
+        0.13995099812746048,
+        0.01397099997848273
+      ],
+      "units": "m"
     },
     "description": "A pair of stainless steel tweezers with textured, ridged finger grips. The object features a long, tapered body that ends in fine, serrated tips.",
     "name": "D00888 Tweezers",
     "object_type": "rigid_bodies",
-    "total_mass": 0.043
+    "total_mass": 0.0430000014603138,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00888",
   "parts": [
     {
       "bounds": {
-        "center": [
-          -0.002196515851374862,
-          0.0065030632668759605,
-          -1.6372251700555125e-05
+        "min": [
+          -0.011792000383138657,
+          -0.07232099771499634,
+          -6.191491966302796e-18
         ],
         "max": [
-          0.07319226861000061,
-          0.013054179027676582,
-          0.01348084770143032
+          0.013116000220179558,
+          0.06763000041246414,
+          0.013970999978482723
         ],
-        "min": [
-          -0.06522972881793976,
-          3.1786137242306722e-06,
-          -0.013562152162194252
-        ]
+        "size": [
+          0.024908000603318214,
+          0.13995099812746048,
+          0.01397099997848273
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         8.671722088769628e-05,
@@ -59,7 +65,7 @@
         4.8395869030198145e-05,
         4.922543565495611e-05
       ],
-      "mass": 0.043,
+      "mass": 0.0430000014603138,
       "material": "stainless_steel",
       "name": "D00888 Tweezers",
       "physics_type": "rigid",
@@ -67,40 +73,96 @@
         "object_name": "D00888 Tweezers",
         "part_name": "D00888 Tweezers"
       },
-      "volume": 2.4184974112676926e-05
+      "volume": 2.4184974112676926e-05,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-08T04:48:10.976448+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/metadata-repair-20261008.json",
+      "original_physics_sha256": "4eb55f039e0cf40d7b820ee033bb28b0df5813a096721b72572a58854f6eb163"
+    },
+    "usd_path": "batch10/D00888 Tweezers/IsaacSim_assets_69f6bf047f5104dbf2c5e72f/IsaacSim_asset_69f6bf047f5104dbf2c5e72f.usd",
+    "usd_sha256": "281b3d0c7df74c7a77a9ff38af6c95ff9da090fefc56942fe19d690c0ffbad58",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
   },
   "units": {
     "length": "m",
-    "mass": "kg"
+    "mass": "kg",
+    "up_axis": "Z"
   },
   "validation": {
-    "overall": "partial",
+    "overall": "verified",
     "scale": {
-      "status": "not_checked",
-      "confidence": "low",
+      "status": "verified",
+      "confidence": "high",
       "units": "m",
-      "up_axis": null
+      "up_axis": "Z",
+      "checked_at": "2026-10-08T04:48:10.976448+00:00",
+      "evidence": "reports/metadata-repair-20261008.json",
+      "usd_sha256": "281b3d0c7df74c7a77a9ff38af6c95ff9da090fefc56942fe19d690c0ffbad58",
+      "scope": "authored_usd_dimensions",
+      "bounds_m": [
+        0.024908000603318214,
+        0.13995099812746048,
+        0.01397099997848273
+      ],
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.043
+      "value_kg": 0.0430000014603138,
+      "checked_at": "2026-10-08T04:48:10.976448+00:00",
+      "evidence": "reports/metadata-repair-20261008.json",
+      "usd_sha256": "281b3d0c7df74c7a77a9ff38af6c95ff9da090fefc56942fe19d690c0ffbad58",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.0430000014603138,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 6,
+      "checked_at": "2026-10-08T04:48:10.976448+00:00",
+      "evidence": "reports/metadata-repair-20261008.json",
+      "usd_sha256": "281b3d0c7df74c7a77a9ff38af6c95ff9da090fefc56942fe19d690c0ffbad58",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 6,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-08T04:48:10.976448+00:00",
+      "evidence": "reports/metadata-repair-20261008.json",
+      "usd_sha256": "281b3d0c7df74c7a77a9ff38af6c95ff9da090fefc56942fe19d690c0ffbad58",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "not_revalidated",
+      "scope": "native_simulation",
+      "note": "Existing simulation videos remain available. This repair does not claim new drop/contact, friction, stability or joint-actuation tests."
     }
   }
 }

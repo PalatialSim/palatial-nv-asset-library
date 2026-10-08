@@ -37,7 +37,47 @@
         },
         "path": "/World/Joints/cone_spin",
         "type": "revolute",
-        "usd_type": "PhysicsRevoluteJoint"
+        "usd_type": "PhysicsRevoluteJoint",
+        "id": "cone_spin",
+        "enabled": true,
+        "authored_usd": {
+          "id": "cone_spin",
+          "source_prim_path": "/World/Joints/cone_spin",
+          "joint_type": "PhysicsRevoluteJoint",
+          "body0": [
+            "/World/body"
+          ],
+          "body1": [
+            "/World/juicing_cone"
+          ],
+          "joint_enabled": true,
+          "axis": "Z",
+          "lowerLimit": -360.0,
+          "upperLimit": 360.0,
+          "localPos0": [
+            0.0,
+            0.0,
+            0.19776299595832825
+          ],
+          "localPos1": [
+            0.0,
+            0.0,
+            0.19776299595832825
+          ],
+          "localRot0": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "localRot1": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "static_frames": []
+        }
       },
       {
         "authored_attributes": {
@@ -74,50 +114,98 @@
         },
         "path": "/World/Joints/press_arm_hinge",
         "type": "revolute",
-        "usd_type": "PhysicsRevoluteJoint"
+        "usd_type": "PhysicsRevoluteJoint",
+        "id": "press_arm_hinge",
+        "enabled": true,
+        "authored_usd": {
+          "id": "press_arm_hinge",
+          "source_prim_path": "/World/Joints/press_arm_hinge",
+          "joint_type": "PhysicsRevoluteJoint",
+          "body0": [
+            "/World/body"
+          ],
+          "body1": [
+            "/World/lever_arm"
+          ],
+          "joint_enabled": true,
+          "axis": "X",
+          "lowerLimit": -120.0,
+          "upperLimit": 0.0,
+          "localPos0": [
+            0.0,
+            0.10261300206184387,
+            0.2565320134162903
+          ],
+          "localPos1": [
+            0.0,
+            0.10261300206184387,
+            0.2565320134162903
+          ],
+          "localRot0": [
+            0.8660253882408142,
+            0.5,
+            0.0,
+            0.0
+          ],
+          "localRot1": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "static_frames": []
+        }
       }
-    ]
+    ],
+    "moving_joints": 2,
+    "rigid_body_count": 3,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.12408354715550576,
-        0.32755044023507157,
-        0.14898861990983936
-      ],
       "min": [
         -0.1266401636356933,
-        -1.258337623574725e-06,
-        -0.12252440370303279
+        -0.14898861990983936,
+        -1.258337623574725e-06
+      ],
+      "max": [
+        0.12408354715550576,
+        0.12252440370303279,
+        0.32755044023507157
       ],
       "size": [
         0.25072371079119904,
-        0.32755169857269517,
-        0.27151302361287216
-      ]
+        0.27151302361287216,
+        0.32755169857269517
+      ],
+      "units": "m"
     },
     "name": "body",
-    "total_mass": 2.3599999509751797
+    "total_mass": 2.3599999509751797,
+    "object_type": "rigid_bodies",
+    "bounds_frame": "USD stage world axes, metres, default authored pose",
+    "description": "3D model of citrus juicer for robotics simulation research. The delivered USD contains 3 rigid bodies and 2 enabled moving joint constraints."
   },
   "asset_id": "D00136",
   "parts": [
     {
       "bounds": {
-        "center": [
-          -0.00127830824009377,
-          0.13759404962143912,
-          -0.0052994859440414
+        "min": [
+          -0.1266401636356933,
+          -0.11192543181495,
+          -1.258337623574725e-06
         ],
         "max": [
           0.12408354715550576,
-          0.27518935758050184,
-          0.11192543181494999
+          0.12252440370303279,
+          0.27518935758050184
         ],
-        "min": [
-          -0.1266401636356933,
-          -1.258337623574725e-06,
-          -0.12252440370303279
-        ]
+        "size": [
+          0.25072371079119904,
+          0.2344498355179828,
+          0.27519061591812544
+        ],
+        "units": "m"
       },
       "collision": {},
       "id": "part_00",
@@ -127,25 +215,28 @@
       "source": {
         "object_name": "/World/body",
         "part_name": "body"
-      }
+      },
+      "source_prim_path": "/World/body",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     },
     {
       "bounds": {
-        "center": [
-          -0.001279027215253442,
-          0.2465034551068317,
-          -0.0005021177453761322
+        "min": [
+          -0.06938933435818173,
+          -0.06760818939639651,
+          0.194497401851286
         ],
         "max": [
           0.06683127992767485,
-          0.2985095083623774,
-          0.06760818939639651
+          0.06861242488714878,
+          0.2985095083623774
         ],
-        "min": [
-          -0.06938933435818173,
-          0.194497401851286,
-          -0.06861242488714878
-        ]
+        "size": [
+          0.13622061428585658,
+          0.1362206142835453,
+          0.10401210651109138
+        ],
+        "units": "m"
       },
       "collision": {},
       "id": "part_01",
@@ -155,25 +246,28 @@
       "source": {
         "object_name": "/World/juicing_cone",
         "part_name": "juicing_cone"
-      }
+      },
+      "source_prim_path": "/World/juicing_cone",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     },
     {
       "bounds": {
-        "center": [
-          -0.0012779929968974313,
-          0.22357132518866601,
-          0.01647844137827778
+        "min": [
+          -0.05537141612819556,
+          -0.14898861990983936,
+          0.11959221014226044
         ],
         "max": [
           0.052815430134400695,
-          0.32755044023507157,
-          0.14898861990983936
+          0.1160317371532838,
+          0.32755044023507157
         ],
-        "min": [
-          -0.05537141612819556,
-          0.11959221014226044,
-          -0.1160317371532838
-        ]
+        "size": [
+          0.10818684626259625,
+          0.26502035706312316,
+          0.2079582300928111
+        ],
+        "units": "m"
       },
       "collision": {},
       "id": "part_02",
@@ -183,10 +277,27 @@
       "source": {
         "object_name": "/World/lever_arm",
         "part_name": "lever_arm"
-      }
+      },
+      "source_prim_path": "/World/lever_arm",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-08T04:48:10.976448+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/metadata-repair-20261008.json",
+      "original_physics_sha256": "9f88eebef7ed1438f9010f9d96f6d6705519d9010879bafe595828f7215cd669"
+    },
+    "usd_path": "batch38/D00136_Citrus_Juicer/IsaacSim_assets_D00136/IsaacSim_asset_D00136.usd",
+    "usd_sha256": "3f5861c40e199835d1ebfa0d2de24924383d5eabf41de1223d9472a9c5955e2a",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {},
   "units": {
@@ -203,24 +314,57 @@
       "up_axis": "Z",
       "bounds_m": [
         0.25072371079119904,
-        0.32755169857269517,
-        0.27151302361287216
-      ]
+        0.27151302361287216,
+        0.32755169857269517
+      ],
+      "checked_at": "2026-10-08T04:48:10.976448+00:00",
+      "evidence": "reports/metadata-repair-20261008.json",
+      "usd_sha256": "3f5861c40e199835d1ebfa0d2de24924383d5eabf41de1223d9472a9c5955e2a",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 2.3599999509751797
+      "value_kg": 2.3599999509751797,
+      "checked_at": "2026-10-08T04:48:10.976448+00:00",
+      "evidence": "reports/metadata-repair-20261008.json",
+      "usd_sha256": "3f5861c40e199835d1ebfa0d2de24924383d5eabf41de1223d9472a9c5955e2a",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 2.3599999509751797,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 3
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 113,
+      "checked_at": "2026-10-08T04:48:10.976448+00:00",
+      "evidence": "reports/metadata-repair-20261008.json",
+      "usd_sha256": "3f5861c40e199835d1ebfa0d2de24924383d5eabf41de1223d9472a9c5955e2a",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 113,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 2
+      "moving_joints": 2,
+      "checked_at": "2026-10-08T04:48:10.976448+00:00",
+      "evidence": "reports/metadata-repair-20261008.json",
+      "usd_sha256": "3f5861c40e199835d1ebfa0d2de24924383d5eabf41de1223d9472a9c5955e2a",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 2,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "not_revalidated",
+      "scope": "native_simulation",
+      "note": "Existing simulation videos remain available. This repair does not claim new drop/contact, friction, stability or joint-actuation tests."
     }
   }
 }

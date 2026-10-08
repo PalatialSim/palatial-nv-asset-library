@@ -20,8 +20,11 @@
         0.36000001430511475,
         0.4000000059604645,
         0.1899999976158142
-      ]
-    }
+      ],
+      "units": "m"
+    },
+    "bounds_frame": "USD stage world axes, metres, default authored pose",
+    "description": "3D model of countertop vacuum sealer for robotics simulation research. The delivered USD contains 6 rigid bodies and 7 enabled moving joint constraints."
   },
   "parts": [
     {
@@ -49,7 +52,27 @@
           "convexHull"
         ]
       },
-      "reasoning": null
+      "reasoning": null,
+      "source_prim_path": "/ElianiSealer/Base",
+      "bounds": {
+        "min": [
+          -0.18000000715255737,
+          -0.20000000298023224,
+          0.0
+        ],
+        "max": [
+          0.18000000715255737,
+          0.20000000298023224,
+          0.18519999086856842
+        ],
+        "size": [
+          0.36000001430511475,
+          0.4000000059604645,
+          0.18519999086856842
+        ],
+        "units": "m"
+      },
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     },
     {
       "id": "Lid",
@@ -76,7 +99,27 @@
           "convexHull"
         ]
       },
-      "reasoning": null
+      "reasoning": null,
+      "source_prim_path": "/ElianiSealer/Lid",
+      "bounds": {
+        "min": [
+          -0.1796000055037439,
+          -0.1979999989271164,
+          0.17509999871253967
+        ],
+        "max": [
+          0.16899999976158142,
+          0.1979999989271164,
+          0.1899999976158142
+        ],
+        "size": [
+          0.3486000052653253,
+          0.3959999978542328,
+          0.014899998903274536
+        ],
+        "units": "m"
+      },
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     },
     {
       "id": "LeftCylinder",
@@ -103,7 +146,27 @@
           "convexHull"
         ]
       },
-      "reasoning": null
+      "reasoning": null,
+      "source_prim_path": "/ElianiSealer/LeftCylinder",
+      "bounds": {
+        "min": [
+          -0.12424574271418598,
+          0.17940000258386135,
+          0.024000306140830624
+        ],
+        "max": [
+          -0.09700030797120364,
+          0.19060000218451023,
+          0.13717597674329246
+        ],
+        "size": [
+          0.02724543474298234,
+          0.01119999960064888,
+          0.11317567060246184
+        ],
+        "units": "m"
+      },
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     },
     {
       "id": "LeftPiston",
@@ -130,7 +193,27 @@
           "convexHull"
         ]
       },
-      "reasoning": null
+      "reasoning": null,
+      "source_prim_path": "/ElianiSealer/LeftPiston",
+      "bounds": {
+        "min": [
+          -0.13109972597367667,
+          0.1800000024959445,
+          0.05978509069087423
+        ],
+        "max": [
+          -0.10309240431633403,
+          0.19000000227242708,
+          0.18759971427610422
+        ],
+        "size": [
+          0.02800732165734264,
+          0.009999999776482582,
+          0.12781462358523
+        ],
+        "units": "m"
+      },
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     },
     {
       "id": "RightCylinder",
@@ -157,7 +240,27 @@
           "convexHull"
         ]
       },
-      "reasoning": null
+      "reasoning": null,
+      "source_prim_path": "/ElianiSealer/RightCylinder",
+      "bounds": {
+        "min": [
+          -0.12424574271418598,
+          -0.19060000218451023,
+          0.024000306140830624
+        ],
+        "max": [
+          -0.09700030797120364,
+          -0.17940000258386135,
+          0.13717597674329246
+        ],
+        "size": [
+          0.02724543474298234,
+          0.01119999960064888,
+          0.11317567060246184
+        ],
+        "units": "m"
+      },
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     },
     {
       "id": "RightPiston",
@@ -184,7 +287,27 @@
           "convexHull"
         ]
       },
-      "reasoning": null
+      "reasoning": null,
+      "source_prim_path": "/ElianiSealer/RightPiston",
+      "bounds": {
+        "min": [
+          -0.13109972597367667,
+          -0.19000000227242708,
+          0.05978509069087423
+        ],
+        "max": [
+          -0.10309240431633403,
+          -0.1800000024959445,
+          0.18759971427610422
+        ],
+        "size": [
+          0.02800732165734264,
+          0.009999999776482582,
+          0.12781462358523
+        ],
+        "units": "m"
+      },
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
   "articulation": {
@@ -202,7 +325,51 @@
           "/ElianiSealer/Base"
         ],
         "lower_limit": null,
-        "upper_limit": null
+        "upper_limit": null,
+        "usd_type": "PhysicsFixedJoint",
+        "body0_targets": [
+          "/ElianiSealer"
+        ],
+        "body1_targets": [
+          "/ElianiSealer/Base"
+        ],
+        "authored_usd": {
+          "id": "FixedBase_to_World",
+          "source_prim_path": "/ElianiSealer/Joints/FixedBase_to_World",
+          "joint_type": "PhysicsFixedJoint",
+          "body0": [
+            "/ElianiSealer"
+          ],
+          "body1": [
+            "/ElianiSealer/Base"
+          ],
+          "joint_enabled": false,
+          "localPos0": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "localPos1": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "localRot0": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "localRot1": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "static_frames": [
+            "/ElianiSealer"
+          ]
+        }
       },
       {
         "id": "Lid_Hinge",
@@ -216,7 +383,52 @@
           "/ElianiSealer/Lid"
         ],
         "lower_limit": 0.0,
-        "upper_limit": 105.0
+        "upper_limit": 105.0,
+        "usd_type": "PhysicsRevoluteJoint",
+        "body0_targets": [
+          "/ElianiSealer/Base"
+        ],
+        "body1_targets": [
+          "/ElianiSealer/Lid"
+        ],
+        "authored_usd": {
+          "id": "Lid_Hinge",
+          "source_prim_path": "/ElianiSealer/Joints/Lid_Hinge",
+          "joint_type": "PhysicsRevoluteJoint",
+          "body0": [
+            "/ElianiSealer/Base"
+          ],
+          "body1": [
+            "/ElianiSealer/Lid"
+          ],
+          "joint_enabled": true,
+          "axis": "Y",
+          "lowerLimit": 0.0,
+          "upperLimit": 105.0,
+          "localPos0": [
+            -0.17550000548362732,
+            0.0,
+            0.1809999942779541
+          ],
+          "localPos1": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "localRot0": [
+            -4.371138828673793e-08,
+            -1.0,
+            0.0,
+            0.0
+          ],
+          "localRot1": [
+            -4.371138828673793e-08,
+            -1.0,
+            0.0,
+            0.0
+          ],
+          "static_frames": []
+        }
       },
       {
         "id": "Left_Cylinder_BasePin",
@@ -230,7 +442,52 @@
           "/ElianiSealer/LeftCylinder"
         ],
         "lower_limit": -45.0,
-        "upper_limit": 45.0
+        "upper_limit": 45.0,
+        "usd_type": "PhysicsRevoluteJoint",
+        "body0_targets": [
+          "/ElianiSealer/Base"
+        ],
+        "body1_targets": [
+          "/ElianiSealer/LeftCylinder"
+        ],
+        "authored_usd": {
+          "id": "Left_Cylinder_BasePin",
+          "source_prim_path": "/ElianiSealer/Joints/Left_Cylinder_BasePin",
+          "joint_type": "PhysicsRevoluteJoint",
+          "body0": [
+            "/ElianiSealer/Base"
+          ],
+          "body1": [
+            "/ElianiSealer/LeftCylinder"
+          ],
+          "joint_enabled": true,
+          "axis": "Y",
+          "lowerLimit": -45.0,
+          "upperLimit": 45.0,
+          "localPos0": [
+            -0.10300000011920929,
+            0.1850000023841858,
+            0.029999999329447746
+          ],
+          "localPos1": [
+            -9.313225746154785e-10,
+            0.0,
+            0.0
+          ],
+          "localRot0": [
+            0.9973015785217285,
+            0.0,
+            -0.07341369241476059,
+            0.0
+          ],
+          "localRot1": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "static_frames": []
+        }
       },
       {
         "id": "Left_GasSpring_Stroke",
@@ -244,7 +501,52 @@
           "/ElianiSealer/LeftPiston"
         ],
         "lower_limit": 0.0,
-        "upper_limit": 0.05040835961699486
+        "upper_limit": 0.05040835961699486,
+        "usd_type": "PhysicsPrismaticJoint",
+        "body0_targets": [
+          "/ElianiSealer/LeftCylinder"
+        ],
+        "body1_targets": [
+          "/ElianiSealer/LeftPiston"
+        ],
+        "authored_usd": {
+          "id": "Left_GasSpring_Stroke",
+          "source_prim_path": "/ElianiSealer/Joints/Left_GasSpring_Stroke",
+          "joint_type": "PhysicsPrismaticJoint",
+          "body0": [
+            "/ElianiSealer/LeftCylinder"
+          ],
+          "body1": [
+            "/ElianiSealer/LeftPiston"
+          ],
+          "joint_enabled": true,
+          "axis": "Z",
+          "lowerLimit": 0.0,
+          "upperLimit": 0.05040835961699486,
+          "localPos0": [
+            6.332993507385254e-08,
+            0.0,
+            0.1536562740802765
+          ],
+          "localPos1": [
+            -3.725290298461914e-09,
+            0.0,
+            5.587935447692871e-09
+          ],
+          "localRot0": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "localRot1": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "static_frames": []
+        }
       },
       {
         "id": "Left_Rod_LidPin_LOOP",
@@ -258,7 +560,52 @@
           "/ElianiSealer/Lid"
         ],
         "lower_limit": -120.0,
-        "upper_limit": 120.0
+        "upper_limit": 120.0,
+        "usd_type": "PhysicsRevoluteJoint",
+        "body0_targets": [
+          "/ElianiSealer/LeftPiston"
+        ],
+        "body1_targets": [
+          "/ElianiSealer/Lid"
+        ],
+        "authored_usd": {
+          "id": "Left_Rod_LidPin_LOOP",
+          "source_prim_path": "/ElianiSealer/Joints/Left_Rod_LidPin_LOOP",
+          "joint_type": "PhysicsRevoluteJoint",
+          "body0": [
+            "/ElianiSealer/LeftPiston"
+          ],
+          "body1": [
+            "/ElianiSealer/Lid"
+          ],
+          "joint_enabled": true,
+          "axis": "Y",
+          "lowerLimit": -120.0,
+          "upperLimit": 120.0,
+          "localPos0": [
+            -3.725290298461914e-09,
+            0.0,
+            5.587935447692871e-09
+          ],
+          "localPos1": [
+            0.04999999701976776,
+            0.1850000023841858,
+            0.0010000020265579224
+          ],
+          "localRot0": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "localRot1": [
+            0.9973015785217285,
+            0.0,
+            -0.07341369241476059,
+            0.0
+          ],
+          "static_frames": []
+        }
       },
       {
         "id": "Right_Cylinder_BasePin",
@@ -272,7 +619,52 @@
           "/ElianiSealer/RightCylinder"
         ],
         "lower_limit": -45.0,
-        "upper_limit": 45.0
+        "upper_limit": 45.0,
+        "usd_type": "PhysicsRevoluteJoint",
+        "body0_targets": [
+          "/ElianiSealer/Base"
+        ],
+        "body1_targets": [
+          "/ElianiSealer/RightCylinder"
+        ],
+        "authored_usd": {
+          "id": "Right_Cylinder_BasePin",
+          "source_prim_path": "/ElianiSealer/Joints/Right_Cylinder_BasePin",
+          "joint_type": "PhysicsRevoluteJoint",
+          "body0": [
+            "/ElianiSealer/Base"
+          ],
+          "body1": [
+            "/ElianiSealer/RightCylinder"
+          ],
+          "joint_enabled": true,
+          "axis": "Y",
+          "lowerLimit": -45.0,
+          "upperLimit": 45.0,
+          "localPos0": [
+            -0.10300000011920929,
+            -0.1850000023841858,
+            0.029999999329447746
+          ],
+          "localPos1": [
+            -9.313225746154785e-10,
+            0.0,
+            0.0
+          ],
+          "localRot0": [
+            0.9973015785217285,
+            0.0,
+            -0.07341369241476059,
+            0.0
+          ],
+          "localRot1": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "static_frames": []
+        }
       },
       {
         "id": "Right_GasSpring_Stroke",
@@ -286,7 +678,52 @@
           "/ElianiSealer/RightPiston"
         ],
         "lower_limit": 0.0,
-        "upper_limit": 0.05040835961699486
+        "upper_limit": 0.05040835961699486,
+        "usd_type": "PhysicsPrismaticJoint",
+        "body0_targets": [
+          "/ElianiSealer/RightCylinder"
+        ],
+        "body1_targets": [
+          "/ElianiSealer/RightPiston"
+        ],
+        "authored_usd": {
+          "id": "Right_GasSpring_Stroke",
+          "source_prim_path": "/ElianiSealer/Joints/Right_GasSpring_Stroke",
+          "joint_type": "PhysicsPrismaticJoint",
+          "body0": [
+            "/ElianiSealer/RightCylinder"
+          ],
+          "body1": [
+            "/ElianiSealer/RightPiston"
+          ],
+          "joint_enabled": true,
+          "axis": "Z",
+          "lowerLimit": 0.0,
+          "upperLimit": 0.05040835961699486,
+          "localPos0": [
+            6.332993507385254e-08,
+            0.0,
+            0.1536562740802765
+          ],
+          "localPos1": [
+            -3.725290298461914e-09,
+            0.0,
+            5.587935447692871e-09
+          ],
+          "localRot0": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "localRot1": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "static_frames": []
+        }
       },
       {
         "id": "Right_Rod_LidPin_LOOP",
@@ -300,9 +737,57 @@
           "/ElianiSealer/Lid"
         ],
         "lower_limit": -120.0,
-        "upper_limit": 120.0
+        "upper_limit": 120.0,
+        "usd_type": "PhysicsRevoluteJoint",
+        "body0_targets": [
+          "/ElianiSealer/RightPiston"
+        ],
+        "body1_targets": [
+          "/ElianiSealer/Lid"
+        ],
+        "authored_usd": {
+          "id": "Right_Rod_LidPin_LOOP",
+          "source_prim_path": "/ElianiSealer/Joints/Right_Rod_LidPin_LOOP",
+          "joint_type": "PhysicsRevoluteJoint",
+          "body0": [
+            "/ElianiSealer/RightPiston"
+          ],
+          "body1": [
+            "/ElianiSealer/Lid"
+          ],
+          "joint_enabled": true,
+          "axis": "Y",
+          "lowerLimit": -120.0,
+          "upperLimit": 120.0,
+          "localPos0": [
+            -3.725290298461914e-09,
+            0.0,
+            5.587935447692871e-09
+          ],
+          "localPos1": [
+            0.04999999701976776,
+            -0.1850000023841858,
+            0.0010000020265579224
+          ],
+          "localRot0": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "localRot1": [
+            0.9973015785217285,
+            0.0,
+            -0.07341369241476059,
+            0.0
+          ],
+          "static_frames": []
+        }
       }
-    ]
+    ],
+    "moving_joints": 7,
+    "rigid_body_count": 6,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "units": {
     "length": "m",
@@ -319,40 +804,77 @@
     "source_meters_per_unit": 1.0,
     "source_kilograms_per_unit": 1.0,
     "source_up_axis": "Z",
-    "bounds_method": "transformed_visual_mesh_points",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
     "reasoning_available": false,
-    "verification_note": "Authored USD properties and transformed visual bounds only. Real-world dimensions, mass, and runtime stability are not independently verified by this extraction."
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification.",
+    "metadata_repair": {
+      "date": "2026-10-08T04:48:10.976448+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/metadata-repair-20261008.json",
+      "original_physics_sha256": "e7b9deeaffa8ef66170c63cfbee477e37da0b42ae754c96a593f79114a8f5499"
+    },
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes"
   },
   "validation": {
-    "overall": "partial",
+    "overall": "verified",
     "scale": {
-      "status": "recorded",
-      "confidence": "medium",
+      "status": "verified",
+      "confidence": "high",
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
         0.36000001430511475,
         0.4000000059604645,
         0.1899999976158142
-      ]
+      ],
+      "checked_at": "2026-10-08T04:48:10.976448+00:00",
+      "evidence": "reports/metadata-repair-20261008.json",
+      "usd_sha256": "e2ed2bb9e46a8f58f278a8d2de7763121f038b03d574238e78b4f912558799e4",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
-      "status": "recorded",
-      "confidence": "medium",
-      "value_kg": 30.000000022351742
+      "status": "verified",
+      "confidence": "high",
+      "value_kg": 30.000000022351742,
+      "checked_at": "2026-10-08T04:48:10.976448+00:00",
+      "evidence": "reports/metadata-repair-20261008.json",
+      "usd_sha256": "e2ed2bb9e46a8f58f278a8d2de7763121f038b03d574238e78b4f912558799e4",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 30.000000022351742,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
+      "status": "verified",
+      "confidence": "high",
       "shape_count": 203,
       "approximations": [
         "convexHull"
-      ]
+      ],
+      "checked_at": "2026-10-08T04:48:10.976448+00:00",
+      "evidence": "reports/metadata-repair-20261008.json",
+      "usd_sha256": "e2ed2bb9e46a8f58f278a8d2de7763121f038b03d574238e78b4f912558799e4",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 203,
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
-      "status": "recorded",
-      "confidence": "medium",
-      "moving_joints": 7
+      "status": "verified",
+      "confidence": "high",
+      "moving_joints": 7,
+      "checked_at": "2026-10-08T04:48:10.976448+00:00",
+      "evidence": "reports/metadata-repair-20261008.json",
+      "usd_sha256": "e2ed2bb9e46a8f58f278a8d2de7763121f038b03d574238e78b4f912558799e4",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 8,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "not_revalidated",
+      "scope": "native_simulation",
+      "note": "Existing simulation videos remain available. This repair does not claim new drop/contact, friction, stability or joint-actuation tests."
     }
   }
 }

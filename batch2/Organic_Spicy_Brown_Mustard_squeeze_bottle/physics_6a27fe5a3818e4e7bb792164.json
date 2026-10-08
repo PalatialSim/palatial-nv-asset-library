@@ -1,49 +1,55 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.041169166564941406,
-        0.16112783551216125,
-        0.024152014404535294
-      ],
       "min": [
-        -0.0414598323404789,
-        -2.1697314878110774e-06,
-        -0.025820985436439514
+        -0.06039400026202202,
+        -0.03429099917411804,
+        -1.4999999621068127e-05
+      ],
+      "max": [
+        0.05977100133895874,
+        0.03394100069999695,
+        0.2362390011548996
       ],
       "size": [
-        0.0826289989054203,
-        0.16113000524364907,
-        0.04997299984097481
-      ]
+        0.12016500160098076,
+        0.06823199987411499,
+        0.23625400115452067
+      ],
+      "units": "m"
     },
     "description": "A yellow, semi-rigid plastic bottle with a tapered body and a brown hard plastic flip-top cap.",
-    "name": "generated reference 01",
+    "name": "Organic Spicy Brown Mustard squeeze bottle",
     "object_type": "rigid_bodies",
-    "total_mass": 0.28
+    "total_mass": 0.2800000011920929,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "parts": [
     {
       "bounds": {
-        "center": [
-          -0.0002722750959088154,
-          0.07455860024931725,
-          -0.0007566557611532757
+        "min": [
+          -0.06039400026202202,
+          -0.03429099917411804,
+          -1.4999999621068127e-05
         ],
         "max": [
-          0.041169166564941406,
-          0.16112783551216125,
-          0.024152014404535294
+          0.05977100133895874,
+          0.03394100069999695,
+          0.2362390011548996
         ],
-        "min": [
-          -0.0414598323404789,
-          -2.1697314878110774e-06,
-          -0.025820985436439514
-        ]
+        "size": [
+          0.12016500160098076,
+          0.06823199987411499,
+          0.23625400115452067
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         -0.0002809951106937519,
@@ -58,7 +64,7 @@
         0.0012168854850401391,
         0.0013479878810680336
       ],
-      "mass": 0.28,
+      "mass": 0.2800000011920929,
       "material": "plastic",
       "name": "generated reference 01",
       "physics_type": "rigid",
@@ -66,10 +72,28 @@
         "object_name": "generated reference 01",
         "part_name": "generated reference 01"
       },
-      "volume": 0.0013456933838568374
+      "volume": 0.0013456933838568374,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-08T04:48:10.976448+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/metadata-repair-20261008.json",
+      "original_physics_sha256": "5aae7e485392b70aa7006fd556c12659b3ad7a70cf2e2df6768ea9c5b0f8294e"
+    },
+    "usd_path": "batch2/Organic_Spicy_Brown_Mustard_squeeze_bottle/Organic_Spicy_Brown_Mustard_squeeze_bottle.usd",
+    "usd_sha256": "5fd70534a638fa93dc72d06ccb5526bb680fbcee1210b4e00c7276d77f630540",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification.",
+    "asset_id_source": "existing asset folder identifier; no numbered D identifier was present"
+  },
   "schema_version": "1.0",
   "simulation": {},
   "units": {
@@ -85,25 +109,59 @@
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
-        0.0826289989054203,
-        0.16113000524364907,
-        0.04997299984097481
-      ]
+        0.12016500160098076,
+        0.06823199987411499,
+        0.23625400115452067
+      ],
+      "checked_at": "2026-10-08T04:48:10.976448+00:00",
+      "evidence": "reports/metadata-repair-20261008.json",
+      "usd_sha256": "5fd70534a638fa93dc72d06ccb5526bb680fbcee1210b4e00c7276d77f630540",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.28
+      "value_kg": 0.2800000011920929,
+      "checked_at": "2026-10-08T04:48:10.976448+00:00",
+      "evidence": "reports/metadata-repair-20261008.json",
+      "usd_sha256": "5fd70534a638fa93dc72d06ccb5526bb680fbcee1210b4e00c7276d77f630540",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.2800000011920929,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 3,
+      "checked_at": "2026-10-08T04:48:10.976448+00:00",
+      "evidence": "reports/metadata-repair-20261008.json",
+      "usd_sha256": "5fd70534a638fa93dc72d06ccb5526bb680fbcee1210b4e00c7276d77f630540",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 3,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-08T04:48:10.976448+00:00",
+      "evidence": "reports/metadata-repair-20261008.json",
+      "usd_sha256": "5fd70534a638fa93dc72d06ccb5526bb680fbcee1210b4e00c7276d77f630540",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "not_revalidated",
+      "scope": "native_simulation",
+      "note": "Existing simulation videos remain available. This repair does not claim new drop/contact, friction, stability or joint-actuation tests."
     }
-  }
+  },
+  "asset_id": "Organic_Spicy_Brown_Mustard_squeeze_bottle"
 }
