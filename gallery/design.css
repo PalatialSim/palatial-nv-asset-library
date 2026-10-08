@@ -12,3 +12,39 @@
 .sheet-controls{display:flex;align-items:center;flex-wrap:wrap;gap:10px;padding:0 20px 16px;border-bottom:1px solid var(--line)}.sheet-controls a{font-size:12px;margin-left:auto}.sheet-navigation,.segmented{display:flex;gap:4px}.segmented button[aria-pressed=true],#fitMontage[aria-pressed=true]{color:var(--lime);border-color:var(--lime)}
 .sheet-viewport{min-height:0;flex:1;overflow:auto;padding:16px;background:#202020;text-align:center}.sheet-viewport img{display:block;width:100%;height:auto;margin:auto}.sheet-viewport.fit img{height:100%;width:auto;max-width:100%;object-fit:contain}.sheet-viewport img[hidden]{display:none}#sheetStatus{font-size:13px}
 @media(max-width:640px){#montageDialog{width:calc(100vw - 16px);height:calc(100dvh - 16px)}.sheet-heading{padding:12px}.sheet-controls{padding:0 12px 12px;gap:8px}.sheet-controls a{margin-left:0}.sheet-viewport{padding:8px}}
+
+/* Project identity and research resources. */
+body{padding:32px;min-height:100vh}
+.skip-link{position:absolute;left:32px;top:8px;padding:8px 12px;background:var(--lime);color:#0a0c02;z-index:20;transform:translateY(-200%);border-radius:4px}
+.skip-link:focus{transform:translateY(0)}
+.topline{min-height:76px;margin-bottom:40px;padding:8px 0 24px;gap:32px}
+.brand-lockup{display:flex;align-items:center;gap:28px;flex-shrink:0}
+.brand-link{display:inline-flex;align-items:center;text-decoration:none}
+.brand-link img{display:block;object-fit:contain;max-width:100%;height:auto}
+.palatial-logo{width:172px}
+.nvidia-logo{width:154px}
+.brand-divider{height:30px;width:1px;background:var(--line);flex-shrink:0}
+.top-links{display:flex;align-items:center;gap:24px}
+.top-links a{text-decoration:none;white-space:nowrap;color:#b8b8b5}
+.top-links a:hover,.footer-nav a:hover{color:#fff}
+.top-links .dataset-link{color:#f4f4f2;border:1px solid var(--line);padding:9px 14px;border-radius:6px}
+.top-links .dataset-link:hover{background:#161616}
+.library-header{margin-bottom:32px;max-width:880px}
+.library-header .eyebrow{display:block;color:var(--lime);font-size:12px;letter-spacing:.08em;margin-bottom:12px}
+h1{font-size:clamp(32px,3.5vw,48px);line-height:1.12;font-weight:550;letter-spacing:-.035em;margin:0 0 20px}
+.library-header .intro{font-size:17px;line-height:1.6;max-width:710px;margin:0 0 18px;color:#d2d2ce}
+.library-header .browse-note{font-size:14px;margin:0 0 4px;color:#b8b8b5}
+.site-footer{margin-top:64px;padding-top:40px;border-top:1px solid var(--line)}
+.footer-main{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(180px,1fr) minmax(150px,.8fr);gap:64px;padding-bottom:40px}
+.footer-about p{font-size:20px;letter-spacing:-.02em;color:#f4f4f2;margin:22px 0 10px}
+.footer-about>span{display:block;color:#b8b8b5;font-size:13px;max-width:380px;line-height:1.7}
+.footer-nav{display:flex;flex-direction:column;align-items:flex-start;gap:12px}
+.footer-nav h2{font-size:12px;font-weight:500;color:#90908c;margin:0 0 6px}
+.footer-nav a{font-size:13px;text-decoration:none;color:#d2d2ce}
+.footer-nav a span,.top-links a span{display:inline-block;margin-left:5px;color:#90908c}
+.footer-bottom{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px 24px;padding:20px 0 8px;border-top:1px solid var(--line);font-size:11px;color:#90908c}
+.footer-bottom a{color:#b8b8b5}
+@media(max-width:900px){.topline{align-items:flex-start;flex-direction:column;gap:24px}.footer-main{gap:32px;grid-template-columns:minmax(0,1.4fr) minmax(160px,1fr)}.footer-main .footer-nav:last-child{grid-column:2}.footer-about{grid-row:span 2}}
+@media(max-width:640px){body{padding:20px 16px}.topline{margin-bottom:32px;padding-bottom:24px}.brand-lockup{gap:22px}.palatial-logo{width:140px}.nvidia-logo{width:130px}.brand-divider{height:28px}.top-links{gap:20px}.library-header{margin-bottom:24px}.library-header .intro{font-size:15px}.library-header .browse-note,.library-header .note{font-size:12px}.site-footer{margin-top:40px;padding-top:32px}.footer-main{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 20px;padding-bottom:32px}.footer-about{grid-column:1/-1;grid-row:auto}.footer-main .footer-nav:last-child{grid-column:auto}.footer-about p{margin-top:20px}.footer-nav a{font-size:12px}.footer-bottom{align-items:flex-start;flex-direction:column;gap:10px}.skip-link{left:16px}}
+@media(max-width:360px){.brand-lockup{gap:16px}.palatial-logo{width:126px}.nvidia-logo{width:118px}}
+@media(max-width:640px){.tools{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px}.tools input{grid-column:span 6;min-width:0;width:100%}.tools button,.tools select{width:100%;min-width:0;padding:0 8px}.tools #batch{grid-column:span 4}.tools #articulation{grid-column:span 6}.tools #toggle,.tools #openMontage{grid-column:span 3;min-width:0}}
