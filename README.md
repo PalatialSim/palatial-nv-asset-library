@@ -64,3 +64,9 @@ Asset layouts vary; the original supplied paths are retained. `gallery/` contain
 Copyright 2026 Palatial Platforms. Asset files, metadata, previews, and recordings are licensed under [CC BY 4.0](LICENSE). Software and automation are licensed under [Apache 2.0](LICENSE-CODE). See [LICENSING.md](LICENSING.md) for attribution and scope.
 
 The 2026-10-08 Drive handoff also updates 64 asset names using exact source asset IDs and the supplied final names. All matching entries are name-only changes; covers and model packages remain as delivered. The other 141 handoff entries do not match this repository by source ID. [Name repair evidence](reports/name-repair-20261008.json) records the matches.
+
+## Additional presentation labels — 2026-10-08
+
+Following review of the old-name candidates against delivered renders and authored descriptions/materials, apply five additional labels: D00234 Ceramic Teacup, D00380 Dessert Spoon, D00782 Small Saucepan, D00885 Rectangular Ceramic Serving Platter, and D00966 Wooden Pedestal Cake Stand.
+
+These are label corrections for the existing exported models, not additional source-ID matches to the Drive handoff. The 64 original exact-ID matches remain unchanged, and 141 handoff source IDs remain unresolved. Sixteen other old-name candidates were rejected because their proposed labels describe different objects or unsupported features. [Label review evidence](reports/name-label-corrections-20261008.json) records the decisions. Asset identities, descriptions, physics values, covers, folders, model files, and simulation recordings are preserved.
