@@ -17,7 +17,10 @@ def audit(root):
         return re.sub(r'[^a-z0-9]', '', value.lower())
     for entry in gallery:
         folder = root / entry['batch']
-        candidates = [p for p in physics if p.parts[len(root.parts)] == entry['batch'] and normalize(p.relative_to(folder).parts[0]) == normalize(entry['name'])]
+        if entry.get('asset_folder'):
+            candidates = [p for p in physics if p.is_relative_to(root / entry['asset_folder'])]
+        else:
+            candidates = [p for p in physics if p.parts[len(root.parts)] == entry['batch'] and normalize(p.relative_to(folder).parts[0]) == normalize(entry['name'])]
         if not candidates and entry.get('video_url', '').startswith('../' + entry['batch'] + '/'):
             asset_folder = unquote(entry['video_url']).split('/')[2]
             candidates = [p for p in physics if p.parts[len(root.parts)] == entry['batch'] and p.relative_to(folder).parts[0] == asset_folder]

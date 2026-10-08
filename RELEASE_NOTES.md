@@ -12,3 +12,5 @@ Repaired and standardized metadata for 154 assets across the library. This inclu
 - Converted non-finite USD sentinel values in raw metadata dictionaries to quoted `"Infinity"` / `"-Infinity"` strings so files remain strict JSON. These represent unlimited forces or bounds, not mass or dimension values.
 
 The [machine-readable repair report](reports/metadata-repair-20261008.json) preserves original fields, hashes, per-asset evidence and verification scope. [Verification policy](VERIFICATION.md) explains how to reproduce the checks.
+
+The 2026-10-08 Drive handoff also updates 64 asset names using exact source asset IDs and the supplied final names. All matching entries are name-only changes; covers and model packages remain as delivered. The other 141 handoff entries do not match this repository by source ID. [Name repair evidence](reports/name-repair-20261008.json) records the matches.
