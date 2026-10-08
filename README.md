@@ -67,6 +67,6 @@ The 2026-10-08 Drive handoff also updates 64 asset names using exact source asse
 
 ## Asset name update register
 
-The complete [205-record handoff register](reports/rename-register-20261008.csv) includes original asset IDs, old and corrected names, and preview links. [Browse the searchable register](https://palatialsim.github.io/palatial-nv-asset-library/rename-register.html).
+The complete [205-record handoff register](reports/rename-register-20261008.csv) includes original asset IDs, old and corrected names, and preview links.
 
 All 205 originals were found in the canonical Palatial Library with their corrected names. 65 are matched to this NV export: 64 by original ID and Masticating Juicer (D00423) by verified package content. The other 140 have no confirmed NV mapping; use their original preview links. [Reconciliation evidence](reports/rename-reconciliation-20261008.md) documents the checks and remaining metadata gaps. The broader Library retains its own per-asset license and attribution.
