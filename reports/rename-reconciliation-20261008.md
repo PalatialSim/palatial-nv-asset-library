@@ -16,7 +16,7 @@ These checks establish the release mapping; they do not constitute a new native 
 
 ## Browse or reuse the handoff
 
-The [CSV](rename-register-20261008.csv) and [JSON](rename-register-20261008.json) contain every original ID, old name, corrected name, source preview link, and NV inclusion decision. The [searchable register](../gallery/rename-register.html) presents the same records.
+The [CSV](rename-register-20261008.csv) and [JSON](rename-register-20261008.json) contain every original ID, old name, corrected name, source preview link, and NV inclusion decision. The [searchable register](https://palatialsim.github.io/palatial-nv-asset-library/rename-register.html) presents the same records.
 
 The NV export retains its CC BY 4.0 license. Links to the broader Library do not relicense its models: follow the license and attribution supplied with each original asset. The original Library displays CC BY-NC 4.0, while individually traceable NVIDIA SimReady source packages may carry CC BY 4.0. The Library's general label is not a per-asset rights check. No additional original model packages are included in this release.
 
