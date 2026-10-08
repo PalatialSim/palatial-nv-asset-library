@@ -2,33 +2,35 @@
   "schema_version": "1.0",
   "asset_id": "D00056",
   "asset": {
-    "name": "D00056 Bowl Container",
+    "name": "D00056 Ceramic Mixing Bowl",
     "description": "A cream-colored glazed ceramic bowl with rounded sides, a raised rim, and a small foot ring. The surface is smooth, slightly glossy, and subtly speckled.",
     "object_type": "rigid_bodies",
-    "total_mass": 0.46,
+    "total_mass": 0.46000000834465027,
     "bounds": {
       "min": [
-        -0.078177,
-        -0.0779,
-        1e-06
+        -0.07817699760198593,
+        -0.0778999999165535,
+        9.999999974752427e-07
       ],
       "max": [
-        0.077816,
-        0.077941,
-        0.068988
+        0.07781600207090378,
+        0.07794100046157837,
+        0.06898800283670425
       ],
       "size": [
-        0.155993,
-        0.155841,
-        0.06898699999999999
-      ]
-    }
+        0.1559929996728897,
+        0.15584100037813187,
+        0.06898700283670678
+      ],
+      "units": "m"
+    },
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "parts": [
     {
       "id": "part_00",
       "name": "D00056 Bowl Container",
-      "mass": 0.46,
+      "mass": 0.46000000834465027,
       "density": 2300.0,
       "volume": 0.00020431683529767083,
       "inertia": [
@@ -49,20 +51,21 @@
       ],
       "bounds": {
         "min": [
-          -0.078177,
-          -0.0779,
-          1e-06
+          -0.07817699760198593,
+          -0.0778999999165535,
+          9.999999974752427e-07
         ],
         "max": [
-          0.077816,
-          0.077941,
-          0.068988
+          0.07781600207090378,
+          0.07794100046157837,
+          0.06898800283670425
         ],
         "size": [
-          0.155993,
-          0.155841,
-          0.06898699999999999
-        ]
+          0.1559929996728897,
+          0.15584100037813187,
+          0.06898700283670678
+        ],
+        "units": "m"
       },
       "material": "glazed_ceramic",
       "physics_type": "rigid",
@@ -82,16 +85,22 @@
       "semantic": {
         "qid": null
       },
-      "non_visual_material": null
+      "non_visual_material": null,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "units": {
     "length": "m",
-    "mass": "kg"
+    "mass": "kg",
+    "up_axis": "Z"
   },
   "simulation": {
     "fix_base": false
@@ -100,40 +109,82 @@
     "source_schema": "legacy_batch1_physics",
     "legacy_reasoning_preserved": true,
     "legacy_overall_assessment": "",
-    "verification_note": "Bounds and collision geometry were read from the delivered USD; runtime drop/contact behavior remains unverified.",
-    "usd_world_bounds_source": "USD visual mesh extent",
-    "collision_source": "USD PhysicsCollisionAPI geometry"
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification.",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "collision_source": "USD PhysicsCollisionAPI geometry",
+    "metadata_repair": {
+      "date": "2026-10-08T04:48:10.976448+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/metadata-repair-20261008.json",
+      "original_physics_sha256": "cfbf69e2ce3797ee665b3d1385ad8a033d74fab245be10f6f236f87914d0d29a"
+    },
+    "usd_path": "batch1/D00056 Bowl Container/IsaacSim_assets_69fef61cf3726e6ad053857a/IsaacSim_asset_69fef61cf3726e6ad053857a.usd",
+    "usd_sha256": "54c62f34d359186d43ae5b1e4b9b3b4cda00405f65d5eabdeb66e3519675df52",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z"
   },
   "validation": {
-    "overall": "partial",
+    "overall": "verified",
     "scale": {
-      "status": "recorded",
-      "confidence": "medium",
+      "status": "verified",
+      "confidence": "high",
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
-        0.155993,
-        0.155841,
-        0.06898699999999999
-      ]
+        0.1559929996728897,
+        0.15584100037813187,
+        0.06898700283670678
+      ],
+      "checked_at": "2026-10-08T04:48:10.976448+00:00",
+      "evidence": "reports/metadata-repair-20261008.json",
+      "usd_sha256": "54c62f34d359186d43ae5b1e4b9b3b4cda00405f65d5eabdeb66e3519675df52",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
-      "status": "not_checked",
-      "confidence": "low",
-      "value_kg": 0.46
+      "status": "verified",
+      "confidence": "high",
+      "value_kg": 0.46000000834465027,
+      "checked_at": "2026-10-08T04:48:10.976448+00:00",
+      "evidence": "reports/metadata-repair-20261008.json",
+      "usd_sha256": "54c62f34d359186d43ae5b1e4b9b3b4cda00405f65d5eabdeb66e3519675df52",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.46000000834465027,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
+      "status": "verified",
+      "confidence": "high",
       "shape_count": 59,
       "approximations": [
         "convexHull"
-      ]
+      ],
+      "checked_at": "2026-10-08T04:48:10.976448+00:00",
+      "evidence": "reports/metadata-repair-20261008.json",
+      "usd_sha256": "54c62f34d359186d43ae5b1e4b9b3b4cda00405f65d5eabdeb66e3519675df52",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 59,
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
-      "status": "not_checked",
-      "confidence": "low",
-      "moving_joints": 0
+      "status": "verified",
+      "confidence": "high",
+      "moving_joints": 0,
+      "checked_at": "2026-10-08T04:48:10.976448+00:00",
+      "evidence": "reports/metadata-repair-20261008.json",
+      "usd_sha256": "54c62f34d359186d43ae5b1e4b9b3b4cda00405f65d5eabdeb66e3519675df52",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "not_revalidated",
+      "scope": "native_simulation",
+      "note": "Existing simulation videos remain available. This repair does not claim new drop/contact, friction, stability or joint-actuation tests."
     }
   }
 }

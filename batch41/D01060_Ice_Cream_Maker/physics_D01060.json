@@ -20,8 +20,11 @@
         0.2029999941587448,
         0.2029999941587448,
         0.22200000286102295
-      ]
-    }
+      ],
+      "units": "m"
+    },
+    "bounds_frame": "USD stage world axes, metres, default authored pose",
+    "description": "3D model of ice cream maker for robotics simulation research. The delivered USD contains 3 rigid bodies and 2 enabled moving joint constraints."
   },
   "parts": [
     {
@@ -50,7 +53,27 @@
           "convexHull"
         ]
       },
-      "reasoning": null
+      "reasoning": null,
+      "source_prim_path": "/IceCreamMaker/Chassis",
+      "bounds": {
+        "min": [
+          -0.1014999970793724,
+          -0.1014999970793724,
+          0.0
+        ],
+        "max": [
+          0.1014999970793724,
+          0.1014999970793724,
+          0.22200000286102295
+        ],
+        "size": [
+          0.2029999941587448,
+          0.2029999941587448,
+          0.22200000286102295
+        ],
+        "units": "m"
+      },
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     },
     {
       "id": "Button_OFF",
@@ -77,7 +100,27 @@
           "convexHull"
         ]
       },
-      "reasoning": null
+      "reasoning": null,
+      "source_prim_path": "/IceCreamMaker/Button_OFF",
+      "bounds": {
+        "min": [
+          0.002988455817103386,
+          -0.008130594156682491,
+          0.21067361487075686
+        ],
+        "max": [
+          0.013773425482213497,
+          0.008130594156682491,
+          0.22080444963648915
+        ],
+        "size": [
+          0.010784969665110111,
+          0.016261188313364983,
+          0.010130834765732288
+        ],
+        "units": "m"
+      },
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     },
     {
       "id": "Button_ON",
@@ -104,7 +147,27 @@
           "convexHull"
         ]
       },
-      "reasoning": null
+      "reasoning": null,
+      "source_prim_path": "/IceCreamMaker/Button_ON",
+      "bounds": {
+        "min": [
+          0.014226575382053852,
+          -0.008130594156682491,
+          0.20544551638886333
+        ],
+        "max": [
+          0.025011545047163963,
+          0.008130594156682491,
+          0.21557635068893433
+        ],
+        "size": [
+          0.010784969665110111,
+          0.016261188313364983,
+          0.010130834300071001
+        ],
+        "units": "m"
+      },
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
   "articulation": {
@@ -122,7 +185,52 @@
           "/IceCreamMaker/Button_OFF"
         ],
         "lower_limit": -0.001500000013038516,
-        "upper_limit": 0.0
+        "upper_limit": 0.0,
+        "usd_type": "PhysicsPrismaticJoint",
+        "body0_targets": [
+          "/IceCreamMaker/Chassis"
+        ],
+        "body1_targets": [
+          "/IceCreamMaker/Button_OFF"
+        ],
+        "authored_usd": {
+          "id": "Button_OFF_press",
+          "source_prim_path": "/IceCreamMaker/Joints/Button_OFF_press",
+          "joint_type": "PhysicsPrismaticJoint",
+          "body0": [
+            "/IceCreamMaker/Chassis"
+          ],
+          "body1": [
+            "/IceCreamMaker/Button_OFF"
+          ],
+          "joint_enabled": true,
+          "axis": "Z",
+          "lowerLimit": -0.001500000013038516,
+          "upperLimit": 0.0,
+          "localPos0": [
+            0.009105980396270752,
+            0.0,
+            0.21588201820850372
+          ],
+          "localPos1": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "localRot0": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "localRot1": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "static_frames": []
+        }
       },
       {
         "id": "Button_ON_press",
@@ -136,9 +244,57 @@
           "/IceCreamMaker/Button_ON"
         ],
         "lower_limit": -0.001500000013038516,
-        "upper_limit": 0.0
+        "upper_limit": 0.0,
+        "usd_type": "PhysicsPrismaticJoint",
+        "body0_targets": [
+          "/IceCreamMaker/Chassis"
+        ],
+        "body1_targets": [
+          "/IceCreamMaker/Button_ON"
+        ],
+        "authored_usd": {
+          "id": "Button_ON_press",
+          "source_prim_path": "/IceCreamMaker/Joints/Button_ON_press",
+          "joint_type": "PhysicsPrismaticJoint",
+          "body0": [
+            "/IceCreamMaker/Chassis"
+          ],
+          "body1": [
+            "/IceCreamMaker/Button_ON"
+          ],
+          "joint_enabled": true,
+          "axis": "Z",
+          "lowerLimit": -0.001500000013038516,
+          "upperLimit": 0.0,
+          "localPos0": [
+            0.018894020467996597,
+            0.0,
+            0.21131794154644012
+          ],
+          "localPos1": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "localRot0": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "localRot1": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "static_frames": []
+        }
       }
-    ]
+    ],
+    "moving_joints": 2,
+    "rigid_body_count": 3,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "units": {
     "length": "m",
@@ -155,41 +311,78 @@
     "source_meters_per_unit": 1.0,
     "source_kilograms_per_unit": 1.0,
     "source_up_axis": "Z",
-    "bounds_method": "transformed_visual_mesh_points",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
     "reasoning_available": false,
-    "verification_note": "Authored USD properties and transformed visual bounds only. Real-world dimensions, mass, and runtime stability are not independently verified by this extraction."
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification.",
+    "metadata_repair": {
+      "date": "2026-10-08T04:48:10.976448+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/metadata-repair-20261008.json",
+      "original_physics_sha256": "934bb49fb67dd17e59bb83942b51f0be07dcb633b33e51ce64946b912cc11325"
+    },
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes"
   },
   "validation": {
-    "overall": "partial",
+    "overall": "verified",
     "scale": {
-      "status": "recorded",
-      "confidence": "medium",
+      "status": "verified",
+      "confidence": "high",
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
         0.2029999941587448,
         0.2029999941587448,
         0.22200000286102295
-      ]
+      ],
+      "checked_at": "2026-10-08T04:48:10.976448+00:00",
+      "evidence": "reports/metadata-repair-20261008.json",
+      "usd_sha256": "6db5e5713e7f9d4a9cee0b73268da0eebedf0bd7f0fc7c8f6050f00f0325997b",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
-      "status": "recorded",
-      "confidence": "medium",
-      "value_kg": 2.719999996945262
+      "status": "verified",
+      "confidence": "high",
+      "value_kg": 2.719999996945262,
+      "checked_at": "2026-10-08T04:48:10.976448+00:00",
+      "evidence": "reports/metadata-repair-20261008.json",
+      "usd_sha256": "6db5e5713e7f9d4a9cee0b73268da0eebedf0bd7f0fc7c8f6050f00f0325997b",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 2.719999996945262,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
+      "status": "verified",
+      "confidence": "high",
       "shape_count": 547,
       "approximations": [
         "convexDecomposition",
         "convexHull"
-      ]
+      ],
+      "checked_at": "2026-10-08T04:48:10.976448+00:00",
+      "evidence": "reports/metadata-repair-20261008.json",
+      "usd_sha256": "6db5e5713e7f9d4a9cee0b73268da0eebedf0bd7f0fc7c8f6050f00f0325997b",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 547,
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
-      "status": "recorded",
-      "confidence": "medium",
-      "moving_joints": 2
+      "status": "verified",
+      "confidence": "high",
+      "moving_joints": 2,
+      "checked_at": "2026-10-08T04:48:10.976448+00:00",
+      "evidence": "reports/metadata-repair-20261008.json",
+      "usd_sha256": "6db5e5713e7f9d4a9cee0b73268da0eebedf0bd7f0fc7c8f6050f00f0325997b",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 2,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "not_revalidated",
+      "scope": "native_simulation",
+      "note": "Existing simulation videos remain available. This repair does not claim new drop/contact, friction, stability or joint-actuation tests."
     }
   }
 }

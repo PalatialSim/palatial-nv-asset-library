@@ -1,48 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 2,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.06499999761581421,
-        0.19999998807907104,
-        0.06499999761581421
-      ],
       "min": [
         -0.06499999761581421,
-        0.0,
-        -0.06499999761581421
+        -0.06499999761581421,
+        0.0
+      ],
+      "max": [
+        0.06499999761581421,
+        0.06499999761581421,
+        0.19999998807907104
       ],
       "size": [
         0.12999999523162842,
-        0.19999998807907104,
-        0.12999999523162842
-      ]
+        0.12999999523162842,
+        0.19999998807907104
+      ],
+      "units": "m"
     },
     "name": "canister_body",
-    "total_mass": 1.019999973475933
+    "total_mass": 1.019999973475933,
+    "object_type": "rigid_bodies",
+    "bounds_frame": "USD stage world axes, metres, default authored pose",
+    "description": "3D model of flour canister for robotics simulation research. The delivered USD contains 2 rigid bodies and no enabled moving joint constraints."
   },
   "asset_id": "D00302",
   "parts": [
     {
       "bounds": {
-        "center": [
-          0.0,
-          0.08349999785423279,
-          -0.0
+        "min": [
+          -0.06499999761581421,
+          -0.06499999761581421,
+          0.0
         ],
         "max": [
           0.06499999761581421,
-          0.16699999570846558,
-          0.06499999761581421
+          0.06499999761581421,
+          0.16699999570846558
         ],
-        "min": [
-          -0.06499999761581421,
-          0.0,
-          -0.06499999761581421
-        ]
+        "size": [
+          0.12999999523162842,
+          0.12999999523162842,
+          0.16699999570846558
+        ],
+        "units": "m"
       },
       "collision": {},
       "id": "part_00",
@@ -52,25 +60,28 @@
       "source": {
         "object_name": "/World/canister_body",
         "part_name": "canister_body"
-      }
+      },
+      "source_prim_path": "/World/canister_body",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     },
     {
       "bounds": {
-        "center": [
-          0.0,
-          0.17999999225139618,
-          -0.0
+        "min": [
+          -0.05649999901652336,
+          -0.05649999901652336,
+          0.1599999964237213
         ],
         "max": [
           0.05649999901652336,
-          0.19999998807907104,
-          0.05649999901652336
+          0.05649999901652336,
+          0.19999998807907104
         ],
-        "min": [
-          -0.05649999901652336,
-          0.1599999964237213,
-          -0.05649999901652336
-        ]
+        "size": [
+          0.11299999803304672,
+          0.11299999803304672,
+          0.03999999165534973
+        ],
+        "units": "m"
       },
       "collision": {},
       "id": "part_01",
@@ -80,10 +91,27 @@
       "source": {
         "object_name": "/World/wooden_lid",
         "part_name": "wooden_lid"
-      }
+      },
+      "source_prim_path": "/World/wooden_lid",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-08T04:48:10.976448+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/metadata-repair-20261008.json",
+      "original_physics_sha256": "49734c0260d1e091f848e3deff660898eb2c61345d2d64b0af85601102e66737"
+    },
+    "usd_path": "batch38/D00302_Flour_Canister/D00302_Flour_Canister_simready/D00302_Flour_Canister.usd",
+    "usd_sha256": "7bae347b10f369fa06cb8b760b1be225124ba9396f1e3002bad81351a47d6dd1",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {},
   "units": {
@@ -100,24 +128,57 @@
       "up_axis": "Z",
       "bounds_m": [
         0.12999999523162842,
-        0.19999998807907104,
-        0.12999999523162842
-      ]
+        0.12999999523162842,
+        0.19999998807907104
+      ],
+      "checked_at": "2026-10-08T04:48:10.976448+00:00",
+      "evidence": "reports/metadata-repair-20261008.json",
+      "usd_sha256": "7bae347b10f369fa06cb8b760b1be225124ba9396f1e3002bad81351a47d6dd1",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 1.019999973475933
+      "value_kg": 1.019999973475933,
+      "checked_at": "2026-10-08T04:48:10.976448+00:00",
+      "evidence": "reports/metadata-repair-20261008.json",
+      "usd_sha256": "7bae347b10f369fa06cb8b760b1be225124ba9396f1e3002bad81351a47d6dd1",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 1.019999973475933,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 2
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 256,
+      "checked_at": "2026-10-08T04:48:10.976448+00:00",
+      "evidence": "reports/metadata-repair-20261008.json",
+      "usd_sha256": "7bae347b10f369fa06cb8b760b1be225124ba9396f1e3002bad81351a47d6dd1",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 256,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-08T04:48:10.976448+00:00",
+      "evidence": "reports/metadata-repair-20261008.json",
+      "usd_sha256": "7bae347b10f369fa06cb8b760b1be225124ba9396f1e3002bad81351a47d6dd1",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "not_revalidated",
+      "scope": "native_simulation",
+      "note": "Existing simulation videos remain available. This repair does not claim new drop/contact, friction, stability or joint-actuation tests."
     }
   }
 }

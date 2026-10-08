@@ -1,0 +1,23 @@
+name: Asset metadata audit
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  metadata:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          filter: blob:none
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /gallery/assets.json
+            /batch*/**/physics*.json
+            /tools/*.py
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: python tools/audit_metadata.py .

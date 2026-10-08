@@ -20,8 +20,11 @@
         0.18969999998807907,
         0.03359999880194664,
         0.14233371590680224
-      ]
-    }
+      ],
+      "units": "m"
+    },
+    "bounds_frame": "USD stage world axes, metres, default authored pose",
+    "description": "3D model of cherry pitter for robotics simulation research. The delivered USD contains 3 rigid bodies and 2 enabled moving joint constraints."
   },
   "parts": [
     {
@@ -49,7 +52,27 @@
           "convexHull"
         ]
       },
-      "reasoning": null
+      "reasoning": null,
+      "source_prim_path": "/World/CherryOlivePitter/UpperLever",
+      "bounds": {
+        "min": [
+          -0.0935673403746652,
+          -0.01140000019222498,
+          0.05471980841370799
+        ],
+        "max": [
+          0.07141239149763137,
+          0.01140000019222498,
+          0.14233371590680224
+        ],
+        "size": [
+          0.1649797318722966,
+          0.02280000038444996,
+          0.08761390749309425
+        ],
+        "units": "m"
+      },
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     },
     {
       "id": "StorageLatch",
@@ -76,7 +99,27 @@
           "convexHull"
         ]
       },
-      "reasoning": null
+      "reasoning": null,
+      "source_prim_path": "/World/CherryOlivePitter/StorageLatch",
+      "bounds": {
+        "min": [
+          -0.10570000112056732,
+          -0.0044999998062849045,
+          0.05420000106096268
+        ],
+        "max": [
+          -0.0851999968290329,
+          0.0044999998062849045,
+          0.06400000303983688
+        ],
+        "size": [
+          0.020500004291534424,
+          0.008999999612569809,
+          0.009800001978874207
+        ],
+        "units": "m"
+      },
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     },
     {
       "id": "LowerBody",
@@ -103,7 +146,27 @@
           "convexHull"
         ]
       },
-      "reasoning": null
+      "reasoning": null,
+      "source_prim_path": "/World/CherryOlivePitter/LowerBody",
+      "bounds": {
+        "min": [
+          -0.09049999713897705,
+          -0.01679999940097332,
+          0.0
+        ],
+        "max": [
+          0.08399999886751175,
+          0.01679999940097332,
+          0.07800000160932541
+        ],
+        "size": [
+          0.1744999960064888,
+          0.03359999880194664,
+          0.07800000160932541
+        ],
+        "units": "m"
+      },
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
   "articulation": {
@@ -121,7 +184,52 @@
           "/World/CherryOlivePitter/UpperLever"
         ],
         "lower_limit": -20.0,
-        "upper_limit": 0.0
+        "upper_limit": 0.0,
+        "usd_type": "PhysicsRevoluteJoint",
+        "body0_targets": [
+          "/World/CherryOlivePitter/LowerBody"
+        ],
+        "body1_targets": [
+          "/World/CherryOlivePitter/UpperLever"
+        ],
+        "authored_usd": {
+          "id": "SqueezeHinge",
+          "source_prim_path": "/World/CherryOlivePitter/Joints/SqueezeHinge",
+          "joint_type": "PhysicsRevoluteJoint",
+          "body0": [
+            "/World/CherryOlivePitter/LowerBody"
+          ],
+          "body1": [
+            "/World/CherryOlivePitter/UpperLever"
+          ],
+          "joint_enabled": true,
+          "axis": "Y",
+          "lowerLimit": -20.0,
+          "upperLimit": 0.0,
+          "localPos0": [
+            -0.07400000095367432,
+            0.0,
+            0.06300000101327896
+          ],
+          "localPos1": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "localRot0": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "localRot1": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "static_frames": []
+        }
       },
       {
         "id": "StorageLatchHinge",
@@ -135,9 +243,57 @@
           "/World/CherryOlivePitter/StorageLatch"
         ],
         "lower_limit": 0.0,
-        "upper_limit": 90.0
+        "upper_limit": 90.0,
+        "usd_type": "PhysicsRevoluteJoint",
+        "body0_targets": [
+          "/World/CherryOlivePitter/LowerBody"
+        ],
+        "body1_targets": [
+          "/World/CherryOlivePitter/StorageLatch"
+        ],
+        "authored_usd": {
+          "id": "StorageLatchHinge",
+          "source_prim_path": "/World/CherryOlivePitter/Joints/StorageLatchHinge",
+          "joint_type": "PhysicsRevoluteJoint",
+          "body0": [
+            "/World/CherryOlivePitter/LowerBody"
+          ],
+          "body1": [
+            "/World/CherryOlivePitter/StorageLatch"
+          ],
+          "joint_enabled": true,
+          "axis": "Y",
+          "lowerLimit": 0.0,
+          "upperLimit": 90.0,
+          "localPos0": [
+            -0.08799999952316284,
+            0.0,
+            0.05700000002980232
+          ],
+          "localPos1": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "localRot0": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "localRot1": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "static_frames": []
+        }
       }
-    ]
+    ],
+    "moving_joints": 2,
+    "rigid_body_count": 3,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "units": {
     "length": "m",
@@ -154,40 +310,77 @@
     "source_meters_per_unit": 1.0,
     "source_kilograms_per_unit": 1.0,
     "source_up_axis": "Z",
-    "bounds_method": "transformed_visual_mesh_points",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
     "reasoning_available": false,
-    "verification_note": "Authored USD properties and transformed visual bounds only. Real-world dimensions, mass, and runtime stability are not independently verified by this extraction."
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification.",
+    "metadata_repair": {
+      "date": "2026-10-08T04:48:10.976448+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/metadata-repair-20261008.json",
+      "original_physics_sha256": "ee126f108e8938dad6431cbc42ac6e6b98a2369729f385ecf0d630c31824015c"
+    },
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes"
   },
   "validation": {
-    "overall": "partial",
+    "overall": "verified",
     "scale": {
-      "status": "recorded",
-      "confidence": "medium",
+      "status": "verified",
+      "confidence": "high",
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
         0.18969999998807907,
         0.03359999880194664,
         0.14233371590680224
-      ]
+      ],
+      "checked_at": "2026-10-08T04:48:10.976448+00:00",
+      "evidence": "reports/metadata-repair-20261008.json",
+      "usd_sha256": "6c9087d6313559d4c5636589d7052615c9f9805180dac2a8f4e07b6d103d2db3",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
-      "status": "recorded",
-      "confidence": "medium",
-      "value_kg": 0.07500000222353265
+      "status": "verified",
+      "confidence": "high",
+      "value_kg": 0.07500000222353265,
+      "checked_at": "2026-10-08T04:48:10.976448+00:00",
+      "evidence": "reports/metadata-repair-20261008.json",
+      "usd_sha256": "6c9087d6313559d4c5636589d7052615c9f9805180dac2a8f4e07b6d103d2db3",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.07500000222353265,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
+      "status": "verified",
+      "confidence": "high",
       "shape_count": 354,
       "approximations": [
         "convexHull"
-      ]
+      ],
+      "checked_at": "2026-10-08T04:48:10.976448+00:00",
+      "evidence": "reports/metadata-repair-20261008.json",
+      "usd_sha256": "6c9087d6313559d4c5636589d7052615c9f9805180dac2a8f4e07b6d103d2db3",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 354,
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
-      "status": "recorded",
-      "confidence": "medium",
-      "moving_joints": 2
+      "status": "verified",
+      "confidence": "high",
+      "moving_joints": 2,
+      "checked_at": "2026-10-08T04:48:10.976448+00:00",
+      "evidence": "reports/metadata-repair-20261008.json",
+      "usd_sha256": "6c9087d6313559d4c5636589d7052615c9f9805180dac2a8f4e07b6d103d2db3",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 2,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "not_revalidated",
+      "scope": "native_simulation",
+      "note": "Existing simulation videos remain available. This repair does not claim new drop/contact, friction, stability or joint-actuation tests."
     }
   }
 }

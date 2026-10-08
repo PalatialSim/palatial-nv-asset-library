@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.14076972007751465,
-        0.3840261995792389,
-        0.1409749686717987
-      ],
       "min": [
-        -0.1407332867383957,
-        -5.481290281750262e-05,
-        -0.14139702916145325
+        -0.1418820023536682,
+        -0.14204899966716766,
+        -4.8000001697801054e-05
+      ],
+      "max": [
+        0.14191600680351257,
+        0.14235499501228333,
+        0.38438600301742554
       ],
       "size": [
-        0.28150300681591034,
-        0.3840810124820564,
-        0.28237199783325195
-      ]
+        0.2837980091571808,
+        0.284403994679451,
+        0.38443400301912334
+      ],
+      "units": "m"
     },
     "description": "A woven bamboo basket with a cylindrical base and a prominent arched handle. The structure consists of intertwined light brown natural wood fibers.",
     "name": "D00006 Bamboo Basket",
     "object_type": "rigid_bodies",
-    "total_mass": 0.8
+    "total_mass": 0.800000011920929,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00006",
   "parts": [
     {
       "bounds": {
-        "center": [
-          -3.0771195929312394e-05,
-          0.10880979294816674,
-          -0.00011723110278466303
+        "min": [
+          -0.1418820023536682,
+          -0.14204899966716766,
+          -4.8000001697801054e-05
         ],
         "max": [
-          0.14076972007751465,
-          0.3840261995792389,
-          0.1409749686717987
+          0.14191600680351257,
+          0.14235499501228333,
+          0.38438600301742554
         ],
-        "min": [
-          -0.1407332867383957,
-          -5.481290281750262e-05,
-          -0.14139702916145325
-        ]
+        "size": [
+          0.2837980091571808,
+          0.284403994679451,
+          0.38443400301912334
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         -2.842863132217554e-05,
@@ -59,7 +65,7 @@
         0.009388489114857953,
         0.009837807941003137
       ],
-      "mass": 0.8,
+      "mass": 0.800000011920929,
       "material": "wood",
       "name": "D00006 Bamboo Basket",
       "physics_type": "rigid",
@@ -67,40 +73,96 @@
         "object_name": "D00006 Bamboo Basket",
         "part_name": "D00006 Bamboo Basket"
       },
-      "volume": 0.01642077234085267
+      "volume": 0.01642077234085267,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-08T04:48:10.976448+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/metadata-repair-20261008.json",
+      "original_physics_sha256": "8266f767e602ba99690ab145f64c5445fbf98bad778fcfbf3c7f8c50327d31de"
+    },
+    "usd_path": "batch10/D00006 Bamboo Basket/IsaacSim_assets_69f80eaed09344200f05945b/IsaacSim_asset_69f80eaed09344200f05945b.usd",
+    "usd_sha256": "d50baf4488134eeaa6ed4000b308bd5118be4a35518428bed218858c3775071a",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
   },
   "units": {
     "length": "m",
-    "mass": "kg"
+    "mass": "kg",
+    "up_axis": "Z"
   },
   "validation": {
-    "overall": "partial",
+    "overall": "verified",
     "scale": {
-      "status": "not_checked",
-      "confidence": "low",
+      "status": "verified",
+      "confidence": "high",
       "units": "m",
-      "up_axis": null
+      "up_axis": "Z",
+      "checked_at": "2026-10-08T04:48:10.976448+00:00",
+      "evidence": "reports/metadata-repair-20261008.json",
+      "usd_sha256": "d50baf4488134eeaa6ed4000b308bd5118be4a35518428bed218858c3775071a",
+      "scope": "authored_usd_dimensions",
+      "bounds_m": [
+        0.2837980091571808,
+        0.284403994679451,
+        0.38443400301912334
+      ],
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.8
+      "value_kg": 0.800000011920929,
+      "checked_at": "2026-10-08T04:48:10.976448+00:00",
+      "evidence": "reports/metadata-repair-20261008.json",
+      "usd_sha256": "d50baf4488134eeaa6ed4000b308bd5118be4a35518428bed218858c3775071a",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.800000011920929,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 220,
+      "checked_at": "2026-10-08T04:48:10.976448+00:00",
+      "evidence": "reports/metadata-repair-20261008.json",
+      "usd_sha256": "d50baf4488134eeaa6ed4000b308bd5118be4a35518428bed218858c3775071a",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 220,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-08T04:48:10.976448+00:00",
+      "evidence": "reports/metadata-repair-20261008.json",
+      "usd_sha256": "d50baf4488134eeaa6ed4000b308bd5118be4a35518428bed218858c3775071a",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "not_revalidated",
+      "scope": "native_simulation",
+      "note": "Existing simulation videos remain available. This repair does not claim new drop/contact, friction, stability or joint-actuation tests."
     }
   }
 }

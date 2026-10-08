@@ -1,66 +1,56 @@
 {
   "articulation": {
-    "has_joints": true,
-    "joints": [
-      {
-        "axis": [],
-        "child": "part_01",
-        "damping": 0.0,
-        "effort": 0.0,
-        "friction": 0.0,
-        "joint_rotation_local": [],
-        "joint_type": "floating",
-        "name": "joint_part_00__part_01",
-        "origin": [],
-        "parent": "part_00",
-        "rest_pose_state": "unknown",
-        "score": 0.95,
-        "stiffness": 0.0,
-        "velocity": 0.0
-      }
-    ]
+    "has_joints": false,
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 2,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.122346,
-        0.114312,
-        0.030705
-      ],
       "min": [
-        -0.093334,
-        -0.094541,
-        -4.6e-05
+        -0.09333200007677078,
+        -0.09453299641609192,
+        -9.500000305706635e-05
+      ],
+      "max": [
+        0.12229499965906143,
+        0.11428199708461761,
+        0.03069400042295456
       ],
       "size": [
-        0.21567999999999998,
-        0.208853,
-        0.030751
-      ]
+        0.21562699973583221,
+        0.20881499350070953,
+        0.030789000426011626
+      ],
+      "units": "m"
     },
     "description": "Crossed wooden spoon and spatula modeled as two rigid utensil links with no special joint behavior. Simulation assumes smooth polished hardwood contact.",
     "name": "part_00",
-    "total_mass": 0.125
+    "total_mass": 0.125,
+    "object_type": "rigid_bodies",
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00755",
   "parts": [
     {
       "bounds": {
-        "center": [
-          0.014506,
-          0.008157,
-          0.012039
+        "min": [
+          -0.09333200007677078,
+          -0.020844999700784683,
+          -9.500000305706635e-05
         ],
         "max": [
-          0.122346,
-          0.037165,
-          0.024124
+          0.12229499965906143,
+          0.03716199845075607,
+          0.024329999461770058
         ],
-        "min": [
-          -0.093334,
-          -0.020851,
-          -4.6e-05
-        ]
+        "size": [
+          0.21562699973583221,
+          0.058006998151540756,
+          0.024424999464827124
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         -0.01075530234084222,
@@ -75,7 +65,7 @@
         0.0002646676654876321,
         0.00027404132722657964
       ],
-      "mass": 0.07,
+      "mass": 0.07000000029802322,
       "material": "polished hardwood",
       "name": "part_00",
       "physics_type": "rigid",
@@ -83,25 +73,28 @@
         "object_name": "part_00",
         "part_name": "part_00"
       },
-      "volume": 6.780851366933955e-05
+      "volume": 6.780851366933955e-05,
+      "source_prim_path": "/World/textured_mesh_69f65d2e7f5104dbf26b8fcf/part_00_polished_hardwood",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     },
     {
       "bounds": {
-        "center": [
-          0.002476,
-          0.009886,
-          0.020307
+        "min": [
+          -0.02085600048303604,
+          -0.09453299641609192,
+          0.00982499960809946
         ],
         "max": [
-          0.025834,
-          0.114312,
-          0.030705
+          0.025848999619483948,
+          0.11428199708461761,
+          0.03069400042295456
         ],
-        "min": [
-          -0.020883,
-          -0.094541,
-          0.009908
-        ]
+        "size": [
+          0.04670500010251999,
+          0.20881499350070953,
+          0.0208690008148551
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         0.001863549941355694,
@@ -116,7 +109,7 @@
         0.0002174749303073735,
         0.0002205602754314137
       ],
-      "mass": 0.055,
+      "mass": 0.054999999701976776,
       "material": "polished hardwood",
       "name": "part_01",
       "physics_type": "rigid",
@@ -124,10 +117,27 @@
         "object_name": "part_01",
         "part_name": "part_01"
       },
-      "volume": 4.931909188936384e-05
+      "volume": 4.931909188936384e-05,
+      "source_prim_path": "/World/textured_mesh_69f65d2e7f5104dbf26b8fcf/part_01_polished_hardwood",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-08T04:48:10.976448+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/metadata-repair-20261008.json",
+      "original_physics_sha256": "c1d8c50d23790167a13edab3c370fab2f6a2ed9af77b4eb81b8429e902011e33"
+    },
+    "usd_path": "batch4/D00755 Spatula Wooden Spoon/IsaacSim_assets_69f65d2e7f5104dbf26b8fcf/IsaacSim_asset_69f65d2e7f5104dbf26b8fcf.usd",
+    "usd_sha256": "37d9d5585798c5df2f22de47336e4d91e0049d506056be5945008f870f35befe",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {},
   "units": {
@@ -143,25 +153,58 @@
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
-        0.21567999999999998,
-        0.208853,
-        0.030751
-      ]
+        0.21562699973583221,
+        0.20881499350070953,
+        0.030789000426011626
+      ],
+      "checked_at": "2026-10-08T04:48:10.976448+00:00",
+      "evidence": "reports/metadata-repair-20261008.json",
+      "usd_sha256": "37d9d5585798c5df2f22de47336e4d91e0049d506056be5945008f870f35befe",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.125
+      "value_kg": 0.125,
+      "checked_at": "2026-10-08T04:48:10.976448+00:00",
+      "evidence": "reports/metadata-repair-20261008.json",
+      "usd_sha256": "37d9d5585798c5df2f22de47336e4d91e0049d506056be5945008f870f35befe",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.125,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 2
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 16,
+      "checked_at": "2026-10-08T04:48:10.976448+00:00",
+      "evidence": "reports/metadata-repair-20261008.json",
+      "usd_sha256": "37d9d5585798c5df2f22de47336e4d91e0049d506056be5945008f870f35befe",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 16,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 1
+      "moving_joints": 0,
+      "checked_at": "2026-10-08T04:48:10.976448+00:00",
+      "evidence": "reports/metadata-repair-20261008.json",
+      "usd_sha256": "37d9d5585798c5df2f22de47336e4d91e0049d506056be5945008f870f35befe",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "not_revalidated",
+      "scope": "native_simulation",
+      "note": "Existing simulation videos remain available. This repair does not claim new drop/contact, friction, stability or joint-actuation tests."
     }
   }
 }

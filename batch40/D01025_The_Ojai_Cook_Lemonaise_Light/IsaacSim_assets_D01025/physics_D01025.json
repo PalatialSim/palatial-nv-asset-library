@@ -1,29 +1,86 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "description": "The Ojai Cook Lemonaise Light",
     "name": "The Ojai Cook Lemonaise Light",
     "object_type": "rigid_bodies",
-    "total_mass": 0.57
+    "total_mass": 0.5699999928474426,
+    "bounds": {
+      "min": [
+        -0.036743056029081345,
+        -0.035972222685813904,
+        0.0
+      ],
+      "max": [
+        0.036743056029081345,
+        0.035972222685813904,
+        0.12200000137090683
+      ],
+      "size": [
+        0.07348611205816269,
+        0.07194444537162781,
+        0.12200000137090683
+      ],
+      "units": "m"
+    },
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D01025",
   "parts": [
     {
       "collision": {},
       "id": "Asset",
-      "mass": 0.57,
+      "mass": 0.5699999928474426,
       "name": "The Ojai Cook Lemonaise Light",
       "physics_type": "rigid",
       "source": {
         "object_name": "Asset",
         "part_name": "The Ojai Cook Lemonaise Light"
-      }
+      },
+      "source_prim_path": "/Asset",
+      "bounds": {
+        "min": [
+          -0.036743056029081345,
+          -0.035972222685813904,
+          0.0
+        ],
+        "max": [
+          0.036743056029081345,
+          0.035972222685813904,
+          0.12200000137090683
+        ],
+        "size": [
+          0.07348611205816269,
+          0.07194444537162781,
+          0.12200000137090683
+        ],
+        "units": "m"
+      },
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-08T04:48:10.976448+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/metadata-repair-20261008.json",
+      "original_physics_sha256": "050b8b4790c6a08c4e6688ca85a21beeeb823ccedd2b7ac5bfaaa6ce7133e23a"
+    },
+    "usd_path": "batch40/D01025_The_Ojai_Cook_Lemonaise_Light/IsaacSim_assets_D01025/IsaacSim_asset_D01025.usd",
+    "usd_sha256": "910a767e1615241aa16fd296a0f6953c831b4d7676a8d447d6e4a242086c2c9f",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -34,27 +91,65 @@
     "up_axis": "Z"
   },
   "validation": {
-    "overall": "partial",
+    "overall": "verified",
     "scale": {
-      "status": "not_checked",
-      "confidence": "low",
+      "status": "verified",
+      "confidence": "high",
       "units": "m",
-      "up_axis": "Z"
+      "up_axis": "Z",
+      "checked_at": "2026-10-08T04:48:10.976448+00:00",
+      "evidence": "reports/metadata-repair-20261008.json",
+      "usd_sha256": "910a767e1615241aa16fd296a0f6953c831b4d7676a8d447d6e4a242086c2c9f",
+      "scope": "authored_usd_dimensions",
+      "bounds_m": [
+        0.07348611205816269,
+        0.07194444537162781,
+        0.12200000137090683
+      ],
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.57
+      "value_kg": 0.5699999928474426,
+      "checked_at": "2026-10-08T04:48:10.976448+00:00",
+      "evidence": "reports/metadata-repair-20261008.json",
+      "usd_sha256": "910a767e1615241aa16fd296a0f6953c831b4d7676a8d447d6e4a242086c2c9f",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.5699999928474426,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 5,
+      "checked_at": "2026-10-08T04:48:10.976448+00:00",
+      "evidence": "reports/metadata-repair-20261008.json",
+      "usd_sha256": "910a767e1615241aa16fd296a0f6953c831b4d7676a8d447d6e4a242086c2c9f",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 5,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-08T04:48:10.976448+00:00",
+      "evidence": "reports/metadata-repair-20261008.json",
+      "usd_sha256": "910a767e1615241aa16fd296a0f6953c831b4d7676a8d447d6e4a242086c2c9f",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "not_revalidated",
+      "scope": "native_simulation",
+      "note": "Existing simulation videos remain available. This repair does not claim new drop/contact, friction, stability or joint-actuation tests."
     }
   }
 }

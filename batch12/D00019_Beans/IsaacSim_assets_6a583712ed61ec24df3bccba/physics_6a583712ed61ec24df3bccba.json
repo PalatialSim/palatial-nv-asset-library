@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.0057299,
-        0.00566465,
-        0.00311625
-      ],
       "min": [
-        -0.00595797,
-        0.0,
-        -0.00336455
+        -0.005960999988019466,
+        -0.0031270000617951155,
+        4.030109570476447e-20
+      ],
+      "max": [
+        0.005733000114560127,
+        0.003375000087544322,
+        0.005663999821990728
       ],
       "size": [
-        0.01168787,
-        0.00566465,
-        0.0064808
-      ]
+        0.011694000102579594,
+        0.0065020001493394375,
+        0.005663999821990728
+      ],
+      "units": "m"
     },
     "description": "A small, dark red kidney bean with a smooth, slightly textured matte skin and a prominent white hilum.",
     "name": "generated reference 01",
     "object_type": "rigid_bodies",
-    "total_mass": 2.5e-05
+    "total_mass": 2.5499999537714757e-05,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00019",
   "parts": [
     {
       "bounds": {
-        "center": [
-          1.520184497333002e-05,
-          0.0028023769541586385,
-          -0.0001831806606201022
+        "min": [
+          -0.005960999988019466,
+          -0.0031270000617951155,
+          4.030109570476447e-20
         ],
         "max": [
-          0.0057299,
-          0.00566465,
-          0.00311625
+          0.005733000114560127,
+          0.003375000087544322,
+          0.005663999821990728
         ],
-        "min": [
-          -0.00595797,
-          0.0,
-          -0.00336455
-        ]
+        "size": [
+          0.011694000102579594,
+          0.0065020001493394375,
+          0.005663999821990728
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         3.7261201518402e-05,
@@ -59,7 +65,7 @@
         2.3660074714712735e-10,
         2.4175828280064743e-10
       ],
-      "mass": 2.55e-05,
+      "mass": 2.5499999537714757e-05,
       "material": "organic_plant_matter",
       "name": "generated reference 01",
       "physics_type": "rigid",
@@ -67,40 +73,96 @@
         "object_name": "generated reference 01",
         "part_name": "generated reference 01"
       },
-      "volume": 2.1683600154281188e-07
+      "volume": 2.1683600154281188e-07,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-08T04:48:10.976448+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/metadata-repair-20261008.json",
+      "original_physics_sha256": "13fd6b87d6039806ad7f6b0bfa84feb060c55a6fc19f5801ceb5dac8a061c2f1"
+    },
+    "usd_path": "batch12/D00019_Beans/IsaacSim_assets_6a583712ed61ec24df3bccba/IsaacSim_asset_6a583712ed61ec24df3bccba.usd",
+    "usd_sha256": "7593b3517db878fddb4c4ee4ec1c20514df880d993d6a6363d799ddfa98a0a7c",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
   },
   "units": {
     "length": "m",
-    "mass": "kg"
+    "mass": "kg",
+    "up_axis": "Z"
   },
   "validation": {
-    "overall": "partial",
+    "overall": "verified",
     "scale": {
-      "status": "not_checked",
-      "confidence": "low",
+      "status": "verified",
+      "confidence": "high",
       "units": "m",
-      "up_axis": null
+      "up_axis": "Z",
+      "checked_at": "2026-10-08T04:48:10.976448+00:00",
+      "evidence": "reports/metadata-repair-20261008.json",
+      "usd_sha256": "7593b3517db878fddb4c4ee4ec1c20514df880d993d6a6363d799ddfa98a0a7c",
+      "scope": "authored_usd_dimensions",
+      "bounds_m": [
+        0.011694000102579594,
+        0.0065020001493394375,
+        0.005663999821990728
+      ],
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 2.5e-05
+      "value_kg": 2.5499999537714757e-05,
+      "checked_at": "2026-10-08T04:48:10.976448+00:00",
+      "evidence": "reports/metadata-repair-20261008.json",
+      "usd_sha256": "7593b3517db878fddb4c4ee4ec1c20514df880d993d6a6363d799ddfa98a0a7c",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 2.5499999537714757e-05,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 3,
+      "checked_at": "2026-10-08T04:48:10.976448+00:00",
+      "evidence": "reports/metadata-repair-20261008.json",
+      "usd_sha256": "7593b3517db878fddb4c4ee4ec1c20514df880d993d6a6363d799ddfa98a0a7c",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 3,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-08T04:48:10.976448+00:00",
+      "evidence": "reports/metadata-repair-20261008.json",
+      "usd_sha256": "7593b3517db878fddb4c4ee4ec1c20514df880d993d6a6363d799ddfa98a0a7c",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "not_revalidated",
+      "scope": "native_simulation",
+      "note": "Existing simulation videos remain available. This repair does not claim new drop/contact, friction, stability or joint-actuation tests."
     }
   }
 }

@@ -21,9 +21,13 @@ python3 -m http.server 8000
 Then open <http://localhost:8000/gallery/>. Isaac Sim is not needed to view the gallery.
 
 - **Scale:** Gallery dimensions are transformed visual-mesh bounds in X × Y × Z order, in metres. Batch 41 USDs declare `metersPerUnit = 1` and Z up.
-- **Joints:** The moving-joints filter describes authored USD joints. Batch 41 has 16 assets with moving joints (40 joints total) and 20 without. A video may not exercise every joint.
+- **Joints:** The moving-joints filter identifies 90 assets with enabled authored USD joints and 923 without. Batch 41 has 16 assets with moving joints (40 joints total) and 20 without. A video may not exercise every joint.
 - **Collisions:** Collision images show authored collision geometry. Colors distinguish collision pieces.
 - **Simulation videos:** Videos show recorded test behavior, including tipping where it occurs.
+
+## Metadata release
+
+The 2026-10-08 repair standardizes 154 affected assets and fixes all reported missing fields, mass rounding and verification gaps. Verification is scoped to consistency with the delivered USD. See [release notes](RELEASE_NOTES.md), [verification policy](VERIFICATION.md) and [per-asset evidence](reports/metadata-repair-20261008.json).
 
 ## Download assets
 
@@ -58,3 +62,5 @@ Asset layouts vary; the original supplied paths are retained. `gallery/` contain
 ## License
 
 Copyright 2026 Palatial Platforms. Asset files, metadata, previews, and recordings are licensed under [CC BY 4.0](LICENSE). Software and automation are licensed under [Apache 2.0](LICENSE-CODE). See [LICENSING.md](LICENSING.md) for attribution and scope.
+
+The 2026-10-08 Drive handoff also updates 64 asset names using exact source asset IDs and the supplied final names. All matching entries are name-only changes; covers and model packages remain as delivered. The other 141 handoff entries do not match this repository by source ID. [Name repair evidence](reports/name-repair-20261008.json) records the matches.

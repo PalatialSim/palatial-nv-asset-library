@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.042913880199193954,
-        0.044606950134038925,
-        0.10678674280643463
-      ],
       "min": [
-        -0.04342611879110336,
-        -8.90496012289077e-05,
-        -0.20926426351070404
+        -0.04174400120973587,
+        -0.11062200367450714,
+        4.999999873689376e-06
+      ],
+      "max": [
+        0.04012100026011467,
+        0.20983700454235077,
+        0.04921000078320503
       ],
       "size": [
-        0.08633999899029732,
-        0.04469599973526783,
-        0.31605100631713867
-      ]
+        0.08186500146985054,
+        0.3204590082168579,
+        0.04920500078333134
+      ],
+      "units": "m"
     },
     "description": "A solid wooden kitchen ladle with a long curved handle and a deep rounded bowl. The handle features a small hanging hole near its top end.",
     "name": "D00961 Wooden Ladle",
     "object_type": "rigid_bodies",
-    "total_mass": 0.05897
+    "total_mass": 0.058970000594854355,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00961",
   "parts": [
     {
       "bounds": {
-        "center": [
-          2.4204870813519056e-05,
-          0.024628186944791658,
-          -0.005251263990383366
+        "min": [
+          -0.04174400120973587,
+          -0.11062200367450714,
+          4.999999873689376e-06
         ],
         "max": [
-          0.042913880199193954,
-          0.044606950134038925,
-          0.10678674280643463
+          0.04012100026011467,
+          0.20983700454235077,
+          0.04921000078320503
         ],
-        "min": [
-          -0.04342611879110336,
-          -8.90496012289077e-05,
-          -0.20926426351070404
-        ]
+        "size": [
+          0.08186500146985054,
+          0.3204590082168579,
+          0.04920500078333134
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         -0.00034474394761548283,
@@ -59,7 +65,7 @@
         0.0006013179914927136,
         0.0006107047294397165
       ],
-      "mass": 0.05897,
+      "mass": 0.058970000594854355,
       "material": "wood",
       "name": "D00961 Wooden Ladle",
       "physics_type": "rigid",
@@ -67,40 +73,96 @@
         "object_name": "D00961 Wooden Ladle",
         "part_name": "D00961 Wooden Ladle"
       },
-      "volume": 0.00011942345458906326
+      "volume": 0.00011942345458906326,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-08T04:48:10.976448+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/metadata-repair-20261008.json",
+      "original_physics_sha256": "2da763c120e6cafb99001d2bbcc03352ec6bbdf4503ea65ccd2878d7573323b2"
+    },
+    "usd_path": "batch10/D00961 Wooden Ladle/IsaacSim_assets_69f75e4a7f5104dbf2688948/IsaacSim_asset_69f75e4a7f5104dbf2688948.usd",
+    "usd_sha256": "452647b18698c356fd13c45712ab63d70adeada39782d55095bf18f5b4c80417",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
   },
   "units": {
     "length": "m",
-    "mass": "kg"
+    "mass": "kg",
+    "up_axis": "Z"
   },
   "validation": {
-    "overall": "partial",
+    "overall": "verified",
     "scale": {
-      "status": "not_checked",
-      "confidence": "low",
+      "status": "verified",
+      "confidence": "high",
       "units": "m",
-      "up_axis": null
+      "up_axis": "Z",
+      "checked_at": "2026-10-08T04:48:10.976448+00:00",
+      "evidence": "reports/metadata-repair-20261008.json",
+      "usd_sha256": "452647b18698c356fd13c45712ab63d70adeada39782d55095bf18f5b4c80417",
+      "scope": "authored_usd_dimensions",
+      "bounds_m": [
+        0.08186500146985054,
+        0.3204590082168579,
+        0.04920500078333134
+      ],
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.05897
+      "value_kg": 0.058970000594854355,
+      "checked_at": "2026-10-08T04:48:10.976448+00:00",
+      "evidence": "reports/metadata-repair-20261008.json",
+      "usd_sha256": "452647b18698c356fd13c45712ab63d70adeada39782d55095bf18f5b4c80417",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.058970000594854355,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 17,
+      "checked_at": "2026-10-08T04:48:10.976448+00:00",
+      "evidence": "reports/metadata-repair-20261008.json",
+      "usd_sha256": "452647b18698c356fd13c45712ab63d70adeada39782d55095bf18f5b4c80417",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 17,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-08T04:48:10.976448+00:00",
+      "evidence": "reports/metadata-repair-20261008.json",
+      "usd_sha256": "452647b18698c356fd13c45712ab63d70adeada39782d55095bf18f5b4c80417",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "not_revalidated",
+      "scope": "native_simulation",
+      "note": "Existing simulation videos remain available. This repair does not claim new drop/contact, friction, stability or joint-actuation tests."
     }
   }
 }
