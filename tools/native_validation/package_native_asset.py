@@ -57,7 +57,9 @@ async def main():
         if '.metadata' in Path(src).parts or '.thumbs' in Path(src).parts or Path(src).suffix in {'.usd','.usda','.usdc'}:
             return shutil.copy2(src,dest)
         os.link(src,dest);return dest
-    shutil.copytree(source,staging,copy_function=copy)
+    # Atomic desktop uploads can leave non-resource temporary files alongside
+    # the frozen, hash-verified inputs. They are never package content.
+    shutil.copytree(source,staging,copy_function=copy,ignore=shutil.ignore_patterns('*.upload','*.download'))
     # Official submit retains JSON evidence and removes generated HTML reports.
     for path in (staging/'.metadata').rglob('*'):
         if path.is_file() and path.suffix.lower()!='.json':path.unlink()

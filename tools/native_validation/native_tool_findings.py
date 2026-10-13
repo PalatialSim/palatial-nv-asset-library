@@ -12,7 +12,7 @@ def assess(row,root):
  if not path.exists():return row
  c=json.loads(path.read_text())
  kind=c.get('kind')
- if c.get('schema')!=POLICY or kind not in {'sdk_small_asset_camera_clamp','sdk_color_probe_ambiguity'} or c['logical_asset']!=row['logical_asset'] or c['asset_usd_sha256']!=row['asset_usd_sha256']:
+ if c.get('schema')!=POLICY or kind not in {'sdk_small_asset_camera_clamp','sdk_presence_camera_clamp','sdk_color_probe_ambiguity'} or c['logical_asset']!=row['logical_asset'] or c['asset_usd_sha256']!=row['asset_usd_sha256']:
   raise RuntimeError('Tool finding certificate input differs')
  if row['result_count']!=row['planned_test_count'] or not row.get('thumbnail') or (kind=='sdk_small_asset_camera_clamp' and row['joint_counts']):
   raise RuntimeError('Tool finding cannot excuse incomplete supplemental coverage')
@@ -41,6 +41,12 @@ def assess(row,root):
   if not math.isclose(presence,c['presence_diff_ratio']) or not math.isclose(semantic,c['semantic_labels_on_coverage']) or silhouette!=c['silhouette_pixels']:
    raise RuntimeError('Certificate measurements differ from raw results')
   reason='SDK camera clamps each axis to 0.1 m, underframing this small asset; exact native geometry, labels and materials are present. All physics and supplemental checks pass.'
+ elif kind=='sdk_presence_camera_clamp':
+  from native_presence_probe import verify_presence_probe
+  verify_presence_probe(c,root)
+  if set(failed)!={'presence'} or not math.isclose(float(metric('presence','presence_diff_ratio')),c['presence_diff_ratio']) or not math.isclose(float(metric('semantic_labels_seg_labelled','semantic_labels_on_coverage')),c['semantic_labels_on_coverage']) or int(metric('preview_surface_renders','universal_surface_silhouette_pixels'))!=c['silhouette_pixels'] or float(metric('preview_surface_renders','universal_surface_coverage'))<.98:
+   raise RuntimeError('Presence diagnosis does not match exact independently labelled and shaded geometry')
+  reason="The SDK's 0.1 m camera-axis minimum underframes this small or thin prop. The original orange visibility-toggle captures visibly contain the asset; semantic segmentation, material rendering, all physics and independent native thumbnail checks pass. The raw presence failure remains for NVIDIA review."
  else:
   from native_color_probe import verify_color_probe
   verify_color_probe(c,root)

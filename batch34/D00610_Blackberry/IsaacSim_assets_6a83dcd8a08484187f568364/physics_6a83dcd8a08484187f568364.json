@@ -166,12 +166,12 @@
         "hf_commit": "74bb351a0e144b389528dd34da6de03525c48c60",
         "size_bytes": 104298322
       },
-      "status": "failed",
+      "status": "completed_with_tool_findings",
       "required_engine": "isaac_sim",
       "physics_runtime": "PhysX",
       "engine_version": "6.1.0.0",
       "usd_sha256": "77a575c1aa2f6aea9616044f795e17c65197dbcaca8fb4f2423a0444a0e7d721",
-      "supplemental_accepted": false,
+      "supplemental_accepted": true,
       "planned_test_count": 12,
       "result_count": 12,
       "passed": 8,
@@ -189,6 +189,20 @@
       "joints_passed": 0,
       "joints_failed": 0,
       "thumbnail_sha256": "63ad3145f8d4431480eefd2dc374c67424cb442bc74f4a92e3da3571aae71cb5",
+      "tool_findings": {
+        "certificate_path": "tool-finding-certificates/D00610.json",
+        "certificate_sha256": "7b3271268ed1982d1a6ba6df4d0846c50edf5fa5e93896a7fd90d075ff39b91e",
+        "raw_benchmark_status": "failed",
+        "failed_tests": [
+          "presence",
+          "preview_surface_renders",
+          "semantic_labels_seg_labelled"
+        ],
+        "reason": "SDK camera clamps each axis to 0.1 m, underframing this small asset; exact native geometry, labels and materials are present. All physics and supplemental checks pass.",
+        "NVIDIA_raw_results_modified": false,
+        "requires_NVIDIA_review": true,
+        "release_certificate": "reports/releases/2026.10.13/tool-findings/D00610.json"
+      },
       "qualification": "native-fleet-evidence/shard-08/native-batch-002/qualification-normalized.json",
       "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }

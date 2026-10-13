@@ -166,12 +166,12 @@
         "hf_commit": "43da47c1954bb9b7d489d132c55fe573d63bf264",
         "size_bytes": 106066082
       },
-      "status": "failed",
+      "status": "completed_with_tool_findings",
       "required_engine": "isaac_sim",
       "physics_runtime": "PhysX",
       "engine_version": "6.1.0.0",
       "usd_sha256": "6bec39890882622c87cd769017412c6ec22dc9dd9ce7da2e9b4f01092c048b56",
-      "supplemental_accepted": false,
+      "supplemental_accepted": true,
       "planned_test_count": 12,
       "result_count": 12,
       "passed": 10,
@@ -187,6 +187,18 @@
       "joints_passed": 0,
       "joints_failed": 0,
       "thumbnail_sha256": "960a4e6285bedf84558375e05917a7954986c6f661682abf22bc39629393083d",
+      "tool_findings": {
+        "certificate_path": "tool-finding-certificates/D00554.json",
+        "certificate_sha256": "bb7df4b091452d3fb8f97be6cdb8db80922869ab0d1ebc7de8a6de5b25b08b68",
+        "raw_benchmark_status": "failed",
+        "failed_tests": [
+          "presence"
+        ],
+        "reason": "The SDK's 0.1 m camera-axis minimum underframes this small or thin prop. The original orange visibility-toggle captures visibly contain the asset; semantic segmentation, material rendering, all physics and independent native thumbnail checks pass. The raw presence failure remains for NVIDIA review.",
+        "NVIDIA_raw_results_modified": false,
+        "requires_NVIDIA_review": true,
+        "release_certificate": "reports/releases/2026.10.13/tool-findings/D00554.json"
+      },
       "qualification": "native-fleet-evidence/shard-07/native-batch-002/qualification-normalized.json",
       "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }

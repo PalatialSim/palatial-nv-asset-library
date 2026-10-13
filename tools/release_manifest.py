@@ -75,7 +75,7 @@ def load_current_release(root, relative='reports/current-release.json', require_
                     '/resolve/'+archive['hf_commit']+'/' in archive.get('url',''),'Durable native archive missing: '+rid)
             if review:
                 finding=native['tool_findings'];certificate=checked({'path':finding['release_certificate'],'sha256':finding['certificate_sha256']})
-                require(certificate['schema']=='palatial.native-tool-findings.v1' and certificate['kind'] in {'sdk_small_asset_camera_clamp','sdk_color_probe_ambiguity'},
+                require(certificate['schema']=='palatial.native-tool-findings.v1' and certificate['kind'] in {'sdk_small_asset_camera_clamp','sdk_presence_camera_clamp','sdk_color_probe_ambiguity'},
                         'Unsupported tool finding disposition: '+rid)
                 require(certificate['asset_usd_sha256']==asset['usd_sha256'] and certificate['logical_asset']==asset['logical_asset'],
                         'Tool finding certificate asset differs: '+rid)
@@ -91,6 +91,16 @@ def load_current_release(root, relative='reports/current-release.json', require_
                     require(0<certificate['presence_diff_ratio']<0.01 and 0<certificate['semantic_labels_on_coverage']<0.005 and
                             certificate['semantic_labels_on_coverage']/certificate['presence_diff_ratio']>=0.9 and 0<certificate['silhouette_pixels']<5000,
                             'Camera proof measurements do not support the finding: '+rid)
+                elif certificate['kind']=='sdk_presence_camera_clamp':
+                    dims=certificate['actual_visible_bounds_size_m'];m=certificate['measurements']
+                    require(set(finding['failed_tests'])=={'presence'} and len(dims)==3 and all(0<v<.1 for v in dims) and sum(v*v for v in dims)<.01,
+                            'Presence-only camera proof dimensions differ: '+rid)
+                    require(certificate['static_validation_passed'] is True and certificate['manual_native_capture_review'] is True and certificate['benchmark_config_modified'] is False and
+                            0<certificate['presence_diff_ratio']<.01 and certificate['semantic_labels_on_coverage']>=.005 and certificate['silhouette_pixels']>=5000 and certificate['preview_surface_coverage']>=.98,
+                            'Presence finding requires passed semantic and surface checks: '+rid)
+                    require(set(certificate['release_captures'])=={'visible','hidden'} and m['visible_orange_pixels']>=5000 and m['hidden_orange_pixels']<=m['visible_orange_pixels']*.01,
+                            'Presence visibility-toggle proof is incomplete: '+rid)
+                    for capture in certificate['release_captures'].values():checked(capture,False)
                 else:
                     require(set(finding['failed_tests'])=={'preview_surface_renders'} and certificate['static_validation_passed'] is True and
                             certificate['all_visible_meshes_resolve_preview_surface'] is True and certificate['manual_native_capture_review'] is True and
