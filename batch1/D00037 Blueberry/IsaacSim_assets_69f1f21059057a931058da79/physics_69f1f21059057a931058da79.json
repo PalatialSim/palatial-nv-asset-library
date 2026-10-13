@@ -178,32 +178,50 @@
     },
     "scope": "authored_usd_metadata_consistency",
     "runtime": {
-      "status": "failed",
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/6ab9c09610c69f0f05598c1c92b2b9df7af22ee3/reports/native/2026.10.13/cases/native-repairs-full-v1/native-batch-000-evidence.tar.gz",
+        "sha256": "124902536e3a7a8b278cc96efa2adde0e118ce58d1b4ac274ddee7a1476789d2",
+        "hf_commit": "6ab9c09610c69f0f05598c1c92b2b9df7af22ee3",
+        "size_bytes": 23396527
+      },
+      "status": "completed_with_tool_findings",
       "required_engine": "isaac_sim",
       "physics_runtime": "PhysX",
       "engine_version": "6.1.0.0",
       "usd_sha256": "d5621278ff11690d12b17b18fe57e0ba29b9fc3bf7689249bfda86d9aeae902e",
-      "supplemental_accepted": false,
+      "supplemental_accepted": true,
       "planned_test_count": 11,
       "result_count": 11,
-      "passed": 7,
+      "passed": 8,
       "skipped": 0,
-      "failed": 4,
+      "failed": 3,
       "issues": [
-        "palatial_black_thumbnail:fail",
         "presence:fail",
         "preview_surface_renders:fail",
-        "semantic_labels_seg_labelled:fail",
-        "verified_native_thumbnail_missing"
+        "semantic_labels_seg_labelled:fail"
       ],
       "warnings": [],
-      "completed_at": "2026-10-13T21:01:22.584738+00:00",
+      "completed_at": "2026-10-13T22:16:44.124723+00:00",
       "joint_status": "not_applicable",
       "joints_total": 0,
       "joints_passed": 0,
       "joints_failed": 0,
-      "thumbnail_sha256": null,
-      "qualification": "native-fleet-evidence/shard-00/native-batch-000/qualification-normalized.json",
+      "thumbnail_sha256": "7b3eb566bcd04322a0aadd0f3ab33aa990084abf858ed1dba79df073547f0e23",
+      "tool_findings": {
+        "certificate_path": "tool-finding-certificates/D00037.json",
+        "certificate_sha256": "154240c3bbd19db2e389133412a6e54a63ffdf6500ebf15624031fd72d2b1219",
+        "raw_benchmark_status": "failed",
+        "failed_tests": [
+          "presence",
+          "preview_surface_renders",
+          "semantic_labels_seg_labelled"
+        ],
+        "reason": "SDK camera clamps each axis to 0.1 m, underframing this small asset; exact native geometry, labels and materials are present. All physics and supplemental checks pass.",
+        "NVIDIA_raw_results_modified": false,
+        "requires_NVIDIA_review": true,
+        "release_certificate": "reports/releases/2026.10.13/tool-findings/D00037.json"
+      },
+      "qualification": "native-fleet-evidence/shard-12/native-batch-000/qualification-normalized.json",
       "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }

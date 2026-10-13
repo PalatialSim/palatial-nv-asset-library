@@ -64,11 +64,33 @@ def load_current_release(root, relative='reports/current-release.json', require_
         require(row['native_validation_status']==cat['runtime_status']==native['status'],'Native status differs: '+rid)
         require(row['package_status']==cat['package_status']==package['status'],'Package status differs: '+rid)
         if require_ready:
-            require(native['status']=='passed' and native.get('supplemental_accepted') is True,'Native acceptance missing: '+rid)
+            review=native['status']=='completed_with_tool_findings'
+            require(native['status'] in {'passed','completed_with_tool_findings'} and native.get('supplemental_accepted') is True,'Native acceptance missing: '+rid)
             require(native.get('usd_sha256')==asset['usd_sha256'],'Native receipt revision differs: '+rid)
             require(native.get('result_count',0)>0 and native.get('result_count')==native.get('planned_test_count'),
                     'Native coverage incomplete: '+rid)
-            require(native.get('failed',1)==0,'Native failures remain: '+rid)
+            archive=native.get('evidence_archive',{})
+            require(re.fullmatch('[0-9a-f]{40}',archive.get('hf_commit','')) is not None and
+                    re.fullmatch('[0-9a-f]{64}',archive.get('sha256','')) is not None and
+                    '/resolve/'+archive['hf_commit']+'/' in archive.get('url',''),'Durable native archive missing: '+rid)
+            if review:
+                finding=native['tool_findings'];certificate=checked({'path':finding['release_certificate'],'sha256':finding['certificate_sha256']})
+                require(certificate['schema']=='palatial.native-tool-findings.v1' and certificate['kind']=='sdk_small_asset_camera_clamp',
+                        'Unsupported tool finding disposition: '+rid)
+                require(certificate['asset_usd_sha256']==asset['usd_sha256'] and certificate['logical_asset']==asset['logical_asset'],
+                        'Tool finding certificate asset differs: '+rid)
+                require(finding['NVIDIA_raw_results_modified'] is False and finding['raw_benchmark_status']=='failed' and
+                        finding['requires_NVIDIA_review'] is True and native['failed']==len(finding['failed_tests'])>0,
+                        'Raw benchmark failures must remain disclosed: '+rid)
+                require(set(finding['failed_tests'])==set(certificate['raw_failed_result_sha256s']) and
+                        set(finding['failed_tests'])<= {'presence','semantic_labels_seg_labelled','preview_surface_renders'},
+                        'An asset or physics failure cannot be excused: '+rid)
+                require(all(0<v<=0.025 for v in certificate['actual_visible_bounds_size_m']) and certificate['static_validation_passed'] is True,
+                        'Small-object camera proof is incomplete: '+rid)
+                require(0<certificate['presence_diff_ratio']<0.01 and 0<certificate['semantic_labels_on_coverage']<0.005 and
+                        certificate['semantic_labels_on_coverage']/certificate['presence_diff_ratio']>=0.9 and 0<certificate['silhouette_pixels']<5000,
+                        'Camera proof measurements do not support the finding: '+rid)
+            else:require(native.get('failed',1)==0,'Native failures remain: '+rid)
             if row['moving_joints']:
                 require(native.get('joint_status')=='passed' and native.get('joints_failed',1)==0 and
                         native.get('joints_passed')==native.get('joints_total'), 'Joint acceptance incomplete: '+rid)
