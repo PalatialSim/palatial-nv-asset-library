@@ -1304,12 +1304,12 @@
         "hf_commit": "c59b7a1bc0f60905418f8c5e5dea984eeef52d1e",
         "size_bytes": 114767810
       },
-      "status": "failed",
+      "status": "completed_with_tool_findings",
       "required_engine": "isaac_sim",
       "physics_runtime": "PhysX",
       "engine_version": "6.1.0.0",
       "usd_sha256": "b9b94907a9923822400c8f8ed0446394fde7cf202184f1a61e7378e5294479d0",
-      "supplemental_accepted": false,
+      "supplemental_accepted": true,
       "planned_test_count": 14,
       "result_count": 14,
       "passed": 12,
@@ -1322,11 +1322,23 @@
         "official_relative_translation_requires_independent_anchor_check"
       ],
       "completed_at": "2026-10-13T22:36:03.291124+00:00",
-      "joint_status": "failed",
+      "joint_status": "passed",
       "joints_total": 5,
       "joints_passed": 5,
       "joints_failed": 0,
       "thumbnail_sha256": "d43dbfecda32a6893ae3be9f7460982611e3a682f35e5e51758b71a1613fb5be",
+      "tool_findings": {
+        "certificate_path": "tool-finding-certificates/D00439.json",
+        "certificate_sha256": "f88c9a8e21610bf63cd4abc600a07440b6a8581cb5b09262d4500c1c1c11dec1",
+        "raw_benchmark_status": "failed",
+        "failed_tests": [
+          "preview_surface_renders"
+        ],
+        "reason": "The SDK magenta probe classifies the unchanged source texture as uncovered material. Unmodified native baseline, weak-control and strong-control captures plus resolved surface bindings establish color ambiguity; raw failure remains for NVIDIA review. All physics and supplemental checks pass.",
+        "NVIDIA_raw_results_modified": false,
+        "requires_NVIDIA_review": true,
+        "release_certificate": "reports/releases/2026.10.13/tool-findings/D00439.json"
+      },
       "qualification": "native-fleet-evidence/shard-11/native-batch-001/qualification-normalized.json",
       "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }

@@ -69,7 +69,7 @@ The gallery identifies 90 assets with enabled authored moving joints and 923 wit
 
 ## Verification and research use
 
-The 2026-10-13 release uses NVIDIA Robotics-Prop 4.0.0 with separate single-body, multi-body and articulated checks in Isaac Sim 6.1.0.0 (PhysX). Current acceptance: **1,013 static profile passes, 355 native passes, 5 native completions with disclosed SDK findings and 250 completed SimReady packages out of 1,013 assets.** The [release manifest](reports/current-release.json) binds the catalog, physics metadata and per-asset evidence. Native passes require complete planned test coverage, unchanged USD bytes, an independently checked black-background thumbnail and, for moving joints, independent joint-constraint checks.
+The 2026-10-13 release uses NVIDIA Robotics-Prop 4.0.0 with separate single-body, multi-body and articulated checks in Isaac Sim 6.1.0.0 (PhysX). Current acceptance: **1,013 static profile passes, 433 native passes, 9 native completions with disclosed SDK findings and 281 completed SimReady packages out of 1,013 assets.** The [release manifest](reports/current-release.json) binds the catalog, physics metadata and per-asset evidence. Native passes require complete planned test coverage, unchanged USD bytes, an independently checked black-background thumbnail and, for moving joints, independent joint-constraint checks.
 
 Authored geometry dimensions, mass and collision data are checked against the USD. These properties are not independently calibrated from physical measurements. Existing simulation recordings remain available; the current release's native verdicts come from the new hash-bound test evidence. See [release notes](RELEASE_NOTES.md) and [verification policy](VERIFICATION.md).
 

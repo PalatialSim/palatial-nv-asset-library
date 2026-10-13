@@ -183,17 +183,17 @@
     "scope": "authored_usd_metadata_consistency",
     "runtime": {
       "evidence_archive": {
-        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/09602e15fbbfedd26e0b2f51394dde1dbc7287d3/reports/native/2026.10.13/shard-01/native-batch-000-evidence.tar.gz",
-        "sha256": "8c316942676ba7b3acda36f3a2a9d282d12c793567c2ae31edcf5999f1171907",
-        "hf_commit": "09602e15fbbfedd26e0b2f51394dde1dbc7287d3",
-        "size_bytes": 114170460
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/504264892a42dd74c16fad173a41dd30607dcd26/reports/native/2026.10.13/cases/native-render-review-cases-v1/native-batch-000-evidence.tar.gz",
+        "sha256": "a4fff6ddf1701322a170e9fa49402a05640b6a4dda62fb8f4b0125c3f25c8014",
+        "hf_commit": "504264892a42dd74c16fad173a41dd30607dcd26",
+        "size_bytes": 9310860
       },
-      "status": "failed",
+      "status": "completed_with_tool_findings",
       "required_engine": "isaac_sim",
       "physics_runtime": "PhysX",
       "engine_version": "6.1.0.0",
       "usd_sha256": "5aba4a477143a6ffdef9e0898ef498cbef0a63ae6f6a63b3beb957f5f41d1698",
-      "supplemental_accepted": false,
+      "supplemental_accepted": true,
       "planned_test_count": 12,
       "result_count": 12,
       "passed": 10,
@@ -203,13 +203,25 @@
         "preview_surface_renders:fail"
       ],
       "warnings": [],
-      "completed_at": "2026-10-13T20:33:41.234067+00:00",
+      "completed_at": "2026-10-13T21:06:26.188782+00:00",
       "joint_status": "not_applicable",
       "joints_total": 0,
       "joints_passed": 0,
       "joints_failed": 0,
-      "thumbnail_sha256": "2c6bb053d831c4e82f90921e45ed2b150c4d405f1ec131d1fe0df10c338df7b0",
-      "qualification": "native-fleet-evidence/shard-01/native-batch-000/qualification-normalized.json",
+      "thumbnail_sha256": "7cc2539c4219e15ea3e52469ac7879628a536baf40f3bcc6f1b3273a213adac6",
+      "tool_findings": {
+        "certificate_path": "tool-finding-certificates/D00023.json",
+        "certificate_sha256": "9f74c874db4320b8e8e9ef622191ff1e049b07767ebc127b19d4f5488d74039f",
+        "raw_benchmark_status": "failed",
+        "failed_tests": [
+          "preview_surface_renders"
+        ],
+        "reason": "The SDK magenta probe classifies the unchanged source texture as uncovered material. Unmodified native baseline, weak-control and strong-control captures plus resolved surface bindings establish color ambiguity; raw failure remains for NVIDIA review. All physics and supplemental checks pass.",
+        "NVIDIA_raw_results_modified": false,
+        "requires_NVIDIA_review": true,
+        "release_certificate": "reports/releases/2026.10.13/tool-findings/D00023.json"
+      },
+      "qualification": "native-fleet-evidence/shard-14/native-batch-000/qualification-normalized.json",
       "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
