@@ -19,10 +19,7 @@
         "drives": {
           "angular": {
             "physics:damping": 0.0010000000474974513,
-            "physics:maxForce": "+Infinity",
             "physics:stiffness": 0.0,
-            "physics:targetPosition": 0.0,
-            "physics:targetVelocity": 0.0,
             "physics:type": "force"
           }
         },
@@ -117,24 +114,16 @@
         },
         "joint_path": "/World/Joints/lock_handle_rotate",
         "motion_limits": {
-          "max": 35.0,
           "min": 0.0,
+          "max": 35.0,
           "unit": "degrees"
         },
         "type": "revolute",
         "usd_attributes": {
           "drive:angular:physics:damping": 0.0010000000474974513,
-          "drive:angular:physics:maxForce": "+Infinity",
           "drive:angular:physics:stiffness": 0.0,
-          "drive:angular:physics:targetPosition": 0.0,
-          "drive:angular:physics:targetVelocity": 0.0,
           "drive:angular:physics:type": "force",
           "physics:axis": "Z",
-          "physics:breakForce": "+Infinity",
-          "physics:breakTorque": "+Infinity",
-          "physics:collisionEnabled": false,
-          "physics:excludeFromArticulation": false,
-          "physics:jointEnabled": true,
           "physics:localPos0": [
             0.0,
             0.0,
@@ -316,9 +305,6 @@
         "usd_attributes": {
           "physics:breakForce": 3.4028234663852886e+38,
           "physics:breakTorque": 3.4028234663852886e+38,
-          "physics:collisionEnabled": false,
-          "physics:excludeFromArticulation": false,
-          "physics:jointEnabled": true,
           "physics:localPos0": [
             0.0,
             0.0,
@@ -555,16 +541,184 @@
       "original_physics_sha256": "2e8b8aacaaafe048424edde58d984b681fcfedd7e6383090cef2a8cd993c9e5f"
     },
     "usd_path": "batch36/D00657_Pressure_Cooker/IsaacSim_assets_D00657/IsaacSim_asset_D00657.usd",
-    "usd_sha256": "646ad7fa7e7a4deccbd3986aa6765356b64832713cd0517d218817c403edb446",
+    "usd_sha256": "acd7b0a1a9163b63309d978f7b208f95800d1a88fcf2d0a161c063d4f34db99c",
     "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
     "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
     "source_meters_per_unit": 1.0,
     "source_kilograms_per_unit": 1.0,
     "source_up_axis": "Z",
-    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification.",
+    "native_runtime_repairs": [
+      {
+        "case": "native-mechanism-repairs-v1",
+        "old_usd_sha256": "646ad7fa7e7a4deccbd3986aa6765356b64832713cd0517d218817c403edb446",
+        "new_usd_sha256": "acd7b0a1a9163b63309d978f7b208f95800d1a88fcf2d0a161c063d4f34db99c",
+        "changes": [
+          {
+            "kind": "explicit_articulation_solver",
+            "position_iterations": 128,
+            "velocity_iterations": 16,
+            "self_collisions": false
+          }
+        ],
+        "qualification": "native-fleet-evidence/shard-21/native-batch-000/qualification-normalized.json"
+      }
+    ]
   },
   "schema_version": "1.0",
-  "simulation": {},
+  "simulation": {
+    "authored_usd_physics_properties": [
+      {
+        "prim_path": "/World/physicsScene",
+        "authored_attributes": {
+          "physics:gravityDirection": "(0, 0, -1)",
+          "physics:gravityMagnitude": "9.8100004196167",
+          "physxScene:gpuFoundLostAggregatePairsCapacity": "10240",
+          "physxScene:gpuFoundLostPairsCapacity": "262144",
+          "physxScene:gpuTotalAggregatePairsCapacity": "10240"
+        }
+      },
+      {
+        "prim_path": "/World/pot_body",
+        "authored_attributes": {
+          "physics:mass": "2.5",
+          "physxArticulation:enabledSelfCollisions": "False",
+          "physxArticulation:solverPositionIterationCount": "128",
+          "physxArticulation:solverVelocityIterationCount": "16"
+        }
+      },
+      {
+        "prim_path": "/World/pot_body/PhysicsMaterials/pm",
+        "authored_attributes": {
+          "physics:dynamicFriction": "0.4000000059604645",
+          "physics:restitution": "0.10000000149011612",
+          "physics:staticFriction": "0.5"
+        }
+      },
+      {
+        "prim_path": "/World/pot_body/base_plate",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True"
+        }
+      },
+      {
+        "prim_path": "/World/pot_body/handle_left",
+        "authored_attributes": {
+          "physics:approximation": "convexDecomposition",
+          "physics:collisionEnabled": "True"
+        }
+      },
+      {
+        "prim_path": "/World/pot_body/handle_right",
+        "authored_attributes": {
+          "physics:approximation": "convexDecomposition",
+          "physics:collisionEnabled": "True"
+        }
+      },
+      {
+        "prim_path": "/World/pot_body/pot_body",
+        "authored_attributes": {
+          "physics:approximation": "sdf",
+          "physics:collisionEnabled": "True"
+        }
+      },
+      {
+        "prim_path": "/World/lid",
+        "authored_attributes": {
+          "physics:mass": "0.800000011920929"
+        }
+      },
+      {
+        "prim_path": "/World/lid/PhysicsMaterials/pm",
+        "authored_attributes": {
+          "physics:dynamicFriction": "0.4000000059604645",
+          "physics:restitution": "0.10000000149011612",
+          "physics:staticFriction": "0.5"
+        }
+      },
+      {
+        "prim_path": "/World/lid/lid_shell",
+        "authored_attributes": {
+          "physics:approximation": "sdf",
+          "physics:collisionEnabled": "True"
+        }
+      },
+      {
+        "prim_path": "/World/lid/lid_rim_gasket",
+        "authored_attributes": {
+          "physics:approximation": "convexDecomposition",
+          "physics:collisionEnabled": "True",
+          "physxConvexDecompositionCollision:errorPercentage": "1.0",
+          "physxConvexDecompositionCollision:shrinkWrap": "True"
+        }
+      },
+      {
+        "prim_path": "/World/lock_handle",
+        "authored_attributes": {
+          "physics:mass": "0.10000000149011612"
+        }
+      },
+      {
+        "prim_path": "/World/lock_handle/PhysicsMaterials/pm",
+        "authored_attributes": {
+          "physics:dynamicFriction": "0.4000000059604645",
+          "physics:restitution": "0.10000000149011612",
+          "physics:staticFriction": "0.5"
+        }
+      },
+      {
+        "prim_path": "/World/lock_handle/lock_handle",
+        "authored_attributes": {
+          "physics:approximation": "sdf",
+          "physics:collisionEnabled": "True"
+        }
+      },
+      {
+        "prim_path": "/World/pressure_valve",
+        "authored_attributes": {
+          "physics:mass": "0.019999999552965164"
+        }
+      },
+      {
+        "prim_path": "/World/pressure_valve/PhysicsMaterials/pm",
+        "authored_attributes": {
+          "physics:dynamicFriction": "0.4000000059604645",
+          "physics:restitution": "0.10000000149011612",
+          "physics:staticFriction": "0.5"
+        }
+      },
+      {
+        "prim_path": "/World/pressure_valve/Colliders/Collider_0",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/Joints/lock_handle_rotate",
+        "authored_attributes": {
+          "physics:axis": "Z",
+          "physics:localPos0": "(0, 0, 0.19)",
+          "physics:localPos1": "(0, 0, 0.19)",
+          "physics:localRot0": "(1, 0, 0, 0)",
+          "physics:localRot1": "(1, 0, 0, 0)",
+          "physics:lowerLimit": "0.0",
+          "physics:upperLimit": "35.0"
+        }
+      },
+      {
+        "prim_path": "/World/Joints/FixedJoint",
+        "authored_attributes": {
+          "physics:breakForce": "3.4028234663852886e+38",
+          "physics:breakTorque": "3.4028234663852886e+38",
+          "physics:localPos0": "(0, 0, 0)",
+          "physics:localPos1": "(0, 0, 0)",
+          "physics:localRot0": "(1, 0, 0, 0)",
+          "physics:localRot1": "(1, 0, 0, 0)"
+        }
+      }
+    ]
+  },
   "units": {
     "length": "m",
     "mass": "kg",
@@ -584,7 +738,7 @@
       ],
       "checked_at": "2026-10-13T19:50:31.621292+00:00",
       "evidence": "reports/releases/2026.10.13/assets.json",
-      "usd_sha256": "646ad7fa7e7a4deccbd3986aa6765356b64832713cd0517d218817c403edb446",
+      "usd_sha256": "acd7b0a1a9163b63309d978f7b208f95800d1a88fcf2d0a161c063d4f34db99c",
       "scope": "authored_usd_dimensions",
       "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
       "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
@@ -595,7 +749,7 @@
       "value_kg": 3.4200000129640102,
       "checked_at": "2026-10-13T19:50:31.621292+00:00",
       "evidence": "reports/releases/2026.10.13/assets.json",
-      "usd_sha256": "646ad7fa7e7a4deccbd3986aa6765356b64832713cd0517d218817c403edb446",
+      "usd_sha256": "acd7b0a1a9163b63309d978f7b208f95800d1a88fcf2d0a161c063d4f34db99c",
       "scope": "authored_usd_mass_consistency",
       "part_sum_kg": 3.4200000129640102,
       "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
@@ -606,7 +760,7 @@
       "shape_count": 8,
       "checked_at": "2026-10-13T19:50:31.621292+00:00",
       "evidence": "reports/releases/2026.10.13/assets.json",
-      "usd_sha256": "646ad7fa7e7a4deccbd3986aa6765356b64832713cd0517d218817c403edb446",
+      "usd_sha256": "acd7b0a1a9163b63309d978f7b208f95800d1a88fcf2d0a161c063d4f34db99c",
       "scope": "authored_usd_collision_schema",
       "enabled_shape_count": 8,
       "approximations": [
@@ -622,7 +776,7 @@
       "moving_joints": 1,
       "checked_at": "2026-10-13T19:50:31.621292+00:00",
       "evidence": "reports/releases/2026.10.13/assets.json",
-      "usd_sha256": "646ad7fa7e7a4deccbd3986aa6765356b64832713cd0517d218817c403edb446",
+      "usd_sha256": "acd7b0a1a9163b63309d978f7b208f95800d1a88fcf2d0a161c063d4f34db99c",
       "scope": "authored_usd_joint_schema",
       "joint_count": 2,
       "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
@@ -630,34 +784,31 @@
     "scope": "authored_usd_metadata_consistency",
     "runtime": {
       "evidence_archive": {
-        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/74bb351a0e144b389528dd34da6de03525c48c60/reports/native/2026.10.13/shard-08/native-batch-002-evidence.tar.gz",
-        "sha256": "4879cc2dae3a1d34923a062ac9dc9f2eb6fc098f1b0c8d2de3da6c5f94723785",
-        "hf_commit": "74bb351a0e144b389528dd34da6de03525c48c60",
-        "size_bytes": 104298322
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/0465aac046a9a16072be8691e7bb657eed643264/reports/native/2026.10.13/cases/native-mechanism-repairs-v1/native-batch-000-evidence.tar.gz",
+        "sha256": "785aa0c3f2931afc5331cda2603906cde3527579295652262bb880c33c1bfbc5",
+        "hf_commit": "0465aac046a9a16072be8691e7bb657eed643264",
+        "size_bytes": 24903433
       },
-      "status": "failed",
+      "status": "passed",
       "required_engine": "isaac_sim",
       "physics_runtime": "PhysX",
       "engine_version": "6.1.0.0",
-      "usd_sha256": "646ad7fa7e7a4deccbd3986aa6765356b64832713cd0517d218817c403edb446",
-      "supplemental_accepted": false,
+      "usd_sha256": "acd7b0a1a9163b63309d978f7b208f95800d1a88fcf2d0a161c063d4f34db99c",
+      "supplemental_accepted": true,
       "planned_test_count": 13,
       "result_count": 13,
-      "passed": 12,
+      "passed": 13,
       "skipped": 0,
-      "failed": 1,
-      "issues": [
-        "independent_joint_safety_missing_or_failed",
-        "palatial_joint_constraint_safety:fail"
-      ],
+      "failed": 0,
+      "issues": [],
       "warnings": [],
-      "completed_at": "2026-10-13T23:11:17.542315+00:00",
-      "joint_status": "failed",
+      "completed_at": "2026-10-13T23:42:01.419568+00:00",
+      "joint_status": "passed",
       "joints_total": 1,
       "joints_passed": 1,
       "joints_failed": 0,
-      "thumbnail_sha256": "2e7beae4b6c1c7ff7c38e53bd3e1b6543eb9e67bfb76c9171536eb1672c54060",
-      "qualification": "native-fleet-evidence/shard-08/native-batch-002/qualification-normalized.json",
+      "thumbnail_sha256": "66114bfef5cbc36a0232c6afdb077c801d277351bb1c0910da9795f283ef6fc1",
+      "qualification": "native-fleet-evidence/shard-21/native-batch-000/qualification-normalized.json",
       "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }

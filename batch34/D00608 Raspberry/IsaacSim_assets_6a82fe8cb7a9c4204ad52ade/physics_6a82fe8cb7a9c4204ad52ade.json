@@ -160,9 +160,50 @@
     },
     "scope": "authored_usd_metadata_consistency",
     "runtime": {
-      "status": "pending",
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/3d2c263f875319003d635d66c550e076f9357ab6/reports/native/2026.10.13/shard-10/native-batch-002-evidence.tar.gz",
+        "sha256": "1fe7298db6bafa790888478c8b334a62fd2dcc8a39909b1774bf0b2a300daaba",
+        "hf_commit": "3d2c263f875319003d635d66c550e076f9357ab6",
+        "size_bytes": 108936847
+      },
+      "status": "completed_with_tool_findings",
       "required_engine": "isaac_sim",
       "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "8e0760ee85c9af92610221a9caa460793cf4a486f6afd2a7f5f1a31faa835d98",
+      "supplemental_accepted": true,
+      "planned_test_count": 12,
+      "result_count": 12,
+      "passed": 8,
+      "skipped": 1,
+      "failed": 3,
+      "issues": [
+        "presence:fail",
+        "preview_surface_renders:fail",
+        "semantic_labels_seg_labelled:fail"
+      ],
+      "warnings": [],
+      "completed_at": "2026-10-13T23:30:24.630830+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "346748b9482eed4dd1c2516281e8e39e260d611ce41b57ba47be6ffc909d16c1",
+      "tool_findings": {
+        "certificate_path": "tool-finding-certificates/D00608.json",
+        "certificate_sha256": "e37561a29a1f06462ef3ff4eebf2777e9193bf2245dedef044a9094a5f6b588d",
+        "raw_benchmark_status": "failed",
+        "failed_tests": [
+          "presence",
+          "preview_surface_renders",
+          "semantic_labels_seg_labelled"
+        ],
+        "reason": "SDK camera clamps each axis to 0.1 m, underframing this small asset; exact native geometry, labels and materials are present. All physics and supplemental checks pass.",
+        "NVIDIA_raw_results_modified": false,
+        "requires_NVIDIA_review": true,
+        "release_certificate": "reports/releases/2026.10.13/tool-findings/D00608.json"
+      },
+      "qualification": "native-fleet-evidence/shard-10/native-batch-002/qualification-normalized.json",
       "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }

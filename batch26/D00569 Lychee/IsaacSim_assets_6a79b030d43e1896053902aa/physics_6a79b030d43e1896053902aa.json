@@ -160,9 +160,46 @@
     },
     "scope": "authored_usd_metadata_consistency",
     "runtime": {
-      "status": "pending",
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/3d2c263f875319003d635d66c550e076f9357ab6/reports/native/2026.10.13/shard-10/native-batch-002-evidence.tar.gz",
+        "sha256": "1fe7298db6bafa790888478c8b334a62fd2dcc8a39909b1774bf0b2a300daaba",
+        "hf_commit": "3d2c263f875319003d635d66c550e076f9357ab6",
+        "size_bytes": 108936847
+      },
+      "status": "completed_with_tool_findings",
       "required_engine": "isaac_sim",
       "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "c4b3cfe1269919461a1dd874a2c9c8f94e23c4713b7d1b687fa3b8a678693f33",
+      "supplemental_accepted": true,
+      "planned_test_count": 12,
+      "result_count": 12,
+      "passed": 10,
+      "skipped": 1,
+      "failed": 1,
+      "issues": [
+        "presence:fail"
+      ],
+      "warnings": [],
+      "completed_at": "2026-10-13T23:30:20.985373+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "f19f614bd711addb2be1e082b55a4390c15e72747efa00e8be2402e81b129ba5",
+      "tool_findings": {
+        "certificate_path": "tool-finding-certificates/D00569.json",
+        "certificate_sha256": "4f20d21a03c824f2b4de78fa0a28602fc5ff94c5ded1d271b0c29de3a722173f",
+        "raw_benchmark_status": "failed",
+        "failed_tests": [
+          "presence"
+        ],
+        "reason": "The SDK's 0.1 m camera-axis minimum underframes this small or thin prop. The original orange visibility-toggle captures visibly contain the asset; semantic segmentation, material rendering, all physics and independent native thumbnail checks pass. The raw presence failure remains for NVIDIA review.",
+        "NVIDIA_raw_results_modified": false,
+        "requires_NVIDIA_review": true,
+        "release_certificate": "reports/releases/2026.10.13/tool-findings/D00569.json"
+      },
+      "qualification": "native-fleet-evidence/shard-10/native-batch-002/qualification-normalized.json",
       "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
