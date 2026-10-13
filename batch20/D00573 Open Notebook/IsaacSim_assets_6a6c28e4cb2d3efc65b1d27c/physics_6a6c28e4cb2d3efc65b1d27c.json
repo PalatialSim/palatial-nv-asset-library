@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.14358200132846832,
-        0.10991299897432327,
-        0.029077650979161263
-      ],
       "min": [
         -0.1474519968032837,
         -0.10841699689626694,
         0.001019650255329907
       ],
+      "max": [
+        0.14358200132846832,
+        0.10991299897432327,
+        0.029077650979161263
+      ],
       "size": [
         0.291033998131752,
         0.2183299958705902,
         0.028058000723831356
-      ]
+      ],
+      "units": "m"
     },
     "description": "D00573 Open Notebook",
     "name": "D00573 Open Notebook",
     "object_type": "rigid_bodies",
-    "total_mass": 0.75
+    "total_mass": 0.75,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00573",
   "parts": [
     {
       "bounds": {
-        "center": [
-          -0.0019349977374076843,
-          0.0007480010390281677,
-          0.015048650617245585
+        "min": [
+          -0.1474519968032837,
+          -0.10841699689626694,
+          0.001019650255329907
         ],
         "max": [
           0.14358200132846832,
           0.10991299897432327,
           0.029077650979161263
         ],
-        "min": [
-          -0.1474519968032837,
-          -0.10841699689626694,
-          0.001019650255329907
-        ]
+        "size": [
+          0.291033998131752,
+          0.2183299958705902,
+          0.028058000723831356
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         -0.0015942652244120836,
@@ -67,10 +73,27 @@
         "object_name": "D00573 Open Notebook",
         "part_name": "D00573 Open Notebook"
       },
-      "volume": 0.0009375
+      "volume": 0.0009375,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "66e5588e9415f74cce6261c2ec93aded0a3032f0aaaff2784351c4bdff10cbfa"
+    },
+    "usd_path": "batch20/D00573 Open Notebook/IsaacSim_assets_6a6c28e4cb2d3efc65b1d27c/IsaacSim_asset_6a6c28e4cb2d3efc65b1d27c.usd",
+    "usd_sha256": "f7a341511ce68f1d81dc4cff0e31b5080a1754a6e82b91d5ffc626ba3646e750",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -91,22 +114,56 @@
         0.291033998131752,
         0.2183299958705902,
         0.028058000723831356
-      ]
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "f7a341511ce68f1d81dc4cff0e31b5080a1754a6e82b91d5ffc626ba3646e750",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.75
+      "value_kg": 0.75,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "f7a341511ce68f1d81dc4cff0e31b5080a1754a6e82b91d5ffc626ba3646e750",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.75,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 12,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "f7a341511ce68f1d81dc4cff0e31b5080a1754a6e82b91d5ffc626ba3646e750",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 12,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "f7a341511ce68f1d81dc4cff0e31b5080a1754a6e82b91d5ffc626ba3646e750",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

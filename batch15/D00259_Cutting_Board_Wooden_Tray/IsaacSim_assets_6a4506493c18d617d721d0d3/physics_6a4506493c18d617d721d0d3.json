@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.20925915,
-        0.0258596,
-        0.14906446
-      ],
       "min": [
-        -0.1905271,
-        0.0,
-        -0.15074048
+        -0.19051900506019592,
+        -0.14926500618457794,
+        -1.2000000424450263e-05
+      ],
+      "max": [
+        0.20925100147724152,
+        0.15094099938869476,
+        0.025870999321341515
       ],
       "size": [
-        0.39978625,
-        0.0258596,
-        0.29980494
-      ]
+        0.39977000653743744,
+        0.3002060055732727,
+        0.025882999321765965
+      ],
+      "units": "m"
     },
     "description": "A rectangular wooden cutting board with rounded corners, featuring a perimeter juice groove and an integrated cutout handle. The board has a light-colored bamboo or hardwood grain finish.",
     "name": "generated reference 01",
     "object_type": "rigid_bodies",
-    "total_mass": 1.68
+    "total_mass": 1.6799999475479126,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00259",
   "parts": [
     {
       "bounds": {
-        "center": [
-          0.00909705401786372,
-          0.012943783415739112,
-          -0.0008423837107861302
+        "min": [
+          -0.19051900506019592,
+          -0.14926500618457794,
+          -1.2000000424450263e-05
         ],
         "max": [
-          0.20925915,
-          0.0258596,
-          0.14906446
+          0.20925100147724152,
+          0.15094099938869476,
+          0.025870999321341515
         ],
-        "min": [
-          -0.1905271,
-          0.0,
-          -0.15074048
-        ]
+        "size": [
+          0.39977000653743744,
+          0.3002060055732727,
+          0.025882999321765965
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         0.009312054662019297,
@@ -59,7 +65,7 @@
         0.02228533727998921,
         0.03467284967354632
       ],
-      "mass": 1.68,
+      "mass": 1.6799999475479126,
       "material": "wood",
       "name": "generated reference 01",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "generated reference 01",
         "part_name": "generated reference 01"
       },
-      "volume": 0.0030792276108449865
+      "volume": 0.0030792276108449865,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "101017c12cdf50965bcb7fda6b695f6d41d338dbd04274073544b9b036838520"
+    },
+    "usd_path": "batch15/D00259_Cutting_Board_Wooden_Tray/IsaacSim_assets_6a4506493c18d617d721d0d3/IsaacSim_asset_6a4506493c18d617d721d0d3.usd",
+    "usd_sha256": "31e4509433a51b736d42e3df7114aa263a0fd9bbdc45a30e099cbe2d086a5b93",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -88,25 +111,59 @@
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
-        0.39978625,
-        0.0258596,
-        0.29980494
-      ]
+        0.39977000653743744,
+        0.3002060055732727,
+        0.025882999321765965
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "31e4509433a51b736d42e3df7114aa263a0fd9bbdc45a30e099cbe2d086a5b93",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 1.68
+      "value_kg": 1.6799999475479126,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "31e4509433a51b736d42e3df7114aa263a0fd9bbdc45a30e099cbe2d086a5b93",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 1.6799999475479126,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 8,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "31e4509433a51b736d42e3df7114aa263a0fd9bbdc45a30e099cbe2d086a5b93",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 8,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "31e4509433a51b736d42e3df7114aa263a0fd9bbdc45a30e099cbe2d086a5b93",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

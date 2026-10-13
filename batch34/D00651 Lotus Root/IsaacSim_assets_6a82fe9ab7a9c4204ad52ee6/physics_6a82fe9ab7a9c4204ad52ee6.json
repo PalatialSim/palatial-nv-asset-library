@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.10271400213241577,
-        0.10459733940660954,
-        0.04656299948692322
-      ],
       "min": [
         -0.14040899276733398,
-        0.0003783407231594538,
-        -0.055755000561475754
+        -0.04656299948692322,
+        0.0003783407231594538
+      ],
+      "max": [
+        0.10271400213241577,
+        0.055755000561475754,
+        0.10459733940660954
       ],
       "size": [
         0.24312299489974976,
-        0.10421899868345008,
-        0.10231800004839897
-      ]
+        0.10231800004839897,
+        0.10421899868345008
+      ],
+      "units": "m"
     },
     "description": "D00651 Lotus Root",
     "name": "D00651 Lotus Root",
     "object_type": "rigid_bodies",
-    "total_mass": 2.5
+    "total_mass": 2.5,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00651",
   "parts": [
     {
       "bounds": {
-        "center": [
-          -0.018847495317459106,
-          0.052487840064884494,
-          -0.004596000537276268
+        "min": [
+          -0.14040899276733398,
+          -0.04656299948692322,
+          0.0003783407231594538
         ],
         "max": [
           0.10271400213241577,
-          0.10459733940660954,
-          0.04656299948692322
+          0.055755000561475754,
+          0.10459733940660954
         ],
-        "min": [
-          -0.14040899276733398,
-          0.0003783407231594538,
-          -0.055755000561475754
-        ]
+        "size": [
+          0.24312299489974976,
+          0.10231800004839897,
+          0.10421899868345008
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         -0.013086211867630482,
@@ -67,10 +73,27 @@
         "object_name": "D00651 Lotus Root",
         "part_name": "D00651 Lotus Root"
       },
-      "volume": 0.002380952380952381
+      "volume": 0.002380952380952381,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "ebc18764fc65d42ec88a9a829bd602c63aee04106cca8d23b095d3dc69dc580e"
+    },
+    "usd_path": "batch34/D00651 Lotus Root/IsaacSim_assets_6a82fe9ab7a9c4204ad52ee6/IsaacSim_asset_6a82fe9ab7a9c4204ad52ee6.usd",
+    "usd_sha256": "6fef9a5d42a54d008dbd4e47c7b923e12875da616f8e03bf6c9848045889709d",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -89,24 +112,58 @@
       "up_axis": "Z",
       "bounds_m": [
         0.24312299489974976,
-        0.10421899868345008,
-        0.10231800004839897
-      ]
+        0.10231800004839897,
+        0.10421899868345008
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "6fef9a5d42a54d008dbd4e47c7b923e12875da616f8e03bf6c9848045889709d",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 2.5
+      "value_kg": 2.5,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "6fef9a5d42a54d008dbd4e47c7b923e12875da616f8e03bf6c9848045889709d",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 2.5,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 4,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "6fef9a5d42a54d008dbd4e47c7b923e12875da616f8e03bf6c9848045889709d",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 4,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "6fef9a5d42a54d008dbd4e47c7b923e12875da616f8e03bf6c9848045889709d",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

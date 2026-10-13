@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.03922197222709656,
-        0.039042383432388306,
-        0.05007735267281532
-      ],
       "min": [
-        -0.038698211312294006,
-        -0.03850338235497475,
-        -2.4976743588922545e-05
+        -0.03869299963116646,
+        -0.038502998650074005,
+        6.999999641266186e-06
+      ],
+      "max": [
+        0.03922199830412865,
+        0.039044998586177826,
+        0.05010800063610077
       ],
       "size": [
-        0.07792018353939056,
-        0.07754576578736305,
-        0.050102329416404245
-      ]
+        0.0779149979352951,
+        0.07754799723625183,
+        0.0501010006364595
+      ],
+      "units": "m"
     },
     "description": "A pale cream-colored meringue cookie featuring a swirled, conical peak and a dry, textured surface with visible small pores.",
     "name": "D00508 Meringue",
     "object_type": "rigid_bodies",
-    "total_mass": 0.005
+    "total_mass": 0.004999999888241291,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00508",
   "parts": [
     {
       "bounds": {
-        "center": [
-          8.989003289172725e-05,
-          0.0006076292944158465,
-          0.017381457825572134
+        "min": [
+          -0.03869299963116646,
+          -0.038502998650074005,
+          6.999999641266186e-06
         ],
         "max": [
-          0.03922197222709656,
-          0.039042383432388306,
-          0.05007735267281532
+          0.03922199830412865,
+          0.039044998586177826,
+          0.05010800063610077
         ],
-        "min": [
-          -0.038698211312294006,
-          -0.03850338235497475,
-          -2.4976743588922545e-05
-        ]
+        "size": [
+          0.0779149979352951,
+          0.07754799723625183,
+          0.0501010006364595
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         4.47722765181606e-05,
@@ -59,7 +65,7 @@
         1.9849542860175806e-06,
         2.786155057527661e-06
       ],
-      "mass": 0.005,
+      "mass": 0.004999999888241291,
       "material": "baked_meringue",
       "name": "D00508 Meringue",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00508 Meringue",
         "part_name": "D00508 Meringue"
       },
-      "volume": 0.00012164719915394657
+      "volume": 0.00012164719915394657,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "dc89b4498b1493216cf2475768ddab46203a6915dd97ca5635e273a22ce33b71"
+    },
+    "usd_path": "batch12/D00508 Meringue/IsaacSim_assets_69f5e88c431507ff7cfc8b51/IsaacSim_asset_69f5e88c431507ff7cfc8b51.usd",
+    "usd_sha256": "528980c7fc4dd4377fdcc13d4449569164646b82b75cf522104584d1b54a8a7a",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {},
   "units": {
@@ -86,25 +109,59 @@
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
-        0.07792018353939056,
-        0.07754576578736305,
-        0.050102329416404245
-      ]
+        0.0779149979352951,
+        0.07754799723625183,
+        0.0501010006364595
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "528980c7fc4dd4377fdcc13d4449569164646b82b75cf522104584d1b54a8a7a",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.005
+      "value_kg": 0.004999999888241291,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "528980c7fc4dd4377fdcc13d4449569164646b82b75cf522104584d1b54a8a7a",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.004999999888241291,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 118,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "528980c7fc4dd4377fdcc13d4449569164646b82b75cf522104584d1b54a8a7a",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 118,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "528980c7fc4dd4377fdcc13d4449569164646b82b75cf522104584d1b54a8a7a",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

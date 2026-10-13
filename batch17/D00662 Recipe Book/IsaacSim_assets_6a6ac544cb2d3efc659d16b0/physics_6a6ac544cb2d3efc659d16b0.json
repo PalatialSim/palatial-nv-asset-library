@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.096390001475811,
-        0.12630699574947357,
-        0.04428954981267452
-      ],
       "min": [
         -0.09715499728918076,
         -0.1267309933900833,
         0.0013815508850711922
       ],
+      "max": [
+        0.096390001475811,
+        0.12630699574947357,
+        0.04428954981267452
+      ],
       "size": [
         0.19354499876499176,
         0.2530379891395569,
         0.04290799892760333
-      ]
+      ],
+      "units": "m"
     },
     "description": "D00662 Recipe Book",
     "name": "D00662 Recipe Book",
     "object_type": "rigid_bodies",
-    "total_mass": 1.2
+    "total_mass": 1.2000000476837158,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00662",
   "parts": [
     {
       "bounds": {
-        "center": [
-          -0.0003824979066848755,
-          -0.0002119988203048706,
-          0.022835550348872857
+        "min": [
+          -0.09715499728918076,
+          -0.1267309933900833,
+          0.0013815508850711922
         ],
         "max": [
           0.096390001475811,
           0.12630699574947357,
           0.04428954981267452
         ],
-        "min": [
-          -0.09715499728918076,
-          -0.1267309933900833,
-          0.0013815508850711922
-        ]
+        "size": [
+          0.19354499876499176,
+          0.2530379891395569,
+          0.04290799892760333
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         -0.0014438561629503965,
@@ -59,7 +65,7 @@
         0.0063395570032298565,
         0.009760120883584023
       ],
-      "mass": 1.2,
+      "mass": 1.2000000476837158,
       "material": "wood",
       "name": "D00662 Recipe Book",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00662 Recipe Book",
         "part_name": "D00662 Recipe Book"
       },
-      "volume": 0.0015000000596046448
+      "volume": 0.0015000000596046448,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "561a4bc7b47a3ef34f4cda33b667ee7d3b3de09467ccce66dc2c5c74f660ebae"
+    },
+    "usd_path": "batch17/D00662 Recipe Book/IsaacSim_assets_6a6ac544cb2d3efc659d16b0/IsaacSim_asset_6a6ac544cb2d3efc659d16b0.usd",
+    "usd_sha256": "f380dfe5f5fb3afea8dfe064da8f5bb9018eadd713b1311c838ddcd6b72da4d5",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -91,22 +114,56 @@
         0.19354499876499176,
         0.2530379891395569,
         0.04290799892760333
-      ]
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "f380dfe5f5fb3afea8dfe064da8f5bb9018eadd713b1311c838ddcd6b72da4d5",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 1.2
+      "value_kg": 1.2000000476837158,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "f380dfe5f5fb3afea8dfe064da8f5bb9018eadd713b1311c838ddcd6b72da4d5",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 1.2000000476837158,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 1,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "f380dfe5f5fb3afea8dfe064da8f5bb9018eadd713b1311c838ddcd6b72da4d5",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 1,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "f380dfe5f5fb3afea8dfe064da8f5bb9018eadd713b1311c838ddcd6b72da4d5",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

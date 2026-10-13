@@ -1,65 +1,88 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.098810002207756,
-        0.056744001805782,
-        0.19808723567985
-      ],
       "min": [
-        -0.078859001398087,
-        -0.056690998375416,
-        0.001062229764102
+        -0.07885900139808655,
+        -0.0566909983754158,
+        0.001062229764102085
+      ],
+      "max": [
+        0.09881000220775604,
+        0.05674400180578232,
+        0.19808723567984998
       ],
       "size": [
-        0.177669003605843,
-        0.11343500018119801,
-        0.197025005915748
-      ]
+        0.1776690036058426,
+        0.11343500018119812,
+        0.1970250059157479
+      ],
+      "units": "m"
     },
     "description": "A cylindrical transparent glass pitcher featuring a molded spout and an attached curved handle.",
     "name": "generated reference 01",
     "object_type": "rigid_bodies",
-    "total_mass": 0.619
+    "total_mass": 0.6190000176429749,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00919",
   "parts": [
     {
       "bounds": {
-        "center": [
-          -0.003383554392151,
-          6.181340906e-06,
-          0.091913598971523
+        "min": [
+          -0.07885900139808655,
+          -0.0566909983754158,
+          0.001062229764102085
         ],
         "max": [
-          0.098810002207756,
-          0.056744001805782,
-          0.19808723567985
+          0.09881000220775604,
+          0.05674400180578232,
+          0.19808723567984998
         ],
-        "min": [
-          -0.078859001398087,
-          -0.056690998375416,
-          0.001062229764102
-        ]
+        "size": [
+          0.1776690036058426,
+          0.11343500018119812,
+          0.1970250059157479
+        ],
+        "units": "m"
       },
       "collision": {},
       "density": 2500,
       "id": "part_00",
-      "mass": 0.619,
+      "mass": 0.6190000176429749,
       "material": "glass",
       "name": "generated reference 01",
       "physics_type": "rigid",
       "source": {
         "object_name": "generated reference 01",
         "part_name": "generated reference 01"
-      }
+      },
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "00a425b855d8bc75a933576bd6ce581bdf0a3b63a2a1072a19022592a155f5cc"
+    },
+    "usd_path": "batch18/D00919 Water Pitcher/IsaacSim_assets_6a685d207b2f45263f54a152/IsaacSim_asset_6a685d207b2f45263f54a152.usd",
+    "usd_sha256": "ce0f1010bb6b8e2da4065014c5710c3561da7b0b94f70b9d01362c84d5f3a27b",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -77,25 +100,59 @@
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
-        0.177669003605843,
-        0.11343500018119801,
-        0.197025005915748
-      ]
+        0.1776690036058426,
+        0.11343500018119812,
+        0.1970250059157479
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "ce0f1010bb6b8e2da4065014c5710c3561da7b0b94f70b9d01362c84d5f3a27b",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.619
+      "value_kg": 0.6190000176429749,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "ce0f1010bb6b8e2da4065014c5710c3561da7b0b94f70b9d01362c84d5f3a27b",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.6190000176429749,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 20,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "ce0f1010bb6b8e2da4065014c5710c3561da7b0b94f70b9d01362c84d5f3a27b",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 20,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "ce0f1010bb6b8e2da4065014c5710c3561da7b0b94f70b9d01362c84d5f3a27b",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

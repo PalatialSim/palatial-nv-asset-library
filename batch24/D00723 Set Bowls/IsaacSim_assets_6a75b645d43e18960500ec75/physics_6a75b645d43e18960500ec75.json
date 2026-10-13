@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.07401999831199646,
-        0.0748319998383522,
-        0.07854599505662918
-      ],
       "min": [
         -0.074522003531456,
         -0.07340700179338455,
         0.0007329998770728707
       ],
+      "max": [
+        0.07401999831199646,
+        0.0748319998383522,
+        0.07854599505662918
+      ],
       "size": [
         0.14854200184345245,
         0.14823900163173676,
         0.07781299517955631
-      ]
+      ],
+      "units": "m"
     },
     "description": "D00723 Set Bowls",
     "name": "D00723 Set Bowls",
     "object_type": "rigid_bodies",
-    "total_mass": 0.192
+    "total_mass": 0.19200000166893005,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00723",
   "parts": [
     {
       "bounds": {
-        "center": [
-          -0.00025100260972976685,
-          0.0007124990224838257,
-          0.039639497466851026
+        "min": [
+          -0.074522003531456,
+          -0.07340700179338455,
+          0.0007329998770728707
         ],
         "max": [
           0.07401999831199646,
           0.0748319998383522,
           0.07854599505662918
         ],
-        "min": [
-          -0.074522003531456,
-          -0.07340700179338455,
-          0.0007329998770728707
-        ]
+        "size": [
+          0.14854200184345245,
+          0.14823900163173676,
+          0.07781299517955631
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         -0.00018838838150259107,
@@ -59,7 +65,7 @@
         0.00039241727790795267,
         0.0005774072487838566
       ],
-      "mass": 0.192,
+      "mass": 0.19200000166893005,
       "material": "ceramic",
       "name": "D00723 Set Bowls",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00723 Set Bowls",
         "part_name": "D00723 Set Bowls"
       },
-      "volume": 8.727272803133185e-05
+      "volume": 8.727272803133185e-05,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "adb0b9be5e2dbfe977f27224a47c74127b4987af25086570d0f159f5924baf03"
+    },
+    "usd_path": "batch24/D00723 Set Bowls/IsaacSim_assets_6a75b645d43e18960500ec75/IsaacSim_asset_6a75b645d43e18960500ec75.usd",
+    "usd_sha256": "0ca470977d30393a880b70abc6daf4277cf78b5f8f8b081af524a60589048e99",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -91,22 +114,56 @@
         0.14854200184345245,
         0.14823900163173676,
         0.07781299517955631
-      ]
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "0ca470977d30393a880b70abc6daf4277cf78b5f8f8b081af524a60589048e99",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.192
+      "value_kg": 0.19200000166893005,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "0ca470977d30393a880b70abc6daf4277cf78b5f8f8b081af524a60589048e99",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.19200000166893005,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 28,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "0ca470977d30393a880b70abc6daf4277cf78b5f8f8b081af524a60589048e99",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 28,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "0ca470977d30393a880b70abc6daf4277cf78b5f8f8b081af524a60589048e99",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

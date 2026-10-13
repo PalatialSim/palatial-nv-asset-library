@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.05838010460138321,
-        0.034956734627485275,
-        0.016324883326888084
-      ],
       "min": [
-        -0.055626362562179565,
-        0.0,
-        -0.018726160749793053
+        -0.055647000670433044,
+        -0.01641100086271763,
+        -4.199999966658652e-05
+      ],
+      "max": [
+        0.058437999337911606,
+        0.018737999722361565,
+        0.034940000623464584
       ],
       "size": [
-        0.11400646716356277,
-        0.034956734627485275,
-        0.03505104407668114
-      ]
+        0.11408500000834465,
+        0.03514900058507919,
+        0.03498200062313117
+      ],
+      "units": "m"
     },
     "description": "A pale yellow rectangular block of butter with rounded edges, a glossy waxy surface, and small dents and smears. The material appears soft, fatty, and slightly slippery.",
     "name": "D00090 Butter",
     "object_type": "rigid_bodies",
-    "total_mass": 0.113
+    "total_mass": 0.11299999803304672,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00090",
   "parts": [
     {
       "bounds": {
-        "center": [
-          0.001280162885234977,
-          0.017290383175936615,
-          -0.0012382004220117422
+        "min": [
+          -0.055647000670433044,
+          -0.01641100086271763,
+          -4.199999966658652e-05
         ],
         "max": [
-          0.05838010460138321,
-          0.034956734627485275,
-          0.016324883326888084
+          0.058437999337911606,
+          0.018737999722361565,
+          0.034940000623464584
         ],
-        "min": [
-          -0.055626362562179565,
-          0.0,
-          -0.018726160749793053
-        ]
+        "size": [
+          0.11408500000834465,
+          0.03514900058507919,
+          0.03498200062313117
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         0.001324634441564563,
@@ -59,7 +65,7 @@
         0.0001292009742357604,
         0.00012948071283217297
       ],
-      "mass": 0.113,
+      "mass": 0.11299999803304672,
       "material": "wood",
       "name": "D00090 Butter",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00090 Butter",
         "part_name": "D00090 Butter"
       },
-      "volume": 0.0001331236805599228
+      "volume": 0.0001331236805599228,
+      "source_prim_path": "/World/part_00_wood",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "fd2213eb0e5857f08dc5f8dfad89136d6705f8ed2aefccdd9a972ec48fdf6f69"
+    },
+    "usd_path": "batch5/D00090 Butter/IsaacSim_assets_69f1fdc859057a931059f2ec/IsaacSim_asset_69f1fdc859057a931059f2ec.usd",
+    "usd_sha256": "a97ce960df96835f4dd2bef976f834bbf94ac1791b707232e39412095a47ea6b",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {},
   "units": {
@@ -86,25 +109,59 @@
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
-        0.11400646716356277,
-        0.034956734627485275,
-        0.03505104407668114
-      ]
+        0.11408500000834465,
+        0.03514900058507919,
+        0.03498200062313117
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "a97ce960df96835f4dd2bef976f834bbf94ac1791b707232e39412095a47ea6b",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.113
+      "value_kg": 0.11299999803304672,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "a97ce960df96835f4dd2bef976f834bbf94ac1791b707232e39412095a47ea6b",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.11299999803304672,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 1,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "a97ce960df96835f4dd2bef976f834bbf94ac1791b707232e39412095a47ea6b",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 1,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "a97ce960df96835f4dd2bef976f834bbf94ac1791b707232e39412095a47ea6b",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

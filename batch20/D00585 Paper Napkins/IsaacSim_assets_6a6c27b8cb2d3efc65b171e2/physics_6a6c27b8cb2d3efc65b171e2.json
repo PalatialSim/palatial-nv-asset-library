@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.08213599771261215,
-        0.08273299783468246,
-        0.01682285964488983
-      ],
       "min": [
         -0.08242200314998627,
         -0.0819379985332489,
         0.0005808600108139217
       ],
+      "max": [
+        0.08213599771261215,
+        0.08273299783468246,
+        0.01682285964488983
+      ],
       "size": [
         0.16455800086259842,
         0.16467099636793137,
         0.01624199963407591
-      ]
+      ],
+      "units": "m"
     },
     "description": "D00585 Paper Napkins",
     "name": "D00585 Paper Napkins",
     "object_type": "rigid_bodies",
-    "total_mass": 0.005
+    "total_mass": 0.004999999888241291,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00585",
   "parts": [
     {
       "bounds": {
-        "center": [
-          -0.0001430027186870575,
-          0.0003974996507167816,
-          0.008701859827851877
+        "min": [
+          -0.08242200314998627,
+          -0.0819379985332489,
+          0.0005808600108139217
         ],
         "max": [
           0.08213599771261215,
           0.08273299783468246,
           0.01682285964488983
         ],
-        "min": [
-          -0.08242200314998627,
-          -0.0819379985332489,
-          0.0005808600108139217
-        ]
+        "size": [
+          0.16455800086259842,
+          0.16467099636793137,
+          0.01624199963407591
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         -0.00012621750647667795,
@@ -59,7 +65,7 @@
         1.1289243047940545e-05,
         2.235728061350528e-05
       ],
-      "mass": 0.005,
+      "mass": 0.004999999888241291,
       "material": "generic",
       "name": "D00585 Paper Napkins",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00585 Paper Napkins",
         "part_name": "D00585 Paper Napkins"
       },
-      "volume": 7.142856983201844e-05
+      "volume": 7.142856983201844e-05,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "b86d031c4ae2f120003fd1d48504b1d88523e7452a8c12a0a05c4d9dd69aa279"
+    },
+    "usd_path": "batch20/D00585 Paper Napkins/IsaacSim_assets_6a6c27b8cb2d3efc65b171e2/IsaacSim_asset_6a6c27b8cb2d3efc65b171e2.usd",
+    "usd_sha256": "b60baaacd58b4413fecd2f429e50718d79f904e8febd7f4bec1174b44191e5be",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -91,22 +114,56 @@
         0.16455800086259842,
         0.16467099636793137,
         0.01624199963407591
-      ]
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "b60baaacd58b4413fecd2f429e50718d79f904e8febd7f4bec1174b44191e5be",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.005
+      "value_kg": 0.004999999888241291,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "b60baaacd58b4413fecd2f429e50718d79f904e8febd7f4bec1174b44191e5be",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.004999999888241291,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 12,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "b60baaacd58b4413fecd2f429e50718d79f904e8febd7f4bec1174b44191e5be",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 12,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "b60baaacd58b4413fecd2f429e50718d79f904e8febd7f4bec1174b44191e5be",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

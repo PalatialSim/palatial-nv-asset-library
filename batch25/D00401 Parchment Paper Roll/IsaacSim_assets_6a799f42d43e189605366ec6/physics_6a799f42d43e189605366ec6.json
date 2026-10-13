@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.036667000502347946,
-        0.14300599694252014,
-        0.07825875282287598
-      ],
       "min": [
         -0.04120799899101257,
         -0.1439570039510727,
         0.001551748951897025
       ],
+      "max": [
+        0.036667000502347946,
+        0.14300599694252014,
+        0.07825875282287598
+      ],
       "size": [
         0.07787499949336052,
         0.28696300089359283,
         0.07670700387097895
-      ]
+      ],
+      "units": "m"
     },
     "description": "D00401 Parchment Paper Roll",
     "name": "D00401 Parchment Paper Roll",
     "object_type": "rigid_bodies",
-    "total_mass": 0.2
+    "total_mass": 0.20000000298023224,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00401",
   "parts": [
     {
       "bounds": {
-        "center": [
-          -0.0022704992443323135,
-          -0.00047550350427627563,
-          0.0399052508873865
+        "min": [
+          -0.04120799899101257,
+          -0.1439570039510727,
+          0.001551748951897025
         ],
         "max": [
           0.036667000502347946,
           0.14300599694252014,
           0.07825875282287598
         ],
-        "min": [
-          -0.04120799899101257,
-          -0.1439570039510727,
-          0.001551748951897025
-        ]
+        "size": [
+          0.07787499949336052,
+          0.28696300089359283,
+          0.07670700387097895
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         -0.0026192597579210997,
@@ -59,7 +65,7 @@
         0.001398396329022944,
         0.0014040409587323666
       ],
-      "mass": 0.2,
+      "mass": 0.20000000298023224,
       "material": "foam",
       "name": "D00401 Parchment Paper Roll",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00401 Parchment Paper Roll",
         "part_name": "D00401 Parchment Paper Roll"
       },
-      "volume": 0.000588235302883036
+      "volume": 0.000588235302883036,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "c69eb474008501a25a3f125ef858e18535ee174725ef57b65ff6e55734bc84e2"
+    },
+    "usd_path": "batch25/D00401 Parchment Paper Roll/IsaacSim_assets_6a799f42d43e189605366ec6/IsaacSim_asset_6a799f42d43e189605366ec6.usd",
+    "usd_sha256": "52c19afa0f8d024a7d79ce9cb6797057881bd7f098e3ce036f7ab6b546acaa32",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -91,22 +114,56 @@
         0.07787499949336052,
         0.28696300089359283,
         0.07670700387097895
-      ]
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "52c19afa0f8d024a7d79ce9cb6797057881bd7f098e3ce036f7ab6b546acaa32",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.2
+      "value_kg": 0.20000000298023224,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "52c19afa0f8d024a7d79ce9cb6797057881bd7f098e3ce036f7ab6b546acaa32",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.20000000298023224,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 4,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "52c19afa0f8d024a7d79ce9cb6797057881bd7f098e3ce036f7ab6b546acaa32",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 4,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "52c19afa0f8d024a7d79ce9cb6797057881bd7f098e3ce036f7ab6b546acaa32",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.10079902,
-        0.04564037,
-        0.13155983
-      ],
       "min": [
-        -0.10061103,
-        0.0,
-        -0.25484545
+        -0.10061100125312805,
+        -0.1315860003232956,
+        0.0024840738624334335
+      ],
+      "max": [
+        0.10079900175333023,
+        0.25487199425697327,
+        0.048166073858737946
       ],
       "size": [
-        0.20141005,
-        0.04564037,
-        0.38640527999999996
-      ]
+        0.20141000300645828,
+        0.38645799458026886,
+        0.04568199999630451
+      ],
+      "units": "m"
     },
     "description": "A metallic frying pan with a brushed silver exterior and a dark, non-stick cooking surface. It features a long, wood-grained handle attached to the main body with two visible rivets.",
     "name": "generated reference 01",
     "object_type": "rigid_bodies",
-    "total_mass": 1.2
+    "total_mass": 1.2000000476837158,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00327",
   "parts": [
     {
       "bounds": {
-        "center": [
-          0.0001019889246386407,
-          0.014715729648026926,
-          0.008404413635839804
+        "min": [
+          -0.10061100125312805,
+          -0.1315860003232956,
+          0.0024840738624334335
         ],
         "max": [
-          0.10079902,
-          0.04564037,
-          0.13155983
+          0.10079900175333023,
+          0.25487199425697327,
+          0.048166073858737946
         ],
-        "min": [
-          -0.10061103,
-          0.0,
-          -0.25484545
-        ]
+        "size": [
+          0.20141000300645828,
+          0.38645799458026886,
+          0.04568199999630451
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         0.00010033320784579861,
@@ -59,7 +65,7 @@
         0.008010435046213581,
         0.010158359227886306
       ],
-      "mass": 1.2,
+      "mass": 1.2000000476837158,
       "material": "metal",
       "name": "generated reference 01",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "generated reference 01",
         "part_name": "generated reference 01"
       },
-      "volume": 0.0015729144008606417
+      "volume": 0.0015729144008606417,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "84fedf338307d26a70f57c1e8ae9e3a05faa705491851d2eda464eeb314d1e27"
+    },
+    "usd_path": "batch16/D00327 Frying Pan/IsaacSim_assets_6a6308de9b4d8c3788105bd7/IsaacSim_asset_6a6308de9b4d8c3788105bd7.usd",
+    "usd_sha256": "c48cb9fb0ccf7c0d848408ab3ceff8b49c30a02e9c8d26ebaa0523833557b2b6",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -88,25 +111,59 @@
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
-        0.20141005,
-        0.04564037,
-        0.38640527999999996
-      ]
+        0.20141000300645828,
+        0.38645799458026886,
+        0.04568199999630451
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "c48cb9fb0ccf7c0d848408ab3ceff8b49c30a02e9c8d26ebaa0523833557b2b6",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 1.2
+      "value_kg": 1.2000000476837158,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "c48cb9fb0ccf7c0d848408ab3ceff8b49c30a02e9c8d26ebaa0523833557b2b6",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 1.2000000476837158,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 46,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "c48cb9fb0ccf7c0d848408ab3ceff8b49c30a02e9c8d26ebaa0523833557b2b6",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 46,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "c48cb9fb0ccf7c0d848408ab3ceff8b49c30a02e9c8d26ebaa0523833557b2b6",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.03521559,
-        0.02759083,
-        0.0334905
-      ],
       "min": [
-        -0.03357037,
-        0.0,
-        -0.03503008
+        -0.03358300030231476,
+        -0.033511001616716385,
+        -3.000000106112566e-06
+      ],
+      "max": [
+        0.035227999091148376,
+        0.03505000099539757,
+        0.027594000101089478
       ],
       "size": [
-        0.06878596000000001,
-        0.02759083,
-        0.06852058
-      ]
+        0.06881099939346313,
+        0.06856100261211395,
+        0.02759700010119559
+      ],
+      "units": "m"
     },
     "description": "A torus-shaped baked pastry with a glossy, semi-translucent glaze. The exterior has a golden-brown textured surface with slight irregularities and a central hole.",
     "name": "D00281 Doughnut",
     "object_type": "rigid_bodies",
-    "total_mass": 0.06
+    "total_mass": 0.05999999865889549,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00281",
   "parts": [
     {
       "bounds": {
-        "center": [
-          0.0007524667568077284,
-          0.012957682686681677,
-          -0.0007238482877390893
+        "min": [
+          -0.03358300030231476,
+          -0.033511001616716385,
+          -3.000000106112566e-06
         ],
         "max": [
-          0.03521559,
-          0.02759083,
-          0.0334905
+          0.035227999091148376,
+          0.03505000099539757,
+          0.027594000101089478
         ],
-        "min": [
-          -0.03357037,
-          0.0,
-          -0.03503008
-        ]
+        "size": [
+          0.06881099939346313,
+          0.06856100261211395,
+          0.02759700010119559
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         0.0007249333892766465,
@@ -59,7 +65,7 @@
         1.9546948079646534e-05,
         3.232957209298535e-05
       ],
-      "mass": 0.06,
+      "mass": 0.05999999865889549,
       "material": "glazed_baked_dough",
       "name": "D00281 Doughnut",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00281 Doughnut",
         "part_name": "D00281 Doughnut"
       },
-      "volume": 9.051903358484471e-05
+      "volume": 9.051903358484471e-05,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "d5b1cb16bb4b2684fa4a27ad59027958138927e6fe7ce62d9eb142f5bb89ab3e"
+    },
+    "usd_path": "batch14/D00281 Doughnut/IsaacSim_assets_69f23ab159057a93105f4b89/IsaacSim_asset_69f23ab159057a93105f4b89.usd",
+    "usd_sha256": "995e54b43673fafae9821c29e0408e767ca4184bf368fd09aa9d84d7f78f8cc1",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -88,25 +111,59 @@
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
-        0.06878596000000001,
-        0.02759083,
-        0.06852058
-      ]
+        0.06881099939346313,
+        0.06856100261211395,
+        0.02759700010119559
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "995e54b43673fafae9821c29e0408e767ca4184bf368fd09aa9d84d7f78f8cc1",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.06
+      "value_kg": 0.05999999865889549,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "995e54b43673fafae9821c29e0408e767ca4184bf368fd09aa9d84d7f78f8cc1",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.05999999865889549,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 16,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "995e54b43673fafae9821c29e0408e767ca4184bf368fd09aa9d84d7f78f8cc1",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 16,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "995e54b43673fafae9821c29e0408e767ca4184bf368fd09aa9d84d7f78f8cc1",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

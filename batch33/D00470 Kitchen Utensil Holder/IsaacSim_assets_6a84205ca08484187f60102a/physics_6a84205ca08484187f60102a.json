@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.06335800141096115,
-        0.14454765617847443,
-        0.0631520003080368
-      ],
       "min": [
         -0.06310100108385086,
-        0.0007306598126888275,
-        -0.06332500278949738
+        -0.0631520003080368,
+        0.0007306598126888275
+      ],
+      "max": [
+        0.06335800141096115,
+        0.06332500278949738,
+        0.14454765617847443
       ],
       "size": [
         0.126459002494812,
-        0.1438169963657856,
-        0.12647700309753418
-      ]
+        0.12647700309753418,
+        0.1438169963657856
+      ],
+      "units": "m"
     },
     "description": "D00470 Kitchen Utensil Holder",
     "name": "D00470 Kitchen Utensil Holder",
     "object_type": "rigid_bodies",
-    "total_mass": 0.45
+    "total_mass": 0.44999998807907104,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00470",
   "parts": [
     {
       "bounds": {
-        "center": [
-          0.00012850016355514526,
-          0.07263915799558163,
-          -8.650124073028564e-05
+        "min": [
+          -0.06310100108385086,
+          -0.0631520003080368,
+          0.0007306598126888275
         ],
         "max": [
           0.06335800141096115,
-          0.14454765617847443,
-          0.0631520003080368
+          0.06332500278949738,
+          0.14454765617847443
         ],
-        "min": [
-          -0.06310100108385086,
-          0.0007306598126888275,
-          -0.06332500278949738
-        ]
+        "size": [
+          0.126459002494812,
+          0.12647700309753418,
+          0.1438169963657856
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         0.00020148589101154357,
@@ -59,7 +65,7 @@
         0.001556785893626511,
         0.0015788410091772676
       ],
-      "mass": 0.45,
+      "mass": 0.44999998807907104,
       "material": "ceramic_or_glass",
       "name": "D00470 Kitchen Utensil Holder",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00470 Kitchen Utensil Holder",
         "part_name": "D00470 Kitchen Utensil Holder"
       },
-      "volume": 0.00018749999503294627
+      "volume": 0.00018749999503294627,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "85237c8f059d03e75e508489991a4489ab070bdedcfd837d9406f7943025bb13"
+    },
+    "usd_path": "batch33/D00470 Kitchen Utensil Holder/IsaacSim_assets_6a84205ca08484187f60102a/IsaacSim_asset_6a84205ca08484187f60102a.usd",
+    "usd_sha256": "7e63f5e9034e54f08e7bb8ca4fa5e6cad93fff6206b7b3bf67ff55e21648cef5",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -89,24 +112,58 @@
       "up_axis": "Z",
       "bounds_m": [
         0.126459002494812,
-        0.1438169963657856,
-        0.12647700309753418
-      ]
+        0.12647700309753418,
+        0.1438169963657856
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "7e63f5e9034e54f08e7bb8ca4fa5e6cad93fff6206b7b3bf67ff55e21648cef5",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.45
+      "value_kg": 0.44999998807907104,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "7e63f5e9034e54f08e7bb8ca4fa5e6cad93fff6206b7b3bf67ff55e21648cef5",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.44999998807907104,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 21,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "7e63f5e9034e54f08e7bb8ca4fa5e6cad93fff6206b7b3bf67ff55e21648cef5",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 21,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "7e63f5e9034e54f08e7bb8ca4fa5e6cad93fff6206b7b3bf67ff55e21648cef5",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

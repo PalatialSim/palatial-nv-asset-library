@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 2,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.07850624907587189,
-        0.08688851894161015,
-        0.0782571056188317
-      ],
       "min": [
         -0.07820775073196273,
-        -1.8562612240202725e-05,
-        -0.078295894592884
+        -0.0782571056188317,
+        -1.8562612240202725e-05
+      ],
+      "max": [
+        0.07850624907587189,
+        0.078295894592884,
+        0.08688851894161015
       ],
       "size": [
         0.15671399980783463,
-        0.08690708155385035,
-        0.1565530002117157
-      ]
+        0.1565530002117157,
+        0.08690708155385035
+      ],
+      "units": "m"
     },
     "description": "Plate Butter Dish",
     "name": "part_0",
     "object_type": "rigid_bodies",
-    "total_mass": 0.4000000059604645
+    "total_mass": 0.4000000059604645,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00626",
   "parts": [
     {
       "bounds": {
-        "center": [
-          0.0012920152006230326,
-          0.046610603623344474,
-          -0.0011758739210467155
+        "min": [
+          -0.05646631174497515,
+          -0.056000428635217606,
+          0.0063326883050788055
         ],
         "max": [
           0.059050342146221214,
-          0.08688851894161015,
-          0.056000428635217606
+          0.05835217647731104,
+          0.08688851894161015
         ],
-        "min": [
-          -0.05646631174497515,
-          0.0063326883050788055,
-          -0.05835217647731104
-        ]
+        "size": [
+          0.11551665389119636,
+          0.11435260511252865,
+          0.08055583063653135
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         -8.762822835706174e-05,
@@ -65,25 +71,28 @@
       "source": {
         "object_name": "World",
         "part_name": "part_0"
-      }
+      },
+      "source_prim_path": "/World/textured_mesh_6a8bfda63febd2fb7510541e/part_0",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     },
     {
       "bounds": {
-        "center": [
-          0.00014924917195457965,
-          0.00711593732557958,
-          -1.9394487026147544e-05
+        "min": [
+          -0.07820775073196273,
+          -0.0782571056188317,
+          -1.8562612240202725e-05
         ],
         "max": [
           0.07850624907587189,
-          0.014250437263399363,
-          0.0782571056188317
+          0.078295894592884,
+          0.014250437263399363
         ],
-        "min": [
-          -0.07820775073196273,
-          -1.8562612240202725e-05,
-          -0.078295894592884
-        ]
+        "size": [
+          0.15671399980783463,
+          0.1565530002117157,
+          0.014268999875639565
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         0.00024350247986149043,
@@ -104,10 +113,27 @@
       "source": {
         "object_name": "World",
         "part_name": "part_1"
-      }
+      },
+      "source_prim_path": "/World/textured_mesh_6a8bfda63febd2fb7510541e/part_1",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "7b87bde466b832e5edf7c65293ec8460918b9f70f73b0cc9e9c1bed5d5aec11d"
+    },
+    "usd_path": "batch39/D00626_Plate_Butter_Dish/IsaacSim_assets_6a8bfda63febd2fb7510541e/IsaacSim_asset_6a8bfda63febd2fb7510541e.usd",
+    "usd_sha256": "79639750568ed251266e7b27ba4cddc0fa804fb7520bc4107abcfb5b0bf36c16",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {},
   "units": {
@@ -124,24 +150,59 @@
       "up_axis": "Z",
       "bounds_m": [
         0.15671399980783463,
-        0.08690708155385035,
-        0.1565530002117157
-      ]
+        0.1565530002117157,
+        0.08690708155385035
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "79639750568ed251266e7b27ba4cddc0fa804fb7520bc4107abcfb5b0bf36c16",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.4000000059604645
+      "value_kg": 0.4000000059604645,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "79639750568ed251266e7b27ba4cddc0fa804fb7520bc4107abcfb5b0bf36c16",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.4000000059604645,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 2
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 36,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "79639750568ed251266e7b27ba4cddc0fa804fb7520bc4107abcfb5b0bf36c16",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 36,
+      "approximations": [
+        "convexHull",
+        "sdf"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "79639750568ed251266e7b27ba4cddc0fa804fb7520bc4107abcfb5b0bf36c16",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

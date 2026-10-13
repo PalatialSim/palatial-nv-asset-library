@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.05304500088095665,
-        0.03588800132274628,
-        0.12408799678087234
-      ],
       "min": [
-        -0.03847400099039078,
-        -0.03599400073289871,
-        -3.7000001611886546e-05
+        -0.035572998225688934,
+        -0.034963998943567276,
+        -2.700000004551839e-05
+      ],
+      "max": [
+        0.03523699939250946,
+        0.03590000048279762,
+        0.13059599697589874
       ],
       "size": [
-        0.09151900187134743,
-        0.07188200205564499,
-        0.12412499678248423
-      ]
+        0.0708099976181984,
+        0.0708639994263649,
+        0.13062299697594426
+      ],
+      "units": "m"
     },
     "description": "A small polished brown wooden shaker with a rounded cylindrical body and domed perforated cap. The surface has visible wood grain and a smooth varnished finish.",
     "name": "D00841 Sugarshaker",
     "object_type": "rigid_bodies",
-    "total_mass": 0.12
+    "total_mass": 0.11999999731779099,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00841",
   "parts": [
     {
       "bounds": {
-        "center": [
-          0.0006534912184867938,
-          -6.444908432673511e-05,
-          0.0757935137575122
+        "min": [
+          -0.035572998225688934,
+          -0.034963998943567276,
+          -2.700000004551839e-05
         ],
         "max": [
-          0.05304500088095665,
-          0.03588800132274628,
-          0.12408799678087234
+          0.03523699939250946,
+          0.03590000048279762,
+          0.13059599697589874
         ],
-        "min": [
-          -0.03847400099039078,
-          -0.03599400073289871,
-          -3.7000001611886546e-05
-        ]
+        "size": [
+          0.0708099976181984,
+          0.0708639994263649,
+          0.13062299697594426
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         -0.00016384183887281542,
@@ -59,7 +65,7 @@
         0.00019634891262095258,
         0.00019651002109962045
       ],
-      "mass": 0.12,
+      "mass": 0.11999999731779099,
       "material": "polished_hardwood",
       "name": "D00841 Sugarshaker",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00841 Sugarshaker",
         "part_name": "D00841 Sugarshaker"
       },
-      "volume": 0.000490847175174592
+      "volume": 0.000490847175174592,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "0ba0d14994bd110585dd1c1333dd08c4ad47d8794a2b3405709ab651bf443010"
+    },
+    "usd_path": "batch4/D00841 Sugarshaker/IsaacSim_assets_69f68c7b7f5104dbf2966abf/IsaacSim_asset_69f68c7b7f5104dbf2966abf.usd",
+    "usd_sha256": "55f74f4111768f53c67b55483bfe895c29effca353fc7a87ec508e56404b1222",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {},
   "units": {
@@ -86,25 +109,59 @@
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
-        0.09151900187134743,
-        0.07188200205564499,
-        0.12412499678248423
-      ]
+        0.0708099976181984,
+        0.0708639994263649,
+        0.13062299697594426
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "55f74f4111768f53c67b55483bfe895c29effca353fc7a87ec508e56404b1222",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.12
+      "value_kg": 0.11999999731779099,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "55f74f4111768f53c67b55483bfe895c29effca353fc7a87ec508e56404b1222",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.11999999731779099,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 59,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "55f74f4111768f53c67b55483bfe895c29effca353fc7a87ec508e56404b1222",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 59,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "55f74f4111768f53c67b55483bfe895c29effca353fc7a87ec508e56404b1222",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.04988100007176399,
-        0.04979100078344345,
-        0.01926383003592491
-      ],
       "min": [
         -0.04947299882769585,
         -0.04958200082182884,
         0.0004578299995046109
       ],
+      "max": [
+        0.04988100007176399,
+        0.04979100078344345,
+        0.01926383003592491
+      ],
       "size": [
         0.09935399889945984,
         0.0993730016052723,
         0.0188060000364203
-      ]
+      ],
+      "units": "m"
     },
     "description": "D00146 Coaster Board",
     "name": "D00146 Coaster Board",
     "object_type": "rigid_bodies",
-    "total_mass": 0.07
+    "total_mass": 0.07000000029802322,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00146",
   "parts": [
     {
       "bounds": {
-        "center": [
-          0.00020400062203407288,
-          0.00010449998080730438,
-          0.009860830017714761
+        "min": [
+          -0.04947299882769585,
+          -0.04958200082182884,
+          0.0004578299995046109
         ],
         "max": [
           0.04988100007176399,
           0.04979100078344345,
           0.01926383003592491
         ],
-        "min": [
-          -0.04947299882769585,
-          -0.04958200082182884,
-          0.0004578299995046109
-        ]
+        "size": [
+          0.09935399889945984,
+          0.0993730016052723,
+          0.0188060000364203
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         0.00020833805319853127,
@@ -59,7 +65,7 @@
         5.712240090360865e-05,
         0.00011029401503037661
       ],
-      "mass": 0.07,
+      "mass": 0.07000000029802322,
       "material": "wood",
       "name": "D00146 Coaster Board",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00146 Coaster Board",
         "part_name": "D00146 Coaster Board"
       },
-      "volume": 0.00010000000042574747
+      "volume": 0.00010000000042574747,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "69d6be30f902e689f0dbc43567666093019c2c657ed16b7da6971aeda32baab0"
+    },
+    "usd_path": "batch19/D00146 Coaster Board/IsaacSim_assets_6a7012eccb2d3efc65dc3ab0/IsaacSim_asset_6a7012eccb2d3efc65dc3ab0.usd",
+    "usd_sha256": "f352c41696cc0a3d6dd877aac6832633d61d40929571e2b8a172f275811646c1",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -91,22 +114,56 @@
         0.09935399889945984,
         0.0993730016052723,
         0.0188060000364203
-      ]
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "f352c41696cc0a3d6dd877aac6832633d61d40929571e2b8a172f275811646c1",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.07
+      "value_kg": 0.07000000029802322,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "f352c41696cc0a3d6dd877aac6832633d61d40929571e2b8a172f275811646c1",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.07000000029802322,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 1,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "f352c41696cc0a3d6dd877aac6832633d61d40929571e2b8a172f275811646c1",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 1,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "f352c41696cc0a3d6dd877aac6832633d61d40929571e2b8a172f275811646c1",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

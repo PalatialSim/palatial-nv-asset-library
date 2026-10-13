@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.12365200370550156,
-        0.09708400070667267,
-        0.22604498267173767
-      ],
       "min": [
         -0.12388700246810913,
         -0.09687799960374832,
         0.0005789920687675476
       ],
+      "max": [
+        0.12365200370550156,
+        0.09708400070667267,
+        0.22604498267173767
+      ],
       "size": [
         0.2475390061736107,
         0.193962000310421,
         0.22546599060297012
-      ]
+      ],
+      "units": "m"
     },
     "description": "D00376 Herb Basket",
     "name": "D00376 Herb Basket",
     "object_type": "rigid_bodies",
-    "total_mass": 0.34
+    "total_mass": 0.3400000035762787,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00376",
   "parts": [
     {
       "bounds": {
-        "center": [
-          -0.00011749938130378723,
-          0.00010300055146217346,
-          0.11331198737025261
+        "min": [
+          -0.12388700246810913,
+          -0.09687799960374832,
+          0.0005789920687675476
         ],
         "max": [
           0.12365200370550156,
           0.09708400070667267,
           0.22604498267173767
         ],
-        "min": [
-          -0.12388700246810913,
-          -0.09687799960374832,
-          0.0005789920687675476
-        ]
+        "size": [
+          0.2475390061736107,
+          0.193962000310421,
+          0.22546599060297012
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         -8.311333658639342e-05,
@@ -59,7 +65,7 @@
         0.002335339318960905,
         0.002434713998809457
       ],
-      "mass": 0.34,
+      "mass": 0.3400000035762787,
       "material": "wood",
       "name": "D00376 Herb Basket",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00376 Herb Basket",
         "part_name": "D00376 Herb Basket"
       },
-      "volume": 0.0006800000071525573
+      "volume": 0.0006800000071525573,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "05cabf7baf668a05e55aa4bd429ab662b94fd918e0d12ce2ce11e02239148ee3"
+    },
+    "usd_path": "batch19/D00376 Herb Basket/IsaacSim_assets_6a704737cb2d3efc65e35cc7/IsaacSim_asset_6a704737cb2d3efc65e35cc7.usd",
+    "usd_sha256": "7b17467c32072e49fe2c9191918d16048c4b3da21b6c9b6db53a02b873739b61",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -91,22 +114,56 @@
         0.2475390061736107,
         0.193962000310421,
         0.22546599060297012
-      ]
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "7b17467c32072e49fe2c9191918d16048c4b3da21b6c9b6db53a02b873739b61",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.34
+      "value_kg": 0.3400000035762787,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "7b17467c32072e49fe2c9191918d16048c4b3da21b6c9b6db53a02b873739b61",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.3400000035762787,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 252,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "7b17467c32072e49fe2c9191918d16048c4b3da21b6c9b6db53a02b873739b61",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 252,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "7b17467c32072e49fe2c9191918d16048c4b3da21b6c9b6db53a02b873739b61",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

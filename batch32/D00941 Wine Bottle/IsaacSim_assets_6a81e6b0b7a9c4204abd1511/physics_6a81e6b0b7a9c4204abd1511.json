@@ -6,52 +6,103 @@
         "body0": "/World/textured_mesh_6a81e6b0b7a9c4204abd1511/part_00",
         "body1": "/World/textured_mesh_6a81e6b0b7a9c4204abd1511/part_01",
         "joint_path": "/World/textured_mesh_6a81e6b0b7a9c4204abd1511/Joints/joint_bottle_body__screw_cap",
-        "type": "fixed"
+        "type": "fixed",
+        "id": "joint_bottle_body__screw_cap",
+        "path": "/World/textured_mesh_6a81e6b0b7a9c4204abd1511/Joints/joint_bottle_body__screw_cap",
+        "usd_type": "PhysicsFixedJoint",
+        "enabled": true,
+        "body0_targets": [
+          "/World/textured_mesh_6a81e6b0b7a9c4204abd1511/part_00"
+        ],
+        "body1_targets": [
+          "/World/textured_mesh_6a81e6b0b7a9c4204abd1511/part_01"
+        ],
+        "authored_usd": {
+          "id": "joint_bottle_body__screw_cap",
+          "source_prim_path": "/World/textured_mesh_6a81e6b0b7a9c4204abd1511/Joints/joint_bottle_body__screw_cap",
+          "joint_type": "PhysicsFixedJoint",
+          "body0": [
+            "/World/textured_mesh_6a81e6b0b7a9c4204abd1511/part_00"
+          ],
+          "body1": [
+            "/World/textured_mesh_6a81e6b0b7a9c4204abd1511/part_01"
+          ],
+          "joint_enabled": true,
+          "localPos0": [
+            0.0,
+            0.0,
+            0.0012129545211791992
+          ],
+          "localPos1": [
+            0.0,
+            0.0,
+            0.0012129545211791992
+          ],
+          "localRot0": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "localRot1": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "static_frames": []
+        }
       }
-    ]
+    ],
+    "moving_joints": 0,
+    "rigid_body_count": 2,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.038134001195430756,
-        0.29518696665763855,
-        0.03802400082349777
-      ],
       "min": [
         -0.03825199976563454,
-        0.0012329545570537448,
-        -0.038270000368356705
+        -0.03802400082349777,
+        0.0012329545570537448
+      ],
+      "max": [
+        0.038134001195430756,
+        0.038270000368356705,
+        0.29518696665763855
       ],
       "size": [
         0.07638600096106529,
-        0.2939540121005848,
-        0.07629400119185448
-      ]
+        0.07629400119185448,
+        0.2939540121005848
+      ],
+      "units": "m"
     },
     "description": "D00941 Wine Bottle",
     "name": "D00941 Wine Bottle",
     "object_type": "rigid_bodies",
-    "total_mass": 0.51
+    "total_mass": 0.5099999997764826,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00941",
   "parts": [
     {
       "bounds": {
-        "center": [
-          -5.8999285101890564e-05,
-          0.13751545682316646,
-          -0.00012299977242946625
+        "min": [
+          -0.03825199976563454,
+          -0.03802400082349777,
+          0.0012329545570537448
         ],
         "max": [
           0.038134001195430756,
-          0.2737979590892792,
-          0.03802400082349777
+          0.038270000368356705,
+          0.2737979590892792
         ],
-        "min": [
-          -0.03825199976563454,
-          0.0012329545570537448,
-          -0.038270000368356705
-        ]
+        "size": [
+          0.07638600096106529,
+          0.07629400119185448,
+          0.27256500453222543
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         -0.00040503765922039747,
@@ -74,25 +125,28 @@
         "object_name": "D00941 Wine Bottle",
         "part_name": "D00941 Wine Bottle"
       },
-      "volume": 0.0002
+      "volume": 0.0002,
+      "source_prim_path": "/World/textured_mesh_6a81e6b0b7a9c4204abd1511/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     },
     {
       "bounds": {
-        "center": [
-          2.7000438421964645e-05,
-          0.2652684599161148,
-          -0.0001050001010298729
+        "min": [
+          -0.015573999844491482,
+          -0.015572000294923782,
+          0.23534995317459106
         ],
         "max": [
           0.01562800072133541,
-          0.29518696665763855,
-          0.015572000294923782
+          0.015782000496983528,
+          0.29518696665763855
         ],
-        "min": [
-          -0.015573999844491482,
-          0.23534995317459106,
-          -0.015782000496983528
-        ]
+        "size": [
+          0.031202000565826893,
+          0.03135400079190731,
+          0.059837013483047485
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         -1.5560752217425033e-05,
@@ -107,7 +161,7 @@
         3.4631320886546746e-06,
         3.4653264719963772e-06
       ],
-      "mass": 0.01,
+      "mass": 0.009999999776482582,
       "material": "ceramic_or_glass",
       "name": "D00941 Wine Bottle",
       "physics_type": "rigid",
@@ -115,10 +169,27 @@
         "object_name": "D00941 Wine Bottle",
         "part_name": "D00941 Wine Bottle"
       },
-      "volume": 3.703703620919475e-06
+      "volume": 3.703703620919475e-06,
+      "source_prim_path": "/World/textured_mesh_6a81e6b0b7a9c4204abd1511/part_01",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "bbfc3b35272baa694be190a49a3a1974555e9802b54e143a1f28672c82a6dce5"
+    },
+    "usd_path": "batch32/D00941 Wine Bottle/IsaacSim_assets_6a81e6b0b7a9c4204abd1511/IsaacSim_asset_6a81e6b0b7a9c4204abd1511.usd",
+    "usd_sha256": "ce59cbcd1c3a697a70e61a4e0b6dc25b36f3bb074b2e994fb8d62d2a3dd9c30d",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -137,24 +208,58 @@
       "up_axis": "Z",
       "bounds_m": [
         0.07638600096106529,
-        0.2939540121005848,
-        0.07629400119185448
-      ]
+        0.07629400119185448,
+        0.2939540121005848
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "ce59cbcd1c3a697a70e61a4e0b6dc25b36f3bb074b2e994fb8d62d2a3dd9c30d",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.51
+      "value_kg": 0.5099999997764826,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "ce59cbcd1c3a697a70e61a4e0b6dc25b36f3bb074b2e994fb8d62d2a3dd9c30d",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.5099999997764826,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 2
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 7,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "ce59cbcd1c3a697a70e61a4e0b6dc25b36f3bb074b2e994fb8d62d2a3dd9c30d",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 7,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 1
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "ce59cbcd1c3a697a70e61a4e0b6dc25b36f3bb074b2e994fb8d62d2a3dd9c30d",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 1,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

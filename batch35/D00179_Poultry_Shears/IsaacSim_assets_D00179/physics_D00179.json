@@ -168,52 +168,99 @@
             "/World/part_01"
           ],
           "proxyPrim": []
+        },
+        "id": "pivot",
+        "path": "/World/Joints/pivot",
+        "usd_type": "PhysicsRevoluteJoint",
+        "authored_usd": {
+          "id": "pivot",
+          "source_prim_path": "/World/Joints/pivot",
+          "joint_type": "PhysicsRevoluteJoint",
+          "body0": [
+            "/World/part_00"
+          ],
+          "body1": [
+            "/World/part_01"
+          ],
+          "joint_enabled": true,
+          "axis": "Z",
+          "lowerLimit": 0.0,
+          "upperLimit": 45.0,
+          "localPos0": [
+            -3.999999989900971e-06,
+            -0.0013419999741017818,
+            0.04626739025115967
+          ],
+          "localPos1": [
+            -3.999999989900971e-06,
+            -0.0013419999741017818,
+            0.04626739025115967
+          ],
+          "localRot0": [
+            0.7071067690849304,
+            0.7071067690849304,
+            0.0,
+            0.0
+          ],
+          "localRot1": [
+            0.7071067690849304,
+            0.7071067690849304,
+            0.0,
+            0.0
+          ],
+          "static_frames": []
         }
       }
-    ]
+    ],
+    "moving_joints": 1,
+    "rigid_body_count": 2,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.10843079098779833,
-        0.012282741984284234,
-        0.061106077451250226
-      ],
       "min": [
         -0.1065412047879005,
-        -4.166415585504617e-05,
-        -0.023404775744097887
+        -0.061106077451250226,
+        -4.166415585504617e-05
+      ],
+      "max": [
+        0.10843079098779833,
+        0.023404775744097894,
+        0.012282741984284234
       ],
       "size": [
         0.2149719957756988,
-        0.01232440614013928,
-        0.08451085319534811
-      ]
+        0.08451085319534812,
+        0.01232440614013928
+      ],
+      "units": "m"
     },
     "description": "Poultry Shears",
     "name": "part_00",
     "object_type": "rigid_bodies",
-    "total_mass": 0.23999999463558197
+    "total_mass": 0.23999999463558197,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00179",
   "parts": [
     {
       "bounds": {
-        "center": [
-          0.0009803550648142673,
-          0.006127187297817714,
-          -0.005858195817208122
+        "min": [
+          -0.10647008085816978,
+          -0.011688384109681628,
+          -2.836738864880374e-05
         ],
         "max": [
           0.10843079098779833,
-          0.012282741984284234,
-          0.011688384109681642
+          0.023404775744097894,
+          0.012282741984284234
         ],
-        "min": [
-          -0.1064700808581698,
-          -2.8367388648804608e-05,
-          -0.023404775744097887
-        ]
+        "size": [
+          0.21490087184596812,
+          0.03509315985377952,
+          0.012311109372933038
+        ],
+        "units": "m"
       },
       "collision": {},
       "id": "part_00",
@@ -223,25 +270,28 @@
       "source": {
         "object_name": "World",
         "part_name": "part_00"
-      }
+      },
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     },
     {
       "bounds": {
-        "center": [
-          -0.012772742401334379,
-          0.004631340433164974,
-          0.020498959675692534
+        "min": [
+          -0.1065412047879005,
+          -0.061106077451250226,
+          -4.166415585504617e-05
         ],
         "max": [
           0.08099571998523174,
-          0.009304345022184994,
-          0.061106077451250226
+          0.02010815809986516,
+          0.009304345022184994
         ],
-        "min": [
-          -0.1065412047879005,
-          -4.166415585504617e-05,
-          -0.02010815809986516
-        ]
+        "size": [
+          0.18753692477313222,
+          0.08121423555111539,
+          0.00934600917804004
+        ],
+        "units": "m"
       },
       "collision": {},
       "id": "part_01",
@@ -251,10 +301,27 @@
       "source": {
         "object_name": "World",
         "part_name": "part_01"
-      }
+      },
+      "source_prim_path": "/World/part_01",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "74ad02be419f46a5ebc659c09a8a6723e577611f00e43aba5dd49b62479d7d8b"
+    },
+    "usd_path": "batch35/D00179_Poultry_Shears/IsaacSim_assets_D00179/IsaacSim_asset_D00179.usd",
+    "usd_sha256": "d4e86bb7834166aa8d08cd9c7d1e3ad7b0fc1fa2b98756780bb28caae964bcb2",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {},
   "units": {
@@ -271,24 +338,58 @@
       "up_axis": "Z",
       "bounds_m": [
         0.2149719957756988,
-        0.01232440614013928,
-        0.08451085319534811
-      ]
+        0.08451085319534812,
+        0.01232440614013928
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "d4e86bb7834166aa8d08cd9c7d1e3ad7b0fc1fa2b98756780bb28caae964bcb2",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.23999999463558197
+      "value_kg": 0.23999999463558197,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "d4e86bb7834166aa8d08cd9c7d1e3ad7b0fc1fa2b98756780bb28caae964bcb2",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.23999999463558197,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 2
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 4,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "d4e86bb7834166aa8d08cd9c7d1e3ad7b0fc1fa2b98756780bb28caae964bcb2",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 4,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 1
+      "moving_joints": 1,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "d4e86bb7834166aa8d08cd9c7d1e3ad7b0fc1fa2b98756780bb28caae964bcb2",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 1,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

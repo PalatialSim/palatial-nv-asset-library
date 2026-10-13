@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.0176790002733469,
-        0.2202756255865097,
-        0.01744299940764904
-      ],
       "min": [
         -0.017611000686883926,
-        0.0007896292954683304,
-        -0.017632000148296356
+        -0.01744299940764904,
+        0.0007896292954683304
+      ],
+      "max": [
+        0.0176790002733469,
+        0.017632000148296356,
+        0.2202756255865097
       ],
       "size": [
         0.03529000096023083,
-        0.21948599629104137,
-        0.035074999555945396
-      ]
+        0.035074999555945396,
+        0.21948599629104137
+      ],
+      "units": "m"
     },
     "description": "D00352 Muddler",
     "name": "D00352 Muddler",
     "object_type": "rigid_bodies",
-    "total_mass": 0.095
+    "total_mass": 0.0949999988079071,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00352",
   "parts": [
     {
       "bounds": {
-        "center": [
-          3.3999793231487274e-05,
-          0.11053262744098902,
-          -9.450037032365799e-05
+        "min": [
+          -0.017611000686883926,
+          -0.01744299940764904,
+          0.0007896292954683304
         ],
         "max": [
           0.0176790002733469,
-          0.2202756255865097,
-          0.01744299940764904
+          0.017632000148296356,
+          0.2202756255865097
         ],
-        "min": [
-          -0.017611000686883926,
-          0.0007896292954683304,
-          -0.017632000148296356
-        ]
+        "size": [
+          0.03529000096023083,
+          0.035074999555945396,
+          0.21948599629104137
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         4.74610787932761e-05,
@@ -59,7 +65,7 @@
         0.00045887898886576295,
         0.0004589372256305069
       ],
-      "mass": 0.095,
+      "mass": 0.0949999988079071,
       "material": "wood",
       "name": "D00352 Muddler",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00352 Muddler",
         "part_name": "D00352 Muddler"
       },
-      "volume": 0.00013571428401129587
+      "volume": 0.00013571428401129587,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "f059777e20da3bbf102c90b2a04851addd99ae1d893224e3263dd8bc71d13167"
+    },
+    "usd_path": "batch37/D00352 Muddler/IsaacSim_assets_6a86cc58ad93f8edde74f25a/IsaacSim_asset_6a86cc58ad93f8edde74f25a.usd",
+    "usd_sha256": "acf3d875b8f37e36c1dd5870e04532a9f8bab15167b57137ef0fb0abd98c7b4a",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -89,24 +112,58 @@
       "up_axis": "Z",
       "bounds_m": [
         0.03529000096023083,
-        0.21948599629104137,
-        0.035074999555945396
-      ]
+        0.035074999555945396,
+        0.21948599629104137
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "acf3d875b8f37e36c1dd5870e04532a9f8bab15167b57137ef0fb0abd98c7b4a",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.095
+      "value_kg": 0.0949999988079071,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "acf3d875b8f37e36c1dd5870e04532a9f8bab15167b57137ef0fb0abd98c7b4a",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.0949999988079071,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 4,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "acf3d875b8f37e36c1dd5870e04532a9f8bab15167b57137ef0fb0abd98c7b4a",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 4,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "acf3d875b8f37e36c1dd5870e04532a9f8bab15167b57137ef0fb0abd98c7b4a",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

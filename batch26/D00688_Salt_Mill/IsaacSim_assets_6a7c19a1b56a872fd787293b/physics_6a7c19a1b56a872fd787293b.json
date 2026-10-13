@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.03192700073122978,
-        0.03196299821138382,
-        0.1947510689496994
-      ],
       "min": [
         -0.0320420004427433,
         -0.03184700012207031,
         0.0007110701408237219
       ],
+      "max": [
+        0.03192700073122978,
+        0.03196299821138382,
+        0.1947510689496994
+      ],
       "size": [
         0.06396900117397308,
         0.06380999833345413,
         0.19403999880887568
-      ]
+      ],
+      "units": "m"
     },
     "description": "D00688 Salt Mill",
     "name": "D00688 Salt Mill",
     "object_type": "rigid_bodies",
-    "total_mass": 0.3
+    "total_mass": 0.30000001192092896,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00688",
   "parts": [
     {
       "bounds": {
-        "center": [
-          -5.7499855756759644e-05,
-          5.799904465675354e-05,
-          0.09773106954526156
+        "min": [
+          -0.0320420004427433,
+          -0.03184700012207031,
+          0.0007110701408237219
         ],
         "max": [
           0.03192700073122978,
           0.03196299821138382,
           0.1947510689496994
         ],
-        "min": [
-          -0.0320420004427433,
-          -0.03184700012207031,
-          0.0007110701408237219
-        ]
+        "size": [
+          0.06396900117397308,
+          0.06380999833345413,
+          0.19403999880887568
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         -6.0845013649668545e-05,
@@ -59,7 +65,7 @@
         0.0009177731699310243,
         0.0009181859786622226
       ],
-      "mass": 0.3,
+      "mass": 0.30000001192092896,
       "material": "wood",
       "name": "D00688 Salt Mill",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00688 Salt Mill",
         "part_name": "D00688 Salt Mill"
       },
-      "volume": 0.0004285714456013271
+      "volume": 0.0004285714456013271,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "37410f15c42354d6f6718134cd0ffb3670dac1be5690de9aec5599326a567d97"
+    },
+    "usd_path": "batch26/D00688_Salt_Mill/IsaacSim_assets_6a7c19a1b56a872fd787293b/IsaacSim_asset_6a7c19a1b56a872fd787293b.usd",
+    "usd_sha256": "dced02b8ccc3cf3ef492d0d5298391a030b5187aa752da8fd5a757bbfed50a54",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -91,22 +114,56 @@
         0.06396900117397308,
         0.06380999833345413,
         0.19403999880887568
-      ]
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "dced02b8ccc3cf3ef492d0d5298391a030b5187aa752da8fd5a757bbfed50a54",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.3
+      "value_kg": 0.30000001192092896,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "dced02b8ccc3cf3ef492d0d5298391a030b5187aa752da8fd5a757bbfed50a54",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.30000001192092896,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 5,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "dced02b8ccc3cf3ef492d0d5298391a030b5187aa752da8fd5a757bbfed50a54",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 5,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "dced02b8ccc3cf3ef492d0d5298391a030b5187aa752da8fd5a757bbfed50a54",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

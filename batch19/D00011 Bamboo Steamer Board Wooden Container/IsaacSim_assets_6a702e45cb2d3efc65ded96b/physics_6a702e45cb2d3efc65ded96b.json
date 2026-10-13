@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.1533530056476593,
-        0.1545020043849945,
-        0.12363061308860779
-      ],
       "min": [
         -0.1529799997806549,
         -0.15179699659347534,
         0.0012246101396158338
       ],
+      "max": [
+        0.1533530056476593,
+        0.1545020043849945,
+        0.12363061308860779
+      ],
       "size": [
         0.3063330054283142,
         0.30629900097846985,
         0.12240600294899195
-      ]
+      ],
+      "units": "m"
     },
     "description": "D00011 Bamboo Steamer Board Wooden Container",
     "name": "D00011 Bamboo Steamer Board Wooden Container",
     "object_type": "rigid_bodies",
-    "total_mass": 0.417
+    "total_mass": 0.4169999957084656,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00011",
   "parts": [
     {
       "bounds": {
-        "center": [
-          0.00018650293350219727,
-          0.0013525038957595825,
-          0.06242761161411181
+        "min": [
+          -0.1529799997806549,
+          -0.15179699659347534,
+          0.0012246101396158338
         ],
         "max": [
           0.1533530056476593,
           0.1545020043849945,
           0.12363061308860779
         ],
-        "min": [
-          -0.1529799997806549,
-          -0.15179699659347534,
-          0.0012246101396158338
-        ]
+        "size": [
+          0.3063330054283142,
+          0.30629900097846985,
+          0.12240600294899195
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         0.00018237780022900552,
@@ -59,7 +65,7 @@
         0.0037740690167993307,
         0.006509954575449228
       ],
-      "mass": 0.417,
+      "mass": 0.4169999957084656,
       "material": "wood",
       "name": "D00011 Bamboo Steamer Board Wooden Container",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00011 Bamboo Steamer Board Wooden Container",
         "part_name": "D00011 Bamboo Steamer Board Wooden Container"
       },
-      "volume": 0.0008339999914169312
+      "volume": 0.0008339999914169312,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "bb15576fc01b6ff7c16f2d3f87006718d4066f869411d8f1475fe87d8a637fe0"
+    },
+    "usd_path": "batch19/D00011 Bamboo Steamer Board Wooden Container/IsaacSim_assets_6a702e45cb2d3efc65ded96b/IsaacSim_asset_6a702e45cb2d3efc65ded96b.usd",
+    "usd_sha256": "259771dfe20104a2096a44a7fe4e2fbc12628c1153bc90ffa56a956fa938fca7",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -91,22 +114,73 @@
         0.3063330054283142,
         0.30629900097846985,
         0.12240600294899195
-      ]
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "259771dfe20104a2096a44a7fe4e2fbc12628c1153bc90ffa56a956fa938fca7",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.417
+      "value_kg": 0.4169999957084656,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "259771dfe20104a2096a44a7fe4e2fbc12628c1153bc90ffa56a956fa938fca7",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.4169999957084656,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 60,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "259771dfe20104a2096a44a7fe4e2fbc12628c1153bc90ffa56a956fa938fca7",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 60,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "259771dfe20104a2096a44a7fe4e2fbc12628c1153bc90ffa56a956fa938fca7",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "259771dfe20104a2096a44a7fe4e2fbc12628c1153bc90ffa56a956fa938fca7",
+      "supplemental_accepted": true,
+      "planned_test_count": 12,
+      "result_count": 12,
+      "passed": 11,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-13T20:33:40.591081+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "ef15426e7c698dfe984e97aedc3a0275f67e786412e32d88c219ae4b5e2381c3",
+      "qualification": "native-fleet-evidence/shard-01/native-batch-000/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

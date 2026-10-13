@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.11354283,
-        0.10098629,
-        0.09126513
-      ],
       "min": [
-        -0.11338884,
-        0.0,
-        -0.0911502
+        -0.11337900161743164,
+        -0.09126599878072739,
+        -7.999999797903001e-05
+      ],
+      "max": [
+        0.11353299766778946,
+        0.09115099906921387,
+        0.10106600075960159
       ],
       "size": [
-        0.22693167,
-        0.10098629,
-        0.18241533
-      ]
+        0.2269119992852211,
+        0.18241699784994125,
+        0.10114600075758062
+      ],
+      "units": "m"
     },
     "description": "A matte, off-white colander with small drainage holes arranged in a pattern, two integrated side handles, and a pedestal base.",
     "name": "generated reference 01",
     "object_type": "rigid_bodies",
-    "total_mass": 0.25
+    "total_mass": 0.25,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00074",
   "parts": [
     {
       "bounds": {
-        "center": [
-          3.830072906436929e-05,
-          0.05500248371648515,
-          6.344501273659913e-05
+        "min": [
+          -0.11337900161743164,
+          -0.09126599878072739,
+          -7.999999797903001e-05
         ],
         "max": [
-          0.11354283,
-          0.10098629,
-          0.09126513
+          0.11353299766778946,
+          0.09115099906921387,
+          0.10106600075960159
         ],
-        "min": [
-          -0.11338884,
-          0.0,
-          -0.0911502
-        ]
+        "size": [
+          0.2269119992852211,
+          0.18241699784994125,
+          0.10114600075758062
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         0.00017022346201850803,
@@ -67,10 +73,27 @@
         "object_name": "generated reference 01",
         "part_name": "generated reference 01"
       },
-      "volume": 0.0019266431217448917
+      "volume": 0.0019266431217448917,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "37e0e9b7b3115d07cda5640239d72f2c8c9fb7fad5d94318d80703ed77daa020"
+    },
+    "usd_path": "batch5/D00074 Bowl Strainer/IsaacSim_assets_6a37757c6284561eadbff0cd/IsaacSim_asset_6a37757c6284561eadbff0cd.usd",
+    "usd_sha256": "743dc9884f84cb494d59b11678c24f3f100f66d676ac09d77a91ffa566c1f3d7",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {},
   "units": {
@@ -86,25 +109,59 @@
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
-        0.22693167,
-        0.10098629,
-        0.18241533
-      ]
+        0.2269119992852211,
+        0.18241699784994125,
+        0.10114600075758062
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "743dc9884f84cb494d59b11678c24f3f100f66d676ac09d77a91ffa566c1f3d7",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.25
+      "value_kg": 0.25,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "743dc9884f84cb494d59b11678c24f3f100f66d676ac09d77a91ffa566c1f3d7",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.25,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 84,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "743dc9884f84cb494d59b11678c24f3f100f66d676ac09d77a91ffa566c1f3d7",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 84,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "743dc9884f84cb494d59b11678c24f3f100f66d676ac09d77a91ffa566c1f3d7",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

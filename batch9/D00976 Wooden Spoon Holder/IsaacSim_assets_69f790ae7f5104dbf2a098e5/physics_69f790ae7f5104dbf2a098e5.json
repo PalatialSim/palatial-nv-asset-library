@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.09244400262832642,
-        0.09257499873638153,
-        0.21864299476146698
-      ],
       "min": [
-        -0.10054700076580048,
-        -0.09214500337839127,
-        -0.0003009999927598983
+        -0.05584900081157684,
+        -0.05617300048470497,
+        -1.6113777151529264e-18
+      ],
+      "max": [
+        0.05622800067067146,
+        0.0555419996380806,
+        0.12891800701618195
       ],
       "size": [
-        0.1929910033941269,
-        0.1847200021147728,
-        0.21894399475422688
-      ]
+        0.1120770014822483,
+        0.11171500012278557,
+        0.12891800701618195
+      ],
+      "units": "m"
     },
     "description": "A group of open tabletop canisters and bowls with cylindrical, square, and rounded forms in wood, brushed stainless steel, ceramic, black-coated metal, and clear glass. Most have rounded rims and hollow interiors, with some metal pieces showing perforations or polished reflective surfaces.",
     "name": "D00976 Wooden Spoon Holder",
     "object_type": "rigid_bodies",
-    "total_mass": 0.32
+    "total_mass": 0.3199999928474426,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00976",
   "parts": [
     {
       "bounds": {
-        "center": [
-          -0.00272231004858194,
-          0.0001384987172107107,
-          0.06131988340326514
+        "min": [
+          -0.05584900081157684,
+          -0.05617300048470497,
+          -1.6113777151529264e-18
         ],
         "max": [
-          0.09244400262832642,
-          0.09257499873638153,
-          0.21864299476146698
+          0.05622800067067146,
+          0.0555419996380806,
+          0.12891800701618195
         ],
-        "min": [
-          -0.10054700076580048,
-          -0.09214500337839127,
-          -0.0003009999927598983
-        ]
+        "size": [
+          0.1120770014822483,
+          0.11171500012278557,
+          0.12891800701618195
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         0.00021432699457613053,
@@ -59,7 +65,7 @@
         0.0006727137618580068,
         0.000674598144149905
       ],
-      "mass": 0.32,
+      "mass": 0.3199999928474426,
       "material": "stainless_steel",
       "name": "D00976 Wooden Spoon Holder",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00976 Wooden Spoon Holder",
         "part_name": "D00976 Wooden Spoon Holder"
       },
-      "volume": 0.0011898140438912728
+      "volume": 0.0011898140438912728,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "791552fa99eab4898a6bb3587c29b8afa9cd129916bb45f0162a01a7a2c4540f"
+    },
+    "usd_path": "batch9/D00976 Wooden Spoon Holder/IsaacSim_assets_69f790ae7f5104dbf2a098e5/IsaacSim_asset_69f790ae7f5104dbf2a098e5.usd",
+    "usd_sha256": "64dbe6ceef901efacccc52958f32c8f1aa3f2d1a4223a0671262c562c2f94e55",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {},
   "units": {
@@ -86,25 +109,59 @@
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
-        0.1929910033941269,
-        0.1847200021147728,
-        0.21894399475422688
-      ]
+        0.1120770014822483,
+        0.11171500012278557,
+        0.12891800701618195
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "64dbe6ceef901efacccc52958f32c8f1aa3f2d1a4223a0671262c562c2f94e55",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.32
+      "value_kg": 0.3199999928474426,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "64dbe6ceef901efacccc52958f32c8f1aa3f2d1a4223a0671262c562c2f94e55",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.3199999928474426,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 118,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "64dbe6ceef901efacccc52958f32c8f1aa3f2d1a4223a0671262c562c2f94e55",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 118,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "64dbe6ceef901efacccc52958f32c8f1aa3f2d1a4223a0671262c562c2f94e55",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

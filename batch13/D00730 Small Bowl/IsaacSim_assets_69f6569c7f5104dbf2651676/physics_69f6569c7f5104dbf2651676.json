@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.05863751471042633,
-        0.061234768480062485,
-        0.05822718143463135
-      ],
       "min": [
-        -0.05907755345106125,
-        0.0,
-        -0.059244513511657715
+        -0.059087999165058136,
+        -0.058243997395038605,
+        1.4999476661614608e-05
+      ],
+      "max": [
+        0.0585470013320446,
+        0.059140004217624664,
+        0.06141900271177292
       ],
       "size": [
-        0.11771506816148758,
-        0.061234768480062485,
-        0.11747169494628906
-      ]
+        0.11763500049710274,
+        0.11738400161266327,
+        0.061404003235111304
+      ],
+      "units": "m"
     },
     "description": "A white glazed ceramic bowl with rounded sides, a thick rolled rim, and a small foot ring. The glossy surface has subtle gray marbling and fine speckling.",
     "name": "D00730 Small Bowl",
     "object_type": "rigid_bodies",
-    "total_mass": 0.32
+    "total_mass": 0.3199999928474426,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00730",
   "parts": [
     {
       "bounds": {
-        "center": [
-          -0.00012316232283839953,
-          0.03189417656149122,
-          -4.336707685631655e-05
+        "min": [
+          -0.059087999165058136,
+          -0.058243997395038605,
+          1.4999476661614608e-05
         ],
         "max": [
-          0.05863751471042633,
-          0.061234768480062485,
-          0.05822718143463135
+          0.0585470013320446,
+          0.059140004217624664,
+          0.06141900271177292
         ],
-        "min": [
-          -0.05907755345106125,
-          0.0,
-          -0.059244513511657715
-        ]
+        "size": [
+          0.11763500049710274,
+          0.11738400161266327,
+          0.061404003235111304
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         -3.8207746757698235e-05,
@@ -59,7 +65,7 @@
         0.00040247553535805385,
         0.0005968679761518063
       ],
-      "mass": 0.32,
+      "mass": 0.3199999928474426,
       "material": "baked_bread",
       "name": "D00730 Small Bowl",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00730 Small Bowl",
         "part_name": "D00730 Small Bowl"
       },
-      "volume": 0.00014682886160501026
+      "volume": 0.00014682886160501026,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "70cb5eadf3c6424c7bdfb469a2446e91c9d54b102cff7ffd4947001fb490db82"
+    },
+    "usd_path": "batch13/D00730 Small Bowl/IsaacSim_assets_69f6569c7f5104dbf2651676/IsaacSim_asset_69f6569c7f5104dbf2651676.usd",
+    "usd_sha256": "04de4809a472b49ba46b8d31c03e42bf82e016d899a071fc2bd265da85a0d66d",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {},
   "units": {
@@ -86,25 +109,59 @@
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
-        0.11771506816148758,
-        0.061234768480062485,
-        0.11747169494628906
-      ]
+        0.11763500049710274,
+        0.11738400161266327,
+        0.061404003235111304
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "04de4809a472b49ba46b8d31c03e42bf82e016d899a071fc2bd265da85a0d66d",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.32
+      "value_kg": 0.3199999928474426,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "04de4809a472b49ba46b8d31c03e42bf82e016d899a071fc2bd265da85a0d66d",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.3199999928474426,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 57,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "04de4809a472b49ba46b8d31c03e42bf82e016d899a071fc2bd265da85a0d66d",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 57,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "04de4809a472b49ba46b8d31c03e42bf82e016d899a071fc2bd265da85a0d66d",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

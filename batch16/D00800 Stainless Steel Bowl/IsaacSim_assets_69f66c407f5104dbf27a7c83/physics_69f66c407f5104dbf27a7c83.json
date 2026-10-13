@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.09958347053777489,
-        0.08300615604227224,
-        0.09948951955329541
-      ],
       "min": [
-        -0.0994640253494133,
-        -1.409470008784119e-05,
-        -0.09942354036914666
+        -0.10042200237512589,
+        -0.100552998483181,
+        2.999999651365215e-06
+      ],
+      "max": [
+        0.10041499882936478,
+        0.10040800273418427,
+        0.08146599680185318
       ],
       "size": [
-        0.19904749588718817,
-        0.08302025074236008,
-        0.19891305992244207
-      ]
+        0.20083700120449066,
+        0.20096100121736526,
+        0.08146299680220181
+      ],
+      "units": "m"
     },
     "description": "A bowl with an off-white matte ceramic body and a thick brushed stainless steel rim.",
     "name": "D00800 Stainless Steel Bowl",
     "object_type": "rigid_bodies",
-    "total_mass": 0.5
+    "total_mass": 0.5,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00800",
   "parts": [
     {
       "bounds": {
-        "center": [
-          2.9421550040085868e-05,
-          0.04104970660551623,
-          2.564280382454958e-05
+        "min": [
+          -0.10042200237512589,
+          -0.100552998483181,
+          2.999999651365215e-06
         ],
         "max": [
-          0.09958347053777489,
-          0.08300615604227224,
-          0.09948951955329541
+          0.10041499882936478,
+          0.10040800273418427,
+          0.08146599680185318
         ],
-        "min": [
-          -0.0994640253494133,
-          -1.409470008784119e-05,
-          -0.09942354036914666
-        ]
+        "size": [
+          0.20083700120449066,
+          0.20096100121736526,
+          0.08146299680220181
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         -2.945841942059735e-05,
@@ -67,10 +73,27 @@
         "object_name": "D00800 Stainless Steel Bowl",
         "part_name": "D00800 Stainless Steel Bowl"
       },
-      "volume": 0.0017459513882129869
+      "volume": 0.0017459513882129869,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "166e81f8f97fd5bae603656896ab2a4b90cd9f8f77b5ce65d4d37e9ccd50eae5"
+    },
+    "usd_path": "batch16/D00800 Stainless Steel Bowl/IsaacSim_assets_69f66c407f5104dbf27a7c83/IsaacSim_asset_69f66c407f5104dbf27a7c83.usd",
+    "usd_sha256": "80cf61b3911ecdcab0cf34f7d281623009e952b7d0c2ec2eec9125e7b5bf8397",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -88,25 +111,59 @@
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
-        0.19904749588718817,
-        0.08302025074236008,
-        0.19891305992244207
-      ]
+        0.20083700120449066,
+        0.20096100121736526,
+        0.08146299680220181
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "80cf61b3911ecdcab0cf34f7d281623009e952b7d0c2ec2eec9125e7b5bf8397",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.5
+      "value_kg": 0.5,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "80cf61b3911ecdcab0cf34f7d281623009e952b7d0c2ec2eec9125e7b5bf8397",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.5,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 88,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "80cf61b3911ecdcab0cf34f7d281623009e952b7d0c2ec2eec9125e7b5bf8397",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 88,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "80cf61b3911ecdcab0cf34f7d281623009e952b7d0c2ec2eec9125e7b5bf8397",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

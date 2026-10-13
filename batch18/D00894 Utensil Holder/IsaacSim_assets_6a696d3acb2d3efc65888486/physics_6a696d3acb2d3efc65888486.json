@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.052859000861644745,
-        0.05423999950289726,
-        0.12370827374979854
-      ],
       "min": [
         -0.05475600063800812,
         -0.05413199961185455,
         0.000448270025117381
       ],
+      "max": [
+        0.052859000861644745,
+        0.05423999950289726,
+        0.12370827374979854
+      ],
       "size": [
         0.10761500149965286,
         0.10837199911475182,
         0.12326000372468116
-      ]
+      ],
+      "units": "m"
     },
     "description": "D00894 Utensil Holder",
     "name": "D00894 Utensil Holder",
     "object_type": "rigid_bodies",
-    "total_mass": 0.4
+    "total_mass": 0.4000000059604645,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00894",
   "parts": [
     {
       "bounds": {
-        "center": [
-          -0.0009484998881816864,
-          5.3999945521354675e-05,
-          0.06207827188745796
+        "min": [
+          -0.05475600063800812,
+          -0.05413199961185455,
+          0.000448270025117381
         ],
         "max": [
           0.052859000861644745,
           0.05423999950289726,
           0.12370827374979854
         ],
-        "min": [
-          -0.05475600063800812,
-          -0.05413199961185455,
-          0.000448270025117381
-        ]
+        "size": [
+          0.10761500149965286,
+          0.10837199911475182,
+          0.12326000372468116
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         -0.0008996708202175796,
@@ -59,7 +65,7 @@
         0.0007901008357293904,
         0.0007941765361465514
       ],
-      "mass": 0.4,
+      "mass": 0.4000000059604645,
       "material": "metal",
       "name": "D00894 Utensil Holder",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00894 Utensil Holder",
         "part_name": "D00894 Utensil Holder"
       },
-      "volume": 5.000000074505806e-05
+      "volume": 5.000000074505806e-05,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "ca2c7039b7554ffa2dfe942231626c2126020c12c1ddc97d4e4999ef66e59170"
+    },
+    "usd_path": "batch18/D00894 Utensil Holder/IsaacSim_assets_6a696d3acb2d3efc65888486/IsaacSim_asset_6a696d3acb2d3efc65888486.usd",
+    "usd_sha256": "b9b8f1cb07da213491915c616b2579ecdb2539b0376de6ac7c8a16fcc89844e2",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -91,22 +114,56 @@
         0.10761500149965286,
         0.10837199911475182,
         0.12326000372468116
-      ]
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "b9b8f1cb07da213491915c616b2579ecdb2539b0376de6ac7c8a16fcc89844e2",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.4
+      "value_kg": 0.4000000059604645,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "b9b8f1cb07da213491915c616b2579ecdb2539b0376de6ac7c8a16fcc89844e2",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.4000000059604645,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 196,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "b9b8f1cb07da213491915c616b2579ecdb2539b0376de6ac7c8a16fcc89844e2",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 196,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "b9b8f1cb07da213491915c616b2579ecdb2539b0376de6ac7c8a16fcc89844e2",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

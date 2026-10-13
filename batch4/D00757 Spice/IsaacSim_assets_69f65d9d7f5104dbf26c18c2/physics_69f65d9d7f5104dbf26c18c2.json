@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.013842999935150146,
-        0.009704000316560268,
-        0.01781499944627285
-      ],
       "min": [
-        -0.012082000263035297,
-        -0.009243999607861042,
-        -1.8000000636675395e-05
+        -0.008700000122189522,
+        -0.0067460001446306705,
+        9.999999747378752e-06
+      ],
+      "max": [
+        0.009267999790608883,
+        0.00711200013756752,
+        0.013268000446259975
       ],
       "size": [
-        0.025925000198185444,
-        0.01894799992442131,
-        0.017832999446909525
-      ]
+        0.017967999912798405,
+        0.01385800028219819,
+        0.013258000446512597
+      ],
+      "units": "m"
     },
     "description": "A small brown walnut with an oval hard shell and deeply wrinkled, ridged organic surface. The exterior appears dry, matte-to-satin, and woody with lighter scuffed highlights in the grooves.",
     "name": "D00757 Whole Spice Seed",
     "object_type": "rigid_bodies",
-    "total_mass": 0.012
+    "total_mass": 0.012000000104308128,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00757",
   "parts": [
     {
       "bounds": {
-        "center": [
-          0.0008230511281469609,
-          0.0001999795213052541,
-          0.008901060300531517
+        "min": [
+          -0.008700000122189522,
+          -0.0067460001446306705,
+          9.999999747378752e-06
         ],
         "max": [
-          0.013842999935150146,
-          0.009704000316560268,
-          0.01781499944627285
+          0.009267999790608883,
+          0.00711200013756752,
+          0.013268000446259975
         ],
-        "min": [
-          -0.012082000263035297,
-          -0.009243999607861042,
-          -1.8000000636675395e-05
-        ]
+        "size": [
+          0.017967999912798405,
+          0.01385800028219819,
+          0.013258000446512597
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         0.00018943818254843803,
@@ -59,7 +65,7 @@
         2.875054829378225e-07,
         2.9963563864356214e-07
       ],
-      "mass": 0.012,
+      "mass": 0.012000000104308128,
       "material": "organic_leaf_tissue",
       "name": "D00757 Spice",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00757 Spice",
         "part_name": "D00757 Spice"
       },
-      "volume": 1.6388417487845525e-06
+      "volume": 1.6388417487845525e-06,
+      "source_prim_path": "/World/part_00_organic_leaf_tissue",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "690d02430595b488c22b123dfb234eb5d95c657bc837f7aecc0ff8f84bf10302"
+    },
+    "usd_path": "batch4/D00757 Spice/IsaacSim_assets_69f65d9d7f5104dbf26c18c2/IsaacSim_asset_69f65d9d7f5104dbf26c18c2.usd",
+    "usd_sha256": "d4c714567333171d3cf6fb269893fefa5d0d8e448c0281476eb8c0af1c49be81",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {},
   "units": {
@@ -86,25 +109,59 @@
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
-        0.025925000198185444,
-        0.01894799992442131,
-        0.017832999446909525
-      ]
+        0.017967999912798405,
+        0.01385800028219819,
+        0.013258000446512597
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "d4c714567333171d3cf6fb269893fefa5d0d8e448c0281476eb8c0af1c49be81",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.012
+      "value_kg": 0.012000000104308128,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "d4c714567333171d3cf6fb269893fefa5d0d8e448c0281476eb8c0af1c49be81",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.012000000104308128,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 59,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "d4c714567333171d3cf6fb269893fefa5d0d8e448c0281476eb8c0af1c49be81",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 59,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "d4c714567333171d3cf6fb269893fefa5d0d8e448c0281476eb8c0af1c49be81",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

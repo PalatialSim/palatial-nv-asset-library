@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.10999079793691635,
-        0.12254887819290161,
-        0.1112031638622284
-      ],
       "min": [
-        -0.10001619905233383,
-        1.875163661679835e-06,
-        -0.1265268325805664
+        -0.101842001080513,
+        -0.12342000007629395,
+        9.999999974752427e-07
+      ],
+      "max": [
+        0.10978800058364868,
+        0.1445229947566986,
+        0.11538799852132797
       ],
       "size": [
-        0.21000699698925018,
-        0.12254700302923993,
-        0.2377299964427948
-      ]
+        0.21163000166416168,
+        0.26794299483299255,
+        0.1153869985213305
+      ],
+      "units": "m"
     },
     "description": "A round loaf of artisan bread with a dark, crusty exterior, a prominent scored ridge on top, and a light dusting of white flour.",
     "name": "D00080 Bread",
     "object_type": "rigid_bodies",
-    "total_mass": 0.8
+    "total_mass": 0.800000011920929,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00080",
   "parts": [
     {
       "bounds": {
-        "center": [
-          0.00622627962742344,
-          0.046593725251870194,
-          -0.008170905507938133
+        "min": [
+          -0.101842001080513,
+          -0.12342000007629395,
+          9.999999974752427e-07
         ],
         "max": [
-          0.10999079793691635,
-          0.12254887819290161,
-          0.1112031638622284
+          0.10978800058364868,
+          0.1445229947566986,
+          0.11538799852132797
         ],
-        "min": [
-          -0.10001619905233383,
-          1.875163661679835e-06,
-          -0.1265268325805664
-        ]
+        "size": [
+          0.21163000166416168,
+          0.26794299483299255,
+          0.1153869985213305
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         0.0057990963565053115,
@@ -59,7 +65,7 @@
         0.004054291270580167,
         0.005472512446076076
       ],
-      "mass": 0.8,
+      "mass": 0.800000011920929,
       "material": "baked_bread_crust",
       "name": "D00080 Bread",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00080 Bread",
         "part_name": "D00080 Bread"
       },
-      "volume": 0.003952544778403394
+      "volume": 0.003952544778403394,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "6ff1cdc38e7e11e7065edeb6bc18231422f2b9934e1dddf90b8a4bb70c7552da"
+    },
+    "usd_path": "batch5/D00080 Bread/IsaacSim_assets_69f1fb3259057a931059b973/IsaacSim_asset_69f1fb3259057a931059b973.usd",
+    "usd_sha256": "8485b56e055bb59d1964ee44f309a269cd244e42e47123e76060a7768e0ae359",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {},
   "units": {
@@ -86,25 +109,76 @@
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
-        0.21000699698925018,
-        0.12254700302923993,
-        0.2377299964427948
-      ]
+        0.21163000166416168,
+        0.26794299483299255,
+        0.1153869985213305
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "8485b56e055bb59d1964ee44f309a269cd244e42e47123e76060a7768e0ae359",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.8
+      "value_kg": 0.800000011920929,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "8485b56e055bb59d1964ee44f309a269cd244e42e47123e76060a7768e0ae359",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.800000011920929,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 45,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "8485b56e055bb59d1964ee44f309a269cd244e42e47123e76060a7768e0ae359",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 45,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "8485b56e055bb59d1964ee44f309a269cd244e42e47123e76060a7768e0ae359",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "8485b56e055bb59d1964ee44f309a269cd244e42e47123e76060a7768e0ae359",
+      "supplemental_accepted": true,
+      "planned_test_count": 12,
+      "result_count": 12,
+      "passed": 11,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-13T20:39:45.146247+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "a1b190d73b06df2ec3d1a8a17ffd69795117d035bb6545fd3f170c243b58a278",
+      "qualification": "native-fleet-evidence/shard-02/native-batch-000/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

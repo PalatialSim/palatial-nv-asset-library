@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.020329000428318977,
-        0.015448000282049179,
-        0.037555430084466934
-      ],
       "min": [
         -0.01792999915778637,
         -0.013763000257313251,
         0.00021042994922026992
       ],
+      "max": [
+        0.020329000428318977,
+        0.015448000282049179,
+        0.037555430084466934
+      ],
       "size": [
         0.03825899958610535,
         0.02921100053936243,
         0.037345000135246664
-      ]
+      ],
+      "units": "m"
     },
     "description": "A single shallot with a teardrop shape, covered in dry, papery, reddish-brown outer skin. It features small, dry root remnants at the base and a twisted, tapering top.",
     "name": "D00334 Garlic Shallot",
     "object_type": "rigid_bodies",
-    "total_mass": 0.025
+    "total_mass": 0.02500000037252903,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00334",
   "parts": [
     {
       "bounds": {
-        "center": [
-          0.001199500635266304,
-          0.0008425000123679638,
-          0.018882930016843602
+        "min": [
+          -0.01792999915778637,
+          -0.013763000257313251,
+          0.00021042994922026992
         ],
         "max": [
           0.020329000428318977,
           0.015448000282049179,
           0.037555430084466934
         ],
-        "min": [
-          -0.01792999915778637,
-          -0.013763000257313251,
-          0.00021042994922026992
-        ]
+        "size": [
+          0.03825899958610535,
+          0.02921100053936243,
+          0.037345000135246664
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         -5.2967357329622613e-05,
@@ -59,7 +65,7 @@
         3.3284460193390312e-06,
         3.397533647101852e-06
       ],
-      "mass": 0.025,
+      "mass": 0.02500000037252903,
       "material": "organic_vegetable_tissue",
       "name": "D00334 Garlic Shallot",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00334 Garlic Shallot",
         "part_name": "D00334 Garlic Shallot"
       },
-      "volume": 1.683172437908137e-05
+      "volume": 1.683172437908137e-05,
+      "source_prim_path": "/World/part_00_organic_vegetable_tissue",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "d311eddf7e9c51fc7425cb6411e68b4e45d87e96992804f0da6cd4f719fac0f1"
+    },
+    "usd_path": "batch23/D00334 Garlic Shallot/IsaacSim_assets_69f5b5fa431507ff7cec725c/IsaacSim_asset_69f5b5fa431507ff7cec725c.usd",
+    "usd_sha256": "55ca914518fb677cbc3128c21cfdf33b0331bf2af88495e2f2e083f413a84085",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {},
   "units": {
@@ -89,22 +112,56 @@
         0.03825899958610535,
         0.02921100053936243,
         0.037345000135246664
-      ]
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "55ca914518fb677cbc3128c21cfdf33b0331bf2af88495e2f2e083f413a84085",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.025
+      "value_kg": 0.02500000037252903,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "55ca914518fb677cbc3128c21cfdf33b0331bf2af88495e2f2e083f413a84085",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.02500000037252903,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 25,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "55ca914518fb677cbc3128c21cfdf33b0331bf2af88495e2f2e083f413a84085",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 25,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "55ca914518fb677cbc3128c21cfdf33b0331bf2af88495e2f2e083f413a84085",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

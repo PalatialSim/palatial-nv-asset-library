@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.14832223,
-        0.05164209,
-        0.14942323
-      ],
       "min": [
-        -0.15139957,
-        0.0,
-        -0.15047522
+        -0.15140199661254883,
+        -0.14942599833011627,
+        0.0006085556196268813
+      ],
+      "max": [
+        0.14832399785518646,
+        0.15047800540924072,
+        0.05219455423860216
       ],
       "size": [
-        0.29972180000000004,
-        0.05164209,
-        0.29989845
-      ]
+        0.2997259944677353,
+        0.299904003739357,
+        0.05158599861897528
+      ],
+      "units": "m"
     },
     "description": "A square aluminum pan with a flat base, rounded corners, and shallow, raised walls.",
     "name": "generated reference 01",
     "object_type": "rigid_bodies",
-    "total_mass": 1.44
+    "total_mass": 1.440000057220459,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00630",
   "parts": [
     {
       "bounds": {
-        "center": [
-          -0.0015635704730068852,
-          0.015487471505854316,
-          -0.0001758662606513915
+        "min": [
+          -0.15140199661254883,
+          -0.14942599833011627,
+          0.0006085556196268813
         ],
         "max": [
-          0.14832223,
-          0.05164209,
-          0.14942323
+          0.14832399785518646,
+          0.15047800540924072,
+          0.05219455423860216
         ],
-        "min": [
-          -0.15139957,
-          0.0,
-          -0.15047522
-        ]
+        "size": [
+          0.2997259944677353,
+          0.299904003739357,
+          0.05158599861897528
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         -0.001646859409407807,
@@ -59,7 +65,7 @@
         0.013031526833175586,
         0.02518581260989121
       ],
-      "mass": 1.44,
+      "mass": 1.440000057220459,
       "material": "aluminum",
       "name": "generated reference 01",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "generated reference 01",
         "part_name": "generated reference 01"
       },
-      "volume": 0.0007405280296841484
+      "volume": 0.0007405280296841484,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "3a6c0c349bfe3bee8ecf95c72ed5f3aa18b7f0224b1ed894e45f8010cad43d69"
+    },
+    "usd_path": "batch15/D00630 Plate Pan/IsaacSim_assets_6a60a642ccf0a8051a831933/IsaacSim_asset_6a60a642ccf0a8051a831933.usd",
+    "usd_sha256": "ff577b42008acde96c7c012a6c63eb7a6aa2b3c2d6728e963de91393a01bcde2",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -88,25 +111,59 @@
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
-        0.29972180000000004,
-        0.05164209,
-        0.29989845
-      ]
+        0.2997259944677353,
+        0.299904003739357,
+        0.05158599861897528
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "ff577b42008acde96c7c012a6c63eb7a6aa2b3c2d6728e963de91393a01bcde2",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 1.44
+      "value_kg": 1.440000057220459,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "ff577b42008acde96c7c012a6c63eb7a6aa2b3c2d6728e963de91393a01bcde2",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 1.440000057220459,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 38,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "ff577b42008acde96c7c012a6c63eb7a6aa2b3c2d6728e963de91393a01bcde2",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 38,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "ff577b42008acde96c7c012a6c63eb7a6aa2b3c2d6728e963de91393a01bcde2",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.03857500106096268,
-        0.13096800446510315,
-        0.03809399902820587
-      ],
       "min": [
         -0.03916599974036217,
-        1.9999999949504854e-06,
-        -0.038026999682188034
+        -0.03809399902820587,
+        1.9999999949504854e-06
+      ],
+      "max": [
+        0.03857500106096268,
+        0.038026999682188034,
+        0.13096800446510315
       ],
       "size": [
         0.07774100080132484,
-        0.1309660044651082,
-        0.0761209987103939
-      ]
+        0.0761209987103939,
+        0.1309660044651082
+      ],
+      "units": "m"
     },
     "description": "D00361 Glasses",
     "name": "D00361 Glasses",
     "object_type": "rigid_bodies",
-    "total_mass": 0.145
+    "total_mass": 0.14499999582767487,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00361",
   "parts": [
     {
       "bounds": {
-        "center": [
-          -0.0002954993396997452,
-          0.06548500223254905,
-          3.349967300891876e-05
+        "min": [
+          -0.03916599974036217,
+          -0.03809399902820587,
+          1.9999999949504854e-06
         ],
         "max": [
           0.03857500106096268,
-          0.13096800446510315,
-          0.03809399902820587
+          0.038026999682188034,
+          0.13096800446510315
         ],
-        "min": [
-          -0.03916599974036217,
-          1.9999999949504854e-06,
-          -0.038026999682188034
-        ]
+        "size": [
+          0.07774100080132484,
+          0.0761209987103939,
+          0.1309660044651082
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         -0.0001140628955909051,
@@ -59,7 +65,7 @@
         0.0002417494251858443,
         0.00024310780281666666
       ],
-      "mass": 0.145,
+      "mass": 0.14499999582767487,
       "material": "ceramic_or_glass",
       "name": "D00361 Glasses",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00361 Glasses",
         "part_name": "D00361 Glasses"
       },
-      "volume": 5.7999998331069944e-05
+      "volume": 5.7999998331069944e-05,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "6851fcbd12b36879665620904dafc1d7da38567b9e911c00e1db00f2786f366c"
+    },
+    "usd_path": "batch37/D00361 Glasses/IsaacSim_assets_6a86ef91ad93f8edde7e9117/IsaacSim_asset_6a86ef91ad93f8edde7e9117.usd",
+    "usd_sha256": "bf7acc656444620781d1d56df81d4028b3ba447b03f1d8ef73a9f1588f36eada",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -89,24 +112,58 @@
       "up_axis": "Z",
       "bounds_m": [
         0.07774100080132484,
-        0.1309660044651082,
-        0.0761209987103939
-      ]
+        0.0761209987103939,
+        0.1309660044651082
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "bf7acc656444620781d1d56df81d4028b3ba447b03f1d8ef73a9f1588f36eada",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.145
+      "value_kg": 0.14499999582767487,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "bf7acc656444620781d1d56df81d4028b3ba447b03f1d8ef73a9f1588f36eada",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.14499999582767487,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 18,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "bf7acc656444620781d1d56df81d4028b3ba447b03f1d8ef73a9f1588f36eada",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 18,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "bf7acc656444620781d1d56df81d4028b3ba447b03f1d8ef73a9f1588f36eada",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

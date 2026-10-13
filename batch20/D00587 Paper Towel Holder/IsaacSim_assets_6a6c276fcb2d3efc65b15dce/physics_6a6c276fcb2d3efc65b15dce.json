@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.06663099676370621,
-        0.06718999892473221,
-        0.1808089166879654
-      ],
       "min": [
         -0.06706500053405762,
         -0.06659699976444244,
         0.0003739299427252263
       ],
+      "max": [
+        0.06663099676370621,
+        0.06718999892473221,
+        0.1808089166879654
+      ],
       "size": [
         0.13369599729776382,
         0.13378699868917465,
         0.18043498674524017
-      ]
+      ],
+      "units": "m"
     },
     "description": "D00587 Paper Towel Holder",
     "name": "D00587 Paper Towel Holder",
     "object_type": "rigid_bodies",
-    "total_mass": 0.8
+    "total_mass": 0.800000011920929,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00587",
   "parts": [
     {
       "bounds": {
-        "center": [
-          -0.00021700188517570496,
-          0.0002964995801448822,
-          0.09059142331534531
+        "min": [
+          -0.06706500053405762,
+          -0.06659699976444244,
+          0.0003739299427252263
         ],
         "max": [
           0.06663099676370621,
           0.06718999892473221,
           0.1808089166879654
         ],
-        "min": [
-          -0.06706500053405762,
-          -0.06659699976444244,
-          0.0003739299427252263
-        ]
+        "size": [
+          0.13369599729776382,
+          0.13378699868917465,
+          0.18043498674524017
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         -0.00022121098299976438,
@@ -59,7 +65,7 @@
         0.0017921653343364596,
         0.001793182105757296
       ],
-      "mass": 0.8,
+      "mass": 0.800000011920929,
       "material": "metal",
       "name": "D00587 Paper Towel Holder",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00587 Paper Towel Holder",
         "part_name": "D00587 Paper Towel Holder"
       },
-      "volume": 0.00010000000149011611
+      "volume": 0.00010000000149011611,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "2589382b49f3a73affb836afb2bba52e81783a299b0c0899f98b51dafbddf281"
+    },
+    "usd_path": "batch20/D00587 Paper Towel Holder/IsaacSim_assets_6a6c276fcb2d3efc65b15dce/IsaacSim_asset_6a6c276fcb2d3efc65b15dce.usd",
+    "usd_sha256": "670b89eceadd31f3e9a835e992400c04ffe89a6b5df49ee16829b8958bd9cd0e",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -91,22 +114,56 @@
         0.13369599729776382,
         0.13378699868917465,
         0.18043498674524017
-      ]
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "670b89eceadd31f3e9a835e992400c04ffe89a6b5df49ee16829b8958bd9cd0e",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.8
+      "value_kg": 0.800000011920929,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "670b89eceadd31f3e9a835e992400c04ffe89a6b5df49ee16829b8958bd9cd0e",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.800000011920929,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 92,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "670b89eceadd31f3e9a835e992400c04ffe89a6b5df49ee16829b8958bd9cd0e",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 92,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "670b89eceadd31f3e9a835e992400c04ffe89a6b5df49ee16829b8958bd9cd0e",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

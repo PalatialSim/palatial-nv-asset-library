@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.08030016720294952,
-        0.31389617919921875,
-        0.08149690926074982
-      ],
       "min": [
-        -0.06604082882404327,
-        2.6192883524345234e-05,
-        -0.031746093183755875
+        -0.06896399706602097,
+        -0.09343499690294266,
+        0.00026599998818710446
+      ],
+      "max": [
+        0.06949599832296371,
+        0.03245700150728226,
+        0.31408798694610596
       ],
       "size": [
-        0.1463409960269928,
-        0.3138699863156944,
-        0.11324300244450569
-      ]
+        0.13845999538898468,
+        0.12589199841022491,
+        0.31382198695791885
+      ],
+      "units": "m"
     },
     "description": "A light brown wooden articulated figure featuring a smooth natural finish and visible spherical joints. The object is constructed from segmented wooden parts connected by metal hardware in a stylized humanoid form.",
     "name": "D00958 Wooden Figure",
     "object_type": "rigid_bodies",
-    "total_mass": 0.107
+    "total_mass": 0.10700000077486038,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00958",
   "parts": [
     {
       "bounds": {
-        "center": [
-          -0.0003491908341476244,
-          0.15977960178283962,
-          -0.000462860578904689
+        "min": [
+          -0.06896399706602097,
+          -0.09343499690294266,
+          0.00026599998818710446
         ],
         "max": [
-          0.08030016720294952,
-          0.31389617919921875,
-          0.08149690926074982
+          0.06949599832296371,
+          0.03245700150728226,
+          0.31408798694610596
         ],
-        "min": [
-          -0.06604082882404327,
-          2.6192883524345234e-05,
-          -0.031746093183755875
-        ]
+        "size": [
+          0.13845999538898468,
+          0.12589199841022491,
+          0.31382198695791885
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         0.0041031602947275,
@@ -59,7 +65,7 @@
         0.0005928336926327648,
         0.0006804861162170319
       ],
-      "mass": 0.107,
+      "mass": 0.10700000077486038,
       "material": "wood",
       "name": "D00958 Wooden Figure",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00958 Wooden Figure",
         "part_name": "D00958 Wooden Figure"
       },
-      "volume": 0.001921837913191687
+      "volume": 0.001921837913191687,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "94e769c35261981eb69b3fe9b86da202987f71bdadd51225940c38dbb5a728f3"
+    },
+    "usd_path": "batch16/D00958 Wooden Figure/IsaacSim_assets_69f746497f5104dbf24e861d/IsaacSim_asset_69f746497f5104dbf24e861d.usd",
+    "usd_sha256": "d9be65bfb74dd4f54082fc5666e0666447481ae92093db7934629c0ceaf9fc61",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -88,25 +111,59 @@
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
-        0.1463409960269928,
-        0.3138699863156944,
-        0.11324300244450569
-      ]
+        0.13845999538898468,
+        0.12589199841022491,
+        0.31382198695791885
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "d9be65bfb74dd4f54082fc5666e0666447481ae92093db7934629c0ceaf9fc61",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.107
+      "value_kg": 0.10700000077486038,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "d9be65bfb74dd4f54082fc5666e0666447481ae92093db7934629c0ceaf9fc61",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.10700000077486038,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 14,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "d9be65bfb74dd4f54082fc5666e0666447481ae92093db7934629c0ceaf9fc61",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 14,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "d9be65bfb74dd4f54082fc5666e0666447481ae92093db7934629c0ceaf9fc61",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

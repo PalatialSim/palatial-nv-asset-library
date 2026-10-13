@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.17566199600696564,
-        0.12556694820523262,
-        0.14529399573802948
-      ],
       "min": [
         -0.153096005320549,
-        0.001796948693026934,
-        -0.14222599565982819
+        -0.14529399573802948,
+        0.001796948693026934
+      ],
+      "max": [
+        0.17566199600696564,
+        0.14222599565982819,
+        0.12556694820523262
       ],
       "size": [
         0.32875800132751465,
-        0.12376999951220569,
-        0.28751999139785767
-      ]
+        0.28751999139785767,
+        0.12376999951220569
+      ],
+      "units": "m"
     },
     "description": "D00336 Gas_Stove",
     "name": "D00336 Gas_Stove",
     "object_type": "rigid_bodies",
-    "total_mass": 1.8
+    "total_mass": 1.7999999523162842,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00336",
   "parts": [
     {
       "bounds": {
-        "center": [
-          0.011282995343208313,
-          0.06368194844912978,
-          0.001534000039100647
+        "min": [
+          -0.153096005320549,
+          -0.14529399573802948,
+          0.001796948693026934
         ],
         "max": [
           0.17566199600696564,
-          0.12556694820523262,
-          0.14529399573802948
+          0.14222599565982819,
+          0.12556694820523262
         ],
-        "min": [
-          -0.153096005320549,
-          0.001796948693026934,
-          -0.14222599565982819
-        ]
+        "size": [
+          0.32875800132751465,
+          0.28751999139785767,
+          0.12376999951220569
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         0.006501666270196438,
@@ -59,7 +65,7 @@
         0.01660235971212387,
         0.025547543540596962
       ],
-      "mass": 1.8,
+      "mass": 1.7999999523162842,
       "material": "ceramic_or_glass",
       "name": "D00336 Gas_Stove",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00336 Gas_Stove",
         "part_name": "D00336 Gas_Stove"
       },
-      "volume": 0.0007003890865043907
+      "volume": 0.0007003890865043907,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "ddd28d05a15a75917a6b1db54135a94780b04d6549081adf3f7de727d9ca6f99"
+    },
+    "usd_path": "batch31/D00336_Gas_Stove/IsaacSim_assets_6a7efda2b7a9c4204aa32731/IsaacSim_asset_6a7efda2b7a9c4204aa32731.usd",
+    "usd_sha256": "05d96bead06e0c04c2cfc731eb11ffa69dde06867b511b408a0a39f1c2cc1dfc",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -89,24 +112,58 @@
       "up_axis": "Z",
       "bounds_m": [
         0.32875800132751465,
-        0.12376999951220569,
-        0.28751999139785767
-      ]
+        0.28751999139785767,
+        0.12376999951220569
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "05d96bead06e0c04c2cfc731eb11ffa69dde06867b511b408a0a39f1c2cc1dfc",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 1.8
+      "value_kg": 1.7999999523162842,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "05d96bead06e0c04c2cfc731eb11ffa69dde06867b511b408a0a39f1c2cc1dfc",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 1.7999999523162842,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 16,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "05d96bead06e0c04c2cfc731eb11ffa69dde06867b511b408a0a39f1c2cc1dfc",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 16,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "05d96bead06e0c04c2cfc731eb11ffa69dde06867b511b408a0a39f1c2cc1dfc",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

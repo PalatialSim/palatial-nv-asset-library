@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.03407200053334236,
-        0.036593999713659286,
-        0.19971689581871033
-      ],
       "min": [
         -0.034196000546216965,
         -0.03514200076460838,
         0.0010858991099667037
       ],
+      "max": [
+        0.03407200053334236,
+        0.036593999713659286,
+        0.19971689581871033
+      ],
       "size": [
         0.06826800107955933,
         0.07173600047826767,
         0.19863099670874362
-      ]
+      ],
+      "units": "m"
     },
     "description": "D00029 Juice Drink",
     "name": "D00029 Juice Drink",
     "object_type": "rigid_bodies",
-    "total_mass": 1.05
+    "total_mass": 1.0499999523162842,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00029",
   "parts": [
     {
       "bounds": {
-        "center": [
-          -6.200000643730164e-05,
-          0.0007259994745254517,
-          0.10040139746433852
+        "min": [
+          -0.034196000546216965,
+          -0.03514200076460838,
+          0.0010858991099667037
         ],
         "max": [
           0.03407200053334236,
           0.036593999713659286,
           0.19971689581871033
         ],
-        "min": [
-          -0.034196000546216965,
-          -0.03514200076460838,
-          0.0010858991099667037
-        ]
+        "size": [
+          0.06826800107955933,
+          0.07173600047826767,
+          0.19863099670874362
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         -7.10073800291866e-05,
@@ -59,7 +65,7 @@
         0.0033877838868647814,
         0.003403938142582774
       ],
-      "mass": 1.05,
+      "mass": 1.0499999523162842,
       "material": "plastic",
       "name": "D00029 Juice Drink",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00029 Juice Drink",
         "part_name": "D00029 Juice Drink"
       },
-      "volume": 0.0009800260671923339
+      "volume": 0.0009800260671923339,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "feb1e6849dc43de852582c1f312552537aeabd7936ce73d1488917f93ec09b2a"
+    },
+    "usd_path": "batch24/D00029_Juice_Drink/IsaacSim_assets_6a797488d43e189605327e85/IsaacSim_asset_6a797488d43e189605327e85.usd",
+    "usd_sha256": "6df4f1b8e3b3a354debe145b8c9f998d86959aaef1f849113c7ecbdebc72f707",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -91,22 +114,56 @@
         0.06826800107955933,
         0.07173600047826767,
         0.19863099670874362
-      ]
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "6df4f1b8e3b3a354debe145b8c9f998d86959aaef1f849113c7ecbdebc72f707",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 1.05
+      "value_kg": 1.0499999523162842,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "6df4f1b8e3b3a354debe145b8c9f998d86959aaef1f849113c7ecbdebc72f707",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 1.0499999523162842,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 6,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "6df4f1b8e3b3a354debe145b8c9f998d86959aaef1f849113c7ecbdebc72f707",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 6,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "6df4f1b8e3b3a354debe145b8c9f998d86959aaef1f849113c7ecbdebc72f707",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.47304001450538635,
-        1.643824189901352,
-        0.41422000527381897
-      ],
       "min": [
         -0.477387011051178,
-        0.007318237687286455,
-        -0.2647710144519806
+        -0.41422000527381897,
+        0.007318237687286455
+      ],
+      "max": [
+        0.47304001450538635,
+        0.2647710144519806,
+        1.643824189901352
       ],
       "size": [
         0.9504270255565643,
-        1.6365059522140655,
-        0.6789910197257996
-      ]
+        0.6789910197257996,
+        1.6365059522140655
+      ],
+      "units": "m"
     },
     "description": "D00326 Fruit_Stand",
     "name": "D00326 Fruit_Stand",
     "object_type": "rigid_bodies",
-    "total_mass": 60.0
+    "total_mass": 60.0,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00326",
   "parts": [
     {
       "bounds": {
-        "center": [
-          -0.002173498272895813,
-          0.8255712137943192,
-          0.07472449541091919
+        "min": [
+          -0.477387011051178,
+          -0.41422000527381897,
+          0.007318237687286455
         ],
         "max": [
           0.47304001450538635,
-          1.643824189901352,
-          0.41422000527381897
+          0.2647710144519806,
+          1.643824189901352
         ],
-        "min": [
-          -0.477387011051178,
-          0.007318237687286455,
-          -0.2647710144519806
-        ]
+        "size": [
+          0.9504270255565643,
+          0.6789910197257996,
+          1.6365059522140655
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         -0.002112553920596838,
@@ -67,10 +73,27 @@
         "object_name": "D00326 Fruit_Stand",
         "part_name": "D00326 Fruit_Stand"
       },
-      "volume": 0.08571428571428572
+      "volume": 0.08571428571428572,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "969c2f0fafeaee0b775bb5fde75cfb8ebf9333eefbe94d1356aab2c12878a4dd"
+    },
+    "usd_path": "batch11/D00326_Fruit_Stand/IsaacSim_assets_6a7efbf5b7a9c4204aa2f3b4/IsaacSim_asset_6a7efbf5b7a9c4204aa2f3b4.usd",
+    "usd_sha256": "ae1958edb9b4c3a32e884fac62a5ffdcd4524de76a84bf021b94585bf89a0de3",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -89,24 +112,58 @@
       "up_axis": "Z",
       "bounds_m": [
         0.9504270255565643,
-        1.6365059522140655,
-        0.6789910197257996
-      ]
+        0.6789910197257996,
+        1.6365059522140655
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "ae1958edb9b4c3a32e884fac62a5ffdcd4524de76a84bf021b94585bf89a0de3",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 60.0
+      "value_kg": 60.0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "ae1958edb9b4c3a32e884fac62a5ffdcd4524de76a84bf021b94585bf89a0de3",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 60.0,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 37,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "ae1958edb9b4c3a32e884fac62a5ffdcd4524de76a84bf021b94585bf89a0de3",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 37,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "ae1958edb9b4c3a32e884fac62a5ffdcd4524de76a84bf021b94585bf89a0de3",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

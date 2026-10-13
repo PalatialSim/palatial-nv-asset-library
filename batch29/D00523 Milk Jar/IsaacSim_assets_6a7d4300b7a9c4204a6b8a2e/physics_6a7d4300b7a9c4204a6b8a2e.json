@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.04812999814748764,
-        0.2555990219116211,
-        0.0459510013461113
-      ],
       "min": [
         -0.04602300003170967,
-        0.0011460036039352417,
-        -0.045844998210668564
+        -0.0459510013461113,
+        0.0011460036039352417
+      ],
+      "max": [
+        0.04812999814748764,
+        0.045844998210668564,
+        0.2555990219116211
       ],
       "size": [
         0.09415299817919731,
-        0.25445301830768585,
-        0.09179599955677986
-      ]
+        0.09179599955677986,
+        0.25445301830768585
+      ],
+      "units": "m"
     },
     "description": "D00523 Milk Jar",
     "name": "D00523 Milk Jar",
     "object_type": "rigid_bodies",
-    "total_mass": 0.171
+    "total_mass": 0.17100000381469727,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00523",
   "parts": [
     {
       "bounds": {
-        "center": [
-          0.0010534990578889847,
-          0.12837251275777817,
-          5.300156772136688e-05
+        "min": [
+          -0.04602300003170967,
+          -0.0459510013461113,
+          0.0011460036039352417
         ],
         "max": [
           0.04812999814748764,
-          0.2555990219116211,
-          0.0459510013461113
+          0.045844998210668564,
+          0.2555990219116211
         ],
-        "min": [
-          -0.04602300003170967,
-          0.0011460036039352417,
-          -0.045844998210668564
-        ]
+        "size": [
+          0.09415299817919731,
+          0.09179599955677986,
+          0.25445301830768585
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         0.0007732458761893213,
@@ -59,7 +65,7 @@
         0.0009021565783768892,
         0.000906249217223376
       ],
-      "mass": 0.171,
+      "mass": 0.17100000381469727,
       "material": "plastic",
       "name": "D00523 Milk Jar",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00523 Milk Jar",
         "part_name": "D00523 Milk Jar"
       },
-      "volume": 0.00017100000381469727
+      "volume": 0.00017100000381469727,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "54453e3cf64416030f2a704aedd9f5230062f98f75ec3246e44dfbfbed4c2753"
+    },
+    "usd_path": "batch29/D00523 Milk Jar/IsaacSim_assets_6a7d4300b7a9c4204a6b8a2e/IsaacSim_asset_6a7d4300b7a9c4204a6b8a2e.usd",
+    "usd_sha256": "fae5dfb094075ec58239deb11e8a27eef3b2f83a0c09082c5116da9405cfc984",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -89,24 +112,58 @@
       "up_axis": "Z",
       "bounds_m": [
         0.09415299817919731,
-        0.25445301830768585,
-        0.09179599955677986
-      ]
+        0.09179599955677986,
+        0.25445301830768585
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "fae5dfb094075ec58239deb11e8a27eef3b2f83a0c09082c5116da9405cfc984",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.171
+      "value_kg": 0.17100000381469727,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "fae5dfb094075ec58239deb11e8a27eef3b2f83a0c09082c5116da9405cfc984",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.17100000381469727,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 2,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "fae5dfb094075ec58239deb11e8a27eef3b2f83a0c09082c5116da9405cfc984",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 2,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "fae5dfb094075ec58239deb11e8a27eef3b2f83a0c09082c5116da9405cfc984",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

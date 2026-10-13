@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.1415880024433136,
-        0.31766098737716675,
-        0.11470899730920792
-      ],
       "min": [
-        -0.1414490044116974,
-        -0.18853799998760223,
-        -2.8000000384054147e-05
+        -0.13247999548912048,
+        -0.18809600174427032,
+        3.735345400629704e-18
+      ],
+      "max": [
+        0.13243499398231506,
+        0.3336459994316101,
+        0.10439399629831314
       ],
       "size": [
-        0.283037006855011,
-        0.506198987364769,
-        0.11473699730959197
-      ]
+        0.26491498947143555,
+        0.5217420011758804,
+        0.10439399629831314
+      ],
+      "units": "m"
     },
     "description": "A dark cast iron wok with a textured bowl, a long primary handle with a rubberized grip, and a smaller opposite loop handle.",
     "name": "D00946 Cast-Iron Wok",
     "object_type": "rigid_bodies",
-    "total_mass": 5.8
+    "total_mass": 5.800000190734863,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00946",
   "parts": [
     {
       "bounds": {
-        "center": [
-          9.221343255618013e-05,
-          -0.005274759643050143,
-          0.0417084273652286
+        "min": [
+          -0.13247999548912048,
+          -0.18809600174427032,
+          3.735345400629704e-18
         ],
         "max": [
-          0.1415880024433136,
-          0.31766098737716675,
-          0.11470899730920792
+          0.13243499398231506,
+          0.3336459994316101,
+          0.10439399629831314
         ],
-        "min": [
-          -0.1414490044116974,
-          -0.18853799998760223,
-          -2.8000000384054147e-05
-        ]
+        "size": [
+          0.26491498947143555,
+          0.5217420011758804,
+          0.10439399629831314
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         0.0002268266753859173,
@@ -59,7 +65,7 @@
         0.09311632240606735,
         0.11083361066900269
       ],
-      "mass": 5.8,
+      "mass": 5.800000190734863,
       "material": "cast_iron",
       "name": "D00946 Wok Bowl",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00946 Wok Bowl",
         "part_name": "D00946 Wok Bowl"
       },
-      "volume": 0.0006087183056510513
+      "volume": 0.0006087183056510513,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "ac6d36828fc2d3ecc1288055e28db3a1f5cb9d5074d8f57551196f067afbaaab"
+    },
+    "usd_path": "batch9/D00946 Wok Bowl/IsaacSim_assets_69f72bc47f5104dbf232934c/IsaacSim_asset_69f72bc47f5104dbf232934c.usd",
+    "usd_sha256": "8a5e3481ceb6e0a9999c18491be4ee7cd2875fc858f1d74ab8af4e95f2c68bd3",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {},
   "units": {
@@ -86,25 +109,59 @@
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
-        0.283037006855011,
-        0.506198987364769,
-        0.11473699730959197
-      ]
+        0.26491498947143555,
+        0.5217420011758804,
+        0.10439399629831314
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "8a5e3481ceb6e0a9999c18491be4ee7cd2875fc858f1d74ab8af4e95f2c68bd3",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 5.8
+      "value_kg": 5.800000190734863,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "8a5e3481ceb6e0a9999c18491be4ee7cd2875fc858f1d74ab8af4e95f2c68bd3",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 5.800000190734863,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 34,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "8a5e3481ceb6e0a9999c18491be4ee7cd2875fc858f1d74ab8af4e95f2c68bd3",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 34,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "8a5e3481ceb6e0a9999c18491be4ee7cd2875fc858f1d74ab8af4e95f2c68bd3",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

@@ -1,72 +1,103 @@
-# palatial-nv-asset-library
+---
+license: cc-by-4.0
+pretty_name: Palatial NV Asset Library
+language:
+- en
+tags:
+- 3d
+- robotics
+- simulation
+- isaac-sim
+- usd
+- articulated-objects
+size_categories:
+- 1K<n<10K
+configs:
+- config_name: default
+  data_files:
+  - split: train
+    path: data/catalog.parquet
+---
 
-A library of USD assets (meshes, textures, physics configs, and Isaac Sim validation artifacts) for use with NVIDIA Isaac Sim.
+# Palatial NV Asset Library
 
-**[Download on Hugging Face](https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library) · [Browse the visual gallery](https://palatialsim.github.io/palatial-nv-asset-library/)**
+The Palatial NV Asset Library was **generated and verified by Palatial in collaboration with NVIDIA Robotics** to support open robotics research.
 
-Assets are available under **CC BY 4.0**; gallery code and automation are available under **Apache 2.0**. See [LICENSING.md](LICENSING.md).
+**[Browse the visual gallery](https://palatialsim.github.io/palatial-nv-asset-library/) · [Source repository](https://github.com/PalatialSim/palatial-nv-asset-library) · [Download files](https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/tree/main)**
 
-## Visual previews and simulation videos
+This release contains **1,013 USD assets across 41 batches**, with textures, physics metadata, rendered and collision previews, and recorded simulation videos. The library is intended for researchers building simulation scenes and studying robotic perception, manipulation, and object interaction in NVIDIA Isaac Sim. The source snapshot is approximately 28.9 GB.
 
-Open the [live asset gallery](https://palatialsim.github.io/palatial-nv-asset-library/) to browse **1,013 assets across 41 batches (Batch 1–Batch 41)** without downloading the repository or installing Isaac Sim. [Batch 41](https://palatialsim.github.io/palatial-nv-asset-library/?batch=batch41) adds **36 assets (D01028–D01063)**, each with a rendered preview, collision preview, simulation video, USD package, and physics JSON.
+The gallery is the quickest way to preview assets without downloading them or installing Isaac Sim. Search by name or asset ID, select a batch, filter authored moving joints, switch between rendered and collision views, and open a batch montage. The dataset table provides a thumbnail, collision thumbnail, dimensions, authored-joint indicator, USD path, and download links for each asset.
 
-Choose a batch or use the previous/next arrows. Search by name or ID, filter by moving joints, switch between rendered and collision views, and open a full-size montage. Hover a card to preview its video. [Batch montage images](gallery/montages/) are also in the repository.
+## Download an asset
 
-To browse locally, run this from the repository root:
+Keep the complete asset folder together so relative texture, material, and behavior-script references remain available. Downloading the USD alone may omit its dependencies.
 
-```bash
-python3 -m http.server 8000
+```python
+from huggingface_hub import snapshot_download
+
+snapshot_download(
+    repo_id="PalatialSim/palatial-nv-asset-library",
+    repo_type="dataset",
+    allow_patterns=["batch10/D00006 Bamboo Basket/**", "LICENSE*", "LICENSING.md"],
+    local_dir="palatial-assets",
+)
 ```
 
-Then open <http://localhost:8000/gallery/>. Isaac Sim is not needed to view the gallery.
-
-- **Scale:** Gallery dimensions are transformed visual-mesh bounds in X × Y × Z order, in metres. Batch 41 USDs declare `metersPerUnit = 1` and Z up.
-- **Joints:** The moving-joints filter identifies 90 assets with enabled authored USD joints and 923 without. Batch 41 has 16 assets with moving joints (40 joints total) and 20 without. A video may not exercise every joint.
-- **Collisions:** Collision images show authored collision geometry. Colors distinguish collision pieces.
-- **Simulation videos:** Videos show recorded test behavior, including tipping where it occurs.
-
-## Metadata release
-
-The 2026-10-08 repair standardizes 154 affected assets and fixes all reported missing fields, mass rounding and verification gaps. Verification is scoped to consistency with the delivered USD. See [release notes](RELEASE_NOTES.md), [verification policy](VERIFICATION.md) and [per-asset evidence](reports/metadata-repair-20261008.json).
-
-## Download assets
-
-For selective or resumable asset downloads, use the [Hugging Face dataset](https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library). Its searchable catalog includes rendered and collision thumbnails plus per-asset folder and USD links.
+To download the whole library:
 
 ```bash
 hf download PalatialSim/palatial-nv-asset-library --repo-type dataset --local-dir palatial-assets
 ```
 
-For the source repository and gallery code:
+To browse the catalog programmatically:
 
-```bash
-git clone https://github.com/PalatialSim/palatial-nv-asset-library.git
-cd palatial-nv-asset-library
+```python
+from datasets import load_dataset
+
+assets = load_dataset("PalatialSim/palatial-nv-asset-library", split="train")
+print(assets[0]["name"], assets[0]["usd_path"])
 ```
 
-The current source snapshot stores the asset binaries directly in Git. A full clone is large; Git LFS is not required for these files. To preserve texture and behavior-script references, retain each complete asset folder when copying or downloading an asset.
+`train` is the Hub table split name; this release does not define a machine-learning training/test partition.
 
-## Repository layout
+## Organization
 
-```text
-batch10/D00006 Bamboo Basket/
-├── IsaacSim_assets_<id>/
-│   ├── IsaacSim_asset_<id>.usd
-│   ├── physics_<id>.json
-│   └── textures/
-└── sim-video/
+The original batch and asset folder paths are preserved. Each asset has one USD and a physics JSON, plus its textures, material files, behavior scripts where supplied, and simulation recording. `gallery/` contains preview images, montages, and the browser gallery. `data/catalog.parquet` contains one searchable row per asset with embedded rendered and collision thumbnails, resized to fit within 512 × 512 pixels. Original preview images retain their source resolution. `data/catalog.jsonl` provides a readable index. The file manifest records Git blob hashes and byte sizes for the current source revision.
+
+The gallery identifies 90 assets with enabled authored moving joints and 923 without. An authored-joint indicator does not mean a video exercises every joint. Bounds are transformed visual-mesh dimensions in X × Y × Z order, in metres; consult each USD and physics JSON for units and axis metadata.
+
+## Verification and research use
+
+The 2026-10-13 release uses NVIDIA Robotics-Prop 4.0.0 with separate single-body, multi-body and articulated checks in Isaac Sim 6.1.0.0 (PhysX). Current acceptance: **1,013 static profile passes, 59 native passes and 35 completed SimReady packages out of 1,013 assets.** The [release manifest](reports/current-release.json) binds the catalog, physics metadata and per-asset evidence. Native passes require complete planned test coverage, unchanged USD bytes, an independently checked black-background thumbnail and, for moving joints, independent joint-constraint checks.
+
+Authored geometry dimensions, mass and collision data are checked against the USD. These properties are not independently calibrated from physical measurements. Existing simulation recordings remain available; the current release's native verdicts come from the new hash-bound test evidence. See [release notes](RELEASE_NOTES.md) and [verification policy](VERIFICATION.md).
+
+## License and attribution
+
+Assets, metadata, previews, and recordings: **[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)**. Software and automation: **[Apache 2.0](LICENSE-CODE)**. See [LICENSING.md](LICENSING.md) for the scope and [LICENSE](LICENSE) for the complete asset license.
+
+Attribution: **Palatial Platforms — Palatial NV Asset Library**. Link to this dataset or the source repository and CC BY 4.0, and indicate modifications when sharing changed assets.
+
+## Provenance
+
+The current release is derived from the original GitHub revision `a8c65abbf0304a0e58b99157c80d59bd504c8484` and Hugging Face revision `154e2d76f519421b55c0a0f4f22e7b4a37b2cc90`. Original source assets were preserved during repair. The [release manifest](reports/current-release.json) records the exact metadata artifacts, source hashes, repaired USD hashes, native coverage and immutable package URLs. Textures and existing recordings retain their delivered bytes.
+
+Each completed package appears in a logical asset folder such as `D00006/`. Preserve the complete folder when downloading; its USD, textures, thumbnail, validation and benchmark sidecars, package definition and bill of materials belong together. The original `batch*/` paths remain available for existing consumers.
+
+```python
+snapshot_download(
+    repo_id="PalatialSim/palatial-nv-asset-library",
+    repo_type="dataset",
+    allow_patterns=["D00006/**", "LICENSE*", "LICENSING.md"],
+    local_dir="palatial-simready-assets",
+)
 ```
-
-Asset layouts vary; the original supplied paths are retained. `gallery/` contains browser previews and batch montages.
-
-## License
-
-Copyright 2026 Palatial Platforms. Asset files, metadata, previews, and recordings are licensed under [CC BY 4.0](LICENSE). Software and automation are licensed under [Apache 2.0](LICENSE-CODE). See [LICENSING.md](LICENSING.md) for attribution and scope.
-
-The 2026-10-08 Drive handoff also updates 64 asset names using exact source asset IDs and the supplied final names. All matching entries are name-only changes; covers and model packages remain as delivered. The other 141 handoff entries do not match this repository by source ID. [Name repair evidence](reports/name-repair-20261008.json) records the matches.
 
 ## Asset name update register
 
 The complete [205-record handoff register](reports/rename-register-20261008.csv) includes original asset IDs, old and corrected names, and preview links.
 
 All 205 originals were found in the canonical Palatial Library with their corrected names. 65 are matched to this NV export: 64 by original ID and Masticating Juicer (D00423) by verified package content. The other 140 have no confirmed NV mapping; use their original preview links. [Reconciliation evidence](reports/rename-reconciliation-20261008.md) documents the checks and remaining metadata gaps. The broader Library retains its own per-asset license and attribution.
+
+The confirmed juicer rename and full source register were published from [source commit 5a123e7bdf44](https://github.com/PalatialSim/palatial-nv-asset-library/commit/5a123e7bdf445ccc0e2f2849586d700554668f0d), titled **release ready**. The NV collection contains 1,013 models and 65 confirmed handoff name matches; original model and recording bytes are preserved.

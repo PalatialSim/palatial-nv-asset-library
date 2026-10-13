@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.24445900321006775,
-        0.10300599783658981,
-        0.04557891935110092
-      ],
       "min": [
         -0.13828499615192413,
         -0.10291299968957901,
         0.0021359198726713657
       ],
+      "max": [
+        0.24445900321006775,
+        0.10300599783658981,
+        0.04557891935110092
+      ],
       "size": [
         0.3827439993619919,
         0.20591899752616882,
         0.043442999478429556
-      ]
+      ],
+      "units": "m"
     },
     "description": "D00199 Cooking Pan",
     "name": "D00199 Cooking Pan",
     "object_type": "rigid_bodies",
-    "total_mass": 2.25
+    "total_mass": 2.25,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00199",
   "parts": [
     {
       "bounds": {
-        "center": [
-          0.05308700352907181,
-          4.649907350540161e-05,
-          0.023857419611886144
+        "min": [
+          -0.13828499615192413,
+          -0.10291299968957901,
+          0.0021359198726713657
         ],
         "max": [
           0.24445900321006775,
           0.10300599783658981,
           0.04557891935110092
         ],
-        "min": [
-          -0.13828499615192413,
-          -0.10291299968957901,
-          0.0021359198726713657
-        ]
+        "size": [
+          0.3827439993619919,
+          0.20591899752616882,
+          0.043442999478429556
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         0.02221015654504299,
@@ -67,10 +73,27 @@
         "object_name": "D00199 Cooking Pan",
         "part_name": "D00199 Cooking Pan"
       },
-      "volume": 0.0003125
+      "volume": 0.0003125,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "33d3d57d90a5c1aed31db7588090a7cabc671eb6fb51eab27aa214b11f5b42e7"
+    },
+    "usd_path": "batch23/D00199_Cooking_Pan/IsaacSim_assets_6a7431bb92349ccf3105f75b/IsaacSim_asset_6a7431bb92349ccf3105f75b.usd",
+    "usd_sha256": "9664a7be0af493dcc47705a1b0bc6c3a0a57bb249abdb7c7654925d982db3724",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -91,22 +114,56 @@
         0.3827439993619919,
         0.20591899752616882,
         0.043442999478429556
-      ]
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "9664a7be0af493dcc47705a1b0bc6c3a0a57bb249abdb7c7654925d982db3724",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 2.25
+      "value_kg": 2.25,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "9664a7be0af493dcc47705a1b0bc6c3a0a57bb249abdb7c7654925d982db3724",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 2.25,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 10,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "9664a7be0af493dcc47705a1b0bc6c3a0a57bb249abdb7c7654925d982db3724",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 10,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "9664a7be0af493dcc47705a1b0bc6c3a0a57bb249abdb7c7654925d982db3724",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

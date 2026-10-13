@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.0547223761677742,
-        0.03391989693045616,
-        0.07781854271888733
-      ],
       "min": [
-        -0.03901118412613869,
-        -0.03401007130742073,
-        -9.231484727934003e-05
+        -0.03900900110602379,
+        -0.03401700034737587,
+        -9.899999713525176e-05
+      ],
+      "max": [
+        0.054721999913454056,
+        0.033911000937223434,
+        0.07781299948692322
       ],
       "size": [
-        0.09373356029391289,
-        0.06792996823787689,
-        0.07791085756616667
-      ]
+        0.09373100101947784,
+        0.0679280012845993,
+        0.07791199948405847
+      ],
+      "units": "m"
     },
     "description": "A matte white ceramic coffee mug with a cylindrical body and a C-shaped handle.",
     "name": "D00544 Mug Glass",
     "object_type": "rigid_bodies",
-    "total_mass": 0.35
+    "total_mass": 0.3499999940395355,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00544",
   "parts": [
     {
       "bounds": {
-        "center": [
-          -0.0024228184682698714,
-          -5.019265883551864e-05,
-          0.03631398494663016
+        "min": [
+          -0.03900900110602379,
+          -0.03401700034737587,
+          -9.899999713525176e-05
         ],
         "max": [
-          0.0547223761677742,
-          0.03391989693045616,
-          0.07781854271888733
+          0.054721999913454056,
+          0.033911000937223434,
+          0.07781299948692322
         ],
-        "min": [
-          -0.03901118412613869,
-          -0.03401007130742073,
-          -9.231484727934003e-05
-        ]
+        "size": [
+          0.09373100101947784,
+          0.0679280012845993,
+          0.07791199948405847
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         -0.0023379734046859177,
@@ -59,7 +65,7 @@
         0.00034457769481823137,
         0.0003802262159633782
       ],
-      "mass": 0.35,
+      "mass": 0.3499999940395355,
       "material": "ceramic",
       "name": "D00544 Mug Glass",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00544 Mug Glass",
         "part_name": "D00544 Mug Glass"
       },
-      "volume": 7.543735806943496e-05
+      "volume": 7.543735806943496e-05,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "9b28fb0621786326406a12d1086116825415ee1ffc4bb1a2bb1fa2ec4543bbdc"
+    },
+    "usd_path": "batch6/D00544 Mug Glass/IsaacSim_assets_69f5f49b431507ff7cfff3f1/IsaacSim_asset_69f5f49b431507ff7cfff3f1.usd",
+    "usd_sha256": "8da30f63d7ca4b2fb530b3309d56d4657cc566c40c725d585efb296d82c173b0",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {},
   "units": {
@@ -86,25 +109,59 @@
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
-        0.09373356029391289,
-        0.06792996823787689,
-        0.07791085756616667
-      ]
+        0.09373100101947784,
+        0.0679280012845993,
+        0.07791199948405847
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "8da30f63d7ca4b2fb530b3309d56d4657cc566c40c725d585efb296d82c173b0",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.35
+      "value_kg": 0.3499999940395355,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "8da30f63d7ca4b2fb530b3309d56d4657cc566c40c725d585efb296d82c173b0",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.3499999940395355,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 54,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "8da30f63d7ca4b2fb530b3309d56d4657cc566c40c725d585efb296d82c173b0",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 54,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "8da30f63d7ca4b2fb530b3309d56d4657cc566c40c725d585efb296d82c173b0",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

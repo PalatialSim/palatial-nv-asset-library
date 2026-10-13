@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.0418037548661232,
-        0.0718923881649971,
-        0.04171429201960564
-      ],
       "min": [
-        -0.04643719643354416,
-        0.0,
-        -0.0465867854654789
+        -0.046411000192165375,
+        -0.04173700138926506,
+        -4.999999873689376e-06
+      ],
+      "max": [
+        0.041776999831199646,
+        0.04661000147461891,
+        0.0718970000743866
       ],
       "size": [
-        0.08824095129966736,
-        0.0718923881649971,
-        0.08830107748508453
-      ]
+        0.08818800002336502,
+        0.08834700286388397,
+        0.07190200007426029
+      ],
+      "units": "m"
     },
     "description": "A glossy red bell pepper with rounded lobes and a green, slightly curved stem. The surface appears waxy and organic with shallow wrinkles and small natural blemishes.",
     "name": "D00021 Bell Pepper",
     "object_type": "rigid_bodies",
-    "total_mass": 0.17
+    "total_mass": 0.17000000178813934,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00021",
   "parts": [
     {
       "bounds": {
-        "center": [
-          -0.0018590442571709256,
-          0.03541899657886644,
-          -0.0012615805751210395
+        "min": [
+          -0.046411000192165375,
+          -0.04173700138926506,
+          -4.999999873689376e-06
         ],
         "max": [
-          0.0418037548661232,
-          0.0718923881649971,
-          0.04171429201960564
+          0.041776999831199646,
+          0.04661000147461891,
+          0.0718970000743866
         ],
-        "min": [
-          -0.04643719643354416,
-          0.0,
-          -0.0465867854654789
-        ]
+        "size": [
+          0.08818800002336502,
+          0.08834700286388397,
+          0.07190200007426029
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         -0.0015588959343580424,
@@ -59,7 +65,7 @@
         0.0001305925823591767,
         0.00013258048174629377
       ],
-      "mass": 0.17,
+      "mass": 0.17000000178813934,
       "material": "organic_vegetable_tissue",
       "name": "D00021 Bell Pepper",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00021 Bell Pepper",
         "part_name": "D00021 Bell Pepper"
       },
-      "volume": 0.0003074173090445887
+      "volume": 0.0003074173090445887,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "c9a88c145b40214dd65d8239cd9621f6c7ef4e4c535ba186d4be236a50cf2a44"
+    },
+    "usd_path": "batch9/D00021 Bell Pepper/IsaacSim_assets_69f1f00f59057a931058ad25/IsaacSim_asset_69f1f00f59057a931058ad25.usd",
+    "usd_sha256": "b1b4322a8977a6150b8f5c86757ce5ec68e565469cb2a33c4abfc094abb060d8",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {},
   "units": {
@@ -86,25 +109,59 @@
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
-        0.08824095129966736,
-        0.0718923881649971,
-        0.08830107748508453
-      ]
+        0.08818800002336502,
+        0.08834700286388397,
+        0.07190200007426029
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "b1b4322a8977a6150b8f5c86757ce5ec68e565469cb2a33c4abfc094abb060d8",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.17
+      "value_kg": 0.17000000178813934,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "b1b4322a8977a6150b8f5c86757ce5ec68e565469cb2a33c4abfc094abb060d8",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.17000000178813934,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 82,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "b1b4322a8977a6150b8f5c86757ce5ec68e565469cb2a33c4abfc094abb060d8",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 82,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "b1b4322a8977a6150b8f5c86757ce5ec68e565469cb2a33c4abfc094abb060d8",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

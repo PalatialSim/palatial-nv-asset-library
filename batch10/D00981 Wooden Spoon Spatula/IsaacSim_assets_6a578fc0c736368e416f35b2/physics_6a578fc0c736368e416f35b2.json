@@ -80,13 +80,13 @@
   ],
   "provenance": {
     "metadata_repair": {
-      "date": "2026-10-08T04:48:10.976448+00:00",
+      "date": "2026-10-13T19:50:31.621292+00:00",
       "source": "delivered USD inspected with OpenUSD 26.8",
-      "report": "reports/metadata-repair-20261008.json",
-      "original_physics_sha256": "c2a96079cc40c66991b20d6620b52c047be0ef6132c19327915b56a8d8def7b1"
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "7c0464ad1c72d2196b3ebcd42ad6b9555a27430bbdde2141e91897ddc2ddf2d3"
     },
     "usd_path": "batch10/D00981 Wooden Spoon Spatula/IsaacSim_assets_6a578fc0c736368e416f35b2/IsaacSim_asset_6a578fc0c736368e416f35b2.usd",
-    "usd_sha256": "34b32431e76fe3006383d0968d4e621f091284a40ad3d342502835d29250813d",
+    "usd_sha256": "3342b3640d313a4697aad8ca329a45d67c158f1b3c5c88978e1a116f93821a9c",
     "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
     "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
     "source_meters_per_unit": 1.0,
@@ -110,9 +110,9 @@
       "confidence": "high",
       "units": "m",
       "up_axis": "Z",
-      "checked_at": "2026-10-08T04:48:10.976448+00:00",
-      "evidence": "reports/metadata-repair-20261008.json",
-      "usd_sha256": "34b32431e76fe3006383d0968d4e621f091284a40ad3d342502835d29250813d",
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "3342b3640d313a4697aad8ca329a45d67c158f1b3c5c88978e1a116f93821a9c",
       "scope": "authored_usd_dimensions",
       "bounds_m": [
         0.35102200508117676,
@@ -126,9 +126,9 @@
       "status": "verified",
       "confidence": "high",
       "value_kg": 0.10199999809265137,
-      "checked_at": "2026-10-08T04:48:10.976448+00:00",
-      "evidence": "reports/metadata-repair-20261008.json",
-      "usd_sha256": "34b32431e76fe3006383d0968d4e621f091284a40ad3d342502835d29250813d",
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "3342b3640d313a4697aad8ca329a45d67c158f1b3c5c88978e1a116f93821a9c",
       "scope": "authored_usd_mass_consistency",
       "part_sum_kg": 0.10199999809265137,
       "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
@@ -137,9 +137,9 @@
       "status": "verified",
       "confidence": "high",
       "shape_count": 15,
-      "checked_at": "2026-10-08T04:48:10.976448+00:00",
-      "evidence": "reports/metadata-repair-20261008.json",
-      "usd_sha256": "34b32431e76fe3006383d0968d4e621f091284a40ad3d342502835d29250813d",
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "3342b3640d313a4697aad8ca329a45d67c158f1b3c5c88978e1a116f93821a9c",
       "scope": "authored_usd_collision_schema",
       "enabled_shape_count": 15,
       "approximations": [
@@ -151,18 +151,19 @@
       "status": "verified",
       "confidence": "high",
       "moving_joints": 0,
-      "checked_at": "2026-10-08T04:48:10.976448+00:00",
-      "evidence": "reports/metadata-repair-20261008.json",
-      "usd_sha256": "34b32431e76fe3006383d0968d4e621f091284a40ad3d342502835d29250813d",
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "3342b3640d313a4697aad8ca329a45d67c158f1b3c5c88978e1a116f93821a9c",
       "scope": "authored_usd_joint_schema",
       "joint_count": 0,
       "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
     },
     "scope": "authored_usd_metadata_consistency",
     "runtime": {
-      "status": "not_revalidated",
-      "scope": "native_simulation",
-      "note": "Existing simulation videos remain available. This repair does not claim new drop/contact, friction, stability or joint-actuation tests."
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

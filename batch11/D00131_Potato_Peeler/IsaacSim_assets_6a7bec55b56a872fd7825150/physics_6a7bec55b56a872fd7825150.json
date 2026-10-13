@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.02963300049304962,
-        0.024409119971096516,
-        0.0806960016489029
-      ],
       "min": [
         -0.02608400024473667,
-        0.0006581202691222643,
-        -0.055727001279592514
+        -0.0806960016489029,
+        0.0006581202691222643
+      ],
+      "max": [
+        0.02963300049304962,
+        0.055727001279592514,
+        0.024409119971096516
       ],
       "size": [
         0.05571700073778629,
-        0.02375099970197425,
-        0.1364230029284954
-      ]
+        0.1364230029284954,
+        0.02375099970197425
+      ],
+      "units": "m"
     },
     "description": "D00131 Potato_Peeler",
     "name": "D00131 Potato_Peeler",
     "object_type": "rigid_bodies",
-    "total_mass": 0.04
+    "total_mass": 0.03999999910593033,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00131",
   "parts": [
     {
       "bounds": {
-        "center": [
-          0.001774500124156475,
-          0.01253362012010939,
-          0.01248450018465519
+        "min": [
+          -0.02608400024473667,
+          -0.0806960016489029,
+          0.0006581202691222643
         ],
         "max": [
           0.02963300049304962,
-          0.024409119971096516,
-          0.0806960016489029
+          0.055727001279592514,
+          0.024409119971096516
         ],
-        "min": [
-          -0.02608400024473667,
-          0.0006581202691222643,
-          -0.055727001279592514
-        ]
+        "size": [
+          0.05571700073778629,
+          0.1364230029284954,
+          0.02375099970197425
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         2.084940206259489e-05,
@@ -59,7 +65,7 @@
         4.730988439405337e-05,
         5.10113277414348e-05
       ],
-      "mass": 0.04,
+      "mass": 0.03999999910593033,
       "material": "glass_or_stone",
       "name": "D00131 Potato_Peeler",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00131 Potato_Peeler",
         "part_name": "D00131 Potato_Peeler"
       },
-      "volume": 1.1764705619391274e-05
+      "volume": 1.1764705619391274e-05,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "3659991bb23b013213bb8b6b25386fe56361cd77325e03815e98259b33cb0c15"
+    },
+    "usd_path": "batch11/D00131_Potato_Peeler/IsaacSim_assets_6a7bec55b56a872fd7825150/IsaacSim_asset_6a7bec55b56a872fd7825150.usd",
+    "usd_sha256": "eeb46b7ef06009f9523a3748b6591ebbf86a4768275fdc7f337f7371142d779b",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -89,24 +112,58 @@
       "up_axis": "Z",
       "bounds_m": [
         0.05571700073778629,
-        0.02375099970197425,
-        0.1364230029284954
-      ]
+        0.1364230029284954,
+        0.02375099970197425
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "eeb46b7ef06009f9523a3748b6591ebbf86a4768275fdc7f337f7371142d779b",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.04
+      "value_kg": 0.03999999910593033,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "eeb46b7ef06009f9523a3748b6591ebbf86a4768275fdc7f337f7371142d779b",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.03999999910593033,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 9,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "eeb46b7ef06009f9523a3748b6591ebbf86a4768275fdc7f337f7371142d779b",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 9,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "eeb46b7ef06009f9523a3748b6591ebbf86a4768275fdc7f337f7371142d779b",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

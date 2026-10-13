@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.12172380834817886,
-        0.0984048992395401,
-        0.2763591706752777
-      ],
       "min": [
-        -0.11150512099266052,
-        -0.0543958954513073,
+        -0.11150500178337097,
+        -0.054395999759435654,
         -1.2000000424450263e-05
       ],
+      "max": [
+        0.12172400206327438,
+        0.09840500354766846,
+        0.27636000514030457
+      ],
       "size": [
-        0.23322892934083939,
-        0.1528007946908474,
-        0.27637117067570216
-      ]
+        0.23322900384664536,
+        0.1528010033071041,
+        0.276372005140729
+      ],
+      "units": "m"
     },
     "description": "A rectangular white picture frame with a decorative molded border and a plain off-white matting. The frame is supported by a brown cardboard easel back.",
     "name": "D00614 Picture Frame",
     "object_type": "rigid_bodies",
-    "total_mass": 0.6
+    "total_mass": 0.6000000238418579,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00614",
   "parts": [
     {
       "bounds": {
-        "center": [
-          -3.241243500428367e-05,
-          0.002179964378020748,
-          0.12706241827415643
+        "min": [
+          -0.11150500178337097,
+          -0.054395999759435654,
+          -1.2000000424450263e-05
         ],
         "max": [
-          0.12172380834817886,
-          0.0984048992395401,
-          0.2763591706752777
+          0.12172400206327438,
+          0.09840500354766846,
+          0.27636000514030457
         ],
-        "min": [
-          -0.11150512099266052,
-          -0.0543958954513073,
-          -1.2000000424450263e-05
-        ]
+        "size": [
+          0.23322900384664536,
+          0.1528010033071041,
+          0.276372005140729
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         -0.004163913291156568,
@@ -59,7 +65,7 @@
         0.0036647722532452097,
         0.005388883002575258
       ],
-      "mass": 0.6,
+      "mass": 0.6000000238418579,
       "material": "painted_wood_mdf",
       "name": "D00614 Picture Frame",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00614 Picture Frame",
         "part_name": "D00614 Picture Frame"
       },
-      "volume": 0.0046125817628405
+      "volume": 0.0046125817628405,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "56bd42c1c73baaaabf17ea1e1199b921ddb1e921e23021180d1ff08eead2e370"
+    },
+    "usd_path": "batch8/D00614 Picture Frame/IsaacSim_assets_69f613c0431507ff7c08aec6/IsaacSim_asset_69f613c0431507ff7c08aec6.usd",
+    "usd_sha256": "03927e5ede0a4a0a97630775f4d03aa828ac2cd54af612baaa3b1fd0492580b9",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {},
   "units": {
@@ -86,25 +109,59 @@
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
-        0.23322892934083939,
-        0.1528007946908474,
-        0.27637117067570216
-      ]
+        0.23322900384664536,
+        0.1528010033071041,
+        0.276372005140729
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "03927e5ede0a4a0a97630775f4d03aa828ac2cd54af612baaa3b1fd0492580b9",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.6
+      "value_kg": 0.6000000238418579,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "03927e5ede0a4a0a97630775f4d03aa828ac2cd54af612baaa3b1fd0492580b9",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.6000000238418579,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 37,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "03927e5ede0a4a0a97630775f4d03aa828ac2cd54af612baaa3b1fd0492580b9",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 37,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "03927e5ede0a4a0a97630775f4d03aa828ac2cd54af612baaa3b1fd0492580b9",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

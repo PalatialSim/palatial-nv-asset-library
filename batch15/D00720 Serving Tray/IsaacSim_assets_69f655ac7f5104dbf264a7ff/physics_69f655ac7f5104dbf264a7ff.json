@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.18277433,
-        0.03854288,
-        0.12064501
-      ],
       "min": [
-        -0.18249667,
-        0.0,
-        -0.12264508
+        -0.1824990063905716,
+        -0.12064699828624725,
+        0.0003597451306921601
+      ],
+      "max": [
+        0.18277700245380402,
+        0.1226470023393631,
+        0.03894274427351031
       ],
       "size": [
-        0.365271,
-        0.03854288,
-        0.24329009000000001
-      ]
+        0.3652760088443756,
+        0.24329400062561035,
+        0.03858299914281815
+      ],
+      "units": "m"
     },
     "description": "A rectangular serving tray with a shallow depth and rounded corners. It features a smooth, matte white ceramic finish.",
     "name": "D00720 Serving Tray",
     "object_type": "rigid_bodies",
-    "total_mass": 1.34
+    "total_mass": 1.340000033378601,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00720",
   "parts": [
     {
       "bounds": {
-        "center": [
-          0.0002507813937230896,
-          0.013187801341613025,
-          -0.001072942505501325
+        "min": [
+          -0.1824990063905716,
+          -0.12064699828624725,
+          0.0003597451306921601
         ],
         "max": [
-          0.18277433,
-          0.03854288,
-          0.12064501
+          0.18277700245380402,
+          0.1226470023393631,
+          0.03894274427351031
         ],
-        "min": [
-          -0.18249667,
-          0.0,
-          -0.12264508
-        ]
+        "size": [
+          0.3652760088443756,
+          0.24329400062561035,
+          0.03858299914281815
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         0.0020634594840550162,
@@ -59,7 +65,7 @@
         0.0158207535391594,
         0.022791683812510368
       ],
-      "mass": 1.34,
+      "mass": 1.340000033378601,
       "material": "ceramic",
       "name": "D00720 Serving Tray",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00720 Serving Tray",
         "part_name": "D00720 Serving Tray"
       },
-      "volume": 0.0016426685675266762
+      "volume": 0.0016426685675266762,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "7d922763191a863d3d0d7b79b4a7715be599d354558d8216aac30f0cb55ef625"
+    },
+    "usd_path": "batch15/D00720 Serving Tray/IsaacSim_assets_69f655ac7f5104dbf264a7ff/IsaacSim_asset_69f655ac7f5104dbf264a7ff.usd",
+    "usd_sha256": "638f8534e9e0b50c4eb08e7b8c66b624c8df068bb059d7b746b04a5acac7289e",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -88,25 +111,59 @@
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
-        0.365271,
-        0.03854288,
-        0.24329009000000001
-      ]
+        0.3652760088443756,
+        0.24329400062561035,
+        0.03858299914281815
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "638f8534e9e0b50c4eb08e7b8c66b624c8df068bb059d7b746b04a5acac7289e",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 1.34
+      "value_kg": 1.340000033378601,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "638f8534e9e0b50c4eb08e7b8c66b624c8df068bb059d7b746b04a5acac7289e",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 1.340000033378601,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 20,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "638f8534e9e0b50c4eb08e7b8c66b624c8df068bb059d7b746b04a5acac7289e",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 20,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "638f8534e9e0b50c4eb08e7b8c66b624c8df068bb059d7b746b04a5acac7289e",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

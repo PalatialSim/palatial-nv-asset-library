@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.10947518050670624,
-        0.03136506676673889,
-        0.1097230613231659
-      ],
       "min": [
-        -0.10939381271600723,
-        6.548503961312235e-08,
-        -0.10436394065618515
+        -0.10877200216054916,
+        -0.11049900203943253,
+        7.056910243442006e-18
+      ],
+      "max": [
+        0.10920400172472,
+        0.10498099774122238,
+        0.027285000309348106
       ],
       "size": [
-        0.21886899322271347,
-        0.03136500128169928,
-        0.21408700197935104
-      ]
+        0.21797600388526917,
+        0.2154799997806549,
+        0.0272850003093481
+      ],
+      "units": "m"
     },
     "description": "A square, light beige ceramic or melamine divided tray with a speckled pattern. It features three distinct recessed compartments.",
     "name": "D00129 Chop Tray",
     "object_type": "rigid_bodies",
-    "total_mass": 0.84
+    "total_mass": 0.8399999737739563,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00129",
   "parts": [
     {
       "bounds": {
-        "center": [
-          4.262301001228119e-05,
-          0.011718646448418954,
-          0.002017263587357175
+        "min": [
+          -0.10877200216054916,
+          -0.11049900203943253,
+          7.056910243442006e-18
         ],
         "max": [
-          0.10947518050670624,
-          0.03136506676673889,
-          0.1097230613231659
+          0.10920400172472,
+          0.10498099774122238,
+          0.027285000309348106
         ],
-        "min": [
-          -0.10939381271600723,
-          6.548503961312235e-08,
-          -0.10436394065618515
-        ]
+        "size": [
+          0.21797600388526917,
+          0.2154799997806549,
+          0.0272850003093481
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         0.00030974393941321965,
@@ -59,7 +65,7 @@
         0.0033173056541489962,
         0.006447739209272324
       ],
-      "mass": 0.84,
+      "mass": 0.8399999737739563,
       "material": "melamine_heavy_plastic",
       "name": "D00129 Chop Tray",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00129 Chop Tray",
         "part_name": "D00129 Chop Tray"
       },
-      "volume": 0.001263648591480293
+      "volume": 0.001263648591480293,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "8d7c446e920e93dca9719b0b8ce7306994cdaa36b616e42299f1b9b01aaf2f23"
+    },
+    "usd_path": "batch5/D00129 Chop Tray/IsaacSim_assets_6a02b733f3726e6ad03e8cf8/IsaacSim_asset_6a02b733f3726e6ad03e8cf8.usd",
+    "usd_sha256": "ab0a1bf09ce6a2f903a6521a14b4ac992d7146a9ea675a731fd544914af4186b",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {},
   "units": {
@@ -86,25 +109,59 @@
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
-        0.21886899322271347,
-        0.03136500128169928,
-        0.21408700197935104
-      ]
+        0.21797600388526917,
+        0.2154799997806549,
+        0.0272850003093481
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "ab0a1bf09ce6a2f903a6521a14b4ac992d7146a9ea675a731fd544914af4186b",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.84
+      "value_kg": 0.8399999737739563,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "ab0a1bf09ce6a2f903a6521a14b4ac992d7146a9ea675a731fd544914af4186b",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.8399999737739563,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 1,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "ab0a1bf09ce6a2f903a6521a14b4ac992d7146a9ea675a731fd544914af4186b",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 1,
+      "approximations": [
+        "sdf"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "ab0a1bf09ce6a2f903a6521a14b4ac992d7146a9ea675a731fd544914af4186b",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

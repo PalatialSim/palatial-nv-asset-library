@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.20840400457382202,
-        0.14596900343894958,
-        0.02742147073149681
-      ],
       "min": [
         -0.20823100209236145,
         -0.14608600735664368,
         0.0020664699841290712
       ],
+      "max": [
+        0.20840400457382202,
+        0.14596900343894958,
+        0.02742147073149681
+      ],
       "size": [
         0.41663500666618347,
         0.29205501079559326,
         0.02535500074736774
-      ]
+      ],
+      "units": "m"
     },
     "description": "D00428 Madeleine Pan",
     "name": "D00428 Madeleine Pan",
     "object_type": "rigid_bodies",
-    "total_mass": 0.9
+    "total_mass": 0.8999999761581421,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00428",
   "parts": [
     {
       "bounds": {
-        "center": [
-          8.650124073028564e-05,
-          -5.85019588470459e-05,
-          0.014743970357812941
+        "min": [
+          -0.20823100209236145,
+          -0.14608600735664368,
+          0.0020664699841290712
         ],
         "max": [
           0.20840400457382202,
           0.14596900343894958,
           0.02742147073149681
         ],
-        "min": [
-          -0.20823100209236145,
-          -0.14608600735664368,
-          0.0020664699841290712
-        ]
+        "size": [
+          0.41663500666618347,
+          0.29205501079559326,
+          0.02535500074736774
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         9.689082071417943e-05,
@@ -59,7 +65,7 @@
         0.010765018872916698,
         0.01660251058638096
       ],
-      "mass": 0.9,
+      "mass": 0.8999999761581421,
       "material": "wood",
       "name": "D00428 Madeleine Pan",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00428 Madeleine Pan",
         "part_name": "D00428 Madeleine Pan"
       },
-      "volume": 0.0010960906137110788
+      "volume": 0.0010960906137110788,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "895786c2d9abe8b8ca33a513ed3e1e939f50c083cbd7d893c2b77e77e8016577"
+    },
+    "usd_path": "batch27/D00428 Madeleine Pan/IsaacSim_assets_6a799e90d43e189605365204/IsaacSim_asset_6a799e90d43e189605365204.usd",
+    "usd_sha256": "932429743dc8c46b3f57f5145b03abd156b5f7ec46584ddc0d1cb4849a6871a5",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -91,22 +114,56 @@
         0.41663500666618347,
         0.29205501079559326,
         0.02535500074736774
-      ]
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "932429743dc8c46b3f57f5145b03abd156b5f7ec46584ddc0d1cb4849a6871a5",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.9
+      "value_kg": 0.8999999761581421,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "932429743dc8c46b3f57f5145b03abd156b5f7ec46584ddc0d1cb4849a6871a5",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.8999999761581421,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 64,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "932429743dc8c46b3f57f5145b03abd156b5f7ec46584ddc0d1cb4849a6871a5",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 64,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "932429743dc8c46b3f57f5145b03abd156b5f7ec46584ddc0d1cb4849a6871a5",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

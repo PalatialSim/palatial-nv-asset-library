@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.05787322670221329,
-        0.03594588488340378,
-        0.07262134552001953
-      ],
       "min": [
-        -0.045722994953393936,
-        -0.03564492240548134,
-        -7.076032488839701e-05
+        -0.045722998678684235,
+        -0.03566199913620949,
+        8.000000889296643e-06
+      ],
+      "max": [
+        0.057895999401807785,
+        0.03594600036740303,
+        0.07268299907445908
       ],
       "size": [
-        0.10359622165560722,
-        0.07159080728888512,
-        0.07269210584490793
-      ]
+        0.10361899808049202,
+        0.07160799950361252,
+        0.07267499907356978
+      ],
+      "units": "m"
     },
     "description": "A white ceramic pitcher featuring a rounded body, a pouring spout, and a curved handle.",
     "name": "D00546 Mug Jug",
     "object_type": "rigid_bodies",
-    "total_mass": 0.25
+    "total_mass": 0.25,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00546",
   "parts": [
     {
       "bounds": {
-        "center": [
-          -0.0010463442143903794,
-          6.848842978252311e-05,
-          0.034414952692618586
+        "min": [
+          -0.045722998678684235,
+          -0.03566199913620949,
+          8.000000889296643e-06
         ],
         "max": [
-          0.05787322670221329,
-          0.03594588488340378,
-          0.07262134552001953
+          0.057895999401807785,
+          0.03594600036740303,
+          0.07268299907445908
         ],
-        "min": [
-          -0.045722994953393936,
-          -0.03564492240548134,
-          -7.076032488839701e-05
-        ]
+        "size": [
+          0.10361899808049202,
+          0.07160799950361252,
+          0.07267499907356978
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         -0.0005410221729255001,
@@ -67,10 +73,27 @@
         "object_name": "D00546 Mug Jug",
         "part_name": "D00546 Mug Jug"
       },
-      "volume": 6.017978460073618e-05
+      "volume": 6.017978460073618e-05,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "016d453b886a1f4ac541be0b752a66614cba05138500cea6535c881e37476e0a"
+    },
+    "usd_path": "batch13/D00546 Mug Jug/IsaacSim_assets_69f5f69a431507ff7c008725/IsaacSim_asset_69f5f69a431507ff7c008725.usd",
+    "usd_sha256": "aa7683a2f502e14b7d8e3255fcdccb4835ede5c5472cd7c88b1a979123932b40",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {},
   "units": {
@@ -86,25 +109,59 @@
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
-        0.10359622165560722,
-        0.07159080728888512,
-        0.07269210584490793
-      ]
+        0.10361899808049202,
+        0.07160799950361252,
+        0.07267499907356978
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "aa7683a2f502e14b7d8e3255fcdccb4835ede5c5472cd7c88b1a979123932b40",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.25
+      "value_kg": 0.25,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "aa7683a2f502e14b7d8e3255fcdccb4835ede5c5472cd7c88b1a979123932b40",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.25,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 75,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "aa7683a2f502e14b7d8e3255fcdccb4835ede5c5472cd7c88b1a979123932b40",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 75,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "aa7683a2f502e14b7d8e3255fcdccb4835ede5c5472cd7c88b1a979123932b40",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

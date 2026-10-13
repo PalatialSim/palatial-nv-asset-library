@@ -1,18 +1,21 @@
-# Metadata verification
+# Asset verification
 
-`verified` with `scope: authored_usd_*` means the metadata was checked against the delivered USD. It is separate from runtime simulation acceptance and real-world calibration. This release does not upgrade recorded videos into proof of stability or complete mechanism coverage.
+The 2026-10-13 release uses NVIDIA Robotics-Prop 4.0.0 with separate single-body, multi-body and articulated checks in Isaac Sim 6.1.0.0 (PhysX). Current acceptance: **1,013 static profile passes, 59 native passes and 35 completed SimReady packages out of 1,013 assets.** The [release manifest](reports/current-release.json) binds the catalog, physics metadata and per-asset evidence. Native passes require complete planned test coverage, unchanged USD bytes, an independently checked black-background thumbnail and, for moving joints, independent joint-constraint checks.
 
-For the 154 repaired assets, the evidence checks stage units and up axis, transformed visible-mesh bounds, positive authored rigid-body masses and part sums, joint existence and targets (including valid static frames), enabled state and ordered limits, collision API counts and finite mesh coordinates. No geometry, mass, friction or joint limits were inferred from object names. Only the orphan Cocktail Shaker joint was removed from a USD; other USD binaries were retained.
+The metadata audit verifies stage units and up axis, visible-mesh bounds, positive authored masses and part sums, collision APIs, enabled states, finite mesh coordinates, joint references and ordered limits. These checks establish agreement with the authored USD. They do not measure physical mass, friction or real-world dimensions.
 
-Each repaired JSON records `validation.scope`, a scope for each individual check, `validation.runtime.status`, and the delivered USD SHA-256. `asset.bounds` and `parts[].bounds` use the stage's world axes, metres and default authored pose. The two legacy unnumbered assets use their existing folder names for `asset_id`. Unlimited USD force/limit sentinels in raw attribute dictionaries use quoted Infinity strings for strict JSON interoperability.
+Native acceptance uses the unmodified NVIDIA benchmark suite and two explicitly identified Palatial tests. Every planned result must exist exactly once for the same USD SHA-256 in Isaac Sim 6.1.0.0. Failed results, invalid PhysX transforms, incomplete joint coverage, missing native thumbnails and failed independent joint constraints prevent release readiness. Tests skipped by NVIDIA for inapplicable features are recorded separately from passes. Full raw results, logs and media are retained in immutable Hugging Face evidence archives; release metadata links each asset to its qualification.
 
-Run the fast completeness and consistency audit from the repository root:
+Packaging uses the official WRAPP packager with required pre-validation, bill-of-materials validation and post-validation. Published package manifests use full immutable Hugging Face commit hashes. Catalog, gallery, physics metadata and release report must agree on the repaired USD hash and acceptance status before publication.
+
+Run the metadata and current-release checks from the repository root:
 
 ```sh
 python3 tools/audit_metadata.py .
+python3 tools/release_manifest.py . --require-ready
 ```
 
-For the full repaired-assets USD and gallery parity check, install the OpenUSD dependencies in a virtual environment, retain complete asset folders, and run:
+To reopen all delivered USDs and recompute authored geometry and physics metadata:
 
 ```sh
 python3 -m venv .venv
@@ -20,4 +23,8 @@ python3 -m venv .venv
 .venv/bin/python tools/verify_metadata_usd.py .
 ```
 
-The full check reopens each repaired USD, recomputes bounds and authored physics metadata, checks JSON/gallery agreement and verifies report SHA-256 hashes. It does not run Isaac Sim, cook collision hulls, execute joint drives or measure real-world properties. The [repair report](reports/metadata-repair-20261008.json) records the exact inputs and results.
+## Recorded limitations
+
+NVIDIA's installed joint-movement test computes a relative transform in an order that can turn common world translation into a large relative-translation metric. The unmodified results are retained. The release therefore also checks actual joint-local anchor closure, finite poses, ordered limits and measurable joint movement. The independent checks do not replace failed official test verdicts. The reproduction and per-joint observations are included in the release evidence.
+
+D00241's passive hinge mechanisms are validated. Its original nonlinear magnetic-latch behavior script is not part of the portable SimReady package or its certified behavior. Existing legacy simulation recordings retain their original provenance and are not new native acceptance evidence.

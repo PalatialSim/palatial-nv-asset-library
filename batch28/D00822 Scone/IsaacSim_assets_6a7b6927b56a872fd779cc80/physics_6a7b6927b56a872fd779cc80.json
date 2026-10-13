@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.03806700184941292,
-        0.03803199902176857,
-        0.038906268775463104
-      ],
       "min": [
         -0.037039998918771744,
         -0.037105001509189606,
         0.0004112697206437588
       ],
+      "max": [
+        0.03806700184941292,
+        0.03803199902176857,
+        0.038906268775463104
+      ],
       "size": [
         0.07510700076818466,
         0.07513700053095818,
         0.038494999054819345
-      ]
+      ],
+      "units": "m"
     },
     "description": "D00822 Scone",
     "name": "D00822 Scone",
     "object_type": "rigid_bodies",
-    "total_mass": 0.15
+    "total_mass": 0.15000000596046448,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00822",
   "parts": [
     {
       "bounds": {
-        "center": [
-          0.0005135014653205872,
-          0.0004634987562894821,
-          0.01965876924805343
+        "min": [
+          -0.037039998918771744,
+          -0.037105001509189606,
+          0.0004112697206437588
         ],
         "max": [
           0.03806700184941292,
           0.03803199902176857,
           0.038906268775463104
         ],
-        "min": [
-          -0.037039998918771744,
-          -0.037105001509189606,
-          0.0004112697206437588
-        ]
+        "size": [
+          0.07510700076818466,
+          0.07513700053095818,
+          0.038494999054819345
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         0.00035888038109987974,
@@ -59,7 +65,7 @@
         6.082887193770148e-05,
         9.239586506737396e-05
       ],
-      "mass": 0.15,
+      "mass": 0.15000000596046448,
       "material": "foam",
       "name": "D00822 Scone",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00822 Scone",
         "part_name": "D00822 Scone"
       },
-      "volume": 0.0003333333465788099
+      "volume": 0.0003333333465788099,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "3aa7cb6c5c90f968811448d9783e644561369928951fc3d8b111a05dc50df441"
+    },
+    "usd_path": "batch28/D00822 Scone/IsaacSim_assets_6a7b6927b56a872fd779cc80/IsaacSim_asset_6a7b6927b56a872fd779cc80.usd",
+    "usd_sha256": "e01bd684fa344b71c2dcb1351fe4f4eba51524f7e4cd7357fcbc0964d0147d20",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -91,22 +114,56 @@
         0.07510700076818466,
         0.07513700053095818,
         0.038494999054819345
-      ]
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "e01bd684fa344b71c2dcb1351fe4f4eba51524f7e4cd7357fcbc0964d0147d20",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.15
+      "value_kg": 0.15000000596046448,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "e01bd684fa344b71c2dcb1351fe4f4eba51524f7e4cd7357fcbc0964d0147d20",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.15000000596046448,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 2,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "e01bd684fa344b71c2dcb1351fe4f4eba51524f7e4cd7357fcbc0964d0147d20",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 2,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "e01bd684fa344b71c2dcb1351fe4f4eba51524f7e4cd7357fcbc0964d0147d20",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

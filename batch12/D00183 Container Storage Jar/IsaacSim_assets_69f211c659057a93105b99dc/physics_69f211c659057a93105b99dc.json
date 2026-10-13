@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.05603672,
-        0.14869708,
-        0.05670137
-      ],
       "min": [
-        -0.05504987,
-        0.0,
-        -0.05615492
+        -0.05503999814391136,
+        -0.056644000113010406,
+        0.00012199999764561653
+      ],
+      "max": [
+        0.056026000529527664,
+        0.05609700083732605,
+        0.14857499301433563
       ],
       "size": [
-        0.11108659,
-        0.14869708,
-        0.11285629
-      ]
+        0.11106599867343903,
+        0.11274100095033646,
+        0.14845299301669002
+      ],
+      "units": "m"
     },
     "description": "A white cylindrical ceramic storage jar filled with rice. It features a circular wooden lid resting slightly open on top.",
     "name": "D00183 Container Storage Jar",
     "object_type": "rigid_bodies",
-    "total_mass": 0.8
+    "total_mass": 0.800000011920929,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00183",
   "parts": [
     {
       "bounds": {
-        "center": [
-          0.0005407365127445498,
-          0.07228664989734257,
-          0.0002803440535434795
+        "min": [
+          -0.05503999814391136,
+          -0.056644000113010406,
+          0.00012199999764561653
         ],
         "max": [
-          0.05603672,
-          0.14869708,
-          0.05670137
+          0.056026000529527664,
+          0.05609700083732605,
+          0.14857499301433563
         ],
-        "min": [
-          -0.05504987,
-          0.0,
-          -0.05615492
-        ]
+        "size": [
+          0.11106599867343903,
+          0.11274100095033646,
+          0.14845299301669002
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         0.0006078754285258726,
@@ -59,7 +65,7 @@
         0.0021000802425908656,
         0.002125678926790889
       ],
-      "mass": 0.8,
+      "mass": 0.800000011920929,
       "material": "ceramic",
       "name": "D00183 Container Storage Jar",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00183 Container Storage Jar",
         "part_name": "D00183 Container Storage Jar"
       },
-      "volume": 0.0016917267747998937
+      "volume": 0.0016917267747998937,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "363f7025a34ca7e6220c31138eed5142a4e606f0112e4499a5d9c5723fe05dc6"
+    },
+    "usd_path": "batch12/D00183 Container Storage Jar/IsaacSim_assets_69f211c659057a93105b99dc/IsaacSim_asset_69f211c659057a93105b99dc.usd",
+    "usd_sha256": "bf9246f471accecb4cbdaf69d8284329c5a7aeb12c1149241a8ffab3dff6182c",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -88,25 +111,59 @@
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
-        0.11108659,
-        0.14869708,
-        0.11285629
-      ]
+        0.11106599867343903,
+        0.11274100095033646,
+        0.14845299301669002
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "bf9246f471accecb4cbdaf69d8284329c5a7aeb12c1149241a8ffab3dff6182c",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.8
+      "value_kg": 0.800000011920929,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "bf9246f471accecb4cbdaf69d8284329c5a7aeb12c1149241a8ffab3dff6182c",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.800000011920929,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 3,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "bf9246f471accecb4cbdaf69d8284329c5a7aeb12c1149241a8ffab3dff6182c",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 3,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "bf9246f471accecb4cbdaf69d8284329c5a7aeb12c1149241a8ffab3dff6182c",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

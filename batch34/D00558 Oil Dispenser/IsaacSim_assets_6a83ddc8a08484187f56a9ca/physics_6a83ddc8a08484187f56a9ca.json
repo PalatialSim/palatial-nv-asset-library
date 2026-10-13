@@ -6,52 +6,103 @@
         "body0": "/World/textured_mesh_6a83ddc8a08484187f56a9ca/part_00",
         "body1": "/World/textured_mesh_6a83ddc8a08484187f56a9ca/part_01",
         "joint_path": "/World/textured_mesh_6a83ddc8a08484187f56a9ca/Joints/joint_bottle_body__pouring_spout",
-        "type": "fixed"
+        "type": "fixed",
+        "id": "joint_bottle_body__pouring_spout",
+        "path": "/World/textured_mesh_6a83ddc8a08484187f56a9ca/Joints/joint_bottle_body__pouring_spout",
+        "usd_type": "PhysicsFixedJoint",
+        "enabled": true,
+        "body0_targets": [
+          "/World/textured_mesh_6a83ddc8a08484187f56a9ca/part_00"
+        ],
+        "body1_targets": [
+          "/World/textured_mesh_6a83ddc8a08484187f56a9ca/part_01"
+        ],
+        "authored_usd": {
+          "id": "joint_bottle_body__pouring_spout",
+          "source_prim_path": "/World/textured_mesh_6a83ddc8a08484187f56a9ca/Joints/joint_bottle_body__pouring_spout",
+          "joint_type": "PhysicsFixedJoint",
+          "body0": [
+            "/World/textured_mesh_6a83ddc8a08484187f56a9ca/part_00"
+          ],
+          "body1": [
+            "/World/textured_mesh_6a83ddc8a08484187f56a9ca/part_01"
+          ],
+          "joint_enabled": true,
+          "localPos0": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "localPos1": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "localRot0": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "localRot1": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "static_frames": []
+        }
       }
-    ]
+    ],
+    "moving_joints": 0,
+    "rigid_body_count": 2,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.04094599932432175,
-        0.19553600251674652,
-        0.04066599905490875
-      ],
       "min": [
         -0.04109000042080879,
-        3.7000001611886546e-05,
-        -0.04075799882411957
+        -0.04066599905490875,
+        3.7000001611886546e-05
+      ],
+      "max": [
+        0.04094599932432175,
+        0.04075799882411957,
+        0.19553600251674652
       ],
       "size": [
         0.08203599974513054,
-        0.19549900251513463,
-        0.08142399787902832
-      ]
+        0.08142399787902832,
+        0.19549900251513463
+      ],
+      "units": "m"
     },
     "description": "D00558 Oil Dispenser",
     "name": "D00558 Oil Dispenser",
     "object_type": "rigid_bodies",
-    "total_mass": 0.28
+    "total_mass": 0.27999999932944775,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00558",
   "parts": [
     {
       "bounds": {
-        "center": [
-          -7.200054824352264e-05,
-          0.07722450068649778,
-          -4.5999884605407715e-05
+        "min": [
+          -0.04109000042080879,
+          -0.04066599905490875,
+          3.7000001611886546e-05
         ],
         "max": [
           0.04094599932432175,
-          0.15441200137138367,
-          0.04066599905490875
+          0.04075799882411957,
+          0.15441200137138367
         ],
-        "min": [
-          -0.04109000042080879,
-          3.7000001611886546e-05,
-          -0.04075799882411957
-        ]
+        "size": [
+          0.08203599974513054,
+          0.08142399787902832,
+          0.15437500136977178
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         -0.00011863632244057953,
@@ -74,25 +125,28 @@
         "object_name": "D00558 Oil Dispenser",
         "part_name": "D00558 Oil Dispenser"
       },
-      "volume": 0.0001
+      "volume": 0.0001,
+      "source_prim_path": "/World/textured_mesh_6a83ddc8a08484187f56a9ca/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     },
     {
       "bounds": {
-        "center": [
-          -0.0001354999840259552,
-          0.1731244996190071,
-          -4.4500455260276794e-05
+        "min": [
+          -0.016155000776052475,
+          -0.015832999721169472,
+          0.1507129967212677
         ],
         "max": [
           0.015884000808000565,
-          0.19553600251674652,
-          0.015832999721169472
+          0.015922000631690025,
+          0.19553600251674652
         ],
-        "min": [
-          -0.016155000776052475,
-          0.1507129967212677,
-          -0.015922000631690025
-        ]
+        "size": [
+          0.03203900158405304,
+          0.0317550003528595,
+          0.04482300579547882
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         -0.00036035102675668895,
@@ -107,7 +161,7 @@
         4.4867279029858764e-06,
         4.506940058490727e-06
       ],
-      "mass": 0.03,
+      "mass": 0.029999999329447746,
       "material": "metal",
       "name": "D00558 Oil Dispenser",
       "physics_type": "rigid",
@@ -115,10 +169,27 @@
         "object_name": "D00558 Oil Dispenser",
         "part_name": "D00558 Oil Dispenser"
       },
-      "volume": 3.529411685817382e-06
+      "volume": 3.529411685817382e-06,
+      "source_prim_path": "/World/textured_mesh_6a83ddc8a08484187f56a9ca/part_01",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "619176da59a4bbd46f9a82a5ee926ec80153d929995b3dcffff42e9ebcbe32c5"
+    },
+    "usd_path": "batch34/D00558 Oil Dispenser/IsaacSim_assets_6a83ddc8a08484187f56a9ca/IsaacSim_asset_6a83ddc8a08484187f56a9ca.usd",
+    "usd_sha256": "a77e53c0d63f4caf0ddd16de4410415a9c2d783bb8e18c2e0f8d9c0d07bfd0bf",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -137,24 +208,58 @@
       "up_axis": "Z",
       "bounds_m": [
         0.08203599974513054,
-        0.19549900251513463,
-        0.08142399787902832
-      ]
+        0.08142399787902832,
+        0.19549900251513463
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "a77e53c0d63f4caf0ddd16de4410415a9c2d783bb8e18c2e0f8d9c0d07bfd0bf",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.28
+      "value_kg": 0.27999999932944775,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "a77e53c0d63f4caf0ddd16de4410415a9c2d783bb8e18c2e0f8d9c0d07bfd0bf",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.27999999932944775,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 2
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 31,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "a77e53c0d63f4caf0ddd16de4410415a9c2d783bb8e18c2e0f8d9c0d07bfd0bf",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 31,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 1
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "a77e53c0d63f4caf0ddd16de4410415a9c2d783bb8e18c2e0f8d9c0d07bfd0bf",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 1,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

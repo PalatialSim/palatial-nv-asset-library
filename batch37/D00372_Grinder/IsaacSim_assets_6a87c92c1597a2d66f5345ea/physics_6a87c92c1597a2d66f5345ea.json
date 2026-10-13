@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.03681400045752525,
-        0.39277902618050575,
-        0.03635900095105171
-      ],
       "min": [
         -0.03663799911737442,
-        0.0014360215382112074,
-        -0.03654100000858307
+        -0.03635900095105171,
+        0.0014360215382112074
+      ],
+      "max": [
+        0.03681400045752525,
+        0.03654100000858307,
+        0.39277902618050575
       ],
       "size": [
         0.07345199957489967,
-        0.39134300464229455,
-        0.07290000095963478
-      ]
+        0.07290000095963478,
+        0.39134300464229455
+      ],
+      "units": "m"
     },
     "description": "D00372 Grinder",
     "name": "D00372 Grinder",
     "object_type": "rigid_bodies",
-    "total_mass": 0.4
+    "total_mass": 0.4000000059604645,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00372",
   "parts": [
     {
       "bounds": {
-        "center": [
-          8.800067007541656e-05,
-          0.19710752385935848,
-          -9.09995287656784e-05
+        "min": [
+          -0.03663799911737442,
+          -0.03635900095105171,
+          0.0014360215382112074
         ],
         "max": [
           0.03681400045752525,
-          0.39277902618050575,
-          0.03635900095105171
+          0.03654100000858307,
+          0.39277902618050575
         ],
-        "min": [
-          -0.03663799911737442,
-          0.0014360215382112074,
-          -0.03654100000858307
-        ]
+        "size": [
+          0.07345199957489967,
+          0.07290000095963478,
+          0.39134300464229455
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         0.00010164098057430238,
@@ -59,7 +65,7 @@
         0.004673851653933525,
         0.004676108248531818
       ],
-      "mass": 0.4,
+      "mass": 0.4000000059604645,
       "material": "wood",
       "name": "D00372 Grinder",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00372 Grinder",
         "part_name": "D00372 Grinder"
       },
-      "volume": 0.00044444445106718274
+      "volume": 0.00044444445106718274,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "793cdee22177c9049379b259bba9d8c679754a4ffc6e40310f8f6384ee7500c1"
+    },
+    "usd_path": "batch37/D00372_Grinder/IsaacSim_assets_6a87c92c1597a2d66f5345ea/IsaacSim_asset_6a87c92c1597a2d66f5345ea.usd",
+    "usd_sha256": "68dee921acd6e5fe20fb42f0c4e823c07f30bd2032b59b43874586cceaa99d4e",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -89,24 +112,58 @@
       "up_axis": "Z",
       "bounds_m": [
         0.07345199957489967,
-        0.39134300464229455,
-        0.07290000095963478
-      ]
+        0.07290000095963478,
+        0.39134300464229455
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "68dee921acd6e5fe20fb42f0c4e823c07f30bd2032b59b43874586cceaa99d4e",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.4
+      "value_kg": 0.4000000059604645,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "68dee921acd6e5fe20fb42f0c4e823c07f30bd2032b59b43874586cceaa99d4e",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.4000000059604645,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 8,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "68dee921acd6e5fe20fb42f0c4e823c07f30bd2032b59b43874586cceaa99d4e",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 8,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "68dee921acd6e5fe20fb42f0c4e823c07f30bd2032b59b43874586cceaa99d4e",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

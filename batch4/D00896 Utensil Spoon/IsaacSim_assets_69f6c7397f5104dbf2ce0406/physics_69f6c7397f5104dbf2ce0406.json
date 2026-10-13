@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.124749,
-        0.026051,
-        0.018889
-      ],
       "min": [
-        -0.071188,
-        -0.025923,
-        3e-06
+        -0.0711899995803833,
+        -0.025923000648617744,
+        6.000000212225132e-06
+      ],
+      "max": [
+        0.12475799769163132,
+        0.026050999760627747,
+        0.01888900063931942
       ],
       "size": [
-        0.195937,
-        0.051974000000000006,
-        0.018886
-      ]
+        0.19594799727201462,
+        0.05197400040924549,
+        0.018883000639107195
+      ],
+      "units": "m"
     },
     "description": "A one-piece polished stainless-steel spoon for utensil simulation. It is modeled as a single rigid body with no articulating parts.",
     "name": "stainless steel spoon",
     "object_type": "rigid_bodies",
-    "total_mass": 0.052
+    "total_mass": 0.052000001072883606,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00896",
   "parts": [
     {
       "bounds": {
-        "center": [
-          0.02678,
-          6.4e-05,
-          0.009446
+        "min": [
+          -0.0711899995803833,
+          -0.025923000648617744,
+          6.000000212225132e-06
         ],
         "max": [
-          0.124749,
-          0.026051,
-          0.018889
+          0.12475799769163132,
+          0.026050999760627747,
+          0.01888900063931942
         ],
-        "min": [
-          -0.071188,
-          -0.025923,
-          3e-06
-        ]
+        "size": [
+          0.19594799727201462,
+          0.05197400040924549,
+          0.018883000639107195
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         0.020934172491790116,
@@ -59,7 +65,7 @@
         0.00018602703226184105,
         0.0001896796422883779
       ],
-      "mass": 0.052,
+      "mass": 0.052000001072883606,
       "material": "polished_stainless_steel",
       "name": "stainless steel spoon",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "part_0",
         "part_name": "part_0"
       },
-      "volume": 1.3225270638559865e-05
+      "volume": 1.3225270638559865e-05,
+      "source_prim_path": "/World/part_0",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "b69aed2c369ea622852cf21886e951787d71d49cbed44a6dfade6fd34eaf7dc7"
+    },
+    "usd_path": "batch4/D00896 Utensil Spoon/IsaacSim_assets_69f6c7397f5104dbf2ce0406/IsaacSim_asset_69f6c7397f5104dbf2ce0406.usd",
+    "usd_sha256": "32d6de957dd8bf132b1960c24dd1e72430a34169b058a94602bce00a88a1a562",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {},
   "units": {
@@ -86,25 +109,59 @@
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
-        0.195937,
-        0.051974000000000006,
-        0.018886
-      ]
+        0.19594799727201462,
+        0.05197400040924549,
+        0.018883000639107195
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "32d6de957dd8bf132b1960c24dd1e72430a34169b058a94602bce00a88a1a562",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.052
+      "value_kg": 0.052000001072883606,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "32d6de957dd8bf132b1960c24dd1e72430a34169b058a94602bce00a88a1a562",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.052000001072883606,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 9,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "32d6de957dd8bf132b1960c24dd1e72430a34169b058a94602bce00a88a1a562",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 9,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "32d6de957dd8bf132b1960c24dd1e72430a34169b058a94602bce00a88a1a562",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

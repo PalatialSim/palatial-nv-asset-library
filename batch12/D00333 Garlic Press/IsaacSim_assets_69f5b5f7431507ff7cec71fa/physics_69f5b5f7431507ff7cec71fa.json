@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.11544164412977125,
-        0.025964538383283386,
-        0.08119864318961989
-      ],
       "min": [
-        -0.05423918411612827,
-        -0.025729054118389535,
-        2.3548466432473135e-06
+        -0.051972001791000366,
+        -0.02802100032567978,
+        3.000000106112566e-06
+      ],
+      "max": [
+        0.10736499726772308,
+        0.027798999100923538,
+        0.08047199994325638
       ],
       "size": [
-        0.16968082824589953,
-        0.05169359250167292,
-        0.08119628834297664
-      ]
+        0.15933699905872345,
+        0.05581999942660332,
+        0.08046899994315027
+      ],
+      "units": "m"
     },
     "description": "A handheld garlic press with a brushed stainless-steel body, curved paired handles, cylindrical pressing cup, and hinge pins. Some variants include smooth wooden or black rubber grip inserts.",
     "name": "D00333 Garlic Press",
     "object_type": "rigid_bodies",
-    "total_mass": 0.34
+    "total_mass": 0.3400000035762787,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00333",
   "parts": [
     {
       "bounds": {
-        "center": [
-          0.007877917192315561,
-          -5.283881471327859e-06,
-          0.030568455462434408
+        "min": [
+          -0.051972001791000366,
+          -0.02802100032567978,
+          3.000000106112566e-06
         ],
         "max": [
-          0.11544164412977125,
-          0.025964538383283386,
-          0.08119864318961989
+          0.10736499726772308,
+          0.027798999100923538,
+          0.08047199994325638
         ],
-        "min": [
-          -0.05423918411612827,
-          -0.025729054118389535,
-          2.3548466432473135e-06
-        ]
+        "size": [
+          0.15933699905872345,
+          0.05581999942660332,
+          0.08046899994315027
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         0.023274405290895486,
@@ -59,7 +65,7 @@
         0.0005443868498546247,
         0.0006072719195570875
       ],
-      "mass": 0.34,
+      "mass": 0.3400000035762787,
       "material": "brushed_stainless_steel",
       "name": "D00333 Garlic Press",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00333 Garlic Press",
         "part_name": "D00333 Garlic Press"
       },
-      "volume": 0.0002899397657196783
+      "volume": 0.0002899397657196783,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "bc2d9af056e5de8a05473e647d03bcc2d5a827e1fded3d1b8f7040f151c3b4ab"
+    },
+    "usd_path": "batch12/D00333 Garlic Press/IsaacSim_assets_69f5b5f7431507ff7cec71fa/IsaacSim_asset_69f5b5f7431507ff7cec71fa.usd",
+    "usd_sha256": "c3c36cfa23e888e8d38588a8cd1e2d4aa03cb5cc3f873c72c4dda1fdf3d121d6",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {},
   "units": {
@@ -86,25 +109,59 @@
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
-        0.16968082824589953,
-        0.05169359250167292,
-        0.08119628834297664
-      ]
+        0.15933699905872345,
+        0.05581999942660332,
+        0.08046899994315027
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "c3c36cfa23e888e8d38588a8cd1e2d4aa03cb5cc3f873c72c4dda1fdf3d121d6",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.34
+      "value_kg": 0.3400000035762787,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "c3c36cfa23e888e8d38588a8cd1e2d4aa03cb5cc3f873c72c4dda1fdf3d121d6",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.3400000035762787,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 59,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "c3c36cfa23e888e8d38588a8cd1e2d4aa03cb5cc3f873c72c4dda1fdf3d121d6",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 59,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "c3c36cfa23e888e8d38588a8cd1e2d4aa03cb5cc3f873c72c4dda1fdf3d121d6",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

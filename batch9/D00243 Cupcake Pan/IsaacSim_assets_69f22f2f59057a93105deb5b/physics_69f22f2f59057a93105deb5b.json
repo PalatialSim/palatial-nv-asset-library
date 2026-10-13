@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.17471599578857422,
-        0.09115199744701385,
-        0.04589100182056427
-      ],
       "min": [
-        -0.1722870022058487,
-        -0.09171400219202042,
-        -0.0003100000030826777
+        -0.17993800342082977,
+        -0.09708400070667267,
+        -3.099999958067201e-05
+      ],
+      "max": [
+        0.18148499727249146,
+        0.09720499813556671,
+        0.045805998146533966
       ],
       "size": [
-        0.3470029979944229,
-        0.18286599963903427,
-        0.04620100182364695
-      ]
+        0.36142300069332123,
+        0.19428899884223938,
+        0.04583699814611464
+      ],
+      "units": "m"
     },
     "description": "A dark grey metallic 6-cup muffin pan with a non-stick coating and two wide side handles.",
     "name": "D00243 Cupcake Pan",
     "object_type": "rigid_bodies",
-    "total_mass": 0.4
+    "total_mass": 0.4000000059604645,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00243",
   "parts": [
     {
       "bounds": {
-        "center": [
-          0.0010020689241003746,
-          -0.00024436820627986945,
-          0.02653065143872684
+        "min": [
+          -0.17993800342082977,
+          -0.09708400070667267,
+          -3.099999958067201e-05
         ],
         "max": [
-          0.17471599578857422,
-          0.09115199744701385,
-          0.04589100182056427
+          0.18148499727249146,
+          0.09720499813556671,
+          0.045805998146533966
         ],
-        "min": [
-          -0.1722870022058487,
-          -0.09171400219202042,
-          -0.0003100000030826777
-        ]
+        "size": [
+          0.36142300069332123,
+          0.19428899884223938,
+          0.04583699814611464
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         0.0006752845519248285,
@@ -59,7 +65,7 @@
         0.0031202533015299225,
         0.004014991240810687
       ],
-      "mass": 0.4,
+      "mass": 0.4000000059604645,
       "material": "steel",
       "name": "D00243 Cupcake Pan",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00243 Cupcake Pan",
         "part_name": "D00243 Cupcake Pan"
       },
-      "volume": 0.0023727660200750147
+      "volume": 0.0023727660200750147,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "539d309944466a0f112fb7b888aaa3c035e4d9747b80ae48451c43f98232ec24"
+    },
+    "usd_path": "batch9/D00243 Cupcake Pan/IsaacSim_assets_69f22f2f59057a93105deb5b/IsaacSim_asset_69f22f2f59057a93105deb5b.usd",
+    "usd_sha256": "7d191f3c14ed46894a859f208ed415ccaafe4396cf9dc32a68b76249cf22ac56",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {},
   "units": {
@@ -86,25 +109,59 @@
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
-        0.3470029979944229,
-        0.18286599963903427,
-        0.04620100182364695
-      ]
+        0.36142300069332123,
+        0.19428899884223938,
+        0.04583699814611464
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "7d191f3c14ed46894a859f208ed415ccaafe4396cf9dc32a68b76249cf22ac56",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.4
+      "value_kg": 0.4000000059604645,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "7d191f3c14ed46894a859f208ed415ccaafe4396cf9dc32a68b76249cf22ac56",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.4000000059604645,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 247,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "7d191f3c14ed46894a859f208ed415ccaafe4396cf9dc32a68b76249cf22ac56",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 247,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "7d191f3c14ed46894a859f208ed415ccaafe4396cf9dc32a68b76249cf22ac56",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

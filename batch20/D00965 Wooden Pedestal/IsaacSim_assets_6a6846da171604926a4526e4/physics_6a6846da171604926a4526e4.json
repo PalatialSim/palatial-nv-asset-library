@@ -1,65 +1,88 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.213048994541168,
-        0.215893000364304,
-        0.875953085720539
-      ],
       "min": [
-        -0.213493004441261,
-        -0.216482996940613,
-        0.003405067947824
+        -0.2134930044412613,
+        -0.2164829969406128,
+        0.0034050679478241364
+      ],
+      "max": [
+        0.2130489945411682,
+        0.2158930003643036,
+        0.8759530857205391
       ],
       "size": [
-        0.42654199898242895,
-        0.432375997304917,
+        0.4265419989824295,
+        0.4323759973049164,
         0.872548017772715
-      ]
+      ],
+      "units": "m"
     },
     "description": "A polished dark brown wooden pedestal with a square base, rectangular pillar, and square flat top.",
     "name": "generated reference 01",
     "object_type": "rigid_bodies",
-    "total_mass": 15
+    "total_mass": 15.0,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00965",
   "parts": [
     {
       "bounds": {
-        "center": [
-          0.000486438234818,
-          0.002466814685503,
-          0.418162178295857
+        "min": [
+          -0.2134930044412613,
+          -0.2164829969406128,
+          0.0034050679478241364
         ],
         "max": [
-          0.213048994541168,
-          0.215893000364304,
-          0.875953085720539
+          0.2130489945411682,
+          0.2158930003643036,
+          0.8759530857205391
         ],
-        "min": [
-          -0.213493004441261,
-          -0.216482996940613,
-          0.003405067947824
-        ]
+        "size": [
+          0.4265419989824295,
+          0.4323759973049164,
+          0.872548017772715
+        ],
+        "units": "m"
       },
       "collision": {},
       "density": 700,
       "id": "part_00",
-      "mass": 15,
+      "mass": 15.0,
       "material": "wood",
       "name": "generated reference 01",
       "physics_type": "rigid",
       "source": {
         "object_name": "generated reference 01",
         "part_name": "generated reference 01"
-      }
+      },
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "1a702ab9900fd526918ed6812d7ae26bd1bfe8cdb67b1b7071a88ff1c40be737"
+    },
+    "usd_path": "batch20/D00965 Wooden Pedestal/IsaacSim_assets_6a6846da171604926a4526e4/IsaacSim_asset_6a6846da171604926a4526e4.usd",
+    "usd_sha256": "9fa81bba6a76801831337de1d92401c6cc5cccdd9234666ffa66cd67729b3ffd",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -77,25 +100,59 @@
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
-        0.42654199898242895,
-        0.432375997304917,
+        0.4265419989824295,
+        0.4323759973049164,
         0.872548017772715
-      ]
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "9fa81bba6a76801831337de1d92401c6cc5cccdd9234666ffa66cd67729b3ffd",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 15
+      "value_kg": 15.0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "9fa81bba6a76801831337de1d92401c6cc5cccdd9234666ffa66cd67729b3ffd",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 15.0,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 4,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "9fa81bba6a76801831337de1d92401c6cc5cccdd9234666ffa66cd67729b3ffd",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 4,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "9fa81bba6a76801831337de1d92401c6cc5cccdd9234666ffa66cd67729b3ffd",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

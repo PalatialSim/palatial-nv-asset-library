@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.058951009064912796,
-        0.03229682520031929,
-        0.01848353073000908
-      ],
       "min": [
-        -0.10581907629966736,
-        0.0,
-        -0.020827582105994225
+        -0.10581400245428085,
+        -0.014903999865055084,
+        -0.003495000069960952
+      ],
+      "max": [
+        0.05894500017166138,
+        0.01724899932742119,
+        0.03579099848866463
       ],
       "size": [
-        0.16477008536458015,
-        0.03229682520031929,
-        0.039311112836003304
-      ]
+        0.16475900262594223,
+        0.03215299919247627,
+        0.03928599855862558
+      ],
+      "units": "m"
     },
     "description": "A single raw carrot with a conical orange root and green leafy stems attached to the top.",
     "name": "D00111 Carrot",
     "object_type": "rigid_bodies",
-    "total_mass": 0.07
+    "total_mass": 0.07000000029802322,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00111",
   "parts": [
     {
       "bounds": {
-        "center": [
-          -0.011655056848609058,
-          0.015225586511712106,
-          -1.6612169302343598e-05
+        "min": [
+          -0.10581400245428085,
+          -0.014903999865055084,
+          -0.003495000069960952
         ],
         "max": [
-          0.058951009064912796,
-          0.03229682520031929,
-          0.01848353073000908
+          0.05894500017166138,
+          0.01724899932742119,
+          0.03579099848866463
         ],
-        "min": [
-          -0.10581907629966736,
-          0.0,
-          -0.020827582105994225
-        ]
+        "size": [
+          0.16475900262594223,
+          0.03215299919247627,
+          0.03928599855862558
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         0.0020070441991834912,
@@ -59,7 +65,7 @@
         9.036373155915436e-05,
         9.153738768860445e-05
       ],
-      "mass": 0.07,
+      "mass": 0.07000000029802322,
       "material": "organic_fruit_tissue",
       "name": "D00111 Carrot",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00111 Carrot",
         "part_name": "D00111 Carrot"
       },
-      "volume": 8.062513000426273e-05
+      "volume": 8.062513000426273e-05,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "9aa454f5f6bed0da9a7c545578b3864e278a880101ba87a8ac444a964351c590"
+    },
+    "usd_path": "batch7/D00111 Carrot/IsaacSim_assets_69f2024c59057a93105a57aa/IsaacSim_asset_69f2024c59057a93105a57aa.usd",
+    "usd_sha256": "6c18484e7929199c43d3fa9845873063a35a0c34982115e79a8c871e3c6bd18a",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {},
   "units": {
@@ -86,25 +109,59 @@
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
-        0.16477008536458015,
-        0.03229682520031929,
-        0.039311112836003304
-      ]
+        0.16475900262594223,
+        0.03215299919247627,
+        0.03928599855862558
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "6c18484e7929199c43d3fa9845873063a35a0c34982115e79a8c871e3c6bd18a",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.07
+      "value_kg": 0.07000000029802322,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "6c18484e7929199c43d3fa9845873063a35a0c34982115e79a8c871e3c6bd18a",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.07000000029802322,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 41,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "6c18484e7929199c43d3fa9845873063a35a0c34982115e79a8c871e3c6bd18a",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 41,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "6c18484e7929199c43d3fa9845873063a35a0c34982115e79a8c871e3c6bd18a",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

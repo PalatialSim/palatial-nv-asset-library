@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.028555000200867653,
-        0.029569000005722046,
-        0.126674123108387
-      ],
       "min": [
         -0.028660999611020088,
         -0.027633000165224075,
         0.0005911199917818521
       ],
+      "max": [
+        0.028555000200867653,
+        0.029569000005722046,
+        0.126674123108387
+      ],
       "size": [
         0.05721599981188774,
         0.05720200017094612,
         0.12608300311660514
-      ]
+      ],
+      "units": "m"
     },
     "description": "D00342 Glass Bottle Spice",
     "name": "D00342 Glass Bottle Spice",
     "object_type": "rigid_bodies",
-    "total_mass": 0.15
+    "total_mass": 0.15000000596046448,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00342",
   "parts": [
     {
       "bounds": {
-        "center": [
-          -5.299970507621765e-05,
-          0.0009679999202489853,
-          0.06363262155008442
+        "min": [
+          -0.028660999611020088,
+          -0.027633000165224075,
+          0.0005911199917818521
         ],
         "max": [
           0.028555000200867653,
           0.029569000005722046,
           0.126674123108387
         ],
-        "min": [
-          -0.028660999611020088,
-          -0.027633000165224075,
-          0.0005911199917818521
-        ]
+        "size": [
+          0.05721599981188774,
+          0.05720200017094612,
+          0.12608300311660514
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         -7.071863365126774e-05,
@@ -59,7 +65,7 @@
         0.0002255546860396862,
         0.00022566506231669337
       ],
-      "mass": 0.15,
+      "mass": 0.15000000596046448,
       "material": "ceramic",
       "name": "D00342 Glass Bottle Spice",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00342 Glass Bottle Spice",
         "part_name": "D00342 Glass Bottle Spice"
       },
-      "volume": 6.000000238418579e-05
+      "volume": 6.000000238418579e-05,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "87f00da901a4d3a06bbc93ad9e60f2bae6e74232ffaa3018f3653ca8b299c5cc"
+    },
+    "usd_path": "batch27/D00342 Glass Bottle Spice/IsaacSim_assets_6a7a89c7b56a872fd76624cb/IsaacSim_asset_6a7a89c7b56a872fd76624cb.usd",
+    "usd_sha256": "50fb8b66c23f16383c5e2cea0b08782b518503beeb96ecb809baedc7f3275d38",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -91,22 +114,56 @@
         0.05721599981188774,
         0.05720200017094612,
         0.12608300311660514
-      ]
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "50fb8b66c23f16383c5e2cea0b08782b518503beeb96ecb809baedc7f3275d38",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.15
+      "value_kg": 0.15000000596046448,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "50fb8b66c23f16383c5e2cea0b08782b518503beeb96ecb809baedc7f3275d38",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.15000000596046448,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 1,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "50fb8b66c23f16383c5e2cea0b08782b518503beeb96ecb809baedc7f3275d38",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 1,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "50fb8b66c23f16383c5e2cea0b08782b518503beeb96ecb809baedc7f3275d38",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.02773216,
-        0.05584023,
-        0.02754774
-      ],
       "min": [
-        -0.02802363,
-        0.0,
-        -0.02768528
+        -0.028154000639915466,
+        -0.02754800021648407,
+        0.0002077501267194748
+      ],
+      "max": [
+        0.027862999588251114,
+        0.027684999629855156,
+        0.056109748780727386
       ],
       "size": [
-        0.05575579,
-        0.05584023,
-        0.05523302
-      ]
+        0.05601700022816658,
+        0.055232999846339226,
+        0.05590199865400791
+      ],
+      "units": "m"
     },
     "description": "A realistic red apple with a smooth, slightly glossy surface and a small brown stem at the top.",
     "name": "generated reference 01",
     "object_type": "rigid_bodies",
-    "total_mass": 0.22
+    "total_mass": 0.2199999988079071,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00322",
   "parts": [
     {
       "bounds": {
-        "center": [
-          -2.6572707716523073e-05,
-          0.02638518736727239,
-          -0.00011811817145925808
+        "min": [
+          -0.028154000639915466,
+          -0.02754800021648407,
+          0.0002077501267194748
         ],
         "max": [
-          0.02773216,
-          0.05584023,
-          0.02754774
+          0.027862999588251114,
+          0.027684999629855156,
+          0.056109748780727386
         ],
-        "min": [
-          -0.02802363,
-          0.0,
-          -0.02768528
-        ]
+        "size": [
+          0.05601700022816658,
+          0.055232999846339226,
+          0.05590199865400791
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         -7.874042780164815e-05,
@@ -59,7 +65,7 @@
         6.909955873980709e-05,
         6.955321708815423e-05
       ],
-      "mass": 0.22,
+      "mass": 0.2199999988079071,
       "material": "waxed_skin",
       "name": "generated reference 01",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "generated reference 01",
         "part_name": "generated reference 01"
       },
-      "volume": 9.115443354633513e-05
+      "volume": 9.115443354633513e-05,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "4496f6ade2ce2a4d0bf4edd6cd70e9e2a50a2a238fd7fd5af1c7d01af0bf5ff6"
+    },
+    "usd_path": "batch15/D00322 Fruit/IsaacSim_assets_6a60b53537bfc8641e39d17a/IsaacSim_asset_6a60b53537bfc8641e39d17a.usd",
+    "usd_sha256": "870460a535775ed1b8bf61912dd68ef99e1e8b0665731870a0be0b824df2280b",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -88,25 +111,59 @@
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
-        0.05575579,
-        0.05584023,
-        0.05523302
-      ]
+        0.05601700022816658,
+        0.055232999846339226,
+        0.05590199865400791
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "870460a535775ed1b8bf61912dd68ef99e1e8b0665731870a0be0b824df2280b",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.22
+      "value_kg": 0.2199999988079071,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "870460a535775ed1b8bf61912dd68ef99e1e8b0665731870a0be0b824df2280b",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.2199999988079071,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 20,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "870460a535775ed1b8bf61912dd68ef99e1e8b0665731870a0be0b824df2280b",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 20,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "870460a535775ed1b8bf61912dd68ef99e1e8b0665731870a0be0b824df2280b",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

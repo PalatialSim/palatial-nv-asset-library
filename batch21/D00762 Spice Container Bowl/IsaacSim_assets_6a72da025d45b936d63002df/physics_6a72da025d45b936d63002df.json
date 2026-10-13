@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.1676889955997467,
-        0.16747799515724182,
-        0.20281380414962769
-      ],
       "min": [
         -0.1681160032749176,
         -0.1670369952917099,
         0.0017047998262569308
       ],
+      "max": [
+        0.1676889955997467,
+        0.16747799515724182,
+        0.20281380414962769
+      ],
       "size": [
         0.3358049988746643,
         0.3345149904489517,
         0.20110900432337075
-      ]
+      ],
+      "units": "m"
     },
     "description": "D00762 Spice Container Bowl",
     "name": "D00762 Spice Container Bowl",
     "object_type": "rigid_bodies",
-    "total_mass": 10.0
+    "total_mass": 10.0,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00762",
   "parts": [
     {
       "bounds": {
-        "center": [
-          -0.00021350383758544922,
-          0.0002204999327659607,
-          0.10225930198794231
+        "min": [
+          -0.1681160032749176,
+          -0.1670369952917099,
+          0.0017047998262569308
         ],
         "max": [
           0.1676889955997467,
           0.16747799515724182,
           0.20281380414962769
         ],
-        "min": [
-          -0.1681160032749176,
-          -0.1670369952917099,
-          0.0017047998262569308
-        ]
+        "size": [
+          0.3358049988746643,
+          0.3345149904489517,
+          0.20110900432337075
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         -0.0002888639864977449,
@@ -67,10 +73,27 @@
         "object_name": "D00762 Spice Container Bowl",
         "part_name": "D00762 Spice Container Bowl"
       },
-      "volume": 0.0012658227848101266
+      "volume": 0.0012658227848101266,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "e93aed68c5ee74696aff8078c4ebe4e147cc80b531edec5e3ce0a82bb8650d8f"
+    },
+    "usd_path": "batch21/D00762 Spice Container Bowl/IsaacSim_assets_6a72da025d45b936d63002df/IsaacSim_asset_6a72da025d45b936d63002df.usd",
+    "usd_sha256": "31a1615b86ac115760877e9ad1de481d952ee58245655aecd97f2904e8137332",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -91,22 +114,56 @@
         0.3358049988746643,
         0.3345149904489517,
         0.20110900432337075
-      ]
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "31a1615b86ac115760877e9ad1de481d952ee58245655aecd97f2904e8137332",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 10.0
+      "value_kg": 10.0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "31a1615b86ac115760877e9ad1de481d952ee58245655aecd97f2904e8137332",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 10.0,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 37,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "31a1615b86ac115760877e9ad1de481d952ee58245655aecd97f2904e8137332",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 37,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "31a1615b86ac115760877e9ad1de481d952ee58245655aecd97f2904e8137332",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

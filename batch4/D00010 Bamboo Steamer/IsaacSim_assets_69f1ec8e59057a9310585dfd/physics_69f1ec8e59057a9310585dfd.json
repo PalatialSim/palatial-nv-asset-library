@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.08688800036907196,
-        0.08301600068807602,
-        0.12725399434566498
-      ],
       "min": [
-        -0.09190099686384201,
-        -0.07955099642276764,
-        1.1000000085914508e-05
+        -0.09643600136041641,
+        -0.09742700308561325,
+        4.999999873689376e-06
+      ],
+      "max": [
+        0.10080800205469131,
+        0.09726399928331375,
+        0.10117299854755402
       ],
       "size": [
-        0.17878899723291397,
-        0.16256699711084366,
-        0.12724299434557906
-      ]
+        0.19724400341510773,
+        0.194691002368927,
+        0.10116799854768033
+      ],
+      "units": "m"
     },
     "description": "A light tan bamboo steamer basket with stacked cylindrical bands, a woven lid, and a small loop handle. The surface shows natural bamboo grain, braided strips, and darker stitched/worn edge details.",
     "name": "D00010 Bamboo Steamer",
     "object_type": "rigid_bodies",
-    "total_mass": 0.55
+    "total_mass": 0.550000011920929,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00010",
   "parts": [
     {
       "bounds": {
-        "center": [
-          0.0009829334292591934,
-          -7.298275792118782e-05,
-          0.06723152958019404
+        "min": [
+          -0.09643600136041641,
+          -0.09742700308561325,
+          4.999999873689376e-06
         ],
         "max": [
-          0.08688800036907196,
-          0.08301600068807602,
-          0.12725399434566498
+          0.10080800205469131,
+          0.09726399928331375,
+          0.10117299854755402
         ],
-        "min": [
-          -0.09190099686384201,
-          -0.07955099642276764,
-          1.1000000085914508e-05
-        ]
+        "size": [
+          0.19724400341510773,
+          0.194691002368927,
+          0.10116799854768033
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         0.002105599751806153,
@@ -59,7 +65,7 @@
         0.0016949468385268694,
         0.002561406042878477
       ],
-      "mass": 0.55,
+      "mass": 0.550000011920929,
       "material": "wood",
       "name": "D00010 Bamboo Steamer",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00010 Bamboo Steamer",
         "part_name": "D00010 Bamboo Steamer"
       },
-      "volume": 0.002777759991253496
+      "volume": 0.002777759991253496,
+      "source_prim_path": "/World/part_00_wood",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "d77f56d238f2178663361896cea408bd8233846c9c37f252c8aebbd7899e96c2"
+    },
+    "usd_path": "batch4/D00010 Bamboo Steamer/IsaacSim_assets_69f1ec8e59057a9310585dfd/IsaacSim_asset_69f1ec8e59057a9310585dfd.usd",
+    "usd_sha256": "028aa56d84136716930e79655440bbc4d293ceccc705ae83aaf8a020a38c0ea3",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {},
   "units": {
@@ -86,25 +109,76 @@
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
-        0.17878899723291397,
-        0.16256699711084366,
-        0.12724299434557906
-      ]
+        0.19724400341510773,
+        0.194691002368927,
+        0.10116799854768033
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "028aa56d84136716930e79655440bbc4d293ceccc705ae83aaf8a020a38c0ea3",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.55
+      "value_kg": 0.550000011920929,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "028aa56d84136716930e79655440bbc4d293ceccc705ae83aaf8a020a38c0ea3",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.550000011920929,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 96,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "028aa56d84136716930e79655440bbc4d293ceccc705ae83aaf8a020a38c0ea3",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 96,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "028aa56d84136716930e79655440bbc4d293ceccc705ae83aaf8a020a38c0ea3",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "028aa56d84136716930e79655440bbc4d293ceccc705ae83aaf8a020a38c0ea3",
+      "supplemental_accepted": true,
+      "planned_test_count": 12,
+      "result_count": 12,
+      "passed": 11,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-13T20:39:41.564636+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "0d724f43e2a177f6bec9926dc2f052d1dad59f5394635d419ae3cb49e4cf9e21",
+      "qualification": "native-fleet-evidence/shard-02/native-batch-000/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

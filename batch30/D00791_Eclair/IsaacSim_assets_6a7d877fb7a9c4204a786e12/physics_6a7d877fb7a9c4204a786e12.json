@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.023273000493645668,
-        0.0385208074003458,
-        0.06396500021219254
-      ],
       "min": [
         -0.02419300004839897,
-        0.0006458091160084223,
-        -0.06565800309181213
+        -0.06396500021219254,
+        0.0006458091160084223
+      ],
+      "max": [
+        0.023273000493645668,
+        0.06565800309181213,
+        0.0385208074003458
       ],
       "size": [
         0.04746600054204464,
-        0.03787499828433738,
-        0.12962300330400467
-      ]
+        0.12962300330400467,
+        0.03787499828433738
+      ],
+      "units": "m"
     },
     "description": "D00791 Eclair",
     "name": "D00791 Eclair",
     "object_type": "rigid_bodies",
-    "total_mass": 0.08
+    "total_mass": 0.07999999821186066,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00791",
   "parts": [
     {
       "bounds": {
-        "center": [
-          -0.00045999977737665176,
-          0.019583308258177112,
-          -0.0008465014398097992
+        "min": [
+          -0.02419300004839897,
+          -0.06396500021219254,
+          0.0006458091160084223
         ],
         "max": [
           0.023273000493645668,
-          0.0385208074003458,
-          0.06396500021219254
+          0.06565800309181213,
+          0.0385208074003458
         ],
-        "min": [
-          -0.02419300004839897,
-          0.0006458091160084223,
-          -0.06565800309181213
-        ]
+        "size": [
+          0.04746600054204464,
+          0.12962300330400467,
+          0.03787499828433738
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         -0.0005534195224754512,
@@ -59,7 +65,7 @@
         9.604915248928592e-05,
         9.994175343308598e-05
       ],
-      "mass": 0.08,
+      "mass": 0.07999999821186066,
       "material": "wood",
       "name": "D00791 Eclair",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00791 Eclair",
         "part_name": "D00791 Eclair"
       },
-      "volume": 9.999999776482581e-05
+      "volume": 9.999999776482581e-05,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "bb036ffc16087753d6effb80aa22ac84a1a7aefb77517ed72d75a79b01d45068"
+    },
+    "usd_path": "batch30/D00791_Eclair/IsaacSim_assets_6a7d877fb7a9c4204a786e12/IsaacSim_asset_6a7d877fb7a9c4204a786e12.usd",
+    "usd_sha256": "c12d0e574b5dca91c0a7d97821d15f1830ef4c071531322189fea166cf576df7",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -89,24 +112,58 @@
       "up_axis": "Z",
       "bounds_m": [
         0.04746600054204464,
-        0.03787499828433738,
-        0.12962300330400467
-      ]
+        0.12962300330400467,
+        0.03787499828433738
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "c12d0e574b5dca91c0a7d97821d15f1830ef4c071531322189fea166cf576df7",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.08
+      "value_kg": 0.07999999821186066,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "c12d0e574b5dca91c0a7d97821d15f1830ef4c071531322189fea166cf576df7",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.07999999821186066,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 1,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "c12d0e574b5dca91c0a7d97821d15f1830ef4c071531322189fea166cf576df7",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 1,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "c12d0e574b5dca91c0a7d97821d15f1830ef4c071531322189fea166cf576df7",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

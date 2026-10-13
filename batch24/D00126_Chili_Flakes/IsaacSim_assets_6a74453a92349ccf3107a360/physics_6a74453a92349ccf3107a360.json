@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.020230000838637352,
-        0.020718999207019806,
-        0.012458279612474144
-      ],
       "min": [
         -0.018633000552654266,
         -0.01872600056231022,
         0.00018427999054893007
       ],
+      "max": [
+        0.020230000838637352,
+        0.020718999207019806,
+        0.012458279612474144
+      ],
       "size": [
         0.03886300139129162,
         0.039444999769330025,
         0.012273999621925213
-      ]
+      ],
+      "units": "m"
     },
     "description": "D00126 Chili Flakes",
     "name": "D00126 Chili Flakes",
     "object_type": "rigid_bodies",
-    "total_mass": 0.002
+    "total_mass": 0.0020000000949949026,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00126",
   "parts": [
     {
       "bounds": {
-        "center": [
-          0.0007985001429915428,
-          0.0009964993223547935,
-          0.006321279801511537
+        "min": [
+          -0.018633000552654266,
+          -0.01872600056231022,
+          0.00018427999054893007
         ],
         "max": [
           0.020230000838637352,
           0.020718999207019806,
           0.012458279612474144
         ],
-        "min": [
-          -0.018633000552654266,
-          -0.01872600056231022,
-          0.00018427999054893007
-        ]
+        "size": [
+          0.03886300139129162,
+          0.039444999769330025,
+          0.012273999621925213
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         0.0007040282944217324,
@@ -59,7 +65,7 @@
         1.3780436347587965e-07,
         2.426563128210546e-07
       ],
-      "mass": 0.002,
+      "mass": 0.0020000000949949026,
       "material": "foam",
       "name": "D00126 Chili Flakes",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00126 Chili Flakes",
         "part_name": "D00126 Chili Flakes"
       },
-      "volume": 5.000000237487257e-06
+      "volume": 5.000000237487257e-06,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "a9247ab9624e6b91f8a2dd33b6d15e8c108725df465180a874a745cae98baa57"
+    },
+    "usd_path": "batch24/D00126_Chili_Flakes/IsaacSim_assets_6a74453a92349ccf3107a360/IsaacSim_asset_6a74453a92349ccf3107a360.usd",
+    "usd_sha256": "196ed0ec95231b69fa7297b28784954d2d51297019dd217ba392a72d5378b57e",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -91,22 +114,56 @@
         0.03886300139129162,
         0.039444999769330025,
         0.012273999621925213
-      ]
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "196ed0ec95231b69fa7297b28784954d2d51297019dd217ba392a72d5378b57e",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.002
+      "value_kg": 0.0020000000949949026,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "196ed0ec95231b69fa7297b28784954d2d51297019dd217ba392a72d5378b57e",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.0020000000949949026,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 17,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "196ed0ec95231b69fa7297b28784954d2d51297019dd217ba392a72d5378b57e",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 17,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "196ed0ec95231b69fa7297b28784954d2d51297019dd217ba392a72d5378b57e",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

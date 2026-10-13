@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.05835900083184242,
-        0.004370260052382946,
-        0.027143999934196472
-      ],
       "min": [
         -0.06029200181365013,
-        0.0005382599774748116,
-        -0.02646300010383129
+        -0.027143999934196472,
+        0.0005382599774748116
+      ],
+      "max": [
+        0.05835900083184242,
+        0.02646300010383129,
+        0.004370260052382946
       ],
       "size": [
         0.11865100264549255,
-        0.0038320000749081343,
-        0.05360700003802776
-      ]
+        0.05360700003802776,
+        0.0038320000749081343
+      ],
+      "units": "m"
     },
     "description": "D00079 Herb_Stripper",
     "name": "D00079 Herb_Stripper",
     "object_type": "rigid_bodies",
-    "total_mass": 0.072
+    "total_mass": 0.07199999690055847,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00079",
   "parts": [
     {
       "bounds": {
-        "center": [
-          -0.0009665004909038544,
-          0.0024542600149288787,
-          0.0003404999151825905
+        "min": [
+          -0.06029200181365013,
+          -0.027143999934196472,
+          0.0005382599774748116
         ],
         "max": [
           0.05835900083184242,
-          0.004370260052382946,
-          0.027143999934196472
+          0.02646300010383129,
+          0.004370260052382946
         ],
-        "min": [
-          -0.06029200181365013,
-          0.0005382599774748116,
-          -0.02646300010383129
-        ]
+        "size": [
+          0.11865100264549255,
+          0.05360700003802776,
+          0.0038320000749081343
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         -0.0010361584136262536,
@@ -59,7 +65,7 @@
         7.44411809137091e-05,
         8.986101602204144e-05
       ],
-      "mass": 0.072,
+      "mass": 0.07199999690055847,
       "material": "metal",
       "name": "D00079 Herb_Stripper",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00079 Herb_Stripper",
         "part_name": "D00079 Herb_Stripper"
       },
-      "volume": 8.999999612569808e-06
+      "volume": 8.999999612569808e-06,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "b99f3807cfb96dfc2e768de54f6e5ff8e57ded8c36d6120c673eb0b248b1ce89"
+    },
+    "usd_path": "batch11/D00079_Herb_Stripper/IsaacSim_assets_6a7d8fe1b7a9c4204a7947e6/IsaacSim_asset_6a7d8fe1b7a9c4204a7947e6.usd",
+    "usd_sha256": "1637cf02f0cdb65c35ee73d3a513584251ff2c1eab3a2622ee3acf355f3c851b",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -89,24 +112,58 @@
       "up_axis": "Z",
       "bounds_m": [
         0.11865100264549255,
-        0.0038320000749081343,
-        0.05360700003802776
-      ]
+        0.05360700003802776,
+        0.0038320000749081343
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "1637cf02f0cdb65c35ee73d3a513584251ff2c1eab3a2622ee3acf355f3c851b",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.072
+      "value_kg": 0.07199999690055847,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "1637cf02f0cdb65c35ee73d3a513584251ff2c1eab3a2622ee3acf355f3c851b",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.07199999690055847,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 13,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "1637cf02f0cdb65c35ee73d3a513584251ff2c1eab3a2622ee3acf355f3c851b",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 13,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "1637cf02f0cdb65c35ee73d3a513584251ff2c1eab3a2622ee3acf355f3c851b",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

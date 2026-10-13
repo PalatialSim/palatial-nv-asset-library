@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.014700000174343586,
-        0.07916899770498276,
-        0.028808789793401957
-      ],
       "min": [
         -0.014777000062167645,
         -0.1136770024895668,
         0.0006797901187383104
       ],
+      "max": [
+        0.014700000174343586,
+        0.07916899770498276,
+        0.028808789793401957
+      ],
       "size": [
         0.02947700023651123,
         0.19284600019454956,
         0.028128999674663646
-      ]
+      ],
+      "units": "m"
     },
     "description": "D00247 Cutlery",
     "name": "D00247 Cutlery",
     "object_type": "rigid_bodies",
-    "total_mass": 0.106
+    "total_mass": 0.10599999874830246,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00247",
   "parts": [
     {
       "bounds": {
-        "center": [
-          -3.8499943912029266e-05,
-          -0.017254002392292023,
-          0.014744289956070133
+        "min": [
+          -0.014777000062167645,
+          -0.1136770024895668,
+          0.0006797901187383104
         ],
         "max": [
           0.014700000174343586,
           0.07916899770498276,
           0.028808789793401957
         ],
-        "min": [
-          -0.014777000062167645,
-          -0.1136770024895668,
-          0.0006797901187383104
-        ]
+        "size": [
+          0.02947700023651123,
+          0.19284600019454956,
+          0.028128999674663646
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         -4.136338418447849e-07,
@@ -59,7 +65,7 @@
         0.00024613054119981825,
         0.00024853245122358203
       ],
-      "mass": 0.106,
+      "mass": 0.10599999874830246,
       "material": "metal",
       "name": "D00247 Cutlery",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00247 Cutlery",
         "part_name": "D00247 Cutlery"
       },
-      "volume": 1.3249999843537807e-05
+      "volume": 1.3249999843537807e-05,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "9b1f1906e23430b8d8c937fe9d1b29bb7883f569cf31ff68d30ad9d81cd1a009"
+    },
+    "usd_path": "batch25/D00247_Cutlery/IsaacSim_assets_6a74215f5d45b936d6481e69/IsaacSim_asset_6a74215f5d45b936d6481e69.usd",
+    "usd_sha256": "2fa3f8b648e8c98862a0365e69de4e8b6b29b2b4e73351215d9dafeda8213323",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -91,22 +114,56 @@
         0.02947700023651123,
         0.19284600019454956,
         0.028128999674663646
-      ]
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "2fa3f8b648e8c98862a0365e69de4e8b6b29b2b4e73351215d9dafeda8213323",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.106
+      "value_kg": 0.10599999874830246,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "2fa3f8b648e8c98862a0365e69de4e8b6b29b2b4e73351215d9dafeda8213323",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.10599999874830246,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 10,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "2fa3f8b648e8c98862a0365e69de4e8b6b29b2b4e73351215d9dafeda8213323",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 10,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "2fa3f8b648e8c98862a0365e69de4e8b6b29b2b4e73351215d9dafeda8213323",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.02501425,
-        0.02431141,
-        0.13258948
-      ],
       "min": [
-        -0.02503173,
-        -0.02389495,
-        -0.13251027
+        -0.02504199929535389,
+        -0.1326269954442978,
+        0.000750810606405139
+      ],
+      "max": [
+        0.025025000795722008,
+        0.1325480043888092,
+        0.04895181208848953
       ],
       "size": [
-        0.05004598,
-        0.048206360000000004,
-        0.26509975
-      ]
+        0.0500670000910759,
+        0.265174999833107,
+        0.048201001482084394
+      ],
+      "units": "m"
     },
     "description": "A handheld milk frother featuring a cylindrical brushed metal handle with black plastic end caps and a rubberized power button. A thin metal shaft extends from the handle, terminating in a coiled wire whisk.",
     "name": "D00522 Milk Frother",
     "object_type": "rigid_bodies",
-    "total_mass": 0.12
+    "total_mass": 0.11999999731779099,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00522",
   "parts": [
     {
       "bounds": {
-        "center": [
-          2.665997074619382e-05,
-          0.0027686408450941003,
-          -0.027073300395717353
+        "min": [
+          -0.02504199929535389,
+          -0.1326269954442978,
+          0.000750810606405139
         ],
         "max": [
-          0.02501425,
-          0.02431141,
-          0.13258948
+          0.025025000795722008,
+          0.1325480043888092,
+          0.04895181208848953
         ],
-        "min": [
-          -0.02503173,
-          -0.02389495,
-          -0.13251027
-        ]
+        "size": [
+          0.0500670000910759,
+          0.265174999833107,
+          0.048201001482084394
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         -7.545526054288909e-05,
@@ -59,7 +65,7 @@
         0.0006707471917363907,
         0.0006713875833954645
       ],
-      "mass": 0.12,
+      "mass": 0.11999999731779099,
       "material": "stainless_steel",
       "name": "D00522 Milk Frother",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00522 Milk Frother",
         "part_name": "D00522 Milk Frother"
       },
-      "volume": 0.00036962023211904076
+      "volume": 0.00036962023211904076,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "7082385b081d44056ac989df9feaff30b4415c84ba90fd9af35bbd7c4656253b"
+    },
+    "usd_path": "batch27/D00522 Milk Frother/IsaacSim_assets_6a7c3aa77af07252a87e9af0/IsaacSim_asset_6a7c3aa77af07252a87e9af0.usd",
+    "usd_sha256": "27142e22ba605ba58c1ea2a00c9ddec766775b5716362c008df5cf0b9bbcc66e",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -88,25 +111,59 @@
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
-        0.05004598,
-        0.048206360000000004,
-        0.26509975
-      ]
+        0.0500670000910759,
+        0.265174999833107,
+        0.048201001482084394
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "27142e22ba605ba58c1ea2a00c9ddec766775b5716362c008df5cf0b9bbcc66e",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.12
+      "value_kg": 0.11999999731779099,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "27142e22ba605ba58c1ea2a00c9ddec766775b5716362c008df5cf0b9bbcc66e",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.11999999731779099,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 76,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "27142e22ba605ba58c1ea2a00c9ddec766775b5716362c008df5cf0b9bbcc66e",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 76,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "27142e22ba605ba58c1ea2a00c9ddec766775b5716362c008df5cf0b9bbcc66e",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

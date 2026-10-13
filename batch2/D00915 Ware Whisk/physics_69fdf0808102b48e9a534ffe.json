@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.03671500086784363,
-        0.08973900228738785,
-        0.07244899868965149
-      ],
       "min": [
-        -0.03752899914979935,
-        -0.1940850019454956,
-        -2.9000000722589903e-05
+        -0.03470899909734726,
+        -0.1750050038099289,
+        -0.0001340000017080456
+      ],
+      "max": [
+        0.034745000302791595,
+        0.08830399811267853,
+        0.0693959966301918
       ],
       "size": [
-        0.07424400001764297,
-        0.28382400423288345,
-        0.07247799869037408
-      ]
+        0.06945399940013885,
+        0.2633090019226074,
+        0.06952999663189985
+      ],
+      "units": "m"
     },
     "description": "A balloon whisk with thin polished stainless-steel wire loops, a coiled metal collar, and a smooth light wood handle with a small hanging loop.",
     "name": "D00915 Balloon Whisk",
     "object_type": "rigid_bodies",
-    "total_mass": 0.115
+    "total_mass": 0.11500000208616257,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00915",
   "parts": [
     {
       "bounds": {
-        "center": [
-          -5.314519594872371e-05,
-          -0.017655288316839407,
-          0.03649547082714052
+        "min": [
+          -0.03470899909734726,
+          -0.1750050038099289,
+          -0.0001340000017080456
         ],
         "max": [
-          0.03671500086784363,
-          0.08973900228738785,
-          0.07244899868965149
+          0.034745000302791595,
+          0.08830399811267853,
+          0.0693959966301918
         ],
-        "min": [
-          -0.03752899914979935,
-          -0.1940850019454956,
-          -2.9000000722589903e-05
-        ]
+        "size": [
+          0.06945399940013885,
+          0.2633090019226074,
+          0.06952999663189985
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         5.49139236555684e-05,
@@ -59,7 +65,7 @@
         0.0004128635843164656,
         0.0004135791278815609
       ],
-      "mass": 0.115,
+      "mass": 0.11500000208616257,
       "material": "stainless_steel_with_wood_handle",
       "name": "D00915 Ware Whisk",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00915 Ware Whisk",
         "part_name": "D00915 Ware Whisk"
       },
-      "volume": 0.00045007514475218423
+      "volume": 0.00045007514475218423,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "09b90f3004658151ddf23e488b2150812a704f5b694ef4df49f5d317a9093d04"
+    },
+    "usd_path": "batch2/D00915 Ware Whisk/D00915_Ware_Whisk.usd",
+    "usd_sha256": "aa89fb26ea7c457a77b80f64e5a130c10dd0ffaf7724088ff1b666bcd520c56d",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {},
   "units": {
@@ -86,25 +109,59 @@
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
-        0.07424400001764297,
-        0.28382400423288345,
-        0.07247799869037408
-      ]
+        0.06945399940013885,
+        0.2633090019226074,
+        0.06952999663189985
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "aa89fb26ea7c457a77b80f64e5a130c10dd0ffaf7724088ff1b666bcd520c56d",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.115
+      "value_kg": 0.11500000208616257,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "aa89fb26ea7c457a77b80f64e5a130c10dd0ffaf7724088ff1b666bcd520c56d",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.11500000208616257,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 36,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "aa89fb26ea7c457a77b80f64e5a130c10dd0ffaf7724088ff1b666bcd520c56d",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 36,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "aa89fb26ea7c457a77b80f64e5a130c10dd0ffaf7724088ff1b666bcd520c56d",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

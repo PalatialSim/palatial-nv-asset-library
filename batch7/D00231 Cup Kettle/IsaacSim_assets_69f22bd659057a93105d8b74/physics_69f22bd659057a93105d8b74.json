@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.09750200062990189,
-        0.055337000638246536,
-        0.18247799575328827
-      ],
       "min": [
-        -0.1198439970612526,
-        -0.05540100112557411,
-        -0.00011000000085914508
+        -0.11027300357818604,
+        -0.08765900135040283,
+        6.000000212225132e-06
+      ],
+      "max": [
+        0.09457799792289734,
+        0.08797299861907959,
+        0.20463700592517853
       ],
       "size": [
-        0.21734599769115448,
-        0.11073800176382065,
-        0.18258799575414741
-      ]
+        0.20485100150108337,
+        0.17563199996948242,
+        0.2046310059249663
+      ],
+      "units": "m"
     },
     "description": "A brushed stainless steel kettle with a rounded domed body, cylindrical spout, arched metal handle, fitted lid, and small knob. The exterior is metallic silver with rolled rim details and a hollow vessel form.",
     "name": "D00231 Stovetop Kettle",
     "object_type": "rigid_bodies",
-    "total_mass": 0.95
+    "total_mass": 0.949999988079071,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00231",
   "parts": [
     {
       "bounds": {
-        "center": [
-          -0.0015305650778030112,
-          -3.623181043883846e-05,
-          0.07906091650163927
+        "min": [
+          -0.11027300357818604,
+          -0.08765900135040283,
+          6.000000212225132e-06
         ],
         "max": [
-          0.09750200062990189,
-          0.055337000638246536,
-          0.18247799575328827
+          0.09457799792289734,
+          0.08797299861907959,
+          0.20463700592517853
         ],
-        "min": [
-          -0.1198439970612526,
-          -0.05540100112557411,
-          -0.00011000000085914508
-        ]
+        "size": [
+          0.20485100150108337,
+          0.17563199996948242,
+          0.2046310059249663
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         0.0015356097983044434,
@@ -59,7 +65,7 @@
         0.0034657952308409182,
         0.003977603566839707
       ],
-      "mass": 0.95,
+      "mass": 0.949999988079071,
       "material": "brushed_stainless_steel",
       "name": "D00231 Cup Kettle",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00231 Cup Kettle",
         "part_name": "D00231 Cup Kettle"
       },
-      "volume": 0.0032017516861902484
+      "volume": 0.0032017516861902484,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "20925b210a75e2ac6a379090f210b5cfe7f05b2fbd02118f2ce0e53d068afb93"
+    },
+    "usd_path": "batch7/D00231 Cup Kettle/IsaacSim_assets_69f22bd659057a93105d8b74/IsaacSim_asset_69f22bd659057a93105d8b74.usd",
+    "usd_sha256": "dff31e51b3b655a5594f2cbfa6e48becaf326c50560cb48846699577dca7fddb",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {},
   "units": {
@@ -86,25 +109,59 @@
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
-        0.21734599769115448,
-        0.11073800176382065,
-        0.18258799575414741
-      ]
+        0.20485100150108337,
+        0.17563199996948242,
+        0.2046310059249663
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "dff31e51b3b655a5594f2cbfa6e48becaf326c50560cb48846699577dca7fddb",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.95
+      "value_kg": 0.949999988079071,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "dff31e51b3b655a5594f2cbfa6e48becaf326c50560cb48846699577dca7fddb",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.949999988079071,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 59,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "dff31e51b3b655a5594f2cbfa6e48becaf326c50560cb48846699577dca7fddb",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 59,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "dff31e51b3b655a5594f2cbfa6e48becaf326c50560cb48846699577dca7fddb",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

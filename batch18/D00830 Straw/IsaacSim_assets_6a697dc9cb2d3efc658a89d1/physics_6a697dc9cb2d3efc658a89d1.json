@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.006312999874353409,
-        0.09971699863672256,
-        0.013586840475909412
-      ],
       "min": [
         -0.00634900014847517,
         -0.09940499812364578,
         0.0006058400358597282
       ],
+      "max": [
+        0.006312999874353409,
+        0.09971699863672256,
+        0.013586840475909412
+      ],
       "size": [
         0.012662000022828579,
         0.19912199676036835,
         0.012981000440049684
-      ]
+      ],
+      "units": "m"
     },
     "description": "D00830 Straw",
     "name": "D00830 Straw",
     "object_type": "rigid_bodies",
-    "total_mass": 0.0005
+    "total_mass": 0.0005000000237487257,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00830",
   "parts": [
     {
       "bounds": {
-        "center": [
-          -1.800013706088066e-05,
-          0.0001560002565383911,
-          0.00709634025588457
+        "min": [
+          -0.00634900014847517,
+          -0.09940499812364578,
+          0.0006058400358597282
         ],
         "max": [
           0.006312999874353409,
           0.09971699863672256,
           0.013586840475909412
         ],
-        "min": [
-          -0.00634900014847517,
-          -0.09940499812364578,
-          0.0006058400358597282
-        ]
+        "size": [
+          0.012662000022828579,
+          0.19912199676036835,
+          0.012981000440049684
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         -1.7211341400980018e-05,
@@ -59,7 +65,7 @@
         1.65493952408724e-06,
         1.655127789490507e-06
       ],
-      "mass": 0.0005,
+      "mass": 0.0005000000237487257,
       "material": "wood",
       "name": "D00830 Straw",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00830 Straw",
         "part_name": "D00830 Straw"
       },
-      "volume": 5.555555819430285e-07
+      "volume": 5.555555819430285e-07,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "48c772d1fa13fb90b033f8ae1d78abcc7e7009562525e5f4fc7529317209b202"
+    },
+    "usd_path": "batch18/D00830 Straw/IsaacSim_assets_6a697dc9cb2d3efc658a89d1/IsaacSim_asset_6a697dc9cb2d3efc658a89d1.usd",
+    "usd_sha256": "36e749abefe564a3e592314c54c30fb7c199ad284011dc6c3ce9f756beb83349",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -91,22 +114,56 @@
         0.012662000022828579,
         0.19912199676036835,
         0.012981000440049684
-      ]
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "36e749abefe564a3e592314c54c30fb7c199ad284011dc6c3ce9f756beb83349",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.0005
+      "value_kg": 0.0005000000237487257,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "36e749abefe564a3e592314c54c30fb7c199ad284011dc6c3ce9f756beb83349",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.0005000000237487257,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 8,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "36e749abefe564a3e592314c54c30fb7c199ad284011dc6c3ce9f756beb83349",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 8,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "36e749abefe564a3e592314c54c30fb7c199ad284011dc6c3ce9f756beb83349",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

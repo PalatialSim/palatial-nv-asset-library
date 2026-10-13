@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.023917991667985916,
-        0.03552112728357315,
-        0.18568478524684906
-      ],
       "min": [
-        -0.022056007757782936,
-        3.1265906272892607e-06,
-        -0.1357962191104889
+        -0.019336000084877014,
+        -0.20449399948120117,
+        4.999999873689376e-06
+      ],
+      "max": [
+        0.01829499937593937,
+        0.15481099486351013,
+        0.03313300013542175
       ],
       "size": [
-        0.04597399942576885,
-        0.03551800069294586,
-        0.32148100435733795
-      ]
+        0.03763099946081638,
+        0.3593049943447113,
+        0.033128000135548064
+      ],
+      "units": "m"
     },
     "description": "An offset kitchen spatula featuring a long, flat stainless steel blade and a wooden handle secured with brass rivets.",
     "name": "D00874 Offset Icing Spatula",
     "object_type": "rigid_bodies",
-    "total_mass": 0.11
+    "total_mass": 0.10999999940395355,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00874",
   "parts": [
     {
       "bounds": {
-        "center": [
-          0.00010148108808169894,
-          0.012377829372564736,
-          0.018654578176208372
+        "min": [
+          -0.019336000084877014,
+          -0.20449399948120117,
+          4.999999873689376e-06
         ],
         "max": [
-          0.023917991667985916,
-          0.03552112728357315,
-          0.18568478524684906
+          0.01829499937593937,
+          0.15481099486351013,
+          0.03313300013542175
         ],
-        "min": [
-          -0.022056007757782936,
-          3.1265906272892607e-06,
-          -0.1357962191104889
-        ]
+        "size": [
+          0.03763099946081638,
+          0.3593049943447113,
+          0.033128000135548064
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         -0.00020041204467932902,
@@ -59,7 +65,7 @@
         0.0007977674715431741,
         0.0008020365212586501
       ],
-      "mass": 0.11,
+      "mass": 0.10999999940395355,
       "material": "stainless_steel_and_wood",
       "name": "D00874 Tool",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00874 Tool",
         "part_name": "D00874 Tool"
       },
-      "volume": 0.0002723242112951175
+      "volume": 0.0002723242112951175,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "a64380b6450fff36e9772fe828c92a78c7b19c85dec7e7ac09d41ab2e2778874"
+    },
+    "usd_path": "batch9/D00874 Tool/IsaacSim_assets_69fde9b58102b48e9a427474/IsaacSim_asset_69fde9b58102b48e9a427474.usd",
+    "usd_sha256": "5022291a68175cdfbbd2f9058643e06cd754c0294ce124196ef22cf7d656ca14",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {},
   "units": {
@@ -86,25 +109,59 @@
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
-        0.04597399942576885,
-        0.03551800069294586,
-        0.32148100435733795
-      ]
+        0.03763099946081638,
+        0.3593049943447113,
+        0.033128000135548064
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "5022291a68175cdfbbd2f9058643e06cd754c0294ce124196ef22cf7d656ca14",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.11
+      "value_kg": 0.10999999940395355,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "5022291a68175cdfbbd2f9058643e06cd754c0294ce124196ef22cf7d656ca14",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.10999999940395355,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 3,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "5022291a68175cdfbbd2f9058643e06cd754c0294ce124196ef22cf7d656ca14",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 3,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "5022291a68175cdfbbd2f9058643e06cd754c0294ce124196ef22cf7d656ca14",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

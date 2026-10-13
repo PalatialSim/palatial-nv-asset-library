@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.06473549455404282,
-        0.06515185534954071,
-        0.06447053700685501
-      ],
       "min": [
-        -0.06469113379716873,
-        0.0,
-        -0.0646815374493599
+        -0.06468699872493744,
+        -0.06444799900054932,
+        3.199929415131919e-05
+      ],
+      "max": [
+        0.06473100185394287,
+        0.06467200070619583,
+        0.0653030052781105
       ],
       "size": [
-        0.12942662835121155,
-        0.06515185534954071,
-        0.1291520744562149
-      ]
+        0.1294180005788803,
+        0.12911999970674515,
+        0.06527100598395918
+      ],
+      "units": "m"
     },
     "description": "A white ceramic bowl with a smooth finish and a short foot ring at the base.",
     "name": "D00666 Rice Bowl",
     "object_type": "rigid_bodies",
-    "total_mass": 0.4
+    "total_mass": 0.4000000059604645,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00666",
   "parts": [
     {
       "bounds": {
-        "center": [
-          5.66658148005917e-05,
-          0.033838722220773304,
-          -9.30170839224076e-05
+        "min": [
+          -0.06468699872493744,
+          -0.06444799900054932,
+          3.199929415131919e-05
         ],
         "max": [
-          0.06473549455404282,
-          0.06515185534954071,
-          0.06447053700685501
+          0.06473100185394287,
+          0.06467200070619583,
+          0.0653030052781105
         ],
-        "min": [
-          -0.06469113379716873,
-          0.0,
-          -0.0646815374493599
-        ]
+        "size": [
+          0.1294180005788803,
+          0.12911999970674515,
+          0.06527100598395918
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         8.66299345414299e-05,
@@ -59,7 +65,7 @@
         0.0005957330813263543,
         0.000890820733088182
       ],
-      "mass": 0.4,
+      "mass": 0.4000000059604645,
       "material": "wood",
       "name": "D00666 Rice Bowl",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00666 Rice Bowl",
         "part_name": "D00666 Rice Bowl"
       },
-      "volume": 0.00010248204272771267
+      "volume": 0.00010248204272771267,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "ba176d00b1b001c7aa4d35af8787e0d786518478126e79341fce0c4f4a264aad"
+    },
+    "usd_path": "batch13/D00666 Rice Bowl/IsaacSim_assets_69f62cf6431507ff7c102dd6/IsaacSim_asset_69f62cf6431507ff7c102dd6.usd",
+    "usd_sha256": "de2e6e46688f2ff1f4b62a691d28e1a927927850004b9bbbb12fa3ebfac287cf",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {},
   "units": {
@@ -86,25 +109,59 @@
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
-        0.12942662835121155,
-        0.06515185534954071,
-        0.1291520744562149
-      ]
+        0.1294180005788803,
+        0.12911999970674515,
+        0.06527100598395918
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "de2e6e46688f2ff1f4b62a691d28e1a927927850004b9bbbb12fa3ebfac287cf",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.4
+      "value_kg": 0.4000000059604645,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "de2e6e46688f2ff1f4b62a691d28e1a927927850004b9bbbb12fa3ebfac287cf",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.4000000059604645,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 66,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "de2e6e46688f2ff1f4b62a691d28e1a927927850004b9bbbb12fa3ebfac287cf",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 66,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "de2e6e46688f2ff1f4b62a691d28e1a927927850004b9bbbb12fa3ebfac287cf",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

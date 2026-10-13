@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.0787070021033287,
-        0.05310399830341339,
-        0.14561690390110016
-      ],
       "min": [
         -0.05741500109434128,
         -0.05309600010514259,
         0.0005069000762887299
       ],
+      "max": [
+        0.0787070021033287,
+        0.05310399830341339,
+        0.14561690390110016
+      ],
       "size": [
         0.13612200319766998,
         0.10619999840855598,
         0.14511000382481143
-      ]
+      ],
+      "units": "m"
     },
     "description": "D00358 Glass Pitcher",
     "name": "D00358 Glass Pitcher",
     "object_type": "rigid_bodies",
-    "total_mass": 1.2
+    "total_mass": 1.2000000476837158,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00358",
   "parts": [
     {
       "bounds": {
-        "center": [
-          0.010646000504493713,
-          3.999099135398865e-06,
-          0.07306190198869444
+        "min": [
+          -0.05741500109434128,
+          -0.05309600010514259,
+          0.0005069000762887299
         ],
         "max": [
           0.0787070021033287,
           0.05310399830341339,
           0.14561690390110016
         ],
-        "min": [
-          -0.05741500109434128,
-          -0.05309600010514259,
-          0.0005069000762887299
-        ]
+        "size": [
+          0.13612200319766998,
+          0.10619999840855598,
+          0.14511000382481143
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         0.00470319390296936,
@@ -59,7 +65,7 @@
         0.002964238403365016,
         0.00355226150713861
       ],
-      "mass": 1.2,
+      "mass": 1.2000000476837158,
       "material": "ceramic",
       "name": "D00358 Glass Pitcher",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00358 Glass Pitcher",
         "part_name": "D00358 Glass Pitcher"
       },
-      "volume": 0.00048000001907348635
+      "volume": 0.00048000001907348635,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "e53db30cca0e8d2906f570985eec7be31e104059000cc80f94ccceea66f4dec1"
+    },
+    "usd_path": "batch19/D00358 Glass Pitcher/IsaacSim_assets_6a7048efcb2d3efc65e3c190/IsaacSim_asset_6a7048efcb2d3efc65e3c190.usd",
+    "usd_sha256": "9414c77b0dbe4368bd825ef19c786e3ac440c9ac690c1c32055a78182ca1a186",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -91,22 +114,56 @@
         0.13612200319766998,
         0.10619999840855598,
         0.14511000382481143
-      ]
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "9414c77b0dbe4368bd825ef19c786e3ac440c9ac690c1c32055a78182ca1a186",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 1.2
+      "value_kg": 1.2000000476837158,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "9414c77b0dbe4368bd825ef19c786e3ac440c9ac690c1c32055a78182ca1a186",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 1.2000000476837158,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 235,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "9414c77b0dbe4368bd825ef19c786e3ac440c9ac690c1c32055a78182ca1a186",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 235,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "9414c77b0dbe4368bd825ef19c786e3ac440c9ac690c1c32055a78182ca1a186",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

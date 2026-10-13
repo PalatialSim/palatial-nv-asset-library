@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.00849399995058775,
-        0.008584000170230865,
-        0.017057260498404503
-      ],
       "min": [
         -0.008500000461935997,
         -0.008239000104367733,
         4.4260217691771686e-05
       ],
+      "max": [
+        0.00849399995058775,
+        0.008584000170230865,
+        0.017057260498404503
+      ],
       "size": [
         0.016994000412523746,
         0.0168230002745986,
         0.01701300028071273
-      ]
+      ],
+      "units": "m"
     },
     "description": "D00833 Sugar",
     "name": "D00833 Sugar",
     "object_type": "rigid_bodies",
-    "total_mass": 0.0041
+    "total_mass": 0.004100000020116568,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00833",
   "parts": [
     {
       "bounds": {
-        "center": [
-          -3.000255674123764e-06,
-          0.00017250003293156624,
-          0.008550760358048137
+        "min": [
+          -0.008500000461935997,
+          -0.008239000104367733,
+          4.4260217691771686e-05
         ],
         "max": [
           0.00849399995058775,
           0.008584000170230865,
           0.017057260498404503
         ],
-        "min": [
-          -0.008500000461935997,
-          -0.008239000104367733,
-          4.4260217691771686e-05
-        ]
+        "size": [
+          0.016994000412523746,
+          0.0168230002745986,
+          0.01701300028071273
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         -1.3060707715339959e-05,
@@ -59,7 +65,7 @@
         1.9263451633833029e-07,
         1.9406859053106018e-07
       ],
-      "mass": 0.0041,
+      "mass": 0.004100000020116568,
       "material": "wood",
       "name": "D00833 Sugar",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00833 Sugar",
         "part_name": "D00833 Sugar"
       },
-      "volume": 4.823529435431256e-06
+      "volume": 4.823529435431256e-06,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "3e8c82cdac13d7db93977e13366512f62f3bdce74e80ad0624d2956193cab7fc"
+    },
+    "usd_path": "batch21/D00833 Sugar/IsaacSim_assets_6a72b24b5d45b936d62d07c6/IsaacSim_asset_6a72b24b5d45b936d62d07c6.usd",
+    "usd_sha256": "9462ebb2c94f450c3c7cb1e1b1062aad67e212081a1a92c8439f23a541aec072",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -91,22 +114,56 @@
         0.016994000412523746,
         0.0168230002745986,
         0.01701300028071273
-      ]
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "9462ebb2c94f450c3c7cb1e1b1062aad67e212081a1a92c8439f23a541aec072",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.0041
+      "value_kg": 0.004100000020116568,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "9462ebb2c94f450c3c7cb1e1b1062aad67e212081a1a92c8439f23a541aec072",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.004100000020116568,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 6,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "9462ebb2c94f450c3c7cb1e1b1062aad67e212081a1a92c8439f23a541aec072",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 6,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "9462ebb2c94f450c3c7cb1e1b1062aad67e212081a1a92c8439f23a541aec072",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

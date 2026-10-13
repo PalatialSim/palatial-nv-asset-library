@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.034026000648736954,
-        0.319563090801239,
-        0.005036000162363052
-      ],
       "min": [
         -0.036869000643491745,
-        0.0006201108335517347,
-        -0.004987999796867371
+        -0.005036000162363052,
+        0.0006201108335517347
+      ],
+      "max": [
+        0.034026000648736954,
+        0.004987999796867371,
+        0.319563090801239
       ],
       "size": [
         0.0708950012922287,
-        0.3189429799676873,
-        0.010023999959230423
-      ]
+        0.010023999959230423,
+        0.3189429799676873
+      ],
+      "units": "m"
     },
     "description": "Utensil",
     "name": "part_00",
     "object_type": "rigid_bodies",
-    "total_mass": 0.04259999841451645
+    "total_mass": 0.04259999841451645,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00893",
   "parts": [
     {
       "bounds": {
-        "center": [
-          -0.0014214999973773956,
-          0.16009160081739537,
-          2.400018274784088e-05
+        "min": [
+          -0.036869000643491745,
+          -0.005036000162363052,
+          0.0006201108335517347
         ],
         "max": [
           0.034026000648736954,
-          0.319563090801239,
-          0.005036000162363052
+          0.004987999796867371,
+          0.319563090801239
         ],
-        "min": [
-          -0.036869000643491745,
-          0.0006201108335517347,
-          -0.004987999796867371
-        ]
+        "size": [
+          0.0708950012922287,
+          0.010023999959230423,
+          0.3189429799676873
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         0.00019079085905104876,
@@ -65,10 +71,27 @@
       "source": {
         "object_name": "World",
         "part_name": "part_00"
-      }
+      },
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "40a6b3537bdf6cdb2763362ad1d194fcc7a8e17078be10bbd6380cfbf8951ee0"
+    },
+    "usd_path": "batch39/D00893 Utensil/IsaacSim_assets_6a8bc2c13febd2fb750aeb8a/IsaacSim_asset_6a8bc2c13febd2fb750aeb8a.usd",
+    "usd_sha256": "6e69bfe187d922f6fd5382212f4e56a1b7d39fe53b6e6876182340a42bbcdc1b",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {},
   "units": {
@@ -85,24 +108,58 @@
       "up_axis": "Z",
       "bounds_m": [
         0.0708950012922287,
-        0.3189429799676873,
-        0.010023999959230423
-      ]
+        0.010023999959230423,
+        0.3189429799676873
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "6e69bfe187d922f6fd5382212f4e56a1b7d39fe53b6e6876182340a42bbcdc1b",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.04259999841451645
+      "value_kg": 0.04259999841451645,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "6e69bfe187d922f6fd5382212f4e56a1b7d39fe53b6e6876182340a42bbcdc1b",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.04259999841451645,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 6,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "6e69bfe187d922f6fd5382212f4e56a1b7d39fe53b6e6876182340a42bbcdc1b",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 6,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "6e69bfe187d922f6fd5382212f4e56a1b7d39fe53b6e6876182340a42bbcdc1b",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

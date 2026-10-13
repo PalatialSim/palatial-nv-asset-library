@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.022766999900341034,
-        0.024111999198794365,
-        0.058354757726192474
-      ],
       "min": [
         -0.024248000234365463,
         -0.022048000246286392,
         0.00026375995366834104
       ],
+      "max": [
+        0.022766999900341034,
+        0.024111999198794365,
+        0.058354757726192474
+      ],
       "size": [
         0.0470150001347065,
         0.04615999944508076,
         0.05809099777252413
-      ]
+      ],
+      "units": "m"
     },
     "description": "D00580 Guava",
     "name": "D00580 Guava",
     "object_type": "rigid_bodies",
-    "total_mass": 0.26
+    "total_mass": 0.25999999046325684,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00580",
   "parts": [
     {
       "bounds": {
-        "center": [
-          -0.0007405001670122147,
-          0.0010319994762539864,
-          0.029309258839930408
+        "min": [
+          -0.024248000234365463,
+          -0.022048000246286392,
+          0.00026375995366834104
         ],
         "max": [
           0.022766999900341034,
           0.024111999198794365,
           0.058354757726192474
         ],
-        "min": [
-          -0.024248000234365463,
-          -0.022048000246286392,
-          0.00026375995366834104
-        ]
+        "size": [
+          0.0470150001347065,
+          0.04615999944508076,
+          0.05809099777252413
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         7.220652378236991e-07,
@@ -59,7 +65,7 @@
         6.951474642846733e-05,
         7.064549572532997e-05
       ],
-      "mass": 0.26,
+      "mass": 0.25999999046325684,
       "material": "plastic",
       "name": "D00580 Guava",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00580 Guava",
         "part_name": "D00580 Guava"
       },
-      "volume": 0.00025999999046325684
+      "volume": 0.00025999999046325684,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "0078a42ba2afdb6e426a37214ec9101b42e4994ece066fc2ea6d533d5f9611da"
+    },
+    "usd_path": "batch28/D00580 Guava/IsaacSim_assets_6a7c76e0b7a9c4204a4e927f/IsaacSim_asset_6a7c76e0b7a9c4204a4e927f.usd",
+    "usd_sha256": "22ed40f24e4141b984aa2adad130b8840527658b70313f5fd57e42663b8e1b4c",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -91,22 +114,56 @@
         0.0470150001347065,
         0.04615999944508076,
         0.05809099777252413
-      ]
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "22ed40f24e4141b984aa2adad130b8840527658b70313f5fd57e42663b8e1b4c",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.26
+      "value_kg": 0.25999999046325684,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "22ed40f24e4141b984aa2adad130b8840527658b70313f5fd57e42663b8e1b4c",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.25999999046325684,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 4,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "22ed40f24e4141b984aa2adad130b8840527658b70313f5fd57e42663b8e1b4c",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 4,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "22ed40f24e4141b984aa2adad130b8840527658b70313f5fd57e42663b8e1b4c",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

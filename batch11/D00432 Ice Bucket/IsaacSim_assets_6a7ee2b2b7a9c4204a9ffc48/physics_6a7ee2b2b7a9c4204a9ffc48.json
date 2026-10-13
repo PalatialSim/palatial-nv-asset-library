@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.102292999625206,
-        0.15417146682739258,
-        0.07401199638843536
-      ],
       "min": [
         -0.10194200277328491,
-        0.0011224602349102497,
-        -0.07425899803638458
+        -0.07401199638843536,
+        0.0011224602349102497
+      ],
+      "max": [
+        0.102292999625206,
+        0.07425899803638458,
+        0.15417146682739258
       ],
       "size": [
         0.2042350023984909,
-        0.15304900659248233,
-        0.14827099442481995
-      ]
+        0.14827099442481995,
+        0.15304900659248233
+      ],
+      "units": "m"
     },
     "description": "D00432 Ice Bucket",
     "name": "D00432 Ice Bucket",
     "object_type": "rigid_bodies",
-    "total_mass": 1.2
+    "total_mass": 1.2000000476837158,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00432",
   "parts": [
     {
       "bounds": {
-        "center": [
-          0.00017549842596054077,
-          0.07764696353115141,
-          -0.00012350082397460938
+        "min": [
+          -0.10194200277328491,
+          -0.07401199638843536,
+          0.0011224602349102497
         ],
         "max": [
           0.102292999625206,
-          0.15417146682739258,
-          0.07401199638843536
+          0.07425899803638458,
+          0.15417146682739258
         ],
-        "min": [
-          -0.10194200277328491,
-          0.0011224602349102497,
-          -0.07425899803638458
-        ]
+        "size": [
+          0.2042350023984909,
+          0.14827099442481995,
+          0.15304900659248233
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         0.00014013602049089968,
@@ -59,7 +65,7 @@
         0.0038014641031622887,
         0.0044940803200006485
       ],
-      "mass": 1.2,
+      "mass": 1.2000000476837158,
       "material": "metal",
       "name": "D00432 Ice Bucket",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00432 Ice Bucket",
         "part_name": "D00432 Ice Bucket"
       },
-      "volume": 0.00015000000596046448
+      "volume": 0.00015000000596046448,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "9d0822241b54c64d371b89cb35a9b0525ab70ba0114e8bc74c6788a56b805308"
+    },
+    "usd_path": "batch11/D00432 Ice Bucket/IsaacSim_assets_6a7ee2b2b7a9c4204a9ffc48/IsaacSim_asset_6a7ee2b2b7a9c4204a9ffc48.usd",
+    "usd_sha256": "3faa3eeacd372baf4f27a480bb8c154db22efe3ad5878b16f297a1c28e562950",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -89,24 +112,58 @@
       "up_axis": "Z",
       "bounds_m": [
         0.2042350023984909,
-        0.15304900659248233,
-        0.14827099442481995
-      ]
+        0.14827099442481995,
+        0.15304900659248233
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "3faa3eeacd372baf4f27a480bb8c154db22efe3ad5878b16f297a1c28e562950",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 1.2
+      "value_kg": 1.2000000476837158,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "3faa3eeacd372baf4f27a480bb8c154db22efe3ad5878b16f297a1c28e562950",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 1.2000000476837158,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 18,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "3faa3eeacd372baf4f27a480bb8c154db22efe3ad5878b16f297a1c28e562950",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 18,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "3faa3eeacd372baf4f27a480bb8c154db22efe3ad5878b16f297a1c28e562950",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

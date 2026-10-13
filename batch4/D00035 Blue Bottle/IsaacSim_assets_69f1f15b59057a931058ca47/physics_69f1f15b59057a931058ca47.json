@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.05716508626937866,
-        0.28177592158317566,
-        0.05240768566727638
-      ],
       "min": [
-        -0.06111891195178032,
-        -1.0067145922221243e-05,
-        -0.0539243146777153
+        -0.05674700066447258,
+        -0.04951300099492073,
+        -5.500000042957254e-05
+      ],
+      "max": [
+        0.05613100156188011,
+        0.053665000945329666,
+        0.27182498574256897
       ],
       "size": [
-        0.11828399822115898,
-        0.2817859887290979,
-        0.10633200034499168
-      ]
+        0.11287800222635269,
+        0.1031780019402504,
+        0.27187998574299854
+      ],
+      "units": "m"
     },
     "description": "A matte blue plastic spray bottle with a white and blue trigger mechanism and a large white rectangular label.",
     "name": "D00035 Blue Bottle",
     "object_type": "rigid_bodies",
-    "total_mass": 0.85
+    "total_mass": 0.8500000238418579,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00035",
   "parts": [
     {
       "bounds": {
-        "center": [
-          0.001142132363770954,
-          0.13116514382088582,
-          -0.0007516943343587555
+        "min": [
+          -0.05674700066447258,
+          -0.04951300099492073,
+          -5.500000042957254e-05
         ],
         "max": [
-          0.05716508626937866,
-          0.28177592158317566,
-          0.05240768566727638
+          0.05613100156188011,
+          0.053665000945329666,
+          0.27182498574256897
         ],
-        "min": [
-          -0.06111891195178032,
-          -1.0067145922221243e-05,
-          -0.0539243146777153
-        ]
+        "size": [
+          0.11287800222635269,
+          0.1031780019402504,
+          0.27187998574299854
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         0.002010728128357303,
@@ -59,7 +65,7 @@
         0.004740286365372169,
         0.004865699797836916
       ],
-      "mass": 0.85,
+      "mass": 0.8500000238418579,
       "material": "plastic",
       "name": "D00035 Blue Bottle",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00035 Blue Bottle",
         "part_name": "D00035 Blue Bottle"
       },
-      "volume": 0.0019727090195505747
+      "volume": 0.0019727090195505747,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "c05abaf282e8a350296c8cd022f35173fb2ee36f826cbd49c9982fc367a3dc05"
+    },
+    "usd_path": "batch4/D00035 Blue Bottle/IsaacSim_assets_69f1f15b59057a931058ca47/IsaacSim_asset_69f1f15b59057a931058ca47.usd",
+    "usd_sha256": "806245622f3232b027fe18e76c6db9a2a0d76ff1cb606f145d9fa6fd4340c065",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {},
   "units": {
@@ -86,25 +109,76 @@
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
-        0.11828399822115898,
-        0.2817859887290979,
-        0.10633200034499168
-      ]
+        0.11287800222635269,
+        0.1031780019402504,
+        0.27187998574299854
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "806245622f3232b027fe18e76c6db9a2a0d76ff1cb606f145d9fa6fd4340c065",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.85
+      "value_kg": 0.8500000238418579,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "806245622f3232b027fe18e76c6db9a2a0d76ff1cb606f145d9fa6fd4340c065",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.8500000238418579,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 18,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "806245622f3232b027fe18e76c6db9a2a0d76ff1cb606f145d9fa6fd4340c065",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 18,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "806245622f3232b027fe18e76c6db9a2a0d76ff1cb606f145d9fa6fd4340c065",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "806245622f3232b027fe18e76c6db9a2a0d76ff1cb606f145d9fa6fd4340c065",
+      "supplemental_accepted": true,
+      "planned_test_count": 12,
+      "result_count": 12,
+      "passed": 11,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-13T20:33:41.866369+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "6ca642d18e5349eacff180c429ad321a739ae4d744806b849c704606074a592e",
+      "qualification": "native-fleet-evidence/shard-01/native-batch-000/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

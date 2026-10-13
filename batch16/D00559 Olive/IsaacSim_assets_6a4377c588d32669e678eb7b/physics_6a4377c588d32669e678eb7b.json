@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.009918968227389614,
-        0.013572224050479403,
-        0.0064151031227933164
-      ],
       "min": [
-        -0.007868019741929943,
-        -2.377953880032002e-05,
-        -0.00671536133050296
+        -0.00803299993276596,
+        -0.0062500000931322575,
+        5.000000328436727e-06
+      ],
+      "max": [
+        0.009889000095427036,
+        0.006661000195890665,
+        0.013731999322772026
       ],
       "size": [
-        0.01778698796931956,
-        0.013596003589279723,
-        0.013130464453296277
-      ]
+        0.017922000028192997,
+        0.012911000289022923,
+        0.01372699932244359
+      ],
+      "units": "m"
     },
     "description": "A single dark purplish-green olive with a slightly wrinkled surface. It features an organic, fleshy body with a small stem attachment point.",
     "name": "image",
     "object_type": "rigid_bodies",
-    "total_mass": 0.004
+    "total_mass": 0.004000000189989805,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00559",
   "parts": [
     {
       "bounds": {
-        "center": [
-          0.00024628145147363267,
-          0.006637231175761169,
-          2.281426322504508e-06
+        "min": [
+          -0.00803299993276596,
+          -0.0062500000931322575,
+          5.000000328436727e-06
         ],
         "max": [
-          0.009918968227389614,
-          0.013572224050479403,
-          0.0064151031227933164
+          0.009889000095427036,
+          0.006661000195890665,
+          0.013731999322772026
         ],
-        "min": [
-          -0.007868019741929943,
-          -2.377953880032002e-05,
-          -0.00671536133050296
-        ]
+        "size": [
+          0.017922000028192997,
+          0.012911000289022923,
+          0.01372699932244359
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         0.00018699483206860985,
@@ -59,7 +65,7 @@
         9.311842291927671e-08,
         9.583727408216418e-08
       ],
-      "mass": 0.004,
+      "mass": 0.004000000189989805,
       "material": "organic_fleshy_material",
       "name": "image",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "image",
         "part_name": "image"
       },
-      "volume": 1.518181178015395e-06
+      "volume": 1.518181178015395e-06,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "5f3544bc6f0a11727ae77fb7e1f93c46b3cdc55dd305a01dc80aad29bec70e97"
+    },
+    "usd_path": "batch16/D00559 Olive/IsaacSim_assets_6a4377c588d32669e678eb7b/IsaacSim_asset_6a4377c588d32669e678eb7b.usd",
+    "usd_sha256": "6ffa4db6e8bdc977f44cc0f180b0e5e6fc269ee963a5a7000068492406623b50",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {},
   "units": {
@@ -86,25 +109,59 @@
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
-        0.01778698796931956,
-        0.013596003589279723,
-        0.013130464453296277
-      ]
+        0.017922000028192997,
+        0.012911000289022923,
+        0.01372699932244359
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "6ffa4db6e8bdc977f44cc0f180b0e5e6fc269ee963a5a7000068492406623b50",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.004
+      "value_kg": 0.004000000189989805,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "6ffa4db6e8bdc977f44cc0f180b0e5e6fc269ee963a5a7000068492406623b50",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.004000000189989805,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 16,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "6ffa4db6e8bdc977f44cc0f180b0e5e6fc269ee963a5a7000068492406623b50",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 16,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "6ffa4db6e8bdc977f44cc0f180b0e5e6fc269ee963a5a7000068492406623b50",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.01346499565988779,
-        0.058566849678754807,
-        0.19310936331748962
-      ],
       "min": [
-        -0.013423004187643528,
-        -1.9149663785356097e-05,
-        -0.29102063179016113
+        -0.2004760056734085,
+        -0.01512600015848875,
+        -7.000000096013537e-06
+      ],
+      "max": [
+        0.11230599880218506,
+        0.015331000089645386,
+        0.04387899860739708
       ],
       "size": [
-        0.02688799984753132,
-        0.05858599934254016,
-        0.48412999510765076
-      ]
+        0.31278200447559357,
+        0.030457000248134136,
+        0.04388599860749309
+      ],
+      "units": "m"
     },
     "description": "A fixed-blade knife featuring a dark steel blade, a polished wooden handle, and brass bolsters at both ends.",
     "name": "D00589 Fixed-Blade Hunting Knife",
     "object_type": "rigid_bodies",
-    "total_mass": 0.25
+    "total_mass": 0.25,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00589",
   "parts": [
     {
       "bounds": {
-        "center": [
-          6.487787388739803e-05,
-          0.035555334045497426,
-          -0.07749148943619814
+        "min": [
+          -0.2004760056734085,
+          -0.01512600015848875,
+          -7.000000096013537e-06
         ],
         "max": [
-          0.01346499565988779,
-          0.058566849678754807,
-          0.19310936331748962
+          0.11230599880218506,
+          0.015331000089645386,
+          0.04387899860739708
         ],
-        "min": [
-          -0.013423004187643528,
-          -1.9149663785356097e-05,
-          -0.29102063179016113
-        ]
+        "size": [
+          0.31278200447559357,
+          0.030457000248134136,
+          0.04388599860749309
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         0.0021944315645711916,
@@ -67,10 +73,27 @@
         "object_name": "D00589 Par",
         "part_name": "D00589 Par"
       },
-      "volume": 0.00020573921497918455
+      "volume": 0.00020573921497918455,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "59a3e4662a7ecb9cea77b47d1d28cbc0a4797fb9788eb012b6d6d91306557cb1"
+    },
+    "usd_path": "batch6/D00589 Par/IsaacSim_assets_69f86702d09344200f4a509a/IsaacSim_asset_69f86702d09344200f4a509a.usd",
+    "usd_sha256": "7e5f37e5d4224d0bba2844091e7fae6615fd5a35ff07536f35af41e221bd727f",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {},
   "units": {
@@ -86,25 +109,59 @@
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
-        0.02688799984753132,
-        0.05858599934254016,
-        0.48412999510765076
-      ]
+        0.31278200447559357,
+        0.030457000248134136,
+        0.04388599860749309
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "7e5f37e5d4224d0bba2844091e7fae6615fd5a35ff07536f35af41e221bd727f",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.25
+      "value_kg": 0.25,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "7e5f37e5d4224d0bba2844091e7fae6615fd5a35ff07536f35af41e221bd727f",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.25,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 6,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "7e5f37e5d4224d0bba2844091e7fae6615fd5a35ff07536f35af41e221bd727f",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 6,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "7e5f37e5d4224d0bba2844091e7fae6615fd5a35ff07536f35af41e221bd727f",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

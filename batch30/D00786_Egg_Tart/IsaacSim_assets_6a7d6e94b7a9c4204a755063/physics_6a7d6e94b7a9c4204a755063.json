@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.0381769984960556,
-        0.028089658357203007,
-        0.037227001041173935
-      ],
       "min": [
         -0.0359559990465641,
-        0.0004056592082406496,
-        -0.03688500076532364
+        -0.037227001041173935,
+        0.0004056592082406496
+      ],
+      "max": [
+        0.0381769984960556,
+        0.03688500076532364,
+        0.028089658357203007
       ],
       "size": [
         0.0741329975426197,
-        0.027683999148962357,
-        0.07411200180649757
-      ]
+        0.07411200180649757,
+        0.027683999148962357
+      ],
+      "units": "m"
     },
     "description": "D00786 Egg_Tart",
     "name": "D00786 Egg_Tart",
     "object_type": "rigid_bodies",
-    "total_mass": 0.05
+    "total_mass": 0.05000000074505806,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00786",
   "parts": [
     {
       "bounds": {
-        "center": [
-          0.0011104997247457504,
-          0.014247658782721828,
-          0.000171000137925148
+        "min": [
+          -0.0359559990465641,
+          -0.037227001041173935,
+          0.0004056592082406496
         ],
         "max": [
           0.0381769984960556,
-          0.028089658357203007,
-          0.037227001041173935
+          0.03688500076532364,
+          0.028089658357203007
         ],
-        "min": [
-          -0.0359559990465641,
-          0.0004056592082406496,
-          -0.03688500076532364
-        ]
+        "size": [
+          0.0741329975426197,
+          0.07411200180649757,
+          0.027683999148962357
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         0.000997262541204691,
@@ -59,7 +65,7 @@
         1.6288853657897562e-05,
         2.7064295863965526e-05
       ],
-      "mass": 0.05,
+      "mass": 0.05000000074505806,
       "material": "light_wood_or_paper",
       "name": "D00786 Egg_Tart",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00786 Egg_Tart",
         "part_name": "D00786 Egg_Tart"
       },
-      "volume": 0.00016666666915019353
+      "volume": 0.00016666666915019353,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "4b999863aa52c82c22387ad58fc065c925fcfcc4c9ec807a32ff7cf8722376fb"
+    },
+    "usd_path": "batch30/D00786_Egg_Tart/IsaacSim_assets_6a7d6e94b7a9c4204a755063/IsaacSim_asset_6a7d6e94b7a9c4204a755063.usd",
+    "usd_sha256": "0f1dc63dfaf33b823d0ad0cdf3292e54b670a0427e2b73705378680908fd4f71",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -89,24 +112,58 @@
       "up_axis": "Z",
       "bounds_m": [
         0.0741329975426197,
-        0.027683999148962357,
-        0.07411200180649757
-      ]
+        0.07411200180649757,
+        0.027683999148962357
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "0f1dc63dfaf33b823d0ad0cdf3292e54b670a0427e2b73705378680908fd4f71",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.05
+      "value_kg": 0.05000000074505806,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "0f1dc63dfaf33b823d0ad0cdf3292e54b670a0427e2b73705378680908fd4f71",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.05000000074505806,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 9,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "0f1dc63dfaf33b823d0ad0cdf3292e54b670a0427e2b73705378680908fd4f71",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 9,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "0f1dc63dfaf33b823d0ad0cdf3292e54b670a0427e2b73705378680908fd4f71",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

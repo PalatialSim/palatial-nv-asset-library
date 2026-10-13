@@ -1,6 +1,7 @@
 name: Asset metadata audit
 on:
   pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
   push:
     branches: [main]
 permissions:
@@ -15,9 +16,18 @@ jobs:
           sparse-checkout-cone-mode: false
           sparse-checkout: |
             /gallery/assets.json
+            /gallery/index.html
             /batch*/**/physics*.json
             /tools/*.py
+            /reports/current-release.json
+            /reports/releases/2026.10.13/assets.json
+            /data/catalog.jsonl
+            /data/catalog.parquet
       - uses: actions/setup-python@v5
         with:
           python-version: '3.13'
       - run: python tools/audit_metadata.py .
+      - run: python tools/release_manifest.py .
+      - name: Require complete native and package acceptance
+        if: github.event_name != 'pull_request' || !github.event.pull_request.draft
+        run: python tools/release_manifest.py . --require-ready

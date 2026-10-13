@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.03271599858999252,
-        0.16796299815177917,
-        0.048847001045942307
-      ],
       "min": [
-        -0.03415299952030182,
-        -0.2061930000782013,
-        -3.300000025774352e-05
+        -0.014035999774932861,
+        -0.10703399777412415,
+        -1.9999999494757503e-05
+      ],
+      "max": [
+        0.013929000124335289,
+        0.08677799999713898,
+        0.01752600073814392
       ],
       "size": [
-        0.06686899811029434,
-        0.37415599822998047,
-        0.04888000104620005
-      ]
+        0.02796499989926815,
+        0.19381199777126312,
+        0.01754600073763868
+      ],
+      "units": "m"
     },
     "description": "A stainless-steel fork with four narrow tines, a rounded head, and a tapered metal neck. The handle is a smooth black cylindrical grip with rounded ends, likely rubberized plastic.",
     "name": "D00293 Dinner Fork",
     "object_type": "rigid_bodies",
-    "total_mass": 0.075
+    "total_mass": 0.07500000298023224,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00293",
   "parts": [
     {
       "bounds": {
-        "center": [
-          -0.0005516471709155922,
-          -0.02181831474379319,
-          0.01507731215032404
+        "min": [
+          -0.014035999774932861,
+          -0.10703399777412415,
+          -1.9999999494757503e-05
         ],
         "max": [
-          0.03271599858999252,
-          0.16796299815177917,
-          0.048847001045942307
+          0.013929000124335289,
+          0.08677799999713898,
+          0.01752600073814392
         ],
-        "min": [
-          -0.03415299952030182,
-          -0.2061930000782013,
-          -3.300000025774352e-05
-        ]
+        "size": [
+          0.02796499989926815,
+          0.19381199777126312,
+          0.01754600073763868
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         -3.639489477245592e-05,
@@ -59,7 +65,7 @@
         0.00018350026205829674,
         0.00018529027035797186
       ],
-      "mass": 0.075,
+      "mass": 0.07500000298023224,
       "material": "stainless_steel",
       "name": "D00293 Ensil",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00293 Ensil",
         "part_name": "D00293 Ensil"
       },
-      "volume": 6.0112942470797155e-05
+      "volume": 6.0112942470797155e-05,
+      "source_prim_path": "/World/part_00_stainless_steel",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "3c35dcb1a280896c313c80260c6b96edf795817052f34a512a14c5e47b1cb2be"
+    },
+    "usd_path": "batch7/D00293 Ensil/IsaacSim_assets_69f8244dd09344200f16ee33/IsaacSim_asset_69f8244dd09344200f16ee33.usd",
+    "usd_sha256": "ccc37532b0496d83b9b6b7c1ff826fe1685913ce5d724cdb2832e1f62e2c04e8",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {},
   "units": {
@@ -86,25 +109,59 @@
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
-        0.06686899811029434,
-        0.37415599822998047,
-        0.04888000104620005
-      ]
+        0.02796499989926815,
+        0.19381199777126312,
+        0.01754600073763868
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "ccc37532b0496d83b9b6b7c1ff826fe1685913ce5d724cdb2832e1f62e2c04e8",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.075
+      "value_kg": 0.07500000298023224,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "ccc37532b0496d83b9b6b7c1ff826fe1685913ce5d724cdb2832e1f62e2c04e8",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.07500000298023224,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 3,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "ccc37532b0496d83b9b6b7c1ff826fe1685913ce5d724cdb2832e1f62e2c04e8",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 3,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "ccc37532b0496d83b9b6b7c1ff826fe1685913ce5d724cdb2832e1f62e2c04e8",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

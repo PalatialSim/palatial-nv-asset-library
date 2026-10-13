@@ -168,6 +168,47 @@
             "/World/lock_handle"
           ],
           "proxyPrim": []
+        },
+        "id": "lock_handle_rotate",
+        "path": "/World/Joints/lock_handle_rotate",
+        "usd_type": "PhysicsRevoluteJoint",
+        "authored_usd": {
+          "id": "lock_handle_rotate",
+          "source_prim_path": "/World/Joints/lock_handle_rotate",
+          "joint_type": "PhysicsRevoluteJoint",
+          "body0": [
+            "/World/lid"
+          ],
+          "body1": [
+            "/World/lock_handle"
+          ],
+          "joint_enabled": true,
+          "axis": "Z",
+          "lowerLimit": 0.0,
+          "upperLimit": 35.0,
+          "localPos0": [
+            0.0,
+            0.0,
+            0.1899999976158142
+          ],
+          "localPos1": [
+            0.0,
+            0.0,
+            0.1899999976158142
+          ],
+          "localRot0": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "localRot1": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "static_frames": []
         }
       },
       {
@@ -309,52 +350,96 @@
             "/World/lid"
           ],
           "proxyPrim": []
+        },
+        "id": "FixedJoint",
+        "path": "/World/Joints/FixedJoint",
+        "usd_type": "PhysicsFixedJoint",
+        "authored_usd": {
+          "id": "FixedJoint",
+          "source_prim_path": "/World/Joints/FixedJoint",
+          "joint_type": "PhysicsFixedJoint",
+          "body0": [
+            "/World/pressure_valve"
+          ],
+          "body1": [
+            "/World/lid"
+          ],
+          "joint_enabled": true,
+          "localPos0": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "localPos1": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "localRot0": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "localRot1": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "static_frames": []
         }
       }
-    ]
+    ],
+    "moving_joints": 1,
+    "rigid_body_count": 4,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.1876000016927719,
-        0.24000000953674316,
-        0.11297869682312012
-      ],
       "min": [
         -0.1876000016927719,
-        0.0,
-        -0.11297869682312012
+        -0.11297869682312012,
+        0.0
+      ],
+      "max": [
+        0.1876000016927719,
+        0.11297869682312012,
+        0.24000000953674316
       ],
       "size": [
         0.3752000033855438,
-        0.24000000953674316,
-        0.22595739364624023
-      ]
+        0.22595739364624023,
+        0.24000000953674316
+      ],
+      "units": "m"
     },
     "description": "Pressure Cooker",
     "name": "pot_body",
     "object_type": "rigid_bodies",
-    "total_mass": 3.4200000129640102
+    "total_mass": 3.4200000129640102,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00657",
   "parts": [
     {
       "bounds": {
-        "center": [
-          0.0,
-          0.08250000327825546,
+        "min": [
+          -0.1876000016927719,
+          -0.10997926443815231,
           0.0
         ],
         "max": [
           0.1876000016927719,
-          0.16500000655651093,
-          0.10997926443815231
+          0.10997926443815231,
+          0.16500000655651093
         ],
-        "min": [
-          -0.1876000016927719,
-          0.0,
-          -0.10997926443815231
-        ]
+        "size": [
+          0.3752000033855438,
+          0.21995852887630463,
+          0.16500000655651093
+        ],
+        "units": "m"
       },
       "collision": {},
       "id": "pot_body",
@@ -364,25 +449,28 @@
       "source": {
         "object_name": "World",
         "part_name": "pot_body"
-      }
+      },
+      "source_prim_path": "/World/pot_body",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     },
     {
       "bounds": {
-        "center": [
-          0.0,
-          0.17225000262260437,
-          0.0
+        "min": [
+          -0.11297869682312012,
+          -0.11297869682312012,
+          0.15049999952316284
         ],
         "max": [
           0.11297869682312012,
-          0.1940000057220459,
-          0.11297869682312012
+          0.11297869682312012,
+          0.1940000057220459
         ],
-        "min": [
-          -0.11297869682312012,
-          0.15049999952316284,
-          -0.11297869682312012
-        ]
+        "size": [
+          0.22595739364624023,
+          0.22595739364624023,
+          0.04350000619888306
+        ],
+        "units": "m"
       },
       "collision": {},
       "id": "lid",
@@ -392,25 +480,28 @@
       "source": {
         "object_name": "World",
         "part_name": "lid"
-      }
+      },
+      "source_prim_path": "/World/lid",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     },
     {
       "bounds": {
-        "center": [
-          0.008000001311302185,
-          0.19075000286102295,
-          0.0
+        "min": [
+          -0.11800000071525574,
+          -0.10400000214576721,
+          0.14149999618530273
         ],
         "max": [
           0.1340000033378601,
-          0.24000000953674316,
-          0.10400000214576721
+          0.10400000214576721,
+          0.24000000953674316
         ],
-        "min": [
-          -0.11800000071525574,
-          0.14149999618530273,
-          -0.10400000214576721
-        ]
+        "size": [
+          0.25200000405311584,
+          0.20800000429153442,
+          0.09850001335144043
+        ],
+        "units": "m"
       },
       "collision": {},
       "id": "lock_handle",
@@ -420,25 +511,28 @@
       "source": {
         "object_name": "World",
         "part_name": "lock_handle"
-      }
+      },
+      "source_prim_path": "/World/lock_handle",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     },
     {
       "bounds": {
-        "center": [
-          0.0,
-          0.1844889372587204,
-          0.06499999947845936
+        "min": [
+          -0.00999559834599495,
+          -0.07499559968709946,
+          0.16373895108699799
         ],
         "max": [
           0.00999559834599495,
-          0.2052389234304428,
-          0.07499559968709946
+          -0.05500439926981926,
+          0.2052389234304428
         ],
-        "min": [
-          -0.00999559834599495,
-          0.16373895108699799,
-          0.05500439926981926
-        ]
+        "size": [
+          0.0199911966919899,
+          0.019991200417280197,
+          0.041499972343444824
+        ],
+        "units": "m"
       },
       "collision": {},
       "id": "pressure_valve",
@@ -448,10 +542,27 @@
       "source": {
         "object_name": "World",
         "part_name": "pressure_valve"
-      }
+      },
+      "source_prim_path": "/World/pressure_valve",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "2e8b8aacaaafe048424edde58d984b681fcfedd7e6383090cef2a8cd993c9e5f"
+    },
+    "usd_path": "batch36/D00657_Pressure_Cooker/IsaacSim_assets_D00657/IsaacSim_asset_D00657.usd",
+    "usd_sha256": "646ad7fa7e7a4deccbd3986aa6765356b64832713cd0517d218817c403edb446",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {},
   "units": {
@@ -468,24 +579,60 @@
       "up_axis": "Z",
       "bounds_m": [
         0.3752000033855438,
-        0.24000000953674316,
-        0.22595739364624023
-      ]
+        0.22595739364624023,
+        0.24000000953674316
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "646ad7fa7e7a4deccbd3986aa6765356b64832713cd0517d218817c403edb446",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 3.4200000129640102
+      "value_kg": 3.4200000129640102,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "646ad7fa7e7a4deccbd3986aa6765356b64832713cd0517d218817c403edb446",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 3.4200000129640102,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 4
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 8,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "646ad7fa7e7a4deccbd3986aa6765356b64832713cd0517d218817c403edb446",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 8,
+      "approximations": [
+        "convexDecomposition",
+        "convexHull",
+        "sdf"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 2
+      "moving_joints": 1,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "646ad7fa7e7a4deccbd3986aa6765356b64832713cd0517d218817c403edb446",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 2,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.021138999611139297,
-        0.018466999754309654,
-        0.0382508710026741
-      ],
       "min": [
         -0.02114200033247471,
         -0.01896600052714348,
         0.00010486897372175008
       ],
+      "max": [
+        0.021138999611139297,
+        0.018466999754309654,
+        0.0382508710026741
+      ],
       "size": [
         0.042280999943614006,
         0.03743300028145313,
         0.03814600202895235
-      ]
+      ],
+      "units": "m"
     },
     "description": "D00496 Lime",
     "name": "D00496 Lime",
     "object_type": "rigid_bodies",
-    "total_mass": 0.087
+    "total_mass": 0.08699999749660492,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00496",
   "parts": [
     {
       "bounds": {
-        "center": [
-          -1.5003606677055359e-06,
-          -0.0002495003864169121,
-          0.019177869988197926
+        "min": [
+          -0.02114200033247471,
+          -0.01896600052714348,
+          0.00010486897372175008
         ],
         "max": [
           0.021138999611139297,
           0.018466999754309654,
           0.0382508710026741
         ],
-        "min": [
-          -0.02114200033247471,
-          -0.01896600052714348,
-          0.00010486897372175008
-        ]
+        "size": [
+          0.042280999943614006,
+          0.03743300028145313,
+          0.03814600202895235
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         1.930938014993444e-05,
@@ -59,7 +65,7 @@
         1.3821685570292175e-05,
         1.406344472343335e-05
       ],
-      "mass": 0.087,
+      "mass": 0.08699999749660492,
       "material": "plastic",
       "name": "D00496 Lime",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00496 Lime",
         "part_name": "D00496 Lime"
       },
-      "volume": 8.699999749660491e-05
+      "volume": 8.699999749660491e-05,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "aa6800a85590c352329c5d0b12b41ad7cec1b4b7436670fa72726a565e604dee"
+    },
+    "usd_path": "batch19/D00496 Lime/IsaacSim_assets_6a714f480035a1dbaf593ab0/IsaacSim_asset_6a714f480035a1dbaf593ab0.usd",
+    "usd_sha256": "14251f7785d55bc8b512910052a483d6e647745599d924d7c51fccd9d4e9f4c4",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -91,22 +114,56 @@
         0.042280999943614006,
         0.03743300028145313,
         0.03814600202895235
-      ]
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "14251f7785d55bc8b512910052a483d6e647745599d924d7c51fccd9d4e9f4c4",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.087
+      "value_kg": 0.08699999749660492,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "14251f7785d55bc8b512910052a483d6e647745599d924d7c51fccd9d4e9f4c4",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.08699999749660492,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 1,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "14251f7785d55bc8b512910052a483d6e647745599d924d7c51fccd9d4e9f4c4",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 1,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "14251f7785d55bc8b512910052a483d6e647745599d924d7c51fccd9d4e9f4c4",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

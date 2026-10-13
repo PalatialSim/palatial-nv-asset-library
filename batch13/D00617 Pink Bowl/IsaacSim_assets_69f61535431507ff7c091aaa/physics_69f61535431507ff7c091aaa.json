@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.10188225656747818,
-        0.10130712389945984,
-        0.09995778650045395
-      ],
       "min": [
-        -0.10137662291526794,
-        -0.10153849422931671,
-        -6.192599539645016e-05
+        -0.10137700289487839,
+        -0.10153800249099731,
+        7.999644367373548e-06
+      ],
+      "max": [
+        0.10188200324773788,
+        0.10130699723958969,
+        0.10002800077199936
       ],
       "size": [
-        0.20325887948274612,
-        0.20284561812877655,
-        0.1000197124958504
-      ]
+        0.20325900614261627,
+        0.202844999730587,
+        0.10002000112763199
+      ],
+      "units": "m"
     },
     "description": "A small, round pink ceramic bowl with a matte finish and a slightly flared rim.",
     "name": "D00617 Pink Bowl",
     "object_type": "rigid_bodies",
-    "total_mass": 0.4
+    "total_mass": 0.4000000059604645,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00617",
   "parts": [
     {
       "bounds": {
-        "center": [
-          0.00036442828465821066,
-          -0.0001110177294151857,
-          0.049668747919283364
+        "min": [
+          -0.10137700289487839,
+          -0.10153800249099731,
+          7.999644367373548e-06
         ],
         "max": [
-          0.10188225656747818,
-          0.10130712389945984,
-          0.09995778650045395
+          0.10188200324773788,
+          0.10130699723958969,
+          0.10002800077199936
         ],
-        "min": [
-          -0.10137662291526794,
-          -0.10153849422931671,
-          -6.192599539645016e-05
-        ]
+        "size": [
+          0.20325900614261627,
+          0.202844999730587,
+          0.10002000112763199
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         0.0002859382883441957,
@@ -59,7 +65,7 @@
         0.0015652931044169258,
         0.002506367734533582
       ],
-      "mass": 0.4,
+      "mass": 0.4000000059604645,
       "material": "ceramic",
       "name": "D00617 Pink Bowl",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00617 Pink Bowl",
         "part_name": "D00617 Pink Bowl"
       },
-      "volume": 0.0006308897374838348
+      "volume": 0.0006308897374838348,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "2c603c21b9ef51a6f78ec347a70c44655c9b034e226c436889054094fb8c7850"
+    },
+    "usd_path": "batch13/D00617 Pink Bowl/IsaacSim_assets_69f61535431507ff7c091aaa/IsaacSim_asset_69f61535431507ff7c091aaa.usd",
+    "usd_sha256": "3b9f1d8f1194737cef2053c1ef197808cca242caf1598e97292588925cd0b14c",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {},
   "units": {
@@ -86,25 +109,59 @@
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
-        0.20325887948274612,
-        0.20284561812877655,
-        0.1000197124958504
-      ]
+        0.20325900614261627,
+        0.202844999730587,
+        0.10002000112763199
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "3b9f1d8f1194737cef2053c1ef197808cca242caf1598e97292588925cd0b14c",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.4
+      "value_kg": 0.4000000059604645,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "3b9f1d8f1194737cef2053c1ef197808cca242caf1598e97292588925cd0b14c",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.4000000059604645,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 68,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "3b9f1d8f1194737cef2053c1ef197808cca242caf1598e97292588925cd0b14c",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 68,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "3b9f1d8f1194737cef2053c1ef197808cca242caf1598e97292588925cd0b14c",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

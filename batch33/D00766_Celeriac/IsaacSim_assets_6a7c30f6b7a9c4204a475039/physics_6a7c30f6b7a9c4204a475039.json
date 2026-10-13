@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.04072900116443634,
-        0.08012290112674236,
-        0.03518800064921379
-      ],
       "min": [
         -0.03596099838614464,
-        0.000428899221788015,
-        -0.04063300043344498
+        -0.03518800064921379,
+        0.000428899221788015
+      ],
+      "max": [
+        0.04072900116443634,
+        0.04063300043344498,
+        0.08012290112674236
       ],
       "size": [
         0.07668999955058098,
-        0.07969400190495435,
-        0.07582100108265877
-      ]
+        0.07582100108265877,
+        0.07969400190495435
+      ],
+      "units": "m"
     },
     "description": "D00766 Celeriac",
     "name": "D00766 Celeriac",
     "object_type": "rigid_bodies",
-    "total_mass": 0.9
+    "total_mass": 0.8999999761581421,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00766",
   "parts": [
     {
       "bounds": {
-        "center": [
-          0.002384001389145851,
-          0.04027590017426519,
-          -0.002722499892115593
+        "min": [
+          -0.03596099838614464,
+          -0.03518800064921379,
+          0.000428899221788015
         ],
         "max": [
           0.04072900116443634,
-          0.08012290112674236,
-          0.03518800064921379
+          0.04063300043344498,
+          0.08012290112674236
         ],
-        "min": [
-          -0.03596099838614464,
-          0.000428899221788015,
-          -0.04063300043344498
-        ]
+        "size": [
+          0.07668999955058098,
+          0.07582100108265877,
+          0.07969400190495435
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         0.0015353959752246737,
@@ -59,7 +65,7 @@
         0.0005461425171233714,
         0.0005470374599099159
       ],
-      "mass": 0.9,
+      "mass": 0.8999999761581421,
       "material": "plastic",
       "name": "D00766 Celeriac",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00766 Celeriac",
         "part_name": "D00766 Celeriac"
       },
-      "volume": 0.0008823529178021
+      "volume": 0.0008823529178021,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "0781d25003c144d5f95f719d7cbdf26b459f90a287dd33c0491beb1c4809069e"
+    },
+    "usd_path": "batch33/D00766_Celeriac/IsaacSim_assets_6a7c30f6b7a9c4204a475039/IsaacSim_asset_6a7c30f6b7a9c4204a475039.usd",
+    "usd_sha256": "33bebd48804f486e893d376332277f9961f7d264f740a5320b5711eef112112a",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -89,24 +112,58 @@
       "up_axis": "Z",
       "bounds_m": [
         0.07668999955058098,
-        0.07969400190495435,
-        0.07582100108265877
-      ]
+        0.07582100108265877,
+        0.07969400190495435
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "33bebd48804f486e893d376332277f9961f7d264f740a5320b5711eef112112a",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.9
+      "value_kg": 0.8999999761581421,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "33bebd48804f486e893d376332277f9961f7d264f740a5320b5711eef112112a",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.8999999761581421,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 15,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "33bebd48804f486e893d376332277f9961f7d264f740a5320b5711eef112112a",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 15,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "33bebd48804f486e893d376332277f9961f7d264f740a5320b5711eef112112a",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "pending",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

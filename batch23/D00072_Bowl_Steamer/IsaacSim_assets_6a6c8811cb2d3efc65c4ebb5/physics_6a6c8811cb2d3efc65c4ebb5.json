@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.09012900292873383,
-        0.08124899864196777,
-        0.05635405902285129
-      ],
       "min": [
         -0.09068100154399872,
         -0.08051200211048126,
         0.0006220599680091254
       ],
+      "max": [
+        0.09012900292873383,
+        0.08124899864196777,
+        0.05635405902285129
+      ],
       "size": [
         0.18081000447273254,
         0.16176100075244904,
         0.05573199905484216
-      ]
+      ],
+      "units": "m"
     },
     "description": "D00072 Bowl Steamer",
     "name": "D00072 Bowl Steamer",
     "object_type": "rigid_bodies",
-    "total_mass": 0.99
+    "total_mass": 0.9900000095367432,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00072",
   "parts": [
     {
       "bounds": {
-        "center": [
-          -0.0002759993076324463,
-          0.0003684982657432556,
-          0.028488059495430207
+        "min": [
+          -0.09068100154399872,
+          -0.08051200211048126,
+          0.0006220599680091254
         ],
         "max": [
           0.09012900292873383,
           0.08124899864196777,
           0.05635405902285129
         ],
-        "min": [
-          -0.09068100154399872,
-          -0.08051200211048126,
-          0.0006220599680091254
-        ]
+        "size": [
+          0.18081000447273254,
+          0.16176100075244904,
+          0.05573199905484216
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         -0.0003004249301739037,
@@ -59,7 +65,7 @@
         0.0018750698072835803,
         0.0030573694966733456
       ],
-      "mass": 0.99,
+      "mass": 0.9900000095367432,
       "material": "metal",
       "name": "D00072 Bowl Steamer",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00072 Bowl Steamer",
         "part_name": "D00072 Bowl Steamer"
       },
-      "volume": 0.0001237500011920929
+      "volume": 0.0001237500011920929,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "e20b779697ffdba18b6df133608e9edd4a6e381d9fcb71291b259097401f752b"
+    },
+    "usd_path": "batch23/D00072_Bowl_Steamer/IsaacSim_assets_6a6c8811cb2d3efc65c4ebb5/IsaacSim_asset_6a6c8811cb2d3efc65c4ebb5.usd",
+    "usd_sha256": "58404e5ce2bf5269209ae4af85b13129ddfad98fa438ac16fb41a13dc64f6383",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -91,22 +114,73 @@
         0.18081000447273254,
         0.16176100075244904,
         0.05573199905484216
-      ]
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "58404e5ce2bf5269209ae4af85b13129ddfad98fa438ac16fb41a13dc64f6383",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.99
+      "value_kg": 0.9900000095367432,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "58404e5ce2bf5269209ae4af85b13129ddfad98fa438ac16fb41a13dc64f6383",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.9900000095367432,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 256,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "58404e5ce2bf5269209ae4af85b13129ddfad98fa438ac16fb41a13dc64f6383",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 256,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "58404e5ce2bf5269209ae4af85b13129ddfad98fa438ac16fb41a13dc64f6383",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "58404e5ce2bf5269209ae4af85b13129ddfad98fa438ac16fb41a13dc64f6383",
+      "supplemental_accepted": true,
+      "planned_test_count": 12,
+      "result_count": 12,
+      "passed": 11,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-13T20:33:43.566866+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "7a30300228f38c81c8498e222fe0dc8ba2168d24c6659ac89c33371ac3e6735b",
+      "qualification": "native-fleet-evidence/shard-01/native-batch-000/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }
