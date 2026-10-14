@@ -75,7 +75,7 @@ def load_current_release(root, relative='reports/current-release.json', require_
                     '/resolve/'+archive['hf_commit']+'/' in archive.get('url',''),'Durable native archive missing: '+rid)
             if review:
                 finding=native['tool_findings'];certificate=checked({'path':finding['release_certificate'],'sha256':finding['certificate_sha256']})
-                require(certificate['schema']=='palatial.native-tool-findings.v1' and certificate['kind'] in {'sdk_small_asset_camera_clamp','sdk_presence_camera_clamp','sdk_color_probe_ambiguity','sdk_color_control_ambiguity','sdk_conservative_contact_bounds'},
+                require(certificate['schema']=='palatial.native-tool-findings.v1' and certificate['kind'] in {'sdk_small_asset_camera_clamp','sdk_exact_camera_clamp','sdk_presence_camera_clamp','sdk_color_probe_ambiguity','sdk_color_control_ambiguity','sdk_conservative_contact_bounds'},
                         'Unsupported tool finding disposition: '+rid)
                 require(certificate['asset_usd_sha256']==asset['usd_sha256'] and certificate['logical_asset']==asset['logical_asset'],
                         'Tool finding certificate asset differs: '+rid)
@@ -83,7 +83,7 @@ def load_current_release(root, relative='reports/current-release.json', require_
                         finding['requires_NVIDIA_review'] is True and native['failed']==len(finding['failed_tests'])>0,
                         'Raw benchmark failures must remain disclosed: '+rid)
                 require(set(finding['failed_tests'])==set(certificate['raw_failed_result_sha256s']) and
-                        set(finding['failed_tests'])<= ({'ground_drop','slope_drop'} if certificate['kind']=='sdk_conservative_contact_bounds' else {'presence','semantic_labels_seg_labelled','preview_surface_renders'}),
+                        set(finding['failed_tests'])<= ({'ground_drop','slope_drop'} if certificate['kind']=='sdk_conservative_contact_bounds' else ({'presence','semantic_labels_seg_labelled','preview_surface_renders','normals_xz'} if certificate['kind']=='sdk_exact_camera_clamp' else {'presence','semantic_labels_seg_labelled','preview_surface_renders'})),
                         'An asset or physics failure cannot be excused: '+rid)
                 if certificate['kind']=='sdk_small_asset_camera_clamp':
                     require(all(0<v<=0.025 for v in certificate['actual_visible_bounds_size_m']) and certificate['static_validation_passed'] is True,
@@ -91,6 +91,12 @@ def load_current_release(root, relative='reports/current-release.json', require_
                     require(0<certificate['presence_diff_ratio']<0.01 and 0<certificate['semantic_labels_on_coverage']<0.005 and
                             certificate['semantic_labels_on_coverage']/certificate['presence_diff_ratio']>=0.9 and 0<certificate['silhouette_pixels']<5000,
                             'Camera proof measurements do not support the finding: '+rid)
+                elif certificate['kind']=='sdk_exact_camera_clamp':
+                    import importlib.util
+                    require(set(finding['failed_tests'])=={'presence','semantic_labels_seg_labelled','preview_surface_renders','normals_xz'},'Exact camera finding must include complete diagnosed visual coverage: '+rid)
+                    spec=importlib.util.spec_from_file_location('release_exact_camera_probe',inside('tools/native_validation/native_exact_camera_probe.py'));probe=importlib.util.module_from_spec(spec);spec.loader.exec_module(probe)
+                    reviewed=dict(certificate);reviewed['independent_tests']=certificate['release_independent_tests']
+                    probe.verify_exact_camera_probe(reviewed,root)
                 elif certificate['kind']=='sdk_presence_camera_clamp':
                     dims=certificate['actual_visible_bounds_size_m'];m=certificate['measurements']
                     require(set(finding['failed_tests'])=={'presence'} and len(dims)==3 and all(0<v<.1 for v in dims) and sum(v*v for v in dims)<.01,

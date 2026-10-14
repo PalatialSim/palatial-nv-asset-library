@@ -166,12 +166,12 @@
         "hf_commit": "36f6d8ebb892b2e75e0676718716ad011509a660",
         "size_bytes": 108707743
       },
-      "status": "failed",
+      "status": "completed_with_tool_findings",
       "required_engine": "isaac_sim",
       "physics_runtime": "PhysX",
       "engine_version": "6.1.0.0",
       "usd_sha256": "df987c6773d878e56e161ea92ccd51a59c47b67fb1343577730fc790daba2b0b",
-      "supplemental_accepted": false,
+      "supplemental_accepted": true,
       "planned_test_count": 12,
       "result_count": 12,
       "passed": 7,
@@ -190,6 +190,21 @@
       "joints_passed": 0,
       "joints_failed": 0,
       "thumbnail_sha256": "81ef9e9f61edcc442d6c64311c372dee08a0b84baee8c5ba847ba858fc7869b7",
+      "tool_findings": {
+        "certificate_path": "tool-finding-certificates/D00722.json",
+        "certificate_sha256": "b6c4c67fcb311fe6c341bdb517358d8d403f4e16aa781119dfb5f2cd490cbff0",
+        "raw_benchmark_status": "failed",
+        "failed_tests": [
+          "normals_xz",
+          "presence",
+          "preview_surface_renders",
+          "semantic_labels_seg_labelled"
+        ],
+        "reason": "The SDK camera minimum underframes this tiny source asset. All four complete independently named visual tests, including the full normal rotation, pass using actual visible bounds with unchanged SDK functions and acceptance thresholds. Original visibility failures remain for NVIDIA review; all physics and supplemental checks pass.",
+        "NVIDIA_raw_results_modified": false,
+        "requires_NVIDIA_review": true,
+        "release_certificate": "reports/releases/2026.10.13/tool-findings/D00722.json"
+      },
       "qualification": "native-fleet-evidence/shard-05/native-batch-003/qualification-normalized.json",
       "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }

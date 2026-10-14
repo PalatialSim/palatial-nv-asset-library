@@ -19,10 +19,7 @@
         "drives": {
           "angular": {
             "physics:damping": 0.0,
-            "physics:maxForce": "+Infinity",
             "physics:stiffness": 0.0,
-            "physics:targetPosition": 0.0,
-            "physics:targetVelocity": 0.0,
             "physics:type": "force"
           }
         },
@@ -117,24 +114,16 @@
         },
         "joint_path": "/World/Joints/blade_spin",
         "motion_limits": {
-          "max": "+Infinity",
           "min": "-Infinity",
+          "max": "Infinity",
           "unit": "degrees"
         },
         "type": "revolute",
         "usd_attributes": {
           "drive:angular:physics:damping": 0.0,
-          "drive:angular:physics:maxForce": "+Infinity",
           "drive:angular:physics:stiffness": 0.0,
-          "drive:angular:physics:targetPosition": 0.0,
-          "drive:angular:physics:targetVelocity": 0.0,
           "drive:angular:physics:type": "force",
           "physics:axis": "Z",
-          "physics:breakForce": "+Infinity",
-          "physics:breakTorque": "+Infinity",
-          "physics:collisionEnabled": false,
-          "physics:excludeFromArticulation": false,
-          "physics:jointEnabled": true,
           "physics:localPos0": [
             0.0,
             0.05999999865889549,
@@ -158,7 +147,7 @@
             0.0
           ],
           "physics:lowerLimit": "-Infinity",
-          "physics:upperLimit": "+Infinity"
+          "physics:upperLimit": "Infinity"
         },
         "usd_relationships": {
           "physics:body0": [
@@ -228,10 +217,7 @@
         "drives": {
           "angular": {
             "physics:damping": 9.999999747378752e-05,
-            "physics:maxForce": "+Infinity",
             "physics:stiffness": 0.0,
-            "physics:targetPosition": 0.0,
-            "physics:targetVelocity": 0.0,
             "physics:type": "force"
           }
         },
@@ -326,24 +312,16 @@
         },
         "joint_path": "/World/Joints/dial_turn",
         "motion_limits": {
-          "max": 75.0,
           "min": -75.0,
+          "max": 75.0,
           "unit": "degrees"
         },
         "type": "revolute",
         "usd_attributes": {
           "drive:angular:physics:damping": 9.999999747378752e-05,
-          "drive:angular:physics:maxForce": "+Infinity",
           "drive:angular:physics:stiffness": 0.0,
-          "drive:angular:physics:targetPosition": 0.0,
-          "drive:angular:physics:targetVelocity": 0.0,
           "drive:angular:physics:type": "force",
           "physics:axis": "Y",
-          "physics:breakForce": "+Infinity",
-          "physics:breakTorque": "+Infinity",
-          "physics:collisionEnabled": false,
-          "physics:excludeFromArticulation": false,
-          "physics:jointEnabled": true,
           "physics:localPos0": [
             0.0,
             -0.054499998688697815,
@@ -585,16 +563,1554 @@
       "original_physics_sha256": "73531537f1fcb014c12eb504ee50bf86c4faebbd7f6c4f2f0bc039bc8aa21175"
     },
     "usd_path": "batch36/D00867_Toaster_Food_Processor/D00867_Toaster_Food_Processor/IsaacSim_assets_D00867/IsaacSim_asset_D00867.usd",
-    "usd_sha256": "66cbebc55ee25135f3d958c3386810c47875f75303b955bcfab786dee4cc0f8d",
+    "usd_sha256": "bf0fafce831e94cf1824bbb85c55154bca271b6b1cfd059590ba43b74d5636cf",
     "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
     "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
     "source_meters_per_unit": 1.0,
     "source_kilograms_per_unit": 1.0,
     "source_up_axis": "Z",
-    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification.",
+    "native_runtime_repairs": [
+      {
+        "case": "native-winding-repairs-v2",
+        "old_usd_sha256": "66cbebc55ee25135f3d958c3386810c47875f75303b955bcfab786dee4cc0f8d",
+        "new_usd_sha256": "bf0fafce831e94cf1824bbb85c55154bca271b6b1cfd059590ba43b74d5636cf",
+        "changes": [
+          {
+            "kind": "outward_winding_on_native_observed_inward_components",
+            "mesh": "/World/body/bowl_shell",
+            "flipped_faces": 3840,
+            "components": [
+              {
+                "faces": 3840,
+                "signed_volume_before": -0.0005338415180728407,
+                "nonmanifold_edges": 0,
+                "basis": "Closed connected component has negative signed volume."
+              }
+            ],
+            "positions_UVs_materials_mass_colliders_preserved": true
+          },
+          {
+            "kind": "outward_winding_on_native_observed_inward_components",
+            "mesh": "/World/body/bowl_handle",
+            "flipped_faces": 572,
+            "components": [
+              {
+                "faces": 572,
+                "signed_volume_before": -2.884632565011415e-05,
+                "nonmanifold_edges": 0,
+                "basis": "Closed connected component has negative signed volume."
+              }
+            ],
+            "positions_UVs_materials_mass_colliders_preserved": true
+          },
+          {
+            "kind": "outward_winding_on_native_observed_inward_components",
+            "mesh": "/World/blade_spin/blade_hub",
+            "flipped_faces": 2304,
+            "components": [
+              {
+                "faces": 2304,
+                "signed_volume_before": -3.711872219393288e-05,
+                "nonmanifold_edges": 0,
+                "basis": "Closed connected component has negative signed volume."
+              }
+            ],
+            "positions_UVs_materials_mass_colliders_preserved": true
+          }
+        ],
+        "qualification": "native-fleet-evidence/shard-31/native-batch-000/qualification-normalized.json"
+      }
+    ]
   },
   "schema_version": "1.0",
-  "simulation": {},
+  "simulation": {
+    "authored_usd_physics_properties": [
+      {
+        "prim_path": "/World/physicsScene",
+        "authored_attributes": {
+          "physics:gravityDirection": "(0, 0, -1)",
+          "physics:gravityMagnitude": "9.8100004196167",
+          "physxScene:gpuFoundLostAggregatePairsCapacity": "10240",
+          "physxScene:gpuFoundLostPairsCapacity": "262144",
+          "physxScene:gpuTotalAggregatePairsCapacity": "10240"
+        }
+      },
+      {
+        "prim_path": "/World/body",
+        "authored_attributes": {
+          "physics:mass": "2.200000047683716",
+          "physxArticulation:enabledSelfCollisions": "True"
+        }
+      },
+      {
+        "prim_path": "/World/body/PhysicsMaterials/pm",
+        "authored_attributes": {
+          "physics:dynamicFriction": "0.4000000059604645",
+          "physics:restitution": "0.10000000149011612",
+          "physics:staticFriction": "0.5"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_0",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_1",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_2",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_3",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_4",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_5",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_6",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_7",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_8",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_9",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_10",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_11",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_12",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_13",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_14",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_15",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_16",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_17",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_18",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_19",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_20",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_21",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_22",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_23",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_24",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_25",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_26",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_27",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_28",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_29",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_30",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_31",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_32",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_33",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_34",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_35",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_36",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_37",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_38",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_39",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_40",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_41",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_42",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_43",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_44",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_45",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_46",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_47",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_48",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_49",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_50",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_51",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_52",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_53",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_54",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_55",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_56",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_57",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_58",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_59",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_60",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_61",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_62",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_63",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_64",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_65",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_66",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_67",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_68",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_69",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_70",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_71",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_72",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_73",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_74",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_75",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_76",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_77",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_78",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_79",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_80",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_81",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_82",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_83",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_84",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_85",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_86",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_87",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_88",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_89",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_90",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_91",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_92",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_93",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_94",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_95",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_96",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_97",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_98",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_99",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_100",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_101",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_102",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_103",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_104",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_105",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_106",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_107",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_108",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_109",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_110",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_111",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_112",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_113",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_114",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_115",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_116",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_117",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_118",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_119",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_120",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_121",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_122",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_123",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_124",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_125",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_126",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_127",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_128",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_129",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_130",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_131",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_132",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_133",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_134",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_135",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_136",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_137",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_138",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_139",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_140",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_141",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_142",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_143",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_144",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_145",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_146",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_147",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_148",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_149",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_150",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_151",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_152",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_153",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_154",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_155",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_156",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_157",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_158",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_159",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_160",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_161",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_162",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_163",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_164",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_165",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_166",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_167",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_168",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_169",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_170",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_171",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_172",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_173",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_174",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_175",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_176",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_177",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_178",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_179",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_180",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_181",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_182",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_183",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_184",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_185",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_186",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_187",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_188",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_189",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_190",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_191",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_192",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_193",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_194",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_195",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_196",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_197",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_198",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_199",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_200",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_201",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_202",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_203",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_204",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_205",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_206",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_207",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_208",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_209",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_210",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_211",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_212",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_213",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_214",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_215",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_216",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_217",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_218",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_219",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_220",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/body/Colliders/Collider_221",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/blade_spin",
+        "authored_attributes": {
+          "physics:mass": "0.07999999821186066"
+        }
+      },
+      {
+        "prim_path": "/World/blade_spin/PhysicsMaterials/pm",
+        "authored_attributes": {
+          "physics:dynamicFriction": "0.4000000059604645",
+          "physics:restitution": "0.10000000149011612",
+          "physics:staticFriction": "0.5"
+        }
+      },
+      {
+        "prim_path": "/World/blade_spin/Colliders/Collider_0",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/blade_spin/Colliders/Collider_1",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/blade_spin/Colliders/Collider_2",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/blade_spin/Colliders/Collider_3",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/blade_spin/Colliders/Collider_4",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/blade_spin/Colliders/Collider_5",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/dial_turn",
+        "authored_attributes": {
+          "physics:mass": "0.029999999329447746"
+        }
+      },
+      {
+        "prim_path": "/World/dial_turn/PhysicsMaterials/pm",
+        "authored_attributes": {
+          "physics:dynamicFriction": "0.4000000059604645",
+          "physics:restitution": "0.10000000149011612",
+          "physics:staticFriction": "0.5"
+        }
+      },
+      {
+        "prim_path": "/World/dial_turn/Colliders/Collider_0",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/dial_turn/Colliders/Collider_1",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/pusher",
+        "authored_attributes": {
+          "physics:mass": "0.11999999731779099"
+        }
+      },
+      {
+        "prim_path": "/World/pusher/PhysicsMaterials/pm",
+        "authored_attributes": {
+          "physics:dynamicFriction": "0.4000000059604645",
+          "physics:restitution": "0.10000000149011612",
+          "physics:staticFriction": "0.5"
+        }
+      },
+      {
+        "prim_path": "/World/pusher/Colliders/Collider_0",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/pusher/Colliders/Collider_1",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/Joints/blade_spin",
+        "authored_attributes": {
+          "physics:axis": "Z",
+          "physics:localPos0": "(0, 0.06, 0.128)",
+          "physics:localPos1": "(0, 0.06, 0.128)",
+          "physics:localRot0": "(1, 0, 0, 0)",
+          "physics:localRot1": "(1, 0, 0, 0)",
+          "physics:lowerLimit": "-inf",
+          "physics:upperLimit": "inf"
+        }
+      },
+      {
+        "prim_path": "/World/Joints/dial_turn",
+        "authored_attributes": {
+          "physics:axis": "Y",
+          "physics:localPos0": "(0, -0.0545, 0.044)",
+          "physics:localPos1": "(0, -0.0545, 0.044)",
+          "physics:localRot0": "(1, 0, 0, 0)",
+          "physics:localRot1": "(1, 0, 0, 0)",
+          "physics:lowerLimit": "-75.0",
+          "physics:upperLimit": "75.0"
+        }
+      }
+    ]
+  },
   "units": {
     "length": "m",
     "mass": "kg",
@@ -614,7 +2130,7 @@
       ],
       "checked_at": "2026-10-13T19:50:31.621292+00:00",
       "evidence": "reports/releases/2026.10.13/assets.json",
-      "usd_sha256": "66cbebc55ee25135f3d958c3386810c47875f75303b955bcfab786dee4cc0f8d",
+      "usd_sha256": "bf0fafce831e94cf1824bbb85c55154bca271b6b1cfd059590ba43b74d5636cf",
       "scope": "authored_usd_dimensions",
       "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
       "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
@@ -625,7 +2141,7 @@
       "value_kg": 2.430000042542815,
       "checked_at": "2026-10-13T19:50:31.621292+00:00",
       "evidence": "reports/releases/2026.10.13/assets.json",
-      "usd_sha256": "66cbebc55ee25135f3d958c3386810c47875f75303b955bcfab786dee4cc0f8d",
+      "usd_sha256": "bf0fafce831e94cf1824bbb85c55154bca271b6b1cfd059590ba43b74d5636cf",
       "scope": "authored_usd_mass_consistency",
       "part_sum_kg": 2.430000042542815,
       "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
@@ -636,7 +2152,7 @@
       "shape_count": 232,
       "checked_at": "2026-10-13T19:50:31.621292+00:00",
       "evidence": "reports/releases/2026.10.13/assets.json",
-      "usd_sha256": "66cbebc55ee25135f3d958c3386810c47875f75303b955bcfab786dee4cc0f8d",
+      "usd_sha256": "bf0fafce831e94cf1824bbb85c55154bca271b6b1cfd059590ba43b74d5636cf",
       "scope": "authored_usd_collision_schema",
       "enabled_shape_count": 232,
       "approximations": [
@@ -650,7 +2166,7 @@
       "moving_joints": 2,
       "checked_at": "2026-10-13T19:50:31.621292+00:00",
       "evidence": "reports/releases/2026.10.13/assets.json",
-      "usd_sha256": "66cbebc55ee25135f3d958c3386810c47875f75303b955bcfab786dee4cc0f8d",
+      "usd_sha256": "bf0fafce831e94cf1824bbb85c55154bca271b6b1cfd059590ba43b74d5636cf",
       "scope": "authored_usd_joint_schema",
       "joint_count": 2,
       "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
@@ -658,33 +2174,31 @@
     "scope": "authored_usd_metadata_consistency",
     "runtime": {
       "evidence_archive": {
-        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/36f6d8ebb892b2e75e0676718716ad011509a660/reports/native/2026.10.13/shard-05/native-batch-003-evidence.tar.gz",
-        "sha256": "7851c37ed025daef472f61fccaecdd0378bb5114e92d7dfc2ed785d9b1b53468",
-        "hf_commit": "36f6d8ebb892b2e75e0676718716ad011509a660",
-        "size_bytes": 108707743
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/1eb1ff090c26cb4485f9492b65ab8c8ab21811ca/reports/native/2026.10.13/cases/native-winding-repairs-v2/native-batch-000-evidence.tar.gz",
+        "sha256": "6d3046df18f531ee700de519a3ae087dcdfd28c8de9093fa6acf41f9e1578341",
+        "hf_commit": "1eb1ff090c26cb4485f9492b65ab8c8ab21811ca",
+        "size_bytes": 6686736
       },
-      "status": "failed",
+      "status": "passed",
       "required_engine": "isaac_sim",
       "physics_runtime": "PhysX",
       "engine_version": "6.1.0.0",
-      "usd_sha256": "66cbebc55ee25135f3d958c3386810c47875f75303b955bcfab786dee4cc0f8d",
-      "supplemental_accepted": false,
+      "usd_sha256": "bf0fafce831e94cf1824bbb85c55154bca271b6b1cfd059590ba43b74d5636cf",
+      "supplemental_accepted": true,
       "planned_test_count": 14,
       "result_count": 14,
-      "passed": 12,
+      "passed": 13,
       "skipped": 1,
-      "failed": 1,
-      "issues": [
-        "culling_xz:fail"
-      ],
+      "failed": 0,
+      "issues": [],
       "warnings": [],
-      "completed_at": "2026-10-13T23:35:50.846049+00:00",
-      "joint_status": "failed",
+      "completed_at": "2026-10-14T00:35:08.096843+00:00",
+      "joint_status": "passed",
       "joints_total": 2,
       "joints_passed": 2,
       "joints_failed": 0,
-      "thumbnail_sha256": "7224664333f220068bb613a9ed5c7f9c1f733f69ba6636e50c9c0f48da3fa4b7",
-      "qualification": "native-fleet-evidence/shard-05/native-batch-003/qualification-normalized.json",
+      "thumbnail_sha256": "72ae2b52181499ec605e34639591026ee4044208b16c7b09de1a94f53163b93e",
+      "qualification": "native-fleet-evidence/shard-31/native-batch-000/qualification-normalized.json",
       "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }

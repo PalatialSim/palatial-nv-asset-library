@@ -12,9 +12,9 @@ def assess(row,root):
  if not path.exists():return row
  c=json.loads(path.read_text())
  kind=c.get('kind')
- if c.get('schema')!=POLICY or kind not in {'sdk_small_asset_camera_clamp','sdk_presence_camera_clamp','sdk_color_probe_ambiguity','sdk_color_control_ambiguity','sdk_conservative_contact_bounds'} or c['logical_asset']!=row['logical_asset'] or c['asset_usd_sha256']!=row['asset_usd_sha256']:
+ if c.get('schema')!=POLICY or kind not in {'sdk_small_asset_camera_clamp','sdk_exact_camera_clamp','sdk_presence_camera_clamp','sdk_color_probe_ambiguity','sdk_color_control_ambiguity','sdk_conservative_contact_bounds'} or c['logical_asset']!=row['logical_asset'] or c['asset_usd_sha256']!=row['asset_usd_sha256']:
   raise RuntimeError('Tool finding certificate input differs')
- if row['result_count']!=row['planned_test_count'] or not row.get('thumbnail') or (kind=='sdk_small_asset_camera_clamp' and row['joint_counts']):
+ if row['result_count']!=row['planned_test_count'] or not row.get('thumbnail') or (kind in {'sdk_small_asset_camera_clamp','sdk_exact_camera_clamp'} and row['joint_counts']):
   raise RuntimeError('Tool finding cannot excuse incomplete supplemental coverage')
  if sha(root/row['thumbnail']['path'])!=row['thumbnail']['sha256']:raise RuntimeError('Tool finding native thumbnail differs')
  results={}
@@ -26,7 +26,7 @@ def assess(row,root):
    raise RuntimeError('Engine failures cannot receive a tool finding disposition')
  if len(results)!=row['planned_test_count']:raise RuntimeError('Tool finding planned test coverage differs')
  failed={name:h for name,(d,h) in results.items() if d['status'] not in ['pass','skipped']}
- allowed={'ground_drop','slope_drop'} if kind=='sdk_conservative_contact_bounds' else CAMERA_TESTS
+ allowed={'ground_drop','slope_drop'} if kind=='sdk_conservative_contact_bounds' else (CAMERA_TESTS|{'normals_xz'} if kind=='sdk_exact_camera_clamp' else CAMERA_TESTS)
  if not failed or set(failed)-allowed or failed!=c['raw_failed_result_sha256s']:raise RuntimeError('Tool finding does not match the exact independently diagnosed failures')
  if set(row['issues'])!={name+':fail' for name in failed}:raise RuntimeError('Additional native failures remain')
  def metric(name,key):return results[name][0]['metrics'][key]['value']
@@ -42,6 +42,12 @@ def assess(row,root):
   if not math.isclose(presence,c['presence_diff_ratio']) or not math.isclose(semantic,c['semantic_labels_on_coverage']) or silhouette!=c['silhouette_pixels']:
    raise RuntimeError('Certificate measurements differ from raw results')
   reason='SDK camera clamps each axis to 0.1 m, underframing this small asset; exact native geometry, labels and materials are present. All physics and supplemental checks pass.'
+ elif kind=='sdk_exact_camera_clamp':
+  from native_exact_camera_probe import verify_exact_camera_probe
+  verify_exact_camera_probe(c,root)
+  if set(failed)!=CAMERA_TESTS|{'normals_xz'} or results['normals_xz'][0]['metrics'] or not results['normals_xz'][0]['message'].startswith('Object not visible after multiple attempts. The diagnostic material (orange) was not detected.'):
+   raise RuntimeError('Normals camera finding must diagnose visibility-only failure')
+  reason='The SDK camera minimum underframes this tiny source asset. All four complete independently named visual tests, including the full normal rotation, pass using actual visible bounds with unchanged SDK functions and acceptance thresholds. Original visibility failures remain for NVIDIA review; all physics and supplemental checks pass.'
  elif kind=='sdk_presence_camera_clamp':
   from native_presence_probe import verify_presence_probe
   verify_presence_probe(c,root)

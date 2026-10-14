@@ -164,12 +164,12 @@
         "hf_commit": "ec1be0c8586137931ab62a41a8d4ab6187440c9b",
         "size_bytes": 103380329
       },
-      "status": "failed",
+      "status": "completed_with_tool_findings",
       "required_engine": "isaac_sim",
       "physics_runtime": "PhysX",
       "engine_version": "6.1.0.0",
       "usd_sha256": "aaf514f05269e97c3e277da518aa184ce1528b8f3ae34d2cb1500f6d687d317b",
-      "supplemental_accepted": false,
+      "supplemental_accepted": true,
       "planned_test_count": 12,
       "result_count": 12,
       "passed": 10,
@@ -185,6 +185,18 @@
       "joints_passed": 0,
       "joints_failed": 0,
       "thumbnail_sha256": "de0a4727f29f6baa418ecddd7efcfe1edaf14553b1cc330aec41433a65de4dbb",
+      "tool_findings": {
+        "certificate_path": "tool-finding-certificates/D00658.json",
+        "certificate_sha256": "d5a985eea4abd6f9ebecb216beeef59f62720607271ae756aa0dbfc2a56ab276",
+        "raw_benchmark_status": "failed",
+        "failed_tests": [
+          "slope_drop"
+        ],
+        "reason": "The SDK conservative world bounds extend through the floor while live visible and collider mesh vertices remain above its penetration limit. Both complete independent ground and slope simulations pass with the unchanged SDK simulation parameters and thresholds, including stable ground settling and post-slide observation. Raw SDK physics failures remain for NVIDIA review.",
+        "NVIDIA_raw_results_modified": false,
+        "requires_NVIDIA_review": true,
+        "release_certificate": "reports/releases/2026.10.13/tool-findings/D00658.json"
+      },
       "qualification": "native-fleet-evidence/shard-09/native-batch-002/qualification-normalized.json",
       "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
