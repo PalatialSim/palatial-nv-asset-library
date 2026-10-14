@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-14T02:52:11.091469+00:00",
+  "date": "2026-10-14T02:59:37.590795+00:00",
   "source_github_revision": "a8c65abbf0304a0e58b99157c80d59bd504c8484",
   "scope": "Authored USD metadata, official Robotics-Prop 4.0.0 static validation, and hash-bound Isaac Sim 6.1.0.0 native results; real-world properties remain uncalibrated.",
   "assets_repaired": 1013,
@@ -4021,7 +4021,7 @@
       "catalog_id": "batch36_D00593_Pasta_Maker",
       "asset_id": "D00593",
       "source_usd_sha256": "4f6a8dcdc14eea7d87458a06c9f83bd168df6cfbf4dd844a199429179716357b",
-      "final_usd_sha256": "415d2cd62a9507615fefb1d65764faf4fbe4156f5f5dbfe155edda5c6c9c67d0"
+      "final_usd_sha256": "66f301195eda966297deef90e98ad514a0489b3cfb600971a66f1a6d952f42a9"
     },
     {
       "catalog_id": "batch36_D00605_Water_Filter_Pitcher",
@@ -197535,9 +197535,9 @@
       "asset_id": "D00593",
       "physics_path": "batch36/D00593_Pasta_Maker/D00593_Pasta_Maker/IsaacSim_assets_D00593/physics_D00593.json",
       "usd_path": "batch36/D00593_Pasta_Maker/D00593_Pasta_Maker/IsaacSim_assets_D00593/IsaacSim_asset_D00593.usd",
-      "usd_sha256": "415d2cd62a9507615fefb1d65764faf4fbe4156f5f5dbfe155edda5c6c9c67d0",
+      "usd_sha256": "66f301195eda966297deef90e98ad514a0489b3cfb600971a66f1a6d952f42a9",
       "original_physics_sha256": "07231bc017117b830c85535c15ce936890bcb1e7069116b96363bfdbc5f1a0d8",
-      "repaired_physics_sha256": "694177cbb09da9bae137beaa453e4c81729e539de66039702737fc172cfd2ea4",
+      "repaired_physics_sha256": "5aa6bf13a1b43da16a64c806f42b0f8e40fde083a3a25205bed7b21b919020af",
       "changed_top_level_fields": [
         "articulation",
         "asset",
@@ -198963,8 +198963,8 @@
             ],
             "joint_enabled": true,
             "axis": "X",
-            "lowerLimit": -720000.0,
-            "upperLimit": 720000.0,
+            "lowerLimit": "-Infinity",
+            "upperLimit": "Infinity",
             "localPos0": [
               -0.11900000274181366,
               0.050710998475551605,
@@ -199002,8 +199002,8 @@
         "status": "passed",
         "profile": "Robotics-Prop",
         "version": "4.0.0",
-        "usd_sha256": "415d2cd62a9507615fefb1d65764faf4fbe4156f5f5dbfe155edda5c6c9c67d0",
-        "receipt_sha256": "b3ac6588019f5cba0d2fbdc616e1b3036200d424ed838cf4a3af6fcfaf1c3da5"
+        "usd_sha256": "66f301195eda966297deef90e98ad514a0489b3cfb600971a66f1a6d952f42a9",
+        "receipt_sha256": "3eed98cdb25cf156305b623f7e04524b6085ab773531d6f37c7503147b4c274d"
       },
       "semantics": {
         "class_label": "kitchenware",
@@ -199012,100 +199012,194 @@
       },
       "native": {
         "evidence_archive": {
-          "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/3d2c263f875319003d635d66c550e076f9357ab6/reports/native/2026.10.13/shard-10/native-batch-002-evidence.tar.gz",
-          "sha256": "1fe7298db6bafa790888478c8b334a62fd2dcc8a39909b1774bf0b2a300daaba",
-          "hf_commit": "3d2c263f875319003d635d66c550e076f9357ab6",
-          "size_bytes": 108936847
+          "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/ea2c0378500830164d6d13cde71cb01753b48207/reports/native/2026.10.13/cases/native-continuous-grip-noodle-minimal-v15/native-batch-000-evidence.tar.gz",
+          "sha256": "1daf19a08e87fe4b414bff38aa49f8ab614c63f71ee6242aaa5cde8301fb44bc",
+          "hf_commit": "ea2c0378500830164d6d13cde71cb01753b48207",
+          "size_bytes": 7430527
         },
-        "status": "failed",
+        "status": "passed",
         "required_engine": "isaac_sim",
         "physics_runtime": "PhysX",
         "engine_version": "6.1.0.0",
-        "usd_sha256": "415d2cd62a9507615fefb1d65764faf4fbe4156f5f5dbfe155edda5c6c9c67d0",
-        "supplemental_accepted": false,
+        "usd_sha256": "66f301195eda966297deef90e98ad514a0489b3cfb600971a66f1a6d952f42a9",
+        "supplemental_accepted": true,
         "planned_test_count": 14,
         "result_count": 14,
-        "passed": 10,
+        "passed": 12,
         "skipped": 2,
-        "failed": 2,
-        "issues": [
-          "independent_joint_safety_missing_or_failed",
-          "palatial_joint_constraint_safety:fail",
-          "slope_drop:fail"
-        ],
-        "warnings": [
-          "official_relative_translation_requires_independent_anchor_check"
-        ],
-        "completed_at": "2026-10-13T23:30:23.145425+00:00",
-        "joint_status": "failed",
+        "failed": 0,
+        "issues": [],
+        "warnings": [],
+        "completed_at": "2026-10-14T02:56:47.945932+00:00",
+        "joint_status": "passed",
         "joints_total": 6,
         "joints_passed": 6,
         "joints_failed": 0,
-        "thumbnail_sha256": "0dadadd4ddd4c64faf91ed653e984632c839e36e09ef38696ac318fa01f4c8b6",
+        "thumbnail_sha256": "0f0c178c2b976a070bc8c4fbdb413b6f82b9fc018b3d55a5798cdd0569ff57f3",
         "raw_results": [
           {
-            "path": "native-batch-002/benchmark/results/D00593/simready_usd/.simready/runtime/semantic_labels_seg_stripped/isaac_sim/result.json",
-            "sha256": "3bc00373ed4ba8cfa225ea7103277619cfcfdd81f6f21bec304d763a76b1f5bd"
+            "path": "native-batch-000/benchmark/results/D00593/simready_usd/.simready/runtime/semantic_labels_seg_stripped/isaac_sim/result.json",
+            "sha256": "0cfbd39f2a57b6c1c3d2d018ff75e8a0ed119144f35cb56b6cd0434ce9533000"
           },
           {
-            "path": "native-batch-002/benchmark/results/D00593/simready_usd/.simready/runtime/semantic_labels_seg_labelled/isaac_sim/result.json",
-            "sha256": "c8e47908c19402cac043e19b1e9e6b7cdef1265c9875257ec449fb9d9c02b46d"
+            "path": "native-batch-000/benchmark/results/D00593/simready_usd/.simready/runtime/semantic_labels_seg_labelled/isaac_sim/result.json",
+            "sha256": "e48f943baa7f63febd0203cac6cb3cefdc643feb6250349b782f0c795460645d"
           },
           {
-            "path": "native-batch-002/benchmark/results/D00593/simready_usd/.simready/runtime/preview_surface_renders/isaac_sim/result.json",
-            "sha256": "677f95dcedad779376ea116d1ca9969bc3d9118bfc26d33cfefe8b3e2b928881"
+            "path": "native-batch-000/benchmark/results/D00593/simready_usd/.simready/runtime/preview_surface_renders/isaac_sim/result.json",
+            "sha256": "72683c0fbddb47413058ae0c63741f8bdacaee22d5ee6a04040212bb91693234"
           },
           {
-            "path": "native-batch-002/benchmark/results/D00593/simready_usd/.simready/runtime/grasp_and_lift/isaac_sim/result.json",
-            "sha256": "a8cdcc233bfc5e66a68b2690947c85a2106080666dea7dc0335dee2681e996bd"
+            "path": "native-batch-000/benchmark/results/D00593/simready_usd/.simready/runtime/grasp_and_lift/isaac_sim/result.json",
+            "sha256": "b51fb36e226412060d40b6d174ef13b31ed6d4980fe5f893dc4f04970c710f53"
           },
           {
-            "path": "native-batch-002/benchmark/results/D00593/simready_usd/.simready/runtime/joint_movement/isaac_sim/result.json",
-            "sha256": "9d59eac086fa75be322f2af72048aaa7dec3ea98aae7dfb8d302f5481a0663f1"
+            "path": "native-batch-000/benchmark/results/D00593/simready_usd/.simready/runtime/joint_movement/isaac_sim/result.json",
+            "sha256": "79ececdd581795ffdf6832e70619b09dcbecf5fa9b32a734c65d44a982bb8f1a"
           },
           {
-            "path": "native-batch-002/benchmark/results/D00593/simready_usd/.simready/runtime/palatial_joint_constraint_safety/isaac_sim/result.json",
-            "sha256": "aebe6e85468aa2fa67c2ee8e88af2115f35afedcf9f50d4a05b6e7c1627d29e8"
+            "path": "native-batch-000/benchmark/results/D00593/simready_usd/.simready/runtime/palatial_joint_constraint_safety/isaac_sim/result.json",
+            "sha256": "6c3891a5a54301ca16830979c32ab4ab236b22607b826779243de08926953d86"
           },
           {
-            "path": "native-batch-002/benchmark/results/D00593/simready_usd/.simready/runtime/slope_drop/isaac_sim/result.json",
-            "sha256": "a047ddac04ffb6019d71d5ae55ba46ebfd0a3649a83b5feef2c37b6fe442baa2"
+            "path": "native-batch-000/benchmark/results/D00593/simready_usd/.simready/runtime/slope_drop/isaac_sim/result.json",
+            "sha256": "68145e24cd106da41d131a735959140bb9817f356208aca2fd55bf1466a2c04c"
           },
           {
-            "path": "native-batch-002/benchmark/results/D00593/simready_usd/.simready/runtime/ground_drop/isaac_sim/result.json",
-            "sha256": "db5a4628e7e33595695367ec9c58bc6e076c141703fa47d38f3c011c3e8a5548"
+            "path": "native-batch-000/benchmark/results/D00593/simready_usd/.simready/runtime/ground_drop/isaac_sim/result.json",
+            "sha256": "3b653f3a7b3ceec356b62e48c1e302953f93369c36e20737c2b37efc324854c3"
           },
           {
-            "path": "native-batch-002/benchmark/results/D00593/simready_usd/.simready/runtime/presence/isaac_sim/result.json",
-            "sha256": "4ebdcf006d41aad5619d2eadfb1b0e4fe0c1ddc89c6815f9cdb93e5452138dd5"
+            "path": "native-batch-000/benchmark/results/D00593/simready_usd/.simready/runtime/presence/isaac_sim/result.json",
+            "sha256": "c940397896e4866ab2cdd8dc49716cf87ac3c46daf96dfa1ee2d083fa105a5b3"
           },
           {
-            "path": "native-batch-002/benchmark/results/D00593/simready_usd/.simready/runtime/pivot/isaac_sim/result.json",
-            "sha256": "80018fad334b46a6be7f37c0f9275440251261c84db6f0a20be4ea3b367f7da3"
+            "path": "native-batch-000/benchmark/results/D00593/simready_usd/.simready/runtime/pivot/isaac_sim/result.json",
+            "sha256": "9cebe87235c81a8920f9b17a06f9c5b010cbea7f168ce5310b96243e00639ff0"
           },
           {
-            "path": "native-batch-002/benchmark/results/D00593/simready_usd/.simready/runtime/normals_xz/isaac_sim/result.json",
-            "sha256": "7d31be90ab41afbeaa7953eafb74a6a3fcdb7c14a65f3dc2029e9f44b58f3331"
+            "path": "native-batch-000/benchmark/results/D00593/simready_usd/.simready/runtime/normals_xz/isaac_sim/result.json",
+            "sha256": "f8ea5c3284dc9ea3bf26cfca31e3ca20b15520684ce3eac9795a53a4923758fe"
           },
           {
-            "path": "native-batch-002/benchmark/results/D00593/simready_usd/.simready/runtime/light_response/isaac_sim/result.json",
-            "sha256": "76e22eff81b0413a4eee53bcc102f77a0d7892a0b3e0f5065f86586b9a3d0d9e"
+            "path": "native-batch-000/benchmark/results/D00593/simready_usd/.simready/runtime/light_response/isaac_sim/result.json",
+            "sha256": "94a50a627fec3d01351f53fe4e5ddb5309a05e2d85fb08fa1a640fc10ca250fc"
           },
           {
-            "path": "native-batch-002/benchmark/results/D00593/simready_usd/.simready/runtime/culling_xz/isaac_sim/result.json",
-            "sha256": "02d49605cdcdd00144d61df0a81b0be25d446ca6541dd2925f4a0e32941d640f"
+            "path": "native-batch-000/benchmark/results/D00593/simready_usd/.simready/runtime/culling_xz/isaac_sim/result.json",
+            "sha256": "e47d4468d102fabdfb58742734cde29d867457e2dc18eb1fc297303f5c98898c"
           },
           {
-            "path": "native-batch-002/benchmark/results/D00593/simready_usd/.simready/runtime/palatial_black_thumbnail/isaac_sim/result.json",
-            "sha256": "338cda76e26f3c1212086244d83ee5aed28c4eee847658dd324ea479bec1d0b7"
+            "path": "native-batch-000/benchmark/results/D00593/simready_usd/.simready/runtime/palatial_black_thumbnail/isaac_sim/result.json",
+            "sha256": "1185c5df47116cb12be2f5b43a917f087a71553ccd1e2fab0cd0361282c87eeb"
           }
         ],
-        "qualification": "native-fleet-evidence/shard-10/native-batch-002/qualification-normalized.json"
+        "qualification": "native-fleet-evidence/shard-71/native-batch-000/qualification-normalized.json"
       },
       "package": {
-        "status": "blocked_by_native",
-        "usd_sha256": "415d2cd62a9507615fefb1d65764faf4fbe4156f5f5dbfe155edda5c6c9c67d0"
-      }
+        "status": "completed",
+        "manifest_url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/6b89cde579e375204ec68a0547a3ba7a65ebd20c/D00593/com.nvidia.simready.packaging.json",
+        "hf_commit": "6b89cde579e375204ec68a0547a3ba7a65ebd20c",
+        "package_definition_sha256": "b15e9d48c4f368402bc0167759e43d027a4e0d5ab4a1fd75de5bba2564856735",
+        "pre_validation_passed": true,
+        "post_validation_passed": true,
+        "thumbnail_sha256": "0f0c178c2b976a070bc8c4fbdb413b6f82b9fc018b3d55a5798cdd0569ff57f3",
+        "usd_sha256": "66f301195eda966297deef90e98ad514a0489b3cfb600971a66f1a6d952f42a9"
+      },
+      "native_prior_attempts": [
+        {
+          "qualification": "native-fleet-evidence/shard-10/native-batch-002/qualification-normalized.json",
+          "evidence_archive": {
+            "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/3d2c263f875319003d635d66c550e076f9357ab6/reports/native/2026.10.13/shard-10/native-batch-002-evidence.tar.gz",
+            "sha256": "1fe7298db6bafa790888478c8b334a62fd2dcc8a39909b1774bf0b2a300daaba",
+            "hf_commit": "3d2c263f875319003d635d66c550e076f9357ab6",
+            "size_bytes": 108936847
+          },
+          "status": "failed",
+          "required_engine": "isaac_sim",
+          "physics_runtime": "PhysX",
+          "engine_version": "6.1.0.0",
+          "usd_sha256": "415d2cd62a9507615fefb1d65764faf4fbe4156f5f5dbfe155edda5c6c9c67d0",
+          "supplemental_accepted": false,
+          "planned_test_count": 14,
+          "result_count": 14,
+          "passed": 10,
+          "skipped": 2,
+          "failed": 2,
+          "issues": [
+            "independent_joint_safety_missing_or_failed",
+            "palatial_joint_constraint_safety:fail",
+            "slope_drop:fail"
+          ],
+          "warnings": [
+            "official_relative_translation_requires_independent_anchor_check"
+          ],
+          "completed_at": "2026-10-13T23:30:23.145425+00:00",
+          "joint_status": "failed",
+          "joints_total": 6,
+          "joints_passed": 6,
+          "joints_failed": 0,
+          "thumbnail_sha256": "0dadadd4ddd4c64faf91ed653e984632c839e36e09ef38696ac318fa01f4c8b6",
+          "raw_results": [
+            {
+              "path": "native-batch-002/benchmark/results/D00593/simready_usd/.simready/runtime/semantic_labels_seg_stripped/isaac_sim/result.json",
+              "sha256": "3bc00373ed4ba8cfa225ea7103277619cfcfdd81f6f21bec304d763a76b1f5bd"
+            },
+            {
+              "path": "native-batch-002/benchmark/results/D00593/simready_usd/.simready/runtime/semantic_labels_seg_labelled/isaac_sim/result.json",
+              "sha256": "c8e47908c19402cac043e19b1e9e6b7cdef1265c9875257ec449fb9d9c02b46d"
+            },
+            {
+              "path": "native-batch-002/benchmark/results/D00593/simready_usd/.simready/runtime/preview_surface_renders/isaac_sim/result.json",
+              "sha256": "677f95dcedad779376ea116d1ca9969bc3d9118bfc26d33cfefe8b3e2b928881"
+            },
+            {
+              "path": "native-batch-002/benchmark/results/D00593/simready_usd/.simready/runtime/grasp_and_lift/isaac_sim/result.json",
+              "sha256": "a8cdcc233bfc5e66a68b2690947c85a2106080666dea7dc0335dee2681e996bd"
+            },
+            {
+              "path": "native-batch-002/benchmark/results/D00593/simready_usd/.simready/runtime/joint_movement/isaac_sim/result.json",
+              "sha256": "9d59eac086fa75be322f2af72048aaa7dec3ea98aae7dfb8d302f5481a0663f1"
+            },
+            {
+              "path": "native-batch-002/benchmark/results/D00593/simready_usd/.simready/runtime/palatial_joint_constraint_safety/isaac_sim/result.json",
+              "sha256": "aebe6e85468aa2fa67c2ee8e88af2115f35afedcf9f50d4a05b6e7c1627d29e8"
+            },
+            {
+              "path": "native-batch-002/benchmark/results/D00593/simready_usd/.simready/runtime/slope_drop/isaac_sim/result.json",
+              "sha256": "a047ddac04ffb6019d71d5ae55ba46ebfd0a3649a83b5feef2c37b6fe442baa2"
+            },
+            {
+              "path": "native-batch-002/benchmark/results/D00593/simready_usd/.simready/runtime/ground_drop/isaac_sim/result.json",
+              "sha256": "db5a4628e7e33595695367ec9c58bc6e076c141703fa47d38f3c011c3e8a5548"
+            },
+            {
+              "path": "native-batch-002/benchmark/results/D00593/simready_usd/.simready/runtime/presence/isaac_sim/result.json",
+              "sha256": "4ebdcf006d41aad5619d2eadfb1b0e4fe0c1ddc89c6815f9cdb93e5452138dd5"
+            },
+            {
+              "path": "native-batch-002/benchmark/results/D00593/simready_usd/.simready/runtime/pivot/isaac_sim/result.json",
+              "sha256": "80018fad334b46a6be7f37c0f9275440251261c84db6f0a20be4ea3b367f7da3"
+            },
+            {
+              "path": "native-batch-002/benchmark/results/D00593/simready_usd/.simready/runtime/normals_xz/isaac_sim/result.json",
+              "sha256": "7d31be90ab41afbeaa7953eafb74a6a3fcdb7c14a65f3dc2029e9f44b58f3331"
+            },
+            {
+              "path": "native-batch-002/benchmark/results/D00593/simready_usd/.simready/runtime/light_response/isaac_sim/result.json",
+              "sha256": "76e22eff81b0413a4eee53bcc102f77a0d7892a0b3e0f5065f86586b9a3d0d9e"
+            },
+            {
+              "path": "native-batch-002/benchmark/results/D00593/simready_usd/.simready/runtime/culling_xz/isaac_sim/result.json",
+              "sha256": "02d49605cdcdd00144d61df0a81b0be25d446ca6541dd2925f4a0e32941d640f"
+            },
+            {
+              "path": "native-batch-002/benchmark/results/D00593/simready_usd/.simready/runtime/palatial_black_thumbnail/isaac_sim/result.json",
+              "sha256": "338cda76e26f3c1212086244d83ee5aed28c4eee847658dd324ea479bec1d0b7"
+            }
+          ]
+        }
+      ]
     },
     {
       "catalog_id": "batch36_D00605_Water_Filter_Pitcher",
@@ -330532,8 +330626,8 @@
   ],
   "acceptance": {
     "static_passed": 1013,
-    "native_passed": 956,
+    "native_passed": 957,
     "native_completed_with_tool_findings": 56,
-    "package_completed": 1012
+    "package_completed": 1013
   }
 }
