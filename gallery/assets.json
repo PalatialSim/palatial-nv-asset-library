@@ -684,8 +684,8 @@
     "class_label": "cup",
     "wikidata_qcode": "Q81727",
     "native_validation_status": "passed",
-    "package_status": "pending",
-    "package_manifest_url": null,
+    "package_status": "completed",
+    "package_manifest_url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/c16921581e3bc6069dabf5ecfb7ab2969799d94b/D00936/com.nvidia.simready.packaging.json",
     "physics_kind": "single_body",
     "native_tool_findings": null
   },
@@ -6096,8 +6096,8 @@
     "class_label": "bowl",
     "wikidata_qcode": "Q153988",
     "native_validation_status": "passed",
-    "package_status": "pending",
-    "package_manifest_url": null,
+    "package_status": "completed",
+    "package_manifest_url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/c16921581e3bc6069dabf5ecfb7ab2969799d94b/D00952/com.nvidia.simready.packaging.json",
     "physics_kind": "single_body",
     "native_tool_findings": null
   },
@@ -11224,8 +11224,8 @@
     "class_label": "kitchenware",
     "wikidata_qcode": "Q1521410",
     "native_validation_status": "passed",
-    "package_status": "pending",
-    "package_manifest_url": null,
+    "package_status": "completed",
+    "package_manifest_url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/c16921581e3bc6069dabf5ecfb7ab2969799d94b/D00894/com.nvidia.simready.packaging.json",
     "physics_kind": "single_body",
     "native_tool_findings": null
   },
@@ -11425,8 +11425,8 @@
     "class_label": "jug",
     "wikidata_qcode": "Q2413314",
     "native_validation_status": "passed",
-    "package_status": "pending",
-    "package_manifest_url": null,
+    "package_status": "completed",
+    "package_manifest_url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/c16921581e3bc6069dabf5ecfb7ab2969799d94b/D00919/com.nvidia.simready.packaging.json",
     "physics_kind": "single_body",
     "native_tool_findings": null
   },
@@ -13716,8 +13716,8 @@
     "class_label": "vase",
     "wikidata_qcode": "Q191851",
     "native_validation_status": "passed",
-    "package_status": "pending",
-    "package_manifest_url": null,
+    "package_status": "completed",
+    "package_manifest_url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/c16921581e3bc6069dabf5ecfb7ab2969799d94b/D00902/com.nvidia.simready.packaging.json",
     "physics_kind": "single_body",
     "native_tool_findings": null
   },
@@ -13966,8 +13966,8 @@
     "class_label": "kitchenware",
     "wikidata_qcode": "Q1521410",
     "native_validation_status": "passed",
-    "package_status": "pending",
-    "package_manifest_url": null,
+    "package_status": "completed",
+    "package_manifest_url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/c16921581e3bc6069dabf5ecfb7ab2969799d94b/D00960/com.nvidia.simready.packaging.json",
     "physics_kind": "multi_body",
     "native_tool_findings": null
   },
@@ -16543,8 +16543,8 @@
     "class_label": "cutlery",
     "wikidata_qcode": "Q81944",
     "native_validation_status": "passed",
-    "package_status": "pending",
-    "package_manifest_url": null,
+    "package_status": "completed",
+    "package_manifest_url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/c16921581e3bc6069dabf5ecfb7ab2969799d94b/D00977/com.nvidia.simready.packaging.json",
     "physics_kind": "single_body",
     "native_tool_findings": null
   },
@@ -26248,11 +26248,22 @@
     "static_validation_status": "passed",
     "class_label": "physical tool",
     "wikidata_qcode": "Q39546",
-    "native_validation_status": "failed",
+    "native_validation_status": "completed_with_tool_findings",
     "package_status": "blocked_by_native",
     "package_manifest_url": null,
     "physics_kind": "single_body",
-    "native_tool_findings": null
+    "native_tool_findings": {
+      "certificate_path": "tool-finding-certificates/D00944.json",
+      "certificate_sha256": "bc739362d51edfd19a3b6a820e9ab3adf3cd1d35124d75f0278598437c59d786",
+      "raw_benchmark_status": "failed",
+      "failed_tests": [
+        "slope_drop"
+      ],
+      "reason": "The SDK conservative world bounds extend through the floor while live visible and collider mesh vertices remain above its penetration limit. Both complete independent ground and slope simulations pass with the unchanged SDK simulation parameters and thresholds, including stable ground settling and post-slide observation. Raw SDK physics failures remain for NVIDIA review.",
+      "NVIDIA_raw_results_modified": false,
+      "requires_NVIDIA_review": true,
+      "release_certificate": "reports/releases/2026.10.13/tool-findings/D00944.json"
+    }
   },
   {
     "id": "batch2_D00967_Wooden_Pepper_Mill",
@@ -27261,17 +27272,28 @@
     "moving_joints": 0,
     "verification_scope": "authored_usd_metadata_consistency",
     "logical_asset": "D00869",
-    "usd_sha256": "23032825acdf2f386db11d151323cfead10f40ca8db8898c46a5b820074800c3",
+    "usd_sha256": "78d442d4b3a64b77fb27e655b43df75e34775186e43c0ffacb82098ef7ebc149",
     "simready_profile": "Robotics-Prop",
     "simready_profile_version": "4.0.0",
     "static_validation_status": "passed",
     "class_label": "home appliance",
     "wikidata_qcode": "Q212920",
-    "native_validation_status": "failed",
+    "native_validation_status": "completed_with_tool_findings",
     "package_status": "blocked_by_native",
     "package_manifest_url": null,
     "physics_kind": "single_body",
-    "native_tool_findings": null
+    "native_tool_findings": {
+      "certificate_path": "tool-finding-certificates/D00869.json",
+      "certificate_sha256": "89d72b849b75c66d13066b6301ce2c8a04b05c9ce4d986361c78079c7c63bbb1",
+      "raw_benchmark_status": "failed",
+      "failed_tests": [
+        "slope_drop"
+      ],
+      "reason": "The SDK conservative world bounds extend through the floor while live visible and collider mesh vertices remain above its penetration limit. Both complete independent ground and slope simulations pass with the unchanged SDK simulation parameters and thresholds, including stable ground settling and post-slide observation. Raw SDK physics failures remain for NVIDIA review.",
+      "NVIDIA_raw_results_modified": false,
+      "requires_NVIDIA_review": true,
+      "release_certificate": "reports/releases/2026.10.13/tool-findings/D00869.json"
+    }
   },
   {
     "id": "batch30_D00870_Mustard_Bottle",
@@ -27618,8 +27640,8 @@
     "class_label": "container",
     "wikidata_qcode": "Q987767",
     "native_validation_status": "passed",
-    "package_status": "pending",
-    "package_manifest_url": null,
+    "package_status": "completed",
+    "package_manifest_url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/c16921581e3bc6069dabf5ecfb7ab2969799d94b/D00927/com.nvidia.simready.packaging.json",
     "physics_kind": "single_body",
     "native_tool_findings": null
   },
@@ -35597,8 +35619,8 @@
     "class_label": "plant",
     "wikidata_qcode": "Q756",
     "native_validation_status": "completed_with_tool_findings",
-    "package_status": "blocked_by_native",
-    "package_manifest_url": null,
+    "package_status": "completed",
+    "package_manifest_url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/dc5fd9d55da3fea4b37ff32d47cbc086c5a0ce39/D00306/com.nvidia.simready.packaging.json",
     "physics_kind": "single_body",
     "native_tool_findings": {
       "certificate_path": "tool-finding-certificates/D00306.json",
@@ -46461,8 +46483,8 @@
     "class_label": "work of art",
     "wikidata_qcode": "Q838948",
     "native_validation_status": "passed",
-    "package_status": "pending",
-    "package_manifest_url": null,
+    "package_status": "completed",
+    "package_manifest_url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/c16921581e3bc6069dabf5ecfb7ab2969799d94b/D00911/com.nvidia.simready.packaging.json",
     "physics_kind": "single_body",
     "native_tool_findings": null
   },
@@ -46777,8 +46799,8 @@
     "class_label": "plate",
     "wikidata_qcode": "Q57216",
     "native_validation_status": "passed",
-    "package_status": "pending",
-    "package_manifest_url": null,
+    "package_status": "completed",
+    "package_manifest_url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/c16921581e3bc6069dabf5ecfb7ab2969799d94b/D00969/com.nvidia.simready.packaging.json",
     "physics_kind": "single_body",
     "native_tool_findings": null
   },

@@ -86,17 +86,243 @@
       "original_physics_sha256": "04911d5af7e87ed7ff91b387a65070e6614463ae41d6d7535b82927ceedd4fda"
     },
     "usd_path": "batch30/D00869 Chocolate Fountain/IsaacSim_assets_6a7b7a6ab56a872fd77acf81/IsaacSim_asset_6a7b7a6ab56a872fd77acf81.usd",
-    "usd_sha256": "23032825acdf2f386db11d151323cfead10f40ca8db8898c46a5b820074800c3",
+    "usd_sha256": "78d442d4b3a64b77fb27e655b43df75e34775186e43c0ffacb82098ef7ebc149",
     "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
     "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
     "source_meters_per_unit": 1.0,
     "source_kilograms_per_unit": 1.0,
     "source_up_axis": "Z",
-    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification.",
+    "native_runtime_repairs": [
+      {
+        "case": "native-contact-repairs-v3",
+        "old_usd_sha256": "23032825acdf2f386db11d151323cfead10f40ca8db8898c46a5b820074800c3",
+        "new_usd_sha256": "78d442d4b3a64b77fb27e655b43df75e34775186e43c0ffacb82098ef7ebc149",
+        "changes": [
+          {
+            "kind": "lower_uncalibrated_restitution_after_observed_excessive_bounce",
+            "prim": "/World/part_00/PhysicsMaterials/part_00_material",
+            "before": 0.30000001192092896,
+            "after": 0.1
+          },
+          {
+            "kind": "speculative_ccd_and_velocity_solver_after_observed_upward_launch",
+            "velocity_iterations": 16
+          }
+        ],
+        "qualification": "native-fleet-evidence/shard-44/native-batch-000/qualification-normalized.json"
+      }
+    ]
   },
   "schema_version": "1.0",
   "simulation": {
-    "fix_base": false
+    "fix_base": false,
+    "authored_usd_physics_properties": [
+      {
+        "prim_path": "/World/part_00",
+        "authored_attributes": {
+          "physics:centerOfMass": "(0.00026064075, -0.016800871, 0.20230989)",
+          "physics:density": "7500.0",
+          "physics:diagonalInertia": "(0.093024865, 0.2057372, 0.23225567)",
+          "physics:mass": "12.180000305175781",
+          "physics:principalAxes": "(-0.7049962, 0.04627744, 0.7052808, -0.05846143)",
+          "physics:rigidBodyEnabled": "True",
+          "physxRigidBody:enableSpeculativeCCD": "True",
+          "physxRigidBody:solverPositionIterationCount": "16",
+          "physxRigidBody:solverVelocityIterationCount": "16"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/PhysicsMaterials/part_00_material",
+        "authored_attributes": {
+          "physics:dynamicFriction": "0.4000000059604645",
+          "physics:restitution": "0.10000000149011612",
+          "physics:staticFriction": "0.5",
+          "physxMaterial:frictionCombineMode": "average",
+          "physxMaterial:restitutionCombineMode": "average"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_0",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.002561343600973487",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_1",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.002561343600973487",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_2",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.002561343600973487",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_3",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.002561343600973487",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_4",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.002561343600973487",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_5",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.002561343600973487",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_6",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.002561343600973487",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_7",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.002561343600973487",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_8",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.002561343600973487",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_9",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.002561343600973487",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_10",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.002561343600973487",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_11",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.002561343600973487",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_12",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.002561343600973487",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_13",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.002561343600973487",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_14",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.002561343600973487",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_15",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.002561343600973487",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_16",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.002561343600973487",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_17",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.002561343600973487",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_18",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.002561343600973487",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_19",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.002561343600973487",
+          "physxCollision:restOffset": "0.0"
+        }
+      }
+    ]
   },
   "units": {
     "length": "m",
@@ -117,7 +343,7 @@
       ],
       "checked_at": "2026-10-13T19:50:31.621292+00:00",
       "evidence": "reports/releases/2026.10.13/assets.json",
-      "usd_sha256": "23032825acdf2f386db11d151323cfead10f40ca8db8898c46a5b820074800c3",
+      "usd_sha256": "78d442d4b3a64b77fb27e655b43df75e34775186e43c0ffacb82098ef7ebc149",
       "scope": "authored_usd_dimensions",
       "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
       "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
@@ -128,7 +354,7 @@
       "value_kg": 12.180000305175781,
       "checked_at": "2026-10-13T19:50:31.621292+00:00",
       "evidence": "reports/releases/2026.10.13/assets.json",
-      "usd_sha256": "23032825acdf2f386db11d151323cfead10f40ca8db8898c46a5b820074800c3",
+      "usd_sha256": "78d442d4b3a64b77fb27e655b43df75e34775186e43c0ffacb82098ef7ebc149",
       "scope": "authored_usd_mass_consistency",
       "part_sum_kg": 12.180000305175781,
       "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
@@ -139,7 +365,7 @@
       "shape_count": 20,
       "checked_at": "2026-10-13T19:50:31.621292+00:00",
       "evidence": "reports/releases/2026.10.13/assets.json",
-      "usd_sha256": "23032825acdf2f386db11d151323cfead10f40ca8db8898c46a5b820074800c3",
+      "usd_sha256": "78d442d4b3a64b77fb27e655b43df75e34775186e43c0ffacb82098ef7ebc149",
       "scope": "authored_usd_collision_schema",
       "enabled_shape_count": 20,
       "approximations": [
@@ -153,7 +379,7 @@
       "moving_joints": 0,
       "checked_at": "2026-10-13T19:50:31.621292+00:00",
       "evidence": "reports/releases/2026.10.13/assets.json",
-      "usd_sha256": "23032825acdf2f386db11d151323cfead10f40ca8db8898c46a5b820074800c3",
+      "usd_sha256": "78d442d4b3a64b77fb27e655b43df75e34775186e43c0ffacb82098ef7ebc149",
       "scope": "authored_usd_joint_schema",
       "joint_count": 0,
       "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
@@ -161,17 +387,17 @@
     "scope": "authored_usd_metadata_consistency",
     "runtime": {
       "evidence_archive": {
-        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/544a81d285267b6bd4c1ab59e356def67502abe4/reports/native/2026.10.13/shard-04/native-batch-003-evidence.tar.gz",
-        "sha256": "0f79ad9ccca5d23151b6beb3ac152d4f2e574acbd457f80d20ae089971dfbe75",
-        "hf_commit": "544a81d285267b6bd4c1ab59e356def67502abe4",
-        "size_bytes": 106673475
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/f6b7843e64d26ac4a31270b0c398bafe7ff02734/reports/native/2026.10.13/cases/native-contact-repairs-v3/native-batch-000-evidence.tar.gz",
+        "sha256": "758b79b87acb3e6632ad2048dfe7f8cf6fc05bed5b83eecd75c97b88b3edaa4b",
+        "hf_commit": "f6b7843e64d26ac4a31270b0c398bafe7ff02734",
+        "size_bytes": 5697417
       },
-      "status": "failed",
+      "status": "completed_with_tool_findings",
       "required_engine": "isaac_sim",
       "physics_runtime": "PhysX",
       "engine_version": "6.1.0.0",
-      "usd_sha256": "23032825acdf2f386db11d151323cfead10f40ca8db8898c46a5b820074800c3",
-      "supplemental_accepted": false,
+      "usd_sha256": "78d442d4b3a64b77fb27e655b43df75e34775186e43c0ffacb82098ef7ebc149",
+      "supplemental_accepted": true,
       "planned_test_count": 12,
       "result_count": 12,
       "passed": 10,
@@ -181,13 +407,25 @@
         "slope_drop:fail"
       ],
       "warnings": [],
-      "completed_at": "2026-10-14T00:47:31.938493+00:00",
+      "completed_at": "2026-10-14T01:10:06.757435+00:00",
       "joint_status": "not_applicable",
       "joints_total": 0,
       "joints_passed": 0,
       "joints_failed": 0,
-      "thumbnail_sha256": "49e2a53a46ea5fd2d2391796d4665a671820b7d4ce637d9a76f135223d863098",
-      "qualification": "native-fleet-evidence/shard-04/native-batch-003/qualification-normalized.json",
+      "thumbnail_sha256": "c0a102d218f16b19c619e09f4c9fe4c15f9f95418f581b90a541e9fca3fec057",
+      "tool_findings": {
+        "certificate_path": "tool-finding-certificates/D00869.json",
+        "certificate_sha256": "89d72b849b75c66d13066b6301ce2c8a04b05c9ce4d986361c78079c7c63bbb1",
+        "raw_benchmark_status": "failed",
+        "failed_tests": [
+          "slope_drop"
+        ],
+        "reason": "The SDK conservative world bounds extend through the floor while live visible and collider mesh vertices remain above its penetration limit. Both complete independent ground and slope simulations pass with the unchanged SDK simulation parameters and thresholds, including stable ground settling and post-slide observation. Raw SDK physics failures remain for NVIDIA review.",
+        "NVIDIA_raw_results_modified": false,
+        "requires_NVIDIA_review": true,
+        "release_certificate": "reports/releases/2026.10.13/tool-findings/D00869.json"
+      },
+      "qualification": "native-fleet-evidence/shard-44/native-batch-000/qualification-normalized.json",
       "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
