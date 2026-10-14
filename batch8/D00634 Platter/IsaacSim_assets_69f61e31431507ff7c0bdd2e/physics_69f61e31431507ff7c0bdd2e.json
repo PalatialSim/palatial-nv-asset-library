@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.1303827315568924,
-        0.1311737447977066,
-        0.057617392390966415
-      ],
       "min": [
-        -0.1311613917350769,
-        -0.13019892573356628,
-        -5.698236054740846e-05
+        -0.13114699721336365,
+        -0.13015900552272797,
+        -5.8000001445179805e-05
+      ],
+      "max": [
+        0.1303810030221939,
+        0.13116499781608582,
+        0.05760699883103371
       ],
       "size": [
-        0.2615441232919693,
-        0.2613726705312729,
-        0.057674374751513824
-      ]
+        0.26152800023555756,
+        0.2613240033388138,
+        0.057664998832478886
+      ],
+      "units": "m"
     },
     "description": "A low-profile white ceramic plate or serving dish with a smooth, glazed finish and a slightly raised rim.",
     "name": "D00634 Platter",
     "object_type": "rigid_bodies",
-    "total_mass": 0.6
+    "total_mass": 0.6000000238418579,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00634",
   "parts": [
     {
       "bounds": {
-        "center": [
-          -2.7466866184464277e-05,
-          0.00025673167140881023,
-          0.032155778606922446
+        "min": [
+          -0.13114699721336365,
+          -0.13015900552272797,
+          -5.8000001445179805e-05
         ],
         "max": [
-          0.1303827315568924,
-          0.1311737447977066,
-          0.057617392390966415
+          0.1303810030221939,
+          0.13116499781608582,
+          0.05760699883103371
         ],
-        "min": [
-          -0.1311613917350769,
-          -0.13019892573356628,
-          -5.698236054740846e-05
-        ]
+        "size": [
+          0.26152800023555756,
+          0.2613240033388138,
+          0.057664998832478886
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         0.00038327375427533127,
@@ -59,7 +65,7 @@
         0.0024375489774678227,
         0.00469534053162296
       ],
-      "mass": 0.6,
+      "mass": 0.6000000238418579,
       "material": "ceramic",
       "name": "D00634 Platter",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00634 Platter",
         "part_name": "D00634 Platter"
       },
-      "volume": 0.0008223991760448523
+      "volume": 0.0008223991760448523,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "e439f67a40b2a0c30001b74d8ac054a5ca3c7fc32112d110192763ead792f422"
+    },
+    "usd_path": "batch8/D00634 Platter/IsaacSim_assets_69f61e31431507ff7c0bdd2e/IsaacSim_asset_69f61e31431507ff7c0bdd2e.usd",
+    "usd_sha256": "4a1139c942ac72c9c8f9ddc4604900f44cfaf25cd9615af7d6ab5b663cf1c792",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {},
   "units": {
@@ -86,25 +109,82 @@
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
-        0.2615441232919693,
-        0.2613726705312729,
-        0.057674374751513824
-      ]
+        0.26152800023555756,
+        0.2613240033388138,
+        0.057664998832478886
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "4a1139c942ac72c9c8f9ddc4604900f44cfaf25cd9615af7d6ab5b663cf1c792",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.6
+      "value_kg": 0.6000000238418579,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "4a1139c942ac72c9c8f9ddc4604900f44cfaf25cd9615af7d6ab5b663cf1c792",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.6000000238418579,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 55,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "4a1139c942ac72c9c8f9ddc4604900f44cfaf25cd9615af7d6ab5b663cf1c792",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 55,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "4a1139c942ac72c9c8f9ddc4604900f44cfaf25cd9615af7d6ab5b663cf1c792",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/74bb351a0e144b389528dd34da6de03525c48c60/reports/native/2026.10.13/shard-08/native-batch-002-evidence.tar.gz",
+        "sha256": "4879cc2dae3a1d34923a062ac9dc9f2eb6fc098f1b0c8d2de3da6c5f94723785",
+        "hf_commit": "74bb351a0e144b389528dd34da6de03525c48c60",
+        "size_bytes": 104298322
+      },
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "4a1139c942ac72c9c8f9ddc4604900f44cfaf25cd9615af7d6ab5b663cf1c792",
+      "supplemental_accepted": true,
+      "planned_test_count": 12,
+      "result_count": 12,
+      "passed": 11,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-13T23:11:16.867332+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "f4137ffbf5d2b6d98d38b4d24803a21964face6d0a5f64bae8e8da49674dfd89",
+      "qualification": "native-fleet-evidence/shard-08/native-batch-002/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

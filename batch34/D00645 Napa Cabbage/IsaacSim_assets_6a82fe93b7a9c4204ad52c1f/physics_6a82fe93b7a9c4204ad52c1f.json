@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.174794003367424,
-        0.16862473636865616,
-        0.07932700216770172
-      ],
       "min": [
         -0.13137300312519073,
-        0.0012557412819660385,
-        -0.09536000341176987
+        -0.07932700216770172,
+        0.0012557412819660385
+      ],
+      "max": [
+        0.174794003367424,
+        0.09536000341176987,
+        0.16862473636865616
       ],
       "size": [
         0.30616700649261475,
-        0.16736899508669012,
-        0.1746870055794716
-      ]
+        0.1746870055794716,
+        0.16736899508669012
+      ],
+      "units": "m"
     },
     "description": "D00645 Napa Cabbage",
     "name": "D00645 Napa Cabbage",
     "object_type": "rigid_bodies",
-    "total_mass": 1.5
+    "total_mass": 1.5,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00645",
   "parts": [
     {
       "bounds": {
-        "center": [
-          0.021710500121116638,
-          0.0849402388253111,
-          -0.008016500622034073
+        "min": [
+          -0.13137300312519073,
+          -0.07932700216770172,
+          0.0012557412819660385
         ],
         "max": [
           0.174794003367424,
-          0.16862473636865616,
-          0.07932700216770172
+          0.09536000341176987,
+          0.16862473636865616
         ],
-        "min": [
-          -0.13137300312519073,
-          0.0012557412819660385,
-          -0.09536000341176987
-        ]
+        "size": [
+          0.30616700649261475,
+          0.1746870055794716,
+          0.16736899508669012
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         0.021977417171001434,
@@ -67,10 +73,27 @@
         "object_name": "D00645 Napa Cabbage",
         "part_name": "D00645 Napa Cabbage"
       },
-      "volume": 0.001875
+      "volume": 0.001875,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "e93d07276a444bc814baac381bb60515a59581fb496170d8e75bf01504e19130"
+    },
+    "usd_path": "batch34/D00645 Napa Cabbage/IsaacSim_assets_6a82fe93b7a9c4204ad52c1f/IsaacSim_asset_6a82fe93b7a9c4204ad52c1f.usd",
+    "usd_sha256": "7d163d1cfdd90245f2f76a12ba5fc3724544ede252e8d33303c931c201667cf6",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -89,24 +112,81 @@
       "up_axis": "Z",
       "bounds_m": [
         0.30616700649261475,
-        0.16736899508669012,
-        0.1746870055794716
-      ]
+        0.1746870055794716,
+        0.16736899508669012
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "7d163d1cfdd90245f2f76a12ba5fc3724544ede252e8d33303c931c201667cf6",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 1.5
+      "value_kg": 1.5,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "7d163d1cfdd90245f2f76a12ba5fc3724544ede252e8d33303c931c201667cf6",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 1.5,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 9,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "7d163d1cfdd90245f2f76a12ba5fc3724544ede252e8d33303c931c201667cf6",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 9,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "7d163d1cfdd90245f2f76a12ba5fc3724544ede252e8d33303c931c201667cf6",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/ea7439d1651ebacdd5ba579aa52401cee7f227ff/reports/native/2026.10.13/shard-05/native-batch-002-evidence.tar.gz",
+        "sha256": "7545cfa390c2b427470d04390b015cf59c952aabfc9d7625878671b3e604a61b",
+        "hf_commit": "ea7439d1651ebacdd5ba579aa52401cee7f227ff",
+        "size_bytes": 104555482
+      },
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "7d163d1cfdd90245f2f76a12ba5fc3724544ede252e8d33303c931c201667cf6",
+      "supplemental_accepted": true,
+      "planned_test_count": 12,
+      "result_count": 12,
+      "passed": 11,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-13T23:10:01.714974+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "9fe1d846473ab059025cde0c62b822611a3fdf3269970aa28067ecaaa9e40730",
+      "qualification": "native-fleet-evidence/shard-05/native-batch-002/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

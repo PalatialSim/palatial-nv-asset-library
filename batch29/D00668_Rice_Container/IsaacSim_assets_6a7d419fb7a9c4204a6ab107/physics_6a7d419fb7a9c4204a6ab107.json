@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 2,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.11553261933788311,
-        0.2898446854298133,
-        0.11640752425661605
-      ],
       "min": [
-        -0.1151568181372069,
-        0.0012466074622352608,
-        -0.11763469318078895
+        -0.11507192916083714,
+        -0.1163316900810286,
+        0.0012466074622352608
+      ],
+      "max": [
+        0.11528349547236072,
+        0.11740120981478977,
+        0.28899438815118267
       ],
       "size": [
-        0.23068943747509002,
-        0.288598077967578,
-        0.234042217437405
-      ]
+        0.23035542463319786,
+        0.23373289989581836,
+        0.2877477806889474
+      ],
+      "units": "m"
     },
     "description": "D00668 Rice_Container",
     "name": "D00668 Rice_Container",
     "object_type": "rigid_bodies",
-    "total_mass": 2.3
+    "total_mass": 2.299999952316284,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00668",
   "parts": [
     {
       "bounds": {
-        "center": [
-          0.0003131403209408745,
-          0.11828460850301781,
-          -0.0006335594753181795
+        "min": [
+          -0.11462736142857466,
+          -0.11593743850789906,
+          0.0012466074622352608
         ],
         "max": [
           0.11525364207045641,
-          0.23532260954380035,
-          0.11593743850789906
+          0.11720455745853542,
+          0.23532260954380035
         ],
-        "min": [
-          -0.11462736142857466,
-          0.0012466074622352608,
-          -0.11720455745853542
-        ]
+        "size": [
+          0.22988100349903107,
+          0.23314199596643448,
+          0.2340760020815651
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         -0.000204892159672454,
@@ -59,7 +65,7 @@
         0.02040131390094757,
         0.02186269871890545
       ],
-      "mass": 1.8,
+      "mass": 1.7999999523162842,
       "material": "ceramic_or_glass",
       "name": "D00668 Rice_Container",
       "physics_type": "rigid",
@@ -67,25 +73,28 @@
         "object_name": "D00668 Rice_Container",
         "part_name": "D00668 Rice_Container"
       },
-      "volume": 0.0007499999801317851
+      "volume": 0.0007499999801317851,
+      "source_prim_path": "/World/textured_mesh_6a7d419fb7a9c4204a6ab107/part_0",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     },
     {
       "bounds": {
-        "center": [
-          0.0001879006003381034,
-          0.26158399507548175,
-          -0.0006135844620864528
+        "min": [
+          -0.11507192916083714,
+          -0.1163316900810286,
+          0.2342203644040907
         ],
         "max": [
-          0.11553261933788311,
-          0.2898446854298133,
-          0.11640752425661605
+          0.11528349547236072,
+          0.11740120981478977,
+          0.28899438815118267
         ],
-        "min": [
-          -0.1151568181372069,
-          0.23332330472115018,
-          -0.11763469318078895
-        ]
+        "size": [
+          0.23035542463319786,
+          0.23373289989581836,
+          0.05477402374709198
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         0.0002785639662761241,
@@ -108,10 +117,27 @@
         "object_name": "D00668 Rice_Container",
         "part_name": "D00668 Rice_Container"
       },
-      "volume": 0.00020833333333333335
+      "volume": 0.00020833333333333335,
+      "source_prim_path": "/World/textured_mesh_6a7d419fb7a9c4204a6ab107/part_1",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "895479ec1bdb9d9497335ceef300c4fd2707cd6ead01e85e66ada2d559458a57"
+    },
+    "usd_path": "batch29/D00668_Rice_Container/IsaacSim_assets_6a7d419fb7a9c4204a6ab107/IsaacSim_asset_6a7d419fb7a9c4204a6ab107.usd",
+    "usd_sha256": "e9f4857b4f4e1714e482f45e07ea5bee0ef3fd5d06557f69cfc0d2bb4e76e44e",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -129,25 +155,82 @@
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
-        0.23068943747509002,
-        0.288598077967578,
-        0.234042217437405
-      ]
+        0.23035542463319786,
+        0.23373289989581836,
+        0.2877477806889474
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "e9f4857b4f4e1714e482f45e07ea5bee0ef3fd5d06557f69cfc0d2bb4e76e44e",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 2.3
+      "value_kg": 2.299999952316284,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "e9f4857b4f4e1714e482f45e07ea5bee0ef3fd5d06557f69cfc0d2bb4e76e44e",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 2.299999952316284,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 2
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 20,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "e9f4857b4f4e1714e482f45e07ea5bee0ef3fd5d06557f69cfc0d2bb4e76e44e",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 20,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "e9f4857b4f4e1714e482f45e07ea5bee0ef3fd5d06557f69cfc0d2bb4e76e44e",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/74bb351a0e144b389528dd34da6de03525c48c60/reports/native/2026.10.13/shard-08/native-batch-002-evidence.tar.gz",
+        "sha256": "4879cc2dae3a1d34923a062ac9dc9f2eb6fc098f1b0c8d2de3da6c5f94723785",
+        "hf_commit": "74bb351a0e144b389528dd34da6de03525c48c60",
+        "size_bytes": 104298322
+      },
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "e9f4857b4f4e1714e482f45e07ea5bee0ef3fd5d06557f69cfc0d2bb4e76e44e",
+      "supplemental_accepted": true,
+      "planned_test_count": 14,
+      "result_count": 14,
+      "passed": 11,
+      "skipped": 3,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-13T23:11:17.985920+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "36c967bdb7664684432f5b9e817d17e08df17f0d3c01bc04910805dc624842a9",
+      "qualification": "native-fleet-evidence/shard-08/native-batch-002/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

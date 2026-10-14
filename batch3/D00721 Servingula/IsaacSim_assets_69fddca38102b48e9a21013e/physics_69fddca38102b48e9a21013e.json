@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.04159219190478325,
-        0.03896211460232735,
-        0.14031237363815308
-      ],
       "min": [
-        -0.041815243661403656,
-        0.0,
-        -0.1862703412771225
+        -0.041815001517534256,
+        -0.14027799665927887,
+        1.2000000424450263e-05
+      ],
+      "max": [
+        0.04158499836921692,
+        0.18630899488925934,
+        0.03897000104188919
       ],
       "size": [
-        0.0834074355661869,
-        0.03896211460232735,
-        0.3265827149152756
-      ]
+        0.08339999988675117,
+        0.3265869915485382,
+        0.03895800104146474
+      ],
+      "units": "m"
     },
     "description": "A tarnished copper ladle with a shallow rounded bowl, long narrow curved handle, and decorative looped end. The surface is metallic rose-brown with visible patina, scratches, and worn areas.",
     "name": "D00721 Copper Ladle",
     "object_type": "rigid_bodies",
-    "total_mass": 0.16
+    "total_mass": 0.1599999964237213,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00721",
   "parts": [
     {
       "bounds": {
-        "center": [
-          -0.00016279961836459676,
-          0.021479938612362828,
-          0.02198239627867531
+        "min": [
+          -0.041815001517534256,
+          -0.14027799665927887,
+          1.2000000424450263e-05
         ],
         "max": [
-          0.04159219190478325,
-          0.03896211460232735,
-          0.14031237363815308
+          0.04158499836921692,
+          0.18630899488925934,
+          0.03897000104188919
         ],
-        "min": [
-          -0.041815243661403656,
-          0.0,
-          -0.1862703412771225
-        ]
+        "size": [
+          0.08339999988675117,
+          0.3265869915485382,
+          0.03895800104146474
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         2.9697020462547395e-05,
@@ -59,7 +65,7 @@
         0.0018109899442398493,
         0.0018404689177658191
       ],
-      "mass": 0.16,
+      "mass": 0.1599999964237213,
       "material": "tarnished_copper_bronze_metal",
       "name": "D00721 Servingula",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00721 Servingula",
         "part_name": "D00721 Servingula"
       },
-      "volume": 4.8778846394528804e-05
+      "volume": 4.8778846394528804e-05,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "72eaeae684a60a7a062be3341da385a6bce158a63f5e630d5a73bdcc7d66525a"
+    },
+    "usd_path": "batch3/D00721 Servingula/IsaacSim_assets_69fddca38102b48e9a21013e/IsaacSim_asset_69fddca38102b48e9a21013e.usd",
+    "usd_sha256": "7991d4145e05cbc1e00420d9dc982123bf28ae70b17da9cdb248eeef42b906e6",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {},
   "units": {
@@ -86,25 +109,82 @@
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
-        0.0834074355661869,
-        0.03896211460232735,
-        0.3265827149152756
-      ]
+        0.08339999988675117,
+        0.3265869915485382,
+        0.03895800104146474
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "7991d4145e05cbc1e00420d9dc982123bf28ae70b17da9cdb248eeef42b906e6",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.16
+      "value_kg": 0.1599999964237213,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "7991d4145e05cbc1e00420d9dc982123bf28ae70b17da9cdb248eeef42b906e6",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.1599999964237213,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 15,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "7991d4145e05cbc1e00420d9dc982123bf28ae70b17da9cdb248eeef42b906e6",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 15,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "7991d4145e05cbc1e00420d9dc982123bf28ae70b17da9cdb248eeef42b906e6",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/9e1220ab39d1b75a24dc3df97e1aace408dc7e37/reports/native/2026.10.13/shard-06/native-batch-003-evidence.tar.gz",
+        "sha256": "0b3f267ea5bf1b6375f8e73ed11ae4c7184f4ea200038b7ee090eaa968653e68",
+        "hf_commit": "9e1220ab39d1b75a24dc3df97e1aace408dc7e37",
+        "size_bytes": 109195181
+      },
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "7991d4145e05cbc1e00420d9dc982123bf28ae70b17da9cdb248eeef42b906e6",
+      "supplemental_accepted": true,
+      "planned_test_count": 12,
+      "result_count": 12,
+      "passed": 11,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-14T00:21:53.390793+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "c6abd0e3b8dcd81aa4da8e3ef4894762c4a7534b527ea2ef899dba4db2962072",
+      "qualification": "native-fleet-evidence/shard-06/native-batch-003/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

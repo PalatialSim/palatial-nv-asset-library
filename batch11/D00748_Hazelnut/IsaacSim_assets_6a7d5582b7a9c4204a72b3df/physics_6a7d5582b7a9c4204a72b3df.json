@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.0086899995803833,
-        0.01605900004506111,
-        0.008108999580144882
-      ],
       "min": [
         -0.008612999692559242,
-        7.405187738569223e-20,
-        -0.009517000056803226
+        -0.008108999580144882,
+        7.405187738569223e-20
+      ],
+      "max": [
+        0.0086899995803833,
+        0.009517000056803226,
+        0.01605900004506111
       ],
       "size": [
         0.017302999272942543,
-        0.01605900004506111,
-        0.01762599963694811
-      ]
+        0.01762599963694811,
+        0.01605900004506111
+      ],
+      "units": "m"
     },
     "description": "D00748 Hazelnut",
     "name": "D00748 Hazelnut",
     "object_type": "rigid_bodies",
-    "total_mass": 0.002
+    "total_mass": 0.0020000000949949026,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00748",
   "parts": [
     {
       "bounds": {
-        "center": [
-          3.8499943912029266e-05,
-          0.008029500022530556,
-          -0.0007040002383291721
+        "min": [
+          -0.008612999692559242,
+          -0.008108999580144882,
+          7.405187738569223e-20
         ],
         "max": [
           0.0086899995803833,
-          0.01605900004506111,
-          0.008108999580144882
+          0.009517000056803226,
+          0.01605900004506111
         ],
-        "min": [
-          -0.008612999692559242,
-          7.405187738569223e-20,
-          -0.009517000056803226
-        ]
+        "size": [
+          0.017302999272942543,
+          0.01762599963694811,
+          0.01605900004506111
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         5.757569851994049e-06,
@@ -59,7 +65,7 @@
         5.930067814574613e-08,
         6.431397281403406e-08
       ],
-      "mass": 0.002,
+      "mass": 0.0020000000949949026,
       "material": "wood",
       "name": "D00748 Hazelnut",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00748 Hazelnut",
         "part_name": "D00748 Hazelnut"
       },
-      "volume": 3.333333491658171e-06
+      "volume": 3.333333491658171e-06,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "4a825c0cf74650462ceab02cedfc62d3be5c36a8e433f3fa577e3f79af866110"
+    },
+    "usd_path": "batch11/D00748_Hazelnut/IsaacSim_assets_6a7d5582b7a9c4204a72b3df/IsaacSim_asset_6a7d5582b7a9c4204a72b3df.usd",
+    "usd_sha256": "a6d3c6afbf1b852a0564a9660ad83b44495efbb567844e7523fd5c7ed2cf32e3",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -89,24 +112,95 @@
       "up_axis": "Z",
       "bounds_m": [
         0.017302999272942543,
-        0.01605900004506111,
-        0.01762599963694811
-      ]
+        0.01762599963694811,
+        0.01605900004506111
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "a6d3c6afbf1b852a0564a9660ad83b44495efbb567844e7523fd5c7ed2cf32e3",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.002
+      "value_kg": 0.0020000000949949026,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "a6d3c6afbf1b852a0564a9660ad83b44495efbb567844e7523fd5c7ed2cf32e3",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.0020000000949949026,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 1,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "a6d3c6afbf1b852a0564a9660ad83b44495efbb567844e7523fd5c7ed2cf32e3",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 1,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "a6d3c6afbf1b852a0564a9660ad83b44495efbb567844e7523fd5c7ed2cf32e3",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/649b7656d406a9f07b590a5e425ba02c985b37fc/reports/native/2026.10.13/shard-08/native-batch-003-evidence.tar.gz",
+        "sha256": "367e916eed6bdba61446d3dd623dfd533f25478cd8d23938633d7d1efd0ac2ae",
+        "hf_commit": "649b7656d406a9f07b590a5e425ba02c985b37fc",
+        "size_bytes": 104752869
+      },
+      "status": "completed_with_tool_findings",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "a6d3c6afbf1b852a0564a9660ad83b44495efbb567844e7523fd5c7ed2cf32e3",
+      "supplemental_accepted": true,
+      "planned_test_count": 12,
+      "result_count": 12,
+      "passed": 10,
+      "skipped": 1,
+      "failed": 1,
+      "issues": [
+        "presence:fail"
+      ],
+      "warnings": [],
+      "completed_at": "2026-10-13T23:34:30.544870+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "f5308537af9943198e6a1663890c00f90700a50aa701dc45eee026fecb143da0",
+      "tool_findings": {
+        "certificate_path": "tool-finding-certificates/D00748.json",
+        "certificate_sha256": "de686a8e4b29e7119b9fb813db83ae7edc2a1e9675befa850e45fbe085777916",
+        "raw_benchmark_status": "failed",
+        "failed_tests": [
+          "presence"
+        ],
+        "reason": "The SDK's 0.1 m camera-axis minimum underframes this small or thin prop. The original orange visibility-toggle captures visibly contain the asset; semantic segmentation, material rendering, all physics and independent native thumbnail checks pass. The raw presence failure remains for NVIDIA review.",
+        "NVIDIA_raw_results_modified": false,
+        "requires_NVIDIA_review": true,
+        "release_certificate": "reports/releases/2026.10.13/tool-findings/D00748.json"
+      },
+      "qualification": "native-fleet-evidence/shard-08/native-batch-003/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

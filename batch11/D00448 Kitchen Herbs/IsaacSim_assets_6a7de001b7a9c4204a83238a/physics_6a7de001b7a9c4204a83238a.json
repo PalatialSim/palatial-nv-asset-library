@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.11725299805402756,
-        0.13338391482830048,
-        0.11776000261306763
-      ],
       "min": [
         -0.11786600202322006,
-        0.0002879193052649498,
-        -0.118197001516819
+        -0.11776000261306763,
+        0.0002879193052649498
+      ],
+      "max": [
+        0.11725299805402756,
+        0.118197001516819,
+        0.13338391482830048
       ],
       "size": [
         0.23511900007724762,
-        0.13309599552303553,
-        0.23595700412988663
-      ]
+        0.23595700412988663,
+        0.13309599552303553
+      ],
+      "units": "m"
     },
     "description": "D00448 Kitchen Herbs",
     "name": "D00448 Kitchen Herbs",
     "object_type": "rigid_bodies",
-    "total_mass": 0.05
+    "total_mass": 0.05000000074505806,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00448",
   "parts": [
     {
       "bounds": {
-        "center": [
-          -0.00030650198459625244,
-          0.06683591706678271,
-          -0.00021849945187568665
+        "min": [
+          -0.11786600202322006,
+          -0.11776000261306763,
+          0.0002879193052649498
         ],
         "max": [
           0.11725299805402756,
-          0.13338391482830048,
-          0.11776000261306763
+          0.118197001516819,
+          0.13338391482830048
         ],
-        "min": [
-          -0.11786600202322006,
-          0.0002879193052649498,
-          -0.118197001516819
-        ]
+        "size": [
+          0.23511900007724762,
+          0.23595700412988663,
+          0.13309599552303553
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         0.009047736413776875,
@@ -59,7 +65,7 @@
         0.00015580446051899344,
         0.0002225073694717139
       ],
-      "mass": 0.05,
+      "mass": 0.05000000074505806,
       "material": "foam_or_hollow",
       "name": "D00448 Kitchen Herbs",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00448 Kitchen Herbs",
         "part_name": "D00448 Kitchen Herbs"
       },
-      "volume": 0.0003501400537571108
+      "volume": 0.0003501400537571108,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "87286e4b9adc0cb2fb20b1c97f2c753082631b3c8b9a37e51558b445be21faf8"
+    },
+    "usd_path": "batch11/D00448 Kitchen Herbs/IsaacSim_assets_6a7de001b7a9c4204a83238a/IsaacSim_asset_6a7de001b7a9c4204a83238a.usd",
+    "usd_sha256": "b89f0cabded7c7c00d86b8d53f545f4db1b8e48c43b94327a95b3dafd6398c80",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -89,24 +112,95 @@
       "up_axis": "Z",
       "bounds_m": [
         0.23511900007724762,
-        0.13309599552303553,
-        0.23595700412988663
-      ]
+        0.23595700412988663,
+        0.13309599552303553
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "b89f0cabded7c7c00d86b8d53f545f4db1b8e48c43b94327a95b3dafd6398c80",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.05
+      "value_kg": 0.05000000074505806,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "b89f0cabded7c7c00d86b8d53f545f4db1b8e48c43b94327a95b3dafd6398c80",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.05000000074505806,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 128,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "b89f0cabded7c7c00d86b8d53f545f4db1b8e48c43b94327a95b3dafd6398c80",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 128,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "b89f0cabded7c7c00d86b8d53f545f4db1b8e48c43b94327a95b3dafd6398c80",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/775fb2d52df92ce4d91cd2ef1a7bff2d0392614e/reports/native/2026.10.13/shard-06/native-batch-001-evidence.tar.gz",
+        "sha256": "662fa7295f7f10ef15aeb05cd103757c982fb863c0bd8c7bf844103762dc988d",
+        "hf_commit": "775fb2d52df92ce4d91cd2ef1a7bff2d0392614e",
+        "size_bytes": 109295261
+      },
+      "status": "completed_with_tool_findings",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "b89f0cabded7c7c00d86b8d53f545f4db1b8e48c43b94327a95b3dafd6398c80",
+      "supplemental_accepted": true,
+      "planned_test_count": 12,
+      "result_count": 12,
+      "passed": 10,
+      "skipped": 1,
+      "failed": 1,
+      "issues": [
+        "slope_drop:fail"
+      ],
+      "warnings": [],
+      "completed_at": "2026-10-13T23:09:00.174307+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "b1f6715d17124af9a41a9fdcfca7afcfa5af5a9f8efbbb0de79d1a7c6ec2d48b",
+      "tool_findings": {
+        "certificate_path": "tool-finding-certificates/D00448.json",
+        "certificate_sha256": "c566791692d2fd606d78f00fe61938a3a0c1c49504c5eaf68a54d76af74a0852",
+        "raw_benchmark_status": "failed",
+        "failed_tests": [
+          "slope_drop"
+        ],
+        "reason": "The SDK conservative world bounds extend through the floor while live visible and collider mesh vertices remain above its penetration limit. Both complete independent ground and slope simulations pass with the unchanged SDK simulation parameters and thresholds, including stable ground settling and post-slide observation. Raw SDK physics failures remain for NVIDIA review.",
+        "NVIDIA_raw_results_modified": false,
+        "requires_NVIDIA_review": true,
+        "release_certificate": "reports/releases/2026.10.13/tool-findings/D00448.json"
+      },
+      "qualification": "native-fleet-evidence/shard-06/native-batch-001/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

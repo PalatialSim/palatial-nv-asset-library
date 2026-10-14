@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.15721799433231354,
-        0.19642899930477142,
-        0.05125772953033447
-      ],
       "min": [
         -0.15556100010871887,
         -0.19511200487613678,
         0.0021137299481779337
       ],
+      "max": [
+        0.15721799433231354,
+        0.19642899930477142,
+        0.05125772953033447
+      ],
       "size": [
         0.3127789944410324,
         0.3915410041809082,
         0.04914399958215654
-      ]
+      ],
+      "units": "m"
     },
     "description": "D00413 Cutlery Tray",
     "name": "D00413 Cutlery Tray",
     "object_type": "rigid_bodies",
-    "total_mass": 0.73
+    "total_mass": 0.7300000190734863,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00413",
   "parts": [
     {
       "bounds": {
-        "center": [
-          0.0008284971117973328,
-          0.0006584972143173218,
-          0.026685729739256203
+        "min": [
+          -0.15556100010871887,
+          -0.19511200487613678,
+          0.0021137299481779337
         ],
         "max": [
           0.15721799433231354,
           0.19642899930477142,
           0.05125772953033447
         ],
-        "min": [
-          -0.15556100010871887,
-          -0.19511200487613678,
-          0.0021137299481779337
-        ]
+        "size": [
+          0.3127789944410324,
+          0.3915410041809082,
+          0.04914399958215654
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         0.0008455361821688712,
@@ -59,7 +65,7 @@
         0.009423966519534588,
         0.015190985053777695
       ],
-      "mass": 0.73,
+      "mass": 0.7300000190734863,
       "material": "wood",
       "name": "D00413 Cutlery Tray",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00413 Cutlery Tray",
         "part_name": "D00413 Cutlery Tray"
       },
-      "volume": 0.0011230769524207481
+      "volume": 0.0011230769524207481,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "b86599d299050d0ee2a4e3043b10a4debcbf61efb023eb4a48853e3ccf6807df"
+    },
+    "usd_path": "batch25/D00413 Cutlery Tray/IsaacSim_assets_6a754d1d92349ccf311c2ebb/IsaacSim_asset_6a754d1d92349ccf311c2ebb.usd",
+    "usd_sha256": "6679263fa8946aca6ef44d8b53aabde2265c0266006edd98b79ec9d5b1197574",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -91,22 +114,79 @@
         0.3127789944410324,
         0.3915410041809082,
         0.04914399958215654
-      ]
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "6679263fa8946aca6ef44d8b53aabde2265c0266006edd98b79ec9d5b1197574",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.73
+      "value_kg": 0.7300000190734863,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "6679263fa8946aca6ef44d8b53aabde2265c0266006edd98b79ec9d5b1197574",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.7300000190734863,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 40,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "6679263fa8946aca6ef44d8b53aabde2265c0266006edd98b79ec9d5b1197574",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 40,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "6679263fa8946aca6ef44d8b53aabde2265c0266006edd98b79ec9d5b1197574",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/c59b7a1bc0f60905418f8c5e5dea984eeef52d1e/reports/native/2026.10.13/shard-11/native-batch-001-evidence.tar.gz",
+        "sha256": "ec24a21153e50eef6a5febc125bbf9e5d903136eeae683cff637447566155ebf",
+        "hf_commit": "c59b7a1bc0f60905418f8c5e5dea984eeef52d1e",
+        "size_bytes": 114767810
+      },
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "6679263fa8946aca6ef44d8b53aabde2265c0266006edd98b79ec9d5b1197574",
+      "supplemental_accepted": true,
+      "planned_test_count": 12,
+      "result_count": 12,
+      "passed": 11,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-13T22:36:02.439598+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "78ba9eaba9651ccbaa201eac5fed5632b8e33645d18bdb2da3918e0313d48506",
+      "qualification": "native-fleet-evidence/shard-11/native-batch-001/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.03985600173473358,
-        0.040196001529693604,
-        0.19395646452903748
-      ],
       "min": [
         -0.040151000022888184,
         -0.039820000529289246,
         0.000980466604232788
       ],
+      "max": [
+        0.03985600173473358,
+        0.040196001529693604,
+        0.19395646452903748
+      ],
       "size": [
         0.08000700175762177,
         0.08001600205898285,
         0.1929759979248047
-      ]
+      ],
+      "units": "m"
     },
     "description": "D00875 BBQ Sauce Bottle",
     "name": "D00875 BBQ Sauce Bottle",
     "object_type": "rigid_bodies",
-    "total_mass": 1.2
+    "total_mass": 1.2000000476837158,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00875",
   "parts": [
     {
       "bounds": {
-        "center": [
-          -0.00014749914407730103,
-          0.00018800050020217896,
-          0.09746846556663513
+        "min": [
+          -0.040151000022888184,
+          -0.039820000529289246,
+          0.000980466604232788
         ],
         "max": [
           0.03985600173473358,
           0.040196001529693604,
           0.19395646452903748
         ],
-        "min": [
-          -0.040151000022888184,
-          -0.039820000529289246,
-          0.000980466604232788
-        ]
+        "size": [
+          0.08000700175762177,
+          0.08001600205898285,
+          0.1929759979248047
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         -0.00015190811245702207,
@@ -59,7 +65,7 @@
         0.003360901726409793,
         0.0033610882237553596
       ],
-      "mass": 1.2,
+      "mass": 1.2000000476837158,
       "material": "ceramic",
       "name": "D00875 BBQ Sauce Bottle",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00875 BBQ Sauce Bottle",
         "part_name": "D00875 BBQ Sauce Bottle"
       },
-      "volume": 0.00048000001907348635
+      "volume": 0.00048000001907348635,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "1b3f86bb8427b011c41e79bd1a8f0f487713a753c84cd1a19f1a716db235d34b"
+    },
+    "usd_path": "batch30/D00875 BBQ Sauce Bottle/IsaacSim_assets_6a7b83a9b56a872fd77b3b9b/IsaacSim_asset_6a7b83a9b56a872fd77b3b9b.usd",
+    "usd_sha256": "793506fec882d15bef063af3e03c1fa43a0a6a930928e4b0533f6a55866042ad",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -91,22 +114,79 @@
         0.08000700175762177,
         0.08001600205898285,
         0.1929759979248047
-      ]
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "793506fec882d15bef063af3e03c1fa43a0a6a930928e4b0533f6a55866042ad",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 1.2
+      "value_kg": 1.2000000476837158,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "793506fec882d15bef063af3e03c1fa43a0a6a930928e4b0533f6a55866042ad",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 1.2000000476837158,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 2,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "793506fec882d15bef063af3e03c1fa43a0a6a930928e4b0533f6a55866042ad",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 2,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "793506fec882d15bef063af3e03c1fa43a0a6a930928e4b0533f6a55866042ad",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/9e1220ab39d1b75a24dc3df97e1aace408dc7e37/reports/native/2026.10.13/shard-06/native-batch-003-evidence.tar.gz",
+        "sha256": "0b3f267ea5bf1b6375f8e73ed11ae4c7184f4ea200038b7ee090eaa968653e68",
+        "hf_commit": "9e1220ab39d1b75a24dc3df97e1aace408dc7e37",
+        "size_bytes": 109195181
+      },
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "793506fec882d15bef063af3e03c1fa43a0a6a930928e4b0533f6a55866042ad",
+      "supplemental_accepted": true,
+      "planned_test_count": 12,
+      "result_count": 12,
+      "passed": 11,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-14T00:21:57.929466+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "ae45a81945513ae304a918ae28b65133e799951149b1a6c1ed6d1e09d2d1c53e",
+      "qualification": "native-fleet-evidence/shard-06/native-batch-003/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.14158299565315247,
-        0.143435999751091,
-        0.12560702860355377
-      ],
       "min": [
         -0.14181500673294067,
         -0.13959799706935883,
         0.001142029999755323
       ],
+      "max": [
+        0.14158299565315247,
+        0.143435999751091,
+        0.12560702860355377
+      ],
       "size": [
         0.28339800238609314,
         0.28303399682044983,
         0.12446499860379845
-      ]
+      ],
+      "units": "m"
     },
     "description": "D00323 Fruit Basket",
     "name": "D00323 Fruit Basket",
     "object_type": "rigid_bodies",
-    "total_mass": 0.34
+    "total_mass": 0.3400000035762787,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00323",
   "parts": [
     {
       "bounds": {
-        "center": [
-          -0.000116005539894104,
-          0.0019190013408660889,
-          0.06337452930165455
+        "min": [
+          -0.14181500673294067,
+          -0.13959799706935883,
+          0.001142029999755323
         ],
         "max": [
           0.14158299565315247,
           0.143435999751091,
           0.12560702860355377
         ],
-        "min": [
-          -0.14181500673294067,
-          -0.13959799706935883,
-          0.001142029999755323
-        ]
+        "size": [
+          0.28339800238609314,
+          0.28303399682044983,
+          0.12446499860379845
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         9.648080595070496e-05,
@@ -59,7 +65,7 @@
         0.001978563377633691,
         0.0029958486557006836
       ],
-      "mass": 0.34,
+      "mass": 0.3400000035762787,
       "material": "wood",
       "name": "D00323 Fruit Basket",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00323 Fruit Basket",
         "part_name": "D00323 Fruit Basket"
       },
-      "volume": 0.0006800000071525573
+      "volume": 0.0006800000071525573,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "61117f457b72e80ab009d693051ae0a705efc74381b0c2cb9633fc470fe6b896"
+    },
+    "usd_path": "batch19/D00323 Fruit Basket/IsaacSim_assets_6a7049eacb2d3efc65e3f7dd/IsaacSim_asset_6a7049eacb2d3efc65e3f7dd.usd",
+    "usd_sha256": "2db5a6910fc3904551f4ac23a15c82b1f54e070ff86c885b512baefe979e2504",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -91,22 +114,79 @@
         0.28339800238609314,
         0.28303399682044983,
         0.12446499860379845
-      ]
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "2db5a6910fc3904551f4ac23a15c82b1f54e070ff86c885b512baefe979e2504",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.34
+      "value_kg": 0.3400000035762787,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "2db5a6910fc3904551f4ac23a15c82b1f54e070ff86c885b512baefe979e2504",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.3400000035762787,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 62,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "2db5a6910fc3904551f4ac23a15c82b1f54e070ff86c885b512baefe979e2504",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 62,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "2db5a6910fc3904551f4ac23a15c82b1f54e070ff86c885b512baefe979e2504",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/6c303bc1840b001e3183f00a0c5497875ab55564/reports/native/2026.10.13/shard-08/native-batch-000-evidence.tar.gz",
+        "sha256": "17f9621d91505b005b37364e1f1206b11832010d096535640deb67b5e62103fc",
+        "hf_commit": "6c303bc1840b001e3183f00a0c5497875ab55564",
+        "size_bytes": 121173277
+      },
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "2db5a6910fc3904551f4ac23a15c82b1f54e070ff86c885b512baefe979e2504",
+      "supplemental_accepted": true,
+      "planned_test_count": 12,
+      "result_count": 12,
+      "passed": 11,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-13T22:26:55.891509+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "442089ceec6b0ad1321a8d6b4864454961f071357ac9d45d2cde7fcdf031486d",
+      "qualification": "native-fleet-evidence/shard-08/native-batch-000/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

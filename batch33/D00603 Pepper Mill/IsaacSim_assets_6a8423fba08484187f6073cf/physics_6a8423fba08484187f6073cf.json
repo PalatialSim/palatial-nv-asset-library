@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.033038001507520676,
-        0.15415959432721138,
-        0.032944001257419586
-      ],
       "min": [
         -0.03305500000715256,
-        0.0008415915071964263,
-        -0.03299599885940552
+        -0.032944001257419586,
+        0.0008415915071964263
+      ],
+      "max": [
+        0.033038001507520676,
+        0.03299599885940552,
+        0.15415959432721138
       ],
       "size": [
         0.06609300151467323,
-        0.15331800282001495,
-        0.0659400001168251
-      ]
+        0.0659400001168251,
+        0.15331800282001495
+      ],
+      "units": "m"
     },
     "description": "D00603 Pepper Mill",
     "name": "D00603 Pepper Mill",
     "object_type": "rigid_bodies",
-    "total_mass": 0.3
+    "total_mass": 0.30000001192092896,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00603",
   "parts": [
     {
       "bounds": {
-        "center": [
-          -8.499249815940857e-06,
-          0.0775005929172039,
-          -2.5998800992965698e-05
+        "min": [
+          -0.03305500000715256,
+          -0.032944001257419586,
+          0.0008415915071964263
         ],
         "max": [
           0.033038001507520676,
-          0.15415959432721138,
-          0.032944001257419586
+          0.03299599885940552,
+          0.15415959432721138
         ],
-        "min": [
-          -0.03305500000715256,
-          0.0008415915071964263,
-          -0.03299599885940552
-        ]
+        "size": [
+          0.06609300151467323,
+          0.0659400001168251,
+          0.15331800282001495
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         -1.7054822819773108e-05,
@@ -59,7 +65,7 @@
         0.0005486909649334848,
         0.0005490254843607545
       ],
-      "mass": 0.3,
+      "mass": 0.30000001192092896,
       "material": "wood",
       "name": "D00603 Pepper Mill",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00603 Pepper Mill",
         "part_name": "D00603 Pepper Mill"
       },
-      "volume": 0.0004285714456013271
+      "volume": 0.0004285714456013271,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "38cf0b71d82e37bedad18624a1a4f09f075daa4805f3b372d0e14646de0f08de"
+    },
+    "usd_path": "batch33/D00603 Pepper Mill/IsaacSim_assets_6a8423fba08484187f6073cf/IsaacSim_asset_6a8423fba08484187f6073cf.usd",
+    "usd_sha256": "2bdd47024f15fdb17c2103e1af9f06a97bfca4882b7baf69ee617f6702f7da56",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -89,24 +112,81 @@
       "up_axis": "Z",
       "bounds_m": [
         0.06609300151467323,
-        0.15331800282001495,
-        0.0659400001168251
-      ]
+        0.0659400001168251,
+        0.15331800282001495
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "2bdd47024f15fdb17c2103e1af9f06a97bfca4882b7baf69ee617f6702f7da56",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.3
+      "value_kg": 0.30000001192092896,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "2bdd47024f15fdb17c2103e1af9f06a97bfca4882b7baf69ee617f6702f7da56",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.30000001192092896,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 3,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "2bdd47024f15fdb17c2103e1af9f06a97bfca4882b7baf69ee617f6702f7da56",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 3,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "2bdd47024f15fdb17c2103e1af9f06a97bfca4882b7baf69ee617f6702f7da56",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/91674304f3637cd9acd3a987e279915e4874f7b5/reports/native/2026.10.13/shard-11/native-batch-002-evidence.tar.gz",
+        "sha256": "03113b16a23e073b36cd327ff9c13df88747df7df531d1e1b1da4038a5ee06f9",
+        "hf_commit": "91674304f3637cd9acd3a987e279915e4874f7b5",
+        "size_bytes": 109382822
+      },
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "2bdd47024f15fdb17c2103e1af9f06a97bfca4882b7baf69ee617f6702f7da56",
+      "supplemental_accepted": true,
+      "planned_test_count": 12,
+      "result_count": 12,
+      "passed": 11,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-13T22:54:40.990239+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "413ec99b2ae11c55e1bbacc7e180cc4b41f653391478d0f359dfc5ba18dc8577",
+      "qualification": "native-fleet-evidence/shard-11/native-batch-002/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

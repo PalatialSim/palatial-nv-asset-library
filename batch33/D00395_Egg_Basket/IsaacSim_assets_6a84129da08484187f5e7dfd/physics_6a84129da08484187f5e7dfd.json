@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.1246350035071373,
-        0.21737560769543052,
-        0.1171410009264946
-      ],
       "min": [
         -0.12469000369310379,
-        0.0011416103625379037,
-        -0.11717800050973892
+        -0.1171410009264946,
+        0.0011416103625379037
+      ],
+      "max": [
+        0.1246350035071373,
+        0.11717800050973892,
+        0.21737560769543052
       ],
       "size": [
         0.2493250072002411,
-        0.2162339973328926,
-        0.23431900143623352
-      ]
+        0.23431900143623352,
+        0.2162339973328926
+      ],
+      "units": "m"
     },
     "description": "D00395 Egg_Basket",
     "name": "D00395 Egg_Basket",
     "object_type": "rigid_bodies",
-    "total_mass": 0.26
+    "total_mass": 0.25999999046325684,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00395",
   "parts": [
     {
       "bounds": {
-        "center": [
-          -2.750009298324585e-05,
-          0.10925860902898421,
-          -1.8499791622161865e-05
+        "min": [
+          -0.12469000369310379,
+          -0.1171410009264946,
+          0.0011416103625379037
         ],
         "max": [
           0.1246350035071373,
-          0.21737560769543052,
-          0.1171410009264946
+          0.11717800050973892,
+          0.21737560769543052
         ],
-        "min": [
-          -0.12469000369310379,
-          0.0011416103625379037,
-          -0.11717800050973892
-        ]
+        "size": [
+          0.2493250072002411,
+          0.23431900143623352,
+          0.2162339973328926
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         -1.2570929357025307e-05,
@@ -59,7 +65,7 @@
         0.002136220457032323,
         0.0024467427283525467
       ],
-      "mass": 0.26,
+      "mass": 0.25999999046325684,
       "material": "wood",
       "name": "D00395 Egg_Basket",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00395 Egg_Basket",
         "part_name": "D00395 Egg_Basket"
       },
-      "volume": 0.0004333333174387614
+      "volume": 0.0004333333174387614,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "960486e7490408d0e617199a38531e3ccea8c5e41e33f5ac04069b598116ee54"
+    },
+    "usd_path": "batch33/D00395_Egg_Basket/IsaacSim_assets_6a84129da08484187f5e7dfd/IsaacSim_asset_6a84129da08484187f5e7dfd.usd",
+    "usd_sha256": "3c0fca15aebe211c4957c24e456b2ef9aff4c28832caa974ea16d0f146633658",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -89,24 +112,81 @@
       "up_axis": "Z",
       "bounds_m": [
         0.2493250072002411,
-        0.2162339973328926,
-        0.23431900143623352
-      ]
+        0.23431900143623352,
+        0.2162339973328926
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "3c0fca15aebe211c4957c24e456b2ef9aff4c28832caa974ea16d0f146633658",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.26
+      "value_kg": 0.25999999046325684,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "3c0fca15aebe211c4957c24e456b2ef9aff4c28832caa974ea16d0f146633658",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.25999999046325684,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 40,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "3c0fca15aebe211c4957c24e456b2ef9aff4c28832caa974ea16d0f146633658",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 40,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "3c0fca15aebe211c4957c24e456b2ef9aff4c28832caa974ea16d0f146633658",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/983ce54b21f5853ecb4e987ba832811623123ffc/reports/native/2026.10.13/shard-05/native-batch-001-evidence.tar.gz",
+        "sha256": "b2918621bcf29aeb9c3efb9e475920428e2a03eb72ccc1a277be7aea8d5e0903",
+        "hf_commit": "983ce54b21f5853ecb4e987ba832811623123ffc",
+        "size_bytes": 112679425
+      },
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "3c0fca15aebe211c4957c24e456b2ef9aff4c28832caa974ea16d0f146633658",
+      "supplemental_accepted": true,
+      "planned_test_count": 12,
+      "result_count": 12,
+      "passed": 11,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-13T22:47:31.374406+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "50410071ac02a4f29e9ba554143128905c181c3bd35ea6be54c7466da522d86d",
+      "qualification": "native-fleet-evidence/shard-05/native-batch-001/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

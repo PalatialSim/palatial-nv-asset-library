@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 2,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.08199945644922506,
-        0.21970795766699072,
-        0.08220693803010996
-      ],
       "min": [
         -0.08256150645600836,
-        -6.039044819772243e-08,
-        -0.0830835442757234
+        -0.08220693803010996,
+        -6.039044819772243e-08
+      ],
+      "max": [
+        0.08199945644922506,
+        0.0830835442757234,
+        0.21970795766699072
       ],
       "size": [
         0.16456096290523342,
-        0.21970801805743892,
-        0.16529048230583337
-      ]
+        0.16529048230583337,
+        0.21970801805743892
+      ],
+      "units": "m"
     },
     "description": "Cereal Jar",
     "name": "part_0",
     "object_type": "rigid_bodies",
-    "total_mass": 1.300000011920929
+    "total_mass": 1.300000011920929,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00121",
   "parts": [
     {
       "bounds": {
-        "center": [
-          -0.0002627239591674879,
-          0.08648694267321844,
-          -0.0006415437674149871
+        "min": [
+          -0.08220072249241639,
+          -0.08180045674089342,
+          -6.039044819772243e-08
         ],
         "max": [
           0.08167527457408141,
-          0.17297394573688507,
-          0.08180045674089342
+          0.0830835442757234,
+          0.17297394573688507
         ],
-        "min": [
-          -0.08220072249241639,
-          -6.039044819772243e-08,
-          -0.0830835442757234
-        ]
+        "size": [
+          0.1638759970664978,
+          0.16488400101661682,
+          0.17297400612733327
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         -0.0002097308315569535,
@@ -65,25 +71,28 @@
       "source": {
         "object_name": "World",
         "part_name": "part_0"
-      }
+      },
+      "source_prim_path": "/World/textured_mesh_6a882c2fe156890f3ebb623c/part_0",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     },
     {
       "bounds": {
-        "center": [
-          -0.00028102500339165226,
-          0.19571730243275012,
-          -0.00042824558657505313
+        "min": [
+          -0.08256150645600836,
+          -0.08220693803010996,
+          0.17172664719850952
         ],
         "max": [
           0.08199945644922506,
-          0.21970795766699072,
-          0.08220693803010996
+          0.08306342920326007,
+          0.21970795766699072
         ],
-        "min": [
-          -0.08256150645600836,
-          0.17172664719850952,
-          -0.08306342920326007
-        ]
+        "size": [
+          0.16456096290523342,
+          0.16527036723337002,
+          0.0479813104684812
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         -0.0002578682033345103,
@@ -104,10 +113,27 @@
       "source": {
         "object_name": "World",
         "part_name": "part_1"
-      }
+      },
+      "source_prim_path": "/World/textured_mesh_6a882c2fe156890f3ebb623c/part_1",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "af245edc7e06a0e2bf92442301204e0000ef84613ce8a85155574e2c1c77a6d7"
+    },
+    "usd_path": "batch39/D00121_Cereal_Jar/IsaacSim_assets_6a882c2fe156890f3ebb623c/IsaacSim_asset_6a882c2fe156890f3ebb623c.usd",
+    "usd_sha256": "4a49924562c1c956b943c02b107c5ab40c3f9685bb356bbe02e381ff26630bd4",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {},
   "units": {
@@ -124,24 +150,82 @@
       "up_axis": "Z",
       "bounds_m": [
         0.16456096290523342,
-        0.21970801805743892,
-        0.16529048230583337
-      ]
+        0.16529048230583337,
+        0.21970801805743892
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "4a49924562c1c956b943c02b107c5ab40c3f9685bb356bbe02e381ff26630bd4",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 1.300000011920929
+      "value_kg": 1.300000011920929,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "4a49924562c1c956b943c02b107c5ab40c3f9685bb356bbe02e381ff26630bd4",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 1.300000011920929,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 2
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 6,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "4a49924562c1c956b943c02b107c5ab40c3f9685bb356bbe02e381ff26630bd4",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 6,
+      "approximations": [
+        "convexDecomposition",
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "4a49924562c1c956b943c02b107c5ab40c3f9685bb356bbe02e381ff26630bd4",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/3ddf33a5daad13482bd27e0d255308a77124cadc/reports/native/2026.10.13/shard-00/native-batch-001-evidence.tar.gz",
+        "sha256": "6020f25f458fced60cc0142f7e672addb00f9eba2b22b6c4cf0a53a92152a13b",
+        "hf_commit": "3ddf33a5daad13482bd27e0d255308a77124cadc",
+        "size_bytes": 112341278
+      },
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "4a49924562c1c956b943c02b107c5ab40c3f9685bb356bbe02e381ff26630bd4",
+      "supplemental_accepted": true,
+      "planned_test_count": 14,
+      "result_count": 14,
+      "passed": 11,
+      "skipped": 3,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-13T21:38:45.031228+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "6b2b6b1b20fac11832f17971b32699ee0b85e9cfdd1f60a37d39d5435c5cb6c5",
+      "qualification": "native-fleet-evidence/shard-00/native-batch-001/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

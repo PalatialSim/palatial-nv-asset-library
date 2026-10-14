@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.05303601175546646,
-        0.16508308053016663,
-        0.03985009714961052
-      ],
       "min": [
-        -0.05421498790383339,
-        -2.9134837404853897e-06,
-        -0.03896090015769005
+        -0.05829799920320511,
+        -0.0416099987924099,
+        -7.000000096013537e-06
+      ],
+      "max": [
+        0.05687699839472771,
+        0.04035999998450279,
+        0.17276200652122498
       ],
       "size": [
-        0.10725099965929985,
-        0.1650859940139071,
-        0.07881099730730057
-      ]
+        0.11517499759793282,
+        0.08196999877691269,
+        0.172769006521321
+      ],
+      "units": "m"
     },
     "description": "A brown paper bag featuring blue and white printed graphics and a folded, sealed top.",
     "name": "D00301 Flour",
     "object_type": "rigid_bodies",
-    "total_mass": 0.326
+    "total_mass": 0.32600000500679016,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00301",
   "parts": [
     {
       "bounds": {
-        "center": [
-          -0.00042873268197208083,
-          0.08776663744836895,
-          -0.0003917697857354698
+        "min": [
+          -0.05829799920320511,
+          -0.0416099987924099,
+          -7.000000096013537e-06
         ],
         "max": [
-          0.05303601175546646,
-          0.16508308053016663,
-          0.03985009714961052
+          0.05687699839472771,
+          0.04035999998450279,
+          0.17276200652122498
         ],
-        "min": [
-          -0.05421498790383339,
-          -2.9134837404853897e-06,
-          -0.03896090015769005
-        ]
+        "size": [
+          0.11517499759793282,
+          0.08196999877691269,
+          0.172769006521321
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         -0.0007155862248820901,
@@ -59,7 +65,7 @@
         0.0008245955509201644,
         0.001001235329939107
       ],
-      "mass": 0.326,
+      "mass": 0.32600000500679016,
       "material": "paper",
       "name": "D00301 Flour",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00301 Flour",
         "part_name": "D00301 Flour"
       },
-      "volume": 0.001281712354775936
+      "volume": 0.001281712354775936,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "743c8bc47788afd64a1978513abe82e3c87f43aecc36ed7073f907ba638002de"
+    },
+    "usd_path": "batch7/D00301 Flour/IsaacSim_assets_69f2414d59057a93106007a2/IsaacSim_asset_69f2414d59057a93106007a2.usd",
+    "usd_sha256": "aa12dc7e54a2dfb34af97b02180682dafee8a18f5ea4fdf8e22be1c1eeceec47",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {},
   "units": {
@@ -86,25 +109,82 @@
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
-        0.10725099965929985,
-        0.1650859940139071,
-        0.07881099730730057
-      ]
+        0.11517499759793282,
+        0.08196999877691269,
+        0.172769006521321
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "aa12dc7e54a2dfb34af97b02180682dafee8a18f5ea4fdf8e22be1c1eeceec47",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.326
+      "value_kg": 0.32600000500679016,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "aa12dc7e54a2dfb34af97b02180682dafee8a18f5ea4fdf8e22be1c1eeceec47",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.32600000500679016,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 41,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "aa12dc7e54a2dfb34af97b02180682dafee8a18f5ea4fdf8e22be1c1eeceec47",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 41,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "aa12dc7e54a2dfb34af97b02180682dafee8a18f5ea4fdf8e22be1c1eeceec47",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/b6af153ee3d6ef46950995a7e4e332bbc19a1ce9/reports/native/2026.10.13/shard-11/native-batch-000-evidence.tar.gz",
+        "sha256": "fa9e81b9d97559625d3482a340415188c48c345bdcc8609c09090fe021db4b7d",
+        "hf_commit": "b6af153ee3d6ef46950995a7e4e332bbc19a1ce9",
+        "size_bytes": 117389653
+      },
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "aa12dc7e54a2dfb34af97b02180682dafee8a18f5ea4fdf8e22be1c1eeceec47",
+      "supplemental_accepted": true,
+      "planned_test_count": 12,
+      "result_count": 12,
+      "passed": 11,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-13T22:17:40.785720+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "193ff026a7aae8ce683ea6d1d507f368b6525b341d8b724346576011c82e1912",
+      "qualification": "native-fleet-evidence/shard-11/native-batch-000/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

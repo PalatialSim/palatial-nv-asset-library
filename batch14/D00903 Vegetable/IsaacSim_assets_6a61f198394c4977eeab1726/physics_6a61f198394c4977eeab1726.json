@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.04891228,
-        0.08826631,
-        0.0479888
-      ],
       "min": [
-        -0.07662048,
-        0.0,
-        -0.04946403
+        -0.07662200182676315,
+        -0.048020001500844955,
+        0.000564630317967385
+      ],
+      "max": [
+        0.04891299828886986,
+        0.04949599876999855,
+        0.08881362527608871
       ],
       "size": [
-        0.12553276000000002,
-        0.08826631,
-        0.09745282999999999
-      ]
+        0.125535000115633,
+        0.0975160002708435,
+        0.08824899495812133
+      ],
+      "units": "m"
     },
     "description": "A fresh head of green broccoli featuring a thick, smooth stalk and dense, textured florets. The surface presents a natural organic appearance with a slightly waxy stem finish and a clustered canopy.",
     "name": "generated reference 01",
     "object_type": "rigid_bodies",
-    "total_mass": 0.25
+    "total_mass": 0.25,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00903",
   "parts": [
     {
       "bounds": {
-        "center": [
-          0.002428855182930006,
-          0.04232285071375645,
-          0.0002212191634145184
+        "min": [
+          -0.07662200182676315,
+          -0.048020001500844955,
+          0.000564630317967385
         ],
         "max": [
-          0.04891228,
-          0.08826631,
-          0.0479888
+          0.04891299828886986,
+          0.04949599876999855,
+          0.08881362527608871
         ],
-        "min": [
-          -0.07662048,
-          0.0,
-          -0.04946403
-        ]
+        "size": [
+          0.125535000115633,
+          0.0975160002708435,
+          0.08824899495812133
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         -0.0062792671549185535,
@@ -67,10 +73,27 @@
         "object_name": "generated reference 01",
         "part_name": "generated reference 01"
       },
-      "volume": 0.00047474914893924576
+      "volume": 0.00047474914893924576,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "3d919b1dd6e2c62fe9250c1cd837c13c62e6fff3c6ddb985107e31a16930adef"
+    },
+    "usd_path": "batch14/D00903 Vegetable/IsaacSim_assets_6a61f198394c4977eeab1726/IsaacSim_asset_6a61f198394c4977eeab1726.usd",
+    "usd_sha256": "fcd65e622f648665aa0adb8fa14d876934188547318a0dd2b5759238ff61ad23",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -88,25 +111,82 @@
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
-        0.12553276000000002,
-        0.08826631,
-        0.09745282999999999
-      ]
+        0.125535000115633,
+        0.0975160002708435,
+        0.08824899495812133
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "fcd65e622f648665aa0adb8fa14d876934188547318a0dd2b5759238ff61ad23",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.25
+      "value_kg": 0.25,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "fcd65e622f648665aa0adb8fa14d876934188547318a0dd2b5759238ff61ad23",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.25,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 119,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "fcd65e622f648665aa0adb8fa14d876934188547318a0dd2b5759238ff61ad23",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 119,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "fcd65e622f648665aa0adb8fa14d876934188547318a0dd2b5759238ff61ad23",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/0a7f7588e5e775de41f4e7793b745f3c2cb25413/reports/native/2026.10.13/shard-11/native-batch-004-evidence.tar.gz",
+        "sha256": "ba6cfcdc593aafc22c0eced23e21e5fb870c0f0cb63782fff301fc92b64eee8d",
+        "hf_commit": "0a7f7588e5e775de41f4e7793b745f3c2cb25413",
+        "size_bytes": 112846168
+      },
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "fcd65e622f648665aa0adb8fa14d876934188547318a0dd2b5759238ff61ad23",
+      "supplemental_accepted": true,
+      "planned_test_count": 12,
+      "result_count": 12,
+      "passed": 11,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-13T23:39:02.920244+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "b96a7d98730deaaad5236759b9418a38e031e5b98a400bdaf9406834e4c8cdbe",
+      "qualification": "native-fleet-evidence/shard-11/native-batch-004/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

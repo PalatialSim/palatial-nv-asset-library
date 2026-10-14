@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.03982299938797951,
-        0.039861999452114105,
-        0.09724599868059158
-      ],
       "min": [
-        -0.0401340015232563,
-        -0.03955100104212761,
-        -8.399999933317304e-05
+        -0.05274700000882149,
+        -0.05288900062441826,
+        1.9999999949504854e-06
+      ],
+      "max": [
+        0.05279200151562691,
+        0.05282299965620041,
+        0.11377199739217758
       ],
       "size": [
-        0.07995700091123581,
-        0.07941300049424171,
-        0.09732999867992476
-      ]
+        0.1055390015244484,
+        0.10571200028061867,
+        0.11376999739218263
+      ],
+      "units": "m"
     },
     "description": "A round green citrus fruit with a rough, dimpled rind and scattered brown surface blemishes. It has a waxy organic peel and a small stem scar at the top.",
     "name": "D00364 Green Citrus Fruit",
     "object_type": "rigid_bodies",
-    "total_mass": 0.85
+    "total_mass": 0.8500000238418579,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00364",
   "parts": [
     {
       "bounds": {
-        "center": [
-          6.907216139387486e-05,
-          9.943202268262792e-05,
-          0.04649187135211773
+        "min": [
+          -0.05274700000882149,
+          -0.05288900062441826,
+          1.9999999949504854e-06
         ],
         "max": [
-          0.03982299938797951,
-          0.039861999452114105,
-          0.09724599868059158
+          0.05279200151562691,
+          0.05282299965620041,
+          0.11377199739217758
         ],
-        "min": [
-          -0.0401340015232563,
-          -0.03955100104212761,
-          -8.399999933317304e-05
-        ]
+        "size": [
+          0.1055390015244484,
+          0.10571200028061867,
+          0.11376999739218263
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         0.00015759529632292977,
@@ -59,7 +65,7 @@
         0.0010815718273958523,
         0.001087414103805489
       ],
-      "mass": 0.85,
+      "mass": 0.8500000238418579,
       "material": "organic_citrus_rind",
       "name": "D00364 Grapefruit Avoca",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00364 Grapefruit Avoca",
         "part_name": "D00364 Grapefruit Avoca"
       },
-      "volume": 0.0006992666566985745
+      "volume": 0.0006992666566985745,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "a0a5e05be8ed41a85c1bf2e4df9fcbd5afc3077899adc6e6eaf194f9d4de4687"
+    },
+    "usd_path": "batch3/D00364 Grapefruit Avoca/IsaacSim_assets_69f5bed6431507ff7cef84b2/IsaacSim_asset_69f5bed6431507ff7cef84b2.usd",
+    "usd_sha256": "546de7d5cf23756ca829089ebcbe1ed8a7cd1031199f6fe4cd81cef557ef3679",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {},
   "units": {
@@ -86,25 +109,82 @@
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
-        0.07995700091123581,
-        0.07941300049424171,
-        0.09732999867992476
-      ]
+        0.1055390015244484,
+        0.10571200028061867,
+        0.11376999739218263
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "546de7d5cf23756ca829089ebcbe1ed8a7cd1031199f6fe4cd81cef557ef3679",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.85
+      "value_kg": 0.8500000238418579,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "546de7d5cf23756ca829089ebcbe1ed8a7cd1031199f6fe4cd81cef557ef3679",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.8500000238418579,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 88,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "546de7d5cf23756ca829089ebcbe1ed8a7cd1031199f6fe4cd81cef557ef3679",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 88,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "546de7d5cf23756ca829089ebcbe1ed8a7cd1031199f6fe4cd81cef557ef3679",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/24b8b26e47b1fa2232272e54ddd2eea85a57692f/reports/native/2026.10.13/shard-07/native-batch-000-evidence.tar.gz",
+        "sha256": "8f4a1575d05da430986f626ccea90a3a7387c89faabc7774024d7713c04c94ce",
+        "hf_commit": "24b8b26e47b1fa2232272e54ddd2eea85a57692f",
+        "size_bytes": 104089694
+      },
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "546de7d5cf23756ca829089ebcbe1ed8a7cd1031199f6fe4cd81cef557ef3679",
+      "supplemental_accepted": true,
+      "planned_test_count": 12,
+      "result_count": 12,
+      "passed": 11,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-13T22:16:53.459822+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "57c505432f8c41cc0752f08790873d3f511572dc540d85ff07308a06343caf63",
+      "qualification": "native-fleet-evidence/shard-07/native-batch-000/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

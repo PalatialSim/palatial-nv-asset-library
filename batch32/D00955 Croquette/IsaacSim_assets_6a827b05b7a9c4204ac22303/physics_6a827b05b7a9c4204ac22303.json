@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.03992599993944168,
-        0.0387520007789135,
-        0.0236859992146492
-      ],
       "min": [
         -0.04022999852895737,
-        0.0,
-        -0.021278999745845795
+        -0.0236859992146492,
+        0.0
+      ],
+      "max": [
+        0.03992599993944168,
+        0.021278999745845795,
+        0.0387520007789135
       ],
       "size": [
         0.08015599846839905,
-        0.0387520007789135,
-        0.044964998960494995
-      ]
+        0.044964998960494995,
+        0.0387520007789135
+      ],
+      "units": "m"
     },
     "description": "D00955 Croquette",
     "name": "D00955 Croquette",
     "object_type": "rigid_bodies",
-    "total_mass": 0.05
+    "total_mass": 0.05000000074505806,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00955",
   "parts": [
     {
       "bounds": {
-        "center": [
-          -0.00015199929475784302,
-          0.01937600038945675,
-          0.0012034997344017029
+        "min": [
+          -0.04022999852895737,
+          -0.0236859992146492,
+          0.0
         ],
         "max": [
           0.03992599993944168,
-          0.0387520007789135,
-          0.0236859992146492
+          0.021278999745845795,
+          0.0387520007789135
         ],
-        "min": [
-          -0.04022999852895737,
-          0.0,
-          -0.021278999745845795
-        ]
+        "size": [
+          0.08015599846839905,
+          0.044964998960494995,
+          0.0387520007789135
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         -0.0005714377039112151,
@@ -59,7 +65,7 @@
         2.279540967720095e-05,
         2.4206918169511482e-05
       ],
-      "mass": 0.05,
+      "mass": 0.05000000074505806,
       "material": "wood",
       "name": "D00955 Croquette",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00955 Croquette",
         "part_name": "D00955 Croquette"
       },
-      "volume": 6.250000093132258e-05
+      "volume": 6.250000093132258e-05,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "d8b73f12fa61886f6fc17b71184ecc341990f99520c077a30974883eb767cac2"
+    },
+    "usd_path": "batch32/D00955 Croquette/IsaacSim_assets_6a827b05b7a9c4204ac22303/IsaacSim_asset_6a827b05b7a9c4204ac22303.usd",
+    "usd_sha256": "13ad9740a49fa177f762f88a93de91f8cb4223461f1d2a3ff7bd943bce8d1e76",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -89,24 +112,81 @@
       "up_axis": "Z",
       "bounds_m": [
         0.08015599846839905,
-        0.0387520007789135,
-        0.044964998960494995
-      ]
+        0.044964998960494995,
+        0.0387520007789135
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "13ad9740a49fa177f762f88a93de91f8cb4223461f1d2a3ff7bd943bce8d1e76",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.05
+      "value_kg": 0.05000000074505806,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "13ad9740a49fa177f762f88a93de91f8cb4223461f1d2a3ff7bd943bce8d1e76",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.05000000074505806,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 1,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "13ad9740a49fa177f762f88a93de91f8cb4223461f1d2a3ff7bd943bce8d1e76",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 1,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "13ad9740a49fa177f762f88a93de91f8cb4223461f1d2a3ff7bd943bce8d1e76",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/9757ec2bbcc281db16d517aa758f2b6202f34863/reports/native/2026.10.13/shard-09/native-batch-004-evidence.tar.gz",
+        "sha256": "2b2622e5bd1d9c3bef38540abb3830c01a7a705661fb746990b05221fb52f27a",
+        "hf_commit": "9757ec2bbcc281db16d517aa758f2b6202f34863",
+        "size_bytes": 105782113
+      },
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "13ad9740a49fa177f762f88a93de91f8cb4223461f1d2a3ff7bd943bce8d1e76",
+      "supplemental_accepted": true,
+      "planned_test_count": 12,
+      "result_count": 12,
+      "passed": 11,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-13T23:52:46.466485+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "ec13e18baa03ba86bcccd1aba9d8a19f88d3c79b73c01983b2688f3730240875",
+      "qualification": "native-fleet-evidence/shard-09/native-batch-004/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

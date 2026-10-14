@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.04425999894738197,
-        0.10107699781656265,
-        0.29569897055625916
-      ],
       "min": [
         -0.043125998228788376,
         -0.10032899677753448,
         0.0012829701881855726
       ],
+      "max": [
+        0.04425999894738197,
+        0.10107699781656265,
+        0.29569897055625916
+      ],
       "size": [
         0.08738599717617035,
         0.20140599459409714,
         0.2944160003680736
-      ]
+      ],
+      "units": "m"
     },
     "description": "D00120 Cereal Box",
     "name": "D00120 Cereal Box",
     "object_type": "rigid_bodies",
-    "total_mass": 0.55
+    "total_mass": 0.550000011920929,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00120",
   "parts": [
     {
       "bounds": {
-        "center": [
-          0.0005670003592967987,
-          0.00037400051951408386,
-          0.14849097037222236
+        "min": [
+          -0.043125998228788376,
+          -0.10032899677753448,
+          0.0012829701881855726
         ],
         "max": [
           0.04425999894738197,
           0.10107699781656265,
           0.29569897055625916
         ],
-        "min": [
-          -0.043125998228788376,
-          -0.10032899677753448,
-          0.0012829701881855726
-        ]
+        "size": [
+          0.08738599717617035,
+          0.20140599459409714,
+          0.2944160003680736
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         0.0005701715126633644,
@@ -59,7 +65,7 @@
         0.004282454028725624,
         0.005790831055492163
       ],
-      "mass": 0.55,
+      "mass": 0.550000011920929,
       "material": "generic",
       "name": "D00120 Cereal Box",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00120 Cereal Box",
         "part_name": "D00120 Cereal Box"
       },
-      "volume": 0.004198473373442205
+      "volume": 0.004198473373442205,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "ea46198d09a92884e9aca20d7fc187976a8943d9d47f2b609927970734d124a3"
+    },
+    "usd_path": "batch19/D00120 Cereal Box/IsaacSim_assets_6a6ffce9cb2d3efc65da374c/IsaacSim_asset_6a6ffce9cb2d3efc65da374c.usd",
+    "usd_sha256": "752a455cf313bb537d62b760ee9ec8050f4f24e9282d82412e437ac95eb465f1",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -91,22 +114,79 @@
         0.08738599717617035,
         0.20140599459409714,
         0.2944160003680736
-      ]
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "752a455cf313bb537d62b760ee9ec8050f4f24e9282d82412e437ac95eb465f1",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.55
+      "value_kg": 0.550000011920929,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "752a455cf313bb537d62b760ee9ec8050f4f24e9282d82412e437ac95eb465f1",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.550000011920929,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 1,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "752a455cf313bb537d62b760ee9ec8050f4f24e9282d82412e437ac95eb465f1",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 1,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "752a455cf313bb537d62b760ee9ec8050f4f24e9282d82412e437ac95eb465f1",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/7dea1d64f1cd77431a133e0cdb8f83d64a43ccb8/reports/native/2026.10.13/shard-03/native-batch-001-evidence.tar.gz",
+        "sha256": "eb8de1e2dfdea963fcd37b1dd4a6f068ff3897e9757f2fab44b8171788e16da0",
+        "hf_commit": "7dea1d64f1cd77431a133e0cdb8f83d64a43ccb8",
+        "size_bytes": 109371639
+      },
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "752a455cf313bb537d62b760ee9ec8050f4f24e9282d82412e437ac95eb465f1",
+      "supplemental_accepted": true,
+      "planned_test_count": 12,
+      "result_count": 12,
+      "passed": 11,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-13T21:36:01.579925+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "7d81be252e7d961cff0b6491a6bbf8b274acf7b40dde47c023b7470f7592de54",
+      "qualification": "native-fleet-evidence/shard-03/native-batch-001/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

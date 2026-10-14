@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.173483997583389,
-        0.04891100153327,
-        0.112812876729474
-      ],
       "min": [
-        -0.209049999713898,
-        -0.057463001459837,
-        0.001027875375182
+        -0.2090499997138977,
+        -0.05746300145983696,
+        0.001027875375182308
+      ],
+      "max": [
+        0.17348399758338928,
+        0.04891100153326988,
+        0.11281287672947435
       ],
       "size": [
         0.382533997297287,
-        0.10637400299310701,
-        0.11178500135429201
-      ]
+        0.10637400299310684,
+        0.11178500135429204
+      ],
+      "units": "m"
     },
     "description": "A fresh green onion featuring a white bulb with fine fibrous roots at the base, transitioning into long, tubular green leaves.",
     "name": "D00796 Spring Onion",
     "object_type": "rigid_bodies",
-    "total_mass": 0.02
+    "total_mass": 0.019999999552965164,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00796",
   "parts": [
     {
       "bounds": {
-        "center": [
-          -0.056017283886358,
-          -0.00040682334187,
-          0.060167874065486
+        "min": [
+          -0.2090499997138977,
+          -0.05746300145983696,
+          0.001027875375182308
         ],
         "max": [
-          0.173483997583389,
-          0.04891100153327,
-          0.112812876729474
+          0.17348399758338928,
+          0.04891100153326988,
+          0.11281287672947435
         ],
-        "min": [
-          -0.209049999713898,
-          -0.057463001459837,
-          0.001027875375182
-        ]
+        "size": [
+          0.382533997297287,
+          0.10637400299310684,
+          0.11178500135429204
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         -0.044939339160919,
@@ -59,7 +65,7 @@
         0.00019763945901872735,
         0.00019805571691832772
       ],
-      "mass": 0.02,
+      "mass": 0.019999999552965164,
       "material": "organic_plant_matter",
       "name": "D00796 Spring Onion",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00796 Spring Onion",
         "part_name": "D00796 Spring Onion"
       },
-      "volume": 0.0006470994240323475
+      "volume": 0.0006470994240323475,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "dab058b72aa5fe62072d108723a737330c8365ef05632b3b5e605530cfd93ced"
+    },
+    "usd_path": "batch16/D00796 Spring Onion/IsaacSim_assets_69f66a787f5104dbf278e281/IsaacSim_asset_69f66a787f5104dbf278e281.usd",
+    "usd_sha256": "852aca941b40d5376f27304e0b2633bb01871931e2d67c843717b225d4307485",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {},
   "units": {
@@ -87,24 +110,81 @@
       "up_axis": "Z",
       "bounds_m": [
         0.382533997297287,
-        0.10637400299310701,
-        0.11178500135429201
-      ]
+        0.10637400299310684,
+        0.11178500135429204
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "852aca941b40d5376f27304e0b2633bb01871931e2d67c843717b225d4307485",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.02
+      "value_kg": 0.019999999552965164,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "852aca941b40d5376f27304e0b2633bb01871931e2d67c843717b225d4307485",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.019999999552965164,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 63,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "852aca941b40d5376f27304e0b2633bb01871931e2d67c843717b225d4307485",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 63,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "852aca941b40d5376f27304e0b2633bb01871931e2d67c843717b225d4307485",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/eeb19b316960d8999e09bdf547f0130dd0745a53/reports/native/2026.10.13/shard-10/native-batch-003-evidence.tar.gz",
+        "sha256": "82606f3110823c9c2a13edf198e40116278e3237b437f8a4de52dc2a2b4405a1",
+        "hf_commit": "eeb19b316960d8999e09bdf547f0130dd0745a53",
+        "size_bytes": 103504688
+      },
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "852aca941b40d5376f27304e0b2633bb01871931e2d67c843717b225d4307485",
+      "supplemental_accepted": true,
+      "planned_test_count": 12,
+      "result_count": 12,
+      "passed": 11,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-13T23:52:16.345531+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "e4307c9cd512b179221e5179f81edbb1bd68378d7304c5ddac23936d8ba1380a",
+      "qualification": "native-fleet-evidence/shard-10/native-batch-003/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

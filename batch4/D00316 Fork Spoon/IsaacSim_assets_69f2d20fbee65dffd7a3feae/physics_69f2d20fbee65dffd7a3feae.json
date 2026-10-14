@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.12686499953269958,
-        0.023082999512553215,
-        0.012373999692499638
-      ],
       "min": [
-        -0.051895998418331146,
-        -0.022957999259233475,
-        -1.4999999621068127e-05
+        -0.10796999931335449,
+        -0.020921999588608742,
+        -6.299999949987978e-05
+      ],
+      "max": [
+        0.0683789998292923,
+        0.02100599929690361,
+        0.01558000035583973
       ],
       "size": [
-        0.17876099795103073,
-        0.04604099877178669,
-        0.012388999692120706
-      ]
+        0.1763489991426468,
+        0.04192799888551235,
+        0.01564300035533961
+      ],
+      "units": "m"
     },
     "description": "A spoon-fork hybrid utensil with a shallow oval bowl, short fork tines, and a slender curved handle. The shown variants include polished or brushed stainless steel and natural wood finishes.",
     "name": "D00316 Fork Spoon",
     "object_type": "rigid_bodies",
-    "total_mass": 0.045
+    "total_mass": 0.04500000178813934,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00316",
   "parts": [
     {
       "bounds": {
-        "center": [
-          0.004703644641958138,
-          5.798844232853119e-05,
-          0.004324726254325758
+        "min": [
+          -0.10796999931335449,
+          -0.020921999588608742,
+          -6.299999949987978e-05
         ],
         "max": [
-          0.12686499953269958,
-          0.023082999512553215,
-          0.012373999692499638
+          0.0683789998292923,
+          0.02100599929690361,
+          0.01558000035583973
         ],
-        "min": [
-          -0.051895998418331146,
-          -0.022957999259233475,
-          -1.4999999621068127e-05
-        ]
+        "size": [
+          0.1763489991426468,
+          0.04192799888551235,
+          0.01564300035533961
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         -0.002711678019957575,
@@ -59,7 +65,7 @@
         7.892198780896945e-05,
         8.171538539370465e-05
       ],
-      "mass": 0.045,
+      "mass": 0.04500000178813934,
       "material": "stainless_steel",
       "name": "D00316 Fork Spoon",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00316 Fork Spoon",
         "part_name": "D00316 Fork Spoon"
       },
-      "volume": 4.286223020285779e-05
+      "volume": 4.286223020285779e-05,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "f142245bbdef73f907ae2d2b0b5f3b5d41753b7c78be6fb9b50a6c9760ce88dc"
+    },
+    "usd_path": "batch4/D00316 Fork Spoon/IsaacSim_assets_69f2d20fbee65dffd7a3feae/IsaacSim_asset_69f2d20fbee65dffd7a3feae.usd",
+    "usd_sha256": "596f160b7d96b6358990c404b6a9cfd87cf3258c1b60456bac6b4b3286ec01db",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {},
   "units": {
@@ -86,25 +109,82 @@
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
-        0.17876099795103073,
-        0.04604099877178669,
-        0.012388999692120706
-      ]
+        0.1763489991426468,
+        0.04192799888551235,
+        0.01564300035533961
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "596f160b7d96b6358990c404b6a9cfd87cf3258c1b60456bac6b4b3286ec01db",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.045
+      "value_kg": 0.04500000178813934,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "596f160b7d96b6358990c404b6a9cfd87cf3258c1b60456bac6b4b3286ec01db",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.04500000178813934,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 1,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "596f160b7d96b6358990c404b6a9cfd87cf3258c1b60456bac6b4b3286ec01db",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 1,
+      "approximations": [
+        "sdf"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "596f160b7d96b6358990c404b6a9cfd87cf3258c1b60456bac6b4b3286ec01db",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/8f10c97ca2edcb6bbfa74b5a10616d9e39e05e98/reports/native/2026.10.13/shard-06/native-batch-000-evidence.tar.gz",
+        "sha256": "ba4178b435b5110861a52d272d915b9c397a2461a753e750643075635f715c13",
+        "hf_commit": "8f10c97ca2edcb6bbfa74b5a10616d9e39e05e98",
+        "size_bytes": 119229811
+      },
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "596f160b7d96b6358990c404b6a9cfd87cf3258c1b60456bac6b4b3286ec01db",
+      "supplemental_accepted": true,
+      "planned_test_count": 12,
+      "result_count": 12,
+      "passed": 11,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-13T22:41:29.226071+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "1c7040c40c64ef2ce28b7bfd75734546bcf4afe0fa6b0ada9e9af653fe9cc79f",
+      "qualification": "native-fleet-evidence/shard-06/native-batch-000/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

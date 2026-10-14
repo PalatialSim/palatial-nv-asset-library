@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.044975001364946365,
-        0.045364998281002045,
-        0.10462405905127525
-      ],
       "min": [
         -0.045054998248815536,
         -0.045322999358177185,
         0.000552059964320506
       ],
+      "max": [
+        0.044975001364946365,
+        0.045364998281002045,
+        0.10462405905127525
+      ],
       "size": [
         0.0900299996137619,
         0.09068799763917923,
         0.10407199908695475
-      ]
+      ],
+      "units": "m"
     },
     "description": "D00012 Container Jar Cup",
     "name": "D00012 Container Jar Cup",
     "object_type": "rigid_bodies",
-    "total_mass": 0.151
+    "total_mass": 0.1509999930858612,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00012",
   "parts": [
     {
       "bounds": {
-        "center": [
-          -3.999844193458557e-05,
-          2.099946141242981e-05,
-          0.05258805950779788
+        "min": [
+          -0.045054998248815536,
+          -0.045322999358177185,
+          0.000552059964320506
         ],
         "max": [
           0.044975001364946365,
           0.045364998281002045,
           0.10462405905127525
         ],
-        "min": [
-          -0.045054998248815536,
-          -0.045322999358177185,
-          0.000552059964320506
-        ]
+        "size": [
+          0.0900299996137619,
+          0.09068799763917923,
+          0.10407199908695475
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         -3.846885738312267e-05,
@@ -59,7 +65,7 @@
         0.00020595506066456437,
         0.00020633747044485062
       ],
-      "mass": 0.151,
+      "mass": 0.1509999930858612,
       "material": "ceramic",
       "name": "D00012 Container Jar Cup",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00012 Container Jar Cup",
         "part_name": "D00012 Container Jar Cup"
       },
-      "volume": 6.039999723434448e-05
+      "volume": 6.039999723434448e-05,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "3a8b065df7a4095ee9090f69d08beb55402a7a370b13d226e1ce2649f139132c"
+    },
+    "usd_path": "batch24/D00012_Container_Jar_Cup/IsaacSim_assets_6a7954ebd43e18960530008f/IsaacSim_asset_6a7954ebd43e18960530008f.usd",
+    "usd_sha256": "127ba025a1b58ec1dfe7f80cb2ab81ad2e50907906621a5488093ea0c4a2d215",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -91,22 +114,79 @@
         0.0900299996137619,
         0.09068799763917923,
         0.10407199908695475
-      ]
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "127ba025a1b58ec1dfe7f80cb2ab81ad2e50907906621a5488093ea0c4a2d215",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.151
+      "value_kg": 0.1509999930858612,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "127ba025a1b58ec1dfe7f80cb2ab81ad2e50907906621a5488093ea0c4a2d215",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.1509999930858612,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 32,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "127ba025a1b58ec1dfe7f80cb2ab81ad2e50907906621a5488093ea0c4a2d215",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 32,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "127ba025a1b58ec1dfe7f80cb2ab81ad2e50907906621a5488093ea0c4a2d215",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/54196208b57d98a648e3ce9c510736e212ea9f50/reports/native/2026.10.13/shard-03/native-batch-000-evidence.tar.gz",
+        "sha256": "d503dd85ac1ee0b6ffbaaf99358b93889f6651455991544f311c675c71c3df58",
+        "hf_commit": "54196208b57d98a648e3ce9c510736e212ea9f50",
+        "size_bytes": 120777997
+      },
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "127ba025a1b58ec1dfe7f80cb2ab81ad2e50907906621a5488093ea0c4a2d215",
+      "supplemental_accepted": true,
+      "planned_test_count": 12,
+      "result_count": 12,
+      "passed": 11,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-13T20:44:10.492438+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "cbc7aa6379d66f19df88f8028e0e66367aa5f112f5237a11d1ae19b80e18f950",
+      "qualification": "native-fleet-evidence/shard-03/native-batch-000/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

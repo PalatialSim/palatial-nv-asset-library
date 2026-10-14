@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.16945411264896393,
-        0.035359494388103485,
-        0.14283257722854614
-      ],
       "min": [
-        -0.1551402062177658,
-        0.0,
-        -0.1444195806980133
+        -0.15519599616527557,
+        -0.14295099675655365,
+        4.995568815502338e-06
+      ],
+      "max": [
+        0.1695069968700409,
+        0.1444530040025711,
+        0.03570600226521492
       ],
       "size": [
-        0.32459431886672974,
-        0.035359494388103485,
-        0.28725215792655945
-      ]
+        0.32470299303531647,
+        0.28740400075912476,
+        0.03570100669639942
+      ],
+      "units": "m"
     },
     "description": "A circular wooden cutting board with a thick, flat profile and natural wood grain. A brushed metal handle is attached to one side.",
     "name": "D00676 Round Cutting Board",
     "object_type": "rigid_bodies",
-    "total_mass": 1.5
+    "total_mass": 1.5,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00676",
   "parts": [
     {
       "bounds": {
-        "center": [
-          -0.0036645303323688053,
-          0.01763209807189887,
-          -0.0006850981381170898
+        "min": [
+          -0.15519599616527557,
+          -0.14295099675655365,
+          4.995568815502338e-06
         ],
         "max": [
-          0.16945411264896393,
-          0.035359494388103485,
-          0.14283257722854614
+          0.1695069968700409,
+          0.1444530040025711,
+          0.03570600226521492
         ],
-        "min": [
-          -0.1551402062177658,
-          0.0,
-          -0.1444195806980133
-        ]
+        "size": [
+          0.32470299303531647,
+          0.28740400075912476,
+          0.03570100669639942
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         -0.003994456743956326,
@@ -67,10 +73,27 @@
         "object_name": "D00676 Round Cutting Board",
         "part_name": "D00676 Round Cutting Board"
       },
-      "volume": 0.002421749024015757
+      "volume": 0.002421749024015757,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "17a4155e15a6d273d72cdba80978ed3400460d46ea6c29359724bf36e445cf4e"
+    },
+    "usd_path": "batch13/D00676 Round Cutting Board/IsaacSim_assets_69f632b5431507ff7c11e2c3/IsaacSim_asset_69f632b5431507ff7c11e2c3.usd",
+    "usd_sha256": "0fae8cc3dbebe9ce39ad891808e0d8bf88e70aa1ae83bdf292f1c41b923fd404",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {},
   "units": {
@@ -86,25 +109,82 @@
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
-        0.32459431886672974,
-        0.035359494388103485,
-        0.28725215792655945
-      ]
+        0.32470299303531647,
+        0.28740400075912476,
+        0.03570100669639942
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "0fae8cc3dbebe9ce39ad891808e0d8bf88e70aa1ae83bdf292f1c41b923fd404",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 1.5
+      "value_kg": 1.5,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "0fae8cc3dbebe9ce39ad891808e0d8bf88e70aa1ae83bdf292f1c41b923fd404",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 1.5,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 17,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "0fae8cc3dbebe9ce39ad891808e0d8bf88e70aa1ae83bdf292f1c41b923fd404",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 17,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "0fae8cc3dbebe9ce39ad891808e0d8bf88e70aa1ae83bdf292f1c41b923fd404",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/8a774d39d6ced0ab79574f6776ec0c12ef8bc78f/reports/native/2026.10.13/shard-04/native-batch-002-evidence.tar.gz",
+        "sha256": "9f49d72dcc7a4d066cd6e376ffe49abcd3f50361cc7ca93b4722a26e72e4abf2",
+        "hf_commit": "8a774d39d6ced0ab79574f6776ec0c12ef8bc78f",
+        "size_bytes": 113034909
+      },
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "0fae8cc3dbebe9ce39ad891808e0d8bf88e70aa1ae83bdf292f1c41b923fd404",
+      "supplemental_accepted": true,
+      "planned_test_count": 12,
+      "result_count": 12,
+      "passed": 11,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-14T00:14:27.959432+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "44e94de9ea335d6720fb19d263afc24006f8269c5baea44a67db215aa21fdc98",
+      "qualification": "native-fleet-evidence/shard-04/native-batch-002/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

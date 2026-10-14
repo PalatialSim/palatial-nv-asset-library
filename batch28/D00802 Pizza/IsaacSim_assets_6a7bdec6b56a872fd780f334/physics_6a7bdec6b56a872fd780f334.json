@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.17344500124454498,
-        0.17312000691890717,
-        0.04877650737762451
-      ],
       "min": [
         -0.17246800661087036,
         -0.17242200672626495,
         0.0018845100421458483
       ],
+      "max": [
+        0.17344500124454498,
+        0.17312000691890717,
+        0.04877650737762451
+      ],
       "size": [
         0.34591300785541534,
         0.3455420136451721,
         0.04689199733547866
-      ]
+      ],
+      "units": "m"
     },
     "description": "D00802 Pizza",
     "name": "D00802 Pizza",
     "object_type": "rigid_bodies",
-    "total_mass": 0.7
+    "total_mass": 0.699999988079071,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00802",
   "parts": [
     {
       "bounds": {
-        "center": [
-          0.0004884973168373108,
-          0.00034900009632110596,
-          0.02533050870988518
+        "min": [
+          -0.17246800661087036,
+          -0.17242200672626495,
+          0.0018845100421458483
         ],
         "max": [
           0.17344500124454498,
           0.17312000691890717,
           0.04877650737762451
         ],
-        "min": [
-          -0.17246800661087036,
-          -0.17242200672626495,
-          0.0018845100421458483
-        ]
+        "size": [
+          0.34591300785541534,
+          0.3455420136451721,
+          0.04689199733547866
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         0.00013293280790094286,
@@ -59,7 +65,7 @@
         0.005516069009900093,
         0.010831881314516068
       ],
-      "mass": 0.7,
+      "mass": 0.699999988079071,
       "material": "plastic",
       "name": "D00802 Pizza",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00802 Pizza",
         "part_name": "D00802 Pizza"
       },
-      "volume": 0.000579470188807178
+      "volume": 0.000579470188807178,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "9acc47665cc5ffc5e2c4a43780d2f5eb309de70c5886593176f9e1d00be2a456"
+    },
+    "usd_path": "batch28/D00802 Pizza/IsaacSim_assets_6a7bdec6b56a872fd780f334/IsaacSim_asset_6a7bdec6b56a872fd780f334.usd",
+    "usd_sha256": "583a058d526d8b8940963df09ed3c408fd0d12bab7cf1a1041ac98f07f6a86c5",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -91,22 +114,79 @@
         0.34591300785541534,
         0.3455420136451721,
         0.04689199733547866
-      ]
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "583a058d526d8b8940963df09ed3c408fd0d12bab7cf1a1041ac98f07f6a86c5",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.7
+      "value_kg": 0.699999988079071,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "583a058d526d8b8940963df09ed3c408fd0d12bab7cf1a1041ac98f07f6a86c5",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.699999988079071,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 3,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "583a058d526d8b8940963df09ed3c408fd0d12bab7cf1a1041ac98f07f6a86c5",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 3,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "583a058d526d8b8940963df09ed3c408fd0d12bab7cf1a1041ac98f07f6a86c5",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/544a81d285267b6bd4c1ab59e356def67502abe4/reports/native/2026.10.13/shard-04/native-batch-003-evidence.tar.gz",
+        "sha256": "0f79ad9ccca5d23151b6beb3ac152d4f2e574acbd457f80d20ae089971dfbe75",
+        "hf_commit": "544a81d285267b6bd4c1ab59e356def67502abe4",
+        "size_bytes": 106673475
+      },
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "583a058d526d8b8940963df09ed3c408fd0d12bab7cf1a1041ac98f07f6a86c5",
+      "supplemental_accepted": true,
+      "planned_test_count": 12,
+      "result_count": 12,
+      "passed": 11,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-14T00:47:31.063187+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "4251d3c12900fb3b72051920f46dbebde82641c35116deeb2132dd142419423e",
+      "qualification": "native-fleet-evidence/shard-04/native-batch-003/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

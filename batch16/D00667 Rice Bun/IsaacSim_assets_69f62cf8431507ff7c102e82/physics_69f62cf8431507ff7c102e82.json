@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.04091803729534149,
-        0.05011022090911865,
-        0.03685827553272247
-      ],
       "min": [
-        -0.04340488463640213,
-        0.0,
-        -0.04739049822092056
+        -0.043515000492334366,
+        -0.03691599890589714,
+        5.9991357375110965e-06
+      ],
+      "max": [
+        0.040998999029397964,
+        0.04749099910259247,
+        0.05014500021934509
       ],
       "size": [
-        0.08432292193174362,
-        0.05011022090911865,
-        0.08424877375364304
-      ]
+        0.08451399952173233,
+        0.08440699800848961,
+        0.05013900108360758
+      ],
+      "units": "m"
     },
     "description": "A steamed bun with a slightly parted top, revealing a meat filling inside, resting on a flat white plate.",
     "name": "D00667 Rice Bun",
     "object_type": "rigid_bodies",
-    "total_mass": 0.1
+    "total_mass": 0.10000000149011612,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00667",
   "parts": [
     {
       "bounds": {
-        "center": [
-          -0.0008861640152076703,
-          0.019586108342611767,
-          -0.004255534723793209
+        "min": [
+          -0.043515000492334366,
+          -0.03691599890589714,
+          5.9991357375110965e-06
         ],
         "max": [
-          0.04091803729534149,
-          0.05011022090911865,
-          0.03685827553272247
+          0.040998999029397964,
+          0.04749099910259247,
+          0.05014500021934509
         ],
-        "min": [
-          -0.04340488463640213,
-          0.0,
-          -0.04739049822092056
-        ]
+        "size": [
+          0.08451399952173233,
+          0.08440699800848961,
+          0.05013900108360758
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         -0.001333273922666522,
@@ -59,7 +65,7 @@
         5.205843211586301e-05,
         7.522276010750511e-05
       ],
-      "mass": 0.1,
+      "mass": 0.10000000149011612,
       "material": "baked_bread",
       "name": "D00667 Rice Bun",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00667 Rice Bun",
         "part_name": "D00667 Rice Bun"
       },
-      "volume": 0.00019994296298243117
+      "volume": 0.00019994296298243117,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "151bb35cd9d82fb19b7fce48f15c946b9369234d1bb1d3b1d60bae5142c52c42"
+    },
+    "usd_path": "batch16/D00667 Rice Bun/IsaacSim_assets_69f62cf8431507ff7c102e82/IsaacSim_asset_69f62cf8431507ff7c102e82.usd",
+    "usd_sha256": "f3e2a8f562095a01ef9601b599250bb4fbcc6d5d65a5661d2acf5bb80339d946",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {},
   "units": {
@@ -86,25 +109,82 @@
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
-        0.08432292193174362,
-        0.05011022090911865,
-        0.08424877375364304
-      ]
+        0.08451399952173233,
+        0.08440699800848961,
+        0.05013900108360758
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "f3e2a8f562095a01ef9601b599250bb4fbcc6d5d65a5661d2acf5bb80339d946",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.1
+      "value_kg": 0.10000000149011612,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "f3e2a8f562095a01ef9601b599250bb4fbcc6d5d65a5661d2acf5bb80339d946",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.10000000149011612,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 91,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "f3e2a8f562095a01ef9601b599250bb4fbcc6d5d65a5661d2acf5bb80339d946",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 91,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "f3e2a8f562095a01ef9601b599250bb4fbcc6d5d65a5661d2acf5bb80339d946",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/ec1be0c8586137931ab62a41a8d4ab6187440c9b/reports/native/2026.10.13/shard-09/native-batch-002-evidence.tar.gz",
+        "sha256": "d7ff761ba07551c02c5f4c3e0a37ef35ac2b72e4bffca0fc778bbfb06cce34f8",
+        "hf_commit": "ec1be0c8586137931ab62a41a8d4ab6187440c9b",
+        "size_bytes": 103380329
+      },
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "f3e2a8f562095a01ef9601b599250bb4fbcc6d5d65a5661d2acf5bb80339d946",
+      "supplemental_accepted": true,
+      "planned_test_count": 12,
+      "result_count": 12,
+      "passed": 11,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-13T23:07:23.786514+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "b38913dfc11f9f5627fbabb8aaad9ea95d8e09099b169207420a3541e8c3794e",
+      "qualification": "native-fleet-evidence/shard-09/native-batch-002/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

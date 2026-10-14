@@ -93,7 +93,7 @@
   "provenance": {
     "source_schema": "authored_usd",
     "usd_path": "batch41/D01030 Mandoline Slicer/D01030 Mandoline Slicer.usd",
-    "usd_sha256": "f34311ab1200423615db3e71246372eccfde0f40574bff6a01ea93a145a2d5e7",
+    "usd_sha256": "25919285c0ed8b0c39dc80dddd617ee50af6aeb2f2736d9757ce4702c50ad3a2",
     "source_meters_per_unit": 1.0,
     "source_kilograms_per_unit": 1.0,
     "source_up_axis": "Z",
@@ -101,10 +101,10 @@
     "reasoning_available": false,
     "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification.",
     "metadata_repair": {
-      "date": "2026-10-08T04:48:10.976448+00:00",
+      "date": "2026-10-13T19:50:31.621292+00:00",
       "source": "delivered USD inspected with OpenUSD 26.8",
-      "report": "reports/metadata-repair-20261008.json",
-      "original_physics_sha256": "1b2bdd6800cd4062b43733e4f7dd065ab43ea5d1dd338442fcdcd9d8aab25d17"
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "1eb53ee698d968bc408dc32aa84750166ee7c58bef0a2180a1a0fa670fa6de72"
     },
     "usd_world_bounds_source": "delivered USD visual geometry; stage world axes"
   },
@@ -120,9 +120,9 @@
         0.15000000596046448,
         0.019999999552965164
       ],
-      "checked_at": "2026-10-08T04:48:10.976448+00:00",
-      "evidence": "reports/metadata-repair-20261008.json",
-      "usd_sha256": "f34311ab1200423615db3e71246372eccfde0f40574bff6a01ea93a145a2d5e7",
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "25919285c0ed8b0c39dc80dddd617ee50af6aeb2f2736d9757ce4702c50ad3a2",
       "scope": "authored_usd_dimensions",
       "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
       "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
@@ -131,9 +131,9 @@
       "status": "verified",
       "confidence": "high",
       "value_kg": 0.2848649024963379,
-      "checked_at": "2026-10-08T04:48:10.976448+00:00",
-      "evidence": "reports/metadata-repair-20261008.json",
-      "usd_sha256": "f34311ab1200423615db3e71246372eccfde0f40574bff6a01ea93a145a2d5e7",
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "25919285c0ed8b0c39dc80dddd617ee50af6aeb2f2736d9757ce4702c50ad3a2",
       "scope": "authored_usd_mass_consistency",
       "part_sum_kg": 0.2848649024963379,
       "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
@@ -145,9 +145,9 @@
       "approximations": [
         "convexHull"
       ],
-      "checked_at": "2026-10-08T04:48:10.976448+00:00",
-      "evidence": "reports/metadata-repair-20261008.json",
-      "usd_sha256": "f34311ab1200423615db3e71246372eccfde0f40574bff6a01ea93a145a2d5e7",
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "25919285c0ed8b0c39dc80dddd617ee50af6aeb2f2736d9757ce4702c50ad3a2",
       "scope": "authored_usd_collision_schema",
       "enabled_shape_count": 89,
       "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
@@ -156,18 +156,42 @@
       "status": "verified",
       "confidence": "high",
       "moving_joints": 0,
-      "checked_at": "2026-10-08T04:48:10.976448+00:00",
-      "evidence": "reports/metadata-repair-20261008.json",
-      "usd_sha256": "f34311ab1200423615db3e71246372eccfde0f40574bff6a01ea93a145a2d5e7",
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "25919285c0ed8b0c39dc80dddd617ee50af6aeb2f2736d9757ce4702c50ad3a2",
       "scope": "authored_usd_joint_schema",
       "joint_count": 0,
       "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
     },
     "scope": "authored_usd_metadata_consistency",
     "runtime": {
-      "status": "not_revalidated",
-      "scope": "native_simulation",
-      "note": "Existing simulation videos remain available. This repair does not claim new drop/contact, friction, stability or joint-actuation tests."
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/60cf18af96dac78d3e45ebf7c2cb2daa91b7e191/reports/native/2026.10.13/shard-06/native-batch-004-evidence.tar.gz",
+        "sha256": "d9a337295e00f7b7fc560283a2bde86aa9a66c2c7301f45dcbd7bb9527604387",
+        "hf_commit": "60cf18af96dac78d3e45ebf7c2cb2daa91b7e191",
+        "size_bytes": 103516805
+      },
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "25919285c0ed8b0c39dc80dddd617ee50af6aeb2f2736d9757ce4702c50ad3a2",
+      "supplemental_accepted": true,
+      "planned_test_count": 12,
+      "result_count": 12,
+      "passed": 11,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-14T00:44:56.346537+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "1b1db7e6cb9eb28dd9f8cf28e603d37deb480996dc0666789a5cb33891baed43",
+      "qualification": "native-fleet-evidence/shard-06/native-batch-004/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

@@ -168,52 +168,99 @@
             "/World/pivot_hinge"
           ],
           "proxyPrim": []
+        },
+        "id": "pivot_hinge",
+        "path": "/World/Joints/pivot_hinge",
+        "usd_type": "PhysicsRevoluteJoint",
+        "authored_usd": {
+          "id": "pivot_hinge",
+          "source_prim_path": "/World/Joints/pivot_hinge",
+          "joint_type": "PhysicsRevoluteJoint",
+          "body0": [
+            "/World/scissors_root"
+          ],
+          "body1": [
+            "/World/pivot_hinge"
+          ],
+          "joint_enabled": true,
+          "axis": "Y",
+          "lowerLimit": -60.0,
+          "upperLimit": 0.0,
+          "localPos0": [
+            0.0,
+            0.0,
+            0.1247280016541481
+          ],
+          "localPos1": [
+            0.0,
+            0.0,
+            0.1247280016541481
+          ],
+          "localRot0": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "localRot1": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "static_frames": []
         }
       }
-    ]
+    ],
+    "moving_joints": 1,
+    "rigid_body_count": 2,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.04778120375936679,
-        0.007686913882230551,
-        0.11183526731175603
-      ],
       "min": [
         -0.04749931707996224,
-        -2.341426867317857e-07,
-        -0.09790002629815699
+        -0.11183526731175604,
+        -2.3414268673221938e-07
+      ],
+      "max": [
+        0.04778120375936679,
+        0.09790002629815699,
+        0.007686913882230551
       ],
       "size": [
         0.09528052083932903,
-        0.007687148024917283,
-        0.209735293609913
-      ]
+        0.20973529360991303,
+        0.007687148024917283
+      ],
+      "units": "m"
     },
     "description": "Scissors",
     "name": "scissors_root",
     "object_type": "rigid_bodies",
-    "total_mass": 0.10000000149011612
+    "total_mass": 0.10000000149011612,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00715",
   "parts": [
     {
       "bounds": {
-        "center": [
-          -0.018064048165296165,
-          0.0038433354416006534,
-          0.006975910515040769
+        "min": [
+          -0.04749931707996224,
+          -0.11183524471415462,
+          -2.3414268673221938e-07
         ],
         "max": [
           0.011371220749369904,
-          0.007686905025888039,
-          0.11183524471415462
+          0.09788342368407309,
+          0.00768690502588804
         ],
-        "min": [
-          -0.04749931707996224,
-          -2.341426867317857e-07,
-          -0.09788342368407309
-        ]
+        "size": [
+          0.058870537829332145,
+          0.20971866839822773,
+          0.007687139168574772
+        ],
+        "units": "m"
       },
       "collision": {},
       "id": "scissors_root",
@@ -223,25 +270,28 @@
       "source": {
         "object_name": "World",
         "part_name": "scissors_root"
-      }
+      },
+      "source_prim_path": "/World/scissors_root",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     },
     {
       "bounds": {
-        "center": [
-          0.018376286977822787,
-          0.0038433847964362707,
-          0.00696762050679952
+        "min": [
+          -0.011028629803721221,
+          -0.11183526731175604,
+          -1.4428935800987405e-07
         ],
         "max": [
           0.04778120375936679,
-          0.007686913882230551,
-          0.11183526731175603
+          0.09790002629815699,
+          0.007686913882230551
         ],
-        "min": [
-          -0.011028629803721221,
-          -1.4428935800944037e-07,
-          -0.09790002629815699
-        ]
+        "size": [
+          0.05880983356308801,
+          0.20973529360991303,
+          0.007687058171588561
+        ],
+        "units": "m"
       },
       "collision": {},
       "id": "pivot_hinge",
@@ -251,10 +301,27 @@
       "source": {
         "object_name": "World",
         "part_name": "pivot_hinge"
-      }
+      },
+      "source_prim_path": "/World/pivot_hinge",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "4fc4f944eaceefee7c417f92843bd6a9c8b389b1d578be47081aea1e0d7bb9c9"
+    },
+    "usd_path": "batch36/D00715_Scissors/IsaacSim_assets_D00715/IsaacSim_asset_D00715.usd",
+    "usd_sha256": "d9f05144ec00b99fc44a2861447015a74319255c6389a3545600fae4643ab956",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {},
   "units": {
@@ -271,24 +338,81 @@
       "up_axis": "Z",
       "bounds_m": [
         0.09528052083932903,
-        0.007687148024917283,
-        0.209735293609913
-      ]
+        0.20973529360991303,
+        0.007687148024917283
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "d9f05144ec00b99fc44a2861447015a74319255c6389a3545600fae4643ab956",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.10000000149011612
+      "value_kg": 0.10000000149011612,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "d9f05144ec00b99fc44a2861447015a74319255c6389a3545600fae4643ab956",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.10000000149011612,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 2
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 12,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "d9f05144ec00b99fc44a2861447015a74319255c6389a3545600fae4643ab956",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 12,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 1
+      "moving_joints": 1,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "d9f05144ec00b99fc44a2861447015a74319255c6389a3545600fae4643ab956",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 1,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/ea7439d1651ebacdd5ba579aa52401cee7f227ff/reports/native/2026.10.13/shard-05/native-batch-002-evidence.tar.gz",
+        "sha256": "7545cfa390c2b427470d04390b015cf59c952aabfc9d7625878671b3e604a61b",
+        "hf_commit": "ea7439d1651ebacdd5ba579aa52401cee7f227ff",
+        "size_bytes": 104555482
+      },
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "d9f05144ec00b99fc44a2861447015a74319255c6389a3545600fae4643ab956",
+      "supplemental_accepted": true,
+      "planned_test_count": 14,
+      "result_count": 14,
+      "passed": 13,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-13T23:10:04.175527+00:00",
+      "joint_status": "passed",
+      "joints_total": 1,
+      "joints_passed": 1,
+      "joints_failed": 0,
+      "thumbnail_sha256": "985a9bf59e428b36f001b3e4fdec8c135c5bad22167964602e95e436613b5bb3",
+      "qualification": "native-fleet-evidence/shard-05/native-batch-002/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

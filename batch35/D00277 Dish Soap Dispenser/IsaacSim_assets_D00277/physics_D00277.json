@@ -168,6 +168,47 @@
             "/World/part_01"
           ],
           "proxyPrim": []
+        },
+        "id": "pump_swivel",
+        "path": "/World/Joints/pump_swivel",
+        "usd_type": "PhysicsRevoluteJoint",
+        "authored_usd": {
+          "id": "pump_swivel",
+          "source_prim_path": "/World/Joints/pump_swivel",
+          "joint_type": "PhysicsRevoluteJoint",
+          "body0": [
+            "/World/part_00"
+          ],
+          "body1": [
+            "/World/part_01"
+          ],
+          "joint_enabled": true,
+          "axis": "Z",
+          "lowerLimit": -180.0,
+          "upperLimit": 180.0,
+          "localPos0": [
+            0.0,
+            0.0,
+            0.21799999475479126
+          ],
+          "localPos1": [
+            0.0,
+            0.0,
+            0.21799999475479126
+          ],
+          "localRot0": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "localRot1": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "static_frames": []
         }
       },
       {
@@ -336,52 +377,99 @@
             "/World/part_02"
           ],
           "proxyPrim": []
+        },
+        "id": "press_head_slide",
+        "path": "/World/Joints/press_head_slide",
+        "usd_type": "PhysicsPrismaticJoint",
+        "authored_usd": {
+          "id": "press_head_slide",
+          "source_prim_path": "/World/Joints/press_head_slide",
+          "joint_type": "PhysicsPrismaticJoint",
+          "body0": [
+            "/World/part_01"
+          ],
+          "body1": [
+            "/World/part_02"
+          ],
+          "joint_enabled": true,
+          "axis": "Z",
+          "lowerLimit": -0.00800000037997961,
+          "upperLimit": 0.0,
+          "localPos0": [
+            0.0,
+            0.0,
+            0.21799999475479126
+          ],
+          "localPos1": [
+            0.0,
+            0.0,
+            0.21799999475479126
+          ],
+          "localRot0": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "localRot1": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "static_frames": []
         }
       }
-    ]
+    ],
+    "moving_joints": 2,
+    "rigid_body_count": 3,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.040241619186482086,
-        0.2938638102746351,
-        0.04022680680191703
-      ],
       "min": [
         -0.1019023910943559,
-        0.0011884629547728033,
-        -0.03985794479409429
+        -0.04022680680191704,
+        0.0011884629547728033
+      ],
+      "max": [
+        0.040241619186482086,
+        0.03985794479409429,
+        0.2938638102746351
       ],
       "size": [
         0.142144010280838,
-        0.2926753473198623,
-        0.08008475159601132
-      ]
+        0.08008475159601133,
+        0.2926753473198623
+      ],
+      "units": "m"
     },
     "description": "Dish Soap Dispenser",
     "name": "part_00",
     "object_type": "rigid_bodies",
-    "total_mass": 0.16999999433755875
+    "total_mass": 0.16999999433755875,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00277",
   "parts": [
     {
       "bounds": {
-        "center": [
-          0.0003912902726622876,
-          0.11033318444244979,
-          0.00018443100391137002
+        "min": [
+          -0.03945903864115751,
+          -0.04022680680191704,
+          0.0011884629547728033
         ],
         "max": [
           0.040241619186482086,
-          0.21947790593012678,
-          0.04022680680191703
+          0.03985794479409429,
+          0.21947790593012678
         ],
-        "min": [
-          -0.03945903864115751,
-          0.0011884629547728033,
-          -0.03985794479409429
-        ]
+        "size": [
+          0.0797006578276396,
+          0.08008475159601133,
+          0.218289442975354
+        ],
+        "units": "m"
       },
       "collision": {},
       "id": "part_00",
@@ -391,7 +479,9 @@
       "source": {
         "object_name": "World",
         "part_name": "part_00"
-      }
+      },
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     },
     {
       "collision": {},
@@ -402,25 +492,27 @@
       "source": {
         "object_name": "World",
         "part_name": "part_01"
-      }
+      },
+      "source_prim_path": "/World/part_01"
     },
     {
       "bounds": {
-        "center": [
-          -0.039113155872672674,
-          0.25259020892335926,
-          -0.0005606942273217921
+        "min": [
+          -0.1019023910943559,
+          -0.02194594247516329,
+          0.21131660757208337
         ],
         "max": [
           0.023676079349010563,
-          0.2938638102746351,
-          0.02194594247516329
+          0.023067330929806874,
+          0.2938638102746351
         ],
-        "min": [
-          -0.1019023910943559,
-          0.21131660757208337,
-          -0.023067330929806874
-        ]
+        "size": [
+          0.12557847044336648,
+          0.04501327340497016,
+          0.08254720270255173
+        ],
+        "units": "m"
       },
       "collision": {},
       "id": "part_02",
@@ -430,10 +522,27 @@
       "source": {
         "object_name": "World",
         "part_name": "part_02"
-      }
+      },
+      "source_prim_path": "/World/part_02",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "93b1f89a96acd3cdc40e2fecda927fe4eecaf9dca88a87a9aae51a6d416cc28a"
+    },
+    "usd_path": "batch35/D00277 Dish Soap Dispenser/IsaacSim_assets_D00277/IsaacSim_asset_D00277.usd",
+    "usd_sha256": "a837ae577f82e4563a153fc8a47197f10c41eda17f878e64e17aee50293e1c7b",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {},
   "units": {
@@ -450,24 +559,81 @@
       "up_axis": "Z",
       "bounds_m": [
         0.142144010280838,
-        0.2926753473198623,
-        0.08008475159601132
-      ]
+        0.08008475159601133,
+        0.2926753473198623
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "a837ae577f82e4563a153fc8a47197f10c41eda17f878e64e17aee50293e1c7b",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.16999999433755875
+      "value_kg": 0.16999999433755875,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "a837ae577f82e4563a153fc8a47197f10c41eda17f878e64e17aee50293e1c7b",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.16999999433755875,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 3
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 14,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "a837ae577f82e4563a153fc8a47197f10c41eda17f878e64e17aee50293e1c7b",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 14,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 2
+      "moving_joints": 2,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "a837ae577f82e4563a153fc8a47197f10c41eda17f878e64e17aee50293e1c7b",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 2,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/30ad6298e34272651fe4ad7eb1918f7df7970d29/reports/native/2026.10.13/shard-10/native-batch-000-evidence.tar.gz",
+        "sha256": "4f13d7820ad022d79e5261e87984cc71fea346a047a1847c78ddf6fdaae0eb1e",
+        "hf_commit": "30ad6298e34272651fe4ad7eb1918f7df7970d29",
+        "size_bytes": 103592698
+      },
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "a837ae577f82e4563a153fc8a47197f10c41eda17f878e64e17aee50293e1c7b",
+      "supplemental_accepted": true,
+      "planned_test_count": 14,
+      "result_count": 14,
+      "passed": 13,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-13T22:44:27.268880+00:00",
+      "joint_status": "passed",
+      "joints_total": 2,
+      "joints_passed": 2,
+      "joints_failed": 0,
+      "thumbnail_sha256": "2d31a4c6a1025bf7f33ded588ea482c9e6b7511a807a66e53f676b7af414870b",
+      "qualification": "native-fleet-evidence/shard-10/native-batch-000/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

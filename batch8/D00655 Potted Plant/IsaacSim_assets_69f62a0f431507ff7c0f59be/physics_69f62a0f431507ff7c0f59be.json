@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.14530053734779358,
-        0.14953064918518066,
-        0.4926390051841736
-      ],
       "min": [
         -0.1691190004348755,
-        -0.12178821861743927,
-        -0.00012011208309559152
+        -0.12178800255060196,
+        -0.00011200000153621659
+      ],
+      "max": [
+        0.1453000009059906,
+        0.14953699707984924,
+        0.4926390051841736
       ],
       "size": [
-        0.31441953778266907,
-        0.27131886780261993,
-        0.4927591172672692
-      ]
+        0.3144190013408661,
+        0.2713249996304512,
+        0.4927510051857098
+      ],
+      "units": "m"
     },
     "description": "A potted snake plant with tall, stiff, sword-like green leaves featuring light green and yellow banding. The plant is housed in a smooth, dark gray cylindrical ceramic pot filled with small brown clay pebbles at the base.",
     "name": "D00655 Potted Plant",
     "object_type": "rigid_bodies",
-    "total_mass": 3.5
+    "total_mass": 3.5,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00655",
   "parts": [
     {
       "bounds": {
-        "center": [
-          8.087081834651764e-05,
-          0.0007484926175591942,
-          0.22425519498008065
-        ],
-        "max": [
-          0.14530053734779358,
-          0.14953064918518066,
-          0.4926390051841736
-        ],
         "min": [
           -0.1691190004348755,
-          -0.12178821861743927,
-          -0.00012011208309559152
-        ]
+          -0.12178800255060196,
+          -0.00011200000153621659
+        ],
+        "max": [
+          0.1453000009059906,
+          0.14953699707984924,
+          0.4926390051841736
+        ],
+        "size": [
+          0.3144190013408661,
+          0.2713249996304512,
+          0.4927510051857098
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         -0.0012651520102730715,
@@ -67,10 +73,27 @@
         "object_name": "D00655 Potted Plant",
         "part_name": "D00655 Potted Plant"
       },
-      "volume": 0.020132384613215877
+      "volume": 0.020132384613215877,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "4e6f4554d8053508c41ebb16d4fe8fe06ff1130dffac48b7efb6c188e5281fd3"
+    },
+    "usd_path": "batch8/D00655 Potted Plant/IsaacSim_assets_69f62a0f431507ff7c0f59be/IsaacSim_asset_69f62a0f431507ff7c0f59be.usd",
+    "usd_sha256": "c6f03e750b4b45b28746afc3e7229f349c4b04126b4beab062af3c0c2393003a",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {},
   "units": {
@@ -86,25 +109,96 @@
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
-        0.31441953778266907,
-        0.27131886780261993,
-        0.4927591172672692
-      ]
+        0.3144190013408661,
+        0.2713249996304512,
+        0.4927510051857098
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "c6f03e750b4b45b28746afc3e7229f349c4b04126b4beab062af3c0c2393003a",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 3.5
+      "value_kg": 3.5,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "c6f03e750b4b45b28746afc3e7229f349c4b04126b4beab062af3c0c2393003a",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 3.5,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 118,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "c6f03e750b4b45b28746afc3e7229f349c4b04126b4beab062af3c0c2393003a",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 118,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "c6f03e750b4b45b28746afc3e7229f349c4b04126b4beab062af3c0c2393003a",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/91674304f3637cd9acd3a987e279915e4874f7b5/reports/native/2026.10.13/shard-11/native-batch-002-evidence.tar.gz",
+        "sha256": "03113b16a23e073b36cd327ff9c13df88747df7df531d1e1b1da4038a5ee06f9",
+        "hf_commit": "91674304f3637cd9acd3a987e279915e4874f7b5",
+        "size_bytes": 109382822
+      },
+      "status": "completed_with_tool_findings",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "c6f03e750b4b45b28746afc3e7229f349c4b04126b4beab062af3c0c2393003a",
+      "supplemental_accepted": true,
+      "planned_test_count": 12,
+      "result_count": 12,
+      "passed": 10,
+      "skipped": 1,
+      "failed": 1,
+      "issues": [
+        "slope_drop:fail"
+      ],
+      "warnings": [],
+      "completed_at": "2026-10-13T22:54:42.719871+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "c93b11ab728fdca97c3785a4dcf0807c057a162423f0482bfa0b185de496bd30",
+      "tool_findings": {
+        "certificate_path": "tool-finding-certificates/D00655.json",
+        "certificate_sha256": "0a99cb656adcf5e5fe1a28621840e339e3b161403254c27e978b4dc2486f6c29",
+        "raw_benchmark_status": "failed",
+        "failed_tests": [
+          "slope_drop"
+        ],
+        "reason": "The SDK conservative world bounds extend through the floor while live visible and collider mesh vertices remain above its penetration limit. Both complete independent ground and slope simulations pass with the unchanged SDK simulation parameters and thresholds, including stable ground settling and post-slide observation. Raw SDK physics failures remain for NVIDIA review.",
+        "NVIDIA_raw_results_modified": false,
+        "requires_NVIDIA_review": true,
+        "release_certificate": "reports/releases/2026.10.13/tool-findings/D00655.json"
+      },
+      "qualification": "native-fleet-evidence/shard-11/native-batch-002/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

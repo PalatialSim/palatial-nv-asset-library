@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.03763899952173233,
-        0.062127361074090004,
-        0.018685000017285347
-      ],
       "min": [
         -0.035670001059770584,
-        0.0003993592918050126,
-        -0.023628000169992447
+        -0.018685000017285347,
+        0.0003993592918050126
+      ],
+      "max": [
+        0.03763899952173233,
+        0.023628000169992447,
+        0.062127361074090004
       ],
       "size": [
         0.07330900058150291,
-        0.06172800178228499,
-        0.042313000187277794
-      ]
+        0.042313000187277794,
+        0.06172800178228499
+      ],
+      "units": "m"
     },
     "description": "D00783 Onigiri",
     "name": "D00783 Onigiri",
     "object_type": "rigid_bodies",
-    "total_mass": 0.1
+    "total_mass": 0.10000000149011612,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00783",
   "parts": [
     {
       "bounds": {
-        "center": [
-          0.000984499230980873,
-          0.03126336018294751,
-          -0.00247150007635355
+        "min": [
+          -0.035670001059770584,
+          -0.018685000017285347,
+          0.0003993592918050126
         ],
         "max": [
           0.03763899952173233,
-          0.062127361074090004,
-          0.018685000017285347
+          0.023628000169992447,
+          0.062127361074090004
         ],
-        "min": [
-          -0.035670001059770584,
-          0.0003993592918050126,
-          -0.023628000169992447
-        ]
+        "size": [
+          0.07330900058150291,
+          0.042313000187277794,
+          0.06172800178228499
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         0.0010069439886137843,
@@ -59,7 +65,7 @@
         3.8560414395760745e-05,
         4.956712291459553e-05
       ],
-      "mass": 0.1,
+      "mass": 0.10000000149011612,
       "material": "plastic",
       "name": "D00783 Onigiri",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00783 Onigiri",
         "part_name": "D00783 Onigiri"
       },
-      "volume": 8.333333457509676e-05
+      "volume": 8.333333457509676e-05,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "f784070d030682578172eff749f6b97ea97fbab290dd848a4e5fc47043bf9258"
+    },
+    "usd_path": "batch30/D00783_Onigiri/IsaacSim_assets_6a7d87d6b7a9c4204a787c0a/IsaacSim_asset_6a7d87d6b7a9c4204a787c0a.usd",
+    "usd_sha256": "00236ef91300190b44c9e9dccbd56aaf83e3f9229e996d4a0ea1452c767cd108",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -89,24 +112,81 @@
       "up_axis": "Z",
       "bounds_m": [
         0.07330900058150291,
-        0.06172800178228499,
-        0.042313000187277794
-      ]
+        0.042313000187277794,
+        0.06172800178228499
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "00236ef91300190b44c9e9dccbd56aaf83e3f9229e996d4a0ea1452c767cd108",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.1
+      "value_kg": 0.10000000149011612,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "00236ef91300190b44c9e9dccbd56aaf83e3f9229e996d4a0ea1452c767cd108",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.10000000149011612,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 4,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "00236ef91300190b44c9e9dccbd56aaf83e3f9229e996d4a0ea1452c767cd108",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 4,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "00236ef91300190b44c9e9dccbd56aaf83e3f9229e996d4a0ea1452c767cd108",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/9e1220ab39d1b75a24dc3df97e1aace408dc7e37/reports/native/2026.10.13/shard-06/native-batch-003-evidence.tar.gz",
+        "sha256": "0b3f267ea5bf1b6375f8e73ed11ae4c7184f4ea200038b7ee090eaa968653e68",
+        "hf_commit": "9e1220ab39d1b75a24dc3df97e1aace408dc7e37",
+        "size_bytes": 109195181
+      },
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "00236ef91300190b44c9e9dccbd56aaf83e3f9229e996d4a0ea1452c767cd108",
+      "supplemental_accepted": true,
+      "planned_test_count": 12,
+      "result_count": 12,
+      "passed": 11,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-14T00:21:55.196437+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "e7e460549511677750820d9c307ba054366e178bc7e92d80832864ca9da99c29",
+      "qualification": "native-fleet-evidence/shard-06/native-batch-003/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

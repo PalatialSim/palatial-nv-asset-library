@@ -1,0 +1,62 @@
+{
+  "schema": "palatial.native-tool-findings.v1",
+  "kind": "sdk_color_probe_ambiguity",
+  "logical_asset": "D00439",
+  "asset_usd_sha256": "b9b94907a9923822400c8f8ed0446394fde7cf202184f1a61e7378e5294479d0",
+  "qualification_sha256": "f81211e9b1135a6b7dcf1e550da95470e0279f14576300c33c9456123c38e2de",
+  "static_validation_passed": true,
+  "static_validation_sha256": "e359e53ecbbdb578812fb0f46dc20f8b7ae29bb1db1089bb6cdc4221e7566911",
+  "all_visible_meshes_resolve_preview_surface": true,
+  "visible_mesh_count": 26,
+  "manual_native_capture_review": true,
+  "raw_failed_result_sha256s": {
+    "preview_surface_renders": "159795e2674124dd43346428e12af1f276d01776a083f0159145e32aa3410045"
+  },
+  "captures": {
+    "baseline": {
+      "path": "native-batch-001/benchmark/results/D00439/simready_usd/.simready/runtime/preview_surface_renders/isaac_sim/captures/universal_surface_pinned_002.png",
+      "sha256": "47634cbe8e1f2ebed723a3224b964739c3de543fed02c6c2fc634b2b4105ac3c"
+    },
+    "weak": {
+      "path": "native-batch-001/benchmark/results/D00439/simready_usd/.simready/runtime/preview_surface_renders/isaac_sim/captures/universal_surface_uncovered_001.png",
+      "sha256": "ded891afed9f7c05306fcc333d9d932ff6619e14e0d9d40da9e2c8b5bde0f875"
+    },
+    "strong": {
+      "path": "native-batch-001/benchmark/results/D00439/simready_usd/.simready/runtime/preview_surface_renders/isaac_sim/captures/universal_surface_pinned_silhouette_001.png",
+      "sha256": "01bda0d6e13f29a8928af52533002b9d06f14d1e8521c3583e16574c8095fec2"
+    }
+  },
+  "release_captures": {
+    "baseline": {
+      "path": "reports/releases/2026.10.13/tool-findings/D00439/universal_surface_pinned_002.png",
+      "sha256": "47634cbe8e1f2ebed723a3224b964739c3de543fed02c6c2fc634b2b4105ac3c"
+    },
+    "weak": {
+      "path": "reports/releases/2026.10.13/tool-findings/D00439/universal_surface_uncovered_001.png",
+      "sha256": "ded891afed9f7c05306fcc333d9d932ff6619e14e0d9d40da9e2c8b5bde0f875"
+    },
+    "strong": {
+      "path": "reports/releases/2026.10.13/tool-findings/D00439/universal_surface_pinned_silhouette_001.png",
+      "sha256": "01bda0d6e13f29a8928af52533002b9d06f14d1e8521c3583e16574c8095fec2"
+    }
+  },
+  "measurements": {
+    "baseline_default_pixels": 45264,
+    "weak_default_pixels": 44065,
+    "strong_default_pixels": 193663,
+    "baseline_weak_overlap_ratio": 0.978395552025417,
+    "strong_stricter_pixels": 191872,
+    "weak_stricter_pixels": 0,
+    "strong_footprint_retained_ratio": 0.9907519763713254,
+    "stricter_diagnostic_coverage": 1.0,
+    "baseline_to_weak_changed_pixels": 10376
+  },
+  "sdk_pixel_classifier_source_sha256": "ab8683dcfc1fc77ad25d8ecb023fb64b21e940842751013f0452d19826225354",
+  "sdk_mask_ratio": 1.5,
+  "offline_diagnostic_mask_ratio": 3,
+  "offline_diagnostic_only": true,
+  "benchmark_config_modified": false,
+  "NVIDIA_raw_results_modified": false,
+  "requires_NVIDIA_review": true,
+  "inference": "The weak probe selects the same textured color present in the unmodified baseline. A stricter offline dominance test retains the strong-control silhouette and removes the false uncovered region. Official thresholds, captures, benchmark configuration and FAIL result remain unchanged."
+}

@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.07062619179487228,
-        0.0718446746468544,
-        0.07201792299747467
-      ],
       "min": [
-        -0.07345037162303925,
-        -0.07197070866823196,
-        -3.8565991417272016e-05
+        -0.0734499990940094,
+        -0.07197300344705582,
+        5.999999656341972e-06
+      ],
+      "max": [
+        0.07062699645757675,
+        0.07184399664402008,
+        0.0720779961824417
       ],
       "size": [
-        0.14407656341791153,
-        0.14381538331508636,
-        0.07205648898889194
-      ]
+        0.14407699555158615,
+        0.1438170000910759,
+        0.07207199618278537
+      ],
+      "units": "m"
     },
     "description": "A mound of raw ground meat mixed with chopped garlic pieces and black pepper. The pile has an irregular, textured surface with a moist, pinkish-red color.",
     "name": "D00530 Minced Meat Garlic",
     "object_type": "rigid_bodies",
-    "total_mass": 0.5
+    "total_mass": 0.5,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00530",
   "parts": [
     {
       "bounds": {
-        "center": [
-          0.0003502055420737184,
-          0.0002608715166570778,
-          0.02516652200494897
+        "min": [
+          -0.0734499990940094,
+          -0.07197300344705582,
+          5.999999656341972e-06
         ],
         "max": [
-          0.07062619179487228,
-          0.0718446746468544,
-          0.07201792299747467
+          0.07062699645757675,
+          0.07184399664402008,
+          0.0720779961824417
         ],
-        "min": [
-          -0.07345037162303925,
-          -0.07197070866823196,
-          -3.8565991417272016e-05
-        ]
+        "size": [
+          0.14407699555158615,
+          0.1438170000910759,
+          0.07207199618278537
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         0.002068951951545135,
@@ -67,10 +73,27 @@
         "object_name": "D00530 Minced Meat Garlic",
         "part_name": "D00530 Minced Meat Garlic"
       },
-      "volume": 0.0007479787490390341
+      "volume": 0.0007479787490390341,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "1a7cdaa2a00444eb625610784a26b6ce52c7debdf9aaaa99c0d5921b56d562a4"
+    },
+    "usd_path": "batch16/D00530 Minced Meat Garlic/IsaacSim_assets_69f5eecd431507ff7cfe46a6/IsaacSim_asset_69f5eecd431507ff7cfe46a6.usd",
+    "usd_sha256": "dbd905addade6c7bd51bf3039c5316fb2323785fd6173a95aaa7aa442626b139",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {},
   "units": {
@@ -86,25 +109,82 @@
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
-        0.14407656341791153,
-        0.14381538331508636,
-        0.07205648898889194
-      ]
+        0.14407699555158615,
+        0.1438170000910759,
+        0.07207199618278537
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "dbd905addade6c7bd51bf3039c5316fb2323785fd6173a95aaa7aa442626b139",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.5
+      "value_kg": 0.5,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "dbd905addade6c7bd51bf3039c5316fb2323785fd6173a95aaa7aa442626b139",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.5,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 118,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "dbd905addade6c7bd51bf3039c5316fb2323785fd6173a95aaa7aa442626b139",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 118,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "dbd905addade6c7bd51bf3039c5316fb2323785fd6173a95aaa7aa442626b139",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/983ce54b21f5853ecb4e987ba832811623123ffc/reports/native/2026.10.13/shard-05/native-batch-001-evidence.tar.gz",
+        "sha256": "b2918621bcf29aeb9c3efb9e475920428e2a03eb72ccc1a277be7aea8d5e0903",
+        "hf_commit": "983ce54b21f5853ecb4e987ba832811623123ffc",
+        "size_bytes": 112679425
+      },
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "dbd905addade6c7bd51bf3039c5316fb2323785fd6173a95aaa7aa442626b139",
+      "supplemental_accepted": true,
+      "planned_test_count": 12,
+      "result_count": 12,
+      "passed": 11,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-13T22:47:36.071157+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "e5a14299c0f4dfff230b9e22c4270e670c407018bd2395cdc163af10cc3e3af2",
+      "qualification": "native-fleet-evidence/shard-05/native-batch-001/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.12623900175094604,
-        0.12668199837207794,
-        0.02802800014615059
-      ],
       "min": [
-        -0.1269019991159439,
-        -0.12649700045585632,
-        -2.9999999242136255e-05
+        -0.09517700225114822,
+        -0.09447400271892548,
+        -3.199999991920777e-05
+      ],
+      "max": [
+        0.09474799782037735,
+        0.09516099840402603,
+        0.02112100087106228
       ],
       "size": [
-        0.25314100086688995,
-        0.25317899882793427,
-        0.028058000145392725
-      ]
+        0.18992500007152557,
+        0.1896350011229515,
+        0.021153000870981487
+      ],
+      "units": "m"
     },
     "description": "A round wooden plate with a smooth, polished grain finish and a shallow, curved depression.",
     "name": "D00969 Wooden Plate",
     "object_type": "rigid_bodies",
-    "total_mass": 0.25
+    "total_mass": 0.25,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00969",
   "parts": [
     {
       "bounds": {
-        "center": [
-          -0.00025993260479173963,
-          -4.550197263685761e-05,
-          0.009738092130627351
+        "min": [
+          -0.09517700225114822,
+          -0.09447400271892548,
+          -3.199999991920777e-05
         ],
         "max": [
-          0.12623900175094604,
-          0.12668199837207794,
-          0.02802800014615059
+          0.09474799782037735,
+          0.09516099840402603,
+          0.02112100087106228
         ],
-        "min": [
-          -0.1269019991159439,
-          -0.12649700045585632,
-          -2.9999999242136255e-05
-        ]
+        "size": [
+          0.18992500007152557,
+          0.1896350011229515,
+          0.021153000870981487
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         -0.0007406624444413382,
@@ -67,10 +73,27 @@
         "object_name": "D00969 Wooden Plate",
         "part_name": "D00969 Wooden Plate"
       },
-      "volume": 0.00025357619461035305
+      "volume": 0.00025357619461035305,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "dab7073f7e8fe7a126f9c6430c3528bbb72093dd6d227d5654cd5aa8f316ea61"
+    },
+    "usd_path": "batch9/D00969 Wooden Plate/IsaacSim_assets_69f77a207f5104dbf28715b2/IsaacSim_asset_69f77a207f5104dbf28715b2.usd",
+    "usd_sha256": "5f5524e3375e8712ecd7df113b9410187eeb7b92df79e8cd4a9e9fe3c33fd37c",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {},
   "units": {
@@ -86,25 +109,82 @@
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
-        0.25314100086688995,
-        0.25317899882793427,
-        0.028058000145392725
-      ]
+        0.18992500007152557,
+        0.1896350011229515,
+        0.021153000870981487
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "5f5524e3375e8712ecd7df113b9410187eeb7b92df79e8cd4a9e9fe3c33fd37c",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.25
+      "value_kg": 0.25,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "5f5524e3375e8712ecd7df113b9410187eeb7b92df79e8cd4a9e9fe3c33fd37c",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.25,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 34,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "5f5524e3375e8712ecd7df113b9410187eeb7b92df79e8cd4a9e9fe3c33fd37c",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 34,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "5f5524e3375e8712ecd7df113b9410187eeb7b92df79e8cd4a9e9fe3c33fd37c",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/f969ce1253855d9cc7c71a53079def19994e1ef2/reports/native/2026.10.13/shard-04/native-batch-004-evidence.tar.gz",
+        "sha256": "79bae2906a9aad0be8d071120a78dde0e166a9e0d8750d487bbf1095f5ca7759",
+        "hf_commit": "f969ce1253855d9cc7c71a53079def19994e1ef2",
+        "size_bytes": 115294210
+      },
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "5f5524e3375e8712ecd7df113b9410187eeb7b92df79e8cd4a9e9fe3c33fd37c",
+      "supplemental_accepted": true,
+      "planned_test_count": 12,
+      "result_count": 12,
+      "passed": 11,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-14T01:18:16.529594+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "ef637a697502f7d55a49600ce68f9d153ba6579a5a913f99bad76ae49aa973ad",
+      "qualification": "native-fleet-evidence/shard-04/native-batch-004/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

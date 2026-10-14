@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.09717009961605072,
-        0.015148214064538479,
-        0.015095866285264492
-      ],
       "min": [
-        -0.13875797390937805,
+        -0.13875800371170044,
         -0.025947999209165573,
-        -7.184433343354613e-05
+        -7.000000186963007e-05
+      ],
+      "max": [
+        0.09716899693012238,
+        0.015149000100791454,
+        0.015073999762535095
       ],
       "size": [
-        0.23592807352542877,
-        0.04109621327370405,
-        0.015167710618698038
-      ]
+        0.23592700064182281,
+        0.04109699930995703,
+        0.015143999764404725
+      ],
+      "units": "m"
     },
     "description": "A chef's knife with a brushed steel blade and a dark wooden handle secured by three brass rivets.",
     "name": "D00474 Knife",
     "object_type": "rigid_bodies",
-    "total_mass": 0.25
+    "total_mass": 0.25,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00474",
   "parts": [
     {
       "bounds": {
-        "center": [
-          -0.012114265116714583,
-          0.0005182509236666788,
-          0.007553671422110294
+        "min": [
+          -0.13875800371170044,
+          -0.025947999209165573,
+          -7.000000186963007e-05
         ],
         "max": [
-          0.09717009961605072,
-          0.015148214064538479,
-          0.015095866285264492
+          0.09716899693012238,
+          0.015149000100791454,
+          0.015073999762535095
         ],
-        "min": [
-          -0.13875797390937805,
-          -0.025947999209165573,
-          -7.184433343354613e-05
-        ]
+        "size": [
+          0.23592700064182281,
+          0.04109699930995703,
+          0.015143999764404725
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         0.00780994658061293,
@@ -67,10 +73,27 @@
         "object_name": "D00474 Knife",
         "part_name": "D00474 Knife"
       },
-      "volume": 6.790675712089424e-05
+      "volume": 6.790675712089424e-05,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "7e2bddf252867312cdaad636e8df6fd33e4ca3807d47c32202a69f59cefce055"
+    },
+    "usd_path": "batch8/D00474 Knife/IsaacSim_assets_69f5dbbc431507ff7cf8e000/IsaacSim_asset_69f5dbbc431507ff7cf8e000.usd",
+    "usd_sha256": "e2a5260370a29c10591597665d6b7dd50267277d9f155394da80681603811cd9",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {},
   "units": {
@@ -86,25 +109,82 @@
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
-        0.23592807352542877,
-        0.04109621327370405,
-        0.015167710618698038
-      ]
+        0.23592700064182281,
+        0.04109699930995703,
+        0.015143999764404725
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "e2a5260370a29c10591597665d6b7dd50267277d9f155394da80681603811cd9",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.25
+      "value_kg": 0.25,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "e2a5260370a29c10591597665d6b7dd50267277d9f155394da80681603811cd9",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.25,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 3,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "e2a5260370a29c10591597665d6b7dd50267277d9f155394da80681603811cd9",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 3,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "e2a5260370a29c10591597665d6b7dd50267277d9f155394da80681603811cd9",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/8ead48695352eb0a17237ff53d41852732c7a2ee/reports/native/2026.10.13/shard-08/native-batch-001-evidence.tar.gz",
+        "sha256": "ce7c231c2e5f66b3dcd96515b06a270c973bcfaa1c33586bfb5da98483a6526c",
+        "hf_commit": "8ead48695352eb0a17237ff53d41852732c7a2ee",
+        "size_bytes": 105944745
+      },
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "e2a5260370a29c10591597665d6b7dd50267277d9f155394da80681603811cd9",
+      "supplemental_accepted": true,
+      "planned_test_count": 12,
+      "result_count": 12,
+      "passed": 11,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-13T22:48:37.420670+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "9874c6ff3f7fbcfaa2d2015e2e614c915e887fae06b2f6255dfcbbd0b1221b5e",
+      "qualification": "native-fleet-evidence/shard-08/native-batch-001/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

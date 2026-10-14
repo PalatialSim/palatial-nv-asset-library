@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.035663001239299774,
-        0.19721899926662445,
-        0.032756999135017395
-      ],
       "min": [
-        -0.03583500161767006,
-        -0.1516139954328537,
-        -8.299999899463728e-05
+        -0.027016999199986458,
+        -0.14856299757957458,
+        9.999999974752427e-07
+      ],
+      "max": [
+        0.027708999812602997,
+        0.1587429940700531,
+        0.03113899938762188
       ],
       "size": [
-        0.07149800285696983,
-        0.34883299469947815,
-        0.03283999913401203
-      ]
+        0.054725999012589455,
+        0.3073059916496277,
+        0.031137999387624404
+      ],
+      "units": "m"
     },
     "description": "A flat stainless-steel turner spatula with a thin rounded rectangular blade, bent neck, and riveted wooden handle. The blade has a brushed or worn metallic finish, while the handle varies in stained wood tones with small metal rivets.",
     "name": "D00750 Spatula",
     "object_type": "rigid_bodies",
-    "total_mass": 0.18
+    "total_mass": 0.18000000715255737,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00750",
   "parts": [
     {
       "bounds": {
-        "center": [
-          -9.514627855820213e-05,
-          -0.0006806739450605117,
-          0.016216343573362275
+        "min": [
+          -0.027016999199986458,
+          -0.14856299757957458,
+          9.999999974752427e-07
         ],
         "max": [
-          0.035663001239299774,
-          0.19721899926662445,
-          0.032756999135017395
+          0.027708999812602997,
+          0.1587429940700531,
+          0.03113899938762188
         ],
-        "min": [
-          -0.03583500161767006,
-          -0.1516139954328537,
-          -8.299999899463728e-05
-        ]
+        "size": [
+          0.054725999012589455,
+          0.3073059916496277,
+          0.031137999387624404
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         -0.00020172586061404838,
@@ -59,7 +65,7 @@
         0.0010090598281201609,
         0.0010277086816802576
       ],
-      "mass": 0.18,
+      "mass": 0.18000000715255737,
       "material": "stainless_steel",
       "name": "D00750 Spatula",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00750 Spatula",
         "part_name": "D00750 Spatula"
       },
-      "volume": 0.0002537635691161461
+      "volume": 0.0002537635691161461,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "b64c4431dd75298a11ece68a0f7f7408f44aa796858c9e4d4c589f7c65e8cb5b"
+    },
+    "usd_path": "batch2/D00750 Spatula/D00750_Spatula.usd",
+    "usd_sha256": "6dd6b4bd69c2102efae72da51da11d1bfb2afa1b0ac987074a3eb6b0e3f786a4",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {},
   "units": {
@@ -86,25 +109,82 @@
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
-        0.07149800285696983,
-        0.34883299469947815,
-        0.03283999913401203
-      ]
+        0.054725999012589455,
+        0.3073059916496277,
+        0.031137999387624404
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "6dd6b4bd69c2102efae72da51da11d1bfb2afa1b0ac987074a3eb6b0e3f786a4",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.18
+      "value_kg": 0.18000000715255737,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "6dd6b4bd69c2102efae72da51da11d1bfb2afa1b0ac987074a3eb6b0e3f786a4",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.18000000715255737,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 3,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "6dd6b4bd69c2102efae72da51da11d1bfb2afa1b0ac987074a3eb6b0e3f786a4",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 3,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "6dd6b4bd69c2102efae72da51da11d1bfb2afa1b0ac987074a3eb6b0e3f786a4",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/9e1220ab39d1b75a24dc3df97e1aace408dc7e37/reports/native/2026.10.13/shard-06/native-batch-003-evidence.tar.gz",
+        "sha256": "0b3f267ea5bf1b6375f8e73ed11ae4c7184f4ea200038b7ee090eaa968653e68",
+        "hf_commit": "9e1220ab39d1b75a24dc3df97e1aace408dc7e37",
+        "size_bytes": 109195181
+      },
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "6dd6b4bd69c2102efae72da51da11d1bfb2afa1b0ac987074a3eb6b0e3f786a4",
+      "supplemental_accepted": true,
+      "planned_test_count": 12,
+      "result_count": 12,
+      "passed": 11,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-14T00:21:54.164765+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "266189f13fb0e493cadd3542e79b5eb7e130d511b1faf19b1e8eac163abd28f1",
+      "qualification": "native-fleet-evidence/shard-06/native-batch-003/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

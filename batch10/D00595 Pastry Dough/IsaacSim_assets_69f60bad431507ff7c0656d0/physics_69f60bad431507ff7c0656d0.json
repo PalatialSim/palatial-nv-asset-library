@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.17260125279426575,
-        0.17241549491882324,
-        0.17540806531906128
-      ],
       "min": [
-        -0.2134450227022171,
-        -0.1045369952917099,
-        9.686733392300084e-05
+        -0.21344499289989471,
+        -0.1045370027422905,
+        9.600000339560211e-05
+      ],
+      "max": [
+        0.1725980043411255,
+        0.17241600155830383,
+        0.1754080057144165
       ],
       "size": [
-        0.38604627549648285,
-        0.27695249021053314,
-        0.17531119798513828
-      ]
+        0.3860429972410202,
+        0.27695300430059433,
+        0.1753120057110209
+      ],
+      "units": "m"
     },
     "description": "A rectangular block of layered raw pastry dough with a flour-dusted top surface and visibly defined strata on its sides.",
     "name": "D00595 Pastry Dough",
     "object_type": "rigid_bodies",
-    "total_mass": 0.55
+    "total_mass": 0.550000011920929,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00595",
   "parts": [
     {
       "bounds": {
-        "center": [
-          -0.015430475441728809,
-          0.02262678956319963,
-          0.07972413980889154
+        "min": [
+          -0.21344499289989471,
+          -0.1045370027422905,
+          9.600000339560211e-05
         ],
         "max": [
-          0.17260125279426575,
-          0.17241549491882324,
-          0.17540806531906128
+          0.1725980043411255,
+          0.17241600155830383,
+          0.1754080057144165
         ],
-        "min": [
-          -0.2134450227022171,
-          -0.1045369952917099,
-          9.686733392300084e-05
-        ]
+        "size": [
+          0.3860429972410202,
+          0.27695300430059433,
+          0.1753120057110209
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         -0.018392309311951353,
@@ -59,7 +65,7 @@
         0.006829521734469164,
         0.00895572226191512
       ],
-      "mass": 0.55,
+      "mass": 0.550000011920929,
       "material": "dough_flour_water_mixture",
       "name": "D00595 Pastry Dough",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00595 Pastry Dough",
         "part_name": "D00595 Pastry Dough"
       },
-      "volume": 0.015036300361152534
+      "volume": 0.015036300361152534,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "6966a9c1936e1b7ba5963011873e5f64861c990a5c79770290f95d667ba69936"
+    },
+    "usd_path": "batch10/D00595 Pastry Dough/IsaacSim_assets_69f60bad431507ff7c0656d0/IsaacSim_asset_69f60bad431507ff7c0656d0.usd",
+    "usd_sha256": "ef750c107748a8dc4b920dea2ddb4c0e83dc4bed3d641d243e0887af1e598551",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {},
   "units": {
@@ -86,25 +109,82 @@
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
-        0.38604627549648285,
-        0.27695249021053314,
-        0.17531119798513828
-      ]
+        0.3860429972410202,
+        0.27695300430059433,
+        0.1753120057110209
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "ef750c107748a8dc4b920dea2ddb4c0e83dc4bed3d641d243e0887af1e598551",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.55
+      "value_kg": 0.550000011920929,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "ef750c107748a8dc4b920dea2ddb4c0e83dc4bed3d641d243e0887af1e598551",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.550000011920929,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 12,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "ef750c107748a8dc4b920dea2ddb4c0e83dc4bed3d641d243e0887af1e598551",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 12,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "ef750c107748a8dc4b920dea2ddb4c0e83dc4bed3d641d243e0887af1e598551",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/3d2c263f875319003d635d66c550e076f9357ab6/reports/native/2026.10.13/shard-10/native-batch-002-evidence.tar.gz",
+        "sha256": "1fe7298db6bafa790888478c8b334a62fd2dcc8a39909b1774bf0b2a300daaba",
+        "hf_commit": "3d2c263f875319003d635d66c550e076f9357ab6",
+        "size_bytes": 108936847
+      },
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "ef750c107748a8dc4b920dea2ddb4c0e83dc4bed3d641d243e0887af1e598551",
+      "supplemental_accepted": true,
+      "planned_test_count": 12,
+      "result_count": 12,
+      "passed": 11,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-13T23:30:23.533975+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "86cf9eef079026a45ee8ebc6c30d72999af6835a47a908f83f5b09a3fc83a178",
+      "qualification": "native-fleet-evidence/shard-10/native-batch-002/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

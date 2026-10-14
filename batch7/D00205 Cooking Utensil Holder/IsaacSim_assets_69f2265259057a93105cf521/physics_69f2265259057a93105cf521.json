@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.06823299825191498,
-        0.07165499776601791,
-        0.24849699437618256
-      ],
       "min": [
-        -0.09841900318861008,
-        -0.1124420017004013,
-        -0.00020500000391621143
+        -0.06631900370121002,
+        -0.06710100173950195,
+        -0.00013499999477062374
+      ],
+      "max": [
+        0.06497599929571152,
+        0.0676489993929863,
+        0.14591600000858307
       ],
       "size": [
-        0.16665200144052505,
-        0.18409699946641922,
-        0.24870199438009877
-      ]
+        0.13129500299692154,
+        0.13475000113248825,
+        0.1460510000033537
+      ],
+      "units": "m"
     },
     "description": "A square, open-top wooden bin with slightly tapered sides, rounded corners, and a thick rim. It has a glossy medium-brown wood grain finish over solid wood panels.",
     "name": "D00205 Cooking Utensil Holder",
     "object_type": "rigid_bodies",
-    "total_mass": 1.9
+    "total_mass": 1.899999976158142,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00205",
   "parts": [
     {
       "bounds": {
-        "center": [
-          -0.0031100093381257517,
-          -0.0011949742484124231,
-          0.08893012011103753
+        "min": [
+          -0.06631900370121002,
+          -0.06710100173950195,
+          -0.00013499999477062374
         ],
         "max": [
-          0.06823299825191498,
-          0.07165499776601791,
-          0.24849699437618256
+          0.06497599929571152,
+          0.0676489993929863,
+          0.14591600000858307
         ],
-        "min": [
-          -0.09841900318861008,
-          -0.1124420017004013,
-          -0.00020500000391621143
-        ]
+        "size": [
+          0.13129500299692154,
+          0.13475000113248825,
+          0.1460510000033537
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         -0.0006444897894705926,
@@ -59,7 +65,7 @@
         0.005240162147066378,
         0.00540278504212576
       ],
-      "mass": 1.9,
+      "mass": 1.899999976158142,
       "material": "wood",
       "name": "D00205 Cooking Utensil Holder",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00205 Cooking Utensil Holder",
         "part_name": "D00205 Cooking Utensil Holder"
       },
-      "volume": 0.00184227077918007
+      "volume": 0.00184227077918007,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "890713c1866b619864efbfd5912e70c91b38a1898aba59c67186cbb34f11ae30"
+    },
+    "usd_path": "batch7/D00205 Cooking Utensil Holder/IsaacSim_assets_69f2265259057a93105cf521/IsaacSim_asset_69f2265259057a93105cf521.usd",
+    "usd_sha256": "32121b45e734f3006911413fe5973f4242d9f0b626ec0b4c069f231d6d48b4dd",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {},
   "units": {
@@ -86,25 +109,82 @@
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
-        0.16665200144052505,
-        0.18409699946641922,
-        0.24870199438009877
-      ]
+        0.13129500299692154,
+        0.13475000113248825,
+        0.1460510000033537
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "32121b45e734f3006911413fe5973f4242d9f0b626ec0b4c069f231d6d48b4dd",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 1.9
+      "value_kg": 1.899999976158142,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "32121b45e734f3006911413fe5973f4242d9f0b626ec0b4c069f231d6d48b4dd",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 1.899999976158142,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 95,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "32121b45e734f3006911413fe5973f4242d9f0b626ec0b4c069f231d6d48b4dd",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 95,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "32121b45e734f3006911413fe5973f4242d9f0b626ec0b4c069f231d6d48b4dd",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/0b0026c5925b6cee49dfaadae539590e90ae9c45/reports/native/2026.10.13/shard-01/native-batch-002-evidence.tar.gz",
+        "sha256": "3ccc174ab56d20bc49bbd85aacc667d94b67ee3993aec66a82b2cdae557b2881",
+        "hf_commit": "0b0026c5925b6cee49dfaadae539590e90ae9c45",
+        "size_bytes": 110749037
+      },
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "32121b45e734f3006911413fe5973f4242d9f0b626ec0b4c069f231d6d48b4dd",
+      "supplemental_accepted": true,
+      "planned_test_count": 12,
+      "result_count": 12,
+      "passed": 11,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-13T21:36:01.595808+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "c8a4f8bcc07c1170a0a399a13e04821ed69291fd97f6bc6ef16e67e4e59ebe0d",
+      "qualification": "native-fleet-evidence/shard-01/native-batch-002/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

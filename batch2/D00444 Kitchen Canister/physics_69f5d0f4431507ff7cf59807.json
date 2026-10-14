@@ -124,13 +124,13 @@
   ],
   "provenance": {
     "metadata_repair": {
-      "date": "2026-10-08T04:48:10.976448+00:00",
+      "date": "2026-10-13T19:50:31.621292+00:00",
       "source": "delivered USD inspected with OpenUSD 26.8",
-      "report": "reports/metadata-repair-20261008.json",
-      "original_physics_sha256": "f27907790db7eb0f11dc2889a8465f90f7cf9057ca267b8ce45cae2a612f9c56"
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "c88239866a388991f9015e9ec049e31e6d05a5e120ef6342bf8cb46a4e823dff"
     },
     "usd_path": "batch2/D00444 Kitchen Canister/D00444_Kitchen_Canister.usd",
-    "usd_sha256": "cb8c1538e3dbf9fa41ae7754223421aab66175ae541187e5337ec9a889d4b204",
+    "usd_sha256": "821502067f8c808fee16afa3cd14c993d3f39cc049d54c1190787dcc78aff83a",
     "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
     "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
     "source_meters_per_unit": 1.0,
@@ -157,9 +157,9 @@
         0.09253400191664696,
         0.12327300214383285
       ],
-      "checked_at": "2026-10-08T04:48:10.976448+00:00",
-      "evidence": "reports/metadata-repair-20261008.json",
-      "usd_sha256": "cb8c1538e3dbf9fa41ae7754223421aab66175ae541187e5337ec9a889d4b204",
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "821502067f8c808fee16afa3cd14c993d3f39cc049d54c1190787dcc78aff83a",
       "scope": "authored_usd_dimensions",
       "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
       "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
@@ -168,9 +168,9 @@
       "status": "verified",
       "confidence": "high",
       "value_kg": 0.3099999912083149,
-      "checked_at": "2026-10-08T04:48:10.976448+00:00",
-      "evidence": "reports/metadata-repair-20261008.json",
-      "usd_sha256": "cb8c1538e3dbf9fa41ae7754223421aab66175ae541187e5337ec9a889d4b204",
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "821502067f8c808fee16afa3cd14c993d3f39cc049d54c1190787dcc78aff83a",
       "scope": "authored_usd_mass_consistency",
       "part_sum_kg": 0.3099999912083149,
       "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
@@ -179,9 +179,9 @@
       "status": "verified",
       "confidence": "high",
       "shape_count": 64,
-      "checked_at": "2026-10-08T04:48:10.976448+00:00",
-      "evidence": "reports/metadata-repair-20261008.json",
-      "usd_sha256": "cb8c1538e3dbf9fa41ae7754223421aab66175ae541187e5337ec9a889d4b204",
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "821502067f8c808fee16afa3cd14c993d3f39cc049d54c1190787dcc78aff83a",
       "scope": "authored_usd_collision_schema",
       "enabled_shape_count": 64,
       "approximations": [
@@ -193,18 +193,42 @@
       "status": "verified",
       "confidence": "high",
       "moving_joints": 0,
-      "checked_at": "2026-10-08T04:48:10.976448+00:00",
-      "evidence": "reports/metadata-repair-20261008.json",
-      "usd_sha256": "cb8c1538e3dbf9fa41ae7754223421aab66175ae541187e5337ec9a889d4b204",
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "821502067f8c808fee16afa3cd14c993d3f39cc049d54c1190787dcc78aff83a",
       "scope": "authored_usd_joint_schema",
       "joint_count": 0,
       "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
     },
     "scope": "authored_usd_metadata_consistency",
     "runtime": {
-      "status": "not_revalidated",
-      "scope": "native_simulation",
-      "note": "Existing simulation videos remain available. This repair does not claim new drop/contact, friction, stability or joint-actuation tests."
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/59b2a23c53b5e702443211637ef46b78dfdfe7c7/reports/native/2026.10.13/shard-10/native-batch-001-evidence.tar.gz",
+        "sha256": "b26eeecce3d240741f91e5247f21aec347ae5239c5650bb5ce593aad384b12da",
+        "hf_commit": "59b2a23c53b5e702443211637ef46b78dfdfe7c7",
+        "size_bytes": 112055233
+      },
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "821502067f8c808fee16afa3cd14c993d3f39cc049d54c1190787dcc78aff83a",
+      "supplemental_accepted": true,
+      "planned_test_count": 14,
+      "result_count": 14,
+      "passed": 11,
+      "skipped": 3,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-13T23:05:20.228705+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "bc3216a29bd3d6b8b1c07f38f2b15f4dd43dd3a6490f2a44759bc0473437a7db",
+      "qualification": "native-fleet-evidence/shard-10/native-batch-001/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

@@ -1,3 +1,13 @@
+<!-- simready-release-20261013 -->
+# 2026-10-13 SimReady completion
+
+The 2026-10-13 release uses NVIDIA Robotics-Prop 4.0.0 with separate single-body, multi-body and articulated checks in Isaac Sim 6.1.0.0 (PhysX). Current acceptance: **1,013 static profile passes, 957 native passes, 56 native completions with disclosed SDK findings and 1,013 completed SimReady packages out of 1,013 assets.** The [release manifest](reports/current-release.json) binds the catalog, physics metadata and per-asset evidence. Native passes require complete planned test coverage, unchanged USD bytes, an independently checked black-background thumbnail and, for moving joints, independent joint-constraint checks.
+
+The release repairs default prims, portable material connections and texture paths, semantics, invalid hulls and extents, reversed normals, unit metadata and joint limits. The basket uses speculative CCD after a failing slope-drop control. The steamer has an explicit articulation root and sufficient solver iterations, with all 15 moving joints independently checked. Source visual geometry and authored mass were preserved for those native repairs.
+
+The original batch layout remains available. Completed logical asset folders add official WRAPP packages and immutable manifest URLs. All catalog and gallery status fields come from actual per-asset evidence. Earlier name and metadata release history follows below.
+
+<!-- previous-release-notes -->
 # Metadata release — 2026-10-08
 
 Repaired and standardized metadata for 154 assets across the library. This includes every reported asset and three additional assets with the same legacy floating-joint classification issue.

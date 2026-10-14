@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.10228700190782547,
-        0.027737999334931374,
-        0.05722000077366829
-      ],
       "min": [
-        -0.09997999668121338,
-        -0.02688699960708618,
-        -7.000000186963007e-05
+        -0.11554399877786636,
+        -0.032496001571416855,
+        3.999999989900971e-06
+      ],
+      "max": [
+        0.11292999982833862,
+        0.030412999913096428,
+        0.06435099989175797
       ],
       "size": [
-        0.20226699858903885,
-        0.054624998942017555,
-        0.05729000077553792
-      ]
+        0.228473998606205,
+        0.06290900148451328,
+        0.06434699989176806
+      ],
+      "units": "m"
     },
     "description": "A dark green cucumber with a textured, bumpy skin and a small stem attached at one end.",
     "name": "D00220 Cucumber",
     "object_type": "rigid_bodies",
-    "total_mass": 0.6
+    "total_mass": 0.6000000238418579,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00220",
   "parts": [
     {
       "bounds": {
-        "center": [
-          0.0040906009376577915,
-          0.00045067668156186766,
-          0.029985535399475984
+        "min": [
+          -0.11554399877786636,
+          -0.032496001571416855,
+          3.999999989900971e-06
         ],
         "max": [
-          0.10228700190782547,
-          0.027737999334931374,
-          0.05722000077366829
+          0.11292999982833862,
+          0.030412999913096428,
+          0.06435099989175797
         ],
-        "min": [
-          -0.09997999668121338,
-          -0.02688699960708618,
-          -7.000000186963007e-05
-        ]
+        "size": [
+          0.228473998606205,
+          0.06290900148451328,
+          0.06434699989176806
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         0.007136628982408436,
@@ -59,7 +65,7 @@
         0.0016512908512684992,
         0.001658948948821062
       ],
-      "mass": 0.6,
+      "mass": 0.6000000238418579,
       "material": "organic_matter",
       "name": "D00220 Cucumber",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00220 Cucumber",
         "part_name": "D00220 Cucumber"
       },
-      "volume": 0.00044295399297901515
+      "volume": 0.00044295399297901515,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "1a5ae446c6858698bf6e117699577da33b2731bdc239491b82e529aca868bf1f"
+    },
+    "usd_path": "batch9/D00220 Cucumber/IsaacSim_assets_69f2291159057a93105d3f6a/IsaacSim_asset_69f2291159057a93105d3f6a.usd",
+    "usd_sha256": "28630e63627be528699dd6f5782cc98e293b9c4f6a4da3d21d620cb1cc5a63e1",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {},
   "units": {
@@ -86,25 +109,82 @@
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
-        0.20226699858903885,
-        0.054624998942017555,
-        0.05729000077553792
-      ]
+        0.228473998606205,
+        0.06290900148451328,
+        0.06434699989176806
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "28630e63627be528699dd6f5782cc98e293b9c4f6a4da3d21d620cb1cc5a63e1",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.6
+      "value_kg": 0.6000000238418579,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "28630e63627be528699dd6f5782cc98e293b9c4f6a4da3d21d620cb1cc5a63e1",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.6000000238418579,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 4,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "28630e63627be528699dd6f5782cc98e293b9c4f6a4da3d21d620cb1cc5a63e1",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 4,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "28630e63627be528699dd6f5782cc98e293b9c4f6a4da3d21d620cb1cc5a63e1",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/e0278d64cbaaf78f53efbdc0bae68f8b12b00344/reports/native/2026.10.13/shard-02/native-batch-002-evidence.tar.gz",
+        "sha256": "fd1f0ec0f08ec86a73ae4b8a3960a67a7c44034d6af76b7cff8d227192c25ae1",
+        "hf_commit": "e0278d64cbaaf78f53efbdc0bae68f8b12b00344",
+        "size_bytes": 109097036
+      },
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "28630e63627be528699dd6f5782cc98e293b9c4f6a4da3d21d620cb1cc5a63e1",
+      "supplemental_accepted": true,
+      "planned_test_count": 12,
+      "result_count": 12,
+      "passed": 11,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-13T21:39:08.561154+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "d636711e33afe40d57eb7c367745dadc8eed9498b4c569fef59a53cac98410da",
+      "qualification": "native-fleet-evidence/shard-02/native-batch-002/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

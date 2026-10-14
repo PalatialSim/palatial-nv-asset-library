@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.06296700239181519,
-        0.2616987582296133,
-        0.08476199954748154
-      ],
       "min": [
         -0.0634479969739914,
-        0.0011757502874161219,
-        -0.07213100045919418
+        -0.08476199954748154,
+        0.0011757502874161219
+      ],
+      "max": [
+        0.06296700239181519,
+        0.07213100045919418,
+        0.2616987582296133
       ],
       "size": [
         0.12641499936580658,
-        0.2605230079421972,
-        0.15689300000667572
-      ]
+        0.15689300000667572,
+        0.2605230079421972
+      ],
+      "units": "m"
     },
     "description": "D00396 Banana Hanger",
     "name": "D00396 Banana Hanger",
     "object_type": "rigid_bodies",
-    "total_mass": 0.4
+    "total_mass": 0.4000000059604645,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00396",
   "parts": [
     {
       "bounds": {
-        "center": [
-          -0.00024049729108810425,
-          0.1314372542585147,
-          0.006315499544143677
+        "min": [
+          -0.0634479969739914,
+          -0.08476199954748154,
+          0.0011757502874161219
         ],
         "max": [
           0.06296700239181519,
-          0.2616987582296133,
-          0.08476199954748154
+          0.07213100045919418,
+          0.2616987582296133
         ],
-        "min": [
-          -0.0634479969739914,
-          0.0011757502874161219,
-          -0.07213100045919418
-        ]
+        "size": [
+          0.12641499936580658,
+          0.15689300000667572,
+          0.2605230079421972
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         -0.00025026799994520843,
@@ -59,7 +65,7 @@
         0.0017612206283956766,
         0.0019964235834777355
       ],
-      "mass": 0.4,
+      "mass": 0.4000000059604645,
       "material": "wood",
       "name": "D00396 Banana Hanger",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00396 Banana Hanger",
         "part_name": "D00396 Banana Hanger"
       },
-      "volume": 0.0006666666766007741
+      "volume": 0.0006666666766007741,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "9f110cba9d5846555020a671c1e66bd7f4b247cfa8e9ec73c3d7f6e43d8001eb"
+    },
+    "usd_path": "batch33/D00396 Banana Hanger/IsaacSim_assets_6a82cd57b7a9c4204accb570/IsaacSim_asset_6a82cd57b7a9c4204accb570.usd",
+    "usd_sha256": "d6596c22e300bc281aa16f282374d1faae9e9ac9f72a89294eb4937a6d2f6ac0",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -89,24 +112,81 @@
       "up_axis": "Z",
       "bounds_m": [
         0.12641499936580658,
-        0.2605230079421972,
-        0.15689300000667572
-      ]
+        0.15689300000667572,
+        0.2605230079421972
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "d6596c22e300bc281aa16f282374d1faae9e9ac9f72a89294eb4937a6d2f6ac0",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.4
+      "value_kg": 0.4000000059604645,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "d6596c22e300bc281aa16f282374d1faae9e9ac9f72a89294eb4937a6d2f6ac0",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.4000000059604645,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 11,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "d6596c22e300bc281aa16f282374d1faae9e9ac9f72a89294eb4937a6d2f6ac0",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 11,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "d6596c22e300bc281aa16f282374d1faae9e9ac9f72a89294eb4937a6d2f6ac0",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/a611feb47a2aea2825d1ad29cc2a96eb796ae567/reports/native/2026.10.13/shard-04/native-batch-001-evidence.tar.gz",
+        "sha256": "f95addf8b43044cb8c9395a6f28152a9caf6d08218fead1945945947b97183ac",
+        "hf_commit": "a611feb47a2aea2825d1ad29cc2a96eb796ae567",
+        "size_bytes": 111872385
+      },
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "d6596c22e300bc281aa16f282374d1faae9e9ac9f72a89294eb4937a6d2f6ac0",
+      "supplemental_accepted": true,
+      "planned_test_count": 12,
+      "result_count": 12,
+      "passed": 11,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-13T23:28:25.723478+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "22cd016a8b274e6a9eaa5c28be89bc3ca44100fb523fac9c80e0e8b4a9786a03",
+      "qualification": "native-fleet-evidence/shard-04/native-batch-001/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

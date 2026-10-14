@@ -168,6 +168,47 @@
             "/World/part_01"
           ],
           "proxyPrim": []
+        },
+        "id": "lid_hinge",
+        "path": "/World/Joints/lid_hinge",
+        "usd_type": "PhysicsRevoluteJoint",
+        "authored_usd": {
+          "id": "lid_hinge",
+          "source_prim_path": "/World/Joints/lid_hinge",
+          "joint_type": "PhysicsRevoluteJoint",
+          "body0": [
+            "/World/part_00"
+          ],
+          "body1": [
+            "/World/part_01"
+          ],
+          "joint_enabled": true,
+          "axis": "X",
+          "lowerLimit": 0.0,
+          "upperLimit": 50.0,
+          "localPos0": [
+            0.0,
+            0.06650000065565109,
+            0.29313698410987854
+          ],
+          "localPos1": [
+            0.0,
+            0.06650000065565109,
+            0.29313698410987854
+          ],
+          "localRot0": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "localRot1": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "static_frames": []
         }
       },
       {
@@ -336,6 +377,47 @@
             "/World/part_02"
           ],
           "proxyPrim": []
+        },
+        "id": "lever_pivot",
+        "path": "/World/Joints/lever_pivot",
+        "usd_type": "PhysicsRevoluteJoint",
+        "authored_usd": {
+          "id": "lever_pivot",
+          "source_prim_path": "/World/Joints/lever_pivot",
+          "joint_type": "PhysicsRevoluteJoint",
+          "body0": [
+            "/World/part_00"
+          ],
+          "body1": [
+            "/World/part_02"
+          ],
+          "joint_enabled": true,
+          "axis": "X",
+          "lowerLimit": 0.0,
+          "upperLimit": 30.0,
+          "localPos0": [
+            0.0,
+            -0.10300000011920929,
+            0.17163698375225067
+          ],
+          "localPos1": [
+            0.0,
+            -0.10300000011920929,
+            0.17163698375225067
+          ],
+          "localRot0": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "localRot1": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "static_frames": []
         }
       },
       {
@@ -477,52 +559,96 @@
             "/World/part_03"
           ],
           "proxyPrim": []
+        },
+        "id": "FixedJoint",
+        "path": "/World/Joints/FixedJoint",
+        "usd_type": "PhysicsFixedJoint",
+        "authored_usd": {
+          "id": "FixedJoint",
+          "source_prim_path": "/World/Joints/FixedJoint",
+          "joint_type": "PhysicsFixedJoint",
+          "body0": [
+            "/World/part_00"
+          ],
+          "body1": [
+            "/World/part_03"
+          ],
+          "joint_enabled": true,
+          "localPos0": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "localPos1": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "localRot0": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "localRot1": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "static_frames": []
         }
       }
-    ]
+    ],
+    "moving_joints": 2,
+    "rigid_body_count": 4,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.0760099942314684,
-        0.3004198727216288,
-        0.13251365714393712
-      ],
       "min": [
         -0.07590230396123217,
-        0.0016290345555630026,
-        -0.07976547978962512
+        -0.13251365714393712,
+        0.0016290345555630026
+      ],
+      "max": [
+        0.0760099942314684,
+        0.07976547978962512,
+        0.3004198727216288
       ],
       "size": [
         0.15191229819270058,
-        0.2987908381660658,
-        0.21227913693356223
-      ]
+        0.21227913693356223,
+        0.2987908381660658
+      ],
+      "units": "m"
     },
     "description": "Hot Water Dispenser",
     "name": "part_00",
     "object_type": "rigid_bodies",
-    "total_mass": 1.6999999787658453
+    "total_mass": 1.6999999787658453,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00157",
   "parts": [
     {
       "bounds": {
-        "center": [
-          5.3845135118114895e-05,
-          0.15065332161907186,
-          0.026374088677156002
+        "min": [
+          -0.07590230396123217,
+          -0.13251365714393712,
+          0.0016290345555630026
         ],
         "max": [
           0.0760099942314684,
-          0.2996776086825807,
-          0.13251365714393712
+          0.07976547978962512,
+          0.2996776086825807
         ],
-        "min": [
-          -0.07590230396123217,
-          0.0016290345555630026,
-          -0.07976547978962512
-        ]
+        "size": [
+          0.15191229819270058,
+          0.21227913693356223,
+          0.2980485741270177
+        ],
+        "units": "m"
       },
       "collision": {},
       "id": "part_00",
@@ -532,25 +658,28 @@
       "source": {
         "object_name": "World",
         "part_name": "part_00"
-      }
+      },
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     },
     {
       "bounds": {
-        "center": [
-          0.00043075506209384884,
-          0.2900362710287626,
-          -0.004718626378669322
+        "min": [
+          -0.06789751768451661,
+          -0.06208321348839413,
+          0.2796526693358965
         ],
         "max": [
           0.06875902780870431,
-          0.3004198727216288,
-          0.06208321348839413
+          0.07152046624573277,
+          0.3004198727216288
         ],
-        "min": [
-          -0.06789751768451661,
-          0.2796526693358965,
-          -0.07152046624573277
-        ]
+        "size": [
+          0.13665654549322093,
+          0.1336036797341269,
+          0.02076720338573229
+        ],
+        "units": "m"
       },
       "collision": {},
       "id": "part_01",
@@ -560,25 +689,28 @@
       "source": {
         "object_name": "World",
         "part_name": "part_01"
-      }
+      },
+      "source_prim_path": "/World/part_01",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     },
     {
       "bounds": {
-        "center": [
-          0.00027660746038905143,
-          0.18550005611005382,
-          0.11393220779937459
+        "min": [
+          -0.018249319899968523,
+          -0.12919661630706164,
+          0.16676761833642803
         ],
         "max": [
           0.018802534820746626,
-          0.2042324938836796,
-          0.1291966163070616
+          -0.09866779929168756,
+          0.2042324938836796
         ],
-        "min": [
-          -0.018249319899968523,
-          0.16676761833642803,
-          0.09866779929168756
-        ]
+        "size": [
+          0.03705185472071515,
+          0.030528817015374077,
+          0.03746487554725156
+        ],
+        "units": "m"
       },
       "collision": {},
       "id": "part_02",
@@ -588,25 +720,28 @@
       "source": {
         "object_name": "World",
         "part_name": "part_02"
-      }
+      },
+      "source_prim_path": "/World/part_02",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     },
     {
       "bounds": {
-        "center": [
-          4.1083565474938494e-05,
-          0.028359804061731785,
-          0.09630216790914556
+        "min": [
+          -0.05498257393615777,
+          -0.1280840473971629,
+          0.00947228595096129
         ],
         "max": [
           0.055064741067107646,
-          0.04724732217250228,
-          0.1280840473971629
+          -0.06452028842112821,
+          0.04724732217250228
         ],
-        "min": [
-          -0.05498257393615777,
-          0.009472285950961291,
-          0.06452028842112821
-        ]
+        "size": [
+          0.11004731500326542,
+          0.06356375897603468,
+          0.03777503622154099
+        ],
+        "units": "m"
       },
       "collision": {},
       "id": "part_03",
@@ -616,12 +751,362 @@
       "source": {
         "object_name": "World",
         "part_name": "part_03"
-      }
+      },
+      "source_prim_path": "/World/part_03",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "751e4faede2fbab08b47f8f1d8c3334e38ef5224068f8b3c89aafc7a0282c320"
+    },
+    "usd_path": "batch35/D00157_Hot_Water_Dispenser/IsaacSim_assets_D00157/IsaacSim_asset_D00157.usd",
+    "usd_sha256": "7c3819136dd2c4560dcebf5ebb95b34c006942bd243062ef0534f8b2962f4490",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification.",
+    "native_runtime_repairs": [
+      {
+        "case": "native-repairs-full-v2",
+        "old_usd_sha256": "1c687f9f4f6823e4679d51202e694c9822b48419e48b214afb338e8a627649dd",
+        "new_usd_sha256": "7c3819136dd2c4560dcebf5ebb95b34c006942bd243062ef0534f8b2962f4490",
+        "changes": [
+          {
+            "kind": "outward_winding_on_observed_underside_cover_and_four_feet",
+            "mesh": "/World/part_00/mesh_power_base",
+            "flipped_faces": 1052,
+            "components": [
+              {
+                "faces": 108,
+                "signed_volume_before": -5.458410928639613e-05
+              },
+              {
+                "faces": 236,
+                "signed_volume_before": -2.0001412898797846e-06
+              },
+              {
+                "faces": 236,
+                "signed_volume_before": -2.0001412898797855e-06
+              },
+              {
+                "faces": 236,
+                "signed_volume_before": -2.0001412898797846e-06
+              },
+              {
+                "faces": 236,
+                "signed_volume_before": -2.0001412898797846e-06
+              }
+            ],
+            "points_and_uv_correspondence_preserved": true
+          }
+        ],
+        "qualification": "native-fleet-evidence/shard-13/native-batch-000/qualification-normalized.json"
+      }
+    ]
+  },
   "schema_version": "1.0",
-  "simulation": {},
+  "simulation": {
+    "authored_usd_physics_properties": [
+      {
+        "prim_path": "/World/physicsScene",
+        "authored_attributes": {
+          "physics:gravityDirection": "(0, 0, -1)",
+          "physics:gravityMagnitude": "9.8100004196167"
+        }
+      },
+      {
+        "prim_path": "/World/part_00",
+        "authored_attributes": {
+          "physics:angularVelocity": "(0, 0, 0)",
+          "physics:mass": "1.399999976158142",
+          "physics:velocity": "(0, 0, 0)"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/PhysicsMaterials/pm",
+        "authored_attributes": {
+          "physics:dynamicFriction": "0.4000000059604645",
+          "physics:restitution": "0.10000000149011612",
+          "physics:staticFriction": "0.5"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders/Collider_0",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders/Collider_1",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders/Collider_2",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders/Collider_3",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders/Collider_4",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders/Collider_5",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders/Collider_6",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders/Collider_7",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders/Collider_8",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders/Collider_9",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/part_01",
+        "authored_attributes": {
+          "physics:angularVelocity": "(0, 0, 0)",
+          "physics:mass": "0.15000000596046448",
+          "physics:velocity": "(0, 0, 0)"
+        }
+      },
+      {
+        "prim_path": "/World/part_01/PhysicsMaterials/pm",
+        "authored_attributes": {
+          "physics:dynamicFriction": "0.4000000059604645",
+          "physics:restitution": "0.10000000149011612",
+          "physics:staticFriction": "0.5"
+        }
+      },
+      {
+        "prim_path": "/World/part_01/Colliders/Collider_0",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/part_01/Colliders/Collider_1",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/part_01/Colliders/Collider_2",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/part_01/Colliders/Collider_3",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/part_01/Colliders/Collider_4",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/part_01/Colliders/Collider_5",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/part_01/Colliders/Collider_6",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/part_01/Colliders/Collider_7",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/part_01/Colliders/Collider_8",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/part_01/Colliders/Collider_9",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/part_02",
+        "authored_attributes": {
+          "physics:angularVelocity": "(0, 0, 0)",
+          "physics:mass": "0.029999999329447746",
+          "physics:velocity": "(0, 0, 0)"
+        }
+      },
+      {
+        "prim_path": "/World/part_02/PhysicsMaterials/pm",
+        "authored_attributes": {
+          "physics:dynamicFriction": "0.4000000059604645",
+          "physics:restitution": "0.10000000149011612",
+          "physics:staticFriction": "0.5"
+        }
+      },
+      {
+        "prim_path": "/World/part_02/Colliders/Collider_0",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/part_02/Colliders/Collider_1",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/part_02/Colliders/Collider_2",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/part_02/Colliders/Collider_3",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/part_02/Colliders/Collider_4",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/part_03",
+        "authored_attributes": {
+          "physics:angularVelocity": "(0, 0, 0)",
+          "physics:mass": "0.11999999731779099",
+          "physics:velocity": "(0, 0, 0)"
+        }
+      },
+      {
+        "prim_path": "/World/part_03/PhysicsMaterials/pm",
+        "authored_attributes": {
+          "physics:dynamicFriction": "0.4000000059604645",
+          "physics:restitution": "0.10000000149011612",
+          "physics:staticFriction": "0.5"
+        }
+      },
+      {
+        "prim_path": "/World/part_03/Colliders/Collider_0",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/part_03/Colliders/Collider_1",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/part_03/Colliders/Collider_2",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/part_03/Colliders/Collider_3",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/part_03/Colliders/Collider_4",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/part_03/Colliders/Collider_5",
+        "authored_attributes": {
+          "physics:approximation": "convexHull"
+        }
+      },
+      {
+        "prim_path": "/World/Joints/lid_hinge",
+        "authored_attributes": {
+          "physics:axis": "X",
+          "physics:localPos0": "(0, 0.0665, 0.29313698)",
+          "physics:localPos1": "(0, 0.0665, 0.29313698)",
+          "physics:localRot0": "(1, 0, 0, 0)",
+          "physics:localRot1": "(1, 0, 0, 0)",
+          "physics:lowerLimit": "0.0",
+          "physics:upperLimit": "50.0"
+        }
+      },
+      {
+        "prim_path": "/World/Joints/lever_pivot",
+        "authored_attributes": {
+          "physics:axis": "X",
+          "physics:localPos0": "(0, -0.103, 0.17163698)",
+          "physics:localPos1": "(0, -0.103, 0.17163698)",
+          "physics:localRot0": "(1, 0, 0, 0)",
+          "physics:localRot1": "(1, 0, 0, 0)",
+          "physics:lowerLimit": "0.0",
+          "physics:upperLimit": "30.0"
+        }
+      },
+      {
+        "prim_path": "/World/Joints/FixedJoint",
+        "authored_attributes": {
+          "physics:breakForce": "3.4028234663852886e+38",
+          "physics:breakTorque": "3.4028234663852886e+38",
+          "physics:localPos0": "(0, 0, 0)",
+          "physics:localPos1": "(0, 0, 0)",
+          "physics:localRot0": "(1, 0, 0, 0)",
+          "physics:localRot1": "(1, 0, 0, 0)"
+        }
+      }
+    ]
+  },
   "units": {
     "length": "m",
     "mass": "kg",
@@ -636,24 +1121,81 @@
       "up_axis": "Z",
       "bounds_m": [
         0.15191229819270058,
-        0.2987908381660658,
-        0.21227913693356223
-      ]
+        0.21227913693356223,
+        0.2987908381660658
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "7c3819136dd2c4560dcebf5ebb95b34c006942bd243062ef0534f8b2962f4490",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 1.6999999787658453
+      "value_kg": 1.6999999787658453,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "7c3819136dd2c4560dcebf5ebb95b34c006942bd243062ef0534f8b2962f4490",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 1.6999999787658453,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 4
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 31,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "7c3819136dd2c4560dcebf5ebb95b34c006942bd243062ef0534f8b2962f4490",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 31,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 3
+      "moving_joints": 2,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "7c3819136dd2c4560dcebf5ebb95b34c006942bd243062ef0534f8b2962f4490",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 3,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/70f991148c9a0056d78fa070c5c936b90a80f388/reports/native/2026.10.13/cases/native-repairs-full-v2/native-batch-000-evidence.tar.gz",
+        "sha256": "e08c73a12f7b9824e7e4b27e4b8a39a6b7e15303c3aef69f9fe707ad7e04384e",
+        "hf_commit": "70f991148c9a0056d78fa070c5c936b90a80f388",
+        "size_bytes": 50769578
+      },
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "7c3819136dd2c4560dcebf5ebb95b34c006942bd243062ef0534f8b2962f4490",
+      "supplemental_accepted": true,
+      "planned_test_count": 14,
+      "result_count": 14,
+      "passed": 13,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-13T22:41:53.274051+00:00",
+      "joint_status": "passed",
+      "joints_total": 2,
+      "joints_passed": 2,
+      "joints_failed": 0,
+      "thumbnail_sha256": "87ae40e8b84b7c5e94969be3ebcf577993d2ddecdff398576a5ebe3662734d75",
+      "qualification": "native-fleet-evidence/shard-13/native-batch-000/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

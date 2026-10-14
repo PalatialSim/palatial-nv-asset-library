@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.0290949996560812,
-        0.028900999575853348,
-        0.10181844234466553
-      ],
       "min": [
         -0.029126999899744987,
         -0.028661999851465225,
         0.0004754399947159982
       ],
+      "max": [
+        0.0290949996560812,
+        0.028900999575853348,
+        0.10181844234466553
+      ],
       "size": [
         0.05822199955582619,
         0.05756299942731857,
         0.10134300234994953
-      ]
+      ],
+      "units": "m"
     },
     "description": "D00284 Drink",
     "name": "D00284 Drink",
     "object_type": "rigid_bodies",
-    "total_mass": 0.38
+    "total_mass": 0.3799999952316284,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00284",
   "parts": [
     {
       "bounds": {
-        "center": [
-          -1.600012183189392e-05,
-          0.00011949986219406128,
-          0.05114694116969076
+        "min": [
+          -0.029126999899744987,
+          -0.028661999851465225,
+          0.0004754399947159982
         ],
         "max": [
           0.0290949996560812,
           0.028900999575853348,
           0.10181844234466553
         ],
-        "min": [
-          -0.029126999899744987,
-          -0.028661999851465225,
-          0.0004754399947159982
-        ]
+        "size": [
+          0.05822199955582619,
+          0.05756299942731857,
+          0.10134300234994953
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         6.3195170696417335e-06,
@@ -59,7 +65,7 @@
         0.0003765795554500073,
         0.00037778171827085316
       ],
-      "mass": 0.38,
+      "mass": 0.3799999952316284,
       "material": "plastic",
       "name": "D00284 Drink",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00284 Drink",
         "part_name": "D00284 Drink"
       },
-      "volume": 0.0003799999952316284
+      "volume": 0.0003799999952316284,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "b55f589a36bcfa0b4bfe8e1700455df8d6c6fa08f70bb2f1f6de99cf9aac5bee"
+    },
+    "usd_path": "batch25/D00284_Drink/IsaacSim_assets_6a756b4392349ccf31224889/IsaacSim_asset_6a756b4392349ccf31224889.usd",
+    "usd_sha256": "fa6015d1a6b8d76acc7af32561ed5ff4c0e4ef3a32191106ada3a2925a88b484",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -91,22 +114,93 @@
         0.05822199955582619,
         0.05756299942731857,
         0.10134300234994953
-      ]
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "fa6015d1a6b8d76acc7af32561ed5ff4c0e4ef3a32191106ada3a2925a88b484",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.38
+      "value_kg": 0.3799999952316284,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "fa6015d1a6b8d76acc7af32561ed5ff4c0e4ef3a32191106ada3a2925a88b484",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.3799999952316284,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 7,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "fa6015d1a6b8d76acc7af32561ed5ff4c0e4ef3a32191106ada3a2925a88b484",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 7,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "fa6015d1a6b8d76acc7af32561ed5ff4c0e4ef3a32191106ada3a2925a88b484",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/4ec585ae2d335503a6758ca92bd8c93cdf0d1fe8/reports/native/2026.10.13/shard-09/native-batch-000-evidence.tar.gz",
+        "sha256": "8fb544268eed26be6ba6270fbbc63a3fec9b0eda3a8f38209efe5179497deca8",
+        "hf_commit": "4ec585ae2d335503a6758ca92bd8c93cdf0d1fe8",
+        "size_bytes": 108435857
+      },
+      "status": "completed_with_tool_findings",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "fa6015d1a6b8d76acc7af32561ed5ff4c0e4ef3a32191106ada3a2925a88b484",
+      "supplemental_accepted": true,
+      "planned_test_count": 12,
+      "result_count": 12,
+      "passed": 10,
+      "skipped": 1,
+      "failed": 1,
+      "issues": [
+        "preview_surface_renders:fail"
+      ],
+      "warnings": [],
+      "completed_at": "2026-10-13T22:26:14.341236+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "f65cb984821efa5e343a9f3d657c641e743413ac263be8325c7c655377d056c5",
+      "tool_findings": {
+        "certificate_path": "tool-finding-certificates/D00284.json",
+        "certificate_sha256": "726944dec52d6c220561679d98e27dc40a1a716116813053e921b3394a11038a",
+        "raw_benchmark_status": "failed",
+        "failed_tests": [
+          "preview_surface_renders"
+        ],
+        "reason": "The SDK magenta probe classifies the unchanged source texture as uncovered material. Unmodified native baseline, weak-control and strong-control captures plus resolved surface bindings establish color ambiguity; raw failure remains for NVIDIA review. All physics and supplemental checks pass.",
+        "NVIDIA_raw_results_modified": false,
+        "requires_NVIDIA_review": true,
+        "release_certificate": "reports/releases/2026.10.13/tool-findings/D00284.json"
+      },
+      "qualification": "native-fleet-evidence/shard-09/native-batch-000/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

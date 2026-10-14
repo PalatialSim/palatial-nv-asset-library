@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.010439,
-        0.005023,
-        0.013987
-      ],
       "min": [
-        -0.010549,
-        -0.003786,
-        1e-06
+        -0.010552999563515186,
+        -0.003782999934628606,
+        4.999999873689376e-06
+      ],
+      "max": [
+        0.010444999672472477,
+        0.005030000116676092,
+        0.013989999890327454
       ],
       "size": [
-        0.020988,
-        0.008808999999999999,
-        0.013986
-      ]
+        0.020997999235987663,
+        0.008813000051304698,
+        0.013984999890453764
+      ],
+      "units": "m"
     },
     "description": "Single cashew kernel modeled as a rigid organic food item with no articulation. The simulation treats it as a lightweight, dry, rough-surfaced body.",
     "name": "cashew kernel",
     "object_type": "rigid_bodies",
-    "total_mass": 0.0015
+    "total_mass": 0.001500000013038516,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00112",
   "parts": [
     {
       "bounds": {
-        "center": [
-          -5.5e-05,
-          0.000619,
-          0.006994
+        "min": [
+          -0.010552999563515186,
+          -0.003782999934628606,
+          4.999999873689376e-06
         ],
         "max": [
-          0.010439,
-          0.005023,
-          0.013987
+          0.010444999672472477,
+          0.005030000116676092,
+          0.013989999890327454
         ],
-        "min": [
-          -0.010549,
-          -0.003786,
-          1e-06
-        ]
+        "size": [
+          0.020997999235987663,
+          0.008813000051304698,
+          0.013984999890453764
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         -0.00020497411823805053,
@@ -59,7 +65,7 @@
         4.437263871408807e-08,
         5.385606974962871e-08
       ],
-      "mass": 0.0015,
+      "mass": 0.001500000013038516,
       "material": "dried_cashew_kernel",
       "name": "cashew kernel",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "part_0",
         "part_name": "part_0"
       },
-      "volume": 1.4734723404513707e-06
+      "volume": 1.4734723404513707e-06,
+      "source_prim_path": "/World/part_0",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "8b91325032fb18ad36b22b63e04692f9824753445cbf64a87177a1ea1195ce57"
+    },
+    "usd_path": "batch2/D00112 Cashew/D00112_Cashew.usd",
+    "usd_sha256": "c690180bd1e0550f9186cb844c316c63fd05d2768b3ebaab91797540a50bebbe",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {},
   "units": {
@@ -86,25 +109,100 @@
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
-        0.020988,
-        0.008808999999999999,
-        0.013986
-      ]
+        0.020997999235987663,
+        0.008813000051304698,
+        0.013984999890453764
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "c690180bd1e0550f9186cb844c316c63fd05d2768b3ebaab91797540a50bebbe",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.0015
+      "value_kg": 0.001500000013038516,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "c690180bd1e0550f9186cb844c316c63fd05d2768b3ebaab91797540a50bebbe",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.001500000013038516,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 64,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "c690180bd1e0550f9186cb844c316c63fd05d2768b3ebaab91797540a50bebbe",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 64,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "c690180bd1e0550f9186cb844c316c63fd05d2768b3ebaab91797540a50bebbe",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/70f991148c9a0056d78fa070c5c936b90a80f388/reports/native/2026.10.13/cases/native-repairs-full-v2/native-batch-000-evidence.tar.gz",
+        "sha256": "e08c73a12f7b9824e7e4b27e4b8a39a6b7e15303c3aef69f9fe707ad7e04384e",
+        "hf_commit": "70f991148c9a0056d78fa070c5c936b90a80f388",
+        "size_bytes": 50769578
+      },
+      "status": "completed_with_tool_findings",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "c690180bd1e0550f9186cb844c316c63fd05d2768b3ebaab91797540a50bebbe",
+      "supplemental_accepted": true,
+      "planned_test_count": 12,
+      "result_count": 12,
+      "passed": 8,
+      "skipped": 1,
+      "failed": 3,
+      "issues": [
+        "presence:fail",
+        "preview_surface_renders:fail",
+        "semantic_labels_seg_labelled:fail"
+      ],
+      "warnings": [],
+      "completed_at": "2026-10-13T22:41:53.361741+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "aff34b1dce36241e15afeacb0981054ed541c1d62e8f4c5d94012a2407dad071",
+      "tool_findings": {
+        "certificate_path": "tool-finding-certificates/D00112.json",
+        "certificate_sha256": "fc084bd320235002f6f8dcb1754fa5ffce143e41f88c71be9b3126c7a28678c5",
+        "raw_benchmark_status": "failed",
+        "failed_tests": [
+          "presence",
+          "preview_surface_renders",
+          "semantic_labels_seg_labelled"
+        ],
+        "reason": "SDK camera clamps each axis to 0.1 m, underframing this small asset; exact native geometry, labels and materials are present. All physics and supplemental checks pass.",
+        "NVIDIA_raw_results_modified": false,
+        "requires_NVIDIA_review": true,
+        "release_certificate": "reports/releases/2026.10.13/tool-findings/D00112.json"
+      },
+      "qualification": "native-fleet-evidence/shard-13/native-batch-000/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

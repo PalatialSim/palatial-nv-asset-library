@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.06492881,
-        0.26053867,
-        0.06563888
-      ],
       "min": [
-        -0.06563334,
-        0.0,
-        -0.06592387
+        -0.06562399864196777,
+        -0.06562600284814835,
+        0.0012187801767140627
+      ],
+      "max": [
+        0.06492000073194504,
+        0.06591100245714188,
+        0.26177075505256653
       ],
       "size": [
-        0.13056215,
-        0.26053867,
-        0.13156275
-      ]
+        0.1305439993739128,
+        0.13153700530529022,
+        0.26055197487585247
+      ],
+      "units": "m"
     },
     "description": "A clear glass vase with a flared rim, a tapered waist, and a slightly thickened base.",
     "name": "specialist-current",
     "object_type": "rigid_bodies",
-    "total_mass": 1.0
+    "total_mass": 1.0,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00360",
   "parts": [
     {
       "bounds": {
-        "center": [
-          -0.000349445582505696,
-          0.11475269009638862,
-          -0.00013523745900743318
+        "min": [
+          -0.06562399864196777,
+          -0.06562600284814835,
+          0.0012187801767140627
         ],
         "max": [
-          0.06492881,
-          0.26053867,
-          0.06563888
+          0.06492000073194504,
+          0.06591100245714188,
+          0.26177075505256653
         ],
-        "min": [
-          -0.06563334,
-          0.0,
-          -0.06592387
-        ]
+        "size": [
+          0.1305439993739128,
+          0.13153700530529022,
+          0.26055197487585247
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         -0.0003377664749264008,
@@ -67,10 +73,27 @@
         "object_name": "specialist-current",
         "part_name": "specialist-current"
       },
-      "volume": 0.0035128781832924703
+      "volume": 0.0035128781832924703,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "5bfa2cf8b541c424312de73f4c5159bade83618668a5e52fe8e9c486a0ebc7a7"
+    },
+    "usd_path": "batch19/D00360 Glass Vase/IsaacSim_assets_6a71a48acdde3c1658d1ea3c/IsaacSim_asset_6a71a48acdde3c1658d1ea3c.usd",
+    "usd_sha256": "fa06e65c8209028897ba5dc2aa9161da732a4bbfae35883eaccabe85ef571650",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -88,25 +111,82 @@
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
-        0.13056215,
-        0.26053867,
-        0.13156275
-      ]
+        0.1305439993739128,
+        0.13153700530529022,
+        0.26055197487585247
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "fa06e65c8209028897ba5dc2aa9161da732a4bbfae35883eaccabe85ef571650",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 1.0
+      "value_kg": 1.0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "fa06e65c8209028897ba5dc2aa9161da732a4bbfae35883eaccabe85ef571650",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 1.0,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 25,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "fa06e65c8209028897ba5dc2aa9161da732a4bbfae35883eaccabe85ef571650",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 25,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "fa06e65c8209028897ba5dc2aa9161da732a4bbfae35883eaccabe85ef571650",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/b6af153ee3d6ef46950995a7e4e332bbc19a1ce9/reports/native/2026.10.13/shard-11/native-batch-000-evidence.tar.gz",
+        "sha256": "fa9e81b9d97559625d3482a340415188c48c345bdcc8609c09090fe021db4b7d",
+        "hf_commit": "b6af153ee3d6ef46950995a7e4e332bbc19a1ce9",
+        "size_bytes": 117389653
+      },
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "fa06e65c8209028897ba5dc2aa9161da732a4bbfae35883eaccabe85ef571650",
+      "supplemental_accepted": true,
+      "planned_test_count": 12,
+      "result_count": 12,
+      "passed": 11,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-13T22:17:42.621326+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "ca13079b953c97eba37e37c5c26f24b441b09e8002bf50000dd71d51d358df80",
+      "qualification": "native-fleet-evidence/shard-11/native-batch-000/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

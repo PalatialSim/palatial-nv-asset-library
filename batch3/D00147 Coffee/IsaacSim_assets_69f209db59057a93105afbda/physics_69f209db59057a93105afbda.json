@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.061068,
-        0.040564,
-        0.079347
-      ],
       "min": [
-        -0.049655,
-        -0.040035,
-        -2.2e-05
+        -0.05002199858427048,
+        -0.04025699943304062,
+        -3.7000001611886546e-05
+      ],
+      "max": [
+        0.06105799973011017,
+        0.040686000138521194,
+        0.0794299989938736
       ],
       "size": [
-        0.11072299999999999,
-        0.080599,
-        0.079369
-      ]
+        0.11107999831438065,
+        0.08094299957156181,
+        0.07946699899548548
+      ],
+      "units": "m"
     },
     "description": "Matte stoneware coffee mug with an integral handle and no articulated mechanisms. Simulated as a single rigid ceramic body carrying its contents.",
     "name": "mug body with handle",
     "object_type": "rigid_bodies",
-    "total_mass": 0.48
+    "total_mass": 0.47999998927116394,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00147",
   "parts": [
     {
       "bounds": {
-        "center": [
-          0.005707,
-          0.000264,
-          0.039662
+        "min": [
+          -0.05002199858427048,
+          -0.04025699943304062,
+          -3.7000001611886546e-05
         ],
         "max": [
-          0.061068,
-          0.040564,
-          0.079347
+          0.06105799973011017,
+          0.040686000138521194,
+          0.0794299989938736
         ],
-        "min": [
-          -0.049655,
-          -0.040035,
-          -2.2e-05
-        ]
+        "size": [
+          0.11107999831438065,
+          0.08094299957156181,
+          0.07946699899548548
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         -0.0041082421622608365,
@@ -59,7 +65,7 @@
         0.00046394118294522537,
         0.0005173030382533997
       ],
-      "mass": 0.48,
+      "mass": 0.47999998927116394,
       "material": "matte_glazed_stoneware_ceramic",
       "name": "mug body with handle",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "part_0",
         "part_name": "part_0"
       },
-      "volume": 0.00044512673579906025
+      "volume": 0.00044512673579906025,
+      "source_prim_path": "/World/part_0",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "74c3759f921cfae1f7f1961d41293e14bcef542d7bd3248d16bbd59f136726ec"
+    },
+    "usd_path": "batch3/D00147 Coffee/IsaacSim_assets_69f209db59057a93105afbda/IsaacSim_asset_69f209db59057a93105afbda.usd",
+    "usd_sha256": "2026cc982bdf5c86bb03edd923ec74b85a9754aa4972bd482feff1c81fad4769",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {},
   "units": {
@@ -86,25 +109,82 @@
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
-        0.11072299999999999,
-        0.080599,
-        0.079369
-      ]
+        0.11107999831438065,
+        0.08094299957156181,
+        0.07946699899548548
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "2026cc982bdf5c86bb03edd923ec74b85a9754aa4972bd482feff1c81fad4769",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.48
+      "value_kg": 0.47999998927116394,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "2026cc982bdf5c86bb03edd923ec74b85a9754aa4972bd482feff1c81fad4769",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.47999998927116394,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 64,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "2026cc982bdf5c86bb03edd923ec74b85a9754aa4972bd482feff1c81fad4769",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 64,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "2026cc982bdf5c86bb03edd923ec74b85a9754aa4972bd482feff1c81fad4769",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/7dea1d64f1cd77431a133e0cdb8f83d64a43ccb8/reports/native/2026.10.13/shard-03/native-batch-001-evidence.tar.gz",
+        "sha256": "eb8de1e2dfdea963fcd37b1dd4a6f068ff3897e9757f2fab44b8171788e16da0",
+        "hf_commit": "7dea1d64f1cd77431a133e0cdb8f83d64a43ccb8",
+        "size_bytes": 109371639
+      },
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "2026cc982bdf5c86bb03edd923ec74b85a9754aa4972bd482feff1c81fad4769",
+      "supplemental_accepted": true,
+      "planned_test_count": 12,
+      "result_count": 12,
+      "passed": 11,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-13T21:36:03.173232+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "45421fd4b913b5755b62d3056b52ac250d01022802fa8a3567cb8e5d69a11b91",
+      "qualification": "native-fleet-evidence/shard-03/native-batch-001/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.08229800313711166,
-        0.13137459754943848,
-        0.055410999804735184
-      ],
       "min": [
         -0.05884699895977974,
-        0.000771600054576993,
-        -0.05507799983024597
+        -0.055410999804735184,
+        0.000771600054576993
+      ],
+      "max": [
+        0.08229800313711166,
+        0.05507799983024597,
+        0.13137459754943848
       ],
       "size": [
         0.1411450020968914,
-        0.13060299749486148,
-        0.11048899963498116
-      ]
+        0.11048899963498116,
+        0.13060299749486148
+      ],
+      "units": "m"
     },
     "description": "D00527 Milk Pitcher",
     "name": "D00527 Milk Pitcher",
     "object_type": "rigid_bodies",
-    "total_mass": 0.25
+    "total_mass": 0.25,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00527",
   "parts": [
     {
       "bounds": {
-        "center": [
-          0.011725502088665962,
-          0.06607309880200773,
-          0.00016649998724460602
+        "min": [
+          -0.05884699895977974,
+          -0.055410999804735184,
+          0.000771600054576993
         ],
         "max": [
           0.08229800313711166,
-          0.13137459754943848,
-          0.055410999804735184
+          0.05507799983024597,
+          0.13137459754943848
         ],
-        "min": [
-          -0.05884699895977974,
-          0.000771600054576993,
-          -0.05507799983024597
-        ]
+        "size": [
+          0.1411450020968914,
+          0.11048899963498116,
+          0.13060299749486148
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         0.003804387291893363,
@@ -67,10 +73,27 @@
         "object_name": "D00527 Milk Pitcher",
         "part_name": "D00527 Milk Pitcher"
       },
-      "volume": 3.125e-05
+      "volume": 3.125e-05,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "a3b0eb485809717673840a345bd8e8b25c9335f6dcff184a409c60c57bcd096f"
+    },
+    "usd_path": "batch29/D00527 Milk Pitcher/IsaacSim_assets_6a7dda66b7a9c4204a82c0af/IsaacSim_asset_6a7dda66b7a9c4204a82c0af.usd",
+    "usd_sha256": "e42d906a8348e84195ff22cc9ec15d4aa00eab054c3dca7e69a1c69a26239b7e",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -89,24 +112,81 @@
       "up_axis": "Z",
       "bounds_m": [
         0.1411450020968914,
-        0.13060299749486148,
-        0.11048899963498116
-      ]
+        0.11048899963498116,
+        0.13060299749486148
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "e42d906a8348e84195ff22cc9ec15d4aa00eab054c3dca7e69a1c69a26239b7e",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.25
+      "value_kg": 0.25,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "e42d906a8348e84195ff22cc9ec15d4aa00eab054c3dca7e69a1c69a26239b7e",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.25,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 25,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "e42d906a8348e84195ff22cc9ec15d4aa00eab054c3dca7e69a1c69a26239b7e",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 25,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "e42d906a8348e84195ff22cc9ec15d4aa00eab054c3dca7e69a1c69a26239b7e",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/775fb2d52df92ce4d91cd2ef1a7bff2d0392614e/reports/native/2026.10.13/shard-06/native-batch-001-evidence.tar.gz",
+        "sha256": "662fa7295f7f10ef15aeb05cd103757c982fb863c0bd8c7bf844103762dc988d",
+        "hf_commit": "775fb2d52df92ce4d91cd2ef1a7bff2d0392614e",
+        "size_bytes": 109295261
+      },
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "e42d906a8348e84195ff22cc9ec15d4aa00eab054c3dca7e69a1c69a26239b7e",
+      "supplemental_accepted": true,
+      "planned_test_count": 12,
+      "result_count": 12,
+      "passed": 11,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-13T23:09:03.128192+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "0c1191d90f874a05dab3ae14b77e1b657b0831e202a3df0ac82f1c9fa8af6cb8",
+      "qualification": "native-fleet-evidence/shard-06/native-batch-001/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.05637599900364876,
-        0.05486400052905083,
-        0.12655100226402283
-      ],
       "min": [
-        -0.07025499641895294,
-        -0.04840800166130066,
-        3.000000106112566e-06
+        -0.048983000218868256,
+        -0.045694999396800995,
+        -3.999999989900971e-06
+      ],
+      "max": [
+        0.0579570010304451,
+        0.04669300094246864,
+        0.12543299794197083
       ],
       "size": [
-        0.1266309954226017,
-        0.10327200219035149,
-        0.12654800226391671
-      ]
+        0.10694000124931335,
+        0.09238800033926964,
+        0.12543699794196073
+      ],
+      "units": "m"
     },
     "description": "A cylindrical bamboo canister with a flat round lid, small rounded knob, and a matching wooden spoon protruding through a slot. It has a light natural wood finish with visible vertical grain.",
     "name": "D00008 Bamboo Container",
     "object_type": "rigid_bodies",
-    "total_mass": 0.34
+    "total_mass": 0.3400000035762787,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00008",
   "parts": [
     {
       "bounds": {
-        "center": [
-          0.0007961945059461565,
-          -0.0011774212618152313,
-          0.056886175123987755
+        "min": [
+          -0.048983000218868256,
+          -0.045694999396800995,
+          -3.999999989900971e-06
         ],
         "max": [
-          0.05637599900364876,
-          0.05486400052905083,
-          0.12655100226402283
+          0.0579570010304451,
+          0.04669300094246864,
+          0.12543299794197083
         ],
-        "min": [
-          -0.07025499641895294,
-          -0.04840800166130066,
-          3.000000106112566e-06
-        ]
+        "size": [
+          0.10694000124931335,
+          0.09238800033926964,
+          0.12543699794196073
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         0.00033974081246631113,
@@ -59,7 +65,7 @@
         0.0005198290614566036,
         0.0005466158777530161
       ],
-      "mass": 0.34,
+      "mass": 0.3400000035762787,
       "material": "wood",
       "name": "D00008 Bamboo Container",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00008 Bamboo Container",
         "part_name": "D00008 Bamboo Container"
       },
-      "volume": 0.0007513927795084987
+      "volume": 0.0007513927795084987,
+      "source_prim_path": "/World/part_00_wood",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "d75667be2a926d4a31a05eff5f0c00c2535d75ee9f14ba65772366e7f0a5e974"
+    },
+    "usd_path": "batch4/D00008 Bamboo Container/IsaacSim_assets_69f80eb0d09344200f0594bc/IsaacSim_asset_69f80eb0d09344200f0594bc.usd",
+    "usd_sha256": "66ef07e9abae609f26bc33f6263eea3c435d78402e16549bab9f26e5b5ab165a",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {},
   "units": {
@@ -86,25 +109,82 @@
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
-        0.1266309954226017,
-        0.10327200219035149,
-        0.12654800226391671
-      ]
+        0.10694000124931335,
+        0.09238800033926964,
+        0.12543699794196073
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "66ef07e9abae609f26bc33f6263eea3c435d78402e16549bab9f26e5b5ab165a",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.34
+      "value_kg": 0.3400000035762787,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "66ef07e9abae609f26bc33f6263eea3c435d78402e16549bab9f26e5b5ab165a",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.3400000035762787,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 56,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "66ef07e9abae609f26bc33f6263eea3c435d78402e16549bab9f26e5b5ab165a",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 56,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "66ef07e9abae609f26bc33f6263eea3c435d78402e16549bab9f26e5b5ab165a",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/54196208b57d98a648e3ce9c510736e212ea9f50/reports/native/2026.10.13/shard-03/native-batch-000-evidence.tar.gz",
+        "sha256": "d503dd85ac1ee0b6ffbaaf99358b93889f6651455991544f311c675c71c3df58",
+        "hf_commit": "54196208b57d98a648e3ce9c510736e212ea9f50",
+        "size_bytes": 120777997
+      },
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "66ef07e9abae609f26bc33f6263eea3c435d78402e16549bab9f26e5b5ab165a",
+      "supplemental_accepted": true,
+      "planned_test_count": 12,
+      "result_count": 12,
+      "passed": 11,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-13T20:44:10.328910+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "9e15a744612a1882d946ec965450c6f282ca8cb685f2d14349b5ee550cbe4a62",
+      "qualification": "native-fleet-evidence/shard-03/native-batch-000/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

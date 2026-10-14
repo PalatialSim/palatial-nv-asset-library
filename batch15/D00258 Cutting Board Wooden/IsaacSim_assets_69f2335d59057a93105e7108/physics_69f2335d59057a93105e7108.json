@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.16601401,
-        0.09174087,
-        0.22135888
-      ],
       "min": [
-        -0.16707224,
-        0.0,
-        -0.23949934
+        -0.16705800592899323,
+        -0.22135600447654724,
+        -3.000000106112566e-06
+      ],
+      "max": [
+        0.16599999368190765,
+        0.23949599266052246,
+        0.09174399822950363
       ],
       "size": [
-        0.33308625000000003,
-        0.09174087,
-        0.46085822
-      ]
+        0.3330579996109009,
+        0.4608519971370697,
+        0.09174699822960974
+      ],
+      "units": "m"
     },
     "description": "A thick, rectangular wooden cutting board featuring a stainless steel handle on one end.",
     "name": "D00258 Cutting Board Wooden",
     "object_type": "rigid_bodies",
-    "total_mass": 4.5
+    "total_mass": 4.5,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00258",
   "parts": [
     {
       "bounds": {
-        "center": [
-          -0.0005405051444015434,
-          0.031206864224423172,
-          -0.006839044128302275
+        "min": [
+          -0.16705800592899323,
+          -0.22135600447654724,
+          -3.000000106112566e-06
         ],
         "max": [
-          0.16601401,
-          0.09174087,
-          0.22135888
+          0.16599999368190765,
+          0.23949599266052246,
+          0.09174399822950363
         ],
-        "min": [
-          -0.16707224,
-          0.0,
-          -0.23949934
-        ]
+        "size": [
+          0.3330579996109009,
+          0.4608519971370697,
+          0.09174699822960974
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         -0.00052938953602499,
@@ -67,10 +73,27 @@
         "object_name": "D00258 Cutting Board Wooden",
         "part_name": "D00258 Cutting Board Wooden"
       },
-      "volume": 0.010709081735361345
+      "volume": 0.010709081735361345,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "c129406329972abe97f0ad3e2318720a45983409441eddf0396c90756e87d17f"
+    },
+    "usd_path": "batch15/D00258 Cutting Board Wooden/IsaacSim_assets_69f2335d59057a93105e7108/IsaacSim_asset_69f2335d59057a93105e7108.usd",
+    "usd_sha256": "6860a73e2fae0fbfa39ebc8da84949bdd2c90b36f93c47ca12255afd560b4ab7",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -88,25 +111,82 @@
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
-        0.33308625000000003,
-        0.09174087,
-        0.46085822
-      ]
+        0.3330579996109009,
+        0.4608519971370697,
+        0.09174699822960974
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "6860a73e2fae0fbfa39ebc8da84949bdd2c90b36f93c47ca12255afd560b4ab7",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 4.5
+      "value_kg": 4.5,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "6860a73e2fae0fbfa39ebc8da84949bdd2c90b36f93c47ca12255afd560b4ab7",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 4.5,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 22,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "6860a73e2fae0fbfa39ebc8da84949bdd2c90b36f93c47ca12255afd560b4ab7",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 22,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "6860a73e2fae0fbfa39ebc8da84949bdd2c90b36f93c47ca12255afd560b4ab7",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/8f10c97ca2edcb6bbfa74b5a10616d9e39e05e98/reports/native/2026.10.13/shard-06/native-batch-000-evidence.tar.gz",
+        "sha256": "ba4178b435b5110861a52d272d915b9c397a2461a753e750643075635f715c13",
+        "hf_commit": "8f10c97ca2edcb6bbfa74b5a10616d9e39e05e98",
+        "size_bytes": 119229811
+      },
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "6860a73e2fae0fbfa39ebc8da84949bdd2c90b36f93c47ca12255afd560b4ab7",
+      "supplemental_accepted": true,
+      "planned_test_count": 12,
+      "result_count": 12,
+      "passed": 11,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-13T22:41:27.550291+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "21cd107e84c3d1f96b388c721f850ed56a9955d4b066ae516057782b16319654",
+      "qualification": "native-fleet-evidence/shard-06/native-batch-000/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

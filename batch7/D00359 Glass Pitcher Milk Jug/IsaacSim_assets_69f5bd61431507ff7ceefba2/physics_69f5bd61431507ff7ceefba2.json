@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.09974999725818634,
-        0.05404600128531456,
-        0.19314299523830414
-      ],
       "min": [
-        -0.10722900182008743,
-        -0.053456999361515045,
-        -4.999999873689376e-06
+        -0.05532100051641464,
+        -0.05114100128412247,
+        -0.00018899999849963933
+      ],
+      "max": [
+        0.07428500056266785,
+        0.05082099884748459,
+        0.1634099930524826
       ],
       "size": [
-        0.20697899907827377,
-        0.1075030006468296,
-        0.19314799523817783
-      ]
+        0.1296060010790825,
+        0.10196200013160706,
+        0.16359899305098224
+      ],
+      "units": "m"
     },
     "description": "A collection of translucent glass pitchers and bottles with narrow necks, spouts, handles, and several plastic or metal caps, alongside frosted plastic gallon-style jugs. The surfaces are clear to milky white with rounded bases, raised rims, and molded handles.",
     "name": "D00359 Glass Pitcher Milk Jug",
     "object_type": "rigid_bodies",
-    "total_mass": 4.6
+    "total_mass": 4.599999904632568,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00359",
   "parts": [
     {
       "bounds": {
-        "center": [
-          0.004122253953300925,
-          4.033914870184963e-05,
-          0.08561364184404383
+        "min": [
+          -0.05532100051641464,
+          -0.05114100128412247,
+          -0.00018899999849963933
         ],
         "max": [
-          0.09974999725818634,
-          0.05404600128531456,
-          0.19314299523830414
+          0.07428500056266785,
+          0.05082099884748459,
+          0.1634099930524826
         ],
-        "min": [
-          -0.10722900182008743,
-          -0.053456999361515045,
-          -4.999999873689376e-06
-        ]
+        "size": [
+          0.1296060010790825,
+          0.10196200013160706,
+          0.16359899305098224
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         -8.859363548098057e-05,
@@ -59,7 +65,7 @@
         0.010675896940331437,
         0.011824271080846775
       ],
-      "mass": 4.6,
+      "mass": 4.599999904632568,
       "material": "glass",
       "name": "D00359 Glass Pitcher Milk Jug",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00359 Glass Pitcher Milk Jug",
         "part_name": "D00359 Glass Pitcher Milk Jug"
       },
-      "volume": 0.0011827380486333276
+      "volume": 0.0011827380486333276,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "84066ee66aba520b5acafdbb89eb401e241fd6c2b35823848d2d7d94731986e1"
+    },
+    "usd_path": "batch7/D00359 Glass Pitcher Milk Jug/IsaacSim_assets_69f5bd61431507ff7ceefba2/IsaacSim_asset_69f5bd61431507ff7ceefba2.usd",
+    "usd_sha256": "65aee4600c3b299cffd694a97ae6da1b463ffab818537656d12164ce616de4c5",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {},
   "units": {
@@ -86,25 +109,82 @@
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
-        0.20697899907827377,
-        0.1075030006468296,
-        0.19314799523817783
-      ]
+        0.1296060010790825,
+        0.10196200013160706,
+        0.16359899305098224
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "65aee4600c3b299cffd694a97ae6da1b463ffab818537656d12164ce616de4c5",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 4.6
+      "value_kg": 4.599999904632568,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "65aee4600c3b299cffd694a97ae6da1b463ffab818537656d12164ce616de4c5",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 4.599999904632568,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 59,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "65aee4600c3b299cffd694a97ae6da1b463ffab818537656d12164ce616de4c5",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 59,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "65aee4600c3b299cffd694a97ae6da1b463ffab818537656d12164ce616de4c5",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/2680a7fe2ab1e3c2575fcffcffacc7c8114632f6/reports/native/2026.10.13/shard-04/native-batch-000-evidence.tar.gz",
+        "sha256": "da71f4ba7ce1c53e4628a04c4aa8050ca2b1e92ad850635a26ad0402ec0e4851",
+        "hf_commit": "2680a7fe2ab1e3c2575fcffcffacc7c8114632f6",
+        "size_bytes": 117790460
+      },
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "65aee4600c3b299cffd694a97ae6da1b463ffab818537656d12164ce616de4c5",
+      "supplemental_accepted": true,
+      "planned_test_count": 12,
+      "result_count": 12,
+      "passed": 11,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-13T22:41:57.180953+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "0a13e1931e37857d52672d88315f9e212e3430abfaa22dfd8c1f2217e551390b",
+      "qualification": "native-fleet-evidence/shard-04/native-batch-000/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

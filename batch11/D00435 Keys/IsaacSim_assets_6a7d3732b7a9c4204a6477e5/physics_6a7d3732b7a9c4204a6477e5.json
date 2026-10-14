@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.0228279996663332,
-        0.00532132014632225,
-        0.00839999970048666
-      ],
       "min": [
         -0.027089999988675117,
-        0.00017232004029210657,
-        -0.009949999861419201
+        -0.00839999970048666,
+        0.00017232004029210657
+      ],
+      "max": [
+        0.0228279996663332,
+        0.009949999861419201,
+        0.00532132014632225
       ],
       "size": [
         0.049917999655008316,
-        0.005149000106030144,
-        0.01834999956190586
-      ]
+        0.01834999956190586,
+        0.005149000106030144
+      ],
+      "units": "m"
     },
     "description": "D00435 Keys",
     "name": "D00435 Keys",
     "object_type": "rigid_bodies",
-    "total_mass": 0.0032
+    "total_mass": 0.0031999999191612005,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00435",
   "parts": [
     {
       "bounds": {
-        "center": [
-          -0.0021310001611709595,
-          0.0027468200933071785,
-          -0.0007750000804662704
+        "min": [
+          -0.027089999988675117,
+          -0.00839999970048666,
+          0.00017232004029210657
         ],
         "max": [
           0.0228279996663332,
-          0.00532132014632225,
-          0.00839999970048666
+          0.009949999861419201,
+          0.00532132014632225
         ],
-        "min": [
-          -0.027089999988675117,
-          0.00017232004029210657,
-          -0.009949999861419201
-        ]
+        "size": [
+          0.049917999655008316,
+          0.01834999956190586,
+          0.005149000106030144
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         -0.0012832186184823513,
@@ -59,7 +65,7 @@
         4.942794475937262e-07,
         5.373928502194758e-07
       ],
-      "mass": 0.0032,
+      "mass": 0.0031999999191612005,
       "material": "metal",
       "name": "D00435 Keys",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00435 Keys",
         "part_name": "D00435 Keys"
       },
-      "volume": 3.7647057872484714e-07
+      "volume": 3.7647057872484714e-07,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "a58cbf8648ae5c1a2ebd0f9afe38c6c67ee3dcd6a614d0fb727c8caeba9b291e"
+    },
+    "usd_path": "batch11/D00435 Keys/IsaacSim_assets_6a7d3732b7a9c4204a6477e5/IsaacSim_asset_6a7d3732b7a9c4204a6477e5.usd",
+    "usd_sha256": "250e8c0a5065a668b502789f2477f70ce1b3dd482b46b8754929a8a196d28086",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -89,24 +112,95 @@
       "up_axis": "Z",
       "bounds_m": [
         0.049917999655008316,
-        0.005149000106030144,
-        0.01834999956190586
-      ]
+        0.01834999956190586,
+        0.005149000106030144
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "250e8c0a5065a668b502789f2477f70ce1b3dd482b46b8754929a8a196d28086",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.0032
+      "value_kg": 0.0031999999191612005,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "250e8c0a5065a668b502789f2477f70ce1b3dd482b46b8754929a8a196d28086",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.0031999999191612005,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 22,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "250e8c0a5065a668b502789f2477f70ce1b3dd482b46b8754929a8a196d28086",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 22,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "250e8c0a5065a668b502789f2477f70ce1b3dd482b46b8754929a8a196d28086",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/8ead48695352eb0a17237ff53d41852732c7a2ee/reports/native/2026.10.13/shard-08/native-batch-001-evidence.tar.gz",
+        "sha256": "ce7c231c2e5f66b3dcd96515b06a270c973bcfaa1c33586bfb5da98483a6526c",
+        "hf_commit": "8ead48695352eb0a17237ff53d41852732c7a2ee",
+        "size_bytes": 105944745
+      },
+      "status": "completed_with_tool_findings",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "250e8c0a5065a668b502789f2477f70ce1b3dd482b46b8754929a8a196d28086",
+      "supplemental_accepted": true,
+      "planned_test_count": 12,
+      "result_count": 12,
+      "passed": 10,
+      "skipped": 1,
+      "failed": 1,
+      "issues": [
+        "presence:fail"
+      ],
+      "warnings": [],
+      "completed_at": "2026-10-13T22:48:36.160203+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "20c7ef7e882c650cbc6c2ec40d566b7b017f26dfb309ddd1087b22ca90ec6932",
+      "tool_findings": {
+        "certificate_path": "tool-finding-certificates/D00435.json",
+        "certificate_sha256": "79b2efefb39a7e66e0c13d11c921d04540d7ebc781b478341be335214c949bf6",
+        "raw_benchmark_status": "failed",
+        "failed_tests": [
+          "presence"
+        ],
+        "reason": "The SDK's 0.1 m camera-axis minimum underframes this small or thin prop. The original orange visibility-toggle captures visibly contain the asset; semantic segmentation, material rendering, all physics and independent native thumbnail checks pass. The raw presence failure remains for NVIDIA review.",
+        "NVIDIA_raw_results_modified": false,
+        "requires_NVIDIA_review": true,
+        "release_certificate": "reports/releases/2026.10.13/tool-findings/D00435.json"
+      },
+      "qualification": "native-fleet-evidence/shard-08/native-batch-001/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

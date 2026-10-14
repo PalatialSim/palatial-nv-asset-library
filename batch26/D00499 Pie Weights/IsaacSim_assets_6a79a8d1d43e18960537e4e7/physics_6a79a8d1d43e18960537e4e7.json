@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.0038129999302327633,
-        0.0038129999302327633,
-        0.007626259699463844
-      ],
       "min": [
         -0.0038189999759197235,
         -0.0037769998889416456,
         2.600299922050908e-07
       ],
+      "max": [
+        0.0038129999302327633,
+        0.0038129999302327633,
+        0.007626259699463844
+      ],
       "size": [
         0.007631999906152487,
         0.007589999819174409,
         0.007625999669471639
-      ]
+      ],
+      "units": "m"
     },
     "description": "D00499 Pie Weights",
     "name": "D00499 Pie Weights",
     "object_type": "rigid_bodies",
-    "total_mass": 0.00217
+    "total_mass": 0.0021699999924749136,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00499",
   "parts": [
     {
       "bounds": {
-        "center": [
-          -3.00002284348011e-06,
-          1.8000020645558834e-05,
-          0.0038132598647280247
+        "min": [
+          -0.0038189999759197235,
+          -0.0037769998889416456,
+          2.600299922050908e-07
         ],
         "max": [
           0.0038129999302327633,
           0.0038129999302327633,
           0.007626259699463844
         ],
-        "min": [
-          -0.0038189999759197235,
-          -0.0037769998889416456,
-          2.600299922050908e-07
-        ]
+        "size": [
+          0.007631999906152487,
+          0.007589999819174409,
+          0.007625999669471639
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         -1.900676215882413e-05,
@@ -59,7 +65,7 @@
         1.2412222361035674e-08,
         1.2453145181723357e-08
       ],
-      "mass": 0.00217,
+      "mass": 0.0021699999924749136,
       "material": "ceramic",
       "name": "D00499 Pie Weights",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00499 Pie Weights",
         "part_name": "D00499 Pie Weights"
       },
-      "volume": 9.04166663531214e-07
+      "volume": 9.04166663531214e-07,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "3edcc58c8c4fd2fedce43a053f283c55f3d47dad468b6c641b59006310774c9f"
+    },
+    "usd_path": "batch26/D00499 Pie Weights/IsaacSim_assets_6a79a8d1d43e18960537e4e7/IsaacSim_asset_6a79a8d1d43e18960537e4e7.usd",
+    "usd_sha256": "fe8fa1e71d02a29c2f638f2cfe9de1e1f6794affa934caaaef3a98ac878fa0b8",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -91,22 +114,97 @@
         0.007631999906152487,
         0.007589999819174409,
         0.007625999669471639
-      ]
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "fe8fa1e71d02a29c2f638f2cfe9de1e1f6794affa934caaaef3a98ac878fa0b8",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.00217
+      "value_kg": 0.0021699999924749136,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "fe8fa1e71d02a29c2f638f2cfe9de1e1f6794affa934caaaef3a98ac878fa0b8",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.0021699999924749136,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 1,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "fe8fa1e71d02a29c2f638f2cfe9de1e1f6794affa934caaaef3a98ac878fa0b8",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 1,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "fe8fa1e71d02a29c2f638f2cfe9de1e1f6794affa934caaaef3a98ac878fa0b8",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/e62d8f2cb31fd947ff5b31d8d780aa56aeb783a8/reports/native/2026.10.13/shard-07/native-batch-001-evidence.tar.gz",
+        "sha256": "c758bcf6aed753e71d1311222dcefb2f4b653117fbf9768a7af563a63e2d46e2",
+        "hf_commit": "e62d8f2cb31fd947ff5b31d8d780aa56aeb783a8",
+        "size_bytes": 118827299
+      },
+      "status": "completed_with_tool_findings",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "fe8fa1e71d02a29c2f638f2cfe9de1e1f6794affa934caaaef3a98ac878fa0b8",
+      "supplemental_accepted": true,
+      "planned_test_count": 12,
+      "result_count": 12,
+      "passed": 8,
+      "skipped": 1,
+      "failed": 3,
+      "issues": [
+        "presence:fail",
+        "preview_surface_renders:fail",
+        "semantic_labels_seg_labelled:fail"
+      ],
+      "warnings": [],
+      "completed_at": "2026-10-13T22:39:22.024720+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "e615b9cdc6736d4e33d4918b86b1b369c1fc5bb4d6a09aa141d76ca3e826b352",
+      "tool_findings": {
+        "certificate_path": "tool-finding-certificates/D00499.json",
+        "certificate_sha256": "73817eee5b424748e82ba44872c7b4747be7eabed6f0913c0d1ecbf0c4a6501d",
+        "raw_benchmark_status": "failed",
+        "failed_tests": [
+          "presence",
+          "preview_surface_renders",
+          "semantic_labels_seg_labelled"
+        ],
+        "reason": "SDK camera clamps each axis to 0.1 m, underframing this small asset; exact native geometry, labels and materials are present. All physics and supplemental checks pass.",
+        "NVIDIA_raw_results_modified": false,
+        "requires_NVIDIA_review": true,
+        "release_certificate": "reports/releases/2026.10.13/tool-findings/D00499.json"
+      },
+      "qualification": "native-fleet-evidence/shard-07/native-batch-001/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

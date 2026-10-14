@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.16657,
-        0.047388,
-        0.122219
-      ],
       "min": [
-        -0.073269,
-        -0.047567,
-        1.6e-05
+        -0.07327499985694885,
+        -0.047568999230861664,
+        9.999999747378752e-06
+      ],
+      "max": [
+        0.16657599806785583,
+        0.047391001135110855,
+        0.12222500145435333
       ],
       "size": [
-        0.239839,
-        0.094955,
-        0.12220299999999999
-      ]
+        0.2398509979248047,
+        0.09496000036597252,
+        0.12221500145460595
+      ],
+      "units": "m"
     },
     "description": "A single-piece rigid brushed stainless steel ladle.",
     "name": "D00752 Stainless Steel Ladle",
     "object_type": "rigid_bodies",
-    "total_mass": 0.18
+    "total_mass": 0.18000000715255737,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00752",
   "parts": [
     {
       "bounds": {
-        "center": [
-          0.046651,
-          -9e-05,
-          0.061118
+        "min": [
+          -0.07327499985694885,
+          -0.047568999230861664,
+          9.999999747378752e-06
         ],
         "max": [
-          0.16657,
-          0.047388,
-          0.122219
+          0.16657599806785583,
+          0.047391001135110855,
+          0.12222500145435333
         ],
-        "min": [
-          -0.073269,
-          -0.047567,
-          1.6e-05
-        ]
+        "size": [
+          0.2398509979248047,
+          0.09496000036597252,
+          0.12221500145460595
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         0.009303661070719187,
@@ -59,7 +65,7 @@
         0.0010641345574461047,
         0.0010998418261357343
       ],
-      "mass": 0.18,
+      "mass": 0.18000000715255737,
       "material": "stainless_steel",
       "name": "ladle",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "part_0",
         "part_name": "part_0"
       },
-      "volume": 3.7458261711463386e-05
+      "volume": 3.7458261711463386e-05,
+      "source_prim_path": "/World/part_0",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "b377b48e602965122d9e9c429d118a69f1f1b087b6ab1327b05a73308b68fc43"
+    },
+    "usd_path": "batch5/D00752 Spatula Ladle/IsaacSim_assets_69f65c937f5104dbf26ad8b5/IsaacSim_asset_69f65c937f5104dbf26ad8b5.usd",
+    "usd_sha256": "d45bb30c8182255aaf0aa5274fef095fc5e74e405a8ffe0408bb2af672672bcb",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {},
   "units": {
@@ -86,25 +109,98 @@
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
-        0.239839,
-        0.094955,
-        0.12220299999999999
-      ]
+        0.2398509979248047,
+        0.09496000036597252,
+        0.12221500145460595
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "d45bb30c8182255aaf0aa5274fef095fc5e74e405a8ffe0408bb2af672672bcb",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.18
+      "value_kg": 0.18000000715255737,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "d45bb30c8182255aaf0aa5274fef095fc5e74e405a8ffe0408bb2af672672bcb",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.18000000715255737,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 23,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "d45bb30c8182255aaf0aa5274fef095fc5e74e405a8ffe0408bb2af672672bcb",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 23,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "d45bb30c8182255aaf0aa5274fef095fc5e74e405a8ffe0408bb2af672672bcb",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/544a81d285267b6bd4c1ab59e356def67502abe4/reports/native/2026.10.13/shard-04/native-batch-003-evidence.tar.gz",
+        "sha256": "0f79ad9ccca5d23151b6beb3ac152d4f2e574acbd457f80d20ae089971dfbe75",
+        "hf_commit": "544a81d285267b6bd4c1ab59e356def67502abe4",
+        "size_bytes": 106673475
+      },
+      "status": "completed_with_tool_findings",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "d45bb30c8182255aaf0aa5274fef095fc5e74e405a8ffe0408bb2af672672bcb",
+      "supplemental_accepted": true,
+      "planned_test_count": 12,
+      "result_count": 12,
+      "passed": 9,
+      "skipped": 1,
+      "failed": 2,
+      "issues": [
+        "ground_drop:fail",
+        "slope_drop:fail"
+      ],
+      "warnings": [],
+      "completed_at": "2026-10-14T00:47:30.435142+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "b257e0a47dff46563e3f6befa43e3649cc63a33eda328a66dcccbc380b3752a4",
+      "tool_findings": {
+        "certificate_path": "tool-finding-certificates/D00752.json",
+        "certificate_sha256": "948249c8a6b3055217b85348144c2014008165d2bc6525b0973179a98bf9b9fa",
+        "raw_benchmark_status": "failed",
+        "failed_tests": [
+          "ground_drop",
+          "slope_drop"
+        ],
+        "reason": "The SDK conservative world bounds extend through the floor while live visible and collider mesh vertices remain above its penetration limit. Both complete independent ground and slope simulations pass with the unchanged SDK simulation parameters and thresholds, including stable ground settling and post-slide observation. Raw SDK physics failures remain for NVIDIA review.",
+        "NVIDIA_raw_results_modified": false,
+        "requires_NVIDIA_review": true,
+        "release_certificate": "reports/releases/2026.10.13/tool-findings/D00752.json"
+      },
+      "qualification": "native-fleet-evidence/shard-04/native-batch-003/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

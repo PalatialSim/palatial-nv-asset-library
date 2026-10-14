@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.15985701,
-        0.03995434,
-        0.09196671
-      ],
       "min": [
-        -0.15892138,
-        0.0,
-        -0.09256557
+        -0.15892599523067474,
+        -0.09199800342321396,
+        -2.700000004551839e-05
+      ],
+      "max": [
+        0.1598619967699051,
+        0.09259700030088425,
+        0.03998100012540817
       ],
       "size": [
-        0.31877838999999997,
-        0.03995434,
-        0.18453228
-      ]
+        0.31878799200057983,
+        0.1845950037240982,
+        0.04000800012545369
+      ],
+      "units": "m"
     },
     "description": "A black, textured cast iron baking pan featuring six cylindrical cups and two integrated side handles.",
     "name": "generated reference 01",
     "object_type": "rigid_bodies",
-    "total_mass": 3.0
+    "total_mass": 3.0,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00065",
   "parts": [
     {
       "bounds": {
-        "center": [
-          0.000407923243947174,
-          0.02145566955173759,
-          -0.0002743062697615121
+        "min": [
+          -0.15892599523067474,
+          -0.09199800342321396,
+          -2.700000004551839e-05
         ],
         "max": [
-          0.15985701,
-          0.03995434,
-          0.09196671
+          0.1598619967699051,
+          0.09259700030088425,
+          0.03998100012540817
         ],
-        "min": [
-          -0.15892138,
-          0.0,
-          -0.09256557
-        ]
+        "size": [
+          0.31878799200057983,
+          0.1845950037240982,
+          0.04000800012545369
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         0.00043088949796200654,
@@ -67,10 +73,27 @@
         "object_name": "generated reference 01",
         "part_name": "generated reference 01"
       },
-      "volume": 0.001781951507916854
+      "volume": 0.001781951507916854,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "68bc0fc7aa21a6eb2227430cc8b1d5d1b762020cfdb63b720b2781fc3dfa0a0a"
+    },
+    "usd_path": "batch6/D00065 Bowl Muffin Pan/IsaacSim_assets_6a3903796284561eadcf8e47/IsaacSim_asset_6a3903796284561eadcf8e47.usd",
+    "usd_sha256": "27978fe1347f9ffd75cfe299595939f41a9f2846aa9d0f999448825c8ec2f930",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {},
   "units": {
@@ -86,25 +109,82 @@
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
-        0.31877838999999997,
-        0.03995434,
-        0.18453228
-      ]
+        0.31878799200057983,
+        0.1845950037240982,
+        0.04000800012545369
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "27978fe1347f9ffd75cfe299595939f41a9f2846aa9d0f999448825c8ec2f930",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 3.0
+      "value_kg": 3.0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "27978fe1347f9ffd75cfe299595939f41a9f2846aa9d0f999448825c8ec2f930",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 3.0,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 128,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "27978fe1347f9ffd75cfe299595939f41a9f2846aa9d0f999448825c8ec2f930",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 128,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "27978fe1347f9ffd75cfe299595939f41a9f2846aa9d0f999448825c8ec2f930",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/54196208b57d98a648e3ce9c510736e212ea9f50/reports/native/2026.10.13/shard-03/native-batch-000-evidence.tar.gz",
+        "sha256": "d503dd85ac1ee0b6ffbaaf99358b93889f6651455991544f311c675c71c3df58",
+        "hf_commit": "54196208b57d98a648e3ce9c510736e212ea9f50",
+        "size_bytes": 120777997
+      },
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "27978fe1347f9ffd75cfe299595939f41a9f2846aa9d0f999448825c8ec2f930",
+      "supplemental_accepted": true,
+      "planned_test_count": 12,
+      "result_count": 12,
+      "passed": 11,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-13T20:44:13.190334+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "d22bb8c535627910a8957e145566de561732cd1fca03515e20c044369bd7525c",
+      "qualification": "native-fleet-evidence/shard-03/native-batch-000/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.14674974,
-        0.12591085,
-        0.10806036
-      ],
       "min": [
-        -0.15077934,
-        0.0,
-        -0.11109831
+        -0.15080100297927856,
+        -0.10806400328874588,
+        0.00039984038448892534
+      ],
+      "max": [
+        0.14677199721336365,
+        0.11110199987888336,
+        0.1263328343629837
       ],
       "size": [
-        0.29752908,
-        0.12591085,
-        0.21915867
-      ]
+        0.2975730001926422,
+        0.21916600316762924,
+        0.12593299397849478
+      ],
+      "units": "m"
     },
     "description": "A rectangular, gray plastic storage basket with an open top and integrated side handle cutouts.",
     "name": "generated reference 01",
     "object_type": "rigid_bodies",
-    "total_mass": 0.64
+    "total_mass": 0.6399999856948853,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00814",
   "parts": [
     {
       "bounds": {
-        "center": [
-          -0.0020559570213862103,
-          0.04631509626496968,
-          -0.0015081444095094516
+        "min": [
+          -0.15080100297927856,
+          -0.10806400328874588,
+          0.00039984038448892534
         ],
         "max": [
-          0.14674974,
-          0.12591085,
-          0.10806036
+          0.14677199721336365,
+          0.11110199987888336,
+          0.1263328343629837
         ],
-        "min": [
-          -0.15077934,
-          0.0,
-          -0.11109831
-        ]
+        "size": [
+          0.2975730001926422,
+          0.21916600316762924,
+          0.12593299397849478
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         -0.002146343464210724,
@@ -59,7 +65,7 @@
         0.007345378846290627,
         0.010133028474256645
       ],
-      "mass": 0.64,
+      "mass": 0.6399999856948853,
       "material": "plastic",
       "name": "generated reference 01",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "generated reference 01",
         "part_name": "generated reference 01"
       },
-      "volume": 0.0004956123451094665
+      "volume": 0.0004956123451094665,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "cb038dec780824af879056354d5cff752ab96f6a207f28bae8662ef05f22146e"
+    },
+    "usd_path": "batch14/D00814 Storage Basket/IsaacSim_assets_6a61bb4b394c4977ee97d188/IsaacSim_asset_6a61bb4b394c4977ee97d188.usd",
+    "usd_sha256": "406bcad14e23c35ce722959dc3bd3adc6d81a7eb58198b45a439f16d6478d927",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -88,25 +111,82 @@
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
-        0.29752908,
-        0.12591085,
-        0.21915867
-      ]
+        0.2975730001926422,
+        0.21916600316762924,
+        0.12593299397849478
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "406bcad14e23c35ce722959dc3bd3adc6d81a7eb58198b45a439f16d6478d927",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.64
+      "value_kg": 0.6399999856948853,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "406bcad14e23c35ce722959dc3bd3adc6d81a7eb58198b45a439f16d6478d927",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.6399999856948853,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 105,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "406bcad14e23c35ce722959dc3bd3adc6d81a7eb58198b45a439f16d6478d927",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 105,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "406bcad14e23c35ce722959dc3bd3adc6d81a7eb58198b45a439f16d6478d927",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/544a81d285267b6bd4c1ab59e356def67502abe4/reports/native/2026.10.13/shard-04/native-batch-003-evidence.tar.gz",
+        "sha256": "0f79ad9ccca5d23151b6beb3ac152d4f2e574acbd457f80d20ae089971dfbe75",
+        "hf_commit": "544a81d285267b6bd4c1ab59e356def67502abe4",
+        "size_bytes": 106673475
+      },
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "406bcad14e23c35ce722959dc3bd3adc6d81a7eb58198b45a439f16d6478d927",
+      "supplemental_accepted": true,
+      "planned_test_count": 12,
+      "result_count": 12,
+      "passed": 11,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-14T00:47:31.157955+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "dbd39966464db7d02f96cbd22896021136dde4e4f34c2bc9c6b97b45840d0e4e",
+      "qualification": "native-fleet-evidence/shard-04/native-batch-003/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

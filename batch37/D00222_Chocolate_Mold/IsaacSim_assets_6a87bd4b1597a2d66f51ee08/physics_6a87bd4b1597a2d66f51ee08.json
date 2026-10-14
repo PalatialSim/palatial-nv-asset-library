@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.10690200328826904,
-        0.026508380193263292,
-        0.06476400047540665
-      ],
       "min": [
         -0.10700099915266037,
-        0.001066379714757204,
-        -0.06487400084733963
+        -0.06476400047540665,
+        0.001066379714757204
+      ],
+      "max": [
+        0.10690200328826904,
+        0.06487400084733963,
+        0.026508380193263292
       ],
       "size": [
         0.2139030024409294,
-        0.025442000478506088,
-        0.12963800132274628
-      ]
+        0.12963800132274628,
+        0.025442000478506088
+      ],
+      "units": "m"
     },
     "description": "D00222 Chocolate_Mold",
     "name": "D00222 Chocolate_Mold",
     "object_type": "rigid_bodies",
-    "total_mass": 0.216
+    "total_mass": 0.2160000056028366,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00222",
   "parts": [
     {
       "bounds": {
-        "center": [
-          -4.949793219566345e-05,
-          0.013787379954010248,
-          -5.50001859664917e-05
+        "min": [
+          -0.10700099915266037,
+          -0.06476400047540665,
+          0.001066379714757204
         ],
         "max": [
           0.10690200328826904,
-          0.026508380193263292,
-          0.06476400047540665
+          0.06487400084733963,
+          0.026508380193263292
         ],
-        "min": [
-          -0.10700099915266037,
-          0.001066379714757204,
-          -0.06487400084733963
-        ]
+        "size": [
+          0.2139030024409294,
+          0.12963800132274628,
+          0.025442000478506088
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         -7.669717160752043e-05,
@@ -59,7 +65,7 @@
         0.0007450879202224314,
         0.000997829483821988
       ],
-      "mass": 0.216,
+      "mass": 0.2160000056028366,
       "material": "plastic",
       "name": "D00222 Chocolate_Mold",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00222 Chocolate_Mold",
         "part_name": "D00222 Chocolate_Mold"
       },
-      "volume": 0.0001800000046690305
+      "volume": 0.0001800000046690305,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "ba3f1a7c65ac3f68d7c487c3117a538daf0c045640bae4d285a86b4fdf907b1c"
+    },
+    "usd_path": "batch37/D00222_Chocolate_Mold/IsaacSim_assets_6a87bd4b1597a2d66f51ee08/IsaacSim_asset_6a87bd4b1597a2d66f51ee08.usd",
+    "usd_sha256": "59666343155919d1a74beb64ab307a7b6b520a3d4a6d4f2da568490f183031fa",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -89,24 +112,81 @@
       "up_axis": "Z",
       "bounds_m": [
         0.2139030024409294,
-        0.025442000478506088,
-        0.12963800132274628
-      ]
+        0.12963800132274628,
+        0.025442000478506088
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "59666343155919d1a74beb64ab307a7b6b520a3d4a6d4f2da568490f183031fa",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.216
+      "value_kg": 0.2160000056028366,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "59666343155919d1a74beb64ab307a7b6b520a3d4a6d4f2da568490f183031fa",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.2160000056028366,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 124,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "59666343155919d1a74beb64ab307a7b6b520a3d4a6d4f2da568490f183031fa",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 124,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "59666343155919d1a74beb64ab307a7b6b520a3d4a6d4f2da568490f183031fa",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/4ec585ae2d335503a6758ca92bd8c93cdf0d1fe8/reports/native/2026.10.13/shard-09/native-batch-000-evidence.tar.gz",
+        "sha256": "8fb544268eed26be6ba6270fbbc63a3fec9b0eda3a8f38209efe5179497deca8",
+        "hf_commit": "4ec585ae2d335503a6758ca92bd8c93cdf0d1fe8",
+        "size_bytes": 108435857
+      },
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "59666343155919d1a74beb64ab307a7b6b520a3d4a6d4f2da568490f183031fa",
+      "supplemental_accepted": true,
+      "planned_test_count": 12,
+      "result_count": 12,
+      "passed": 11,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-13T22:26:12.688793+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "84b63614490d4da00c88446a764bcd91b46d7eeb46fef86170b5faae8f131ab5",
+      "qualification": "native-fleet-evidence/shard-09/native-batch-000/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

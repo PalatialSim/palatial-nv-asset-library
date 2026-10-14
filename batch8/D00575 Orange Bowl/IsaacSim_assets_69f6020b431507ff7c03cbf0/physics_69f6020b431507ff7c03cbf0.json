@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.10581828653812408,
-        0.10548634827136993,
-        0.10676867514848709
-      ],
       "min": [
-        -0.10543330758810043,
-        -0.10586535185575485,
-        -0.00017164564633276314
+        -0.10542099922895432,
+        -0.10587900131940842,
+        -0.00011000000085914508
+      ],
+      "max": [
+        0.10581099987030029,
+        0.10548599809408188,
+        0.10674300044775009
       ],
       "size": [
-        0.21125159412622452,
-        0.2113517001271248,
-        0.10694032079481985
-      ]
+        0.2112319990992546,
+        0.2113649994134903,
+        0.10685300044860924
+      ],
+      "units": "m"
     },
     "description": "A solid terracotta-colored ceramic bowl with a smooth, semi-gloss finish and a slightly thickened rim.",
     "name": "D00575 Orange Bowl",
     "object_type": "rigid_bodies",
-    "total_mass": 0.4
+    "total_mass": 0.4000000059604645,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00575",
   "parts": [
     {
       "bounds": {
-        "center": [
-          9.229782683290186e-05,
-          -0.0001517484057291896,
-          0.05203118826789209
+        "min": [
+          -0.10542099922895432,
+          -0.10587900131940842,
+          -0.00011000000085914508
         ],
         "max": [
-          0.10581828653812408,
-          0.10548634827136993,
-          0.10676867514848709
+          0.10581099987030029,
+          0.10548599809408188,
+          0.10674300044775009
         ],
-        "min": [
-          -0.10543330758810043,
-          -0.10586535185575485,
-          -0.00017164564633276314
-        ]
+        "size": [
+          0.2112319990992546,
+          0.2113649994134903,
+          0.10685300044860924
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         0.0004738591211236688,
@@ -59,7 +65,7 @@
         0.0017937123336609446,
         0.0027260212587703436
       ],
-      "mass": 0.4,
+      "mass": 0.4000000059604645,
       "material": "ceramic",
       "name": "D00575 Orange Bowl",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00575 Orange Bowl",
         "part_name": "D00575 Orange Bowl"
       },
-      "volume": 0.0005551723179256259
+      "volume": 0.0005551723179256259,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "77d2972405167148e021358d86a2d42e96d3ed80cfa43a5fb86ca06d686908a8"
+    },
+    "usd_path": "batch8/D00575 Orange Bowl/IsaacSim_assets_69f6020b431507ff7c03cbf0/IsaacSim_asset_69f6020b431507ff7c03cbf0.usd",
+    "usd_sha256": "ed9f9ffd6a8b105ae10c9dd98888bd0f25cc96076ffb516592d12cdb35930ed4",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {},
   "units": {
@@ -86,25 +109,82 @@
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
-        0.21125159412622452,
-        0.2113517001271248,
-        0.10694032079481985
-      ]
+        0.2112319990992546,
+        0.2113649994134903,
+        0.10685300044860924
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "ed9f9ffd6a8b105ae10c9dd98888bd0f25cc96076ffb516592d12cdb35930ed4",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.4
+      "value_kg": 0.4000000059604645,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "ed9f9ffd6a8b105ae10c9dd98888bd0f25cc96076ffb516592d12cdb35930ed4",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.4000000059604645,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 80,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "ed9f9ffd6a8b105ae10c9dd98888bd0f25cc96076ffb516592d12cdb35930ed4",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 80,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "ed9f9ffd6a8b105ae10c9dd98888bd0f25cc96076ffb516592d12cdb35930ed4",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/8a774d39d6ced0ab79574f6776ec0c12ef8bc78f/reports/native/2026.10.13/shard-04/native-batch-002-evidence.tar.gz",
+        "sha256": "9f49d72dcc7a4d066cd6e376ffe49abcd3f50361cc7ca93b4722a26e72e4abf2",
+        "hf_commit": "8a774d39d6ced0ab79574f6776ec0c12ef8bc78f",
+        "size_bytes": 113034909
+      },
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "ed9f9ffd6a8b105ae10c9dd98888bd0f25cc96076ffb516592d12cdb35930ed4",
+      "supplemental_accepted": true,
+      "planned_test_count": 12,
+      "result_count": 12,
+      "passed": 11,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-14T00:14:26.785129+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "380692701262e5529bd33ed0f73773044ecce6ec4d6d1043952b230159c75d0b",
+      "qualification": "native-fleet-evidence/shard-04/native-batch-002/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

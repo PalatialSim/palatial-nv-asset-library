@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.03821299970149994,
-        0.03838299959897995,
-        0.1483898162841797
-      ],
       "min": [
         -0.038182999938726425,
         -0.03829599916934967,
         0.0007848102832213044
       ],
+      "max": [
+        0.03821299970149994,
+        0.03838299959897995,
+        0.1483898162841797
+      ],
       "size": [
         0.07639599964022636,
         0.07667899876832962,
         0.14760500600095838
-      ]
+      ],
+      "units": "m"
     },
     "description": "D00804 Stainless Steel Tumbler",
     "name": "D00804 Stainless Steel Tumbler",
     "object_type": "rigid_bodies",
-    "total_mass": 0.35
+    "total_mass": 0.3499999940395355,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00804",
   "parts": [
     {
       "bounds": {
-        "center": [
-          1.4999881386756897e-05,
-          4.350021481513977e-05,
-          0.0745873132837005
+        "min": [
+          -0.038182999938726425,
+          -0.03829599916934967,
+          0.0007848102832213044
         ],
         "max": [
           0.03821299970149994,
           0.03838299959897995,
           0.1483898162841797
         ],
-        "min": [
-          -0.038182999938726425,
-          -0.03829599916934967,
-          0.0007848102832213044
-        ]
+        "size": [
+          0.07639599964022636,
+          0.07667899876832962,
+          0.14760500600095838
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         -9.536510333418846e-06,
@@ -59,7 +65,7 @@
         0.0007113656611181796,
         0.0007123224786482751
       ],
-      "mass": 0.35,
+      "mass": 0.3499999940395355,
       "material": "metal",
       "name": "D00804 Stainless Steel Tumbler",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00804 Stainless Steel Tumbler",
         "part_name": "D00804 Stainless Steel Tumbler"
       },
-      "volume": 4.374999925494194e-05
+      "volume": 4.374999925494194e-05,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "b7ff1659a4d2e1309a6d73f23b0a2a82c1c446dfecf98e97b43b1cc5de076c90"
+    },
+    "usd_path": "batch26/D00804 Stainless Steel Tumbler/IsaacSim_assets_6a7a9a37b56a872fd768fcf6/IsaacSim_asset_6a7a9a37b56a872fd768fcf6.usd",
+    "usd_sha256": "47337fc7f9c7d83c87d1cc7fb0e3beebe6b599a528cd061cd2aad86922d125f8",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -91,22 +114,79 @@
         0.07639599964022636,
         0.07667899876832962,
         0.14760500600095838
-      ]
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "47337fc7f9c7d83c87d1cc7fb0e3beebe6b599a528cd061cd2aad86922d125f8",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.35
+      "value_kg": 0.3499999940395355,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "47337fc7f9c7d83c87d1cc7fb0e3beebe6b599a528cd061cd2aad86922d125f8",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.3499999940395355,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 12,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "47337fc7f9c7d83c87d1cc7fb0e3beebe6b599a528cd061cd2aad86922d125f8",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 12,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "47337fc7f9c7d83c87d1cc7fb0e3beebe6b599a528cd061cd2aad86922d125f8",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/eeb19b316960d8999e09bdf547f0130dd0745a53/reports/native/2026.10.13/shard-10/native-batch-003-evidence.tar.gz",
+        "sha256": "82606f3110823c9c2a13edf198e40116278e3237b437f8a4de52dc2a2b4405a1",
+        "hf_commit": "eeb19b316960d8999e09bdf547f0130dd0745a53",
+        "size_bytes": 103504688
+      },
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "47337fc7f9c7d83c87d1cc7fb0e3beebe6b599a528cd061cd2aad86922d125f8",
+      "supplemental_accepted": true,
+      "planned_test_count": 12,
+      "result_count": 12,
+      "passed": 11,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-13T23:52:16.621116+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "62abe7388edf7e62ec772d2d896b90b2520a092cfad8e5f33aeab80dcf002346",
+      "qualification": "native-fleet-evidence/shard-10/native-batch-003/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

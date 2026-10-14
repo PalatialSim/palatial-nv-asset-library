@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.021740999072790146,
-        0.02300800010561943,
-        0.05086499825119972
-      ],
       "min": [
-        -0.02275799959897995,
-        -0.02121799997985363,
-        -5.0999999075429514e-05
+        -0.019802000373601913,
+        -0.01829499937593937,
+        1.8000000636675395e-05
+      ],
+      "max": [
+        0.018900999799370766,
+        0.02140600048005581,
+        0.04465100169181824
       ],
       "size": [
-        0.044498998671770096,
-        0.04422600008547306,
-        0.05091599825027515
-      ]
+        0.03870300017297268,
+        0.03970099985599518,
+        0.04463300169118156
+      ],
+      "units": "m"
     },
     "description": "A glossy red tomato with a rounded, slightly flattened fruit body and green fibrous calyx, leaves, and short stem. The surface appears smooth, thin-skinned, and moist with small natural speckles.",
     "name": "D00737 Small Tomato",
     "object_type": "rigid_bodies",
-    "total_mass": 0.12
+    "total_mass": 0.11999999731779099,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00737",
   "parts": [
     {
       "bounds": {
-        "center": [
-          -0.00016428853450652008,
-          0.00038282393515828633,
-          0.024049803735782905
+        "min": [
+          -0.019802000373601913,
+          -0.01829499937593937,
+          1.8000000636675395e-05
         ],
         "max": [
-          0.021740999072790146,
-          0.02300800010561943,
-          0.05086499825119972
+          0.018900999799370766,
+          0.02140600048005581,
+          0.04465100169181824
         ],
-        "min": [
-          -0.02275799959897995,
-          -0.02121799997985363,
-          -5.0999999075429514e-05
-        ]
+        "size": [
+          0.03870300017297268,
+          0.03970099985599518,
+          0.04463300169118156
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         -3.4271097541959276e-05,
@@ -59,7 +65,7 @@
         2.1472024883564092e-05,
         2.1605452244054736e-05
       ],
-      "mass": 0.12,
+      "mass": 0.11999999731779099,
       "material": "organic_fruit_tissue",
       "name": "D00737 Small Tomato",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00737 Small Tomato",
         "part_name": "D00737 Small Tomato"
       },
-      "volume": 3.557417899057414e-05
+      "volume": 3.557417899057414e-05,
+      "source_prim_path": "/World/part_00_organic_fruit_tissue",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "ab11a1abc8ea12536813ee6e1fe625bdf8b6e18dd2da8d9693002d05bfeb970c"
+    },
+    "usd_path": "batch4/D00737 Small Tomato/IsaacSim_assets_69f659a17f5104dbf2675d15/IsaacSim_asset_69f659a17f5104dbf2675d15.usd",
+    "usd_sha256": "0901a62fb2bce839addfc064b39c48e4725d8983d898a49d01186a76208f8846",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {},
   "units": {
@@ -86,25 +109,82 @@
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
-        0.044498998671770096,
-        0.04422600008547306,
-        0.05091599825027515
-      ]
+        0.03870300017297268,
+        0.03970099985599518,
+        0.04463300169118156
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "0901a62fb2bce839addfc064b39c48e4725d8983d898a49d01186a76208f8846",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.12
+      "value_kg": 0.11999999731779099,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "0901a62fb2bce839addfc064b39c48e4725d8983d898a49d01186a76208f8846",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.11999999731779099,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 59,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "0901a62fb2bce839addfc064b39c48e4725d8983d898a49d01186a76208f8846",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 59,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "0901a62fb2bce839addfc064b39c48e4725d8983d898a49d01186a76208f8846",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/d0a80b6287804f1078f22055199d4dde7a2b2c58/reports/native/2026.10.13/shard-09/native-batch-003-evidence.tar.gz",
+        "sha256": "509287b3073f6ade9fa3d8145b0fd005a3c30e02415a2deb3b1d31c30ad897be",
+        "hf_commit": "d0a80b6287804f1078f22055199d4dde7a2b2c58",
+        "size_bytes": 105224030
+      },
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "0901a62fb2bce839addfc064b39c48e4725d8983d898a49d01186a76208f8846",
+      "supplemental_accepted": true,
+      "planned_test_count": 12,
+      "result_count": 12,
+      "passed": 11,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-13T23:31:21.179884+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "7dcdb3b71671981a6c79292ecd454e201493262f1c5da9340a91730d594b70b9",
+      "qualification": "native-fleet-evidence/shard-09/native-batch-003/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

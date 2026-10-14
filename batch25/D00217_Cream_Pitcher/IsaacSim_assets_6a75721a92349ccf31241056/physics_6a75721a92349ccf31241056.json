@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.05208899825811386,
-        0.032625000923871994,
-        0.08311054110527039
-      ],
       "min": [
         -0.0416099987924099,
         -0.03286200016736984,
         0.00046254009612312075
       ],
+      "max": [
+        0.05208899825811386,
+        0.032625000923871994,
+        0.08311054110527039
+      ],
       "size": [
         0.09369899705052376,
         0.06548700109124184,
         0.08264800100914726
-      ]
+      ],
+      "units": "m"
     },
     "description": "D00217 Cream Pitcher",
     "name": "D00217 Cream Pitcher",
     "object_type": "rigid_bodies",
-    "total_mass": 0.15
+    "total_mass": 0.15000000596046448,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00217",
   "parts": [
     {
       "bounds": {
-        "center": [
-          0.005239499732851982,
-          -0.00011849962174892426,
-          0.04178654060069675
+        "min": [
+          -0.0416099987924099,
+          -0.03286200016736984,
+          0.00046254009612312075
         ],
         "max": [
           0.05208899825811386,
           0.032625000923871994,
           0.08311054110527039
         ],
-        "min": [
-          -0.0416099987924099,
-          -0.03286200016736984,
-          0.00046254009612312075
-        ]
+        "size": [
+          0.09369899705052376,
+          0.06548700109124184,
+          0.08264800100914726
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         0.00021520315203815699,
@@ -59,7 +65,7 @@
         0.00010991630551870912,
         0.00013552134623751044
       ],
-      "mass": 0.15,
+      "mass": 0.15000000596046448,
       "material": "ceramic",
       "name": "D00217 Cream Pitcher",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00217 Cream Pitcher",
         "part_name": "D00217 Cream Pitcher"
       },
-      "volume": 6.250000248352687e-05
+      "volume": 6.250000248352687e-05,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "f3776f56de8bae73f0b4a8e05f97d6d7a8d014b7d154c78adc659d8b64eb30a0"
+    },
+    "usd_path": "batch25/D00217_Cream_Pitcher/IsaacSim_assets_6a75721a92349ccf31241056/IsaacSim_asset_6a75721a92349ccf31241056.usd",
+    "usd_sha256": "1a3584f028e6374e7ecad0f72f28930ea7b042e1b0e0d1e5071b433cb3b7da72",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -91,22 +114,79 @@
         0.09369899705052376,
         0.06548700109124184,
         0.08264800100914726
-      ]
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "1a3584f028e6374e7ecad0f72f28930ea7b042e1b0e0d1e5071b433cb3b7da72",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.15
+      "value_kg": 0.15000000596046448,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "1a3584f028e6374e7ecad0f72f28930ea7b042e1b0e0d1e5071b433cb3b7da72",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.15000000596046448,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 26,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "1a3584f028e6374e7ecad0f72f28930ea7b042e1b0e0d1e5071b433cb3b7da72",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 26,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "1a3584f028e6374e7ecad0f72f28930ea7b042e1b0e0d1e5071b433cb3b7da72",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/b6af153ee3d6ef46950995a7e4e332bbc19a1ce9/reports/native/2026.10.13/shard-11/native-batch-000-evidence.tar.gz",
+        "sha256": "fa9e81b9d97559625d3482a340415188c48c345bdcc8609c09090fe021db4b7d",
+        "hf_commit": "b6af153ee3d6ef46950995a7e4e332bbc19a1ce9",
+        "size_bytes": 117389653
+      },
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "1a3584f028e6374e7ecad0f72f28930ea7b042e1b0e0d1e5071b433cb3b7da72",
+      "supplemental_accepted": true,
+      "planned_test_count": 12,
+      "result_count": 12,
+      "passed": 11,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-13T22:17:38.588603+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "7e1208768b5c6cd94896a83de94fa6a0285b6d6cbc65f68219f4a8eee776dfff",
+      "qualification": "native-fleet-evidence/shard-11/native-batch-000/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.07920880615711212,
-        0.05974484607577324,
-        0.05437387153506279
-      ],
       "min": [
-        -0.05564919114112854,
-        7.84620988270035e-06,
-        -0.06390012800693512
+        -0.04622200131416321,
+        -0.046202998608350754,
+        3.2065462058174168e-18
+      ],
+      "max": [
+        0.06736200302839279,
+        0.05762699991464615,
+        0.06009700149297714
       ],
       "size": [
-        0.13485799729824066,
-        0.05973699986589054,
-        0.11827399954199791
-      ]
+        0.113584004342556,
+        0.1038299985229969,
+        0.06009700149297714
+      ],
+      "units": "m"
     },
     "description": "A piece of fresh ginger root with a pale brown, lumpy, and textured exterior skin.",
     "name": "D00338 Ginger",
     "object_type": "rigid_bodies",
-    "total_mass": 0.12
+    "total_mass": 0.11999999731779099,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00338",
   "parts": [
     {
       "bounds": {
-        "center": [
-          0.0030571078860439204,
-          0.029026572900714392,
-          -0.0016600356264060017
+        "min": [
+          -0.04622200131416321,
+          -0.046202998608350754,
+          3.2065462058174168e-18
         ],
         "max": [
-          0.07920880615711212,
-          0.05974484607577324,
-          0.05437387153506279
+          0.06736200302839279,
+          0.05762699991464615,
+          0.06009700149297714
         ],
-        "min": [
-          -0.05564919114112854,
-          7.84620988270035e-06,
-          -0.06390012800693512
-        ]
+        "size": [
+          0.113584004342556,
+          0.1038299985229969,
+          0.06009700149297714
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         0.0020135325056774823,
@@ -59,7 +65,7 @@
         0.00011590907847920594,
         0.0001627855808513957
       ],
-      "mass": 0.12,
+      "mass": 0.11999999731779099,
       "material": "organic_plant_matter",
       "name": "D00338 Ginger",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00338 Ginger",
         "part_name": "D00338 Ginger"
       },
-      "volume": 0.0003074901560049127
+      "volume": 0.0003074901560049127,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "7dba6a9b764033634a8067a36d493ca478a316a1dd979e15819ce15e01d67c64"
+    },
+    "usd_path": "batch5/D00338 Ginger/IsaacSim_assets_69f5b602431507ff7cec739e/IsaacSim_asset_69f5b602431507ff7cec739e.usd",
+    "usd_sha256": "738e7128c78363942a6b6398d17e3c520486bc1144bcca5b7aa9e5933ed27aa9",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {},
   "units": {
@@ -86,25 +109,82 @@
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
-        0.13485799729824066,
-        0.05973699986589054,
-        0.11827399954199791
-      ]
+        0.113584004342556,
+        0.1038299985229969,
+        0.06009700149297714
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "738e7128c78363942a6b6398d17e3c520486bc1144bcca5b7aa9e5933ed27aa9",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.12
+      "value_kg": 0.11999999731779099,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "738e7128c78363942a6b6398d17e3c520486bc1144bcca5b7aa9e5933ed27aa9",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.11999999731779099,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 49,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "738e7128c78363942a6b6398d17e3c520486bc1144bcca5b7aa9e5933ed27aa9",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 49,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "738e7128c78363942a6b6398d17e3c520486bc1144bcca5b7aa9e5933ed27aa9",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/4ec585ae2d335503a6758ca92bd8c93cdf0d1fe8/reports/native/2026.10.13/shard-09/native-batch-000-evidence.tar.gz",
+        "sha256": "8fb544268eed26be6ba6270fbbc63a3fec9b0eda3a8f38209efe5179497deca8",
+        "hf_commit": "4ec585ae2d335503a6758ca92bd8c93cdf0d1fe8",
+        "size_bytes": 108435857
+      },
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "738e7128c78363942a6b6398d17e3c520486bc1144bcca5b7aa9e5933ed27aa9",
+      "supplemental_accepted": true,
+      "planned_test_count": 12,
+      "result_count": 12,
+      "passed": 11,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-13T22:26:16.695472+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "348aa53ad58e30c11fcb528e86b3716ffa8f5d89e1e0d37c94abe371a889aa24",
+      "qualification": "native-fleet-evidence/shard-09/native-batch-000/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

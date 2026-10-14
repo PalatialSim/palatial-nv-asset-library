@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.1265760064125061,
-        0.25366920232772827,
-        0.02927600033581257
-      ],
       "min": [
         -0.125900998711586,
-        0.0013722104486078024,
-        -0.034522999078035355
+        -0.02927600033581257,
+        0.0013722104486078024
+      ],
+      "max": [
+        0.1265760064125061,
+        0.034522999078035355,
+        0.25366920232772827
       ],
       "size": [
         0.2524770051240921,
-        0.25229699187912047,
-        0.06379899941384792
-      ]
+        0.06379899941384792,
+        0.25229699187912047
+      ],
+      "units": "m"
     },
     "description": "D00913 Wall Clock",
     "name": "D00913 Wall Clock",
     "object_type": "rigid_bodies",
-    "total_mass": 0.8
+    "total_mass": 0.800000011920929,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00913",
   "parts": [
     {
       "bounds": {
-        "center": [
-          0.0003375038504600525,
-          0.12752070638816804,
-          -0.002623499371111393
+        "min": [
+          -0.125900998711586,
+          -0.02927600033581257,
+          0.0013722104486078024
         ],
         "max": [
           0.1265760064125061,
-          0.25366920232772827,
-          0.02927600033581257
+          0.034522999078035355,
+          0.25366920232772827
         ],
-        "min": [
-          -0.125900998711586,
-          0.0013722104486078024,
-          -0.034522999078035355
-        ]
+        "size": [
+          0.2524770051240921,
+          0.06379899941384792,
+          0.25229699187912047
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         0.00028586911503225565,
@@ -59,7 +65,7 @@
         0.003381489310413599,
         0.006165144965052605
       ],
-      "mass": 0.8,
+      "mass": 0.800000011920929,
       "material": "plastic",
       "name": "D00913 Wall Clock",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00913 Wall Clock",
         "part_name": "D00913 Wall Clock"
       },
-      "volume": 0.0007619047732580276
+      "volume": 0.0007619047732580276,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "4c15b043d3293570f46704b603c274321322c3ea5114309f3058ab26ddb8774e"
+    },
+    "usd_path": "batch34/D00913 Wall Clock/IsaacSim_assets_6a840e56a08484187f5db31a/IsaacSim_asset_6a840e56a08484187f5db31a.usd",
+    "usd_sha256": "d247716cba3033ca18cef4670383c7fc291f50f2a80e6558f6f6edf9864a5634",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -89,24 +112,81 @@
       "up_axis": "Z",
       "bounds_m": [
         0.2524770051240921,
-        0.25229699187912047,
-        0.06379899941384792
-      ]
+        0.06379899941384792,
+        0.25229699187912047
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "d247716cba3033ca18cef4670383c7fc291f50f2a80e6558f6f6edf9864a5634",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.8
+      "value_kg": 0.800000011920929,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "d247716cba3033ca18cef4670383c7fc291f50f2a80e6558f6f6edf9864a5634",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.800000011920929,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 27,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "d247716cba3033ca18cef4670383c7fc291f50f2a80e6558f6f6edf9864a5634",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 27,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "d247716cba3033ca18cef4670383c7fc291f50f2a80e6558f6f6edf9864a5634",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/8b74cc2c51b7fe975c9f8bc852b683024e7a69f0/reports/native/2026.10.13/shard-10/native-batch-004-evidence.tar.gz",
+        "sha256": "662bc1093e2f792169500b967464a50257d14ab81cea7accf0efa98b64709847",
+        "hf_commit": "8b74cc2c51b7fe975c9f8bc852b683024e7a69f0",
+        "size_bytes": 109963652
+      },
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "d247716cba3033ca18cef4670383c7fc291f50f2a80e6558f6f6edf9864a5634",
+      "supplemental_accepted": true,
+      "planned_test_count": 12,
+      "result_count": 12,
+      "passed": 11,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-14T00:13:39.358839+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "a889ac2ad44bbb5c690a7164aabd48915c25eaaf351ce646545c6cec366fd1e5",
+      "qualification": "native-fleet-evidence/shard-10/native-batch-004/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

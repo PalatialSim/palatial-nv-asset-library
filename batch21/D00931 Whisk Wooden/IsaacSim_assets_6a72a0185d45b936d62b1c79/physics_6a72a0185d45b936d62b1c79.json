@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.02432899922132492,
-        0.18416699767112732,
-        0.05209210142493248
-      ],
       "min": [
         -0.023300999775528908,
         -0.0983550027012825,
         0.0008970998460426927
       ],
+      "max": [
+        0.02432899922132492,
+        0.18416699767112732,
+        0.05209210142493248
+      ],
       "size": [
         0.04762999899685383,
         0.2825220003724098,
         0.05119500157888979
-      ]
+      ],
+      "units": "m"
     },
     "description": "D00931 Whisk Wooden",
     "name": "D00931 Whisk Wooden",
     "object_type": "rigid_bodies",
-    "total_mass": 0.06
+    "total_mass": 0.05999999865889549,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00931",
   "parts": [
     {
       "bounds": {
-        "center": [
-          0.0005139997228980064,
-          0.04290599748492241,
-          0.026494600635487586
+        "min": [
+          -0.023300999775528908,
+          -0.0983550027012825,
+          0.0008970998460426927
         ],
         "max": [
           0.02432899922132492,
           0.18416699767112732,
           0.05209210142493248
         ],
-        "min": [
-          -0.023300999775528908,
-          -0.0983550027012825,
-          0.0008970998460426927
-        ]
+        "size": [
+          0.04762999899685383,
+          0.2825220003724098,
+          0.05119500157888979
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         7.261782593559474e-05,
@@ -59,7 +65,7 @@
         0.00032865413231775165,
         0.0003298690135125071
       ],
-      "mass": 0.06,
+      "mass": 0.05999999865889549,
       "material": "wood",
       "name": "D00931 Whisk Wooden",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00931 Whisk Wooden",
         "part_name": "D00931 Whisk Wooden"
       },
-      "volume": 7.999999821186065e-05
+      "volume": 7.999999821186065e-05,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "c2883d2ddc21c0f705b208f5252ceb35bcd747361505586741595ed6d3727954"
+    },
+    "usd_path": "batch21/D00931 Whisk Wooden/IsaacSim_assets_6a72a0185d45b936d62b1c79/IsaacSim_asset_6a72a0185d45b936d62b1c79.usd",
+    "usd_sha256": "db8f0ee415744eb32d21c2c29e4734fa0ad20128a6cf4fa65de56b7f2cd5c563",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -91,22 +114,79 @@
         0.04762999899685383,
         0.2825220003724098,
         0.05119500157888979
-      ]
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "db8f0ee415744eb32d21c2c29e4734fa0ad20128a6cf4fa65de56b7f2cd5c563",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.06
+      "value_kg": 0.05999999865889549,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "db8f0ee415744eb32d21c2c29e4734fa0ad20128a6cf4fa65de56b7f2cd5c563",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.05999999865889549,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 44,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "db8f0ee415744eb32d21c2c29e4734fa0ad20128a6cf4fa65de56b7f2cd5c563",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 44,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "db8f0ee415744eb32d21c2c29e4734fa0ad20128a6cf4fa65de56b7f2cd5c563",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/0054c98bb79ab2dd21591943c85874fdba98c745/reports/native/2026.10.13/shard-08/native-batch-004-evidence.tar.gz",
+        "sha256": "142ce9b67155d2e2ce99e285be19805eec6a6667fb36521d387baef57d1a39eb",
+        "hf_commit": "0054c98bb79ab2dd21591943c85874fdba98c745",
+        "size_bytes": 106767539
+      },
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "db8f0ee415744eb32d21c2c29e4734fa0ad20128a6cf4fa65de56b7f2cd5c563",
+      "supplemental_accepted": true,
+      "planned_test_count": 12,
+      "result_count": 12,
+      "passed": 11,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-14T00:01:12.956158+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "e3f6738dd0186506fdf91e646140d44180c86666237244373fe8757e0629eb54",
+      "qualification": "native-fleet-evidence/shard-08/native-batch-004/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.13373932242393494,
-        0.3224140405654907,
-        0.13249705731868744
-      ],
       "min": [
-        -0.13329067826271057,
-        -4.294859172659926e-05,
-        -0.13151094317436218
+        -0.13329100608825684,
+        -0.13249699771404266,
+        -4.3000000005122274e-05
+      ],
+      "max": [
+        0.13373899459838867,
+        0.13151100277900696,
+        0.32241401076316833
       ],
       "size": [
         0.2670300006866455,
-        0.3224569891572173,
-        0.2640080004930496
-      ]
+        0.2640080004930496,
+        0.32245701076317346
+      ],
+      "units": "m"
     },
     "description": "A three-tiered, circular stand constructed from brushed silver metal. It features a central supporting pillar that culminates in a top ring handle.",
     "name": "D00244 Cupcake Stand",
     "object_type": "rigid_bodies",
-    "total_mass": 1.99
+    "total_mass": 1.9900000095367432,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00244",
   "parts": [
     {
       "bounds": {
-        "center": [
-          0.0002287435372780501,
-          0.08613371727945514,
-          0.0004986953621265174
+        "min": [
+          -0.13329100608825684,
+          -0.13249699771404266,
+          -4.3000000005122274e-05
         ],
         "max": [
-          0.13373932242393494,
-          0.3224140405654907,
-          0.13249705731868744
+          0.13373899459838867,
+          0.13151100277900696,
+          0.32241401076316833
         ],
-        "min": [
-          -0.13329067826271057,
-          -4.294859172659926e-05,
-          -0.13151094317436218
-        ]
+        "size": [
+          0.2670300006866455,
+          0.2640080004930496,
+          0.32245701076317346
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         0.00022956889321868642,
@@ -59,7 +65,7 @@
         0.015939420632068366,
         0.016074439228077636
       ],
-      "mass": 1.99,
+      "mass": 1.9900000095367432,
       "material": "aluminum",
       "name": "D00244 Cupcake Stand",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00244 Cupcake Stand",
         "part_name": "D00244 Cupcake Stand"
       },
-      "volume": 0.009145149028745617
+      "volume": 0.009145149028745617,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "726ab62dfbbce8c0adc61f6ad873d9d343273e5bc2ebfd1a2d58774f2e5a06e3"
+    },
+    "usd_path": "batch15/D00244 Cupcake Stand/IsaacSim_assets_69f22f9d59057a93105df9f8/IsaacSim_asset_69f22f9d59057a93105df9f8.usd",
+    "usd_sha256": "10914010df1a19cc2f484378cbc7f9ae295fa88b05488263c5432f7f9f9ab2f7",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -89,24 +112,97 @@
       "up_axis": "Z",
       "bounds_m": [
         0.2670300006866455,
-        0.3224569891572173,
-        0.2640080004930496
-      ]
+        0.2640080004930496,
+        0.32245701076317346
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "10914010df1a19cc2f484378cbc7f9ae295fa88b05488263c5432f7f9f9ab2f7",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 1.99
+      "value_kg": 1.9900000095367432,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "10914010df1a19cc2f484378cbc7f9ae295fa88b05488263c5432f7f9f9ab2f7",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 1.9900000095367432,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 173,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "10914010df1a19cc2f484378cbc7f9ae295fa88b05488263c5432f7f9f9ab2f7",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 173,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "10914010df1a19cc2f484378cbc7f9ae295fa88b05488263c5432f7f9f9ab2f7",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/24b8b26e47b1fa2232272e54ddd2eea85a57692f/reports/native/2026.10.13/shard-07/native-batch-000-evidence.tar.gz",
+        "sha256": "8f4a1575d05da430986f626ccea90a3a7387c89faabc7774024d7713c04c94ce",
+        "hf_commit": "24b8b26e47b1fa2232272e54ddd2eea85a57692f",
+        "size_bytes": 104089694
+      },
+      "status": "completed_with_tool_findings",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "10914010df1a19cc2f484378cbc7f9ae295fa88b05488263c5432f7f9f9ab2f7",
+      "supplemental_accepted": true,
+      "planned_test_count": 12,
+      "result_count": 12,
+      "passed": 9,
+      "skipped": 1,
+      "failed": 2,
+      "issues": [
+        "ground_drop:fail",
+        "slope_drop:fail"
+      ],
+      "warnings": [],
+      "completed_at": "2026-10-13T22:16:49.378858+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "626937fa7c61abef71eeb7e9b60077a8416256434456b6dafa4bc2c5090c7017",
+      "tool_findings": {
+        "certificate_path": "tool-finding-certificates/D00244.json",
+        "certificate_sha256": "09daacfce52f96ba2a375b14a8891ba4faf5889191d424e929682ec3b873fbb4",
+        "raw_benchmark_status": "failed",
+        "failed_tests": [
+          "ground_drop",
+          "slope_drop"
+        ],
+        "reason": "The SDK conservative world bounds extend through the floor while live visible and collider mesh vertices remain above its penetration limit. Both complete independent ground and slope simulations pass with the unchanged SDK simulation parameters and thresholds, including stable ground settling and post-slide observation. Raw SDK physics failures remain for NVIDIA review.",
+        "NVIDIA_raw_results_modified": false,
+        "requires_NVIDIA_review": true,
+        "release_certificate": "reports/releases/2026.10.13/tool-findings/D00244.json"
+      },
+      "qualification": "native-fleet-evidence/shard-07/native-batch-000/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

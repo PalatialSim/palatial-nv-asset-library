@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.09641499817371368,
-        0.050338998436927795,
-        0.11694814264774323
-      ],
       "min": [
         -0.09638900309801102,
         -0.05033000186085701,
         0.0007641399861313403
       ],
+      "max": [
+        0.09641499817371368,
+        0.050338998436927795,
+        0.11694814264774323
+      ],
       "size": [
         0.1928040012717247,
         0.1006690002977848,
         0.11618400266161188
-      ]
+      ],
+      "units": "m"
     },
     "description": "D00568 Toast Rack",
     "name": "D00568 Toast Rack",
     "object_type": "rigid_bodies",
-    "total_mass": 0.556
+    "total_mass": 0.5559999942779541,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00568",
   "parts": [
     {
       "bounds": {
-        "center": [
-          1.2997537851333618e-05,
-          4.498288035392761e-06,
-          0.05885614131693728
+        "min": [
+          -0.09638900309801102,
+          -0.05033000186085701,
+          0.0007641399861313403
         ],
         "max": [
           0.09641499817371368,
           0.050338998436927795,
           0.11694814264774323
         ],
-        "min": [
-          -0.09638900309801102,
-          -0.05033000186085701,
-          0.0007641399861313403
-        ]
+        "size": [
+          0.1928040012717247,
+          0.1006690002977848,
+          0.11618400266161188
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         3.288543302915059e-05,
@@ -59,7 +65,7 @@
         0.001829018467105925,
         0.0019758339039981365
       ],
-      "mass": 0.556,
+      "mass": 0.5559999942779541,
       "material": "metal",
       "name": "D00568 Toast Rack",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00568 Toast Rack",
         "part_name": "D00568 Toast Rack"
       },
-      "volume": 7.037974611113343e-05
+      "volume": 7.037974611113343e-05,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "f28682fbd75c4793f8793bf3bf284b04f2268c0d7267dd08c1798e93cc174c62"
+    },
+    "usd_path": "batch28/D00568 Toast Rack/IsaacSim_assets_6a79b02ed43e18960539023e/IsaacSim_asset_6a79b02ed43e18960539023e.usd",
+    "usd_sha256": "93943462945e42062af940c01b03fe8e80b16aaa9754081cd1e9610df8257222",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {
     "fix_base": false
@@ -91,22 +114,79 @@
         0.1928040012717247,
         0.1006690002977848,
         0.11618400266161188
-      ]
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "93943462945e42062af940c01b03fe8e80b16aaa9754081cd1e9610df8257222",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.556
+      "value_kg": 0.5559999942779541,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "93943462945e42062af940c01b03fe8e80b16aaa9754081cd1e9610df8257222",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.5559999942779541,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 64,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "93943462945e42062af940c01b03fe8e80b16aaa9754081cd1e9610df8257222",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 64,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "93943462945e42062af940c01b03fe8e80b16aaa9754081cd1e9610df8257222",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/91674304f3637cd9acd3a987e279915e4874f7b5/reports/native/2026.10.13/shard-11/native-batch-002-evidence.tar.gz",
+        "sha256": "03113b16a23e073b36cd327ff9c13df88747df7df531d1e1b1da4038a5ee06f9",
+        "hf_commit": "91674304f3637cd9acd3a987e279915e4874f7b5",
+        "size_bytes": 109382822
+      },
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "93943462945e42062af940c01b03fe8e80b16aaa9754081cd1e9610df8257222",
+      "supplemental_accepted": true,
+      "planned_test_count": 12,
+      "result_count": 12,
+      "passed": 11,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-13T22:54:39.449655+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "f22f517f2d245635c4beedf1bb491f9f85e9a2ea8e008a42e32ea805a9256438",
+      "qualification": "native-fleet-evidence/shard-11/native-batch-002/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }

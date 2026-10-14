@@ -1,50 +1,56 @@
 {
   "articulation": {
     "has_joints": false,
-    "joints": []
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
   },
   "asset": {
     "bounds": {
-      "max": [
-        0.216948002576828,
-        0.1624870002269745,
-        0.06065699830651283
-      ],
       "min": [
-        -0.21614299714565277,
-        -0.16257399320602417,
-        -0.000295000005280599
+        -0.22349700331687927,
+        -0.16394999623298645,
+        4.999999418942025e-06
+      ],
+      "max": [
+        0.2240999937057495,
+        0.16496500372886658,
+        0.06358300149440765
       ],
       "size": [
-        0.4330909997224808,
-        0.32506099343299866,
-        0.06095199831179343
-      ]
+        0.4475969970226288,
+        0.328914999961853,
+        0.06357800149498871
+      ],
+      "units": "m"
     },
     "description": "A rectangular wooden serving tray featuring integrated cutout handles on the shorter sides. The object displays a natural light wood grain finish with raised edges.",
     "name": "D00951 Wooden Board Tray",
     "object_type": "rigid_bodies",
-    "total_mass": 0.855
+    "total_mass": 0.8550000190734863,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
   },
   "asset_id": "D00951",
   "parts": [
     {
       "bounds": {
-        "center": [
-          0.00039809892668208734,
-          8.076541903155838e-05,
-          0.013026246211688691
+        "min": [
+          -0.22349700331687927,
+          -0.16394999623298645,
+          4.999999418942025e-06
         ],
         "max": [
-          0.216948002576828,
-          0.1624870002269745,
-          0.06065699830651283
+          0.2240999937057495,
+          0.16496500372886658,
+          0.06358300149440765
         ],
-        "min": [
-          -0.21614299714565277,
-          -0.16257399320602417,
-          -0.000295000005280599
-        ]
+        "size": [
+          0.4475969970226288,
+          0.328914999961853,
+          0.06357800149498871
+        ],
+        "units": "m"
       },
       "center_of_mass": [
         0.0002968519026870664,
@@ -59,7 +65,7 @@
         0.017054369482641784,
         0.026076495726091966
       ],
-      "mass": 0.855,
+      "mass": 0.8550000190734863,
       "material": "wood",
       "name": "D00951 Wooden Board Tray",
       "physics_type": "rigid",
@@ -67,10 +73,27 @@
         "object_name": "D00951 Wooden Board Tray",
         "part_name": "D00951 Wooden Board Tray"
       },
-      "volume": 0.0027469798565966444
+      "volume": 0.0027469798565966444,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
     }
   ],
-  "provenance": {},
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "400ff02d87aba3c347e516a9c185285ffb3a4699492f6e269441ef265a046e4e"
+    },
+    "usd_path": "batch14/D00951 Wooden Board Tray/IsaacSim_assets_69f736027f5104dbf23d6b7b/IsaacSim_asset_69f736027f5104dbf23d6b7b.usd",
+    "usd_sha256": "cd217f386ff1c4958f0b6fe23da6a5e430510f221dd06cb7bc75f11b53d00241",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
   "schema_version": "1.0",
   "simulation": {},
   "units": {
@@ -86,25 +109,82 @@
       "units": "m",
       "up_axis": "Z",
       "bounds_m": [
-        0.4330909997224808,
-        0.32506099343299866,
-        0.06095199831179343
-      ]
+        0.4475969970226288,
+        0.328914999961853,
+        0.06357800149498871
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "cd217f386ff1c4958f0b6fe23da6a5e430510f221dd06cb7bc75f11b53d00241",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
     },
     "mass": {
       "status": "verified",
       "confidence": "high",
-      "value_kg": 0.855
+      "value_kg": 0.8550000190734863,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "cd217f386ff1c4958f0b6fe23da6a5e430510f221dd06cb7bc75f11b53d00241",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.8550000190734863,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
     },
     "collision": {
-      "status": "recorded",
-      "confidence": "medium",
-      "shape_count": 1
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 21,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "cd217f386ff1c4958f0b6fe23da6a5e430510f221dd06cb7bc75f11b53d00241",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 21,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
     },
     "articulation": {
       "status": "verified",
       "confidence": "high",
-      "moving_joints": 0
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "cd217f386ff1c4958f0b6fe23da6a5e430510f221dd06cb7bc75f11b53d00241",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/915fffb5013518b5554f46e67eccaf4ad4a669a2/reports/native/2026.10.13/shard-05/native-batch-004-evidence.tar.gz",
+        "sha256": "e1a720da7bd29ec9e330ce6dc6f72663e38297fcdc2c82152562726666d25a0b",
+        "hf_commit": "915fffb5013518b5554f46e67eccaf4ad4a669a2",
+        "size_bytes": 110877323
+      },
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "cd217f386ff1c4958f0b6fe23da6a5e430510f221dd06cb7bc75f11b53d00241",
+      "supplemental_accepted": true,
+      "planned_test_count": 12,
+      "result_count": 12,
+      "passed": 11,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-13T23:58:30.111666+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "e8ef2be3c796a41a3087d20ff50f0f6866c08ccb3e7d90e7edf571876995b7cc",
+      "qualification": "native-fleet-evidence/shard-05/native-batch-004/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
 }
