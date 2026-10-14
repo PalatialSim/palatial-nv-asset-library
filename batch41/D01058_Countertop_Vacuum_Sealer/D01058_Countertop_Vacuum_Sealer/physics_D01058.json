@@ -314,64 +314,6 @@
     "has_joints": true,
     "joints": [
       {
-        "id": "FixedBase_to_World",
-        "path": "/ElianiSealer/Joints/FixedBase_to_World",
-        "type": "PhysicsFixedJoint",
-        "enabled": false,
-        "body0": [
-          "/ElianiSealer"
-        ],
-        "body1": [
-          "/ElianiSealer/Base"
-        ],
-        "lower_limit": null,
-        "upper_limit": null,
-        "usd_type": "PhysicsFixedJoint",
-        "body0_targets": [
-          "/ElianiSealer"
-        ],
-        "body1_targets": [
-          "/ElianiSealer/Base"
-        ],
-        "authored_usd": {
-          "id": "FixedBase_to_World",
-          "source_prim_path": "/ElianiSealer/Joints/FixedBase_to_World",
-          "joint_type": "PhysicsFixedJoint",
-          "body0": [
-            "/ElianiSealer"
-          ],
-          "body1": [
-            "/ElianiSealer/Base"
-          ],
-          "joint_enabled": false,
-          "localPos0": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "localPos1": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "localRot0": [
-            1.0,
-            0.0,
-            0.0,
-            0.0
-          ],
-          "localRot1": [
-            1.0,
-            0.0,
-            0.0,
-            0.0
-          ],
-          "static_frames": [
-            "/ElianiSealer"
-          ]
-        }
-      },
-      {
         "id": "Lid_Hinge",
         "path": "/ElianiSealer/Joints/Lid_Hinge",
         "type": "PhysicsRevoluteJoint",
@@ -404,7 +346,7 @@
           "joint_enabled": true,
           "axis": "Y",
           "lowerLimit": 0.0,
-          "upperLimit": 105.0,
+          "upperLimit": 65.0,
           "localPos0": [
             -0.17550000548362732,
             0.0,
@@ -428,6 +370,57 @@
             0.0
           ],
           "static_frames": []
+        },
+        "joint_path": "/ElianiSealer/Joints/Lid_Hinge",
+        "usd_attributes": {
+          "drive:angular:physics:damping": 0.019999999552965164,
+          "drive:angular:physics:maxForce": 5.0,
+          "drive:angular:physics:stiffness": 0.0,
+          "drive:angular:physics:targetPosition": 0.0,
+          "drive:angular:physics:targetVelocity": 0.0,
+          "drive:angular:physics:type": "acceleration",
+          "physics:axis": "Y",
+          "physics:collisionEnabled": false,
+          "physics:jointEnabled": true,
+          "physics:localPos0": [
+            -0.17550000548362732,
+            0.0,
+            0.1809999942779541
+          ],
+          "physics:localPos1": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "physics:localRot0": [
+            -4.371138828673793e-08,
+            -1.0,
+            0.0,
+            0.0
+          ],
+          "physics:localRot1": [
+            -4.371138828673793e-08,
+            -1.0,
+            0.0,
+            0.0
+          ],
+          "physics:lowerLimit": 0.0,
+          "physics:upperLimit": 65.0
+        },
+        "motion_limits": {
+          "min": 0.0,
+          "max": 65.0,
+          "unit": "degrees"
+        },
+        "drives": {
+          "angular": {
+            "physics:damping": 0.019999999552965164,
+            "physics:maxForce": 5.0,
+            "physics:stiffness": 0.0,
+            "physics:targetPosition": 0.0,
+            "physics:targetVelocity": 0.0,
+            "physics:type": "acceleration"
+          }
         }
       },
       {
@@ -487,6 +480,47 @@
             0.0
           ],
           "static_frames": []
+        },
+        "joint_path": "/ElianiSealer/Joints/Left_Cylinder_BasePin",
+        "usd_attributes": {
+          "drive:angular:physics:type": "acceleration",
+          "physics:axis": "Y",
+          "physics:collisionEnabled": false,
+          "physics:jointEnabled": true,
+          "physics:localPos0": [
+            -0.10300000011920929,
+            0.1850000023841858,
+            0.029999999329447746
+          ],
+          "physics:localPos1": [
+            -9.313225746154785e-10,
+            0.0,
+            0.0
+          ],
+          "physics:localRot0": [
+            0.9973015785217285,
+            0.0,
+            -0.07341369241476059,
+            0.0
+          ],
+          "physics:localRot1": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "physics:lowerLimit": -45.0,
+          "physics:upperLimit": 45.0
+        },
+        "motion_limits": {
+          "min": -45.0,
+          "max": 45.0,
+          "unit": "degrees"
+        },
+        "drives": {
+          "angular": {
+            "physics:type": "acceleration"
+          }
         }
       },
       {
@@ -546,6 +580,57 @@
             0.0
           ],
           "static_frames": []
+        },
+        "joint_path": "/ElianiSealer/Joints/Left_GasSpring_Stroke",
+        "usd_attributes": {
+          "drive:linear:physics:damping": 8.0,
+          "drive:linear:physics:maxForce": 20.0,
+          "drive:linear:physics:stiffness": 900.0,
+          "drive:linear:physics:targetPosition": 1.9814896390357717e-09,
+          "drive:linear:physics:targetVelocity": 0.0,
+          "drive:linear:physics:type": "acceleration",
+          "physics:axis": "Z",
+          "physics:collisionEnabled": false,
+          "physics:jointEnabled": true,
+          "physics:localPos0": [
+            6.332993507385254e-08,
+            0.0,
+            0.1536562740802765
+          ],
+          "physics:localPos1": [
+            -3.725290298461914e-09,
+            0.0,
+            5.587935447692871e-09
+          ],
+          "physics:localRot0": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "physics:localRot1": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "physics:lowerLimit": 0.0,
+          "physics:upperLimit": 0.05040835961699486
+        },
+        "motion_limits": {
+          "min": 0.0,
+          "max": 0.05040835961699486,
+          "unit": "meters"
+        },
+        "drives": {
+          "linear": {
+            "physics:damping": 8.0,
+            "physics:maxForce": 20.0,
+            "physics:stiffness": 900.0,
+            "physics:targetPosition": 1.9814896390357717e-09,
+            "physics:targetVelocity": 0.0,
+            "physics:type": "acceleration"
+          }
         }
       },
       {
@@ -605,6 +690,48 @@
             0.0
           ],
           "static_frames": []
+        },
+        "joint_path": "/ElianiSealer/Joints/Left_Rod_LidPin_LOOP",
+        "usd_attributes": {
+          "drive:angular:physics:type": "acceleration",
+          "physics:axis": "Y",
+          "physics:collisionEnabled": false,
+          "physics:excludeFromArticulation": true,
+          "physics:jointEnabled": true,
+          "physics:localPos0": [
+            -3.725290298461914e-09,
+            0.0,
+            5.587935447692871e-09
+          ],
+          "physics:localPos1": [
+            0.04999999701976776,
+            0.1850000023841858,
+            0.0010000020265579224
+          ],
+          "physics:localRot0": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "physics:localRot1": [
+            0.9973015785217285,
+            0.0,
+            -0.07341369241476059,
+            0.0
+          ],
+          "physics:lowerLimit": -120.0,
+          "physics:upperLimit": 120.0
+        },
+        "motion_limits": {
+          "min": -120.0,
+          "max": 120.0,
+          "unit": "degrees"
+        },
+        "drives": {
+          "angular": {
+            "physics:type": "acceleration"
+          }
         }
       },
       {
@@ -664,6 +791,47 @@
             0.0
           ],
           "static_frames": []
+        },
+        "joint_path": "/ElianiSealer/Joints/Right_Cylinder_BasePin",
+        "usd_attributes": {
+          "drive:angular:physics:type": "acceleration",
+          "physics:axis": "Y",
+          "physics:collisionEnabled": false,
+          "physics:jointEnabled": true,
+          "physics:localPos0": [
+            -0.10300000011920929,
+            -0.1850000023841858,
+            0.029999999329447746
+          ],
+          "physics:localPos1": [
+            -9.313225746154785e-10,
+            0.0,
+            0.0
+          ],
+          "physics:localRot0": [
+            0.9973015785217285,
+            0.0,
+            -0.07341369241476059,
+            0.0
+          ],
+          "physics:localRot1": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "physics:lowerLimit": -45.0,
+          "physics:upperLimit": 45.0
+        },
+        "motion_limits": {
+          "min": -45.0,
+          "max": 45.0,
+          "unit": "degrees"
+        },
+        "drives": {
+          "angular": {
+            "physics:type": "acceleration"
+          }
         }
       },
       {
@@ -723,6 +891,57 @@
             0.0
           ],
           "static_frames": []
+        },
+        "joint_path": "/ElianiSealer/Joints/Right_GasSpring_Stroke",
+        "usd_attributes": {
+          "drive:linear:physics:damping": 8.0,
+          "drive:linear:physics:maxForce": 20.0,
+          "drive:linear:physics:stiffness": 900.0,
+          "drive:linear:physics:targetPosition": 1.9814896390357717e-09,
+          "drive:linear:physics:targetVelocity": 0.0,
+          "drive:linear:physics:type": "acceleration",
+          "physics:axis": "Z",
+          "physics:collisionEnabled": false,
+          "physics:jointEnabled": true,
+          "physics:localPos0": [
+            6.332993507385254e-08,
+            0.0,
+            0.1536562740802765
+          ],
+          "physics:localPos1": [
+            -3.725290298461914e-09,
+            0.0,
+            5.587935447692871e-09
+          ],
+          "physics:localRot0": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "physics:localRot1": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "physics:lowerLimit": 0.0,
+          "physics:upperLimit": 0.05040835961699486
+        },
+        "motion_limits": {
+          "min": 0.0,
+          "max": 0.05040835961699486,
+          "unit": "meters"
+        },
+        "drives": {
+          "linear": {
+            "physics:damping": 8.0,
+            "physics:maxForce": 20.0,
+            "physics:stiffness": 900.0,
+            "physics:targetPosition": 1.9814896390357717e-09,
+            "physics:targetVelocity": 0.0,
+            "physics:type": "acceleration"
+          }
         }
       },
       {
@@ -782,12 +1001,117 @@
             0.0
           ],
           "static_frames": []
+        },
+        "joint_path": "/ElianiSealer/Joints/Right_Rod_LidPin_LOOP",
+        "usd_attributes": {
+          "drive:angular:physics:type": "acceleration",
+          "physics:axis": "Y",
+          "physics:collisionEnabled": false,
+          "physics:excludeFromArticulation": true,
+          "physics:jointEnabled": true,
+          "physics:localPos0": [
+            -3.725290298461914e-09,
+            0.0,
+            5.587935447692871e-09
+          ],
+          "physics:localPos1": [
+            0.04999999701976776,
+            -0.1850000023841858,
+            0.0010000020265579224
+          ],
+          "physics:localRot0": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "physics:localRot1": [
+            0.9973015785217285,
+            0.0,
+            -0.07341369241476059,
+            0.0
+          ],
+          "physics:lowerLimit": -120.0,
+          "physics:upperLimit": 120.0
+        },
+        "motion_limits": {
+          "min": -120.0,
+          "max": 120.0,
+          "unit": "degrees"
+        },
+        "drives": {
+          "angular": {
+            "physics:type": "acceleration"
+          }
         }
       }
     ],
     "moving_joints": 7,
     "rigid_body_count": 6,
-    "scope": "Authored USD constraints; independent free bodies are not joints."
+    "scope": "Authored USD constraints; independent free bodies are not joints.",
+    "inactive_joint_definitions": [
+      {
+        "id": "FixedBase_to_World",
+        "path": "/ElianiSealer/Joints/FixedBase_to_World",
+        "type": "PhysicsFixedJoint",
+        "enabled": false,
+        "body0": [
+          "/ElianiSealer"
+        ],
+        "body1": [
+          "/ElianiSealer/Base"
+        ],
+        "lower_limit": null,
+        "upper_limit": null,
+        "usd_type": "PhysicsFixedJoint",
+        "body0_targets": [
+          "/ElianiSealer"
+        ],
+        "body1_targets": [
+          "/ElianiSealer/Base"
+        ],
+        "authored_usd": {
+          "id": "FixedBase_to_World",
+          "source_prim_path": "/ElianiSealer/Joints/FixedBase_to_World",
+          "joint_type": "PhysicsFixedJoint",
+          "body0": [
+            "/ElianiSealer"
+          ],
+          "body1": [
+            "/ElianiSealer/Base"
+          ],
+          "joint_enabled": false,
+          "localPos0": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "localPos1": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "localRot0": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "localRot1": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "static_frames": [
+            "/ElianiSealer"
+          ]
+        },
+        "active": false,
+        "retained_in_USD": true,
+        "native_repair_case": "native-mass-scaled-sealer-v13"
+      }
+    ]
   },
   "units": {
     "length": "m",
@@ -795,12 +1119,2052 @@
     "up_axis": "Z"
   },
   "simulation": {
-    "fix_base": null
+    "fix_base": null,
+    "authored_usd_physics_properties": [
+      {
+        "prim_path": "/ElianiSealer/Base",
+        "authored_attributes": {
+          "physics:centerOfMass": "(-0.005, 0, 0.061)",
+          "physics:diagonalInertia": "(0.33063334, 0.25975832, 0.533925)",
+          "physics:kinematicEnabled": "False",
+          "physics:mass": "28.0",
+          "physics:principalAxes": "(1, 0, 0, 0)",
+          "physics:rigidBodyEnabled": "True",
+          "physxArticulation:enabledSelfCollisions": "False",
+          "physxArticulation:solverPositionIterationCount": "255",
+          "physxArticulation:solverVelocityIterationCount": "0",
+          "physxRigidBody:enableSpeculativeCCD": "True",
+          "physxRigidBody:solverPositionIterationCount": "128",
+          "physxRigidBody:solverVelocityIterationCount": "0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Lower_cabinet_and_chamber_floor",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Outer_right_sheet",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Outer_left_sheet",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Rear_outer_sheet",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Front_outer_sheet",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Chamber_wall_band0_00",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Chamber_wall_band0_01",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Chamber_wall_band0_02",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Chamber_wall_band0_03",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Chamber_wall_band0_04",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Chamber_wall_band0_05",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Chamber_wall_band0_06",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Chamber_wall_band0_07",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Chamber_wall_band0_08",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Chamber_wall_band0_09",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Chamber_wall_band0_10",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Chamber_wall_band0_11",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Chamber_wall_band0_12",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Chamber_wall_band0_13",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Chamber_wall_band0_14",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Chamber_wall_band0_15",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Chamber_wall_band0_16",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Chamber_wall_band0_17",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Chamber_wall_band0_18",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Chamber_wall_band0_19",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Chamber_wall_band0_20",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Chamber_wall_band0_21",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Chamber_wall_band0_22",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Chamber_wall_band0_23",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Chamber_wall_band1_00",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Chamber_wall_band1_01",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Chamber_wall_band1_02",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Chamber_wall_band1_03",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Chamber_wall_band1_04",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Chamber_wall_band1_05",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Chamber_wall_band1_06",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Chamber_wall_band1_07",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Chamber_wall_band1_08",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Chamber_wall_band1_09",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Chamber_wall_band1_10",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Chamber_wall_band1_11",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Chamber_wall_band1_12",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Chamber_wall_band1_13",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Chamber_wall_band1_14",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Chamber_wall_band1_15",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Chamber_wall_band1_16",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Chamber_wall_band1_17",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Chamber_wall_band1_18",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Chamber_wall_band1_19",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Chamber_wall_band1_20",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Chamber_wall_band1_21",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Chamber_wall_band1_22",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Chamber_wall_band1_23",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Chamber_wall_band2_00",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Chamber_wall_band2_01",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Chamber_wall_band2_02",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Chamber_wall_band2_03",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Chamber_wall_band2_04",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Chamber_wall_band2_05",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Chamber_wall_band2_06",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Chamber_wall_band2_07",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Chamber_wall_band2_08",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Chamber_wall_band2_09",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Chamber_wall_band2_10",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Chamber_wall_band2_11",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Chamber_wall_band2_12",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Chamber_wall_band2_13",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Chamber_wall_band2_14",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Chamber_wall_band2_15",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Chamber_wall_band2_16",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Chamber_wall_band2_17",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Chamber_wall_band2_18",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Chamber_wall_band2_19",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Chamber_wall_band2_20",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Chamber_wall_band2_21",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Chamber_wall_band2_22",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Chamber_wall_band2_23",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Sloped_rim_section_00",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Sloped_rim_section_01",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Sloped_rim_section_02",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Sloped_rim_section_03",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Sloped_rim_section_04",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Sloped_rim_section_06",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Sloped_rim_section_07",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Sloped_rim_section_08",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Sloped_rim_section_09",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Sloped_rim_section_10",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Sloped_rim_section_11",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Sloped_rim_section_12",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Sloped_rim_section_13",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Sloped_rim_section_14",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Sloped_rim_section_15",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Sloped_rim_section_16",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Sloped_rim_section_18",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Sloped_rim_section_19",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Sloped_rim_section_20",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Sloped_rim_section_21",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Sloped_rim_section_22",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Sloped_rim_section_23",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Side__1_outer_rim_rail",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Side__1_inner_rim_rail",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Side__1_rear_rim_bridge",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Side__1_front_rim_bridge",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Side_1_outer_rim_rail",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Side_1_inner_rim_rail",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Side_1_rear_rim_bridge",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Side_1_front_rim_bridge",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Rear__1_rubber_foot",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Rear_1_rubber_foot",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Front__1_rubber_foot",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Front_1_rubber_foot",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Bezel_frame_facet_00",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Bezel_frame_facet_01",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Bezel_frame_facet_02",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Bezel_frame_facet_03",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Bezel_frame_facet_04",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Bezel_frame_facet_05",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Bezel_frame_facet_06",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Bezel_frame_facet_07",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Recessed_membrane_contact_face",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Touchscreen_contact_surface",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Working_heat_seal_bar",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Seal_bar_mount_right",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Base/Collisions/Seal_bar_mount_left",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Lid",
+        "authored_attributes": {
+          "physics:centerOfMass": "(0.17050001, 0, 0.0020000057)",
+          "physics:diagonalInertia": "(0.0209196, 0.016158, 0.037056)",
+          "physics:kinematicEnabled": "False",
+          "physics:mass": "1.600000023841858",
+          "physics:principalAxes": "(1, 0, 0, 0)",
+          "physics:rigidBodyEnabled": "True",
+          "physxRigidBody:enableSpeculativeCCD": "True",
+          "physxRigidBody:solverPositionIterationCount": "128",
+          "physxRigidBody:solverVelocityIterationCount": "0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Lid/Collisions/Rounded_raised_centre_contact_plate",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Lid/Collisions/Rounded_clear_flange_00",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Lid/Collisions/Rounded_clear_flange_01",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Lid/Collisions/Rounded_clear_flange_02",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Lid/Collisions/Rounded_clear_flange_03",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Lid/Collisions/Rounded_clear_flange_04",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Lid/Collisions/Rounded_clear_flange_05",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Lid/Collisions/Rounded_clear_flange_06",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Lid/Collisions/Rounded_clear_flange_07",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Lid/Collisions/Rounded_clear_flange_08",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Lid/Collisions/Rounded_clear_flange_09",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Lid/Collisions/Rounded_clear_flange_10",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Lid/Collisions/Rounded_clear_flange_11",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Lid/Collisions/Rounded_clear_flange_12",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Lid/Collisions/Rounded_clear_flange_13",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Lid/Collisions/Rounded_clear_flange_14",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Lid/Collisions/Rounded_clear_flange_15",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Lid/Collisions/Rounded_clear_flange_16",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Lid/Collisions/Rounded_clear_flange_17",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Lid/Collisions/Rounded_clear_flange_18",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Lid/Collisions/Rounded_clear_flange_19",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Lid/Collisions/Rounded_clear_flange_20",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Lid/Collisions/Rounded_clear_flange_21",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Lid/Collisions/Rounded_clear_flange_22",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Lid/Collisions/Rounded_clear_flange_23",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Lid/Collisions/Moulded_shoulder_0_00",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Lid/Collisions/Moulded_shoulder_0_01",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Lid/Collisions/Moulded_shoulder_0_02",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Lid/Collisions/Moulded_shoulder_0_03",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Lid/Collisions/Moulded_shoulder_0_04",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Lid/Collisions/Moulded_shoulder_0_05",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Lid/Collisions/Moulded_shoulder_0_06",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Lid/Collisions/Moulded_shoulder_0_07",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Lid/Collisions/Moulded_shoulder_0_08",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Lid/Collisions/Moulded_shoulder_0_09",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Lid/Collisions/Moulded_shoulder_0_10",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Lid/Collisions/Moulded_shoulder_0_11",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Lid/Collisions/Moulded_shoulder_0_12",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Lid/Collisions/Moulded_shoulder_0_13",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Lid/Collisions/Moulded_shoulder_0_14",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Lid/Collisions/Moulded_shoulder_0_15",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Lid/Collisions/Moulded_shoulder_0_16",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Lid/Collisions/Moulded_shoulder_0_17",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Lid/Collisions/Moulded_shoulder_0_18",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Lid/Collisions/Moulded_shoulder_0_19",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Lid/Collisions/Moulded_shoulder_0_20",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Lid/Collisions/Moulded_shoulder_0_21",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Lid/Collisions/Moulded_shoulder_0_22",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Lid/Collisions/Moulded_shoulder_0_23",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Lid/Collisions/Moulded_shoulder_1_00",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Lid/Collisions/Moulded_shoulder_1_01",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Lid/Collisions/Moulded_shoulder_1_02",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Lid/Collisions/Moulded_shoulder_1_03",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Lid/Collisions/Moulded_shoulder_1_04",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Lid/Collisions/Moulded_shoulder_1_05",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Lid/Collisions/Moulded_shoulder_1_06",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Lid/Collisions/Moulded_shoulder_1_07",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Lid/Collisions/Moulded_shoulder_1_08",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Lid/Collisions/Moulded_shoulder_1_09",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Lid/Collisions/Moulded_shoulder_1_10",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Lid/Collisions/Moulded_shoulder_1_11",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Lid/Collisions/Moulded_shoulder_1_12",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Lid/Collisions/Moulded_shoulder_1_13",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Lid/Collisions/Moulded_shoulder_1_14",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Lid/Collisions/Moulded_shoulder_1_15",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Lid/Collisions/Moulded_shoulder_1_16",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Lid/Collisions/Moulded_shoulder_1_17",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Lid/Collisions/Moulded_shoulder_1_18",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Lid/Collisions/Moulded_shoulder_1_19",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Lid/Collisions/Moulded_shoulder_1_20",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Lid/Collisions/Moulded_shoulder_1_21",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Lid/Collisions/Moulded_shoulder_1_22",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Lid/Collisions/Moulded_shoulder_1_23",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/LeftCylinder",
+        "authored_attributes": {
+          "physics:centerOfMass": "(0, 0, 0.053779695)",
+          "physics:diagonalInertia": "(0.0001361386, 0.0001361386, 0.0000023333334)",
+          "physics:kinematicEnabled": "False",
+          "physics:mass": "0.14000000059604645",
+          "physics:principalAxes": "(1, 0, 0, 0)",
+          "physics:rigidBodyEnabled": "True",
+          "physxRigidBody:enableSpeculativeCCD": "True",
+          "physxRigidBody:solverPositionIterationCount": "128",
+          "physxRigidBody:solverVelocityIterationCount": "0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/LeftCylinder/Collisions/Cylinder",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/LeftPiston",
+        "authored_attributes": {
+          "physics:centerOfMass": "(0, 0, -0.061462507)",
+          "physics:diagonalInertia": "(0.0000760528, 0.0000760528, 0.000001)",
+          "physics:kinematicEnabled": "False",
+          "physics:mass": "0.05999999865889549",
+          "physics:principalAxes": "(1, 0, 0, 0)",
+          "physics:rigidBodyEnabled": "True",
+          "physxRigidBody:enableSpeculativeCCD": "True",
+          "physxRigidBody:solverPositionIterationCount": "128",
+          "physxRigidBody:solverVelocityIterationCount": "0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/LeftPiston/Collisions/Piston",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/LeftPiston/Collisions/Eye",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/RightCylinder",
+        "authored_attributes": {
+          "physics:centerOfMass": "(0, 0, 0.053779695)",
+          "physics:diagonalInertia": "(0.0001361386, 0.0001361386, 0.0000023333334)",
+          "physics:kinematicEnabled": "False",
+          "physics:mass": "0.14000000059604645",
+          "physics:principalAxes": "(1, 0, 0, 0)",
+          "physics:rigidBodyEnabled": "True",
+          "physxRigidBody:enableSpeculativeCCD": "True",
+          "physxRigidBody:solverPositionIterationCount": "128",
+          "physxRigidBody:solverVelocityIterationCount": "0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/RightCylinder/Collisions/Cylinder",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/RightPiston",
+        "authored_attributes": {
+          "physics:centerOfMass": "(0, 0, -0.061462507)",
+          "physics:diagonalInertia": "(0.0000760528, 0.0000760528, 0.000001)",
+          "physics:kinematicEnabled": "False",
+          "physics:mass": "0.05999999865889549",
+          "physics:principalAxes": "(1, 0, 0, 0)",
+          "physics:rigidBodyEnabled": "True",
+          "physxRigidBody:enableSpeculativeCCD": "True",
+          "physxRigidBody:solverPositionIterationCount": "128",
+          "physxRigidBody:solverVelocityIterationCount": "0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/RightPiston/Collisions/Piston",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/RightPiston/Collisions/Eye",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0010000000474974513",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Joints/Lid_Hinge",
+        "authored_attributes": {
+          "physics:axis": "Y",
+          "physics:collisionEnabled": "False",
+          "physics:jointEnabled": "True",
+          "physics:localPos0": "(-0.1755, 0, 0.181)",
+          "physics:localPos1": "(0, 0, 0)",
+          "physics:localRot0": "(-4.371139e-8, -1, 0, 0)",
+          "physics:localRot1": "(-4.371139e-8, -1, 0, 0)",
+          "physics:lowerLimit": "0.0",
+          "physics:upperLimit": "65.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Joints/Left_Cylinder_BasePin",
+        "authored_attributes": {
+          "physics:axis": "Y",
+          "physics:collisionEnabled": "False",
+          "physics:jointEnabled": "True",
+          "physics:localPos0": "(-0.103, 0.185, 0.03)",
+          "physics:localPos1": "(-9.313226e-10, 0, 0)",
+          "physics:localRot0": "(0.9973016, 0, -0.07341369, 0)",
+          "physics:localRot1": "(1, 0, 0, 0)",
+          "physics:lowerLimit": "-45.0",
+          "physics:upperLimit": "45.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Joints/Left_GasSpring_Stroke",
+        "authored_attributes": {
+          "physics:axis": "Z",
+          "physics:collisionEnabled": "False",
+          "physics:jointEnabled": "True",
+          "physics:localPos0": "(6.3329935e-8, 0, 0.15365627)",
+          "physics:localPos1": "(-3.7252903e-9, 0, 5.5879354e-9)",
+          "physics:localRot0": "(1, 0, 0, 0)",
+          "physics:localRot1": "(1, 0, 0, 0)",
+          "physics:lowerLimit": "0.0",
+          "physics:upperLimit": "0.05040835961699486"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Joints/Left_Rod_LidPin_LOOP",
+        "authored_attributes": {
+          "physics:axis": "Y",
+          "physics:collisionEnabled": "False",
+          "physics:excludeFromArticulation": "True",
+          "physics:jointEnabled": "True",
+          "physics:localPos0": "(-3.7252903e-9, 0, 5.5879354e-9)",
+          "physics:localPos1": "(0.049999997, 0.185, 0.001000002)",
+          "physics:localRot0": "(1, 0, 0, 0)",
+          "physics:localRot1": "(0.9973016, 0, -0.07341369, 0)",
+          "physics:lowerLimit": "-120.0",
+          "physics:upperLimit": "120.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Joints/Right_Cylinder_BasePin",
+        "authored_attributes": {
+          "physics:axis": "Y",
+          "physics:collisionEnabled": "False",
+          "physics:jointEnabled": "True",
+          "physics:localPos0": "(-0.103, -0.185, 0.03)",
+          "physics:localPos1": "(-9.313226e-10, 0, 0)",
+          "physics:localRot0": "(0.9973016, 0, -0.07341369, 0)",
+          "physics:localRot1": "(1, 0, 0, 0)",
+          "physics:lowerLimit": "-45.0",
+          "physics:upperLimit": "45.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Joints/Right_GasSpring_Stroke",
+        "authored_attributes": {
+          "physics:axis": "Z",
+          "physics:collisionEnabled": "False",
+          "physics:jointEnabled": "True",
+          "physics:localPos0": "(6.3329935e-8, 0, 0.15365627)",
+          "physics:localPos1": "(-3.7252903e-9, 0, 5.5879354e-9)",
+          "physics:localRot0": "(1, 0, 0, 0)",
+          "physics:localRot1": "(1, 0, 0, 0)",
+          "physics:lowerLimit": "0.0",
+          "physics:upperLimit": "0.05040835961699486"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/Joints/Right_Rod_LidPin_LOOP",
+        "authored_attributes": {
+          "physics:axis": "Y",
+          "physics:collisionEnabled": "False",
+          "physics:excludeFromArticulation": "True",
+          "physics:jointEnabled": "True",
+          "physics:localPos0": "(-3.7252903e-9, 0, 5.5879354e-9)",
+          "physics:localPos1": "(0.049999997, -0.185, 0.001000002)",
+          "physics:localRot0": "(1, 0, 0, 0)",
+          "physics:localRot1": "(0.9973016, 0, -0.07341369, 0)",
+          "physics:lowerLimit": "-120.0",
+          "physics:upperLimit": "120.0"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/PhysicsMaterials/Steel_contact",
+        "authored_attributes": {
+          "physics:dynamicFriction": "0.289000004529953",
+          "physics:restitution": "0.009999999776482582",
+          "physics:staticFriction": "0.3400000035762787"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/PhysicsMaterials/Rubber_contact",
+        "authored_attributes": {
+          "physics:dynamicFriction": "0.6629999876022339",
+          "physics:restitution": "0.009999999776482582",
+          "physics:staticFriction": "0.7799999713897705"
+        }
+      },
+      {
+        "prim_path": "/ElianiSealer/PhysicsMaterials/Acrylic_contact",
+        "authored_attributes": {
+          "physics:dynamicFriction": "0.2720000147819519",
+          "physics:restitution": "0.009999999776482582",
+          "physics:staticFriction": "0.3199999928474426"
+        }
+      }
+    ]
   },
   "provenance": {
     "source_schema": "authored_usd",
     "usd_path": "batch41/D01058_Countertop_Vacuum_Sealer/D01058_Countertop_Vacuum_Sealer/D01058_Countertop_Vacuum_Sealer.usd",
-    "usd_sha256": "8afea92110d18278a8f70cde4030ebf320681f4ef897e696b2ea3ea09987a6fc",
+    "usd_sha256": "c752e666c0ff4de5aac2c13cddc3c05c96f8bb9b65767fca455c20e482178f53",
     "source_meters_per_unit": 1.0,
     "source_kilograms_per_unit": 1.0,
     "source_up_axis": "Z",
@@ -813,7 +3177,210 @@
       "report": "reports/releases/2026.10.13/assets.json",
       "original_physics_sha256": "d0b169b68de2285b97553ebd7ecf25eb6d38f0485f60bca09c73bd1bcb9b2beb"
     },
-    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes"
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "native_runtime_repairs": [
+      {
+        "case": "native-mass-scaled-sealer-v13",
+        "old_usd_sha256": "8afea92110d18278a8f70cde4030ebf320681f4ef897e696b2ea3ea09987a6fc",
+        "new_usd_sha256": "c752e666c0ff4de5aac2c13cddc3c05c96f8bb9b65767fca455c20e482178f53",
+        "changes": [
+          {
+            "kind": "remove_embedded_world_physics_scene",
+            "prim": "/ElianiSealer/PhysicsScene",
+            "authored_properties": {},
+            "basis": "Native stock excitation reported physics scenes stepping at different rates; a reusable prop must inherit its host simulation scene.",
+            "geometry_mass_inertia_joint_graph_frames_drives_limits_unchanged": true
+          },
+          {
+            "kind": "drive_target_matches_authored_rest_pose",
+            "prim": "/ElianiSealer/Joints/Left_GasSpring_Stroke",
+            "before": 0.07990836352109909,
+            "after": 1.981489611280196e-09,
+            "initial_joint_coordinate": 1.981489611280196e-09,
+            "joint_frames_and_limits_unchanged": true
+          },
+          {
+            "kind": "drive_target_matches_authored_rest_pose",
+            "prim": "/ElianiSealer/Joints/Right_GasSpring_Stroke",
+            "before": 0.07990836352109909,
+            "after": 1.981489611280196e-09,
+            "initial_joint_coordinate": 1.981489611280196e-09,
+            "joint_frames_and_limits_unchanged": true
+          },
+          {
+            "kind": "floating_articulation_root_on_base_body",
+            "already_disabled_world_joint_inactive_but_definition_retained": true,
+            "enabled_joint_graph_and_loop_constraints_preserved": true
+          },
+          {
+            "kind": "geometry_consistent_closed_loop_lid_travel",
+            "prim": "/ElianiSealer/Joints/Lid_Hinge",
+            "before_deg": 105.0,
+            "after_deg": 65,
+            "gas_spring_stroke_limits_unchanged": true,
+            "derivation": [
+              {
+                "side": "Left",
+                "closed_attachment_distance_m": 0.15365627047383676,
+                "max_attachment_distance_m": 0.20406463009083162,
+                "distance_at_old_lid_limit_m": 0.21698400012174185,
+                "feasible_lid_limit_deg": 65.923028913744
+              },
+              {
+                "side": "Right",
+                "closed_attachment_distance_m": 0.15365627047383676,
+                "max_attachment_distance_m": 0.20406463009083162,
+                "distance_at_old_lid_limit_m": 0.2169840250302531,
+                "feasible_lid_limit_deg": 65.92300877308439
+              }
+            ],
+            "measured_hardware_calibration": false
+          },
+          {
+            "kind": "articulation_constraint_solve",
+            "prim": "/ElianiSealer/Base",
+            "position_iterations": 255,
+            "velocity_iterations": 16,
+            "extra_joint_armature_or_velocity_caps_added": false,
+            "mass_and_inertia_unchanged": true
+          },
+          {
+            "kind": "documented_TGS_joint_drive_velocity_iteration_fix",
+            "prim": "/ElianiSealer/Base",
+            "attribute": "physxArticulation:solverVelocityIterationCount",
+            "before": 16,
+            "after": 0,
+            "position_iterations_mass_inertia_drives_frames_limits_and_movable_dofs_unchanged": true,
+            "basis": "NVIDIA documents poor D6 drive behavior with TGS plus velocity iterations and recommends zero velocity iterations.",
+            "primary_source": "https://docs.omniverse.nvidia.com/kit/docs/omni_physics/107.2/dev_guide/guides/current_limitations.html"
+          },
+          {
+            "kind": "documented_TGS_joint_drive_velocity_iteration_fix",
+            "prim": "/ElianiSealer/Base",
+            "attribute": "physxRigidBody:solverVelocityIterationCount",
+            "before": 16,
+            "after": 0,
+            "position_iterations_mass_inertia_drives_frames_limits_and_movable_dofs_unchanged": true,
+            "basis": "NVIDIA documents poor D6 drive behavior with TGS plus velocity iterations and recommends zero velocity iterations.",
+            "primary_source": "https://docs.omniverse.nvidia.com/kit/docs/omni_physics/107.2/dev_guide/guides/current_limitations.html"
+          },
+          {
+            "kind": "documented_TGS_joint_drive_velocity_iteration_fix",
+            "prim": "/ElianiSealer/Lid",
+            "attribute": "physxRigidBody:solverVelocityIterationCount",
+            "before": 16,
+            "after": 0,
+            "position_iterations_mass_inertia_drives_frames_limits_and_movable_dofs_unchanged": true,
+            "basis": "NVIDIA documents poor D6 drive behavior with TGS plus velocity iterations and recommends zero velocity iterations.",
+            "primary_source": "https://docs.omniverse.nvidia.com/kit/docs/omni_physics/107.2/dev_guide/guides/current_limitations.html"
+          },
+          {
+            "kind": "documented_TGS_joint_drive_velocity_iteration_fix",
+            "prim": "/ElianiSealer/LeftCylinder",
+            "attribute": "physxRigidBody:solverVelocityIterationCount",
+            "before": 16,
+            "after": 0,
+            "position_iterations_mass_inertia_drives_frames_limits_and_movable_dofs_unchanged": true,
+            "basis": "NVIDIA documents poor D6 drive behavior with TGS plus velocity iterations and recommends zero velocity iterations.",
+            "primary_source": "https://docs.omniverse.nvidia.com/kit/docs/omni_physics/107.2/dev_guide/guides/current_limitations.html"
+          },
+          {
+            "kind": "documented_TGS_joint_drive_velocity_iteration_fix",
+            "prim": "/ElianiSealer/LeftPiston",
+            "attribute": "physxRigidBody:solverVelocityIterationCount",
+            "before": 16,
+            "after": 0,
+            "position_iterations_mass_inertia_drives_frames_limits_and_movable_dofs_unchanged": true,
+            "basis": "NVIDIA documents poor D6 drive behavior with TGS plus velocity iterations and recommends zero velocity iterations.",
+            "primary_source": "https://docs.omniverse.nvidia.com/kit/docs/omni_physics/107.2/dev_guide/guides/current_limitations.html"
+          },
+          {
+            "kind": "documented_TGS_joint_drive_velocity_iteration_fix",
+            "prim": "/ElianiSealer/RightCylinder",
+            "attribute": "physxRigidBody:solverVelocityIterationCount",
+            "before": 16,
+            "after": 0,
+            "position_iterations_mass_inertia_drives_frames_limits_and_movable_dofs_unchanged": true,
+            "basis": "NVIDIA documents poor D6 drive behavior with TGS plus velocity iterations and recommends zero velocity iterations.",
+            "primary_source": "https://docs.omniverse.nvidia.com/kit/docs/omni_physics/107.2/dev_guide/guides/current_limitations.html"
+          },
+          {
+            "kind": "documented_TGS_joint_drive_velocity_iteration_fix",
+            "prim": "/ElianiSealer/RightPiston",
+            "attribute": "physxRigidBody:solverVelocityIterationCount",
+            "before": 16,
+            "after": 0,
+            "position_iterations_mass_inertia_drives_frames_limits_and_movable_dofs_unchanged": true,
+            "basis": "NVIDIA documents poor D6 drive behavior with TGS plus velocity iterations and recommends zero velocity iterations.",
+            "primary_source": "https://docs.omniverse.nvidia.com/kit/docs/omni_physics/107.2/dev_guide/guides/current_limitations.html"
+          },
+          {
+            "kind": "mass_scaled_acceleration_drive_on_corrected_mechanism",
+            "prim": "/ElianiSealer/Joints/Lid_Hinge",
+            "before": "force",
+            "after": "acceleration",
+            "geometry_mass_inertia_joint_graph_frames_limits_and_movable_dofs_unchanged": true,
+            "basis": "NVIDIA recommends acceleration spring drives to scale actuation by connected-body mass and inertia; stock high-damping force drives exceed travel or deform loop constraints.",
+            "primary_source": "https://nvidia-omniverse.github.io/PhysX/physx/5.3.0/docs/Joints.html"
+          },
+          {
+            "kind": "mass_scaled_acceleration_drive_on_corrected_mechanism",
+            "prim": "/ElianiSealer/Joints/Left_Cylinder_BasePin",
+            "before": "force",
+            "after": "acceleration",
+            "geometry_mass_inertia_joint_graph_frames_limits_and_movable_dofs_unchanged": true,
+            "basis": "NVIDIA recommends acceleration spring drives to scale actuation by connected-body mass and inertia; stock high-damping force drives exceed travel or deform loop constraints.",
+            "primary_source": "https://nvidia-omniverse.github.io/PhysX/physx/5.3.0/docs/Joints.html"
+          },
+          {
+            "kind": "mass_scaled_acceleration_drive_on_corrected_mechanism",
+            "prim": "/ElianiSealer/Joints/Left_GasSpring_Stroke",
+            "before": "force",
+            "after": "acceleration",
+            "geometry_mass_inertia_joint_graph_frames_limits_and_movable_dofs_unchanged": true,
+            "basis": "NVIDIA recommends acceleration spring drives to scale actuation by connected-body mass and inertia; stock high-damping force drives exceed travel or deform loop constraints.",
+            "primary_source": "https://nvidia-omniverse.github.io/PhysX/physx/5.3.0/docs/Joints.html"
+          },
+          {
+            "kind": "mass_scaled_acceleration_drive_on_corrected_mechanism",
+            "prim": "/ElianiSealer/Joints/Left_Rod_LidPin_LOOP",
+            "before": "force",
+            "after": "acceleration",
+            "geometry_mass_inertia_joint_graph_frames_limits_and_movable_dofs_unchanged": true,
+            "basis": "NVIDIA recommends acceleration spring drives to scale actuation by connected-body mass and inertia; stock high-damping force drives exceed travel or deform loop constraints.",
+            "primary_source": "https://nvidia-omniverse.github.io/PhysX/physx/5.3.0/docs/Joints.html"
+          },
+          {
+            "kind": "mass_scaled_acceleration_drive_on_corrected_mechanism",
+            "prim": "/ElianiSealer/Joints/Right_Cylinder_BasePin",
+            "before": "force",
+            "after": "acceleration",
+            "geometry_mass_inertia_joint_graph_frames_limits_and_movable_dofs_unchanged": true,
+            "basis": "NVIDIA recommends acceleration spring drives to scale actuation by connected-body mass and inertia; stock high-damping force drives exceed travel or deform loop constraints.",
+            "primary_source": "https://nvidia-omniverse.github.io/PhysX/physx/5.3.0/docs/Joints.html"
+          },
+          {
+            "kind": "mass_scaled_acceleration_drive_on_corrected_mechanism",
+            "prim": "/ElianiSealer/Joints/Right_GasSpring_Stroke",
+            "before": "force",
+            "after": "acceleration",
+            "geometry_mass_inertia_joint_graph_frames_limits_and_movable_dofs_unchanged": true,
+            "basis": "NVIDIA recommends acceleration spring drives to scale actuation by connected-body mass and inertia; stock high-damping force drives exceed travel or deform loop constraints.",
+            "primary_source": "https://nvidia-omniverse.github.io/PhysX/physx/5.3.0/docs/Joints.html"
+          },
+          {
+            "kind": "mass_scaled_acceleration_drive_on_corrected_mechanism",
+            "prim": "/ElianiSealer/Joints/Right_Rod_LidPin_LOOP",
+            "before": "force",
+            "after": "acceleration",
+            "geometry_mass_inertia_joint_graph_frames_limits_and_movable_dofs_unchanged": true,
+            "basis": "NVIDIA recommends acceleration spring drives to scale actuation by connected-body mass and inertia; stock high-damping force drives exceed travel or deform loop constraints.",
+            "primary_source": "https://nvidia-omniverse.github.io/PhysX/physx/5.3.0/docs/Joints.html"
+          }
+        ],
+        "qualification": "native-fleet-evidence/shard-67/native-batch-000/qualification-normalized.json"
+      }
+    ]
   },
   "validation": {
     "overall": "verified",
@@ -829,7 +3396,7 @@
       ],
       "checked_at": "2026-10-13T19:50:31.621292+00:00",
       "evidence": "reports/releases/2026.10.13/assets.json",
-      "usd_sha256": "8afea92110d18278a8f70cde4030ebf320681f4ef897e696b2ea3ea09987a6fc",
+      "usd_sha256": "c752e666c0ff4de5aac2c13cddc3c05c96f8bb9b65767fca455c20e482178f53",
       "scope": "authored_usd_dimensions",
       "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
       "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
@@ -840,7 +3407,7 @@
       "value_kg": 30.000000022351742,
       "checked_at": "2026-10-13T19:50:31.621292+00:00",
       "evidence": "reports/releases/2026.10.13/assets.json",
-      "usd_sha256": "8afea92110d18278a8f70cde4030ebf320681f4ef897e696b2ea3ea09987a6fc",
+      "usd_sha256": "c752e666c0ff4de5aac2c13cddc3c05c96f8bb9b65767fca455c20e482178f53",
       "scope": "authored_usd_mass_consistency",
       "part_sum_kg": 30.000000022351742,
       "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
@@ -854,7 +3421,7 @@
       ],
       "checked_at": "2026-10-13T19:50:31.621292+00:00",
       "evidence": "reports/releases/2026.10.13/assets.json",
-      "usd_sha256": "8afea92110d18278a8f70cde4030ebf320681f4ef897e696b2ea3ea09987a6fc",
+      "usd_sha256": "c752e666c0ff4de5aac2c13cddc3c05c96f8bb9b65767fca455c20e482178f53",
       "scope": "authored_usd_collision_schema",
       "enabled_shape_count": 203,
       "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
@@ -865,42 +3432,39 @@
       "moving_joints": 7,
       "checked_at": "2026-10-13T19:50:31.621292+00:00",
       "evidence": "reports/releases/2026.10.13/assets.json",
-      "usd_sha256": "8afea92110d18278a8f70cde4030ebf320681f4ef897e696b2ea3ea09987a6fc",
+      "usd_sha256": "c752e666c0ff4de5aac2c13cddc3c05c96f8bb9b65767fca455c20e482178f53",
       "scope": "authored_usd_joint_schema",
-      "joint_count": 8,
+      "joint_count": 7,
       "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
     },
     "scope": "authored_usd_metadata_consistency",
     "runtime": {
       "evidence_archive": {
-        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/fe6c9fa1712b4e1ffece5c9f1d5c7493cc3f38d5/reports/native/2026.10.13/shard-07/native-batch-005-evidence.tar.gz",
-        "sha256": "5a5d673213ae483769b2ed5a0c521f468aa000d45084275449cee18aba190e9a",
-        "hf_commit": "fe6c9fa1712b4e1ffece5c9f1d5c7493cc3f38d5",
-        "size_bytes": 12710220
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/a38cd14e18fcaefec38820df1628e568d9251314/reports/native/2026.10.13/cases/native-mass-scaled-sealer-v13/native-batch-000-evidence.tar.gz",
+        "sha256": "2d0b30b17905c9b390efd878a9ec87f531693048d7eab2be28dd7b60794d3309",
+        "hf_commit": "a38cd14e18fcaefec38820df1628e568d9251314",
+        "size_bytes": 6736646
       },
-      "status": "failed",
+      "status": "passed",
       "required_engine": "isaac_sim",
       "physics_runtime": "PhysX",
       "engine_version": "6.1.0.0",
-      "usd_sha256": "8afea92110d18278a8f70cde4030ebf320681f4ef897e696b2ea3ea09987a6fc",
-      "supplemental_accepted": false,
+      "usd_sha256": "c752e666c0ff4de5aac2c13cddc3c05c96f8bb9b65767fca455c20e482178f53",
+      "supplemental_accepted": true,
       "planned_test_count": 14,
       "result_count": 14,
-      "passed": 10,
-      "skipped": 3,
-      "failed": 1,
-      "issues": [
-        "independent_joint_safety_missing_or_failed",
-        "palatial_joint_constraint_safety:fail"
-      ],
+      "passed": 13,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
       "warnings": [],
-      "completed_at": "2026-10-13T23:57:11.464831+00:00",
-      "joint_status": "failed",
+      "completed_at": "2026-10-14T02:48:13.391543+00:00",
+      "joint_status": "passed",
       "joints_total": 7,
       "joints_passed": 7,
       "joints_failed": 0,
-      "thumbnail_sha256": "4f40325d1aa81064077069c01e6edbc06a8c0a70881fa70f0726714a9aa1d71c",
-      "qualification": "native-fleet-evidence/shard-07/native-batch-005/qualification-normalized.json",
+      "thumbnail_sha256": "89439c3ce7af22888dee5837d6244d1ee63aee71cb63363bd09d20913d58cc6d",
+      "qualification": "native-fleet-evidence/shard-67/native-batch-000/qualification-normalized.json",
       "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }

@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-14T02:22:03.257700+00:00",
+  "date": "2026-10-14T02:52:11.091469+00:00",
   "source_github_revision": "a8c65abbf0304a0e58b99157c80d59bd504c8484",
   "scope": "Authored USD metadata, official Robotics-Prop 4.0.0 static validation, and hash-bound Isaac Sim 6.1.0.0 native results; real-world properties remain uncalibrated.",
   "assets_repaired": 1013,
@@ -6055,7 +6055,7 @@
       "catalog_id": "batch41_D01058_Countertop_Vacuum_Sealer",
       "asset_id": "D01058",
       "source_usd_sha256": "e2ed2bb9e46a8f58f278a8d2de7763121f038b03d574238e78b4f912558799e4",
-      "final_usd_sha256": "8afea92110d18278a8f70cde4030ebf320681f4ef897e696b2ea3ea09987a6fc"
+      "final_usd_sha256": "c752e666c0ff4de5aac2c13cddc3c05c96f8bb9b65767fca455c20e482178f53"
     },
     {
       "catalog_id": "batch41_D01059_Food_Dehydrator",
@@ -325968,9 +325968,9 @@
       "asset_id": "D01058",
       "physics_path": "batch41/D01058_Countertop_Vacuum_Sealer/D01058_Countertop_Vacuum_Sealer/physics_D01058.json",
       "usd_path": "batch41/D01058_Countertop_Vacuum_Sealer/D01058_Countertop_Vacuum_Sealer/D01058_Countertop_Vacuum_Sealer.usd",
-      "usd_sha256": "8afea92110d18278a8f70cde4030ebf320681f4ef897e696b2ea3ea09987a6fc",
+      "usd_sha256": "c752e666c0ff4de5aac2c13cddc3c05c96f8bb9b65767fca455c20e482178f53",
       "original_physics_sha256": "d0b169b68de2285b97553ebd7ecf25eb6d38f0485f60bca09c73bd1bcb9b2beb",
-      "repaired_physics_sha256": "44a9fe188d73421136e69ef43d83876b8de5c7f468fead7f17bac5b4a0214071",
+      "repaired_physics_sha256": "d988000628dd5903ff2907a21ece772bae8a373e61296efbbddb47c84844b684",
       "changed_top_level_fields": [
         "provenance",
         "validation"
@@ -326750,43 +326750,6 @@
         ],
         "joints": [
           {
-            "id": "FixedBase_to_World",
-            "source_prim_path": "/ElianiSealer/Joints/FixedBase_to_World",
-            "joint_type": "PhysicsFixedJoint",
-            "body0": [
-              "/ElianiSealer"
-            ],
-            "body1": [
-              "/ElianiSealer/Base"
-            ],
-            "joint_enabled": false,
-            "localPos0": [
-              0.0,
-              0.0,
-              0.0
-            ],
-            "localPos1": [
-              0.0,
-              0.0,
-              0.0
-            ],
-            "localRot0": [
-              1.0,
-              0.0,
-              0.0,
-              0.0
-            ],
-            "localRot1": [
-              1.0,
-              0.0,
-              0.0,
-              0.0
-            ],
-            "static_frames": [
-              "/ElianiSealer"
-            ]
-          },
-          {
             "id": "Lid_Hinge",
             "source_prim_path": "/ElianiSealer/Joints/Lid_Hinge",
             "joint_type": "PhysicsRevoluteJoint",
@@ -326799,7 +326762,7 @@
             "joint_enabled": true,
             "axis": "Y",
             "lowerLimit": 0.0,
-            "upperLimit": 105.0,
+            "upperLimit": 65.0,
             "localPos0": [
               -0.17550000548362732,
               0.0,
@@ -327065,8 +327028,8 @@
         "status": "passed",
         "profile": "Robotics-Prop",
         "version": "4.0.0",
-        "usd_sha256": "8afea92110d18278a8f70cde4030ebf320681f4ef897e696b2ea3ea09987a6fc",
-        "receipt_sha256": "e6d1dfcdc11193eb14a8a3932b43a110275abdeac6da0b10021ffcf053652ff7"
+        "usd_sha256": "c752e666c0ff4de5aac2c13cddc3c05c96f8bb9b65767fca455c20e482178f53",
+        "receipt_sha256": "b626d2a7fedf69acd4541dfa2897107bcce7747b09d31d9db258581c44134fe4"
       },
       "semantics": {
         "class_label": "home appliance",
@@ -327075,97 +327038,191 @@
       },
       "native": {
         "evidence_archive": {
-          "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/fe6c9fa1712b4e1ffece5c9f1d5c7493cc3f38d5/reports/native/2026.10.13/shard-07/native-batch-005-evidence.tar.gz",
-          "sha256": "5a5d673213ae483769b2ed5a0c521f468aa000d45084275449cee18aba190e9a",
-          "hf_commit": "fe6c9fa1712b4e1ffece5c9f1d5c7493cc3f38d5",
-          "size_bytes": 12710220
+          "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/a38cd14e18fcaefec38820df1628e568d9251314/reports/native/2026.10.13/cases/native-mass-scaled-sealer-v13/native-batch-000-evidence.tar.gz",
+          "sha256": "2d0b30b17905c9b390efd878a9ec87f531693048d7eab2be28dd7b60794d3309",
+          "hf_commit": "a38cd14e18fcaefec38820df1628e568d9251314",
+          "size_bytes": 6736646
         },
-        "status": "failed",
+        "status": "passed",
         "required_engine": "isaac_sim",
         "physics_runtime": "PhysX",
         "engine_version": "6.1.0.0",
-        "usd_sha256": "8afea92110d18278a8f70cde4030ebf320681f4ef897e696b2ea3ea09987a6fc",
-        "supplemental_accepted": false,
+        "usd_sha256": "c752e666c0ff4de5aac2c13cddc3c05c96f8bb9b65767fca455c20e482178f53",
+        "supplemental_accepted": true,
         "planned_test_count": 14,
         "result_count": 14,
-        "passed": 10,
-        "skipped": 3,
-        "failed": 1,
-        "issues": [
-          "independent_joint_safety_missing_or_failed",
-          "palatial_joint_constraint_safety:fail"
-        ],
+        "passed": 13,
+        "skipped": 1,
+        "failed": 0,
+        "issues": [],
         "warnings": [],
-        "completed_at": "2026-10-13T23:57:11.464831+00:00",
-        "joint_status": "failed",
+        "completed_at": "2026-10-14T02:48:13.391543+00:00",
+        "joint_status": "passed",
         "joints_total": 7,
         "joints_passed": 7,
         "joints_failed": 0,
-        "thumbnail_sha256": "4f40325d1aa81064077069c01e6edbc06a8c0a70881fa70f0726714a9aa1d71c",
+        "thumbnail_sha256": "89439c3ce7af22888dee5837d6244d1ee63aee71cb63363bd09d20913d58cc6d",
         "raw_results": [
           {
-            "path": "native-batch-005/benchmark/results/D01058/simready_usd/.simready/runtime/semantic_labels_seg_stripped/isaac_sim/result.json",
-            "sha256": "4a9749c739929951937fa59ddf13005e7f368bbcac7cb57d4420ce07ddce8132"
+            "path": "native-batch-000/benchmark/results/D01058/simready_usd/.simready/runtime/semantic_labels_seg_stripped/isaac_sim/result.json",
+            "sha256": "de85416f6e302cc8829aa6cc4be0c5581149ad563bbf186e2edf222feec704db"
           },
           {
-            "path": "native-batch-005/benchmark/results/D01058/simready_usd/.simready/runtime/semantic_labels_seg_labelled/isaac_sim/result.json",
-            "sha256": "f39b49b750bc3fb5a0f6467b2348831e0782a2eb2cb1ff279a68762a06eba324"
+            "path": "native-batch-000/benchmark/results/D01058/simready_usd/.simready/runtime/semantic_labels_seg_labelled/isaac_sim/result.json",
+            "sha256": "1cbf962aadbac6bf2542f6fdfe30807c74082ee03b30c39e9143698fd503cbe0"
           },
           {
-            "path": "native-batch-005/benchmark/results/D01058/simready_usd/.simready/runtime/preview_surface_renders/isaac_sim/result.json",
-            "sha256": "877c9da14070bc29ac7523f2e341381dad90d253a064bc65ddf3c56197b01aeb"
+            "path": "native-batch-000/benchmark/results/D01058/simready_usd/.simready/runtime/preview_surface_renders/isaac_sim/result.json",
+            "sha256": "7af986ee43475da024f44418ccd16a9ce561855bcf756c21c30ba488bb61c94b"
           },
           {
-            "path": "native-batch-005/benchmark/results/D01058/simready_usd/.simready/runtime/grasp_and_lift/isaac_sim/result.json",
-            "sha256": "db89654cca73b87d7d6c2a63980be93f6f1b33625c9e8750ffb1d4b52b92f464"
+            "path": "native-batch-000/benchmark/results/D01058/simready_usd/.simready/runtime/grasp_and_lift/isaac_sim/result.json",
+            "sha256": "d5bf88272042e4632fcf0514a1a56cb801927fff97b868f08851c10a3d8aae01"
           },
           {
-            "path": "native-batch-005/benchmark/results/D01058/simready_usd/.simready/runtime/joint_movement/isaac_sim/result.json",
-            "sha256": "d276a5bbad49129ed6a912c8e495fa4b2f0740632842ce5b9160367983a97911"
+            "path": "native-batch-000/benchmark/results/D01058/simready_usd/.simready/runtime/joint_movement/isaac_sim/result.json",
+            "sha256": "627f9cc6eb642e06bd8b3b86dcf729d28c7d1a15effa55ca758745a5b2b08cdf"
           },
           {
-            "path": "native-batch-005/benchmark/results/D01058/simready_usd/.simready/runtime/palatial_joint_constraint_safety/isaac_sim/result.json",
-            "sha256": "ddf655aa764466514f1e2968270ea8cf683c5e8b9bcfcd07dc6973c3de8d799d"
+            "path": "native-batch-000/benchmark/results/D01058/simready_usd/.simready/runtime/palatial_joint_constraint_safety/isaac_sim/result.json",
+            "sha256": "aab778f77bb881bf0c1a3f3d9e65688c84ae656fdc112ce63336b807cfe05873"
           },
           {
-            "path": "native-batch-005/benchmark/results/D01058/simready_usd/.simready/runtime/slope_drop/isaac_sim/result.json",
-            "sha256": "7f6fef0a4baa8a9f8e6a38e29da73b93f80f3c7bbef4106594604156ac9e416d"
+            "path": "native-batch-000/benchmark/results/D01058/simready_usd/.simready/runtime/slope_drop/isaac_sim/result.json",
+            "sha256": "e2167c293fb8c88fe83282a733949d4fca0a33d7ed1d1c8473a5ee4ac7519a77"
           },
           {
-            "path": "native-batch-005/benchmark/results/D01058/simready_usd/.simready/runtime/ground_drop/isaac_sim/result.json",
-            "sha256": "e3c7d488e01dd1864e8545d9903e54811f1a9a8dffea81db89e5d1193872551a"
+            "path": "native-batch-000/benchmark/results/D01058/simready_usd/.simready/runtime/ground_drop/isaac_sim/result.json",
+            "sha256": "da24bb706869b667c461b41214c422ea4f9615fd0dcf56b457e73fc591b825f5"
           },
           {
-            "path": "native-batch-005/benchmark/results/D01058/simready_usd/.simready/runtime/presence/isaac_sim/result.json",
-            "sha256": "a625bf5891a0853a8e0a5ae1dbbdbecf34512a02967b5378b5e3a55cd0edf9e3"
+            "path": "native-batch-000/benchmark/results/D01058/simready_usd/.simready/runtime/presence/isaac_sim/result.json",
+            "sha256": "9565d8c52c5ad42be29b6b5147dd869aadaa6db7a52cd292cb928bc25e49f1b8"
           },
           {
-            "path": "native-batch-005/benchmark/results/D01058/simready_usd/.simready/runtime/pivot/isaac_sim/result.json",
-            "sha256": "2ccb3d723e2320406dfcfbcac5439acc76070a98bc1a28af6005ed72a8a8478f"
+            "path": "native-batch-000/benchmark/results/D01058/simready_usd/.simready/runtime/pivot/isaac_sim/result.json",
+            "sha256": "5ee76a71ef85881e71255eef61d1175aed5d73d2b6cb4029ffc7169575592518"
           },
           {
-            "path": "native-batch-005/benchmark/results/D01058/simready_usd/.simready/runtime/normals_xz/isaac_sim/result.json",
-            "sha256": "410401f5f3f1989dcbd7921ab5938a88772b3d9024e290610b38722876e86db2"
+            "path": "native-batch-000/benchmark/results/D01058/simready_usd/.simready/runtime/normals_xz/isaac_sim/result.json",
+            "sha256": "6c2ba67a6d1af41cafe6dc970c215793c354e17b4c4c3254ecccd96488ae5c0b"
           },
           {
-            "path": "native-batch-005/benchmark/results/D01058/simready_usd/.simready/runtime/light_response/isaac_sim/result.json",
-            "sha256": "b41e218030b1524c60572a8a2b467d2cd6000c13550ed730c9a1ef1a5910e20b"
+            "path": "native-batch-000/benchmark/results/D01058/simready_usd/.simready/runtime/light_response/isaac_sim/result.json",
+            "sha256": "27bcfc255c1faa6db719be3ff2bd8d88e0f7907ead848b860401b1c4b6aacec9"
           },
           {
-            "path": "native-batch-005/benchmark/results/D01058/simready_usd/.simready/runtime/culling_xz/isaac_sim/result.json",
-            "sha256": "78aab21afd16a286f9981acfe9ec1b87f0e38dd5393c6f52c0fb47df542b6a76"
+            "path": "native-batch-000/benchmark/results/D01058/simready_usd/.simready/runtime/culling_xz/isaac_sim/result.json",
+            "sha256": "55cbd6e0d32948421ec0aaef169b35b5c0df2dee450d89ce436260d2e0c5f87b"
           },
           {
-            "path": "native-batch-005/benchmark/results/D01058/simready_usd/.simready/runtime/palatial_black_thumbnail/isaac_sim/result.json",
-            "sha256": "941efb1c81b522c723ee5fae1c7f062e214a97baeba0e4566db6697943218caf"
+            "path": "native-batch-000/benchmark/results/D01058/simready_usd/.simready/runtime/palatial_black_thumbnail/isaac_sim/result.json",
+            "sha256": "9b772c6e694f58e5c3f6017cc9d5826b37bd409e0a36946002c641a99a05fcb5"
           }
         ],
-        "qualification": "native-fleet-evidence/shard-07/native-batch-005/qualification-normalized.json"
+        "qualification": "native-fleet-evidence/shard-67/native-batch-000/qualification-normalized.json"
       },
       "package": {
-        "status": "blocked_by_native",
-        "usd_sha256": "8afea92110d18278a8f70cde4030ebf320681f4ef897e696b2ea3ea09987a6fc"
-      }
+        "status": "completed",
+        "manifest_url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/2ce2a52e7dce914b644c4c74dee3c59c4d1ab374/D01058/com.nvidia.simready.packaging.json",
+        "hf_commit": "2ce2a52e7dce914b644c4c74dee3c59c4d1ab374",
+        "package_definition_sha256": "f5c1a4a2e4bf99729395e8af2d20350d065117d961026db3ff2cd9a6078bc8b9",
+        "pre_validation_passed": true,
+        "post_validation_passed": true,
+        "thumbnail_sha256": "89439c3ce7af22888dee5837d6244d1ee63aee71cb63363bd09d20913d58cc6d",
+        "usd_sha256": "c752e666c0ff4de5aac2c13cddc3c05c96f8bb9b65767fca455c20e482178f53"
+      },
+      "native_prior_attempts": [
+        {
+          "qualification": "native-fleet-evidence/shard-07/native-batch-005/qualification-normalized.json",
+          "evidence_archive": {
+            "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/fe6c9fa1712b4e1ffece5c9f1d5c7493cc3f38d5/reports/native/2026.10.13/shard-07/native-batch-005-evidence.tar.gz",
+            "sha256": "5a5d673213ae483769b2ed5a0c521f468aa000d45084275449cee18aba190e9a",
+            "hf_commit": "fe6c9fa1712b4e1ffece5c9f1d5c7493cc3f38d5",
+            "size_bytes": 12710220
+          },
+          "status": "failed",
+          "required_engine": "isaac_sim",
+          "physics_runtime": "PhysX",
+          "engine_version": "6.1.0.0",
+          "usd_sha256": "8afea92110d18278a8f70cde4030ebf320681f4ef897e696b2ea3ea09987a6fc",
+          "supplemental_accepted": false,
+          "planned_test_count": 14,
+          "result_count": 14,
+          "passed": 10,
+          "skipped": 3,
+          "failed": 1,
+          "issues": [
+            "independent_joint_safety_missing_or_failed",
+            "palatial_joint_constraint_safety:fail"
+          ],
+          "warnings": [],
+          "completed_at": "2026-10-13T23:57:11.464831+00:00",
+          "joint_status": "failed",
+          "joints_total": 7,
+          "joints_passed": 7,
+          "joints_failed": 0,
+          "thumbnail_sha256": "4f40325d1aa81064077069c01e6edbc06a8c0a70881fa70f0726714a9aa1d71c",
+          "raw_results": [
+            {
+              "path": "native-batch-005/benchmark/results/D01058/simready_usd/.simready/runtime/semantic_labels_seg_stripped/isaac_sim/result.json",
+              "sha256": "4a9749c739929951937fa59ddf13005e7f368bbcac7cb57d4420ce07ddce8132"
+            },
+            {
+              "path": "native-batch-005/benchmark/results/D01058/simready_usd/.simready/runtime/semantic_labels_seg_labelled/isaac_sim/result.json",
+              "sha256": "f39b49b750bc3fb5a0f6467b2348831e0782a2eb2cb1ff279a68762a06eba324"
+            },
+            {
+              "path": "native-batch-005/benchmark/results/D01058/simready_usd/.simready/runtime/preview_surface_renders/isaac_sim/result.json",
+              "sha256": "877c9da14070bc29ac7523f2e341381dad90d253a064bc65ddf3c56197b01aeb"
+            },
+            {
+              "path": "native-batch-005/benchmark/results/D01058/simready_usd/.simready/runtime/grasp_and_lift/isaac_sim/result.json",
+              "sha256": "db89654cca73b87d7d6c2a63980be93f6f1b33625c9e8750ffb1d4b52b92f464"
+            },
+            {
+              "path": "native-batch-005/benchmark/results/D01058/simready_usd/.simready/runtime/joint_movement/isaac_sim/result.json",
+              "sha256": "d276a5bbad49129ed6a912c8e495fa4b2f0740632842ce5b9160367983a97911"
+            },
+            {
+              "path": "native-batch-005/benchmark/results/D01058/simready_usd/.simready/runtime/palatial_joint_constraint_safety/isaac_sim/result.json",
+              "sha256": "ddf655aa764466514f1e2968270ea8cf683c5e8b9bcfcd07dc6973c3de8d799d"
+            },
+            {
+              "path": "native-batch-005/benchmark/results/D01058/simready_usd/.simready/runtime/slope_drop/isaac_sim/result.json",
+              "sha256": "7f6fef0a4baa8a9f8e6a38e29da73b93f80f3c7bbef4106594604156ac9e416d"
+            },
+            {
+              "path": "native-batch-005/benchmark/results/D01058/simready_usd/.simready/runtime/ground_drop/isaac_sim/result.json",
+              "sha256": "e3c7d488e01dd1864e8545d9903e54811f1a9a8dffea81db89e5d1193872551a"
+            },
+            {
+              "path": "native-batch-005/benchmark/results/D01058/simready_usd/.simready/runtime/presence/isaac_sim/result.json",
+              "sha256": "a625bf5891a0853a8e0a5ae1dbbdbecf34512a02967b5378b5e3a55cd0edf9e3"
+            },
+            {
+              "path": "native-batch-005/benchmark/results/D01058/simready_usd/.simready/runtime/pivot/isaac_sim/result.json",
+              "sha256": "2ccb3d723e2320406dfcfbcac5439acc76070a98bc1a28af6005ed72a8a8478f"
+            },
+            {
+              "path": "native-batch-005/benchmark/results/D01058/simready_usd/.simready/runtime/normals_xz/isaac_sim/result.json",
+              "sha256": "410401f5f3f1989dcbd7921ab5938a88772b3d9024e290610b38722876e86db2"
+            },
+            {
+              "path": "native-batch-005/benchmark/results/D01058/simready_usd/.simready/runtime/light_response/isaac_sim/result.json",
+              "sha256": "b41e218030b1524c60572a8a2b467d2cd6000c13550ed730c9a1ef1a5910e20b"
+            },
+            {
+              "path": "native-batch-005/benchmark/results/D01058/simready_usd/.simready/runtime/culling_xz/isaac_sim/result.json",
+              "sha256": "78aab21afd16a286f9981acfe9ec1b87f0e38dd5393c6f52c0fb47df542b6a76"
+            },
+            {
+              "path": "native-batch-005/benchmark/results/D01058/simready_usd/.simready/runtime/palatial_black_thumbnail/isaac_sim/result.json",
+              "sha256": "941efb1c81b522c723ee5fae1c7f062e214a97baeba0e4566db6697943218caf"
+            }
+          ]
+        }
+      ]
     },
     {
       "catalog_id": "batch41_D01059_Food_Dehydrator",
@@ -330475,8 +330532,8 @@
   ],
   "acceptance": {
     "static_passed": 1013,
-    "native_passed": 955,
+    "native_passed": 956,
     "native_completed_with_tool_findings": 56,
-    "package_completed": 1011
+    "package_completed": 1012
   }
 }
