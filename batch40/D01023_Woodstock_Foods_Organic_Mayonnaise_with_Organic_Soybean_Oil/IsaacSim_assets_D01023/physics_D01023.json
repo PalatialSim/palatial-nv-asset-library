@@ -147,9 +147,46 @@
     },
     "scope": "authored_usd_metadata_consistency",
     "runtime": {
-      "status": "pending",
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/f969ce1253855d9cc7c71a53079def19994e1ef2/reports/native/2026.10.13/shard-04/native-batch-004-evidence.tar.gz",
+        "sha256": "79bae2906a9aad0be8d071120a78dde0e166a9e0d8750d487bbf1095f5ca7759",
+        "hf_commit": "f969ce1253855d9cc7c71a53079def19994e1ef2",
+        "size_bytes": 115294210
+      },
+      "status": "completed_with_tool_findings",
       "required_engine": "isaac_sim",
       "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "95bfc66093d2bb9ebc5d1028d31bf7f964b6b4c9431bece5ee14d9d6165549e0",
+      "supplemental_accepted": true,
+      "planned_test_count": 11,
+      "result_count": 11,
+      "passed": 10,
+      "skipped": 0,
+      "failed": 1,
+      "issues": [
+        "preview_surface_renders:fail"
+      ],
+      "warnings": [],
+      "completed_at": "2026-10-14T01:18:16.959853+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "db75afb55e66b3eb3773a3c696b7398be41a72a3c27c9686b77ddd3c4ae5c5dd",
+      "tool_findings": {
+        "certificate_path": "tool-finding-certificates/D01023.json",
+        "certificate_sha256": "4253558d9f7e9dbc70529fa49c2633d4980c8590f85d003c3e0f22ccfaa4797c",
+        "raw_benchmark_status": "failed",
+        "failed_tests": [
+          "preview_surface_renders"
+        ],
+        "reason": "The source asset matches the official magenta control color. A separately named cyan-control test passes the same SDK scene, binding strengths, classifier thresholds and 98 percent coverage requirement for this unchanged USD. All visible meshes resolve Preview Surface; original magenta captures and FAIL remain for NVIDIA review. All physics and supplemental checks pass.",
+        "NVIDIA_raw_results_modified": false,
+        "requires_NVIDIA_review": true,
+        "release_certificate": "reports/releases/2026.10.13/tool-findings/D01023.json"
+      },
+      "qualification": "native-fleet-evidence/shard-04/native-batch-004/qualification-normalized.json",
       "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }
   }
