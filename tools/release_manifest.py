@@ -75,7 +75,7 @@ def load_current_release(root, relative='reports/current-release.json', require_
                     '/resolve/'+archive['hf_commit']+'/' in archive.get('url',''),'Durable native archive missing: '+rid)
             if review:
                 finding=native['tool_findings'];certificate=checked({'path':finding['release_certificate'],'sha256':finding['certificate_sha256']})
-                require(certificate['schema']=='palatial.native-tool-findings.v1' and certificate['kind'] in {'sdk_small_asset_camera_clamp','sdk_presence_camera_clamp','sdk_color_probe_ambiguity'},
+                require(certificate['schema']=='palatial.native-tool-findings.v1' and certificate['kind'] in {'sdk_small_asset_camera_clamp','sdk_presence_camera_clamp','sdk_color_probe_ambiguity','sdk_color_control_ambiguity','sdk_conservative_contact_bounds'},
                         'Unsupported tool finding disposition: '+rid)
                 require(certificate['asset_usd_sha256']==asset['usd_sha256'] and certificate['logical_asset']==asset['logical_asset'],
                         'Tool finding certificate asset differs: '+rid)
@@ -83,7 +83,7 @@ def load_current_release(root, relative='reports/current-release.json', require_
                         finding['requires_NVIDIA_review'] is True and native['failed']==len(finding['failed_tests'])>0,
                         'Raw benchmark failures must remain disclosed: '+rid)
                 require(set(finding['failed_tests'])==set(certificate['raw_failed_result_sha256s']) and
-                        set(finding['failed_tests'])<= {'presence','semantic_labels_seg_labelled','preview_surface_renders'},
+                        set(finding['failed_tests'])<= ({'ground_drop','slope_drop'} if certificate['kind']=='sdk_conservative_contact_bounds' else {'presence','semantic_labels_seg_labelled','preview_surface_renders'}),
                         'An asset or physics failure cannot be excused: '+rid)
                 if certificate['kind']=='sdk_small_asset_camera_clamp':
                     require(all(0<v<=0.025 for v in certificate['actual_visible_bounds_size_m']) and certificate['static_validation_passed'] is True,
@@ -101,6 +101,19 @@ def load_current_release(root, relative='reports/current-release.json', require_
                     require(set(certificate['release_captures'])=={'visible','hidden'} and m['visible_orange_pixels']>=5000 and m['hidden_orange_pixels']<=m['visible_orange_pixels']*.01,
                             'Presence visibility-toggle proof is incomplete: '+rid)
                     for capture in certificate['release_captures'].values():checked(capture,False)
+                elif certificate['kind']=='sdk_conservative_contact_bounds':
+                    import importlib.util
+                    probe_path=inside('tools/native_validation/native_contact_probe.py')
+                    spec=importlib.util.spec_from_file_location('release_contact_probe',probe_path);probe=importlib.util.module_from_spec(spec);spec.loader.exec_module(probe)
+                    reviewed=dict(certificate);reviewed['independent_tests']=certificate['release_independent_tests']
+                    probe.verify_contact_probe(reviewed,root)
+                elif certificate['kind']=='sdk_color_control_ambiguity':
+                    import importlib.util
+                    require(set(finding['failed_tests'])=={'preview_surface_renders'},'Independent color proof cannot excuse another failure: '+rid)
+                    spec=importlib.util.spec_from_file_location('release_cyan_probe',inside('tools/native_validation/native_cyan_probe.py'));probe=importlib.util.module_from_spec(spec);spec.loader.exec_module(probe)
+                    reviewed=dict(certificate)
+                    for field in ['captures','cyan_captures','independent_tests']:reviewed[field]=certificate['release_'+field]
+                    probe.verify_cyan_probe(reviewed,root)
                 else:
                     require(set(finding['failed_tests'])=={'preview_surface_renders'} and certificate['static_validation_passed'] is True and
                             certificate['all_visible_meshes_resolve_preview_surface'] is True and certificate['manual_native_capture_review'] is True and

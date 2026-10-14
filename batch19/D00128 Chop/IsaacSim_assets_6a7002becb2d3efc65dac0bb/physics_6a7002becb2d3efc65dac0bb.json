@@ -166,12 +166,12 @@
         "hf_commit": "7dea1d64f1cd77431a133e0cdb8f83d64a43ccb8",
         "size_bytes": 109371639
       },
-      "status": "failed",
+      "status": "completed_with_tool_findings",
       "required_engine": "isaac_sim",
       "physics_runtime": "PhysX",
       "engine_version": "6.1.0.0",
       "usd_sha256": "2caa2f89604cd8962a0739f45442b8dfa1e721898b93ef9fec14bd27b84bfd81",
-      "supplemental_accepted": false,
+      "supplemental_accepted": true,
       "planned_test_count": 12,
       "result_count": 12,
       "passed": 10,
@@ -187,6 +187,18 @@
       "joints_passed": 0,
       "joints_failed": 0,
       "thumbnail_sha256": "bbc1395bbf984e89759bd54c495eddde4da19808dcb4a78817dde5c97f686e2d",
+      "tool_findings": {
+        "certificate_path": "tool-finding-certificates/D00128.json",
+        "certificate_sha256": "c0873143bf074f82d29fc935de0d36673bddb6b5f3780af432d5506fc213cf71",
+        "raw_benchmark_status": "failed",
+        "failed_tests": [
+          "preview_surface_renders"
+        ],
+        "reason": "The source asset matches the official magenta control color. A separately named cyan-control test passes the same SDK scene, binding strengths, classifier thresholds and 98 percent coverage requirement for this unchanged USD. All visible meshes resolve Preview Surface; original magenta captures and FAIL remain for NVIDIA review. All physics and supplemental checks pass.",
+        "NVIDIA_raw_results_modified": false,
+        "requires_NVIDIA_review": true,
+        "release_certificate": "reports/releases/2026.10.13/tool-findings/D00128.json"
+      },
       "qualification": "native-fleet-evidence/shard-03/native-batch-001/qualification-normalized.json",
       "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
     }

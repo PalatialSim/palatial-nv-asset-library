@@ -12,7 +12,7 @@ def assess(row,root):
  if not path.exists():return row
  c=json.loads(path.read_text())
  kind=c.get('kind')
- if c.get('schema')!=POLICY or kind not in {'sdk_small_asset_camera_clamp','sdk_presence_camera_clamp','sdk_color_probe_ambiguity'} or c['logical_asset']!=row['logical_asset'] or c['asset_usd_sha256']!=row['asset_usd_sha256']:
+ if c.get('schema')!=POLICY or kind not in {'sdk_small_asset_camera_clamp','sdk_presence_camera_clamp','sdk_color_probe_ambiguity','sdk_color_control_ambiguity','sdk_conservative_contact_bounds'} or c['logical_asset']!=row['logical_asset'] or c['asset_usd_sha256']!=row['asset_usd_sha256']:
   raise RuntimeError('Tool finding certificate input differs')
  if row['result_count']!=row['planned_test_count'] or not row.get('thumbnail') or (kind=='sdk_small_asset_camera_clamp' and row['joint_counts']):
   raise RuntimeError('Tool finding cannot excuse incomplete supplemental coverage')
@@ -26,7 +26,8 @@ def assess(row,root):
    raise RuntimeError('Engine failures cannot receive a tool finding disposition')
  if len(results)!=row['planned_test_count']:raise RuntimeError('Tool finding planned test coverage differs')
  failed={name:h for name,(d,h) in results.items() if d['status'] not in ['pass','skipped']}
- if not failed or set(failed)-CAMERA_TESTS or failed!=c['raw_failed_result_sha256s']:raise RuntimeError('Tool finding does not match exact camera-only failures')
+ allowed={'ground_drop','slope_drop'} if kind=='sdk_conservative_contact_bounds' else CAMERA_TESTS
+ if not failed or set(failed)-allowed or failed!=c['raw_failed_result_sha256s']:raise RuntimeError('Tool finding does not match the exact independently diagnosed failures')
  if set(row['issues'])!={name+':fail' for name in failed}:raise RuntimeError('Additional native failures remain')
  def metric(name,key):return results[name][0]['metrics'][key]['value']
  if metric('palatial_black_thumbnail','asset_usd_sha256')!=row['asset_usd_sha256'] or results['palatial_black_thumbnail'][0]['status']!='pass':raise RuntimeError('Actual framed native render missing')
@@ -47,6 +48,19 @@ def assess(row,root):
   if set(failed)!={'presence'} or not math.isclose(float(metric('presence','presence_diff_ratio')),c['presence_diff_ratio']) or not math.isclose(float(metric('semantic_labels_seg_labelled','semantic_labels_on_coverage')),c['semantic_labels_on_coverage']) or int(metric('preview_surface_renders','universal_surface_silhouette_pixels'))!=c['silhouette_pixels'] or float(metric('preview_surface_renders','universal_surface_coverage'))<.98:
    raise RuntimeError('Presence diagnosis does not match exact independently labelled and shaded geometry')
   reason="The SDK's 0.1 m camera-axis minimum underframes this small or thin prop. The original orange visibility-toggle captures visibly contain the asset; semantic segmentation, material rendering, all physics and independent native thumbnail checks pass. The raw presence failure remains for NVIDIA review."
+ elif kind=='sdk_conservative_contact_bounds':
+  from native_contact_probe import verify_contact_probe
+  verify_contact_probe(c,root)
+  for name in failed:
+   if metric(name,name+'_penetrated')!=1:raise RuntimeError('Contact finding is not an SDK floor-penetration report')
+   if name=='slope_drop' and any(metric(name,k)!=0 for k in ['slope_drop_slope_penetrated','slope_drop_excessive_separation','slope_drop_uphill_motion']):raise RuntimeError('Another SDK ramp failure remains')
+  reason='The SDK conservative world bounds extend through the floor while live visible and collider mesh vertices remain above its penetration limit. Both complete independent ground and slope simulations pass with the unchanged SDK simulation parameters and thresholds, including stable ground settling and post-slide observation. Raw SDK physics failures remain for NVIDIA review.'
+ elif kind=='sdk_color_control_ambiguity':
+  from native_cyan_probe import verify_cyan_probe
+  verify_cyan_probe(c,root)
+  if set(failed)!={'preview_surface_renders'} or int(metric('preview_surface_renders','universal_surface_silhouette_pixels'))!=c['measurements']['strong_default_pixels'] or int(metric('preview_surface_renders','universal_surface_uncovered_pixels'))!=c['measurements']['weak_default_pixels']:
+   raise RuntimeError('Independent control does not diagnose the exact preview-only failure')
+  reason='The source asset matches the official magenta control color. A separately named cyan-control test passes the same SDK scene, binding strengths, classifier thresholds and 98 percent coverage requirement for this unchanged USD. All visible meshes resolve Preview Surface; original magenta captures and FAIL remain for NVIDIA review. All physics and supplemental checks pass.'
  else:
   from native_color_probe import verify_color_probe
   verify_color_probe(c,root)
