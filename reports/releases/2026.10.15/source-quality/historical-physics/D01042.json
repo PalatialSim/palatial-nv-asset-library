@@ -1,0 +1,288 @@
+{
+  "schema_version": "1.0",
+  "asset_id": "D01042",
+  "asset": {
+    "name": "D01042 Dough Docker",
+    "object_type": "articulated",
+    "total_mass": 0.369999997317791,
+    "bounds": {
+      "min": [
+        -0.043949998915195465,
+        -0.03099999949336052,
+        0.0
+      ],
+      "max": [
+        0.043949998915195465,
+        0.22900009155273438,
+        0.05896550416946411
+      ],
+      "size": [
+        0.08789999783039093,
+        0.2600000910460949,
+        0.05896550416946411
+      ],
+      "units": "m"
+    },
+    "bounds_frame": "USD stage world axes, metres, default authored pose",
+    "description": "3D model of dough docker for robotics simulation research. The delivered USD contains 2 rigid bodies and 1 enabled moving joint constraint."
+  },
+  "parts": [
+    {
+      "id": "handle_yoke",
+      "name": "handle_yoke",
+      "mass": 0.25,
+      "density": null,
+      "inertia": null,
+      "center_of_mass": null,
+      "physics_type": "rigid",
+      "source": {
+        "prim_path": "/World/handle_yoke"
+      },
+      "collision": {
+        "shape_count": 13,
+        "approximations": [
+          "convexHull"
+        ]
+      },
+      "reasoning": null,
+      "source_prim_path": "/World/handle_yoke",
+      "bounds": {
+        "min": [
+          -0.043949998915195465,
+          -0.006000000052154064,
+          0.0184827521443367
+        ],
+        "max": [
+          0.043949998915195465,
+          0.22900009155273438,
+          0.04048275202512741
+        ],
+        "size": [
+          0.08789999783039093,
+          0.23500009160488844,
+          0.02199999988079071
+        ],
+        "units": "m"
+      },
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
+    },
+    {
+      "id": "roller",
+      "name": "roller",
+      "mass": 0.11999999731779099,
+      "density": null,
+      "inertia": null,
+      "center_of_mass": null,
+      "physics_type": "rigid",
+      "source": {
+        "prim_path": "/World/roller"
+      },
+      "collision": {
+        "shape_count": 104,
+        "approximations": [
+          "convexHull"
+        ]
+      },
+      "reasoning": null,
+      "source_prim_path": "/World/roller",
+      "bounds": {
+        "min": [
+          -0.03844999894499779,
+          -0.03099999949336052,
+          0.0
+        ],
+        "max": [
+          0.03844999894499779,
+          0.03099999949336052,
+          0.05896550416946411
+        ],
+        "size": [
+          0.07689999788999557,
+          0.06199999898672104,
+          0.05896550416946411
+        ],
+        "units": "m"
+      },
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
+    }
+  ],
+  "articulation": {
+    "has_joints": true,
+    "joints": [
+      {
+        "id": "roller_spin",
+        "path": "/World/Joints/roller_spin",
+        "type": "PhysicsRevoluteJoint",
+        "enabled": true,
+        "body0": [
+          "/World/handle_yoke"
+        ],
+        "body1": [
+          "/World/roller"
+        ],
+        "lower_limit": null,
+        "upper_limit": null,
+        "usd_type": "PhysicsRevoluteJoint",
+        "body0_targets": [
+          "/World/handle_yoke"
+        ],
+        "body1_targets": [
+          "/World/roller"
+        ],
+        "authored_usd": {
+          "id": "roller_spin",
+          "source_prim_path": "/World/Joints/roller_spin",
+          "joint_type": "PhysicsRevoluteJoint",
+          "body0": [
+            "/World/handle_yoke"
+          ],
+          "body1": [
+            "/World/roller"
+          ],
+          "joint_enabled": true,
+          "axis": "X",
+          "lowerLimit": "-Infinity",
+          "upperLimit": "Infinity",
+          "localPos0": [
+            0.0,
+            0.0,
+            0.029482752084732056
+          ],
+          "localPos1": [
+            0.0,
+            0.0,
+            0.029482752084732056
+          ],
+          "localRot0": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "localRot1": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "static_frames": []
+        }
+      }
+    ],
+    "moving_joints": 1,
+    "rigid_body_count": 2,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
+  },
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  },
+  "simulation": {
+    "fix_base": null
+  },
+  "provenance": {
+    "source_schema": "authored_usd",
+    "usd_path": "batch41/D01042_Dough_Docker_simready/D01042_Dough_Docker.usd",
+    "usd_sha256": "93819c1fee13c3a63118f4a99d275dfea4cb3377551dda584183ac2c99f979da",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "reasoning_available": false,
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification.",
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "04ec80c37e1ff56d26a7743659b7cb300516522ab32fb40dbbdf146697ed5365"
+    },
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes"
+  },
+  "validation": {
+    "overall": "verified",
+    "scale": {
+      "status": "verified",
+      "confidence": "high",
+      "units": "m",
+      "up_axis": "Z",
+      "bounds_m": [
+        0.08789999783039093,
+        0.2600000910460949,
+        0.05896550416946411
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "93819c1fee13c3a63118f4a99d275dfea4cb3377551dda584183ac2c99f979da",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
+    },
+    "mass": {
+      "status": "verified",
+      "confidence": "high",
+      "value_kg": 0.369999997317791,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "93819c1fee13c3a63118f4a99d275dfea4cb3377551dda584183ac2c99f979da",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.369999997317791,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
+    },
+    "collision": {
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 117,
+      "approximations": [
+        "convexHull"
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "93819c1fee13c3a63118f4a99d275dfea4cb3377551dda584183ac2c99f979da",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 117,
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
+    },
+    "articulation": {
+      "status": "verified",
+      "confidence": "high",
+      "moving_joints": 1,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "93819c1fee13c3a63118f4a99d275dfea4cb3377551dda584183ac2c99f979da",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 1,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/0054c98bb79ab2dd21591943c85874fdba98c745/reports/native/2026.10.13/shard-08/native-batch-004-evidence.tar.gz",
+        "sha256": "142ce9b67155d2e2ce99e285be19805eec6a6667fb36521d387baef57d1a39eb",
+        "hf_commit": "0054c98bb79ab2dd21591943c85874fdba98c745",
+        "size_bytes": 106767539
+      },
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "93819c1fee13c3a63118f4a99d275dfea4cb3377551dda584183ac2c99f979da",
+      "supplemental_accepted": true,
+      "planned_test_count": 14,
+      "result_count": 14,
+      "passed": 13,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-14T00:01:16.251185+00:00",
+      "joint_status": "passed",
+      "joints_total": 1,
+      "joints_passed": 1,
+      "joints_failed": 0,
+      "thumbnail_sha256": "8f680888d5f4877b5ad8c0b38d434034e4eda7d273f4d21f54f62e7e59b21b8c",
+      "qualification": "native-fleet-evidence/shard-08/native-batch-004/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
+    }
+  }
+}

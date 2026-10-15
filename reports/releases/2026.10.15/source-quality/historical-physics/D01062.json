@@ -1,0 +1,304 @@
+{
+  "schema_version": "1.0",
+  "asset_id": "D01062",
+  "asset": {
+    "name": "D01062 Countertop Ice Maker",
+    "object_type": "articulated",
+    "total_mass": 7.800000011920929,
+    "bounds": {
+      "min": [
+        -0.17000000178813934,
+        -0.11999999731779099,
+        0.0
+      ],
+      "max": [
+        0.17000000178813934,
+        0.11999999731779099,
+        0.3199999928474426
+      ],
+      "size": [
+        0.3400000035762787,
+        0.23999999463558197,
+        0.3199999928474426
+      ],
+      "units": "m"
+    },
+    "bounds_frame": "USD stage world axes, metres, default authored pose",
+    "description": "3D model of countertop ice maker for robotics simulation research. The delivered USD contains 2 rigid bodies and 1 enabled moving joint constraint."
+  },
+  "parts": [
+    {
+      "id": "Base",
+      "name": "Base",
+      "mass": 7.480000019073486,
+      "density": null,
+      "inertia": [
+        0.07561033219099045,
+        0.10927033424377441,
+        0.09399866312742233
+      ],
+      "center_of_mass": [
+        -0.012000000104308128,
+        0.0,
+        0.12600000202655792
+      ],
+      "physics_type": "rigid",
+      "source": {
+        "prim_path": "/IKICH_IceMaker/Base"
+      },
+      "collision": {
+        "shape_count": 190,
+        "approximations": [
+          "convexHull"
+        ]
+      },
+      "reasoning": null,
+      "source_prim_path": "/IKICH_IceMaker/Base",
+      "bounds": {
+        "min": [
+          -0.17000000178813934,
+          -0.11999999731779099,
+          0.0
+        ],
+        "max": [
+          0.17000000178813934,
+          0.11999999731779099,
+          0.3199999928474426
+        ],
+        "size": [
+          0.3400000035762787,
+          0.23999999463558197,
+          0.3199999928474426
+        ],
+        "units": "m"
+      },
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
+    },
+    {
+      "id": "Lid",
+      "name": "Lid",
+      "mass": 0.3199999928474426,
+      "density": null,
+      "inertia": [
+        0.0015249333810061216,
+        0.0012458666460588574,
+        0.0027673866134136915
+      ],
+      "center_of_mass": [
+        0.1080000028014183,
+        0.0,
+        -0.023439999669790268
+      ],
+      "physics_type": "rigid",
+      "source": {
+        "prim_path": "/IKICH_IceMaker/Lid"
+      },
+      "collision": {
+        "shape_count": 38,
+        "approximations": [
+          "convexHull"
+        ]
+      },
+      "reasoning": null,
+      "source_prim_path": "/IKICH_IceMaker/Lid",
+      "bounds": {
+        "min": [
+          -0.04845000049471855,
+          -0.11949999630451202,
+          0.25573169231414794
+        ],
+        "max": [
+          0.16959999883174898,
+          0.11949999630451202,
+          0.30494998931884765
+        ],
+        "size": [
+          0.21804999932646751,
+          0.23899999260902405,
+          0.04921829700469971
+        ],
+        "units": "m"
+      },
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
+    }
+  ],
+  "articulation": {
+    "has_joints": true,
+    "joints": [
+      {
+        "id": "Lid_Hinge",
+        "path": "/IKICH_IceMaker/Joints/Lid_Hinge",
+        "type": "PhysicsRevoluteJoint",
+        "enabled": true,
+        "body0": [
+          "/IKICH_IceMaker/Base"
+        ],
+        "body1": [
+          "/IKICH_IceMaker/Lid"
+        ],
+        "lower_limit": 0.0,
+        "upper_limit": 105.0,
+        "usd_type": "PhysicsRevoluteJoint",
+        "body0_targets": [
+          "/IKICH_IceMaker/Base"
+        ],
+        "body1_targets": [
+          "/IKICH_IceMaker/Lid"
+        ],
+        "authored_usd": {
+          "id": "Lid_Hinge",
+          "source_prim_path": "/IKICH_IceMaker/Joints/Lid_Hinge",
+          "joint_type": "PhysicsRevoluteJoint",
+          "body0": [
+            "/IKICH_IceMaker/Base"
+          ],
+          "body1": [
+            "/IKICH_IceMaker/Lid"
+          ],
+          "joint_enabled": true,
+          "axis": "Y",
+          "lowerLimit": 0.0,
+          "upperLimit": 105.0,
+          "localPos0": [
+            -0.04600000008940697,
+            0.0,
+            0.30250000953674316
+          ],
+          "localPos1": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "localRot0": [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "localRot1": [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "static_frames": []
+        }
+      }
+    ],
+    "moving_joints": 1,
+    "rigid_body_count": 2,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
+  },
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  },
+  "simulation": {
+    "fix_base": null
+  },
+  "provenance": {
+    "source_schema": "authored_usd",
+    "usd_path": "batch41/D01062_Countertop_Ice_Maker/D01062_Countertop_Ice_Maker.usd",
+    "usd_sha256": "9625cb993a0786bacfa08fce76d24b041a63f8cd6a88425638a12cb81ffaf163",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "reasoning_available": false,
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification.",
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "aa21ae94a5380419a47d9ea0481404c9e343eedc7c2c7bf0cfe59c5126d70233"
+    },
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes"
+  },
+  "validation": {
+    "overall": "verified",
+    "scale": {
+      "status": "verified",
+      "confidence": "high",
+      "units": "m",
+      "up_axis": "Z",
+      "bounds_m": [
+        0.3400000035762787,
+        0.23999999463558197,
+        0.3199999928474426
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "9625cb993a0786bacfa08fce76d24b041a63f8cd6a88425638a12cb81ffaf163",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
+    },
+    "mass": {
+      "status": "verified",
+      "confidence": "high",
+      "value_kg": 7.800000011920929,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "9625cb993a0786bacfa08fce76d24b041a63f8cd6a88425638a12cb81ffaf163",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 7.800000011920929,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
+    },
+    "collision": {
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 228,
+      "approximations": [
+        "convexHull"
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "9625cb993a0786bacfa08fce76d24b041a63f8cd6a88425638a12cb81ffaf163",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 228,
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
+    },
+    "articulation": {
+      "status": "verified",
+      "confidence": "high",
+      "moving_joints": 1,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "9625cb993a0786bacfa08fce76d24b041a63f8cd6a88425638a12cb81ffaf163",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 1,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/fe6c9fa1712b4e1ffece5c9f1d5c7493cc3f38d5/reports/native/2026.10.13/shard-07/native-batch-005-evidence.tar.gz",
+        "sha256": "5a5d673213ae483769b2ed5a0c521f468aa000d45084275449cee18aba190e9a",
+        "hf_commit": "fe6c9fa1712b4e1ffece5c9f1d5c7493cc3f38d5",
+        "size_bytes": 12710220
+      },
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "9625cb993a0786bacfa08fce76d24b041a63f8cd6a88425638a12cb81ffaf163",
+      "supplemental_accepted": true,
+      "planned_test_count": 14,
+      "result_count": 14,
+      "passed": 13,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-13T23:57:11.931328+00:00",
+      "joint_status": "passed",
+      "joints_total": 1,
+      "joints_passed": 1,
+      "joints_failed": 0,
+      "thumbnail_sha256": "9c0c171dfe4f31840d42c0d1e8eb33c6abda26031e70e853d7568f55ffbcd979",
+      "qualification": "native-fleet-evidence/shard-07/native-batch-005/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
+    }
+  }
+}

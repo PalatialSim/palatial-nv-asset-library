@@ -92,7 +92,8 @@
     "source_meters_per_unit": 1.0,
     "source_kilograms_per_unit": 1.0,
     "source_up_axis": "Z",
-    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification.",
+    "current_standard_submission": "reports/releases/2026.10.15/standard-submission/inventory.json"
   },
   "schema_version": "1.0",
   "simulation": {
@@ -104,7 +105,7 @@
     "up_axis": "Z"
   },
   "validation": {
-    "overall": "verified",
+    "overall": "stock_tests_passed",
     "scale": {
       "status": "verified",
       "confidence": "high",
@@ -158,8 +159,8 @@
       "joint_count": 0,
       "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
     },
-    "scope": "authored_usd_metadata_consistency",
-    "runtime": {
+    "scope": "authored_metadata_and_complete_unchanged_stock_evidence_for_review",
+    "historical_runtime": {
       "evidence_archive": {
         "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/91674304f3637cd9acd3a987e279915e4874f7b5/reports/native/2026.10.13/shard-11/native-batch-002-evidence.tar.gz",
         "sha256": "03113b16a23e073b36cd327ff9c13df88747df7df531d1e1b1da4038a5ee06f9",
@@ -186,7 +187,39 @@
       "joints_failed": 0,
       "thumbnail_sha256": "2b58e705a8f5db8825de21a05752006b6af935e9586568da42091cfa5b0b27d9",
       "qualification": "native-fleet-evidence/shard-11/native-batch-002/qualification-normalized.json",
-      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks",
+      "applies_to_current_source": true,
+      "qualification_period": "historical_internal_native_release_2026.10.13"
+    },
+    "runtime": {
+      "status": "passed",
+      "scope": "unchanged_stock_tests_for_NVIDIA_review",
+      "usd_sha256": "ae7295049643ba910c0c5a4650778ab1c27a9f8dd5025aae6f9b903b3fde0c08",
+      "asset_version": "2026.10.13_00",
+      "result_counts": {
+        "pass": 18,
+        "skipped": 2
+      },
+      "configured_engines": [
+        "isaac_sim",
+        "isaac_sim_newton"
+      ],
+      "physics_runtime": "PhysX",
+      "Newton_physics_qualified": false,
+      "stock_provider_only": true,
+      "benchmark_parameter_overrides": [],
+      "skip_or_ignore_flags": [],
+      "declared_test_coverage_verified": true,
+      "requires_NVIDIA_review": false,
+      "NVIDIA_approval": "pending",
+      "known_issue_urls": [],
+      "note": "Recorded eligibility skips are retained. Authored physical properties are not independent measurements.",
+      "package_url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/49cb2f0ec78baf373253476c1727a254ab113ce1/D00615/com.nvidia.simready.packaging.json",
+      "raw_archive_url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/c82cc13a4353463b18c1b9a83fd337e02556cd89/reports/simready-central/2026.10.13_00/D00615/49cb2f0ec78baf373253476c1727a254ab113ce1/benchmark-report.tar.gz",
+      "raw_manifest_url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/c82cc13a4353463b18c1b9a83fd337e02556cd89/reports/simready-central/2026.10.13_00/D00615/49cb2f0ec78baf373253476c1727a254ab113ce1/evidence.json",
+      "benchmark_sidecar_sha256": "632039d46d92c3d6998a23dd74c493d4c4ec38d70fa8f8827ddabc45001364d1",
+      "raw_archive_sha256": "637fd3db7c453358da661d7ecd4bbd4c31da8711dca850286da5070e7b3d7ed7",
+      "default_stock_plan_sha256": "12cd92e33d37d8275ef202e76b9e4f49a79c3b144640034b9e460eba114950a3"
     }
   }
 }

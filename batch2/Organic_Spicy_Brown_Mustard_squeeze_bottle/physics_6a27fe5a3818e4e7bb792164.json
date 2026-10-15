@@ -92,7 +92,8 @@
     "source_kilograms_per_unit": 1.0,
     "source_up_axis": "Z",
     "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification.",
-    "asset_id_source": "existing asset folder identifier; no numbered D identifier was present"
+    "asset_id_source": "existing asset folder identifier; no numbered D identifier was present",
+    "current_standard_submission": "reports/releases/2026.10.15/standard-submission/inventory.json"
   },
   "schema_version": "1.0",
   "simulation": {},
@@ -102,7 +103,7 @@
     "up_axis": "Z"
   },
   "validation": {
-    "overall": "verified",
+    "overall": "stock_tests_passed",
     "scale": {
       "status": "verified",
       "confidence": "high",
@@ -156,8 +157,8 @@
       "joint_count": 0,
       "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
     },
-    "scope": "authored_usd_metadata_consistency",
-    "runtime": {
+    "scope": "authored_metadata_and_complete_unchanged_stock_evidence_for_review",
+    "historical_runtime": {
       "evidence_archive": {
         "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/6cadaf22226a37798c70b3606ba3d59315524b06/reports/native/2026.10.13/shard-05/native-batch-005-evidence.tar.gz",
         "sha256": "c350639b3a15f5400b332b1ee9383032717e2a8c4023f4c438245772d64b61a5",
@@ -184,7 +185,39 @@
       "joints_failed": 0,
       "thumbnail_sha256": "179d335335d65cf22c8e9a112554aa7b027e0838e4b9fab176a3897df45eeff2",
       "qualification": "native-fleet-evidence/shard-05/native-batch-005/qualification-normalized.json",
-      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks",
+      "applies_to_current_source": true,
+      "qualification_period": "historical_internal_native_release_2026.10.13"
+    },
+    "runtime": {
+      "status": "passed",
+      "scope": "unchanged_stock_tests_for_NVIDIA_review",
+      "usd_sha256": "1c0893c19330c6ce79937dc7dffab40866832fb0303e6798b0a9ea494672333c",
+      "asset_version": "2026.10.13_00",
+      "result_counts": {
+        "pass": 18,
+        "skipped": 2
+      },
+      "configured_engines": [
+        "isaac_sim",
+        "isaac_sim_newton"
+      ],
+      "physics_runtime": "PhysX",
+      "Newton_physics_qualified": false,
+      "stock_provider_only": true,
+      "benchmark_parameter_overrides": [],
+      "skip_or_ignore_flags": [],
+      "declared_test_coverage_verified": true,
+      "requires_NVIDIA_review": false,
+      "NVIDIA_approval": "pending",
+      "known_issue_urls": [],
+      "note": "Recorded eligibility skips are retained. Authored physical properties are not independent measurements.",
+      "package_url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/0fdcb4da942ab0364ce57d43ccf17c47c4878247/Organic_Spicy_Brown_Mustard_squeeze_bottle/com.nvidia.simready.packaging.json",
+      "raw_archive_url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/eba0a701373bb2b3b5681ed04fec9d6812192a12/reports/simready-central/2026.10.13_00/Organic_Spicy_Brown_Mustard_squeeze_bottle/0fdcb4da942ab0364ce57d43ccf17c47c4878247/benchmark-report.tar.gz",
+      "raw_manifest_url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/eba0a701373bb2b3b5681ed04fec9d6812192a12/reports/simready-central/2026.10.13_00/Organic_Spicy_Brown_Mustard_squeeze_bottle/0fdcb4da942ab0364ce57d43ccf17c47c4878247/evidence.json",
+      "benchmark_sidecar_sha256": "f7eb598badb3720dfa57c0b1bc5a92b933fe89f2498b4db53deb26e1a9626b9d",
+      "raw_archive_sha256": "f9c1683dc68b9af1a45f7390b78bfa48d5ddfb34ba672021f1f317d65cb2a928",
+      "default_stock_plan_sha256": "541107a2e74e49c4d534b2c491c52a5b41d0a59ced5b74672b1742e2dae3cef3"
     }
   },
   "asset_id": "Organic_Spicy_Brown_Mustard_squeeze_bottle"

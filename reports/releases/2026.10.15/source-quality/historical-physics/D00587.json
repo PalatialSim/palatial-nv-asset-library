@@ -1,0 +1,1066 @@
+{
+  "articulation": {
+    "has_joints": false,
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
+  },
+  "asset": {
+    "bounds": {
+      "min": [
+        -0.06706500053405762,
+        -0.06659699976444244,
+        0.0003739299427252263
+      ],
+      "max": [
+        0.06663099676370621,
+        0.06718999892473221,
+        0.1808089166879654
+      ],
+      "size": [
+        0.13369599729776382,
+        0.13378699868917465,
+        0.18043498674524017
+      ],
+      "units": "m"
+    },
+    "description": "D00587 Paper Towel Holder",
+    "name": "D00587 Paper Towel Holder",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.800000011920929,
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
+  },
+  "asset_id": "D00587",
+  "parts": [
+    {
+      "bounds": {
+        "min": [
+          -0.06706500053405762,
+          -0.06659699976444244,
+          0.0003739299427252263
+        ],
+        "max": [
+          0.06663099676370621,
+          0.06718999892473221,
+          0.1808089166879654
+        ],
+        "size": [
+          0.13369599729776382,
+          0.13378699868917465,
+          0.18043498674524017
+        ],
+        "units": "m"
+      },
+      "center_of_mass": [
+        -0.00022121098299976438,
+        0.0001220287595060654,
+        0.05173394829034805
+      ],
+      "collision": {},
+      "density": 8000.0,
+      "id": "part_00",
+      "inertia": [
+        0.0011658266885206103,
+        0.0017921653343364596,
+        0.001793182105757296
+      ],
+      "mass": 0.800000011920929,
+      "material": "metal",
+      "name": "D00587 Paper Towel Holder",
+      "physics_type": "rigid",
+      "source": {
+        "object_name": "D00587 Paper Towel Holder",
+        "part_name": "D00587 Paper Towel Holder"
+      },
+      "volume": 0.00010000000149011611,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
+    }
+  ],
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "2589382b49f3a73affb836afb2bba52e81783a299b0c0899f98b51dafbddf281"
+    },
+    "usd_path": "batch20/D00587 Paper Towel Holder/IsaacSim_assets_6a6c276fcb2d3efc65b15dce/IsaacSim_asset_6a6c276fcb2d3efc65b15dce.usd",
+    "usd_sha256": "d04b43de62d35249de7458461445fcce3a9bdbc59afd1bc531a88d1d5fc3e3f8",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification.",
+    "native_runtime_repairs": [
+      {
+        "case": "native-contact-repairs-v2",
+        "old_usd_sha256": "670b89eceadd31f3e9a835e992400c04ffe89a6b5df49ee16829b8958bd9cd0e",
+        "new_usd_sha256": "d04b43de62d35249de7458461445fcce3a9bdbc59afd1bc531a88d1d5fc3e3f8",
+        "changes": [
+          {
+            "kind": "lower_uncalibrated_restitution_after_observed_excessive_bounce",
+            "prim": "/World/part_00/PhysicsMaterials/part_00_material",
+            "before": 0.4000000059604645,
+            "after": 0.1
+          },
+          {
+            "kind": "speculative_ccd_and_velocity_solver_after_observed_upward_launch",
+            "velocity_iterations": 16
+          }
+        ],
+        "qualification": "native-fleet-evidence/shard-33/native-batch-000/qualification-normalized.json"
+      }
+    ]
+  },
+  "schema_version": "1.0",
+  "simulation": {
+    "fix_base": false,
+    "authored_usd_physics_properties": [
+      {
+        "prim_path": "/World/part_00",
+        "authored_attributes": {
+          "physics:centerOfMass": "(-0.00022121098, 0.00012202876, 0.05173395)",
+          "physics:density": "8000.0",
+          "physics:diagonalInertia": "(0.0011658267, 0.0017921653, 0.0017931821)",
+          "physics:mass": "0.800000011920929",
+          "physics:principalAxes": "(-0.5445817, 0.44977614, 0.5455566, 0.45110992)",
+          "physics:rigidBodyEnabled": "True",
+          "physxRigidBody:enableSpeculativeCCD": "True",
+          "physxRigidBody:solverPositionIterationCount": "16",
+          "physxRigidBody:solverVelocityIterationCount": "16"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/PhysicsMaterials/part_00_material",
+        "authored_attributes": {
+          "physics:dynamicFriction": "0.4000000059604645",
+          "physics:restitution": "0.10000000149011612",
+          "physics:staticFriction": "0.5",
+          "physxMaterial:frictionCombineMode": "average",
+          "physxMaterial:restitutionCombineMode": "average"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_0",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_1",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_2",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_3",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_4",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_5",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_6",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_7",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_8",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_9",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_10",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_11",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_12",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_13",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_14",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_15",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_16",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_17",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_18",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_19",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_20",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_21",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_22",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_23",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_24",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_25",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_26",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_27",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_28",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_29",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_30",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_31",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_32",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_33",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_34",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_35",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_36",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_37",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_38",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_39",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_40",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_41",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_42",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_43",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_44",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_45",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_46",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_47",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_48",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_49",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_50",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_51",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_52",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_53",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_54",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_55",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_56",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_57",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_58",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_59",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_60",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_61",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_62",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_63",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_64",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_65",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_66",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_67",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_68",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_69",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_70",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_71",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_72",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_73",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_74",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_75",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_76",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_77",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_78",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_79",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_80",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_81",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_82",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_83",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_84",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_85",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_86",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_87",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_88",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_89",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_90",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_91",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020000000949949026",
+          "physxCollision:restOffset": "0.0"
+        }
+      }
+    ]
+  },
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  },
+  "validation": {
+    "overall": "verified",
+    "scale": {
+      "status": "verified",
+      "confidence": "high",
+      "units": "m",
+      "up_axis": "Z",
+      "bounds_m": [
+        0.13369599729776382,
+        0.13378699868917465,
+        0.18043498674524017
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "d04b43de62d35249de7458461445fcce3a9bdbc59afd1bc531a88d1d5fc3e3f8",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
+    },
+    "mass": {
+      "status": "verified",
+      "confidence": "high",
+      "value_kg": 0.800000011920929,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "d04b43de62d35249de7458461445fcce3a9bdbc59afd1bc531a88d1d5fc3e3f8",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.800000011920929,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
+    },
+    "collision": {
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 92,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "d04b43de62d35249de7458461445fcce3a9bdbc59afd1bc531a88d1d5fc3e3f8",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 92,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
+    },
+    "articulation": {
+      "status": "verified",
+      "confidence": "high",
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "d04b43de62d35249de7458461445fcce3a9bdbc59afd1bc531a88d1d5fc3e3f8",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/c1013265cba183aaddce7eb3ea9c7d6289797772/reports/native/2026.10.13/cases/native-contact-repairs-v2/native-batch-000-evidence.tar.gz",
+        "sha256": "dd5bda7b9baf88be8d15600836ae65ad265090e816874e164a5a3d3a23cee6fe",
+        "hf_commit": "c1013265cba183aaddce7eb3ea9c7d6289797772",
+        "size_bytes": 17681044
+      },
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "d04b43de62d35249de7458461445fcce3a9bdbc59afd1bc531a88d1d5fc3e3f8",
+      "supplemental_accepted": true,
+      "planned_test_count": 12,
+      "result_count": 12,
+      "passed": 11,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-14T00:53:37.546650+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "5a0c6752d666a2181c900892501ebede33ea8c33ea3e633ff847701be1c426ae",
+      "qualification": "native-fleet-evidence/shard-33/native-batch-000/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
+    }
+  }
+}

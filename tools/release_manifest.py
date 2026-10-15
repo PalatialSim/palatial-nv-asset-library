@@ -28,6 +28,14 @@ def load_current_release(root, relative='reports/current-release.json', require_
         require(hashlib.sha256(data).hexdigest()==spec['sha256'],'Artifact SHA256 mismatch: '+spec['path'])
         return strict_json(data) if parse else data
     manifest=strict_json(inside(relative).read_bytes())
+    if manifest.get('schema') == 'palatial.library-review-release.v2':
+        # This checks complete stock evidence for review, preserving raw FAILs.
+        # The historical v1 acceptance policy below is unchanged.
+        import importlib.util
+        spec = importlib.util.spec_from_file_location('library_review_release', Path(__file__).with_name('review_release_manifest.py'))
+        review = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(review)
+        return review.load_review_release(root, relative, require_ready)
     require(manifest.get('schema')=='palatial.library-release.v1','Unsupported release manifest schema')
     report=checked(manifest['asset_report'])
     gallery=checked(manifest['gallery'])

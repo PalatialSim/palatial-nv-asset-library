@@ -1,0 +1,214 @@
+{
+  "schema_version": "1.0",
+  "asset_id": "D00095",
+  "asset": {
+    "name": "D00095 Can",
+    "description": "A plain silver tin-plated steel can with a cylindrical body, rolled top and bottom rims, and shallow concentric lid grooves. The surface is slightly brushed and mottled, with no label or visible openings.",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.07000000029802322,
+    "bounds": {
+      "min": [
+        -0.04802199825644493,
+        -0.04778899997472763,
+        3.999999989900971e-06
+      ],
+      "max": [
+        0.04777299985289574,
+        0.04801899939775467,
+        0.08325300365686417
+      ],
+      "size": [
+        0.09579499810934067,
+        0.0958079993724823,
+        0.08324900365687427
+      ],
+      "units": "m"
+    },
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
+  },
+  "parts": [
+    {
+      "id": "part_00",
+      "name": "D00095 Can",
+      "mass": 0.07000000029802322,
+      "density": 165.0,
+      "volume": 0.0005995264254885234,
+      "inertia": [
+        8.027459187205638e-05,
+        8.047666037162658e-05,
+        8.05013230319247e-05
+      ],
+      "inertia_axes": [
+        0.7197856003449838,
+        0.06506799481968163,
+        -0.6858704111175342,
+        0.08518582475753549
+      ],
+      "center_of_mass": [
+        -0.00014143777079739613,
+        0.00010684846342150833,
+        0.04165024976051112
+      ],
+      "bounds": {
+        "min": [
+          -0.04802199825644493,
+          -0.04778899997472763,
+          3.999999989900971e-06
+        ],
+        "max": [
+          0.04777299985289574,
+          0.04801899939775467,
+          0.08325300365686417
+        ],
+        "size": [
+          0.09579499810934067,
+          0.0958079993724823,
+          0.08324900365687427
+        ],
+        "units": "m"
+      },
+      "material": "tin_plated_steel",
+      "physics_type": "rigid",
+      "source": {
+        "object_name": "D00095 Can",
+        "part_name": "D00095 Can"
+      },
+      "collision": {},
+      "reasoning": "The object appears to be a small unlabeled metal tin can: a thin-walled cylindrical steel shell with rolled seams and pressed lid features. Because no real dimensions or product data are provided, I assume a representative small can of about 85 mm diameter and 75 mm height. The full outer bounding volume is approximately pi*(0.0425 m)^2*0.075 m = 4.26e-4 m^3. For an empty thin steel shell, using tin-plated steel density near 7850 kg/m^3, wall/lid thickness around 0.20-0.30 mm, and extra metal in the rolled rims, the metal volume is roughly 8-9e-6 m^3, giving a total mass near 0.06-0.08 kg; 0.07 kg is a reasonable simulation mass for the visible shell. The reported root density is therefore an effective rigid-body density relative to the closed outer collider volume, about 0.07 / 4.26e-4 = 165 kg/m^3. If this is intended to represent a filled sealed food can rather than an empty shell, the mass should be increased substantially, typically to about 0.30-0.50 kg depending on scale and contents, while the contact material would remain steel. The dominant contact material is dull tin-plated steel, so dry steel-like friction is appropriate: static friction around 0.50 and dynamic friction around 0.40-0.45. Restitution is set to 0.55, lower than an ideal solid steel sphere because the thin can shell, crimped rims, and lid embossing dissipate energy through ringing and slight local compliance. For Isaac Sim/PhysX, the can is visually close to convex. A single convex hull is the best performance choice for a dynamic rigid body and should wrap the outer cylindrical side and rims while ignoring small lid grooves. Use a sufficiently high radial-resolution hull to avoid faceted rolling jitter. If exact interaction with lid grooves or rolled seams is required, convex decomposition or SDF mesh can be used, but those are more expensive and usually unnecessary for manipulation or bin-contact scenarios. Contact offset around 1.5-2.0 mm is suitable for an object of this scale; rest offset can remain 0.0 m to avoid artificial separation from surfaces. CCD is recommended because the can is light, has thin features, and may roll or be dropped; it prevents tunneling at high linear or angular speeds. Initial velocity is zero. Practical velocity limits, if configured outside this schema, would be around 10 m/s linear and 100 rad/s angular for robust contact behavior at this scale. Sleep thresholds can remain near PhysX defaults, but for a light rolling can a slightly increased sleep threshold may be useful to prevent long-lived low-energy rolling jitter. Compliant contacts are disabled because this is modeled as a non-deformable rigid metal object; any lossiness is represented mainly through restitution and solver damping rather than spring compliance.",
+      "static_friction": 0.5,
+      "dynamic_friction": 0.42,
+      "restitution": 0.55,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "is_structural_root": true,
+      "description": "A plain silver tin-plated steel can with a cylindrical body, rolled top and bottom rims, and shallow concentric lid grooves. The surface is slightly brushed and mottled, with no label or visible openings.",
+      "semantic": {
+        "qid": null
+      },
+      "non_visual_material": null,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
+    }
+  ],
+  "articulation": {
+    "has_joints": false,
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
+  },
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  },
+  "simulation": {
+    "fix_base": false
+  },
+  "provenance": {
+    "source_schema": "legacy_batch1_physics",
+    "legacy_reasoning_preserved": true,
+    "legacy_overall_assessment": "",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification.",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "collision_source": "USD PhysicsCollisionAPI geometry",
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "98bc78327b0972932fda52b272dbb905a8af2574d863c8a2ed630004a8bc89cd"
+    },
+    "usd_path": "batch1/D00095 Can/IsaacSim_assets_69f815d7d09344200f0b1a44/IsaacSim_asset_69f815d7d09344200f0b1a44.usd",
+    "usd_sha256": "42518d3491175540f7e27c9593277a7ab39fcb42fc7b62fd858b957c670a9855",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z"
+  },
+  "validation": {
+    "overall": "verified",
+    "scale": {
+      "status": "verified",
+      "confidence": "high",
+      "units": "m",
+      "up_axis": "Z",
+      "bounds_m": [
+        0.09579499810934067,
+        0.0958079993724823,
+        0.08324900365687427
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "42518d3491175540f7e27c9593277a7ab39fcb42fc7b62fd858b957c670a9855",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
+    },
+    "mass": {
+      "status": "verified",
+      "confidence": "high",
+      "value_kg": 0.07000000029802322,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "42518d3491175540f7e27c9593277a7ab39fcb42fc7b62fd858b957c670a9855",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.07000000029802322,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
+    },
+    "collision": {
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 59,
+      "approximations": [
+        "convexHull"
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "42518d3491175540f7e27c9593277a7ab39fcb42fc7b62fd858b957c670a9855",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 59,
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
+    },
+    "articulation": {
+      "status": "verified",
+      "confidence": "high",
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "42518d3491175540f7e27c9593277a7ab39fcb42fc7b62fd858b957c670a9855",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/3561a1563f8725aa25f12641e18b50896ec9708b/reports/native/2026.10.13/shard-01/native-batch-001-evidence.tar.gz",
+        "sha256": "90f25b8692202f16d7da647198209395f6a6689a120289afbcd8279ac66be19a",
+        "hf_commit": "3561a1563f8725aa25f12641e18b50896ec9708b",
+        "size_bytes": 112130491
+      },
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "42518d3491175540f7e27c9593277a7ab39fcb42fc7b62fd858b957c670a9855",
+      "supplemental_accepted": true,
+      "planned_test_count": 12,
+      "result_count": 12,
+      "passed": 11,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-13T21:10:58.465166+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "451119417bef4884a3af8aeadb9dd8172d03cc73f96562c13cf3d7c816591c56",
+      "qualification": "native-fleet-evidence/shard-01/native-batch-001/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
+    }
+  }
+}

@@ -1,0 +1,214 @@
+{
+  "schema_version": "1.0",
+  "asset_id": "D00020",
+  "asset": {
+    "name": "D00020 Bell",
+    "description": "A hand bell with an aged brass flared bell body, brass clapper, and a dark polished wooden handle. The surface shows worn metallic patina, carved handle contours, and thin decorative grooves.",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.8500000238418579,
+    "bounds": {
+      "min": [
+        -0.04848700016736984,
+        -0.04797599837183952,
+        -3.999999989900971e-06
+      ],
+      "max": [
+        0.04948199912905693,
+        0.04876499995589256,
+        0.19573800265789032
+      ],
+      "size": [
+        0.09796899929642677,
+        0.09674099832773209,
+        0.19574200265788022
+      ],
+      "units": "m"
+    },
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
+  },
+  "parts": [
+    {
+      "id": "part_00",
+      "name": "D00020 Bell",
+      "mass": 0.8500000238418579,
+      "density": 500.0,
+      "volume": 0.0005619300698615455,
+      "inertia": [
+        0.0006082924054554386,
+        0.0017422239825195713,
+        0.0017516699927066595
+      ],
+      "inertia_axes": [
+        0.4940622323437018,
+        0.4977820123989628,
+        0.5079370101614268,
+        -0.5001155590579717
+      ],
+      "center_of_mass": [
+        0.0003617623192206242,
+        -8.060911668587845e-05,
+        0.06391765361412036
+      ],
+      "bounds": {
+        "min": [
+          -0.04848700016736984,
+          -0.04797599837183952,
+          -3.999999989900971e-06
+        ],
+        "max": [
+          0.04948199912905693,
+          0.04876499995589256,
+          0.19573800265789032
+        ],
+        "size": [
+          0.09796899929642677,
+          0.09674099832773209,
+          0.19574200265788022
+        ],
+        "units": "m"
+      },
+      "material": "steel",
+      "physics_type": "rigid",
+      "source": {
+        "object_name": "D00020 Bell",
+        "part_name": "D00020 Bell"
+      },
+      "collision": {},
+      "reasoning": "The object appears to be a medium-size handheld bell made primarily from thin cast or spun brass with a wooden handle and small brass clapper. Assuming an approximate total height of 0.28-0.32 m, mouth diameter of 0.14-0.17 m, brass wall thickness of roughly 1-2 mm, and a hardwood handle, a realistic total mass is about 0.8-0.9 kg; 0.85 kg is a suitable rigid-body mass. Actual material densities would be about 8400-8700 kg/m^3 for brass and 600-800 kg/m^3 for hardwood, but because the bell body is hollow and the collision volume will likely be represented by solid convex parts, an effective simulation density around 500 kg/m^3 is more appropriate if density is used to derive mass. For Isaac Sim, explicitly authoring mass is preferred over relying only on density for this hollow composite object. Contact behavior is dominated by brass at the rim and body, with some higher-friction wood on the handle; brass-on-common-surfaces typically has moderate friction, so static friction is estimated at 0.42 and dynamic friction at 0.32. Restitution is set to 0.35 because the brass shell is stiff but loses impact energy to sound, vibration, and local deformation; it should not behave like a highly elastic rubber object. The shape is mostly axisymmetric but includes a concave bell mouth and an internal clapper, so a single convex hull would overfill the hollow mouth and give inaccurate contacts. Convex decomposition is the recommended default for a performant dynamic rigid body: use several convex parts for the flared bell, rim, collar, handle, knob, and clapper if the clapper is fixed. If the interior cavity must be physically accessible or if another object must collide accurately inside the bell, an SDF mesh collider can be used instead, but at higher cost. Rest offset is kept at 0.0 m to align collision and visual geometry, while contact offset is set to 0.003 m for stable contact generation at this asset scale. CCD is enabled because the thin rim, small clapper, and rounded knob can tunnel during drops or fast manipulation; it may be disabled for slow, settled placement scenes to save performance. No compliant contacts are required for the rigid brass/wood body; use normal rigid contacts with adequate solver iterations. Recommended practical limits not represented as separate schema fields are max linear velocity around 10-15 m/s, max angular velocity around 50-80 rad/s, sleep threshold around 0.005-0.01 m^2/s^2, and stabilization enabled for resting contacts.",
+      "static_friction": 0.42,
+      "dynamic_friction": 0.32,
+      "restitution": 0.35,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "is_structural_root": true,
+      "description": "A hand bell with an aged brass flared bell body, brass clapper, and a dark polished wooden handle. The surface shows worn metallic patina, carved handle contours, and thin decorative grooves.",
+      "semantic": {
+        "qid": null
+      },
+      "non_visual_material": null,
+      "source_prim_path": "/World/part_00_steel",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
+    }
+  ],
+  "articulation": {
+    "has_joints": false,
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
+  },
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  },
+  "simulation": {
+    "fix_base": false
+  },
+  "provenance": {
+    "source_schema": "legacy_batch1_physics",
+    "legacy_reasoning_preserved": true,
+    "legacy_overall_assessment": "",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification.",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "collision_source": "USD PhysicsCollisionAPI geometry",
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "7dd7eba92fd7ffb3d10b9edeb15a9477861110af059ea0d00db15c2b7418da8a"
+    },
+    "usd_path": "batch1/D00020 Bell/IsaacSim_assets_69f1f00c59057a931058ad0f/IsaacSim_asset_69f1f00c59057a931058ad0f.usd",
+    "usd_sha256": "8389120403032b56aacffdee8b83cab826c1fdaa6e8e24a10fdbb3881e89d58d",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z"
+  },
+  "validation": {
+    "overall": "verified",
+    "scale": {
+      "status": "verified",
+      "confidence": "high",
+      "units": "m",
+      "up_axis": "Z",
+      "bounds_m": [
+        0.09796899929642677,
+        0.09674099832773209,
+        0.19574200265788022
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "8389120403032b56aacffdee8b83cab826c1fdaa6e8e24a10fdbb3881e89d58d",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
+    },
+    "mass": {
+      "status": "verified",
+      "confidence": "high",
+      "value_kg": 0.8500000238418579,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "8389120403032b56aacffdee8b83cab826c1fdaa6e8e24a10fdbb3881e89d58d",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.8500000238418579,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
+    },
+    "collision": {
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 56,
+      "approximations": [
+        "convexHull"
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "8389120403032b56aacffdee8b83cab826c1fdaa6e8e24a10fdbb3881e89d58d",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 56,
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
+    },
+    "articulation": {
+      "status": "verified",
+      "confidence": "high",
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "8389120403032b56aacffdee8b83cab826c1fdaa6e8e24a10fdbb3881e89d58d",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/54196208b57d98a648e3ce9c510736e212ea9f50/reports/native/2026.10.13/shard-03/native-batch-000-evidence.tar.gz",
+        "sha256": "d503dd85ac1ee0b6ffbaaf99358b93889f6651455991544f311c675c71c3df58",
+        "hf_commit": "54196208b57d98a648e3ce9c510736e212ea9f50",
+        "size_bytes": 120777997
+      },
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "8389120403032b56aacffdee8b83cab826c1fdaa6e8e24a10fdbb3881e89d58d",
+      "supplemental_accepted": true,
+      "planned_test_count": 12,
+      "result_count": 12,
+      "passed": 11,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-13T20:44:10.912567+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "a7705a8758d0e2ed352a1b73890294ee0f1226880d863d87140c2438c9ab4ecf",
+      "qualification": "native-fleet-evidence/shard-03/native-batch-000/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
+    }
+  }
+}

@@ -1,0 +1,962 @@
+asset,source_usd_sha256,test,engine,message,package_url,raw_archive_url,raw_manifest_url,known_issue_urls
+D00019,4f7d7b9a245937268867af11a5af808ba84bd858bc5f8b948b4263b72bdcabec,presence,isaac_sim,"Presence check FAILED: visibility toggle produced only 0.13% difference (need >=1%).
+
+How to fix:
+- Ensure the asset has at least one visible Mesh prim.
+- Check that meshes are not hidden (visibility=invisible).
+- Verify the USD file loads correctly (no broken references).
+- Ensure geometry has valid extent attributes (VG.002).",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/85dfa01fbba2c56d6b06fcafc7384331a2d50713/D00019/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/5bf04d55f0cbfb18d621e71868b07047b29e0e8b/reports/simready-central/2026.10.13_00/D00019/85dfa01fbba2c56d6b06fcafc7384331a2d50713/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/5bf04d55f0cbfb18d621e71868b07047b29e0e8b/reports/simready-central/2026.10.13_00/D00019/85dfa01fbba2c56d6b06fcafc7384331a2d50713/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00019,4f7d7b9a245937268867af11a5af808ba84bd858bc5f8b948b4263b72bdcabec,presence,isaac_sim_newton,"Presence check FAILED: visibility toggle produced only 0.13% difference (need >=1%).
+
+How to fix:
+- Ensure the asset has at least one visible Mesh prim.
+- Check that meshes are not hidden (visibility=invisible).
+- Verify the USD file loads correctly (no broken references).
+- Ensure geometry has valid extent attributes (VG.002).",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/85dfa01fbba2c56d6b06fcafc7384331a2d50713/D00019/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/5bf04d55f0cbfb18d621e71868b07047b29e0e8b/reports/simready-central/2026.10.13_00/D00019/85dfa01fbba2c56d6b06fcafc7384331a2d50713/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/5bf04d55f0cbfb18d621e71868b07047b29e0e8b/reports/simready-central/2026.10.13_00/D00019/85dfa01fbba2c56d6b06fcafc7384331a2d50713/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00019,4f7d7b9a245937268867af11a5af808ba84bd858bc5f8b948b4263b72bdcabec,preview_surface_renders,isaac_sim,"The asset covers 1335 pixel(s) of flat magenta when the control material is bound over it, below the 5000 needed to measure anything.
+
+How to fix:
+- Check the camera framed the object. The run auto-frames on the asset bounds and an empty bound produces this.
+- Check the asset has renderable geometry of default or render purpose that is not authored invisible.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/85dfa01fbba2c56d6b06fcafc7384331a2d50713/D00019/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/5bf04d55f0cbfb18d621e71868b07047b29e0e8b/reports/simready-central/2026.10.13_00/D00019/85dfa01fbba2c56d6b06fcafc7384331a2d50713/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/5bf04d55f0cbfb18d621e71868b07047b29e0e8b/reports/simready-central/2026.10.13_00/D00019/85dfa01fbba2c56d6b06fcafc7384331a2d50713/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00019,4f7d7b9a245937268867af11a5af808ba84bd858bc5f8b948b4263b72bdcabec,preview_surface_renders,isaac_sim_newton,"The asset covers 1327 pixel(s) of flat magenta when the control material is bound over it, below the 5000 needed to measure anything.
+
+How to fix:
+- Check the camera framed the object. The run auto-frames on the asset bounds and an empty bound produces this.
+- Check the asset has renderable geometry of default or render purpose that is not authored invisible.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/85dfa01fbba2c56d6b06fcafc7384331a2d50713/D00019/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/5bf04d55f0cbfb18d621e71868b07047b29e0e8b/reports/simready-central/2026.10.13_00/D00019/85dfa01fbba2c56d6b06fcafc7384331a2d50713/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/5bf04d55f0cbfb18d621e71868b07047b29e0e8b/reports/simready-central/2026.10.13_00/D00019/85dfa01fbba2c56d6b06fcafc7384331a2d50713/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00019,4f7d7b9a245937268867af11a5af808ba84bd858bc5f8b948b4263b72bdcabec,semantic_labels_seg_labelled,isaac_sim,"The segmentation AOV is nearly blank: 0.0012 of the frame is segmented, and at least 0.0050 is needed.
+
+How to fix:
+- Give every visible mesh a resolvable SemanticsLabelsAPI label, on the prim itself, on an ancestor, or through its bound material. One label on the defaultPrim covers the whole asset.
+- Apply the schema with at least one authored value. An empty label counts as no label.
+- Run on Isaac Sim 6.0 or later. Earlier versions do not resolve SemanticsLabelsAPI in the segmentation pass, so a correctly labelled asset still renders blank.
+- Confirm the asset is in frame; a mis-framed asset also renders blank.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/85dfa01fbba2c56d6b06fcafc7384331a2d50713/D00019/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/5bf04d55f0cbfb18d621e71868b07047b29e0e8b/reports/simready-central/2026.10.13_00/D00019/85dfa01fbba2c56d6b06fcafc7384331a2d50713/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/5bf04d55f0cbfb18d621e71868b07047b29e0e8b/reports/simready-central/2026.10.13_00/D00019/85dfa01fbba2c56d6b06fcafc7384331a2d50713/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00019,4f7d7b9a245937268867af11a5af808ba84bd858bc5f8b948b4263b72bdcabec,semantic_labels_seg_labelled,isaac_sim_newton,"The segmentation AOV is nearly blank: 0.0012 of the frame is segmented, and at least 0.0050 is needed.
+
+How to fix:
+- Give every visible mesh a resolvable SemanticsLabelsAPI label, on the prim itself, on an ancestor, or through its bound material. One label on the defaultPrim covers the whole asset.
+- Apply the schema with at least one authored value. An empty label counts as no label.
+- Run on Isaac Sim 6.0 or later. Earlier versions do not resolve SemanticsLabelsAPI in the segmentation pass, so a correctly labelled asset still renders blank.
+- Confirm the asset is in frame; a mis-framed asset also renders blank.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/85dfa01fbba2c56d6b06fcafc7384331a2d50713/D00019/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/5bf04d55f0cbfb18d621e71868b07047b29e0e8b/reports/simready-central/2026.10.13_00/D00019/85dfa01fbba2c56d6b06fcafc7384331a2d50713/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/5bf04d55f0cbfb18d621e71868b07047b29e0e8b/reports/simready-central/2026.10.13_00/D00019/85dfa01fbba2c56d6b06fcafc7384331a2d50713/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00023,5aba4a477143a6ffdef9e0898ef498cbef0a63ae6f6a63b3beb957f5f41d1698,preview_surface_renders,isaac_sim,"With the render-context list pinned to [universal], 71.8% of the asset's 100603 pixel silhouette is shaded by materials it authored, below the 98% required. The remaining 28351 pixel(s) came back as the control material, which is what a pixel the asset binds nothing to looks like.
+
+Both frames are the same scene under the same pin, with one binding's strength flipped, so the difference between them is the asset's own bindings and nothing else. The asset has a surface on: universal.
+
+This is com.nvidia.usd.VM.PS.001.
+
+How to fix:
+- Check the material connects a UsdPreviewSurface shader to the universal outputs:surface, and that the shader uses only spec-defined UsdPreviewSurface inputs and types.
+- Check every renderable Gprim resolves a material, rather than the material being left in /Looks or bound only to invisible, guide or proxy geometry (VM.MAT.001).",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/61a0e476a55573724c50847039702f0b9804c914/D00023/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/388e93b842cf6189e3aa30bfd67e37091e6dd0db/reports/simready-central/2026.10.13_00/D00023/61a0e476a55573724c50847039702f0b9804c914/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/388e93b842cf6189e3aa30bfd67e37091e6dd0db/reports/simready-central/2026.10.13_00/D00023/61a0e476a55573724c50847039702f0b9804c914/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/37
+D00023,5aba4a477143a6ffdef9e0898ef498cbef0a63ae6f6a63b3beb957f5f41d1698,preview_surface_renders,isaac_sim_newton,"With the render-context list pinned to [universal], 71.5% of the asset's 100518 pixel silhouette is shaded by materials it authored, below the 98% required. The remaining 28612 pixel(s) came back as the control material, which is what a pixel the asset binds nothing to looks like.
+
+Both frames are the same scene under the same pin, with one binding's strength flipped, so the difference between them is the asset's own bindings and nothing else. The asset has a surface on: universal.
+
+This is com.nvidia.usd.VM.PS.001.
+
+How to fix:
+- Check the material connects a UsdPreviewSurface shader to the universal outputs:surface, and that the shader uses only spec-defined UsdPreviewSurface inputs and types.
+- Check every renderable Gprim resolves a material, rather than the material being left in /Looks or bound only to invisible, guide or proxy geometry (VM.MAT.001).",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/61a0e476a55573724c50847039702f0b9804c914/D00023/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/388e93b842cf6189e3aa30bfd67e37091e6dd0db/reports/simready-central/2026.10.13_00/D00023/61a0e476a55573724c50847039702f0b9804c914/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/388e93b842cf6189e3aa30bfd67e37091e6dd0db/reports/simready-central/2026.10.13_00/D00023/61a0e476a55573724c50847039702f0b9804c914/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/37
+D00037,d5621278ff11690d12b17b18fe57e0ba29b9fc3bf7689249bfda86d9aeae902e,presence,isaac_sim,"Presence check FAILED: visibility toggle produced only 0.27% difference (need >=1%).
+
+How to fix:
+- Ensure the asset has at least one visible Mesh prim.
+- Check that meshes are not hidden (visibility=invisible).
+- Verify the USD file loads correctly (no broken references).
+- Ensure geometry has valid extent attributes (VG.002).",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/cad4ca6d73350a4236f392ac8f71ab0ab3bc3844/D00037/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/a141fcce54a2a8d52e5c8a7eb5a714fa96422d07/reports/simready-central/2026.10.13_00/D00037/cad4ca6d73350a4236f392ac8f71ab0ab3bc3844/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/a141fcce54a2a8d52e5c8a7eb5a714fa96422d07/reports/simready-central/2026.10.13_00/D00037/cad4ca6d73350a4236f392ac8f71ab0ab3bc3844/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00037,d5621278ff11690d12b17b18fe57e0ba29b9fc3bf7689249bfda86d9aeae902e,presence,isaac_sim_newton,"Presence check FAILED: visibility toggle produced only 0.27% difference (need >=1%).
+
+How to fix:
+- Ensure the asset has at least one visible Mesh prim.
+- Check that meshes are not hidden (visibility=invisible).
+- Verify the USD file loads correctly (no broken references).
+- Ensure geometry has valid extent attributes (VG.002).",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/cad4ca6d73350a4236f392ac8f71ab0ab3bc3844/D00037/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/a141fcce54a2a8d52e5c8a7eb5a714fa96422d07/reports/simready-central/2026.10.13_00/D00037/cad4ca6d73350a4236f392ac8f71ab0ab3bc3844/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/a141fcce54a2a8d52e5c8a7eb5a714fa96422d07/reports/simready-central/2026.10.13_00/D00037/cad4ca6d73350a4236f392ac8f71ab0ab3bc3844/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00037,d5621278ff11690d12b17b18fe57e0ba29b9fc3bf7689249bfda86d9aeae902e,preview_surface_renders,isaac_sim,"The asset covers 2769 pixel(s) of flat magenta when the control material is bound over it, below the 5000 needed to measure anything.
+
+How to fix:
+- Check the camera framed the object. The run auto-frames on the asset bounds and an empty bound produces this.
+- Check the asset has renderable geometry of default or render purpose that is not authored invisible.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/cad4ca6d73350a4236f392ac8f71ab0ab3bc3844/D00037/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/a141fcce54a2a8d52e5c8a7eb5a714fa96422d07/reports/simready-central/2026.10.13_00/D00037/cad4ca6d73350a4236f392ac8f71ab0ab3bc3844/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/a141fcce54a2a8d52e5c8a7eb5a714fa96422d07/reports/simready-central/2026.10.13_00/D00037/cad4ca6d73350a4236f392ac8f71ab0ab3bc3844/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00037,d5621278ff11690d12b17b18fe57e0ba29b9fc3bf7689249bfda86d9aeae902e,preview_surface_renders,isaac_sim_newton,"The asset covers 2770 pixel(s) of flat magenta when the control material is bound over it, below the 5000 needed to measure anything.
+
+How to fix:
+- Check the camera framed the object. The run auto-frames on the asset bounds and an empty bound produces this.
+- Check the asset has renderable geometry of default or render purpose that is not authored invisible.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/cad4ca6d73350a4236f392ac8f71ab0ab3bc3844/D00037/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/a141fcce54a2a8d52e5c8a7eb5a714fa96422d07/reports/simready-central/2026.10.13_00/D00037/cad4ca6d73350a4236f392ac8f71ab0ab3bc3844/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/a141fcce54a2a8d52e5c8a7eb5a714fa96422d07/reports/simready-central/2026.10.13_00/D00037/cad4ca6d73350a4236f392ac8f71ab0ab3bc3844/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00037,d5621278ff11690d12b17b18fe57e0ba29b9fc3bf7689249bfda86d9aeae902e,semantic_labels_seg_labelled,isaac_sim,"The segmentation AOV is nearly blank: 0.0026 of the frame is segmented, and at least 0.0050 is needed.
+
+How to fix:
+- Give every visible mesh a resolvable SemanticsLabelsAPI label, on the prim itself, on an ancestor, or through its bound material. One label on the defaultPrim covers the whole asset.
+- Apply the schema with at least one authored value. An empty label counts as no label.
+- Run on Isaac Sim 6.0 or later. Earlier versions do not resolve SemanticsLabelsAPI in the segmentation pass, so a correctly labelled asset still renders blank.
+- Confirm the asset is in frame; a mis-framed asset also renders blank.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/cad4ca6d73350a4236f392ac8f71ab0ab3bc3844/D00037/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/a141fcce54a2a8d52e5c8a7eb5a714fa96422d07/reports/simready-central/2026.10.13_00/D00037/cad4ca6d73350a4236f392ac8f71ab0ab3bc3844/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/a141fcce54a2a8d52e5c8a7eb5a714fa96422d07/reports/simready-central/2026.10.13_00/D00037/cad4ca6d73350a4236f392ac8f71ab0ab3bc3844/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00037,d5621278ff11690d12b17b18fe57e0ba29b9fc3bf7689249bfda86d9aeae902e,semantic_labels_seg_labelled,isaac_sim_newton,"The segmentation AOV is nearly blank: 0.0026 of the frame is segmented, and at least 0.0050 is needed.
+
+How to fix:
+- Give every visible mesh a resolvable SemanticsLabelsAPI label, on the prim itself, on an ancestor, or through its bound material. One label on the defaultPrim covers the whole asset.
+- Apply the schema with at least one authored value. An empty label counts as no label.
+- Run on Isaac Sim 6.0 or later. Earlier versions do not resolve SemanticsLabelsAPI in the segmentation pass, so a correctly labelled asset still renders blank.
+- Confirm the asset is in frame; a mis-framed asset also renders blank.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/cad4ca6d73350a4236f392ac8f71ab0ab3bc3844/D00037/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/a141fcce54a2a8d52e5c8a7eb5a714fa96422d07/reports/simready-central/2026.10.13_00/D00037/cad4ca6d73350a4236f392ac8f71ab0ab3bc3844/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/a141fcce54a2a8d52e5c8a7eb5a714fa96422d07/reports/simready-central/2026.10.13_00/D00037/cad4ca6d73350a4236f392ac8f71ab0ab3bc3844/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00094,4b80db6c667bfcf89b6fee832c77fed52359dc3c7387797a2d32e7ffd5aff551,slope_drop,isaac_sim,"Slope drop FAILED: Object penetrated the ground after sliding.
+
+How to fix:
+- Check collision mesh approximation (convexHull recommended).
+- The slope-floor transition is a stress point -- check for thin geometry or gaps in collision mesh.
+- Review the video to see where penetration occurs.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/dca8c32b0d13fef6f512fd28dae4a06cf79b8d55/D00094/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/e950de5d78b04cafd82819d06c3f6e1efe3b1266/reports/simready-central/2026.10.13_00/D00094/dca8c32b0d13fef6f512fd28dae4a06cf79b8d55/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/e950de5d78b04cafd82819d06c3f6e1efe3b1266/reports/simready-central/2026.10.13_00/D00094/dca8c32b0d13fef6f512fd28dae4a06cf79b8d55/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/38
+D00112,c690180bd1e0550f9186cb844c316c63fd05d2768b3ebaab91797540a50bebbe,presence,isaac_sim,"Presence check FAILED: visibility toggle produced only 0.47% difference (need >=1%).
+
+How to fix:
+- Ensure the asset has at least one visible Mesh prim.
+- Check that meshes are not hidden (visibility=invisible).
+- Verify the USD file loads correctly (no broken references).
+- Ensure geometry has valid extent attributes (VG.002).",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/188f27d86b3856ec8aa960af68f4fac4ba64895d/D00112/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/4dd040e8e38afe4a4e70753159e319060c2fe7f6/reports/simready-central/2026.10.13_00/D00112/188f27d86b3856ec8aa960af68f4fac4ba64895d/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/4dd040e8e38afe4a4e70753159e319060c2fe7f6/reports/simready-central/2026.10.13_00/D00112/188f27d86b3856ec8aa960af68f4fac4ba64895d/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00112,c690180bd1e0550f9186cb844c316c63fd05d2768b3ebaab91797540a50bebbe,presence,isaac_sim_newton,"Presence check FAILED: visibility toggle produced only 0.47% difference (need >=1%).
+
+How to fix:
+- Ensure the asset has at least one visible Mesh prim.
+- Check that meshes are not hidden (visibility=invisible).
+- Verify the USD file loads correctly (no broken references).
+- Ensure geometry has valid extent attributes (VG.002).",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/188f27d86b3856ec8aa960af68f4fac4ba64895d/D00112/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/4dd040e8e38afe4a4e70753159e319060c2fe7f6/reports/simready-central/2026.10.13_00/D00112/188f27d86b3856ec8aa960af68f4fac4ba64895d/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/4dd040e8e38afe4a4e70753159e319060c2fe7f6/reports/simready-central/2026.10.13_00/D00112/188f27d86b3856ec8aa960af68f4fac4ba64895d/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00112,c690180bd1e0550f9186cb844c316c63fd05d2768b3ebaab91797540a50bebbe,preview_surface_renders,isaac_sim,"The asset covers 4856 pixel(s) of flat magenta when the control material is bound over it, below the 5000 needed to measure anything.
+
+How to fix:
+- Check the camera framed the object. The run auto-frames on the asset bounds and an empty bound produces this.
+- Check the asset has renderable geometry of default or render purpose that is not authored invisible.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/188f27d86b3856ec8aa960af68f4fac4ba64895d/D00112/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/4dd040e8e38afe4a4e70753159e319060c2fe7f6/reports/simready-central/2026.10.13_00/D00112/188f27d86b3856ec8aa960af68f4fac4ba64895d/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/4dd040e8e38afe4a4e70753159e319060c2fe7f6/reports/simready-central/2026.10.13_00/D00112/188f27d86b3856ec8aa960af68f4fac4ba64895d/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00112,c690180bd1e0550f9186cb844c316c63fd05d2768b3ebaab91797540a50bebbe,preview_surface_renders,isaac_sim_newton,"The asset covers 4834 pixel(s) of flat magenta when the control material is bound over it, below the 5000 needed to measure anything.
+
+How to fix:
+- Check the camera framed the object. The run auto-frames on the asset bounds and an empty bound produces this.
+- Check the asset has renderable geometry of default or render purpose that is not authored invisible.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/188f27d86b3856ec8aa960af68f4fac4ba64895d/D00112/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/4dd040e8e38afe4a4e70753159e319060c2fe7f6/reports/simready-central/2026.10.13_00/D00112/188f27d86b3856ec8aa960af68f4fac4ba64895d/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/4dd040e8e38afe4a4e70753159e319060c2fe7f6/reports/simready-central/2026.10.13_00/D00112/188f27d86b3856ec8aa960af68f4fac4ba64895d/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00112,c690180bd1e0550f9186cb844c316c63fd05d2768b3ebaab91797540a50bebbe,semantic_labels_seg_labelled,isaac_sim,"The segmentation AOV is nearly blank: 0.0045 of the frame is segmented, and at least 0.0050 is needed.
+
+How to fix:
+- Give every visible mesh a resolvable SemanticsLabelsAPI label, on the prim itself, on an ancestor, or through its bound material. One label on the defaultPrim covers the whole asset.
+- Apply the schema with at least one authored value. An empty label counts as no label.
+- Run on Isaac Sim 6.0 or later. Earlier versions do not resolve SemanticsLabelsAPI in the segmentation pass, so a correctly labelled asset still renders blank.
+- Confirm the asset is in frame; a mis-framed asset also renders blank.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/188f27d86b3856ec8aa960af68f4fac4ba64895d/D00112/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/4dd040e8e38afe4a4e70753159e319060c2fe7f6/reports/simready-central/2026.10.13_00/D00112/188f27d86b3856ec8aa960af68f4fac4ba64895d/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/4dd040e8e38afe4a4e70753159e319060c2fe7f6/reports/simready-central/2026.10.13_00/D00112/188f27d86b3856ec8aa960af68f4fac4ba64895d/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00112,c690180bd1e0550f9186cb844c316c63fd05d2768b3ebaab91797540a50bebbe,semantic_labels_seg_labelled,isaac_sim_newton,"The segmentation AOV is nearly blank: 0.0045 of the frame is segmented, and at least 0.0050 is needed.
+
+How to fix:
+- Give every visible mesh a resolvable SemanticsLabelsAPI label, on the prim itself, on an ancestor, or through its bound material. One label on the defaultPrim covers the whole asset.
+- Apply the schema with at least one authored value. An empty label counts as no label.
+- Run on Isaac Sim 6.0 or later. Earlier versions do not resolve SemanticsLabelsAPI in the segmentation pass, so a correctly labelled asset still renders blank.
+- Confirm the asset is in frame; a mis-framed asset also renders blank.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/188f27d86b3856ec8aa960af68f4fac4ba64895d/D00112/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/4dd040e8e38afe4a4e70753159e319060c2fe7f6/reports/simready-central/2026.10.13_00/D00112/188f27d86b3856ec8aa960af68f4fac4ba64895d/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/4dd040e8e38afe4a4e70753159e319060c2fe7f6/reports/simready-central/2026.10.13_00/D00112/188f27d86b3856ec8aa960af68f4fac4ba64895d/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00115,102b92e2ed65f7f9ac41583e9a5dc2037be07edf62b6f851bfe58c78bc039632,slope_drop,isaac_sim,"Slope drop FAILED: Object penetrated the ground after sliding.
+
+How to fix:
+- Check collision mesh approximation (convexHull recommended).
+- The slope-floor transition is a stress point -- check for thin geometry or gaps in collision mesh.
+- Review the video to see where penetration occurs.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/2419c713dcaaaa46b44a0be4782de72256d7c1f5/D00115/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/0ed5213342b4c36ff540ec13912250cdf2142fca/reports/simready-central/2026.10.15_00/D00115/2419c713dcaaaa46b44a0be4782de72256d7c1f5/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/0ed5213342b4c36ff540ec13912250cdf2142fca/reports/simready-central/2026.10.15_00/D00115/2419c713dcaaaa46b44a0be4782de72256d7c1f5/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/38
+D00124,b2f26e435acc046ca4e688e87c855bbc6f024eaaa823aaafdf651a8e42c1d3c3,presence,isaac_sim,"Presence check FAILED: visibility toggle produced only 0.09% difference (need >=1%).
+
+How to fix:
+- Ensure the asset has at least one visible Mesh prim.
+- Check that meshes are not hidden (visibility=invisible).
+- Verify the USD file loads correctly (no broken references).
+- Ensure geometry has valid extent attributes (VG.002).",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/21c076a96d104a9d64a2767223a9de73d4a76f60/D00124/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/798eb878c2cc408eb66fb1696222793af479499a/reports/simready-central/2026.10.13_00/D00124/21c076a96d104a9d64a2767223a9de73d4a76f60/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/798eb878c2cc408eb66fb1696222793af479499a/reports/simready-central/2026.10.13_00/D00124/21c076a96d104a9d64a2767223a9de73d4a76f60/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00124,b2f26e435acc046ca4e688e87c855bbc6f024eaaa823aaafdf651a8e42c1d3c3,presence,isaac_sim_newton,"Presence check FAILED: visibility toggle produced only 0.09% difference (need >=1%).
+
+How to fix:
+- Ensure the asset has at least one visible Mesh prim.
+- Check that meshes are not hidden (visibility=invisible).
+- Verify the USD file loads correctly (no broken references).
+- Ensure geometry has valid extent attributes (VG.002).",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/21c076a96d104a9d64a2767223a9de73d4a76f60/D00124/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/798eb878c2cc408eb66fb1696222793af479499a/reports/simready-central/2026.10.13_00/D00124/21c076a96d104a9d64a2767223a9de73d4a76f60/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/798eb878c2cc408eb66fb1696222793af479499a/reports/simready-central/2026.10.13_00/D00124/21c076a96d104a9d64a2767223a9de73d4a76f60/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00124,b2f26e435acc046ca4e688e87c855bbc6f024eaaa823aaafdf651a8e42c1d3c3,preview_surface_renders,isaac_sim,"The asset covers 885 pixel(s) of flat magenta when the control material is bound over it, below the 5000 needed to measure anything.
+
+How to fix:
+- Check the camera framed the object. The run auto-frames on the asset bounds and an empty bound produces this.
+- Check the asset has renderable geometry of default or render purpose that is not authored invisible.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/21c076a96d104a9d64a2767223a9de73d4a76f60/D00124/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/798eb878c2cc408eb66fb1696222793af479499a/reports/simready-central/2026.10.13_00/D00124/21c076a96d104a9d64a2767223a9de73d4a76f60/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/798eb878c2cc408eb66fb1696222793af479499a/reports/simready-central/2026.10.13_00/D00124/21c076a96d104a9d64a2767223a9de73d4a76f60/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00124,b2f26e435acc046ca4e688e87c855bbc6f024eaaa823aaafdf651a8e42c1d3c3,preview_surface_renders,isaac_sim_newton,"The asset covers 890 pixel(s) of flat magenta when the control material is bound over it, below the 5000 needed to measure anything.
+
+How to fix:
+- Check the camera framed the object. The run auto-frames on the asset bounds and an empty bound produces this.
+- Check the asset has renderable geometry of default or render purpose that is not authored invisible.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/21c076a96d104a9d64a2767223a9de73d4a76f60/D00124/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/798eb878c2cc408eb66fb1696222793af479499a/reports/simready-central/2026.10.13_00/D00124/21c076a96d104a9d64a2767223a9de73d4a76f60/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/798eb878c2cc408eb66fb1696222793af479499a/reports/simready-central/2026.10.13_00/D00124/21c076a96d104a9d64a2767223a9de73d4a76f60/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00124,b2f26e435acc046ca4e688e87c855bbc6f024eaaa823aaafdf651a8e42c1d3c3,semantic_labels_seg_labelled,isaac_sim,"The segmentation AOV is nearly blank: 0.0008 of the frame is segmented, and at least 0.0050 is needed.
+
+How to fix:
+- Give every visible mesh a resolvable SemanticsLabelsAPI label, on the prim itself, on an ancestor, or through its bound material. One label on the defaultPrim covers the whole asset.
+- Apply the schema with at least one authored value. An empty label counts as no label.
+- Run on Isaac Sim 6.0 or later. Earlier versions do not resolve SemanticsLabelsAPI in the segmentation pass, so a correctly labelled asset still renders blank.
+- Confirm the asset is in frame; a mis-framed asset also renders blank.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/21c076a96d104a9d64a2767223a9de73d4a76f60/D00124/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/798eb878c2cc408eb66fb1696222793af479499a/reports/simready-central/2026.10.13_00/D00124/21c076a96d104a9d64a2767223a9de73d4a76f60/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/798eb878c2cc408eb66fb1696222793af479499a/reports/simready-central/2026.10.13_00/D00124/21c076a96d104a9d64a2767223a9de73d4a76f60/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00124,b2f26e435acc046ca4e688e87c855bbc6f024eaaa823aaafdf651a8e42c1d3c3,semantic_labels_seg_labelled,isaac_sim_newton,"The segmentation AOV is nearly blank: 0.0008 of the frame is segmented, and at least 0.0050 is needed.
+
+How to fix:
+- Give every visible mesh a resolvable SemanticsLabelsAPI label, on the prim itself, on an ancestor, or through its bound material. One label on the defaultPrim covers the whole asset.
+- Apply the schema with at least one authored value. An empty label counts as no label.
+- Run on Isaac Sim 6.0 or later. Earlier versions do not resolve SemanticsLabelsAPI in the segmentation pass, so a correctly labelled asset still renders blank.
+- Confirm the asset is in frame; a mis-framed asset also renders blank.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/21c076a96d104a9d64a2767223a9de73d4a76f60/D00124/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/798eb878c2cc408eb66fb1696222793af479499a/reports/simready-central/2026.10.13_00/D00124/21c076a96d104a9d64a2767223a9de73d4a76f60/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/798eb878c2cc408eb66fb1696222793af479499a/reports/simready-central/2026.10.13_00/D00124/21c076a96d104a9d64a2767223a9de73d4a76f60/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00128,2caa2f89604cd8962a0739f45442b8dfa1e721898b93ef9fec14bd27b84bfd81,preview_surface_renders,isaac_sim,"With the render-context list pinned to [universal], 97.7% of the asset's 86119 pixel silhouette is shaded by materials it authored, below the 98% required. The remaining 1939 pixel(s) came back as the control material, which is what a pixel the asset binds nothing to looks like.
+
+Both frames are the same scene under the same pin, with one binding's strength flipped, so the difference between them is the asset's own bindings and nothing else. The asset has a surface on: universal.
+
+This is com.nvidia.usd.VM.PS.001.
+
+How to fix:
+- Check the material connects a UsdPreviewSurface shader to the universal outputs:surface, and that the shader uses only spec-defined UsdPreviewSurface inputs and types.
+- Check every renderable Gprim resolves a material, rather than the material being left in /Looks or bound only to invisible, guide or proxy geometry (VM.MAT.001).",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/b87c29cc1ca427f5a45d15ca5b2e291c778d7566/D00128/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/17b7484c212e073ef50b10a3e27eafafe118c027/reports/simready-central/2026.10.13_00/D00128/b87c29cc1ca427f5a45d15ca5b2e291c778d7566/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/17b7484c212e073ef50b10a3e27eafafe118c027/reports/simready-central/2026.10.13_00/D00128/b87c29cc1ca427f5a45d15ca5b2e291c778d7566/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/37
+D00148,3ca448fecb9aade71fb9025769e192b2ab7a2a56721019d8cd2df735a64dd4a2,presence,isaac_sim,"Presence check FAILED: visibility toggle produced only 0.07% difference (need >=1%).
+
+How to fix:
+- Ensure the asset has at least one visible Mesh prim.
+- Check that meshes are not hidden (visibility=invisible).
+- Verify the USD file loads correctly (no broken references).
+- Ensure geometry has valid extent attributes (VG.002).",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/e0e739ac0fc99d3a2cacb42060aae1b2f9eb89d7/D00148/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/f3ee2765ee31900d71db9e6bf021a06cbbb1517c/reports/simready-central/2026.10.13_00/D00148/e0e739ac0fc99d3a2cacb42060aae1b2f9eb89d7/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/f3ee2765ee31900d71db9e6bf021a06cbbb1517c/reports/simready-central/2026.10.13_00/D00148/e0e739ac0fc99d3a2cacb42060aae1b2f9eb89d7/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00148,3ca448fecb9aade71fb9025769e192b2ab7a2a56721019d8cd2df735a64dd4a2,presence,isaac_sim_newton,"Presence check FAILED: visibility toggle produced only 0.07% difference (need >=1%).
+
+How to fix:
+- Ensure the asset has at least one visible Mesh prim.
+- Check that meshes are not hidden (visibility=invisible).
+- Verify the USD file loads correctly (no broken references).
+- Ensure geometry has valid extent attributes (VG.002).",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/e0e739ac0fc99d3a2cacb42060aae1b2f9eb89d7/D00148/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/f3ee2765ee31900d71db9e6bf021a06cbbb1517c/reports/simready-central/2026.10.13_00/D00148/e0e739ac0fc99d3a2cacb42060aae1b2f9eb89d7/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/f3ee2765ee31900d71db9e6bf021a06cbbb1517c/reports/simready-central/2026.10.13_00/D00148/e0e739ac0fc99d3a2cacb42060aae1b2f9eb89d7/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00148,3ca448fecb9aade71fb9025769e192b2ab7a2a56721019d8cd2df735a64dd4a2,preview_surface_renders,isaac_sim,"The asset covers 693 pixel(s) of flat magenta when the control material is bound over it, below the 5000 needed to measure anything.
+
+How to fix:
+- Check the camera framed the object. The run auto-frames on the asset bounds and an empty bound produces this.
+- Check the asset has renderable geometry of default or render purpose that is not authored invisible.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/e0e739ac0fc99d3a2cacb42060aae1b2f9eb89d7/D00148/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/f3ee2765ee31900d71db9e6bf021a06cbbb1517c/reports/simready-central/2026.10.13_00/D00148/e0e739ac0fc99d3a2cacb42060aae1b2f9eb89d7/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/f3ee2765ee31900d71db9e6bf021a06cbbb1517c/reports/simready-central/2026.10.13_00/D00148/e0e739ac0fc99d3a2cacb42060aae1b2f9eb89d7/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00148,3ca448fecb9aade71fb9025769e192b2ab7a2a56721019d8cd2df735a64dd4a2,preview_surface_renders,isaac_sim_newton,"The asset covers 715 pixel(s) of flat magenta when the control material is bound over it, below the 5000 needed to measure anything.
+
+How to fix:
+- Check the camera framed the object. The run auto-frames on the asset bounds and an empty bound produces this.
+- Check the asset has renderable geometry of default or render purpose that is not authored invisible.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/e0e739ac0fc99d3a2cacb42060aae1b2f9eb89d7/D00148/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/f3ee2765ee31900d71db9e6bf021a06cbbb1517c/reports/simready-central/2026.10.13_00/D00148/e0e739ac0fc99d3a2cacb42060aae1b2f9eb89d7/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/f3ee2765ee31900d71db9e6bf021a06cbbb1517c/reports/simready-central/2026.10.13_00/D00148/e0e739ac0fc99d3a2cacb42060aae1b2f9eb89d7/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00148,3ca448fecb9aade71fb9025769e192b2ab7a2a56721019d8cd2df735a64dd4a2,semantic_labels_seg_labelled,isaac_sim,"The segmentation AOV is nearly blank: 0.0006 of the frame is segmented, and at least 0.0050 is needed.
+
+How to fix:
+- Give every visible mesh a resolvable SemanticsLabelsAPI label, on the prim itself, on an ancestor, or through its bound material. One label on the defaultPrim covers the whole asset.
+- Apply the schema with at least one authored value. An empty label counts as no label.
+- Run on Isaac Sim 6.0 or later. Earlier versions do not resolve SemanticsLabelsAPI in the segmentation pass, so a correctly labelled asset still renders blank.
+- Confirm the asset is in frame; a mis-framed asset also renders blank.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/e0e739ac0fc99d3a2cacb42060aae1b2f9eb89d7/D00148/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/f3ee2765ee31900d71db9e6bf021a06cbbb1517c/reports/simready-central/2026.10.13_00/D00148/e0e739ac0fc99d3a2cacb42060aae1b2f9eb89d7/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/f3ee2765ee31900d71db9e6bf021a06cbbb1517c/reports/simready-central/2026.10.13_00/D00148/e0e739ac0fc99d3a2cacb42060aae1b2f9eb89d7/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00148,3ca448fecb9aade71fb9025769e192b2ab7a2a56721019d8cd2df735a64dd4a2,semantic_labels_seg_labelled,isaac_sim_newton,"The segmentation AOV is nearly blank: 0.0006 of the frame is segmented, and at least 0.0050 is needed.
+
+How to fix:
+- Give every visible mesh a resolvable SemanticsLabelsAPI label, on the prim itself, on an ancestor, or through its bound material. One label on the defaultPrim covers the whole asset.
+- Apply the schema with at least one authored value. An empty label counts as no label.
+- Run on Isaac Sim 6.0 or later. Earlier versions do not resolve SemanticsLabelsAPI in the segmentation pass, so a correctly labelled asset still renders blank.
+- Confirm the asset is in frame; a mis-framed asset also renders blank.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/e0e739ac0fc99d3a2cacb42060aae1b2f9eb89d7/D00148/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/f3ee2765ee31900d71db9e6bf021a06cbbb1517c/reports/simready-central/2026.10.13_00/D00148/e0e739ac0fc99d3a2cacb42060aae1b2f9eb89d7/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/f3ee2765ee31900d71db9e6bf021a06cbbb1517c/reports/simready-central/2026.10.13_00/D00148/e0e739ac0fc99d3a2cacb42060aae1b2f9eb89d7/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00225,3b657951825acc7cc85f0266a3ab2a04fb8e5db9ea9520c0ecd94d1115356f33,slope_drop,isaac_sim,"Slope drop FAILED: Object penetrated the ground after sliding.
+
+How to fix:
+- Check collision mesh approximation (convexHull recommended).
+- The slope-floor transition is a stress point -- check for thin geometry or gaps in collision mesh.
+- Review the video to see where penetration occurs.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/7b5570ef7033122e04fc2980f86a2c9e7c92d84d/D00225/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/8f8d7a3c1b08e15ebc9488e0bf53d13ae809d698/reports/simready-central/2026.10.13_00/D00225/7b5570ef7033122e04fc2980f86a2c9e7c92d84d/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/8f8d7a3c1b08e15ebc9488e0bf53d13ae809d698/reports/simready-central/2026.10.13_00/D00225/7b5570ef7033122e04fc2980f86a2c9e7c92d84d/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/38
+D00236,a7ca5e8cdfc45efc885e4c9bace85abda4ee2d47ebf95cc477be461b4239d43b,slope_drop,isaac_sim,"Slope drop FAILED: Object penetrated the ground after sliding.
+
+How to fix:
+- Check collision mesh approximation (convexHull recommended).
+- The slope-floor transition is a stress point -- check for thin geometry or gaps in collision mesh.
+- Review the video to see where penetration occurs.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/a0842c22b8b6fa98da68d277a3bc5ed1b9ba84bf/D00236/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/fd755dc9b9e39e30caf80c606b82788ec9c8b4c2/reports/simready-central/2026.10.15_00/D00236/a0842c22b8b6fa98da68d277a3bc5ed1b9ba84bf/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/fd755dc9b9e39e30caf80c606b82788ec9c8b4c2/reports/simready-central/2026.10.15_00/D00236/a0842c22b8b6fa98da68d277a3bc5ed1b9ba84bf/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/38
+D00244,10914010df1a19cc2f484378cbc7f9ae295fa88b05488263c5432f7f9f9ab2f7,ground_drop,isaac_sim,"Ground drop FAILED: Object penetrated the ground plane after contact.
+
+How to fix:
+- Check collision mesh approximation (convexHull recommended).
+- Verify collision mesh normals point outward.
+- Check for very thin geometry (< 1cm) that may tunnel.
+- Review the video to see where penetration occurs.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/a2136cd2c080bb8339eda7b461c6f1271d7483e8/D00244/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/7ee3ab4f97942ab7d32b1cba8217cf9ed25af6f6/reports/simready-central/2026.10.13_00/D00244/a2136cd2c080bb8339eda7b461c6f1271d7483e8/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/7ee3ab4f97942ab7d32b1cba8217cf9ed25af6f6/reports/simready-central/2026.10.13_00/D00244/a2136cd2c080bb8339eda7b461c6f1271d7483e8/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/38
+D00244,10914010df1a19cc2f484378cbc7f9ae295fa88b05488263c5432f7f9f9ab2f7,slope_drop,isaac_sim,"Slope drop FAILED: Object penetrated the ground after sliding.
+
+How to fix:
+- Check collision mesh approximation (convexHull recommended).
+- The slope-floor transition is a stress point -- check for thin geometry or gaps in collision mesh.
+- Review the video to see where penetration occurs.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/a2136cd2c080bb8339eda7b461c6f1271d7483e8/D00244/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/7ee3ab4f97942ab7d32b1cba8217cf9ed25af6f6/reports/simready-central/2026.10.13_00/D00244/a2136cd2c080bb8339eda7b461c6f1271d7483e8/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/7ee3ab4f97942ab7d32b1cba8217cf9ed25af6f6/reports/simready-central/2026.10.13_00/D00244/a2136cd2c080bb8339eda7b461c6f1271d7483e8/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/38
+D00261,ffad3594fc824a1b312e15db6037036744c94f509c00fc63fd1d39b9b2e4f2dc,slope_drop,isaac_sim,"Slope drop FAILED: Object penetrated the ground after sliding.
+
+How to fix:
+- Check collision mesh approximation (convexHull recommended).
+- The slope-floor transition is a stress point -- check for thin geometry or gaps in collision mesh.
+- Review the video to see where penetration occurs.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/86805ee1dd8866091555247cc5ca23c132e2130e/D00261/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/66d6a7fcb3c64be6c65766f40b53ac1a78b6d3f9/reports/simready-central/2026.10.13_00/D00261/86805ee1dd8866091555247cc5ca23c132e2130e/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/66d6a7fcb3c64be6c65766f40b53ac1a78b6d3f9/reports/simready-central/2026.10.13_00/D00261/86805ee1dd8866091555247cc5ca23c132e2130e/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/38
+D00265,5d37006aa8cbd77367849e289f15f17300bd947f3a796cf23a04107b93dfd42d,slope_drop,isaac_sim,"Slope drop FAILED: Object penetrated the ground after sliding.
+
+How to fix:
+- Check collision mesh approximation (convexHull recommended).
+- The slope-floor transition is a stress point -- check for thin geometry or gaps in collision mesh.
+- Review the video to see where penetration occurs.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/bd13b5fde5b932449bd17686bdfbf8a067547f96/D00265/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/4e5e888acb49587385a082217d4afa538c1a662d/reports/simready-central/2026.10.13_00/D00265/bd13b5fde5b932449bd17686bdfbf8a067547f96/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/4e5e888acb49587385a082217d4afa538c1a662d/reports/simready-central/2026.10.13_00/D00265/bd13b5fde5b932449bd17686bdfbf8a067547f96/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/38
+D00284,726f13ad5014d939181d48e31d2d565ffd89a613df013957b715a5518cd5cc80,preview_surface_renders,isaac_sim,"With the render-context list pinned to [universal], 97.7% of the asset's 143407 pixel silhouette is shaded by materials it authored, below the 98% required. The remaining 3366 pixel(s) came back as the control material, which is what a pixel the asset binds nothing to looks like.
+
+Both frames are the same scene under the same pin, with one binding's strength flipped, so the difference between them is the asset's own bindings and nothing else. The asset has a surface on: universal.
+
+This is com.nvidia.usd.VM.PS.001.
+
+How to fix:
+- Check the material connects a UsdPreviewSurface shader to the universal outputs:surface, and that the shader uses only spec-defined UsdPreviewSurface inputs and types.
+- Check every renderable Gprim resolves a material, rather than the material being left in /Looks or bound only to invisible, guide or proxy geometry (VM.MAT.001).",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/38a62bb91d2426e5e2cb3363f3cddeb2469fb8d6/D00284/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/86317e02e49be33942173a766ef30a7e4c80b5d8/reports/simready-central/2026.10.15_00/D00284/38a62bb91d2426e5e2cb3363f3cddeb2469fb8d6/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/86317e02e49be33942173a766ef30a7e4c80b5d8/reports/simready-central/2026.10.15_00/D00284/38a62bb91d2426e5e2cb3363f3cddeb2469fb8d6/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/37
+D00284,726f13ad5014d939181d48e31d2d565ffd89a613df013957b715a5518cd5cc80,preview_surface_renders,isaac_sim_newton,"With the render-context list pinned to [universal], 97.7% of the asset's 143413 pixel silhouette is shaded by materials it authored, below the 98% required. The remaining 3362 pixel(s) came back as the control material, which is what a pixel the asset binds nothing to looks like.
+
+Both frames are the same scene under the same pin, with one binding's strength flipped, so the difference between them is the asset's own bindings and nothing else. The asset has a surface on: universal.
+
+This is com.nvidia.usd.VM.PS.001.
+
+How to fix:
+- Check the material connects a UsdPreviewSurface shader to the universal outputs:surface, and that the shader uses only spec-defined UsdPreviewSurface inputs and types.
+- Check every renderable Gprim resolves a material, rather than the material being left in /Looks or bound only to invisible, guide or proxy geometry (VM.MAT.001).",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/38a62bb91d2426e5e2cb3363f3cddeb2469fb8d6/D00284/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/86317e02e49be33942173a766ef30a7e4c80b5d8/reports/simready-central/2026.10.15_00/D00284/38a62bb91d2426e5e2cb3363f3cddeb2469fb8d6/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/86317e02e49be33942173a766ef30a7e4c80b5d8/reports/simready-central/2026.10.15_00/D00284/38a62bb91d2426e5e2cb3363f3cddeb2469fb8d6/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/37
+D00306,ea54a11d0c96f8ae5c4e4193fba541238ef55afe3148dcdcb5872b100deb373f,ground_drop,isaac_sim,"Ground drop FAILED: Object penetrated the ground plane after contact.
+
+How to fix:
+- Check collision mesh approximation (convexHull recommended).
+- Verify collision mesh normals point outward.
+- Check for very thin geometry (< 1cm) that may tunnel.
+- Review the video to see where penetration occurs.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/f541ee50742e8f92f156023bd6a7ece4bb480ad6/D00306/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/c1530c0a7dd12a756f55eab76d8923676ea8b5cd/reports/simready-central/2026.10.13_00/D00306/f541ee50742e8f92f156023bd6a7ece4bb480ad6/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/c1530c0a7dd12a756f55eab76d8923676ea8b5cd/reports/simready-central/2026.10.13_00/D00306/f541ee50742e8f92f156023bd6a7ece4bb480ad6/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/38
+D00306,ea54a11d0c96f8ae5c4e4193fba541238ef55afe3148dcdcb5872b100deb373f,slope_drop,isaac_sim,"Slope drop FAILED: Object penetrated the ground after sliding.
+
+How to fix:
+- Check collision mesh approximation (convexHull recommended).
+- The slope-floor transition is a stress point -- check for thin geometry or gaps in collision mesh.
+- Review the video to see where penetration occurs.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/f541ee50742e8f92f156023bd6a7ece4bb480ad6/D00306/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/c1530c0a7dd12a756f55eab76d8923676ea8b5cd/reports/simready-central/2026.10.13_00/D00306/f541ee50742e8f92f156023bd6a7ece4bb480ad6/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/c1530c0a7dd12a756f55eab76d8923676ea8b5cd/reports/simready-central/2026.10.13_00/D00306/f541ee50742e8f92f156023bd6a7ece4bb480ad6/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/38
+D00324,d4c6fbd5af05f495b7de30c679112d41732ef5091a8892f2ba021b62b974401c,slope_drop,isaac_sim,"Slope drop FAILED: Object penetrated the ground after sliding.
+
+How to fix:
+- Check collision mesh approximation (convexHull recommended).
+- The slope-floor transition is a stress point -- check for thin geometry or gaps in collision mesh.
+- Review the video to see where penetration occurs.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/6ef3474f8d00e7f5a2cff6afd3b8bc4b14dc93d0/D00324/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/5d7eb7d1729db957a495ae46b51970231554c848/reports/simready-central/2026.10.13_00/D00324/6ef3474f8d00e7f5a2cff6afd3b8bc4b14dc93d0/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/5d7eb7d1729db957a495ae46b51970231554c848/reports/simready-central/2026.10.13_00/D00324/6ef3474f8d00e7f5a2cff6afd3b8bc4b14dc93d0/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/38
+D00363,10b86ed9e6cbe6e855e4889b28ff3bdf583750631c9de98163059ea57d79fd47,preview_surface_renders,isaac_sim,"With the render-context list pinned to [universal], 76.4% of the asset's 85872 pixel silhouette is shaded by materials it authored, below the 98% required. The remaining 20234 pixel(s) came back as the control material, which is what a pixel the asset binds nothing to looks like.
+
+Both frames are the same scene under the same pin, with one binding's strength flipped, so the difference between them is the asset's own bindings and nothing else. The asset has a surface on: universal.
+
+This is com.nvidia.usd.VM.PS.001.
+
+How to fix:
+- Check the material connects a UsdPreviewSurface shader to the universal outputs:surface, and that the shader uses only spec-defined UsdPreviewSurface inputs and types.
+- Check every renderable Gprim resolves a material, rather than the material being left in /Looks or bound only to invisible, guide or proxy geometry (VM.MAT.001).",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/e820f058dd3463d5cf99143d310cd3ee4747c881/D00363/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/da1e57bd0705ea3f74e9464fe6ade16c92609a9c/reports/simready-central/2026.10.13_00/D00363/e820f058dd3463d5cf99143d310cd3ee4747c881/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/da1e57bd0705ea3f74e9464fe6ade16c92609a9c/reports/simready-central/2026.10.13_00/D00363/e820f058dd3463d5cf99143d310cd3ee4747c881/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/37
+D00363,10b86ed9e6cbe6e855e4889b28ff3bdf583750631c9de98163059ea57d79fd47,preview_surface_renders,isaac_sim_newton,"With the render-context list pinned to [universal], 76.7% of the asset's 85970 pixel silhouette is shaded by materials it authored, below the 98% required. The remaining 20073 pixel(s) came back as the control material, which is what a pixel the asset binds nothing to looks like.
+
+Both frames are the same scene under the same pin, with one binding's strength flipped, so the difference between them is the asset's own bindings and nothing else. The asset has a surface on: universal.
+
+This is com.nvidia.usd.VM.PS.001.
+
+How to fix:
+- Check the material connects a UsdPreviewSurface shader to the universal outputs:surface, and that the shader uses only spec-defined UsdPreviewSurface inputs and types.
+- Check every renderable Gprim resolves a material, rather than the material being left in /Looks or bound only to invisible, guide or proxy geometry (VM.MAT.001).",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/e820f058dd3463d5cf99143d310cd3ee4747c881/D00363/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/da1e57bd0705ea3f74e9464fe6ade16c92609a9c/reports/simready-central/2026.10.13_00/D00363/e820f058dd3463d5cf99143d310cd3ee4747c881/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/da1e57bd0705ea3f74e9464fe6ade16c92609a9c/reports/simready-central/2026.10.13_00/D00363/e820f058dd3463d5cf99143d310cd3ee4747c881/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/37
+D00391,f59a3369331b357752629aecd6ef4a3cc655f552344814ca4986c75f87892430,slope_drop,isaac_sim,"Slope drop FAILED: Object penetrated the ground after sliding.
+
+How to fix:
+- Check collision mesh approximation (convexHull recommended).
+- The slope-floor transition is a stress point -- check for thin geometry or gaps in collision mesh.
+- Review the video to see where penetration occurs.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/8fefe991b7caa2ba6116de3ed9ebadac63e1cc6b/D00391/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/c6f7229faa7f791edfb2683ceb5391f1e74345d3/reports/simready-central/2026.10.13_00/D00391/8fefe991b7caa2ba6116de3ed9ebadac63e1cc6b/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/c6f7229faa7f791edfb2683ceb5391f1e74345d3/reports/simready-central/2026.10.13_00/D00391/8fefe991b7caa2ba6116de3ed9ebadac63e1cc6b/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/38
+D00435,4defb285f72626872b9b850c322651713e69c345b33b43739e5a7cb11c90809d,presence,isaac_sim,"Presence check FAILED: visibility toggle produced only 0.58% difference (need >=1%).
+
+How to fix:
+- Ensure the asset has at least one visible Mesh prim.
+- Check that meshes are not hidden (visibility=invisible).
+- Verify the USD file loads correctly (no broken references).
+- Ensure geometry has valid extent attributes (VG.002).",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/39d8972f503da19237a5495668a4088ab5eae366/D00435/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/6d404128bba0c97209c998b4ba9b168263b36342/reports/simready-central/2026.10.15_00/D00435/39d8972f503da19237a5495668a4088ab5eae366/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/6d404128bba0c97209c998b4ba9b168263b36342/reports/simready-central/2026.10.15_00/D00435/39d8972f503da19237a5495668a4088ab5eae366/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00435,4defb285f72626872b9b850c322651713e69c345b33b43739e5a7cb11c90809d,presence,isaac_sim_newton,"Presence check FAILED: visibility toggle produced only 0.58% difference (need >=1%).
+
+How to fix:
+- Ensure the asset has at least one visible Mesh prim.
+- Check that meshes are not hidden (visibility=invisible).
+- Verify the USD file loads correctly (no broken references).
+- Ensure geometry has valid extent attributes (VG.002).",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/39d8972f503da19237a5495668a4088ab5eae366/D00435/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/6d404128bba0c97209c998b4ba9b168263b36342/reports/simready-central/2026.10.15_00/D00435/39d8972f503da19237a5495668a4088ab5eae366/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/6d404128bba0c97209c998b4ba9b168263b36342/reports/simready-central/2026.10.15_00/D00435/39d8972f503da19237a5495668a4088ab5eae366/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00439,e8f6f80ca33daf93073a462333148779cbb054ddbe8253bece9b08035da4cb9e,preview_surface_renders,isaac_sim,"With the render-context list pinned to [universal], 77.1% of the asset's 193773 pixel silhouette is shaded by materials it authored, below the 98% required. The remaining 44280 pixel(s) came back as the control material, which is what a pixel the asset binds nothing to looks like.
+
+Both frames are the same scene under the same pin, with one binding's strength flipped, so the difference between them is the asset's own bindings and nothing else. The asset has a surface on: universal.
+
+This is com.nvidia.usd.VM.PS.001.
+
+How to fix:
+- Check the material connects a UsdPreviewSurface shader to the universal outputs:surface, and that the shader uses only spec-defined UsdPreviewSurface inputs and types.
+- Check every renderable Gprim resolves a material, rather than the material being left in /Looks or bound only to invisible, guide or proxy geometry (VM.MAT.001).",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/a543fe5d381f08a3c2f85a8afc0d3212ba8d42d8/D00439/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/90b3cd82828d4c285873d528d4165849c570730c/reports/simready-central/2026.10.15_00/D00439/a543fe5d381f08a3c2f85a8afc0d3212ba8d42d8/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/90b3cd82828d4c285873d528d4165849c570730c/reports/simready-central/2026.10.15_00/D00439/a543fe5d381f08a3c2f85a8afc0d3212ba8d42d8/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/37
+D00439,e8f6f80ca33daf93073a462333148779cbb054ddbe8253bece9b08035da4cb9e,preview_surface_renders,isaac_sim_newton,"With the render-context list pinned to [universal], 77.1% of the asset's 193946 pixel silhouette is shaded by materials it authored, below the 98% required. The remaining 44440 pixel(s) came back as the control material, which is what a pixel the asset binds nothing to looks like.
+
+Both frames are the same scene under the same pin, with one binding's strength flipped, so the difference between them is the asset's own bindings and nothing else. The asset has a surface on: universal.
+
+This is com.nvidia.usd.VM.PS.001.
+
+How to fix:
+- Check the material connects a UsdPreviewSurface shader to the universal outputs:surface, and that the shader uses only spec-defined UsdPreviewSurface inputs and types.
+- Check every renderable Gprim resolves a material, rather than the material being left in /Looks or bound only to invisible, guide or proxy geometry (VM.MAT.001).",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/a543fe5d381f08a3c2f85a8afc0d3212ba8d42d8/D00439/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/90b3cd82828d4c285873d528d4165849c570730c/reports/simready-central/2026.10.15_00/D00439/a543fe5d381f08a3c2f85a8afc0d3212ba8d42d8/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/90b3cd82828d4c285873d528d4165849c570730c/reports/simready-central/2026.10.15_00/D00439/a543fe5d381f08a3c2f85a8afc0d3212ba8d42d8/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/37
+D00448,b89f0cabded7c7c00d86b8d53f545f4db1b8e48c43b94327a95b3dafd6398c80,slope_drop,isaac_sim,"Slope drop FAILED: Object penetrated the ground after sliding.
+
+How to fix:
+- Check collision mesh approximation (convexHull recommended).
+- The slope-floor transition is a stress point -- check for thin geometry or gaps in collision mesh.
+- Review the video to see where penetration occurs.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/8c3a7d86a5e63498becfc4409ab8b8c1ee1d9a77/D00448/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/a1899bc795ac884f0cf3fdc63a3b9a68aab4784a/reports/simready-central/2026.10.13_00/D00448/8c3a7d86a5e63498becfc4409ab8b8c1ee1d9a77/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/a1899bc795ac884f0cf3fdc63a3b9a68aab4784a/reports/simready-central/2026.10.13_00/D00448/8c3a7d86a5e63498becfc4409ab8b8c1ee1d9a77/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/38
+D00456,c62835cb88c6c56dd5fa49ca7250dab930dd819666c8685ec5cfc6ad33f7b72c,slope_drop,isaac_sim,"Slope drop FAILED: Object penetrated the ground after sliding.
+
+How to fix:
+- Check collision mesh approximation (convexHull recommended).
+- The slope-floor transition is a stress point -- check for thin geometry or gaps in collision mesh.
+- Review the video to see where penetration occurs.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/9c8ee494fc26041ca4460a9b4d3e182aaa9e3ba4/D00456/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/56cabfc65772700ea1297f3791ec30a9ebfa3ace/reports/simready-central/2026.10.13_00/D00456/9c8ee494fc26041ca4460a9b4d3e182aaa9e3ba4/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/56cabfc65772700ea1297f3791ec30a9ebfa3ace/reports/simready-central/2026.10.13_00/D00456/9c8ee494fc26041ca4460a9b4d3e182aaa9e3ba4/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/38
+D00468,2771d9ccd6899c6fc6957682760d9784b8ab087f4425e87be33394c3725b592e,slope_drop,isaac_sim,"Slope drop FAILED: Object penetrated the ground after sliding.
+
+How to fix:
+- Check collision mesh approximation (convexHull recommended).
+- The slope-floor transition is a stress point -- check for thin geometry or gaps in collision mesh.
+- Review the video to see where penetration occurs.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/8c1ab31d2f1452ffdf70794f8348e43b2005f0f3/D00468/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/eda4cd409ccdc16b9e0d14bd1e8dfbfec10e9da3/reports/simready-central/2026.10.13_00/D00468/8c1ab31d2f1452ffdf70794f8348e43b2005f0f3/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/eda4cd409ccdc16b9e0d14bd1e8dfbfec10e9da3/reports/simready-central/2026.10.13_00/D00468/8c1ab31d2f1452ffdf70794f8348e43b2005f0f3/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/38
+D00484,de557c8b3a9d621b2b5bfaed4ad2c9229f6db717d7553b346cc03073dc9d8e9d,ground_drop,isaac_sim,"Ground drop FAILED: Object penetrated the ground plane after contact.
+
+How to fix:
+- Check collision mesh approximation (convexHull recommended).
+- Verify collision mesh normals point outward.
+- Check for very thin geometry (< 1cm) that may tunnel.
+- Review the video to see where penetration occurs.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/bca35acbe89269f1ca21d23febd8086edbcfd3d2/D00484/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/0470cdc15ca37463dcd5d83a728d7ce30ae7a0f6/reports/simready-central/2026.10.13_00/D00484/bca35acbe89269f1ca21d23febd8086edbcfd3d2/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/0470cdc15ca37463dcd5d83a728d7ce30ae7a0f6/reports/simready-central/2026.10.13_00/D00484/bca35acbe89269f1ca21d23febd8086edbcfd3d2/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/38
+D00484,de557c8b3a9d621b2b5bfaed4ad2c9229f6db717d7553b346cc03073dc9d8e9d,slope_drop,isaac_sim,"Slope drop FAILED: Object penetrated the ground after sliding.
+
+How to fix:
+- Check collision mesh approximation (convexHull recommended).
+- The slope-floor transition is a stress point -- check for thin geometry or gaps in collision mesh.
+- Review the video to see where penetration occurs.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/bca35acbe89269f1ca21d23febd8086edbcfd3d2/D00484/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/0470cdc15ca37463dcd5d83a728d7ce30ae7a0f6/reports/simready-central/2026.10.13_00/D00484/bca35acbe89269f1ca21d23febd8086edbcfd3d2/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/0470cdc15ca37463dcd5d83a728d7ce30ae7a0f6/reports/simready-central/2026.10.13_00/D00484/bca35acbe89269f1ca21d23febd8086edbcfd3d2/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/38
+D00486,727138bfe297899f1a599c25863a36f0c23bd8d9c93ebe9dc22bfe1ebaa35e13,slope_drop,isaac_sim,"Slope drop FAILED: Object penetrated the ground after sliding.
+
+How to fix:
+- Check collision mesh approximation (convexHull recommended).
+- The slope-floor transition is a stress point -- check for thin geometry or gaps in collision mesh.
+- Review the video to see where penetration occurs.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/ea82d5ee7e368e3dd3a540842b143ed636762a2a/D00486/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/41ba4827d93ec0902f27fd633099cb2357a4b35a/reports/simready-central/2026.10.13_00/D00486/ea82d5ee7e368e3dd3a540842b143ed636762a2a/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/41ba4827d93ec0902f27fd633099cb2357a4b35a/reports/simready-central/2026.10.13_00/D00486/ea82d5ee7e368e3dd3a540842b143ed636762a2a/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/38
+D00494,88cf3a83036bfc9ba0c6d02266e7204532799a56553048ba4bf68774c63ff50e,slope_drop,isaac_sim,"Slope drop FAILED: Object penetrated the ground after sliding.
+
+How to fix:
+- Check collision mesh approximation (convexHull recommended).
+- The slope-floor transition is a stress point -- check for thin geometry or gaps in collision mesh.
+- Review the video to see where penetration occurs.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/066c02646e7d009adca0e6fbde21c0a8f86bf17e/D00494/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/48107b7e745090cee1bb5f28973a4ea3d9f066ff/reports/simready-central/2026.10.13_00/D00494/066c02646e7d009adca0e6fbde21c0a8f86bf17e/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/48107b7e745090cee1bb5f28973a4ea3d9f066ff/reports/simready-central/2026.10.13_00/D00494/066c02646e7d009adca0e6fbde21c0a8f86bf17e/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/38
+D00499,fe8fa1e71d02a29c2f638f2cfe9de1e1f6794affa934caaaef3a98ac878fa0b8,presence,isaac_sim,"Presence check FAILED: visibility toggle produced only 0.11% difference (need >=1%).
+
+How to fix:
+- Ensure the asset has at least one visible Mesh prim.
+- Check that meshes are not hidden (visibility=invisible).
+- Verify the USD file loads correctly (no broken references).
+- Ensure geometry has valid extent attributes (VG.002).",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/fd7af9851bbdd4c99611132b2e8a8f1ccea59ce1/D00499/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/174df8b412b7143fcd25ce432dd98262b9e64a37/reports/simready-central/2026.10.13_00/D00499/fd7af9851bbdd4c99611132b2e8a8f1ccea59ce1/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/174df8b412b7143fcd25ce432dd98262b9e64a37/reports/simready-central/2026.10.13_00/D00499/fd7af9851bbdd4c99611132b2e8a8f1ccea59ce1/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00499,fe8fa1e71d02a29c2f638f2cfe9de1e1f6794affa934caaaef3a98ac878fa0b8,presence,isaac_sim_newton,"Presence check FAILED: visibility toggle produced only 0.11% difference (need >=1%).
+
+How to fix:
+- Ensure the asset has at least one visible Mesh prim.
+- Check that meshes are not hidden (visibility=invisible).
+- Verify the USD file loads correctly (no broken references).
+- Ensure geometry has valid extent attributes (VG.002).",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/fd7af9851bbdd4c99611132b2e8a8f1ccea59ce1/D00499/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/174df8b412b7143fcd25ce432dd98262b9e64a37/reports/simready-central/2026.10.13_00/D00499/fd7af9851bbdd4c99611132b2e8a8f1ccea59ce1/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/174df8b412b7143fcd25ce432dd98262b9e64a37/reports/simready-central/2026.10.13_00/D00499/fd7af9851bbdd4c99611132b2e8a8f1ccea59ce1/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00499,fe8fa1e71d02a29c2f638f2cfe9de1e1f6794affa934caaaef3a98ac878fa0b8,preview_surface_renders,isaac_sim,"The asset covers 1129 pixel(s) of flat magenta when the control material is bound over it, below the 5000 needed to measure anything.
+
+How to fix:
+- Check the camera framed the object. The run auto-frames on the asset bounds and an empty bound produces this.
+- Check the asset has renderable geometry of default or render purpose that is not authored invisible.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/fd7af9851bbdd4c99611132b2e8a8f1ccea59ce1/D00499/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/174df8b412b7143fcd25ce432dd98262b9e64a37/reports/simready-central/2026.10.13_00/D00499/fd7af9851bbdd4c99611132b2e8a8f1ccea59ce1/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/174df8b412b7143fcd25ce432dd98262b9e64a37/reports/simready-central/2026.10.13_00/D00499/fd7af9851bbdd4c99611132b2e8a8f1ccea59ce1/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00499,fe8fa1e71d02a29c2f638f2cfe9de1e1f6794affa934caaaef3a98ac878fa0b8,preview_surface_renders,isaac_sim_newton,"The asset covers 1123 pixel(s) of flat magenta when the control material is bound over it, below the 5000 needed to measure anything.
+
+How to fix:
+- Check the camera framed the object. The run auto-frames on the asset bounds and an empty bound produces this.
+- Check the asset has renderable geometry of default or render purpose that is not authored invisible.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/fd7af9851bbdd4c99611132b2e8a8f1ccea59ce1/D00499/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/174df8b412b7143fcd25ce432dd98262b9e64a37/reports/simready-central/2026.10.13_00/D00499/fd7af9851bbdd4c99611132b2e8a8f1ccea59ce1/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/174df8b412b7143fcd25ce432dd98262b9e64a37/reports/simready-central/2026.10.13_00/D00499/fd7af9851bbdd4c99611132b2e8a8f1ccea59ce1/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00499,fe8fa1e71d02a29c2f638f2cfe9de1e1f6794affa934caaaef3a98ac878fa0b8,semantic_labels_seg_labelled,isaac_sim,"The segmentation AOV is nearly blank: 0.0010 of the frame is segmented, and at least 0.0050 is needed.
+
+How to fix:
+- Give every visible mesh a resolvable SemanticsLabelsAPI label, on the prim itself, on an ancestor, or through its bound material. One label on the defaultPrim covers the whole asset.
+- Apply the schema with at least one authored value. An empty label counts as no label.
+- Run on Isaac Sim 6.0 or later. Earlier versions do not resolve SemanticsLabelsAPI in the segmentation pass, so a correctly labelled asset still renders blank.
+- Confirm the asset is in frame; a mis-framed asset also renders blank.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/fd7af9851bbdd4c99611132b2e8a8f1ccea59ce1/D00499/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/174df8b412b7143fcd25ce432dd98262b9e64a37/reports/simready-central/2026.10.13_00/D00499/fd7af9851bbdd4c99611132b2e8a8f1ccea59ce1/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/174df8b412b7143fcd25ce432dd98262b9e64a37/reports/simready-central/2026.10.13_00/D00499/fd7af9851bbdd4c99611132b2e8a8f1ccea59ce1/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00499,fe8fa1e71d02a29c2f638f2cfe9de1e1f6794affa934caaaef3a98ac878fa0b8,semantic_labels_seg_labelled,isaac_sim_newton,"The segmentation AOV is nearly blank: 0.0010 of the frame is segmented, and at least 0.0050 is needed.
+
+How to fix:
+- Give every visible mesh a resolvable SemanticsLabelsAPI label, on the prim itself, on an ancestor, or through its bound material. One label on the defaultPrim covers the whole asset.
+- Apply the schema with at least one authored value. An empty label counts as no label.
+- Run on Isaac Sim 6.0 or later. Earlier versions do not resolve SemanticsLabelsAPI in the segmentation pass, so a correctly labelled asset still renders blank.
+- Confirm the asset is in frame; a mis-framed asset also renders blank.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/fd7af9851bbdd4c99611132b2e8a8f1ccea59ce1/D00499/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/174df8b412b7143fcd25ce432dd98262b9e64a37/reports/simready-central/2026.10.13_00/D00499/fd7af9851bbdd4c99611132b2e8a8f1ccea59ce1/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/174df8b412b7143fcd25ce432dd98262b9e64a37/reports/simready-central/2026.10.13_00/D00499/fd7af9851bbdd4c99611132b2e8a8f1ccea59ce1/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00554,555d3a01d265a8599c2a987b02125003bcaf8e4f3d27600faecd9a167ebc1683,presence,isaac_sim,"Presence check FAILED: visibility toggle produced only 0.79% difference (need >=1%).
+
+How to fix:
+- Ensure the asset has at least one visible Mesh prim.
+- Check that meshes are not hidden (visibility=invisible).
+- Verify the USD file loads correctly (no broken references).
+- Ensure geometry has valid extent attributes (VG.002).",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/9a93eb2eaa592bb341d51320abeb943c6e080aeb/D00554/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/152c7a87c36ed5ac6b050305831bded9560b73e2/reports/simready-central/2026.10.15_00/D00554/9a93eb2eaa592bb341d51320abeb943c6e080aeb/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/152c7a87c36ed5ac6b050305831bded9560b73e2/reports/simready-central/2026.10.15_00/D00554/9a93eb2eaa592bb341d51320abeb943c6e080aeb/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00554,555d3a01d265a8599c2a987b02125003bcaf8e4f3d27600faecd9a167ebc1683,presence,isaac_sim_newton,"Presence check FAILED: visibility toggle produced only 0.79% difference (need >=1%).
+
+How to fix:
+- Ensure the asset has at least one visible Mesh prim.
+- Check that meshes are not hidden (visibility=invisible).
+- Verify the USD file loads correctly (no broken references).
+- Ensure geometry has valid extent attributes (VG.002).",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/9a93eb2eaa592bb341d51320abeb943c6e080aeb/D00554/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/152c7a87c36ed5ac6b050305831bded9560b73e2/reports/simready-central/2026.10.15_00/D00554/9a93eb2eaa592bb341d51320abeb943c6e080aeb/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/152c7a87c36ed5ac6b050305831bded9560b73e2/reports/simready-central/2026.10.15_00/D00554/9a93eb2eaa592bb341d51320abeb943c6e080aeb/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00559,6ffa4db6e8bdc977f44cc0f180b0e5e6fc269ee963a5a7000068492406623b50,presence,isaac_sim,"Presence check FAILED: visibility toggle produced only 0.43% difference (need >=1%).
+
+How to fix:
+- Ensure the asset has at least one visible Mesh prim.
+- Check that meshes are not hidden (visibility=invisible).
+- Verify the USD file loads correctly (no broken references).
+- Ensure geometry has valid extent attributes (VG.002).",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/9150e227af4b5ce89f90c91279754a7ca69f2b0c/D00559/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/5959bfb01b13b05270ee38c9e334e4e6ba30c697/reports/simready-central/2026.10.13_00/D00559/9150e227af4b5ce89f90c91279754a7ca69f2b0c/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/5959bfb01b13b05270ee38c9e334e4e6ba30c697/reports/simready-central/2026.10.13_00/D00559/9150e227af4b5ce89f90c91279754a7ca69f2b0c/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00559,6ffa4db6e8bdc977f44cc0f180b0e5e6fc269ee963a5a7000068492406623b50,presence,isaac_sim_newton,"Presence check FAILED: visibility toggle produced only 0.43% difference (need >=1%).
+
+How to fix:
+- Ensure the asset has at least one visible Mesh prim.
+- Check that meshes are not hidden (visibility=invisible).
+- Verify the USD file loads correctly (no broken references).
+- Ensure geometry has valid extent attributes (VG.002).",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/9150e227af4b5ce89f90c91279754a7ca69f2b0c/D00559/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/5959bfb01b13b05270ee38c9e334e4e6ba30c697/reports/simready-central/2026.10.13_00/D00559/9150e227af4b5ce89f90c91279754a7ca69f2b0c/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/5959bfb01b13b05270ee38c9e334e4e6ba30c697/reports/simready-central/2026.10.13_00/D00559/9150e227af4b5ce89f90c91279754a7ca69f2b0c/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00559,6ffa4db6e8bdc977f44cc0f180b0e5e6fc269ee963a5a7000068492406623b50,preview_surface_renders,isaac_sim,"The asset covers 4451 pixel(s) of flat magenta when the control material is bound over it, below the 5000 needed to measure anything.
+
+How to fix:
+- Check the camera framed the object. The run auto-frames on the asset bounds and an empty bound produces this.
+- Check the asset has renderable geometry of default or render purpose that is not authored invisible.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/9150e227af4b5ce89f90c91279754a7ca69f2b0c/D00559/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/5959bfb01b13b05270ee38c9e334e4e6ba30c697/reports/simready-central/2026.10.13_00/D00559/9150e227af4b5ce89f90c91279754a7ca69f2b0c/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/5959bfb01b13b05270ee38c9e334e4e6ba30c697/reports/simready-central/2026.10.13_00/D00559/9150e227af4b5ce89f90c91279754a7ca69f2b0c/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00559,6ffa4db6e8bdc977f44cc0f180b0e5e6fc269ee963a5a7000068492406623b50,preview_surface_renders,isaac_sim_newton,"The asset covers 4465 pixel(s) of flat magenta when the control material is bound over it, below the 5000 needed to measure anything.
+
+How to fix:
+- Check the camera framed the object. The run auto-frames on the asset bounds and an empty bound produces this.
+- Check the asset has renderable geometry of default or render purpose that is not authored invisible.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/9150e227af4b5ce89f90c91279754a7ca69f2b0c/D00559/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/5959bfb01b13b05270ee38c9e334e4e6ba30c697/reports/simready-central/2026.10.13_00/D00559/9150e227af4b5ce89f90c91279754a7ca69f2b0c/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/5959bfb01b13b05270ee38c9e334e4e6ba30c697/reports/simready-central/2026.10.13_00/D00559/9150e227af4b5ce89f90c91279754a7ca69f2b0c/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00559,6ffa4db6e8bdc977f44cc0f180b0e5e6fc269ee963a5a7000068492406623b50,semantic_labels_seg_labelled,isaac_sim,"The segmentation AOV is nearly blank: 0.0042 of the frame is segmented, and at least 0.0050 is needed.
+
+How to fix:
+- Give every visible mesh a resolvable SemanticsLabelsAPI label, on the prim itself, on an ancestor, or through its bound material. One label on the defaultPrim covers the whole asset.
+- Apply the schema with at least one authored value. An empty label counts as no label.
+- Run on Isaac Sim 6.0 or later. Earlier versions do not resolve SemanticsLabelsAPI in the segmentation pass, so a correctly labelled asset still renders blank.
+- Confirm the asset is in frame; a mis-framed asset also renders blank.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/9150e227af4b5ce89f90c91279754a7ca69f2b0c/D00559/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/5959bfb01b13b05270ee38c9e334e4e6ba30c697/reports/simready-central/2026.10.13_00/D00559/9150e227af4b5ce89f90c91279754a7ca69f2b0c/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/5959bfb01b13b05270ee38c9e334e4e6ba30c697/reports/simready-central/2026.10.13_00/D00559/9150e227af4b5ce89f90c91279754a7ca69f2b0c/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00559,6ffa4db6e8bdc977f44cc0f180b0e5e6fc269ee963a5a7000068492406623b50,semantic_labels_seg_labelled,isaac_sim_newton,"The segmentation AOV is nearly blank: 0.0042 of the frame is segmented, and at least 0.0050 is needed.
+
+How to fix:
+- Give every visible mesh a resolvable SemanticsLabelsAPI label, on the prim itself, on an ancestor, or through its bound material. One label on the defaultPrim covers the whole asset.
+- Apply the schema with at least one authored value. An empty label counts as no label.
+- Run on Isaac Sim 6.0 or later. Earlier versions do not resolve SemanticsLabelsAPI in the segmentation pass, so a correctly labelled asset still renders blank.
+- Confirm the asset is in frame; a mis-framed asset also renders blank.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/9150e227af4b5ce89f90c91279754a7ca69f2b0c/D00559/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/5959bfb01b13b05270ee38c9e334e4e6ba30c697/reports/simready-central/2026.10.13_00/D00559/9150e227af4b5ce89f90c91279754a7ca69f2b0c/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/5959bfb01b13b05270ee38c9e334e4e6ba30c697/reports/simready-central/2026.10.13_00/D00559/9150e227af4b5ce89f90c91279754a7ca69f2b0c/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00569,c4b3cfe1269919461a1dd874a2c9c8f94e23c4713b7d1b687fa3b8a678693f33,presence,isaac_sim,"Presence check FAILED: visibility toggle produced only 0.83% difference (need >=1%).
+
+How to fix:
+- Ensure the asset has at least one visible Mesh prim.
+- Check that meshes are not hidden (visibility=invisible).
+- Verify the USD file loads correctly (no broken references).
+- Ensure geometry has valid extent attributes (VG.002).",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/b7fa4e9a80e30f15fc900b8d272a52aeb8abaa90/D00569/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/14818c3b1b93bc0833325f96e9a470147810277c/reports/simready-central/2026.10.13_00/D00569/b7fa4e9a80e30f15fc900b8d272a52aeb8abaa90/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/14818c3b1b93bc0833325f96e9a470147810277c/reports/simready-central/2026.10.13_00/D00569/b7fa4e9a80e30f15fc900b8d272a52aeb8abaa90/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00569,c4b3cfe1269919461a1dd874a2c9c8f94e23c4713b7d1b687fa3b8a678693f33,presence,isaac_sim_newton,"Presence check FAILED: visibility toggle produced only 0.83% difference (need >=1%).
+
+How to fix:
+- Ensure the asset has at least one visible Mesh prim.
+- Check that meshes are not hidden (visibility=invisible).
+- Verify the USD file loads correctly (no broken references).
+- Ensure geometry has valid extent attributes (VG.002).",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/b7fa4e9a80e30f15fc900b8d272a52aeb8abaa90/D00569/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/14818c3b1b93bc0833325f96e9a470147810277c/reports/simready-central/2026.10.13_00/D00569/b7fa4e9a80e30f15fc900b8d272a52aeb8abaa90/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/14818c3b1b93bc0833325f96e9a470147810277c/reports/simready-central/2026.10.13_00/D00569/b7fa4e9a80e30f15fc900b8d272a52aeb8abaa90/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00571,9781937280dfdb5fb1c7c93cd23c79023c1af456fed73a8fecb5eddf8ffa1af9,preview_surface_renders,isaac_sim,"With the render-context list pinned to [universal], 36.6% of the asset's 63812 pixel silhouette is shaded by materials it authored, below the 98% required. The remaining 40487 pixel(s) came back as the control material, which is what a pixel the asset binds nothing to looks like.
+
+Both frames are the same scene under the same pin, with one binding's strength flipped, so the difference between them is the asset's own bindings and nothing else. The asset has a surface on: universal.
+
+This is com.nvidia.usd.VM.PS.001.
+
+How to fix:
+- Check the material connects a UsdPreviewSurface shader to the universal outputs:surface, and that the shader uses only spec-defined UsdPreviewSurface inputs and types.
+- Check every renderable Gprim resolves a material, rather than the material being left in /Looks or bound only to invisible, guide or proxy geometry (VM.MAT.001).",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/a74a7843c5c06d7ffc6cbbf059ec6bcbf57fae71/D00571/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/f2fafb9af95e9436910a917147017fdcf0c69389/reports/simready-central/2026.10.13_00/D00571/a74a7843c5c06d7ffc6cbbf059ec6bcbf57fae71/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/f2fafb9af95e9436910a917147017fdcf0c69389/reports/simready-central/2026.10.13_00/D00571/a74a7843c5c06d7ffc6cbbf059ec6bcbf57fae71/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/37
+D00571,9781937280dfdb5fb1c7c93cd23c79023c1af456fed73a8fecb5eddf8ffa1af9,preview_surface_renders,isaac_sim_newton,"With the render-context list pinned to [universal], 35.9% of the asset's 63778 pixel silhouette is shaded by materials it authored, below the 98% required. The remaining 40908 pixel(s) came back as the control material, which is what a pixel the asset binds nothing to looks like.
+
+Both frames are the same scene under the same pin, with one binding's strength flipped, so the difference between them is the asset's own bindings and nothing else. The asset has a surface on: universal.
+
+This is com.nvidia.usd.VM.PS.001.
+
+How to fix:
+- Check the material connects a UsdPreviewSurface shader to the universal outputs:surface, and that the shader uses only spec-defined UsdPreviewSurface inputs and types.
+- Check every renderable Gprim resolves a material, rather than the material being left in /Looks or bound only to invisible, guide or proxy geometry (VM.MAT.001).",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/a74a7843c5c06d7ffc6cbbf059ec6bcbf57fae71/D00571/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/f2fafb9af95e9436910a917147017fdcf0c69389/reports/simready-central/2026.10.13_00/D00571/a74a7843c5c06d7ffc6cbbf059ec6bcbf57fae71/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/f2fafb9af95e9436910a917147017fdcf0c69389/reports/simready-central/2026.10.13_00/D00571/a74a7843c5c06d7ffc6cbbf059ec6bcbf57fae71/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/37
+D00579,be9be2b3357790d58b15e92a440ffc5acafa7b20a11102884d6b3feb544afbb5,ground_drop,isaac_sim,"Ground drop FAILED: Object penetrated the ground plane after contact.
+
+How to fix:
+- Check collision mesh approximation (convexHull recommended).
+- Verify collision mesh normals point outward.
+- Check for very thin geometry (< 1cm) that may tunnel.
+- Review the video to see where penetration occurs.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/79870ae3b7100555c4ebcdd3569f9b11ff5af141/D00579/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/8499311de15dbcf2cd2c3344f8c3ad5126d96b84/reports/simready-central/2026.10.13_00/D00579/79870ae3b7100555c4ebcdd3569f9b11ff5af141/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/8499311de15dbcf2cd2c3344f8c3ad5126d96b84/reports/simready-central/2026.10.13_00/D00579/79870ae3b7100555c4ebcdd3569f9b11ff5af141/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/38
+D00579,be9be2b3357790d58b15e92a440ffc5acafa7b20a11102884d6b3feb544afbb5,slope_drop,isaac_sim,"Slope drop FAILED: Object penetrated the ground after sliding.
+
+How to fix:
+- Check collision mesh approximation (convexHull recommended).
+- The slope-floor transition is a stress point -- check for thin geometry or gaps in collision mesh.
+- Review the video to see where penetration occurs.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/79870ae3b7100555c4ebcdd3569f9b11ff5af141/D00579/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/8499311de15dbcf2cd2c3344f8c3ad5126d96b84/reports/simready-central/2026.10.13_00/D00579/79870ae3b7100555c4ebcdd3569f9b11ff5af141/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/8499311de15dbcf2cd2c3344f8c3ad5126d96b84/reports/simready-central/2026.10.13_00/D00579/79870ae3b7100555c4ebcdd3569f9b11ff5af141/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/38
+D00581,6e4e65eea04e9d00315d45fd44c646d24898a78968ee4dac7ef915137b3116ba,preview_surface_renders,isaac_sim,"With the render-context list pinned to [universal], 67.3% of the asset's 123716 pixel silhouette is shaded by materials it authored, below the 98% required. The remaining 40421 pixel(s) came back as the control material, which is what a pixel the asset binds nothing to looks like.
+
+Both frames are the same scene under the same pin, with one binding's strength flipped, so the difference between them is the asset's own bindings and nothing else. The asset has a surface on: universal.
+
+This is com.nvidia.usd.VM.PS.001.
+
+How to fix:
+- Check the material connects a UsdPreviewSurface shader to the universal outputs:surface, and that the shader uses only spec-defined UsdPreviewSurface inputs and types.
+- Check every renderable Gprim resolves a material, rather than the material being left in /Looks or bound only to invisible, guide or proxy geometry (VM.MAT.001).",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/9e8a9e10fd15107418ca5a629a86891a45fe371a/D00581/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/01ff36eef6cbd34704ab5e26c321c0174e738492/reports/simready-central/2026.10.13_00/D00581/9e8a9e10fd15107418ca5a629a86891a45fe371a/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/01ff36eef6cbd34704ab5e26c321c0174e738492/reports/simready-central/2026.10.13_00/D00581/9e8a9e10fd15107418ca5a629a86891a45fe371a/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/37
+D00581,6e4e65eea04e9d00315d45fd44c646d24898a78968ee4dac7ef915137b3116ba,preview_surface_renders,isaac_sim_newton,"With the render-context list pinned to [universal], 67.2% of the asset's 123658 pixel silhouette is shaded by materials it authored, below the 98% required. The remaining 40516 pixel(s) came back as the control material, which is what a pixel the asset binds nothing to looks like.
+
+Both frames are the same scene under the same pin, with one binding's strength flipped, so the difference between them is the asset's own bindings and nothing else. The asset has a surface on: universal.
+
+This is com.nvidia.usd.VM.PS.001.
+
+How to fix:
+- Check the material connects a UsdPreviewSurface shader to the universal outputs:surface, and that the shader uses only spec-defined UsdPreviewSurface inputs and types.
+- Check every renderable Gprim resolves a material, rather than the material being left in /Looks or bound only to invisible, guide or proxy geometry (VM.MAT.001).",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/9e8a9e10fd15107418ca5a629a86891a45fe371a/D00581/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/01ff36eef6cbd34704ab5e26c321c0174e738492/reports/simready-central/2026.10.13_00/D00581/9e8a9e10fd15107418ca5a629a86891a45fe371a/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/01ff36eef6cbd34704ab5e26c321c0174e738492/reports/simready-central/2026.10.13_00/D00581/9e8a9e10fd15107418ca5a629a86891a45fe371a/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/37
+D00591,8df3f401f9a3b5638080217d90002d67bd91af86ce6f7ec5aa5768aba0bce2cd,presence,isaac_sim,"Presence check FAILED: visibility toggle produced only 0.76% difference (need >=1%).
+
+How to fix:
+- Ensure the asset has at least one visible Mesh prim.
+- Check that meshes are not hidden (visibility=invisible).
+- Verify the USD file loads correctly (no broken references).
+- Ensure geometry has valid extent attributes (VG.002).",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/777885fd40c53ca77a835becb96fa49f203c52e9/D00591/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/3c51274a32b41faea784b2da6d82c2fe680804cd/reports/simready-central/2026.10.13_00/D00591/777885fd40c53ca77a835becb96fa49f203c52e9/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/3c51274a32b41faea784b2da6d82c2fe680804cd/reports/simready-central/2026.10.13_00/D00591/777885fd40c53ca77a835becb96fa49f203c52e9/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00591,8df3f401f9a3b5638080217d90002d67bd91af86ce6f7ec5aa5768aba0bce2cd,presence,isaac_sim_newton,"Presence check FAILED: visibility toggle produced only 0.76% difference (need >=1%).
+
+How to fix:
+- Ensure the asset has at least one visible Mesh prim.
+- Check that meshes are not hidden (visibility=invisible).
+- Verify the USD file loads correctly (no broken references).
+- Ensure geometry has valid extent attributes (VG.002).",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/777885fd40c53ca77a835becb96fa49f203c52e9/D00591/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/3c51274a32b41faea784b2da6d82c2fe680804cd/reports/simready-central/2026.10.13_00/D00591/777885fd40c53ca77a835becb96fa49f203c52e9/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/3c51274a32b41faea784b2da6d82c2fe680804cd/reports/simready-central/2026.10.13_00/D00591/777885fd40c53ca77a835becb96fa49f203c52e9/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00608,f21aeb46f7e02ea7f912452745333673d349df35b947c6502f77f1cfe23c9c80,presence,isaac_sim,"Presence check FAILED: visibility toggle produced only 0.33% difference (need >=1%).
+
+How to fix:
+- Ensure the asset has at least one visible Mesh prim.
+- Check that meshes are not hidden (visibility=invisible).
+- Verify the USD file loads correctly (no broken references).
+- Ensure geometry has valid extent attributes (VG.002).",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/1fbb84eae7afde1d064458995ae076531bb2df4e/D00608/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/13e2e097d9de092a02a126392c07aa825a4274fc/reports/simready-central/2026.10.15_00/D00608/1fbb84eae7afde1d064458995ae076531bb2df4e/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/13e2e097d9de092a02a126392c07aa825a4274fc/reports/simready-central/2026.10.15_00/D00608/1fbb84eae7afde1d064458995ae076531bb2df4e/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00608,f21aeb46f7e02ea7f912452745333673d349df35b947c6502f77f1cfe23c9c80,presence,isaac_sim_newton,"Presence check FAILED: visibility toggle produced only 0.33% difference (need >=1%).
+
+How to fix:
+- Ensure the asset has at least one visible Mesh prim.
+- Check that meshes are not hidden (visibility=invisible).
+- Verify the USD file loads correctly (no broken references).
+- Ensure geometry has valid extent attributes (VG.002).",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/1fbb84eae7afde1d064458995ae076531bb2df4e/D00608/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/13e2e097d9de092a02a126392c07aa825a4274fc/reports/simready-central/2026.10.15_00/D00608/1fbb84eae7afde1d064458995ae076531bb2df4e/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/13e2e097d9de092a02a126392c07aa825a4274fc/reports/simready-central/2026.10.15_00/D00608/1fbb84eae7afde1d064458995ae076531bb2df4e/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00608,f21aeb46f7e02ea7f912452745333673d349df35b947c6502f77f1cfe23c9c80,preview_surface_renders,isaac_sim,"The asset covers 3438 pixel(s) of flat magenta when the control material is bound over it, below the 5000 needed to measure anything.
+
+How to fix:
+- Check the camera framed the object. The run auto-frames on the asset bounds and an empty bound produces this.
+- Check the asset has renderable geometry of default or render purpose that is not authored invisible.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/1fbb84eae7afde1d064458995ae076531bb2df4e/D00608/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/13e2e097d9de092a02a126392c07aa825a4274fc/reports/simready-central/2026.10.15_00/D00608/1fbb84eae7afde1d064458995ae076531bb2df4e/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/13e2e097d9de092a02a126392c07aa825a4274fc/reports/simready-central/2026.10.15_00/D00608/1fbb84eae7afde1d064458995ae076531bb2df4e/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00608,f21aeb46f7e02ea7f912452745333673d349df35b947c6502f77f1cfe23c9c80,preview_surface_renders,isaac_sim_newton,"The asset covers 3417 pixel(s) of flat magenta when the control material is bound over it, below the 5000 needed to measure anything.
+
+How to fix:
+- Check the camera framed the object. The run auto-frames on the asset bounds and an empty bound produces this.
+- Check the asset has renderable geometry of default or render purpose that is not authored invisible.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/1fbb84eae7afde1d064458995ae076531bb2df4e/D00608/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/13e2e097d9de092a02a126392c07aa825a4274fc/reports/simready-central/2026.10.15_00/D00608/1fbb84eae7afde1d064458995ae076531bb2df4e/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/13e2e097d9de092a02a126392c07aa825a4274fc/reports/simready-central/2026.10.15_00/D00608/1fbb84eae7afde1d064458995ae076531bb2df4e/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00608,f21aeb46f7e02ea7f912452745333673d349df35b947c6502f77f1cfe23c9c80,semantic_labels_seg_labelled,isaac_sim,"The segmentation AOV is nearly blank: 0.0032 of the frame is segmented, and at least 0.0050 is needed.
+
+How to fix:
+- Give every visible mesh a resolvable SemanticsLabelsAPI label, on the prim itself, on an ancestor, or through its bound material. One label on the defaultPrim covers the whole asset.
+- Apply the schema with at least one authored value. An empty label counts as no label.
+- Run on Isaac Sim 6.0 or later. Earlier versions do not resolve SemanticsLabelsAPI in the segmentation pass, so a correctly labelled asset still renders blank.
+- Confirm the asset is in frame; a mis-framed asset also renders blank.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/1fbb84eae7afde1d064458995ae076531bb2df4e/D00608/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/13e2e097d9de092a02a126392c07aa825a4274fc/reports/simready-central/2026.10.15_00/D00608/1fbb84eae7afde1d064458995ae076531bb2df4e/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/13e2e097d9de092a02a126392c07aa825a4274fc/reports/simready-central/2026.10.15_00/D00608/1fbb84eae7afde1d064458995ae076531bb2df4e/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00608,f21aeb46f7e02ea7f912452745333673d349df35b947c6502f77f1cfe23c9c80,semantic_labels_seg_labelled,isaac_sim_newton,"The segmentation AOV is nearly blank: 0.0032 of the frame is segmented, and at least 0.0050 is needed.
+
+How to fix:
+- Give every visible mesh a resolvable SemanticsLabelsAPI label, on the prim itself, on an ancestor, or through its bound material. One label on the defaultPrim covers the whole asset.
+- Apply the schema with at least one authored value. An empty label counts as no label.
+- Run on Isaac Sim 6.0 or later. Earlier versions do not resolve SemanticsLabelsAPI in the segmentation pass, so a correctly labelled asset still renders blank.
+- Confirm the asset is in frame; a mis-framed asset also renders blank.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/1fbb84eae7afde1d064458995ae076531bb2df4e/D00608/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/13e2e097d9de092a02a126392c07aa825a4274fc/reports/simready-central/2026.10.15_00/D00608/1fbb84eae7afde1d064458995ae076531bb2df4e/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/13e2e097d9de092a02a126392c07aa825a4274fc/reports/simready-central/2026.10.15_00/D00608/1fbb84eae7afde1d064458995ae076531bb2df4e/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00610,77a575c1aa2f6aea9616044f795e17c65197dbcaca8fb4f2423a0444a0e7d721,presence,isaac_sim,"Presence check FAILED: visibility toggle produced only 0.47% difference (need >=1%).
+
+How to fix:
+- Ensure the asset has at least one visible Mesh prim.
+- Check that meshes are not hidden (visibility=invisible).
+- Verify the USD file loads correctly (no broken references).
+- Ensure geometry has valid extent attributes (VG.002).",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/13f8d3e22e06784e7197286318c06820a24dd591/D00610/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/7224c9aec50906fdb65510c0b548f4862fecada7/reports/simready-central/2026.10.13_00/D00610/13f8d3e22e06784e7197286318c06820a24dd591/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/7224c9aec50906fdb65510c0b548f4862fecada7/reports/simready-central/2026.10.13_00/D00610/13f8d3e22e06784e7197286318c06820a24dd591/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00610,77a575c1aa2f6aea9616044f795e17c65197dbcaca8fb4f2423a0444a0e7d721,presence,isaac_sim_newton,"Presence check FAILED: visibility toggle produced only 0.47% difference (need >=1%).
+
+How to fix:
+- Ensure the asset has at least one visible Mesh prim.
+- Check that meshes are not hidden (visibility=invisible).
+- Verify the USD file loads correctly (no broken references).
+- Ensure geometry has valid extent attributes (VG.002).",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/13f8d3e22e06784e7197286318c06820a24dd591/D00610/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/7224c9aec50906fdb65510c0b548f4862fecada7/reports/simready-central/2026.10.13_00/D00610/13f8d3e22e06784e7197286318c06820a24dd591/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/7224c9aec50906fdb65510c0b548f4862fecada7/reports/simready-central/2026.10.13_00/D00610/13f8d3e22e06784e7197286318c06820a24dd591/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00610,77a575c1aa2f6aea9616044f795e17c65197dbcaca8fb4f2423a0444a0e7d721,preview_surface_renders,isaac_sim,"The asset covers 4955 pixel(s) of flat magenta when the control material is bound over it, below the 5000 needed to measure anything.
+
+How to fix:
+- Check the camera framed the object. The run auto-frames on the asset bounds and an empty bound produces this.
+- Check the asset has renderable geometry of default or render purpose that is not authored invisible.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/13f8d3e22e06784e7197286318c06820a24dd591/D00610/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/7224c9aec50906fdb65510c0b548f4862fecada7/reports/simready-central/2026.10.13_00/D00610/13f8d3e22e06784e7197286318c06820a24dd591/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/7224c9aec50906fdb65510c0b548f4862fecada7/reports/simready-central/2026.10.13_00/D00610/13f8d3e22e06784e7197286318c06820a24dd591/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00610,77a575c1aa2f6aea9616044f795e17c65197dbcaca8fb4f2423a0444a0e7d721,preview_surface_renders,isaac_sim_newton,"The asset covers 4948 pixel(s) of flat magenta when the control material is bound over it, below the 5000 needed to measure anything.
+
+How to fix:
+- Check the camera framed the object. The run auto-frames on the asset bounds and an empty bound produces this.
+- Check the asset has renderable geometry of default or render purpose that is not authored invisible.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/13f8d3e22e06784e7197286318c06820a24dd591/D00610/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/7224c9aec50906fdb65510c0b548f4862fecada7/reports/simready-central/2026.10.13_00/D00610/13f8d3e22e06784e7197286318c06820a24dd591/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/7224c9aec50906fdb65510c0b548f4862fecada7/reports/simready-central/2026.10.13_00/D00610/13f8d3e22e06784e7197286318c06820a24dd591/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00610,77a575c1aa2f6aea9616044f795e17c65197dbcaca8fb4f2423a0444a0e7d721,semantic_labels_seg_labelled,isaac_sim,"The segmentation AOV is nearly blank: 0.0046 of the frame is segmented, and at least 0.0050 is needed.
+
+How to fix:
+- Give every visible mesh a resolvable SemanticsLabelsAPI label, on the prim itself, on an ancestor, or through its bound material. One label on the defaultPrim covers the whole asset.
+- Apply the schema with at least one authored value. An empty label counts as no label.
+- Run on Isaac Sim 6.0 or later. Earlier versions do not resolve SemanticsLabelsAPI in the segmentation pass, so a correctly labelled asset still renders blank.
+- Confirm the asset is in frame; a mis-framed asset also renders blank.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/13f8d3e22e06784e7197286318c06820a24dd591/D00610/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/7224c9aec50906fdb65510c0b548f4862fecada7/reports/simready-central/2026.10.13_00/D00610/13f8d3e22e06784e7197286318c06820a24dd591/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/7224c9aec50906fdb65510c0b548f4862fecada7/reports/simready-central/2026.10.13_00/D00610/13f8d3e22e06784e7197286318c06820a24dd591/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00610,77a575c1aa2f6aea9616044f795e17c65197dbcaca8fb4f2423a0444a0e7d721,semantic_labels_seg_labelled,isaac_sim_newton,"The segmentation AOV is nearly blank: 0.0046 of the frame is segmented, and at least 0.0050 is needed.
+
+How to fix:
+- Give every visible mesh a resolvable SemanticsLabelsAPI label, on the prim itself, on an ancestor, or through its bound material. One label on the defaultPrim covers the whole asset.
+- Apply the schema with at least one authored value. An empty label counts as no label.
+- Run on Isaac Sim 6.0 or later. Earlier versions do not resolve SemanticsLabelsAPI in the segmentation pass, so a correctly labelled asset still renders blank.
+- Confirm the asset is in frame; a mis-framed asset also renders blank.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/13f8d3e22e06784e7197286318c06820a24dd591/D00610/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/7224c9aec50906fdb65510c0b548f4862fecada7/reports/simready-central/2026.10.13_00/D00610/13f8d3e22e06784e7197286318c06820a24dd591/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/7224c9aec50906fdb65510c0b548f4862fecada7/reports/simready-central/2026.10.13_00/D00610/13f8d3e22e06784e7197286318c06820a24dd591/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00638,825132623c60dc73bf800fc7d4c0cc54e6140084f159e3cd2c23503ab6ba71fe,preview_surface_renders,isaac_sim,"With the render-context list pinned to [universal], 93.4% of the asset's 152246 pixel silhouette is shaded by materials it authored, below the 98% required. The remaining 10069 pixel(s) came back as the control material, which is what a pixel the asset binds nothing to looks like.
+
+Both frames are the same scene under the same pin, with one binding's strength flipped, so the difference between them is the asset's own bindings and nothing else. The asset has a surface on: universal.
+
+This is com.nvidia.usd.VM.PS.001.
+
+How to fix:
+- Check the material connects a UsdPreviewSurface shader to the universal outputs:surface, and that the shader uses only spec-defined UsdPreviewSurface inputs and types.
+- Check every renderable Gprim resolves a material, rather than the material being left in /Looks or bound only to invisible, guide or proxy geometry (VM.MAT.001).",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/0fdcb4da942ab0364ce57d43ccf17c47c4878247/D00638/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/4dd040e8e38afe4a4e70753159e319060c2fe7f6/reports/simready-central/2026.10.13_00/D00638/0fdcb4da942ab0364ce57d43ccf17c47c4878247/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/4dd040e8e38afe4a4e70753159e319060c2fe7f6/reports/simready-central/2026.10.13_00/D00638/0fdcb4da942ab0364ce57d43ccf17c47c4878247/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/37
+D00638,825132623c60dc73bf800fc7d4c0cc54e6140084f159e3cd2c23503ab6ba71fe,preview_surface_renders,isaac_sim_newton,"With the render-context list pinned to [universal], 92.8% of the asset's 152201 pixel silhouette is shaded by materials it authored, below the 98% required. The remaining 11015 pixel(s) came back as the control material, which is what a pixel the asset binds nothing to looks like.
+
+Both frames are the same scene under the same pin, with one binding's strength flipped, so the difference between them is the asset's own bindings and nothing else. The asset has a surface on: universal.
+
+This is com.nvidia.usd.VM.PS.001.
+
+How to fix:
+- Check the material connects a UsdPreviewSurface shader to the universal outputs:surface, and that the shader uses only spec-defined UsdPreviewSurface inputs and types.
+- Check every renderable Gprim resolves a material, rather than the material being left in /Looks or bound only to invisible, guide or proxy geometry (VM.MAT.001).",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/0fdcb4da942ab0364ce57d43ccf17c47c4878247/D00638/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/4dd040e8e38afe4a4e70753159e319060c2fe7f6/reports/simready-central/2026.10.13_00/D00638/0fdcb4da942ab0364ce57d43ccf17c47c4878247/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/4dd040e8e38afe4a4e70753159e319060c2fe7f6/reports/simready-central/2026.10.13_00/D00638/0fdcb4da942ab0364ce57d43ccf17c47c4878247/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/37
+D00647,1e2d710cb6c68203a6289e5935bb516a89057a0a74958739154fc1cf7f2cb5f3,slope_drop,isaac_sim,"Slope drop FAILED: Object penetrated the ground after sliding.
+
+How to fix:
+- Check collision mesh approximation (convexHull recommended).
+- The slope-floor transition is a stress point -- check for thin geometry or gaps in collision mesh.
+- Review the video to see where penetration occurs.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/54d3e8d484dbdcfbf0a1bfed75470e579bf69b79/D00647/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/865e6286df5969a7013759b924f3bce42c3a90b7/reports/simready-central/2026.10.13_00/D00647/54d3e8d484dbdcfbf0a1bfed75470e579bf69b79/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/865e6286df5969a7013759b924f3bce42c3a90b7/reports/simready-central/2026.10.13_00/D00647/54d3e8d484dbdcfbf0a1bfed75470e579bf69b79/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/38
+D00655,c6f03e750b4b45b28746afc3e7229f349c4b04126b4beab062af3c0c2393003a,slope_drop,isaac_sim,"Slope drop FAILED: Object penetrated the ground after sliding.
+
+How to fix:
+- Check collision mesh approximation (convexHull recommended).
+- The slope-floor transition is a stress point -- check for thin geometry or gaps in collision mesh.
+- Review the video to see where penetration occurs.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/17a74ae0130a9d042ed84cd5cd96ff2ae416f94f/D00655/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/24cbd573019d7fca9f61a4202c4d00ea10c9047c/reports/simready-central/2026.10.13_00/D00655/17a74ae0130a9d042ed84cd5cd96ff2ae416f94f/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/24cbd573019d7fca9f61a4202c4d00ea10c9047c/reports/simready-central/2026.10.13_00/D00655/17a74ae0130a9d042ed84cd5cd96ff2ae416f94f/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/38
+D00658,aaf514f05269e97c3e277da518aa184ce1528b8f3ae34d2cb1500f6d687d317b,slope_drop,isaac_sim,"Slope drop FAILED: Object penetrated the ground after sliding.
+
+How to fix:
+- Check collision mesh approximation (convexHull recommended).
+- The slope-floor transition is a stress point -- check for thin geometry or gaps in collision mesh.
+- Review the video to see where penetration occurs.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/b16f56d8cde53554e77e5d8f0f662952c83bf1a3/D00658/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/d9dcdf8366f6cee21816bfe0dd8a16ec0d12c33e/reports/simready-central/2026.10.13_00/D00658/b16f56d8cde53554e77e5d8f0f662952c83bf1a3/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/d9dcdf8366f6cee21816bfe0dd8a16ec0d12c33e/reports/simready-central/2026.10.13_00/D00658/b16f56d8cde53554e77e5d8f0f662952c83bf1a3/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/38
+D00663,bd4fa9b1eb47d110da4208c74314d7be76ca25126c8b66b3222d002f3f0274dc,preview_surface_renders,isaac_sim,"With the render-context list pinned to [universal], 97.0% of the asset's 163104 pixel silhouette is shaded by materials it authored, below the 98% required. The remaining 4942 pixel(s) came back as the control material, which is what a pixel the asset binds nothing to looks like.
+
+Both frames are the same scene under the same pin, with one binding's strength flipped, so the difference between them is the asset's own bindings and nothing else. The asset has a surface on: universal.
+
+This is com.nvidia.usd.VM.PS.001.
+
+How to fix:
+- Check the material connects a UsdPreviewSurface shader to the universal outputs:surface, and that the shader uses only spec-defined UsdPreviewSurface inputs and types.
+- Check every renderable Gprim resolves a material, rather than the material being left in /Looks or bound only to invisible, guide or proxy geometry (VM.MAT.001).",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/379c6c695520268c57d8c9c972f9cf87a51fe9f2/D00663/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/30a40cc02eb2cfed226a99ced7d610e1b24b83bb/reports/simready-central/2026.10.13_00/D00663/379c6c695520268c57d8c9c972f9cf87a51fe9f2/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/30a40cc02eb2cfed226a99ced7d610e1b24b83bb/reports/simready-central/2026.10.13_00/D00663/379c6c695520268c57d8c9c972f9cf87a51fe9f2/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/37
+D00663,bd4fa9b1eb47d110da4208c74314d7be76ca25126c8b66b3222d002f3f0274dc,preview_surface_renders,isaac_sim_newton,"With the render-context list pinned to [universal], 97.1% of the asset's 163084 pixel silhouette is shaded by materials it authored, below the 98% required. The remaining 4707 pixel(s) came back as the control material, which is what a pixel the asset binds nothing to looks like.
+
+Both frames are the same scene under the same pin, with one binding's strength flipped, so the difference between them is the asset's own bindings and nothing else. The asset has a surface on: universal.
+
+This is com.nvidia.usd.VM.PS.001.
+
+How to fix:
+- Check the material connects a UsdPreviewSurface shader to the universal outputs:surface, and that the shader uses only spec-defined UsdPreviewSurface inputs and types.
+- Check every renderable Gprim resolves a material, rather than the material being left in /Looks or bound only to invisible, guide or proxy geometry (VM.MAT.001).",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/379c6c695520268c57d8c9c972f9cf87a51fe9f2/D00663/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/30a40cc02eb2cfed226a99ced7d610e1b24b83bb/reports/simready-central/2026.10.13_00/D00663/379c6c695520268c57d8c9c972f9cf87a51fe9f2/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/30a40cc02eb2cfed226a99ced7d610e1b24b83bb/reports/simready-central/2026.10.13_00/D00663/379c6c695520268c57d8c9c972f9cf87a51fe9f2/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/37
+D00708,9e3153b6b94b155df4ecc4662b164d2559b1a94716219cb0d5935bca359d3874,slope_drop,isaac_sim,"Slope drop FAILED: Object penetrated the ground after sliding.
+
+How to fix:
+- Check collision mesh approximation (convexHull recommended).
+- The slope-floor transition is a stress point -- check for thin geometry or gaps in collision mesh.
+- Review the video to see where penetration occurs.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/5224abc01837a346e44ebe61e074c499e01f589d/D00708/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/9f43112ce93ae99173a6559d031dc9f6d266d09c/reports/simready-central/2026.10.13_00/D00708/5224abc01837a346e44ebe61e074c499e01f589d/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/9f43112ce93ae99173a6559d031dc9f6d266d09c/reports/simready-central/2026.10.13_00/D00708/5224abc01837a346e44ebe61e074c499e01f589d/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/38
+D00722,404d35ec379d5f0ba0e8057774ee74a3843022bae5c69956731a2bfef16aedff,normals_xz,isaac_sim,"Object not visible after multiple attempts. The diagnostic material (orange) was not detected.
+
+How to fix:
+- Check that the asset has renderable Mesh geometry.
+- Verify the USD file loads correctly (no broken references).
+- Check asset bbox computation for invisible helper geometry.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/4bf78ca23c13050712bad230422b484b42b35aeb/D00722/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/13e2e097d9de092a02a126392c07aa825a4274fc/reports/simready-central/2026.10.15_00/D00722/4bf78ca23c13050712bad230422b484b42b35aeb/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/13e2e097d9de092a02a126392c07aa825a4274fc/reports/simready-central/2026.10.15_00/D00722/4bf78ca23c13050712bad230422b484b42b35aeb/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00722,404d35ec379d5f0ba0e8057774ee74a3843022bae5c69956731a2bfef16aedff,normals_xz,isaac_sim_newton,"Object not visible after multiple attempts. The diagnostic material (orange) was not detected.
+
+How to fix:
+- Check that the asset has renderable Mesh geometry.
+- Verify the USD file loads correctly (no broken references).
+- Check asset bbox computation for invisible helper geometry.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/4bf78ca23c13050712bad230422b484b42b35aeb/D00722/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/13e2e097d9de092a02a126392c07aa825a4274fc/reports/simready-central/2026.10.15_00/D00722/4bf78ca23c13050712bad230422b484b42b35aeb/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/13e2e097d9de092a02a126392c07aa825a4274fc/reports/simready-central/2026.10.15_00/D00722/4bf78ca23c13050712bad230422b484b42b35aeb/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00722,404d35ec379d5f0ba0e8057774ee74a3843022bae5c69956731a2bfef16aedff,presence,isaac_sim,"Presence check FAILED: visibility toggle produced only 0.01% difference (need >=1%).
+
+How to fix:
+- Ensure the asset has at least one visible Mesh prim.
+- Check that meshes are not hidden (visibility=invisible).
+- Verify the USD file loads correctly (no broken references).
+- Ensure geometry has valid extent attributes (VG.002).",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/4bf78ca23c13050712bad230422b484b42b35aeb/D00722/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/13e2e097d9de092a02a126392c07aa825a4274fc/reports/simready-central/2026.10.15_00/D00722/4bf78ca23c13050712bad230422b484b42b35aeb/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/13e2e097d9de092a02a126392c07aa825a4274fc/reports/simready-central/2026.10.15_00/D00722/4bf78ca23c13050712bad230422b484b42b35aeb/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00722,404d35ec379d5f0ba0e8057774ee74a3843022bae5c69956731a2bfef16aedff,presence,isaac_sim_newton,"Presence check FAILED: visibility toggle produced only 0.01% difference (need >=1%).
+
+How to fix:
+- Ensure the asset has at least one visible Mesh prim.
+- Check that meshes are not hidden (visibility=invisible).
+- Verify the USD file loads correctly (no broken references).
+- Ensure geometry has valid extent attributes (VG.002).",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/4bf78ca23c13050712bad230422b484b42b35aeb/D00722/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/13e2e097d9de092a02a126392c07aa825a4274fc/reports/simready-central/2026.10.15_00/D00722/4bf78ca23c13050712bad230422b484b42b35aeb/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/13e2e097d9de092a02a126392c07aa825a4274fc/reports/simready-central/2026.10.15_00/D00722/4bf78ca23c13050712bad230422b484b42b35aeb/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00722,404d35ec379d5f0ba0e8057774ee74a3843022bae5c69956731a2bfef16aedff,preview_surface_renders,isaac_sim,"The asset covers 62 pixel(s) of flat magenta when the control material is bound over it, below the 5000 needed to measure anything.
+
+How to fix:
+- Check the camera framed the object. The run auto-frames on the asset bounds and an empty bound produces this.
+- Check the asset has renderable geometry of default or render purpose that is not authored invisible.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/4bf78ca23c13050712bad230422b484b42b35aeb/D00722/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/13e2e097d9de092a02a126392c07aa825a4274fc/reports/simready-central/2026.10.15_00/D00722/4bf78ca23c13050712bad230422b484b42b35aeb/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/13e2e097d9de092a02a126392c07aa825a4274fc/reports/simready-central/2026.10.15_00/D00722/4bf78ca23c13050712bad230422b484b42b35aeb/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00722,404d35ec379d5f0ba0e8057774ee74a3843022bae5c69956731a2bfef16aedff,preview_surface_renders,isaac_sim_newton,"The asset covers 42 pixel(s) of flat magenta when the control material is bound over it, below the 5000 needed to measure anything.
+
+How to fix:
+- Check the camera framed the object. The run auto-frames on the asset bounds and an empty bound produces this.
+- Check the asset has renderable geometry of default or render purpose that is not authored invisible.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/4bf78ca23c13050712bad230422b484b42b35aeb/D00722/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/13e2e097d9de092a02a126392c07aa825a4274fc/reports/simready-central/2026.10.15_00/D00722/4bf78ca23c13050712bad230422b484b42b35aeb/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/13e2e097d9de092a02a126392c07aa825a4274fc/reports/simready-central/2026.10.15_00/D00722/4bf78ca23c13050712bad230422b484b42b35aeb/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00722,404d35ec379d5f0ba0e8057774ee74a3843022bae5c69956731a2bfef16aedff,semantic_labels_seg_labelled,isaac_sim,"The segmentation AOV is nearly blank: 0.0001 of the frame is segmented, and at least 0.0050 is needed.
+
+How to fix:
+- Give every visible mesh a resolvable SemanticsLabelsAPI label, on the prim itself, on an ancestor, or through its bound material. One label on the defaultPrim covers the whole asset.
+- Apply the schema with at least one authored value. An empty label counts as no label.
+- Run on Isaac Sim 6.0 or later. Earlier versions do not resolve SemanticsLabelsAPI in the segmentation pass, so a correctly labelled asset still renders blank.
+- Confirm the asset is in frame; a mis-framed asset also renders blank.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/4bf78ca23c13050712bad230422b484b42b35aeb/D00722/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/13e2e097d9de092a02a126392c07aa825a4274fc/reports/simready-central/2026.10.15_00/D00722/4bf78ca23c13050712bad230422b484b42b35aeb/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/13e2e097d9de092a02a126392c07aa825a4274fc/reports/simready-central/2026.10.15_00/D00722/4bf78ca23c13050712bad230422b484b42b35aeb/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00722,404d35ec379d5f0ba0e8057774ee74a3843022bae5c69956731a2bfef16aedff,semantic_labels_seg_labelled,isaac_sim_newton,"The segmentation AOV is nearly blank: 0.0001 of the frame is segmented, and at least 0.0050 is needed.
+
+How to fix:
+- Give every visible mesh a resolvable SemanticsLabelsAPI label, on the prim itself, on an ancestor, or through its bound material. One label on the defaultPrim covers the whole asset.
+- Apply the schema with at least one authored value. An empty label counts as no label.
+- Run on Isaac Sim 6.0 or later. Earlier versions do not resolve SemanticsLabelsAPI in the segmentation pass, so a correctly labelled asset still renders blank.
+- Confirm the asset is in frame; a mis-framed asset also renders blank.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/4bf78ca23c13050712bad230422b484b42b35aeb/D00722/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/13e2e097d9de092a02a126392c07aa825a4274fc/reports/simready-central/2026.10.15_00/D00722/4bf78ca23c13050712bad230422b484b42b35aeb/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/13e2e097d9de092a02a126392c07aa825a4274fc/reports/simready-central/2026.10.15_00/D00722/4bf78ca23c13050712bad230422b484b42b35aeb/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00748,a6d3c6afbf1b852a0564a9660ad83b44495efbb567844e7523fd5c7ed2cf32e3,presence,isaac_sim,"Presence check FAILED: visibility toggle produced only 0.53% difference (need >=1%).
+
+How to fix:
+- Ensure the asset has at least one visible Mesh prim.
+- Check that meshes are not hidden (visibility=invisible).
+- Verify the USD file loads correctly (no broken references).
+- Ensure geometry has valid extent attributes (VG.002).",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/36d6ada75f225c6ecd1510ab03cb135ae7146b30/D00748/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/28eac3b3dabd5255787cf13ae8cc4bb023b6d651/reports/simready-central/2026.10.13_00/D00748/36d6ada75f225c6ecd1510ab03cb135ae7146b30/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/28eac3b3dabd5255787cf13ae8cc4bb023b6d651/reports/simready-central/2026.10.13_00/D00748/36d6ada75f225c6ecd1510ab03cb135ae7146b30/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00748,a6d3c6afbf1b852a0564a9660ad83b44495efbb567844e7523fd5c7ed2cf32e3,presence,isaac_sim_newton,"Presence check FAILED: visibility toggle produced only 0.53% difference (need >=1%).
+
+How to fix:
+- Ensure the asset has at least one visible Mesh prim.
+- Check that meshes are not hidden (visibility=invisible).
+- Verify the USD file loads correctly (no broken references).
+- Ensure geometry has valid extent attributes (VG.002).",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/36d6ada75f225c6ecd1510ab03cb135ae7146b30/D00748/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/28eac3b3dabd5255787cf13ae8cc4bb023b6d651/reports/simready-central/2026.10.13_00/D00748/36d6ada75f225c6ecd1510ab03cb135ae7146b30/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/28eac3b3dabd5255787cf13ae8cc4bb023b6d651/reports/simready-central/2026.10.13_00/D00748/36d6ada75f225c6ecd1510ab03cb135ae7146b30/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00752,d45bb30c8182255aaf0aa5274fef095fc5e74e405a8ffe0408bb2af672672bcb,ground_drop,isaac_sim,"Ground drop FAILED: Object penetrated the ground plane after contact.
+
+How to fix:
+- Check collision mesh approximation (convexHull recommended).
+- Verify collision mesh normals point outward.
+- Check for very thin geometry (< 1cm) that may tunnel.
+- Review the video to see where penetration occurs.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/28914d406ef3c7aa3074cfb46a6b7cdfbe944026/D00752/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/f4145136afbec4e24afeb25086dd13b8938ef65e/reports/simready-central/2026.10.13_00/D00752/28914d406ef3c7aa3074cfb46a6b7cdfbe944026/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/f4145136afbec4e24afeb25086dd13b8938ef65e/reports/simready-central/2026.10.13_00/D00752/28914d406ef3c7aa3074cfb46a6b7cdfbe944026/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/38
+D00752,d45bb30c8182255aaf0aa5274fef095fc5e74e405a8ffe0408bb2af672672bcb,slope_drop,isaac_sim,"Slope drop FAILED: Object penetrated the ground after sliding.
+
+How to fix:
+- Check collision mesh approximation (convexHull recommended).
+- The slope-floor transition is a stress point -- check for thin geometry or gaps in collision mesh.
+- Review the video to see where penetration occurs.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/28914d406ef3c7aa3074cfb46a6b7cdfbe944026/D00752/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/f4145136afbec4e24afeb25086dd13b8938ef65e/reports/simready-central/2026.10.13_00/D00752/28914d406ef3c7aa3074cfb46a6b7cdfbe944026/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/f4145136afbec4e24afeb25086dd13b8938ef65e/reports/simready-central/2026.10.13_00/D00752/28914d406ef3c7aa3074cfb46a6b7cdfbe944026/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/38
+D00757,d4c714567333171d3cf6fb269893fefa5d0d8e448c0281476eb8c0af1c49be81,presence,isaac_sim,"Presence check FAILED: visibility toggle produced only 0.42% difference (need >=1%).
+
+How to fix:
+- Ensure the asset has at least one visible Mesh prim.
+- Check that meshes are not hidden (visibility=invisible).
+- Verify the USD file loads correctly (no broken references).
+- Ensure geometry has valid extent attributes (VG.002).",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/c5ba905318702dd2453d8e9a4a13852c9a9e9892/D00757/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/4ac653bcb5243e15e0dd21e7f0c0b66d60cf076c/reports/simready-central/2026.10.13_00/D00757/c5ba905318702dd2453d8e9a4a13852c9a9e9892/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/4ac653bcb5243e15e0dd21e7f0c0b66d60cf076c/reports/simready-central/2026.10.13_00/D00757/c5ba905318702dd2453d8e9a4a13852c9a9e9892/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00757,d4c714567333171d3cf6fb269893fefa5d0d8e448c0281476eb8c0af1c49be81,presence,isaac_sim_newton,"Presence check FAILED: visibility toggle produced only 0.42% difference (need >=1%).
+
+How to fix:
+- Ensure the asset has at least one visible Mesh prim.
+- Check that meshes are not hidden (visibility=invisible).
+- Verify the USD file loads correctly (no broken references).
+- Ensure geometry has valid extent attributes (VG.002).",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/c5ba905318702dd2453d8e9a4a13852c9a9e9892/D00757/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/4ac653bcb5243e15e0dd21e7f0c0b66d60cf076c/reports/simready-central/2026.10.13_00/D00757/c5ba905318702dd2453d8e9a4a13852c9a9e9892/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/4ac653bcb5243e15e0dd21e7f0c0b66d60cf076c/reports/simready-central/2026.10.13_00/D00757/c5ba905318702dd2453d8e9a4a13852c9a9e9892/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00757,d4c714567333171d3cf6fb269893fefa5d0d8e448c0281476eb8c0af1c49be81,preview_surface_renders,isaac_sim,"The asset covers 4340 pixel(s) of flat magenta when the control material is bound over it, below the 5000 needed to measure anything.
+
+How to fix:
+- Check the camera framed the object. The run auto-frames on the asset bounds and an empty bound produces this.
+- Check the asset has renderable geometry of default or render purpose that is not authored invisible.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/c5ba905318702dd2453d8e9a4a13852c9a9e9892/D00757/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/4ac653bcb5243e15e0dd21e7f0c0b66d60cf076c/reports/simready-central/2026.10.13_00/D00757/c5ba905318702dd2453d8e9a4a13852c9a9e9892/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/4ac653bcb5243e15e0dd21e7f0c0b66d60cf076c/reports/simready-central/2026.10.13_00/D00757/c5ba905318702dd2453d8e9a4a13852c9a9e9892/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00757,d4c714567333171d3cf6fb269893fefa5d0d8e448c0281476eb8c0af1c49be81,preview_surface_renders,isaac_sim_newton,"The asset covers 4342 pixel(s) of flat magenta when the control material is bound over it, below the 5000 needed to measure anything.
+
+How to fix:
+- Check the camera framed the object. The run auto-frames on the asset bounds and an empty bound produces this.
+- Check the asset has renderable geometry of default or render purpose that is not authored invisible.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/c5ba905318702dd2453d8e9a4a13852c9a9e9892/D00757/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/4ac653bcb5243e15e0dd21e7f0c0b66d60cf076c/reports/simready-central/2026.10.13_00/D00757/c5ba905318702dd2453d8e9a4a13852c9a9e9892/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/4ac653bcb5243e15e0dd21e7f0c0b66d60cf076c/reports/simready-central/2026.10.13_00/D00757/c5ba905318702dd2453d8e9a4a13852c9a9e9892/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00757,d4c714567333171d3cf6fb269893fefa5d0d8e448c0281476eb8c0af1c49be81,semantic_labels_seg_labelled,isaac_sim,"The segmentation AOV is nearly blank: 0.0041 of the frame is segmented, and at least 0.0050 is needed.
+
+How to fix:
+- Give every visible mesh a resolvable SemanticsLabelsAPI label, on the prim itself, on an ancestor, or through its bound material. One label on the defaultPrim covers the whole asset.
+- Apply the schema with at least one authored value. An empty label counts as no label.
+- Run on Isaac Sim 6.0 or later. Earlier versions do not resolve SemanticsLabelsAPI in the segmentation pass, so a correctly labelled asset still renders blank.
+- Confirm the asset is in frame; a mis-framed asset also renders blank.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/c5ba905318702dd2453d8e9a4a13852c9a9e9892/D00757/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/4ac653bcb5243e15e0dd21e7f0c0b66d60cf076c/reports/simready-central/2026.10.13_00/D00757/c5ba905318702dd2453d8e9a4a13852c9a9e9892/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/4ac653bcb5243e15e0dd21e7f0c0b66d60cf076c/reports/simready-central/2026.10.13_00/D00757/c5ba905318702dd2453d8e9a4a13852c9a9e9892/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00757,d4c714567333171d3cf6fb269893fefa5d0d8e448c0281476eb8c0af1c49be81,semantic_labels_seg_labelled,isaac_sim_newton,"The segmentation AOV is nearly blank: 0.0041 of the frame is segmented, and at least 0.0050 is needed.
+
+How to fix:
+- Give every visible mesh a resolvable SemanticsLabelsAPI label, on the prim itself, on an ancestor, or through its bound material. One label on the defaultPrim covers the whole asset.
+- Apply the schema with at least one authored value. An empty label counts as no label.
+- Run on Isaac Sim 6.0 or later. Earlier versions do not resolve SemanticsLabelsAPI in the segmentation pass, so a correctly labelled asset still renders blank.
+- Confirm the asset is in frame; a mis-framed asset also renders blank.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/c5ba905318702dd2453d8e9a4a13852c9a9e9892/D00757/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/4ac653bcb5243e15e0dd21e7f0c0b66d60cf076c/reports/simready-central/2026.10.13_00/D00757/c5ba905318702dd2453d8e9a4a13852c9a9e9892/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/4ac653bcb5243e15e0dd21e7f0c0b66d60cf076c/reports/simready-central/2026.10.13_00/D00757/c5ba905318702dd2453d8e9a4a13852c9a9e9892/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00762,31a1615b86ac115760877e9ad1de481d952ee58245655aecd97f2904e8137332,slope_drop,isaac_sim,"Slope drop FAILED: Object penetrated the ground after sliding.
+
+How to fix:
+- Check collision mesh approximation (convexHull recommended).
+- The slope-floor transition is a stress point -- check for thin geometry or gaps in collision mesh.
+- Review the video to see where penetration occurs.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/fdc79e5a128aa4701c8f8c625359bbe90b72974d/D00762/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/a26d1ddacea70248a78dfb541d334eb38b81f582/reports/simready-central/2026.10.13_00/D00762/fdc79e5a128aa4701c8f8c625359bbe90b72974d/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/a26d1ddacea70248a78dfb541d334eb38b81f582/reports/simready-central/2026.10.13_00/D00762/fdc79e5a128aa4701c8f8c625359bbe90b72974d/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/38
+D00768,4417c9fa58daf54c826e2e8d5ab715f5d14d312d045bec6cdcc56dad094cf14b,preview_surface_renders,isaac_sim,"With the render-context list pinned to [universal], 65.4% of the asset's 161993 pixel silhouette is shaded by materials it authored, below the 98% required. The remaining 56090 pixel(s) came back as the control material, which is what a pixel the asset binds nothing to looks like.
+
+Both frames are the same scene under the same pin, with one binding's strength flipped, so the difference between them is the asset's own bindings and nothing else. The asset has a surface on: universal.
+
+This is com.nvidia.usd.VM.PS.001.
+
+How to fix:
+- Check the material connects a UsdPreviewSurface shader to the universal outputs:surface, and that the shader uses only spec-defined UsdPreviewSurface inputs and types.
+- Check every renderable Gprim resolves a material, rather than the material being left in /Looks or bound only to invisible, guide or proxy geometry (VM.MAT.001).",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/979fe9c366ee962ea80f6a7b07c47fc44a44da7d/D00768/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/262cb34eb95c7618c1054e848056da25e777d65b/reports/simready-central/2026.10.13_00/D00768/979fe9c366ee962ea80f6a7b07c47fc44a44da7d/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/262cb34eb95c7618c1054e848056da25e777d65b/reports/simready-central/2026.10.13_00/D00768/979fe9c366ee962ea80f6a7b07c47fc44a44da7d/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/37
+D00768,4417c9fa58daf54c826e2e8d5ab715f5d14d312d045bec6cdcc56dad094cf14b,preview_surface_renders,isaac_sim_newton,"With the render-context list pinned to [universal], 65.2% of the asset's 161981 pixel silhouette is shaded by materials it authored, below the 98% required. The remaining 56410 pixel(s) came back as the control material, which is what a pixel the asset binds nothing to looks like.
+
+Both frames are the same scene under the same pin, with one binding's strength flipped, so the difference between them is the asset's own bindings and nothing else. The asset has a surface on: universal.
+
+This is com.nvidia.usd.VM.PS.001.
+
+How to fix:
+- Check the material connects a UsdPreviewSurface shader to the universal outputs:surface, and that the shader uses only spec-defined UsdPreviewSurface inputs and types.
+- Check every renderable Gprim resolves a material, rather than the material being left in /Looks or bound only to invisible, guide or proxy geometry (VM.MAT.001).",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/979fe9c366ee962ea80f6a7b07c47fc44a44da7d/D00768/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/262cb34eb95c7618c1054e848056da25e777d65b/reports/simready-central/2026.10.13_00/D00768/979fe9c366ee962ea80f6a7b07c47fc44a44da7d/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/262cb34eb95c7618c1054e848056da25e777d65b/reports/simready-central/2026.10.13_00/D00768/979fe9c366ee962ea80f6a7b07c47fc44a44da7d/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/37
+D00869,78d442d4b3a64b77fb27e655b43df75e34775186e43c0ffacb82098ef7ebc149,slope_drop,isaac_sim,"Slope drop FAILED: Object penetrated the ground after sliding.
+
+How to fix:
+- Check collision mesh approximation (convexHull recommended).
+- The slope-floor transition is a stress point -- check for thin geometry or gaps in collision mesh.
+- Review the video to see where penetration occurs.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/09707cf1635c492d5171b9e6e43172e0b5bc488d/D00869/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/f30181254658bedb901a637d5594e1a5b8fbd206/reports/simready-central/2026.10.13_00/D00869/09707cf1635c492d5171b9e6e43172e0b5bc488d/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/f30181254658bedb901a637d5594e1a5b8fbd206/reports/simready-central/2026.10.13_00/D00869/09707cf1635c492d5171b9e6e43172e0b5bc488d/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/38
+D00889,4baed654936c82d52ffcb3656033556f530dbea3ed574ced35100ba32a886835,presence,isaac_sim,"Presence check FAILED: visibility toggle produced only 0.03% difference (need >=1%).
+
+How to fix:
+- Ensure the asset has at least one visible Mesh prim.
+- Check that meshes are not hidden (visibility=invisible).
+- Verify the USD file loads correctly (no broken references).
+- Ensure geometry has valid extent attributes (VG.002).",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/6f1b3d3a27e1dc1d86523a98206efd18392f14b1/D00889/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/13e2e097d9de092a02a126392c07aa825a4274fc/reports/simready-central/2026.10.15_00/D00889/6f1b3d3a27e1dc1d86523a98206efd18392f14b1/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/13e2e097d9de092a02a126392c07aa825a4274fc/reports/simready-central/2026.10.15_00/D00889/6f1b3d3a27e1dc1d86523a98206efd18392f14b1/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00889,4baed654936c82d52ffcb3656033556f530dbea3ed574ced35100ba32a886835,presence,isaac_sim_newton,"Presence check FAILED: visibility toggle produced only 0.03% difference (need >=1%).
+
+How to fix:
+- Ensure the asset has at least one visible Mesh prim.
+- Check that meshes are not hidden (visibility=invisible).
+- Verify the USD file loads correctly (no broken references).
+- Ensure geometry has valid extent attributes (VG.002).",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/6f1b3d3a27e1dc1d86523a98206efd18392f14b1/D00889/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/13e2e097d9de092a02a126392c07aa825a4274fc/reports/simready-central/2026.10.15_00/D00889/6f1b3d3a27e1dc1d86523a98206efd18392f14b1/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/13e2e097d9de092a02a126392c07aa825a4274fc/reports/simready-central/2026.10.15_00/D00889/6f1b3d3a27e1dc1d86523a98206efd18392f14b1/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00889,4baed654936c82d52ffcb3656033556f530dbea3ed574ced35100ba32a886835,preview_surface_renders,isaac_sim,"The asset covers 307 pixel(s) of flat magenta when the control material is bound over it, below the 5000 needed to measure anything.
+
+How to fix:
+- Check the camera framed the object. The run auto-frames on the asset bounds and an empty bound produces this.
+- Check the asset has renderable geometry of default or render purpose that is not authored invisible.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/6f1b3d3a27e1dc1d86523a98206efd18392f14b1/D00889/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/13e2e097d9de092a02a126392c07aa825a4274fc/reports/simready-central/2026.10.15_00/D00889/6f1b3d3a27e1dc1d86523a98206efd18392f14b1/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/13e2e097d9de092a02a126392c07aa825a4274fc/reports/simready-central/2026.10.15_00/D00889/6f1b3d3a27e1dc1d86523a98206efd18392f14b1/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00889,4baed654936c82d52ffcb3656033556f530dbea3ed574ced35100ba32a886835,preview_surface_renders,isaac_sim_newton,"The asset covers 300 pixel(s) of flat magenta when the control material is bound over it, below the 5000 needed to measure anything.
+
+How to fix:
+- Check the camera framed the object. The run auto-frames on the asset bounds and an empty bound produces this.
+- Check the asset has renderable geometry of default or render purpose that is not authored invisible.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/6f1b3d3a27e1dc1d86523a98206efd18392f14b1/D00889/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/13e2e097d9de092a02a126392c07aa825a4274fc/reports/simready-central/2026.10.15_00/D00889/6f1b3d3a27e1dc1d86523a98206efd18392f14b1/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/13e2e097d9de092a02a126392c07aa825a4274fc/reports/simready-central/2026.10.15_00/D00889/6f1b3d3a27e1dc1d86523a98206efd18392f14b1/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00889,4baed654936c82d52ffcb3656033556f530dbea3ed574ced35100ba32a886835,semantic_labels_seg_labelled,isaac_sim,"The segmentation AOV is nearly blank: 0.0003 of the frame is segmented, and at least 0.0050 is needed.
+
+How to fix:
+- Give every visible mesh a resolvable SemanticsLabelsAPI label, on the prim itself, on an ancestor, or through its bound material. One label on the defaultPrim covers the whole asset.
+- Apply the schema with at least one authored value. An empty label counts as no label.
+- Run on Isaac Sim 6.0 or later. Earlier versions do not resolve SemanticsLabelsAPI in the segmentation pass, so a correctly labelled asset still renders blank.
+- Confirm the asset is in frame; a mis-framed asset also renders blank.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/6f1b3d3a27e1dc1d86523a98206efd18392f14b1/D00889/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/13e2e097d9de092a02a126392c07aa825a4274fc/reports/simready-central/2026.10.15_00/D00889/6f1b3d3a27e1dc1d86523a98206efd18392f14b1/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/13e2e097d9de092a02a126392c07aa825a4274fc/reports/simready-central/2026.10.15_00/D00889/6f1b3d3a27e1dc1d86523a98206efd18392f14b1/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00889,4baed654936c82d52ffcb3656033556f530dbea3ed574ced35100ba32a886835,semantic_labels_seg_labelled,isaac_sim_newton,"The segmentation AOV is nearly blank: 0.0003 of the frame is segmented, and at least 0.0050 is needed.
+
+How to fix:
+- Give every visible mesh a resolvable SemanticsLabelsAPI label, on the prim itself, on an ancestor, or through its bound material. One label on the defaultPrim covers the whole asset.
+- Apply the schema with at least one authored value. An empty label counts as no label.
+- Run on Isaac Sim 6.0 or later. Earlier versions do not resolve SemanticsLabelsAPI in the segmentation pass, so a correctly labelled asset still renders blank.
+- Confirm the asset is in frame; a mis-framed asset also renders blank.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/6f1b3d3a27e1dc1d86523a98206efd18392f14b1/D00889/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/13e2e097d9de092a02a126392c07aa825a4274fc/reports/simready-central/2026.10.15_00/D00889/6f1b3d3a27e1dc1d86523a98206efd18392f14b1/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/13e2e097d9de092a02a126392c07aa825a4274fc/reports/simready-central/2026.10.15_00/D00889/6f1b3d3a27e1dc1d86523a98206efd18392f14b1/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/36
+D00944,fe494a69ab3560ec06a61775ce555043b18dc3967816dbc247a7ebfbc2397bba,slope_drop,isaac_sim,"Slope drop FAILED: Object penetrated the ground after sliding.
+
+How to fix:
+- Check collision mesh approximation (convexHull recommended).
+- The slope-floor transition is a stress point -- check for thin geometry or gaps in collision mesh.
+- Review the video to see where penetration occurs.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/21c076a96d104a9d64a2767223a9de73d4a76f60/D00944/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/4dd040e8e38afe4a4e70753159e319060c2fe7f6/reports/simready-central/2026.10.13_00/D00944/21c076a96d104a9d64a2767223a9de73d4a76f60/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/4dd040e8e38afe4a4e70753159e319060c2fe7f6/reports/simready-central/2026.10.13_00/D00944/21c076a96d104a9d64a2767223a9de73d4a76f60/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/38
+D00946,8a5e3481ceb6e0a9999c18491be4ee7cd2875fc858f1d74ab8af4e95f2c68bd3,slope_drop,isaac_sim,"Slope drop FAILED: Object penetrated the ground after sliding.
+
+How to fix:
+- Check collision mesh approximation (convexHull recommended).
+- The slope-floor transition is a stress point -- check for thin geometry or gaps in collision mesh.
+- Review the video to see where penetration occurs.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/dca8c32b0d13fef6f512fd28dae4a06cf79b8d55/D00946/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/e950de5d78b04cafd82819d06c3f6e1efe3b1266/reports/simready-central/2026.10.13_00/D00946/dca8c32b0d13fef6f512fd28dae4a06cf79b8d55/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/e950de5d78b04cafd82819d06c3f6e1efe3b1266/reports/simready-central/2026.10.13_00/D00946/dca8c32b0d13fef6f512fd28dae4a06cf79b8d55/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/38
+D00948,bcb44081644de74d53e58387a4249e8cca143599414621afad4c3f3107f383f3,slope_drop,isaac_sim,"Slope drop FAILED: Object penetrated the ground after sliding.
+
+How to fix:
+- Check collision mesh approximation (convexHull recommended).
+- The slope-floor transition is a stress point -- check for thin geometry or gaps in collision mesh.
+- Review the video to see where penetration occurs.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/c1224de276a2381f67351f9caacd11a96a1c5f1d/D00948/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/789f898cb981bb0569c2c81f10333cceb06e91c1/reports/simready-central/2026.10.13_00/D00948/c1224de276a2381f67351f9caacd11a96a1c5f1d/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/789f898cb981bb0569c2c81f10333cceb06e91c1/reports/simready-central/2026.10.13_00/D00948/c1224de276a2381f67351f9caacd11a96a1c5f1d/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/38
+D00958,d9be65bfb74dd4f54082fc5666e0666447481ae92093db7934629c0ceaf9fc61,ground_drop,isaac_sim,"Ground drop FAILED: Object penetrated the ground plane after contact.
+
+How to fix:
+- Check collision mesh approximation (convexHull recommended).
+- Verify collision mesh normals point outward.
+- Check for very thin geometry (< 1cm) that may tunnel.
+- Review the video to see where penetration occurs.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/7c0628a59567f593133db8835f83db870701c650/D00958/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/5c2baa34d3d20e9ef1c23536ee4d913e00efe05a/reports/simready-central/2026.10.13_00/D00958/7c0628a59567f593133db8835f83db870701c650/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/5c2baa34d3d20e9ef1c23536ee4d913e00efe05a/reports/simready-central/2026.10.13_00/D00958/7c0628a59567f593133db8835f83db870701c650/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/38
+D00958,d9be65bfb74dd4f54082fc5666e0666447481ae92093db7934629c0ceaf9fc61,slope_drop,isaac_sim,"Slope drop FAILED: Object penetrated the ground after sliding.
+
+How to fix:
+- Check collision mesh approximation (convexHull recommended).
+- The slope-floor transition is a stress point -- check for thin geometry or gaps in collision mesh.
+- Review the video to see where penetration occurs.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/7c0628a59567f593133db8835f83db870701c650/D00958/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/5c2baa34d3d20e9ef1c23536ee4d913e00efe05a/reports/simready-central/2026.10.13_00/D00958/7c0628a59567f593133db8835f83db870701c650/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/5c2baa34d3d20e9ef1c23536ee4d913e00efe05a/reports/simready-central/2026.10.13_00/D00958/7c0628a59567f593133db8835f83db870701c650/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/38
+D01006,d6b1ab1c2146802087adc187ec1183daf2501359c8f78d326abd55062a38e6ce,preview_surface_renders,isaac_sim,"With the render-context list pinned to [universal], 76.2% of the asset's 197471 pixel silhouette is shaded by materials it authored, below the 98% required. The remaining 47090 pixel(s) came back as the control material, which is what a pixel the asset binds nothing to looks like.
+
+Both frames are the same scene under the same pin, with one binding's strength flipped, so the difference between them is the asset's own bindings and nothing else. The asset has a surface on: universal.
+
+This is com.nvidia.usd.VM.PS.001.
+
+How to fix:
+- Check the material connects a UsdPreviewSurface shader to the universal outputs:surface, and that the shader uses only spec-defined UsdPreviewSurface inputs and types.
+- Check every renderable Gprim resolves a material, rather than the material being left in /Looks or bound only to invisible, guide or proxy geometry (VM.MAT.001).",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/2aba6ada4d6fdb6c2a6142128912423380a196d5/D01006/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/f24d1096cc5d1bc59ea1df74aebaf5a2287a6027/reports/simready-central/2026.10.13_00/D01006/2aba6ada4d6fdb6c2a6142128912423380a196d5/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/f24d1096cc5d1bc59ea1df74aebaf5a2287a6027/reports/simready-central/2026.10.13_00/D01006/2aba6ada4d6fdb6c2a6142128912423380a196d5/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/37
+D01006,d6b1ab1c2146802087adc187ec1183daf2501359c8f78d326abd55062a38e6ce,preview_surface_renders,isaac_sim_newton,"With the render-context list pinned to [universal], 76.2% of the asset's 197449 pixel silhouette is shaded by materials it authored, below the 98% required. The remaining 47083 pixel(s) came back as the control material, which is what a pixel the asset binds nothing to looks like.
+
+Both frames are the same scene under the same pin, with one binding's strength flipped, so the difference between them is the asset's own bindings and nothing else. The asset has a surface on: universal.
+
+This is com.nvidia.usd.VM.PS.001.
+
+How to fix:
+- Check the material connects a UsdPreviewSurface shader to the universal outputs:surface, and that the shader uses only spec-defined UsdPreviewSurface inputs and types.
+- Check every renderable Gprim resolves a material, rather than the material being left in /Looks or bound only to invisible, guide or proxy geometry (VM.MAT.001).",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/2aba6ada4d6fdb6c2a6142128912423380a196d5/D01006/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/f24d1096cc5d1bc59ea1df74aebaf5a2287a6027/reports/simready-central/2026.10.13_00/D01006/2aba6ada4d6fdb6c2a6142128912423380a196d5/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/f24d1096cc5d1bc59ea1df74aebaf5a2287a6027/reports/simready-central/2026.10.13_00/D01006/2aba6ada4d6fdb6c2a6142128912423380a196d5/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/37
+D01023,95bfc66093d2bb9ebc5d1028d31bf7f964b6b4c9431bece5ee14d9d6165549e0,preview_surface_renders,isaac_sim,"With the render-context list pinned to [universal], 95.4% of the asset's 167969 pixel silhouette is shaded by materials it authored, below the 98% required. The remaining 7806 pixel(s) came back as the control material, which is what a pixel the asset binds nothing to looks like.
+
+Both frames are the same scene under the same pin, with one binding's strength flipped, so the difference between them is the asset's own bindings and nothing else. The asset has a surface on: universal.
+
+This is com.nvidia.usd.VM.PS.001.
+
+How to fix:
+- Check the material connects a UsdPreviewSurface shader to the universal outputs:surface, and that the shader uses only spec-defined UsdPreviewSurface inputs and types.
+- Check every renderable Gprim resolves a material, rather than the material being left in /Looks or bound only to invisible, guide or proxy geometry (VM.MAT.001).",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/e950de5d78b04cafd82819d06c3f6e1efe3b1266/D01023/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/2509acf2a3fc00d159cc1353da8400325eb527af/reports/simready-central/2026.10.13_00/D01023/e950de5d78b04cafd82819d06c3f6e1efe3b1266/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/2509acf2a3fc00d159cc1353da8400325eb527af/reports/simready-central/2026.10.13_00/D01023/e950de5d78b04cafd82819d06c3f6e1efe3b1266/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/37
+D01023,95bfc66093d2bb9ebc5d1028d31bf7f964b6b4c9431bece5ee14d9d6165549e0,preview_surface_renders,isaac_sim_newton,"With the render-context list pinned to [universal], 95.3% of the asset's 168030 pixel silhouette is shaded by materials it authored, below the 98% required. The remaining 7872 pixel(s) came back as the control material, which is what a pixel the asset binds nothing to looks like.
+
+Both frames are the same scene under the same pin, with one binding's strength flipped, so the difference between them is the asset's own bindings and nothing else. The asset has a surface on: universal.
+
+This is com.nvidia.usd.VM.PS.001.
+
+How to fix:
+- Check the material connects a UsdPreviewSurface shader to the universal outputs:surface, and that the shader uses only spec-defined UsdPreviewSurface inputs and types.
+- Check every renderable Gprim resolves a material, rather than the material being left in /Looks or bound only to invisible, guide or proxy geometry (VM.MAT.001).",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/e950de5d78b04cafd82819d06c3f6e1efe3b1266/D01023/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/2509acf2a3fc00d159cc1353da8400325eb527af/reports/simready-central/2026.10.13_00/D01023/e950de5d78b04cafd82819d06c3f6e1efe3b1266/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/2509acf2a3fc00d159cc1353da8400325eb527af/reports/simready-central/2026.10.13_00/D01023/e950de5d78b04cafd82819d06c3f6e1efe3b1266/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/37
+D01047,d0a4c002e0a2b2f86f883afa2ff469784a1490c48055565161b912efbb388371,slope_drop,isaac_sim,"Slope drop FAILED: Object penetrated the ground after sliding.
+
+How to fix:
+- Check collision mesh approximation (convexHull recommended).
+- The slope-floor transition is a stress point -- check for thin geometry or gaps in collision mesh.
+- Review the video to see where penetration occurs.",https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/ff705eea9c5381662332c656b349de327d03bba0/D01047/com.nvidia.simready.packaging.json,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/13e2e097d9de092a02a126392c07aa825a4274fc/reports/simready-central/2026.10.15_00/D01047/ff705eea9c5381662332c656b349de327d03bba0/benchmark-report.tar.gz,https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/13e2e097d9de092a02a126392c07aa825a4274fc/reports/simready-central/2026.10.15_00/D01047/ff705eea9c5381662332c656b349de327d03bba0/evidence.json,https://github.com/NVIDIA/simready-foundation/issues/38

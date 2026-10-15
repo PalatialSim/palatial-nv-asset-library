@@ -17,19 +17,24 @@ jobs:
           sparse-checkout: |
             /gallery/assets.json
             /gallery/index.html
+            /gallery/assets/source-quality-20261015/**
             /batch*/**/physics*.json
             /tools/*.py
+            /tools/requirements-release.txt
             /tools/native_validation/**
             /reports/current-release.json
             /reports/releases/2026.10.13/assets.json
             /reports/releases/2026.10.13/tool-findings/**
+            /reports/releases/2026.10.15/**
             /data/catalog.jsonl
             /data/catalog.parquet
       - uses: actions/setup-python@v5
         with:
           python-version: '3.13'
+      - run: python -m pip install -r tools/requirements-release.txt
       - run: python tools/audit_metadata.py .
       - run: python tools/release_manifest.py .
-      - name: Require complete native and package acceptance
+      - run: python tools/check_review_release_regressions.py .
+      - name: Require complete current-release evidence
         if: github.event_name != 'pull_request' || !github.event.pull_request.draft
         run: python tools/release_manifest.py . --require-ready

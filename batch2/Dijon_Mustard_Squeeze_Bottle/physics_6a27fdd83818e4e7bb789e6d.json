@@ -92,7 +92,8 @@
     "source_kilograms_per_unit": 1.0,
     "source_up_axis": "Z",
     "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification.",
-    "asset_id_source": "existing asset folder identifier; no numbered D identifier was present"
+    "asset_id_source": "existing asset folder identifier; no numbered D identifier was present",
+    "current_standard_submission": "reports/releases/2026.10.15/standard-submission/inventory.json"
   },
   "schema_version": "1.0",
   "simulation": {},
@@ -102,7 +103,7 @@
     "up_axis": "Z"
   },
   "validation": {
-    "overall": "verified",
+    "overall": "stock_tests_passed",
     "scale": {
       "status": "verified",
       "confidence": "high",
@@ -156,8 +157,8 @@
       "joint_count": 0,
       "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
     },
-    "scope": "authored_usd_metadata_consistency",
-    "runtime": {
+    "scope": "authored_metadata_and_complete_unchanged_stock_evidence_for_review",
+    "historical_runtime": {
       "evidence_archive": {
         "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/f3ee4a61fcf3bd922a47e97c4cc3f5f73b4bb98c/reports/native/2026.10.13/shard-06/native-batch-005-evidence.tar.gz",
         "sha256": "d1ba914a995b2ae9e7a4bba12a64bc3f98dd297b792cdf0e65e7aa0845a015b9",
@@ -184,7 +185,39 @@
       "joints_failed": 0,
       "thumbnail_sha256": "09e5005852aa423da7eaceace7755d2d2e48cc6d0d704e601c855e8439786c01",
       "qualification": "native-fleet-evidence/shard-06/native-batch-005/qualification-normalized.json",
-      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks",
+      "applies_to_current_source": true,
+      "qualification_period": "historical_internal_native_release_2026.10.13"
+    },
+    "runtime": {
+      "status": "passed",
+      "scope": "unchanged_stock_tests_for_NVIDIA_review",
+      "usd_sha256": "796a7d60474436d4755db7170cae007c26827a095e77bf5cd91c1cd5df1fcb50",
+      "asset_version": "2026.10.13_00",
+      "result_counts": {
+        "pass": 18,
+        "skipped": 2
+      },
+      "configured_engines": [
+        "isaac_sim",
+        "isaac_sim_newton"
+      ],
+      "physics_runtime": "PhysX",
+      "Newton_physics_qualified": false,
+      "stock_provider_only": true,
+      "benchmark_parameter_overrides": [],
+      "skip_or_ignore_flags": [],
+      "declared_test_coverage_verified": true,
+      "requires_NVIDIA_review": false,
+      "NVIDIA_approval": "pending",
+      "known_issue_urls": [],
+      "note": "Recorded eligibility skips are retained. Authored physical properties are not independent measurements.",
+      "package_url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/dd26a782709b46fa393837d18ed9b48d5edb3699/Dijon_Mustard_Squeeze_Bottle/com.nvidia.simready.packaging.json",
+      "raw_archive_url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/e820f058dd3463d5cf99143d310cd3ee4747c881/reports/simready-central/2026.10.13_00/Dijon_Mustard_Squeeze_Bottle/dd26a782709b46fa393837d18ed9b48d5edb3699/benchmark-report.tar.gz",
+      "raw_manifest_url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/e820f058dd3463d5cf99143d310cd3ee4747c881/reports/simready-central/2026.10.13_00/Dijon_Mustard_Squeeze_Bottle/dd26a782709b46fa393837d18ed9b48d5edb3699/evidence.json",
+      "benchmark_sidecar_sha256": "62b271f78bf97c00c60fafb93ad86f414daf53309339d84085eb6e97290b75a3",
+      "raw_archive_sha256": "7bf17556e3302ae302e503b958f97508df11e3a9cb6fa545046bd8c50ab73ec2",
+      "default_stock_plan_sha256": "7b1f7f967b91dff5307aac289220573f30d43e8d0f93882d64a8dff57bd5394d"
     }
   },
   "asset_id": "Dijon_Mustard_Squeeze_Bottle"

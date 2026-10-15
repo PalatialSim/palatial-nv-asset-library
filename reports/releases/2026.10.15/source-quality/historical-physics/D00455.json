@@ -1,0 +1,646 @@
+{
+  "articulation": {
+    "has_joints": true,
+    "joints": [
+      {
+        "authored_attributes": {
+          "physics:axis": "X",
+          "physics:localPos0": "(0, 0, 0.1955)",
+          "physics:localPos1": "(0, 0, 0.1955)",
+          "physics:localRot0": "(0.70710677, 0, -0.70710677, 0)",
+          "physics:localRot1": "(0.70710677, 0, -0.70710677, 0)"
+        },
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "axis_frame": "USD joint-local frame; apply authored physics:localRot0/1 and body transforms for world axis; not bounds_frame",
+        "body0": "/World/part_01",
+        "body0_targets": [
+          "/World/part_01"
+        ],
+        "body1": "/World/part_02",
+        "body1_targets": [
+          "/World/part_02"
+        ],
+        "joint_path": "/World/Joints/blade_spin",
+        "path": "/World/Joints/blade_spin",
+        "type": "revolute",
+        "usd_type": "PhysicsRevoluteJoint",
+        "id": "blade_spin",
+        "enabled": true,
+        "authored_usd": {
+          "id": "blade_spin",
+          "source_prim_path": "/World/Joints/blade_spin",
+          "joint_type": "PhysicsRevoluteJoint",
+          "body0": [
+            "/World/part_01"
+          ],
+          "body1": [
+            "/World/part_02"
+          ],
+          "joint_enabled": true,
+          "axis": "X",
+          "lowerLimit": "-Infinity",
+          "upperLimit": "Infinity",
+          "localPos0": [
+            0.0,
+            0.0,
+            0.19550000131130219
+          ],
+          "localPos1": [
+            0.0,
+            0.0,
+            0.19550000131130219
+          ],
+          "localRot0": [
+            0.7071067690849304,
+            0.0,
+            -0.7071067690849304,
+            0.0
+          ],
+          "localRot1": [
+            0.7071067690849304,
+            0.0,
+            -0.7071067690849304,
+            0.0
+          ],
+          "static_frames": []
+        }
+      },
+      {
+        "authored_attributes": {
+          "drive:angular:physics:damping": 9.999999747378752e-05,
+          "physics:axis": "X",
+          "physics:localPos0": "(-0.024, -0.08459, 0.056)",
+          "physics:localPos1": "(-0.024, -0.08459, 0.056)",
+          "physics:localRot0": "(0.70710677, 0, 0, 0.70710677)",
+          "physics:localRot1": "(0.70710677, 0, 0, 0.70710677)",
+          "physics:lowerLimit": -150.0,
+          "physics:upperLimit": 150.0
+        },
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "axis_frame": "USD joint-local frame; apply authored physics:localRot0/1 and body transforms for world axis; not bounds_frame",
+        "body0": "/World/part_00",
+        "body0_targets": [
+          "/World/part_00"
+        ],
+        "body1": "/World/part_05",
+        "body1_targets": [
+          "/World/part_05"
+        ],
+        "joint_path": "/World/Joints/speed_dial_rotate",
+        "motion_limits": {
+          "max": 150.0,
+          "min": -150.0
+        },
+        "path": "/World/Joints/speed_dial_rotate",
+        "type": "revolute",
+        "usd_type": "PhysicsRevoluteJoint",
+        "id": "speed_dial_rotate",
+        "enabled": true,
+        "authored_usd": {
+          "id": "speed_dial_rotate",
+          "source_prim_path": "/World/Joints/speed_dial_rotate",
+          "joint_type": "PhysicsRevoluteJoint",
+          "body0": [
+            "/World/part_00"
+          ],
+          "body1": [
+            "/World/part_05"
+          ],
+          "joint_enabled": true,
+          "axis": "X",
+          "lowerLimit": -150.0,
+          "upperLimit": 150.0,
+          "localPos0": [
+            -0.024000000208616257,
+            -0.08459000289440155,
+            0.0560000017285347
+          ],
+          "localPos1": [
+            -0.024000000208616257,
+            -0.08459000289440155,
+            0.0560000017285347
+          ],
+          "localRot0": [
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ],
+          "localRot1": [
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ],
+          "static_frames": []
+        }
+      },
+      {
+        "authored_attributes": {
+          "drive:linear:physics:damping": 0.5,
+          "drive:linear:physics:stiffness": 50.0,
+          "drive:linear:physics:targetPosition": 0.0,
+          "drive:linear:physics:targetVelocity": 0.0,
+          "drive:linear:physics:type": "force",
+          "physics:axis": "X",
+          "physics:localPos0": "(0.032, -0.08424, 0.062)",
+          "physics:localPos1": "(0.032, -0.08424, 0.062)",
+          "physics:localRot0": "(0.70710677, 0, 0, 0.70710677)",
+          "physics:localRot1": "(0.70710677, 0, 0, 0.70710677)",
+          "physics:lowerLimit": 0.0,
+          "physics:upperLimit": 0.004999999888241291,
+          "physxLimit:linear:stiffness": 0.0
+        },
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "axis_frame": "USD joint-local frame; apply authored physics:localRot0/1 and body transforms for world axis; not bounds_frame",
+        "body0": "/World/part_00",
+        "body0_targets": [
+          "/World/part_00"
+        ],
+        "body1": "/World/part_06",
+        "body1_targets": [
+          "/World/part_06"
+        ],
+        "joint_path": "/World/Joints/pulse_button_press",
+        "motion_limits": {
+          "max": 0.004999999888241291,
+          "min": 0.0
+        },
+        "path": "/World/Joints/pulse_button_press",
+        "type": "prismatic",
+        "usd_type": "PhysicsPrismaticJoint",
+        "id": "pulse_button_press",
+        "enabled": true,
+        "authored_usd": {
+          "id": "pulse_button_press",
+          "source_prim_path": "/World/Joints/pulse_button_press",
+          "joint_type": "PhysicsPrismaticJoint",
+          "body0": [
+            "/World/part_00"
+          ],
+          "body1": [
+            "/World/part_06"
+          ],
+          "joint_enabled": true,
+          "axis": "X",
+          "lowerLimit": 0.0,
+          "upperLimit": 0.004999999888241291,
+          "localPos0": [
+            0.03200000151991844,
+            -0.08423999696969986,
+            0.06199999898672104
+          ],
+          "localPos1": [
+            0.03200000151991844,
+            -0.08423999696969986,
+            0.06199999898672104
+          ],
+          "localRot0": [
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ],
+          "localRot1": [
+            0.7071067690849304,
+            0.0,
+            0.0,
+            0.7071067690849304
+          ],
+          "static_frames": []
+        }
+      },
+      {
+        "authored_attributes": {
+          "physics:collisionEnabled": false,
+          "physics:jointEnabled": true,
+          "physics:localPos0": "(0, 0, 0.19)",
+          "physics:localPos1": "(0, 0, 0.19)",
+          "physics:localRot0": "(0.70710677, 0, -0.70710677, 0)",
+          "physics:localRot1": "(0.70710677, 0, -0.70710677, 0)"
+        },
+        "axis_frame": "USD joint-local frame; apply authored physics:localRot0/1 and body transforms for world axis; not bounds_frame",
+        "body0": "/World/part_00",
+        "body0_targets": [
+          "/World/part_00"
+        ],
+        "body1": "/World/part_01",
+        "body1_targets": [
+          "/World/part_01"
+        ],
+        "joint_path": "/World/Joints/jar_fixed",
+        "path": "/World/Joints/jar_fixed",
+        "type": "fixed",
+        "usd_type": "PhysicsFixedJoint",
+        "id": "jar_fixed",
+        "enabled": true,
+        "authored_usd": {
+          "id": "jar_fixed",
+          "source_prim_path": "/World/Joints/jar_fixed",
+          "joint_type": "PhysicsFixedJoint",
+          "body0": [
+            "/World/part_00"
+          ],
+          "body1": [
+            "/World/part_01"
+          ],
+          "joint_enabled": true,
+          "localPos0": [
+            0.0,
+            0.0,
+            0.1899999976158142
+          ],
+          "localPos1": [
+            0.0,
+            0.0,
+            0.1899999976158142
+          ],
+          "localRot0": [
+            0.7071067690849304,
+            0.0,
+            -0.7071067690849304,
+            0.0
+          ],
+          "localRot1": [
+            0.7071067690849304,
+            0.0,
+            -0.7071067690849304,
+            0.0
+          ],
+          "static_frames": []
+        }
+      }
+    ],
+    "moving_joints": 3,
+    "rigid_body_count": 7,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
+  },
+  "asset": {
+    "bounds": {
+      "min": [
+        -0.13419848680496216,
+        -0.10670675337314606,
+        0.0
+      ],
+      "max": [
+        0.0900077223777771,
+        0.0900077223777771,
+        0.4236000180244446
+      ],
+      "size": [
+        0.22420620918273926,
+        0.19671447575092316,
+        0.4236000180244446
+      ],
+      "units": "m"
+    },
+    "name": "part_00",
+    "total_mass": 3.6700000744313,
+    "object_type": "rigid_bodies",
+    "bounds_frame": "USD stage world axes, metres, default authored pose",
+    "description": "3D model of kitchen blender for robotics simulation research. The delivered USD contains 7 rigid bodies and 3 enabled moving joint constraints."
+  },
+  "asset_id": "D00455",
+  "parts": [
+    {
+      "bounds": {
+        "min": [
+          -0.0900077223777771,
+          -0.08918033540248871,
+          0.0
+        ],
+        "max": [
+          0.0900077223777771,
+          0.0900077223777771,
+          0.1770000010728836
+        ],
+        "size": [
+          0.1800154447555542,
+          0.1791880577802658,
+          0.1770000010728836
+        ],
+        "units": "m"
+      },
+      "collision": {},
+      "id": "part_00",
+      "mass": 2.4000000953674316,
+      "name": "part_00",
+      "physics_type": "rigid_body",
+      "source": {
+        "object_name": "/World/part_00",
+        "part_name": "part_00"
+      },
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
+    },
+    {
+      "bounds": {
+        "min": [
+          -0.13419848680496216,
+          -0.0713733360171318,
+          0.16519999504089355
+        ],
+        "max": [
+          0.07734370976686478,
+          0.0713733360171318,
+          0.4000000059604645
+        ],
+        "size": [
+          0.21154219657182693,
+          0.1427466720342636,
+          0.23480001091957092
+        ],
+        "units": "m"
+      },
+      "collision": {},
+      "id": "part_01",
+      "mass": 0.8999999761581421,
+      "name": "part_01",
+      "physics_type": "rigid_body",
+      "source": {
+        "object_name": "/World/part_01",
+        "part_name": "part_01"
+      },
+      "source_prim_path": "/World/part_01",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
+    },
+    {
+      "bounds": {
+        "min": [
+          -0.03939124941825867,
+          -0.032999999821186066,
+          0.16850000619888306
+        ],
+        "max": [
+          0.032999999821186066,
+          0.032999999821186066,
+          0.21455076336860657
+        ],
+        "size": [
+          0.07239124923944473,
+          0.06599999964237213,
+          0.04605075716972351
+        ],
+        "units": "m"
+      },
+      "collision": {},
+      "id": "part_02",
+      "mass": 0.11999999731779099,
+      "name": "part_02",
+      "physics_type": "rigid_body",
+      "source": {
+        "object_name": "/World/part_02",
+        "part_name": "part_02"
+      },
+      "source_prim_path": "/World/part_02",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
+    },
+    {
+      "bounds": {
+        "min": [
+          -0.08290938287973404,
+          -0.07100000232458115,
+          0.38999998569488525
+        ],
+        "max": [
+          0.07795434445142746,
+          0.07100000232458115,
+          0.41499999165534973
+        ],
+        "size": [
+          0.1608637273311615,
+          0.1420000046491623,
+          0.025000005960464478
+        ],
+        "units": "m"
+      },
+      "collision": {},
+      "id": "part_03",
+      "mass": 0.15000000596046448,
+      "name": "part_03",
+      "physics_type": "rigid_body",
+      "source": {
+        "object_name": "/World/part_03",
+        "part_name": "part_03"
+      },
+      "source_prim_path": "/World/part_03",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
+    },
+    {
+      "bounds": {
+        "min": [
+          -0.029600000008940697,
+          -0.027499999850988388,
+          0.3946000039577484
+        ],
+        "max": [
+          0.029600000008940697,
+          0.027499999850988388,
+          0.4236000180244446
+        ],
+        "size": [
+          0.05920000001788139,
+          0.054999999701976776,
+          0.029000014066696167
+        ],
+        "units": "m"
+      },
+      "collision": {},
+      "id": "part_04",
+      "mass": 0.03999999910593033,
+      "name": "part_04",
+      "physics_type": "rigid_body",
+      "source": {
+        "object_name": "/World/part_04",
+        "part_name": "part_04"
+      },
+      "source_prim_path": "/World/part_04",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
+    },
+    {
+      "bounds": {
+        "min": [
+          -0.046500012278556824,
+          -0.10670675337314606,
+          0.03343966603279114
+        ],
+        "max": [
+          -0.0015000104904174805,
+          -0.08160485327243805,
+          0.08602529764175415
+        ],
+        "size": [
+          0.04500000178813934,
+          0.025101900100708008,
+          0.05258563160896301
+        ],
+        "units": "m"
+      },
+      "collision": {},
+      "id": "part_05",
+      "mass": 0.05000000074505806,
+      "name": "part_05",
+      "physics_type": "rigid_body",
+      "source": {
+        "object_name": "/World/part_05",
+        "part_name": "part_05"
+      },
+      "source_prim_path": "/World/part_05",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
+    },
+    {
+      "bounds": {
+        "min": [
+          0.02300000935792923,
+          -0.08929460495710373,
+          0.052986133843660355
+        ],
+        "max": [
+          0.04100000858306885,
+          -0.07626444101333618,
+          0.07111085206270218
+        ],
+        "size": [
+          0.017999999225139618,
+          0.013030163943767548,
+          0.018124718219041824
+        ],
+        "units": "m"
+      },
+      "collision": {},
+      "id": "part_06",
+      "mass": 0.009999999776482582,
+      "name": "part_06",
+      "physics_type": "rigid_body",
+      "source": {
+        "object_name": "/World/part_06",
+        "part_name": "part_06"
+      },
+      "source_prim_path": "/World/part_06",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
+    }
+  ],
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "c3d71caae075031f307a6f3ae28590e1f11a27a63f4eef1953ed9cf85cd5fbe2"
+    },
+    "usd_path": "batch38/D00455_Kitchen_Blender_Blender agent/D00455_Kitchen_Blender/IsaacSim_assets_D00455/IsaacSim_asset_D00455.usd",
+    "usd_sha256": "08a50f67bc9354e28613e10d70f9e1e356e4c3a1583c261abd0d146fba38b96c",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  },
+  "validation": {
+    "overall": "verified",
+    "scale": {
+      "status": "verified",
+      "confidence": "high",
+      "units": "m",
+      "up_axis": "Z",
+      "bounds_m": [
+        0.22420620918273926,
+        0.19671447575092316,
+        0.4236000180244446
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "08a50f67bc9354e28613e10d70f9e1e356e4c3a1583c261abd0d146fba38b96c",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
+    },
+    "mass": {
+      "status": "verified",
+      "confidence": "high",
+      "value_kg": 3.6700000744313,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "08a50f67bc9354e28613e10d70f9e1e356e4c3a1583c261abd0d146fba38b96c",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 3.6700000744313,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
+    },
+    "collision": {
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 224,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "08a50f67bc9354e28613e10d70f9e1e356e4c3a1583c261abd0d146fba38b96c",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 224,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
+    },
+    "articulation": {
+      "status": "verified",
+      "confidence": "high",
+      "moving_joints": 3,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "08a50f67bc9354e28613e10d70f9e1e356e4c3a1583c261abd0d146fba38b96c",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 4,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/d7387fbb877243624d88595454d27cd823630c66/reports/native/2026.10.13/shard-09/native-batch-001-evidence.tar.gz",
+        "sha256": "f52047ff56220927eb6005a0d4dba2f86b3f93d82de5dbf5ee495911b34cb6f0",
+        "hf_commit": "d7387fbb877243624d88595454d27cd823630c66",
+        "size_bytes": 109000165
+      },
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "08a50f67bc9354e28613e10d70f9e1e356e4c3a1583c261abd0d146fba38b96c",
+      "supplemental_accepted": true,
+      "planned_test_count": 14,
+      "result_count": 14,
+      "passed": 13,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
+      "warnings": [
+        "official_relative_translation_requires_independent_anchor_check"
+      ],
+      "completed_at": "2026-10-13T22:47:21.196119+00:00",
+      "joint_status": "passed",
+      "joints_total": 3,
+      "joints_passed": 3,
+      "joints_failed": 0,
+      "thumbnail_sha256": "72e525f7d4c984613a77a688c42578d87035b4728754b99bd934451a5aa74cea",
+      "qualification": "native-fleet-evidence/shard-09/native-batch-001/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
+    }
+  }
+}

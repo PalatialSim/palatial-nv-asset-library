@@ -1,0 +1,214 @@
+{
+  "schema_version": "1.0",
+  "asset_id": "D00064",
+  "asset": {
+    "name": "D00064 Footed Wooden Bowl",
+    "description": "Small round bowls with thick rolled rims, hollow interiors, and shallow raised foot rings, shown in varnished wood and brushed stainless-steel finishes.",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.44999998807907104,
+    "bounds": {
+      "min": [
+        -0.09050100296735764,
+        -0.09025099873542786,
+        -9.000000318337698e-06
+      ],
+      "max": [
+        0.09024199843406677,
+        0.09029500186443329,
+        0.10045100003480911
+      ],
+      "size": [
+        0.1807430014014244,
+        0.18054600059986115,
+        0.10046000003512745
+      ],
+      "units": "m"
+    },
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
+  },
+  "parts": [
+    {
+      "id": "part_00",
+      "name": "D00064 Bowl Mortar",
+      "mass": 0.44999998807907104,
+      "density": 650.0,
+      "volume": 0.000890740991108965,
+      "inertia": [
+        0.0014214204843417367,
+        0.0014246096904560533,
+        0.0020376259930804763
+      ],
+      "inertia_axes": [
+        0.9999602684274536,
+        0.00013121831143460283,
+        -3.806095497127515e-05,
+        0.008913074644227574
+      ],
+      "center_of_mass": [
+        -0.00013934883804328927,
+        4.57665384132895e-05,
+        0.04621291133819426
+      ],
+      "bounds": {
+        "min": [
+          -0.09050100296735764,
+          -0.09025099873542786,
+          -9.000000318337698e-06
+        ],
+        "max": [
+          0.09024199843406677,
+          0.09029500186443329,
+          0.10045100003480911
+        ],
+        "size": [
+          0.1807430014014244,
+          0.18054600059986115,
+          0.10046000003512745
+        ],
+        "units": "m"
+      },
+      "material": "varnished_hardwood",
+      "physics_type": "rigid",
+      "source": {
+        "object_name": "D00064 Bowl Mortar",
+        "part_name": "D00064 Bowl Mortar"
+      },
+      "collision": {},
+      "reasoning": "The image shows a family of small bowl-shaped assets with rounded exterior walls, a concave interior, a prominent rim, and a small circular foot. Most visible variants are wooden, so the root-level material is estimated as varnished hardwood; the steel variants would use different density/friction values. A typical size for this object is estimated at roughly 0.16–0.18 m outer diameter and 0.08–0.10 m height, with a 6–10 mm wall/rim thickness. For a carved wooden bowl of that size, the solid material volume is approximately 0.00055–0.00075 m^3; with hardwood density around 600–750 kg/m^3, a realistic mass is about 0.35–0.55 kg, so 0.45 kg is used. Density is set to 650 kg/m^3 for varnished hardwood, but in Isaac Sim it is better to author an explicit mass rather than relying only on density if the collision mesh is a closed concave shell, because a filled convex or closed SDF volume can otherwise overestimate mass. The center of mass should be slightly below the geometric mid-height because of the thicker foot and rounded lower bowl body. Friction is estimated for smooth varnished wood on common work surfaces: static friction about 0.50 and dynamic friction about 0.38. Restitution is set to 0.35, representing a stiff but damped wooden object with limited bounce; for the stainless-steel variant, density would be about 7800 kg/m^3, mass likely 0.18–0.35 kg for thin sheet metal, static/dynamic friction around 0.35/0.25, and restitution around 0.55. The shape is concave, so a single convex hull would incorrectly fill the bowl cavity. For physically meaningful rim, interior, and foot contacts, an SDF mesh collider is recommended when accuracy matters. For large scenes or many bowls, a convex decomposition made from several radial wall/rim/foot convex pieces would be faster. Contact offset is set to 3 mm and rest offset to 0.5 mm to provide stable contact generation without visibly floating the asset; these may be reduced if the model is scaled smaller or contacts appear too inflated. CCD is enabled because the bowl has relatively thin walls and rim features that can tunnel during drops or fast manipulation. For runtime stability, keep initial linear and angular velocities at zero unless spawned dynamically, use normal gravity, and allow sleeping/hibernation for inactive bowls; practical sleep thresholds would be low, around 1e-4 to 5e-4 mass-normalized kinetic energy, with wake-up on contact. For high-speed throws or drops, limit maximum linear velocity to roughly 10–20 m/s and angular velocity to roughly 50–100 rad/s to avoid unstable thin-feature contact. Compliant contacts are disabled because the object is modeled as a rigid wooden/metal bowl; if contact chatter appears, solver substeps or material damping should be preferred before adding artificial compliance.",
+      "static_friction": 0.5,
+      "dynamic_friction": 0.38,
+      "restitution": 0.35,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "is_structural_root": true,
+      "description": "Small round bowls with thick rolled rims, hollow interiors, and shallow raised foot rings, shown in varnished wood and brushed stainless-steel finishes.",
+      "semantic": {
+        "qid": null
+      },
+      "non_visual_material": null,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
+    }
+  ],
+  "articulation": {
+    "has_joints": false,
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
+  },
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  },
+  "simulation": {
+    "fix_base": false
+  },
+  "provenance": {
+    "source_schema": "legacy_batch1_physics",
+    "legacy_reasoning_preserved": true,
+    "legacy_overall_assessment": "",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification.",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "collision_source": "USD PhysicsCollisionAPI geometry",
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "c0c2cf41213d94e9218caadd0515147876f562b0c7adc293579b4ece0e917422"
+    },
+    "usd_path": "batch1/D00064 Bowl Mortar/IsaacSim_assets_69f1f7d759057a9310596a88/IsaacSim_asset_69f1f7d759057a9310596a88.usd",
+    "usd_sha256": "268467ecc21e859c219d729a2604f0417640db7386908001f769faf0481eb505",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z"
+  },
+  "validation": {
+    "overall": "verified",
+    "scale": {
+      "status": "verified",
+      "confidence": "high",
+      "units": "m",
+      "up_axis": "Z",
+      "bounds_m": [
+        0.1807430014014244,
+        0.18054600059986115,
+        0.10046000003512745
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "268467ecc21e859c219d729a2604f0417640db7386908001f769faf0481eb505",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
+    },
+    "mass": {
+      "status": "verified",
+      "confidence": "high",
+      "value_kg": 0.44999998807907104,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "268467ecc21e859c219d729a2604f0417640db7386908001f769faf0481eb505",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.44999998807907104,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
+    },
+    "collision": {
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 1,
+      "approximations": [
+        "sdf"
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "268467ecc21e859c219d729a2604f0417640db7386908001f769faf0481eb505",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 1,
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
+    },
+    "articulation": {
+      "status": "verified",
+      "confidence": "high",
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "268467ecc21e859c219d729a2604f0417640db7386908001f769faf0481eb505",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/09602e15fbbfedd26e0b2f51394dde1dbc7287d3/reports/native/2026.10.13/shard-01/native-batch-000-evidence.tar.gz",
+        "sha256": "8c316942676ba7b3acda36f3a2a9d282d12c793567c2ae31edcf5999f1171907",
+        "hf_commit": "09602e15fbbfedd26e0b2f51394dde1dbc7287d3",
+        "size_bytes": 114170460
+      },
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "268467ecc21e859c219d729a2604f0417640db7386908001f769faf0481eb505",
+      "supplemental_accepted": true,
+      "planned_test_count": 12,
+      "result_count": 12,
+      "passed": 11,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-13T20:33:43.084525+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "0b8cf106a0372e753ccc01c822d22024a4a2a7e4f8eaddbb45b11553f1af8d79",
+      "qualification": "native-fleet-evidence/shard-01/native-batch-000/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
+    }
+  }
+}

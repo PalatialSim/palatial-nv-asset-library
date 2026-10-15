@@ -1,0 +1,214 @@
+{
+  "schema_version": "1.0",
+  "asset_id": "D00339",
+  "asset": {
+    "name": "D00339 Glass",
+    "description": "Cylindrical handled mugs with rounded rims, thick bases, and loop handles, shown in glossy ceramic, speckled stoneware, and transparent colored glass finishes.",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.3799999952316284,
+    "bounds": {
+      "min": [
+        -0.04022400081157684,
+        -0.034977998584508896,
+        8.865130371205375e-19
+      ],
+      "max": [
+        0.05695300176739693,
+        0.03558199852705002,
+        0.0808660015463829
+      ],
+      "size": [
+        0.09717700257897377,
+        0.07055999711155891,
+        0.0808660015463829
+      ],
+      "units": "m"
+    },
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
+  },
+  "parts": [
+    {
+      "id": "part_00",
+      "name": "D00339 Glass",
+      "mass": 0.3799999952316284,
+      "density": 2300.0,
+      "volume": 0.0003588004280920683,
+      "inertia": [
+        0.0002857303971736895,
+        0.00030440884316218654,
+        0.00037387435303247376
+      ],
+      "inertia_axes": [
+        0.4913234679944361,
+        -0.49679281958546534,
+        -0.5034550705736873,
+        -0.5082628612439503
+      ],
+      "center_of_mass": [
+        0.00033036704215586,
+        0.00022670922176474103,
+        0.04061741749410088
+      ],
+      "bounds": {
+        "min": [
+          -0.04022400081157684,
+          -0.034977998584508896,
+          8.865130371205375e-19
+        ],
+        "max": [
+          0.05695300176739693,
+          0.03558199852705002,
+          0.0808660015463829
+        ],
+        "size": [
+          0.09717700257897377,
+          0.07055999711155891,
+          0.0808660015463829
+        ],
+        "units": "m"
+      },
+      "material": "glazed_ceramic",
+      "physics_type": "rigid",
+      "source": {
+        "object_name": "D00339 Glass",
+        "part_name": "D00339 Glass"
+      },
+      "collision": {},
+      "reasoning": "The estimates are for one representative empty coffee mug of the type shown, approximately 90-100 mm tall, 78-85 mm in outside diameter, with a 4-6 mm ceramic wall, a thicker base, and a loop handle. A typical 300-350 mL ceramic or stoneware mug has about 1.5e-4 to 1.8e-4 m^3 of fired ceramic material; using a bulk ceramic density around 2200-2400 kg/m^3 gives a mass of roughly 0.33-0.43 kg, so 0.38 kg is a realistic nominal value. The density value is the bulk material density for glazed ceramic; if the asset uses a single filled convex hull for mass computation, override the mass directly or use an effective hull density around 350-450 kg/m^3 to avoid an unrealistically heavy mug. The dominant contact surface is glazed ceramic/stoneware with a slightly rougher foot ring, so friction is higher than smooth glass but lower than rubber: static friction is estimated at 0.50 and dynamic friction at 0.38 on common tabletop or metal surfaces. Restitution is set to 0.35 because ceramic and glass are stiff but lose energy through impact ringing, micro-slip, and possible chipping; for a fully transparent glass variant, restitution could be raised to about 0.50-0.60 and friction reduced to about 0.30-0.35. The mug is concave because of the open cup cavity and handle loop, so a single convex hull would close the cup and handle opening. Convex decomposition is the best general-purpose PhysX collider choice for dynamic rigid bodies, using separate convex pieces for the cylinder wall, base, rim, and handle; use an SDF mesh only when precise interior containment or very accurate handle contact is required and the performance cost is acceptable. Contact offset is kept small relative to the 4-6 mm wall thickness to avoid early contact artifacts, while still giving stable contact generation. CCD is recommended because the object is small, thin-walled, and may be dropped or moved quickly; sleep thresholds and damping are kept low so the mug settles naturally without jitter.",
+      "static_friction": 0.5,
+      "dynamic_friction": 0.38,
+      "restitution": 0.35,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "is_structural_root": true,
+      "description": "Cylindrical handled mugs with rounded rims, thick bases, and loop handles, shown in glossy ceramic, speckled stoneware, and transparent colored glass finishes.",
+      "semantic": {
+        "qid": null
+      },
+      "non_visual_material": null,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
+    }
+  ],
+  "articulation": {
+    "has_joints": false,
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
+  },
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  },
+  "simulation": {
+    "fix_base": false
+  },
+  "provenance": {
+    "source_schema": "legacy_batch1_physics",
+    "legacy_reasoning_preserved": true,
+    "legacy_overall_assessment": "",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification.",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "collision_source": "USD PhysicsCollisionAPI geometry",
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "5d01af982652454c86f182edb91765ae6a786482ae8e5060c8d54a5bdad3ba36"
+    },
+    "usd_path": "batch1/D00339 Glass/IsaacSim_assets_69f5b838431507ff7ced387f/IsaacSim_asset_69f5b838431507ff7ced387f.usd",
+    "usd_sha256": "334e2bf18231f2028d210c21a938441eeee05182583809020199ad6782e2cca5",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z"
+  },
+  "validation": {
+    "overall": "verified",
+    "scale": {
+      "status": "verified",
+      "confidence": "high",
+      "units": "m",
+      "up_axis": "Z",
+      "bounds_m": [
+        0.09717700257897377,
+        0.07055999711155891,
+        0.0808660015463829
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "334e2bf18231f2028d210c21a938441eeee05182583809020199ad6782e2cca5",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
+    },
+    "mass": {
+      "status": "verified",
+      "confidence": "high",
+      "value_kg": 0.3799999952316284,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "334e2bf18231f2028d210c21a938441eeee05182583809020199ad6782e2cca5",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.3799999952316284,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
+    },
+    "collision": {
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 59,
+      "approximations": [
+        "convexHull"
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "334e2bf18231f2028d210c21a938441eeee05182583809020199ad6782e2cca5",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 59,
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
+    },
+    "articulation": {
+      "status": "verified",
+      "confidence": "high",
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "334e2bf18231f2028d210c21a938441eeee05182583809020199ad6782e2cca5",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/6c303bc1840b001e3183f00a0c5497875ab55564/reports/native/2026.10.13/shard-08/native-batch-000-evidence.tar.gz",
+        "sha256": "17f9621d91505b005b37364e1f1206b11832010d096535640deb67b5e62103fc",
+        "hf_commit": "6c303bc1840b001e3183f00a0c5497875ab55564",
+        "size_bytes": 121173277
+      },
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "334e2bf18231f2028d210c21a938441eeee05182583809020199ad6782e2cca5",
+      "supplemental_accepted": true,
+      "planned_test_count": 13,
+      "result_count": 13,
+      "passed": 12,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-13T22:26:56.582682+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "f1756045ed1fbbace69c902e168ef76b99f2bd742c638cd93455c90face37992",
+      "qualification": "native-fleet-evidence/shard-08/native-batch-000/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
+    }
+  }
+}

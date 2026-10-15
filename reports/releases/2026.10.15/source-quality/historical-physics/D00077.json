@@ -1,0 +1,210 @@
+{
+  "schema_version": "1.0",
+  "asset_id": "D00077",
+  "asset": {
+    "name": "D00077 Box Container",
+    "description": "A white, rectangular plastic storage container with an open, hinged lid. A black rubber gasket lines the interior perimeter of the lid.",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.800000011920929,
+    "bounds": {
+      "min": [
+        -0.10045400261878967,
+        -0.08620099723339081,
+        -0.00029600001289509237
+      ],
+      "max": [
+        0.10215900093317032,
+        0.0719819962978363,
+        0.19401800632476807
+      ],
+      "size": [
+        0.20261300355196,
+        0.1581829935312271,
+        0.19431400633766316
+      ],
+      "units": "m"
+    },
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
+  },
+  "parts": [
+    {
+      "id": "part_00",
+      "name": "D00077 Box Container",
+      "mass": 0.800000011920929,
+      "density": 950.0,
+      "volume": 0.004417608421620235,
+      "inertia": [
+        0.0030143986665303567,
+        0.003721282625643399,
+        0.004363815523290427
+      ],
+      "inertia_axes": [
+        0.7511150588730638,
+        -0.6601708103423797,
+        -0.0005781569084755135,
+        -0.0005789996451299754
+      ],
+      "center_of_mass": [
+        0.0008153828362545213,
+        -0.011699378104731074,
+        0.0821816363502654
+      ],
+      "bounds": {
+        "min": [
+          -0.10045400261878967,
+          -0.08620099723339081,
+          -0.00029600001289509237
+        ],
+        "max": [
+          0.10215900093317032,
+          0.0719819962978363,
+          0.19401800632476807
+        ],
+        "size": [
+          0.20261300355196,
+          0.1581829935312271,
+          0.19431400633766316
+        ],
+        "units": "m"
+      },
+      "material": "plastic",
+      "physics_type": "rigid",
+      "source": {
+        "object_name": "D00077 Box Container",
+        "part_name": "D00077 Box Container"
+      },
+      "collision": {},
+      "reasoning": "Based on the visual evidence, the object is a rigid plastic container, likely manufactured from polypropylene or ABS, given the smooth matte finish and structural shape. The total mass is estimated at 0.8 kg, assuming standard dimensions of roughly 30x20x15 cm with a typical wall thickness for such items. The density of 950 kg/m³ aligns with standard hard plastics. The friction coefficients (static 0.4, dynamic 0.3) represent a smooth plastic exterior, while restitution (0.4) indicates moderate bounciness typical of hard, thin-walled plastic. For collision modeling in Isaac Sim, 'convex_decomposition' is essential because the object is a hollow shell; a basic 'convex_hull' would incorrectly seal the open top, preventing objects from being placed inside. The hinge suggests this could be modeled as an articulated system with a revolute joint, requiring specific DOF damping to simulate the physical resistance of a typical plastic hinge.",
+      "static_friction": 0.4,
+      "dynamic_friction": 0.3,
+      "restitution": 0.4,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "is_structural_root": true,
+      "description": "A white, rectangular plastic storage container with an open, hinged lid. A black rubber gasket lines the interior perimeter of the lid.",
+      "source_prim_path": "/World/part_00_plastic",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
+    }
+  ],
+  "articulation": {
+    "has_joints": false,
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
+  },
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  },
+  "simulation": {
+    "fix_base": false
+  },
+  "provenance": {
+    "source_schema": "legacy_batch1_physics",
+    "legacy_reasoning_preserved": true,
+    "legacy_overall_assessment": "",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification.",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "collision_source": "USD PhysicsCollisionAPI geometry",
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "6c5b74623fc35d6bab0c74c5b003b359f718a81f7499a544bda669c3eb7fe12c"
+    },
+    "usd_path": "batch1/D00077 Box Container/IsaacSim_assets_69f1fa5859057a931059a574/IsaacSim_asset_69f1fa5859057a931059a574.usd",
+    "usd_sha256": "93ae2aa3b8c08529d1dda52dd0c70bd7198aa606ed16f2273f8bef77c58bd8cf",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z"
+  },
+  "validation": {
+    "overall": "verified",
+    "scale": {
+      "status": "verified",
+      "confidence": "high",
+      "units": "m",
+      "up_axis": "Z",
+      "bounds_m": [
+        0.20261300355196,
+        0.1581829935312271,
+        0.19431400633766316
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "93ae2aa3b8c08529d1dda52dd0c70bd7198aa606ed16f2273f8bef77c58bd8cf",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
+    },
+    "mass": {
+      "status": "verified",
+      "confidence": "high",
+      "value_kg": 0.800000011920929,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "93ae2aa3b8c08529d1dda52dd0c70bd7198aa606ed16f2273f8bef77c58bd8cf",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.800000011920929,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
+    },
+    "collision": {
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 59,
+      "approximations": [
+        "convexHull"
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "93ae2aa3b8c08529d1dda52dd0c70bd7198aa606ed16f2273f8bef77c58bd8cf",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 59,
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
+    },
+    "articulation": {
+      "status": "verified",
+      "confidence": "high",
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "93ae2aa3b8c08529d1dda52dd0c70bd7198aa606ed16f2273f8bef77c58bd8cf",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/09602e15fbbfedd26e0b2f51394dde1dbc7287d3/reports/native/2026.10.13/shard-01/native-batch-000-evidence.tar.gz",
+        "sha256": "8c316942676ba7b3acda36f3a2a9d282d12c793567c2ae31edcf5999f1171907",
+        "hf_commit": "09602e15fbbfedd26e0b2f51394dde1dbc7287d3",
+        "size_bytes": 114170460
+      },
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "93ae2aa3b8c08529d1dda52dd0c70bd7198aa606ed16f2273f8bef77c58bd8cf",
+      "supplemental_accepted": true,
+      "planned_test_count": 11,
+      "result_count": 11,
+      "passed": 11,
+      "skipped": 0,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-13T20:33:43.786745+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "9749a4527cf7f4930ac240b15b6e8a91eed2ff2bf6e9ca975cf861a28b388b9e",
+      "qualification": "native-fleet-evidence/shard-01/native-batch-000/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
+    }
+  }
+}

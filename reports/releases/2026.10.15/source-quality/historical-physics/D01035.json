@@ -1,0 +1,304 @@
+{
+  "schema_version": "1.0",
+  "asset_id": "D01035",
+  "asset": {
+    "name": "D01035 Egg Slicer",
+    "object_type": "articulated",
+    "total_mass": 0.22500430420041084,
+    "bounds": {
+      "min": [
+        -0.0700016189366579,
+        -0.049993715792254534,
+        0.0
+      ],
+      "max": [
+        0.06999838165938854,
+        0.04999309071962443,
+        0.057999998331069946
+      ],
+      "size": [
+        0.14000000059604645,
+        0.09998680651187897,
+        0.057999998331069946
+      ],
+      "units": "m"
+    },
+    "bounds_frame": "USD stage world axes, metres, default authored pose",
+    "description": "3D model of egg slicer for robotics simulation research. The delivered USD contains 2 rigid bodies and 1 enabled moving joint constraint."
+  },
+  "parts": [
+    {
+      "id": "Base",
+      "name": "Base",
+      "mass": 0.17983278632164001,
+      "density": null,
+      "inertia": [
+        0.00032422138610854745,
+        0.00022915643057785928,
+        0.00014540058327838778
+      ],
+      "center_of_mass": [
+        -0.008936501108109951,
+        -4.65502125734929e-08,
+        0.021970681846141815
+      ],
+      "physics_type": "rigid",
+      "source": {
+        "prim_path": "/World/EggSlicer/Base"
+      },
+      "collision": {
+        "shape_count": 333,
+        "approximations": [
+          "convexHull"
+        ]
+      },
+      "reasoning": null,
+      "source_prim_path": "/World/EggSlicer/Base",
+      "bounds": {
+        "min": [
+          -0.0700016189366579,
+          -0.049993715792254534,
+          0.0
+        ],
+        "max": [
+          0.06999838165938854,
+          0.04999309071962443,
+          0.057999998331069946
+        ],
+        "size": [
+          0.14000000059604645,
+          0.09998680651187897,
+          0.057999998331069946
+        ],
+        "units": "m"
+      },
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
+    },
+    {
+      "id": "Lid",
+      "name": "Lid",
+      "mass": 0.04517151787877083,
+      "density": null,
+      "inertia": [
+        0.00011015459313057363,
+        6.914580444572493e-05,
+        4.1791339754126966e-05
+      ],
+      "center_of_mass": [
+        0.0499437116086483,
+        -9.978329273963027e-08,
+        -0.0010094011668115854
+      ],
+      "physics_type": "rigid",
+      "source": {
+        "prim_path": "/World/EggSlicer/Lid"
+      },
+      "collision": {
+        "shape_count": 76,
+        "approximations": [
+          "convexHull"
+        ]
+      },
+      "reasoning": null,
+      "source_prim_path": "/World/EggSlicer/Lid",
+      "bounds": {
+        "min": [
+          -0.06580176344141364,
+          -0.046001301003570916,
+          0.016259594820439816
+        ],
+        "max": [
+          0.04355446621775627,
+          0.04599869917524302,
+          0.030599595047533512
+        ],
+        "size": [
+          0.10935622965916991,
+          0.09200000017881393,
+          0.014340000227093697
+        ],
+        "units": "m"
+      },
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
+    }
+  ],
+  "articulation": {
+    "has_joints": true,
+    "joints": [
+      {
+        "id": "RearSpringHinge",
+        "path": "/World/EggSlicer/Joints/RearSpringHinge",
+        "type": "PhysicsRevoluteJoint",
+        "enabled": true,
+        "body0": [
+          "/World/EggSlicer/Base"
+        ],
+        "body1": [
+          "/World/EggSlicer/Lid"
+        ],
+        "lower_limit": -180.0,
+        "upper_limit": 0.0,
+        "usd_type": "PhysicsRevoluteJoint",
+        "body0_targets": [
+          "/World/EggSlicer/Base"
+        ],
+        "body1_targets": [
+          "/World/EggSlicer/Lid"
+        ],
+        "authored_usd": {
+          "id": "RearSpringHinge",
+          "source_prim_path": "/World/EggSlicer/Joints/RearSpringHinge",
+          "joint_type": "PhysicsRevoluteJoint",
+          "body0": [
+            "/World/EggSlicer/Base"
+          ],
+          "body1": [
+            "/World/EggSlicer/Lid"
+          ],
+          "joint_enabled": true,
+          "axis": "Y",
+          "lowerLimit": -180.0,
+          "upperLimit": 0.0,
+          "localPos0": [
+            -0.05999999865889549,
+            0.0,
+            0.023000000044703484
+          ],
+          "localPos1": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "localRot0": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "localRot1": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "static_frames": []
+        }
+      }
+    ],
+    "moving_joints": 1,
+    "rigid_body_count": 2,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
+  },
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  },
+  "simulation": {
+    "fix_base": null
+  },
+  "provenance": {
+    "source_schema": "authored_usd",
+    "usd_path": "batch41/D01035 Egg Slicer/D01035 Egg Slicer.usd",
+    "usd_sha256": "6e0050dfdc87cf8d910780f4582e39b1a7d3dcbd2690a64a721714a538350021",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "reasoning_available": false,
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification.",
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "7abaf9848d057c58d49a9f91f7aa69e6635c55f32c655889abdb7c5f94f85671"
+    },
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes"
+  },
+  "validation": {
+    "overall": "verified",
+    "scale": {
+      "status": "verified",
+      "confidence": "high",
+      "units": "m",
+      "up_axis": "Z",
+      "bounds_m": [
+        0.14000000059604645,
+        0.09998680651187897,
+        0.057999998331069946
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "6e0050dfdc87cf8d910780f4582e39b1a7d3dcbd2690a64a721714a538350021",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
+    },
+    "mass": {
+      "status": "verified",
+      "confidence": "high",
+      "value_kg": 0.22500430420041084,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "6e0050dfdc87cf8d910780f4582e39b1a7d3dcbd2690a64a721714a538350021",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.22500430420041084,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
+    },
+    "collision": {
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 409,
+      "approximations": [
+        "convexHull"
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "6e0050dfdc87cf8d910780f4582e39b1a7d3dcbd2690a64a721714a538350021",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 409,
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
+    },
+    "articulation": {
+      "status": "verified",
+      "confidence": "high",
+      "moving_joints": 1,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "6e0050dfdc87cf8d910780f4582e39b1a7d3dcbd2690a64a721714a538350021",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 1,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/8b74cc2c51b7fe975c9f8bc852b683024e7a69f0/reports/native/2026.10.13/shard-10/native-batch-004-evidence.tar.gz",
+        "sha256": "662bc1093e2f792169500b967464a50257d14ab81cea7accf0efa98b64709847",
+        "hf_commit": "8b74cc2c51b7fe975c9f8bc852b683024e7a69f0",
+        "size_bytes": 109963652
+      },
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "6e0050dfdc87cf8d910780f4582e39b1a7d3dcbd2690a64a721714a538350021",
+      "supplemental_accepted": true,
+      "planned_test_count": 14,
+      "result_count": 14,
+      "passed": 13,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-14T00:13:42.917111+00:00",
+      "joint_status": "passed",
+      "joints_total": 1,
+      "joints_passed": 1,
+      "joints_failed": 0,
+      "thumbnail_sha256": "1ae2524067ef15eb62f623cf39b0249df45f5c146ddc896ae5f4d87453f2a38d",
+      "qualification": "native-fleet-evidence/shard-10/native-batch-004/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
+    }
+  }
+}

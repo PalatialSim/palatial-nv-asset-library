@@ -1,0 +1,214 @@
+{
+  "schema_version": "1.0",
+  "asset_id": "D00038",
+  "asset": {
+    "name": "D00038 Board",
+    "description": "A glossy white rectangular tray with rounded corners, a shallow recessed center, and a raised rim. The surface appears to be glazed ceramic or porcelain with a smooth, hard finish.",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.75,
+    "bounds": {
+      "min": [
+        -0.07604900002479553,
+        -0.12691499292850494,
+        -0.00014400000509340316
+      ],
+      "max": [
+        0.07641199976205826,
+        0.1276800036430359,
+        0.018352000042796135
+      ],
+      "size": [
+        0.1524609997868538,
+        0.25459499657154083,
+        0.018496000047889538
+      ],
+      "units": "m"
+    },
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
+  },
+  "parts": [
+    {
+      "id": "part_00",
+      "name": "D00038 Board",
+      "mass": 0.75,
+      "density": 2300.0,
+      "volume": 0.0006632057664544364,
+      "inertia": [
+        0.0014165533798542627,
+        0.003962586531552945,
+        0.0053412811147653455
+      ],
+      "inertia_axes": [
+        0.0017648199185307941,
+        -0.7054841526603464,
+        -0.7087234909976309,
+        -9.520451281468123e-05
+      ],
+      "center_of_mass": [
+        0.00045430010633421036,
+        -0.00014315977163105667,
+        0.009199397081458182
+      ],
+      "bounds": {
+        "min": [
+          -0.07604900002479553,
+          -0.12691499292850494,
+          -0.00014400000509340316
+        ],
+        "max": [
+          0.07641199976205826,
+          0.1276800036430359,
+          0.018352000042796135
+        ],
+        "size": [
+          0.1524609997868538,
+          0.25459499657154083,
+          0.018496000047889538
+        ],
+        "units": "m"
+      },
+      "material": "glazed_ceramic",
+      "physics_type": "rigid",
+      "source": {
+        "object_name": "D00038 Board",
+        "part_name": "D00038 Board"
+      },
+      "collision": {},
+      "reasoning": "The object appears to be a shallow rectangular serving tray/platter with rounded edges and a raised lip. No product dimensions are provided, so I estimate a typical size of roughly 0.28–0.32 m long, 0.18–0.22 m wide, and 0.025–0.035 m tall. The glossy white finish and rounded molded form are consistent with glazed ceramic/porcelain; if the asset is known to be molded plastic, mass and density should be reduced substantially. For a ceramic tray, the actual material density is about 2200–2400 kg/m^3, but the object is hollow/shallow rather than a solid box. Estimating a base thickness of about 4–6 mm plus a raised rim around the perimeter gives an actual ceramic volume on the order of 0.00025–0.00040 m^3, resulting in a mass around 0.55–0.95 kg. I choose 0.75 kg as a reasonable midpoint for a small-to-medium glazed ceramic tray. The dominant contact surface is smooth glazed ceramic, so friction is lower than rubber or unfinished wood but higher than polished glass; static friction around 0.35 and dynamic friction around 0.28 are appropriate for ceramic on common lab/table surfaces. Restitution is kept modest at 0.35 because ceramic is hard but the tray shape and contact damping reduce usable bounce; also, fragile ceramics should generally not be simulated as highly elastic. For Isaac Sim / PhysX, a convex hull would overfill the recessed center but is adequate if only outer contact stability is needed. For more accurate tray interactions, use convex decomposition with several simple convex parts: bottom slab plus four rim segments and rounded-corner approximations. SDF mesh collision can be used for high-fidelity contact with the recessed bowl-like region, but it is more expensive and best reserved for cases where small objects must rest inside the tray. Contact offset of 0.003 m and rest offset of 0.0005 m are suitable for a centimeter-scale hard object, avoiding visual interpenetration while maintaining stable contacts. CCD is not required for normal quasi-static placement but is enabled here as a safe default if the tray may be dropped or moved quickly. Gravity uses the standard Isaac Sim scene vector [0, 0, -9.81]. Compliant contacts are set with high stiffness and moderate damping only to regularize hard ceramic contact; the object itself should still be treated as rigid and non-deformable. Since this is a single rigid tray with no joints, articulation parameters are effectively unused.",
+      "static_friction": 0.35,
+      "dynamic_friction": 0.28,
+      "restitution": 0.35,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "is_structural_root": true,
+      "description": "A glossy white rectangular tray with rounded corners, a shallow recessed center, and a raised rim. The surface appears to be glazed ceramic or porcelain with a smooth, hard finish.",
+      "semantic": {
+        "qid": null
+      },
+      "non_visual_material": null,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
+    }
+  ],
+  "articulation": {
+    "has_joints": false,
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
+  },
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  },
+  "simulation": {
+    "fix_base": false
+  },
+  "provenance": {
+    "source_schema": "legacy_batch1_physics",
+    "legacy_reasoning_preserved": true,
+    "legacy_overall_assessment": "",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification.",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "collision_source": "USD PhysicsCollisionAPI geometry",
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "68fe52cd4bcb72c0f2233c182d23a8ca1927314ccb34d1b7183fbd91b2356c47"
+    },
+    "usd_path": "batch1/D00038 Board/IsaacSim_assets_69f1f21359057a931058db1d/IsaacSim_asset_69f1f21359057a931058db1d.usd",
+    "usd_sha256": "5e9d1cd62b96e9659567bbd93bbf7e408c750d1c8246a04095d3ddfd8c6d2ca1",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z"
+  },
+  "validation": {
+    "overall": "verified",
+    "scale": {
+      "status": "verified",
+      "confidence": "high",
+      "units": "m",
+      "up_axis": "Z",
+      "bounds_m": [
+        0.1524609997868538,
+        0.25459499657154083,
+        0.018496000047889538
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "5e9d1cd62b96e9659567bbd93bbf7e408c750d1c8246a04095d3ddfd8c6d2ca1",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
+    },
+    "mass": {
+      "status": "verified",
+      "confidence": "high",
+      "value_kg": 0.75,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "5e9d1cd62b96e9659567bbd93bbf7e408c750d1c8246a04095d3ddfd8c6d2ca1",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.75,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
+    },
+    "collision": {
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 1,
+      "approximations": [
+        "sdf"
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "5e9d1cd62b96e9659567bbd93bbf7e408c750d1c8246a04095d3ddfd8c6d2ca1",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 1,
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
+    },
+    "articulation": {
+      "status": "verified",
+      "confidence": "high",
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "5e9d1cd62b96e9659567bbd93bbf7e408c750d1c8246a04095d3ddfd8c6d2ca1",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/9fb0c9727c46cc25f863d755bf7c54007f4b7919/reports/native/2026.10.13/shard-02/native-batch-000-evidence.tar.gz",
+        "sha256": "c4c8feeb4a3ef6d4ff01e997106221f33dabbfac7a3ab0ed80060deb767ffcc3",
+        "hf_commit": "9fb0c9727c46cc25f863d755bf7c54007f4b7919",
+        "size_bytes": 113030117
+      },
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "5e9d1cd62b96e9659567bbd93bbf7e408c750d1c8246a04095d3ddfd8c6d2ca1",
+      "supplemental_accepted": true,
+      "planned_test_count": 12,
+      "result_count": 12,
+      "passed": 11,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-13T20:39:43.063221+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "779917637703f23dc1514891dacfb1b7a137638fe69cd095dc70297baee7caab",
+      "qualification": "native-fleet-evidence/shard-02/native-batch-000/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
+    }
+  }
+}

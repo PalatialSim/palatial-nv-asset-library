@@ -1,0 +1,792 @@
+{
+  "schema_version": "1.0",
+  "asset_id": "D00378",
+  "asset": {
+    "name": "D00378 Herb Pot",
+    "description": "A terracotta-colored cylindrical planter with a matching saucer, dark potting soil, and a green basil plant with broad veined leaves.",
+    "object_type": "rigid_bodies",
+    "total_mass": 2.799999952316284,
+    "bounds": {
+      "min": [
+        -0.0976480022072792,
+        -0.11967600136995316,
+        -0.0003060000017285347
+      ],
+      "max": [
+        0.10449499636888504,
+        0.10175500065088272,
+        0.27324599027633667
+      ],
+      "size": [
+        0.20214299857616425,
+        0.22143100202083588,
+        0.2735519902780652
+      ],
+      "units": "m"
+    },
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
+  },
+  "parts": [
+    {
+      "id": "part_00",
+      "name": "D00378 Herb Pot",
+      "mass": 2.799999952316284,
+      "density": 1800.0,
+      "volume": 0.004753171956301214,
+      "inertia": [
+        0.013617195858471607,
+        0.01381112827953365,
+        0.013830960650275679
+      ],
+      "inertia_axes": [
+        0.3391919540310999,
+        -0.7142178003238474,
+        0.234106640118792,
+        0.5657170963241428
+      ],
+      "center_of_mass": [
+        0.0023486485279314074,
+        0.0016363816885156222,
+        0.08097120610860234
+      ],
+      "bounds": {
+        "min": [
+          -0.0976480022072792,
+          -0.11967600136995316,
+          -0.0003060000017285347
+        ],
+        "max": [
+          0.10449499636888504,
+          0.10175500065088272,
+          0.27324599027633667
+        ],
+        "size": [
+          0.20214299857616425,
+          0.22143100202083588,
+          0.2735519902780652
+        ],
+        "units": "m"
+      },
+      "material": "terracotta_ceramic",
+      "physics_type": "rigid",
+      "source": {
+        "object_name": "D00378 Herb Pot",
+        "part_name": "D00378 Herb Pot"
+      },
+      "collision": {},
+      "reasoning": "The visible object is a small tabletop potted herb: a rigid ceramic/terracotta-style pot and saucer, filled with potting soil and carrying lightweight leafy stems. With no product scale supplied, I estimate an outer pot diameter of about 0.16–0.18 m, pot height about 0.13–0.16 m, saucer height about 0.04–0.06 m, and total height including foliage about 0.30–0.38 m. A terracotta shell and saucer of this size, with 5–7 mm walls, would contribute roughly 1.2–1.6 kg. The potting mix volume is approximately 1.8–2.4 L; because it appears to be perlite-containing potting soil rather than dense mineral soil, a moist bulk density around 500–800 kg/m^3 gives about 1.0–1.7 kg. The basil foliage and stems add only around 0.03–0.08 kg. A total mass of 2.8 kg is therefore a realistic rigid-body value for a filled ceramic herb pot. The root material is set to terracotta ceramic because the largest load-bearing/contact surface is the pot/saucer, even though much of the mass is soil. The listed density uses a representative terracotta ceramic density; if generating mass purely from a simplified filled-cylinder collider, an aggregate effective density closer to 550–750 kg/m^3 may be needed, but assigning the explicit 2.8 kg mass is preferable. Rough unglazed terracotta has moderately high friction on typical tabletop or floor materials, so static friction is estimated at 0.62 and dynamic friction at 0.52. Restitution is low, about 0.20, because the soil fill and ceramic pot dissipate impact energy and the real object would chip or crack rather than bounce. For Isaac Sim/PhysX rigid-body use, a single convex hull would over-cover the foliage and bridge open regions around leaves, while a triangle mesh is not ideal for a dynamic rigid body; convex decomposition or a compound set of simple convexes is the best practical choice. The pot/saucer should receive the accurate collision shape, while leaves can be represented by a few simplified convex/ellipsoid hulls or ignored for contact if only the base matters. Contact offset of 0.005 m is appropriate for a 15–40 cm object and improves stable contact generation without visibly floating; rest offset can remain 0.0 m. CCD is not required for normal placement or slow handling, but should be enabled if the asset is thrown, dropped at high speed, or scaled very small. Sleep/hibernation can be left at PhysX defaults or slightly favored because this is a heavy, mostly stationary object; low restitution and explicit mass will help it settle quickly. Compliant contacts are disabled because the object is modeled as a non-deformable rigid assembly; softness of soil and leaves is approximated through low restitution rather than contact compliance.",
+      "static_friction": 0.62,
+      "dynamic_friction": 0.52,
+      "restitution": 0.2,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "is_structural_root": true,
+      "description": "A terracotta-colored cylindrical planter with a matching saucer, dark potting soil, and a green basil plant with broad veined leaves.",
+      "semantic": {
+        "qid": null
+      },
+      "non_visual_material": null,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
+    }
+  ],
+  "articulation": {
+    "has_joints": false,
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
+  },
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  },
+  "simulation": {
+    "fix_base": false,
+    "authored_usd_physics_properties": [
+      {
+        "prim_path": "/World/part_00",
+        "authored_attributes": {
+          "physics:centerOfMass": "(0.0023486486, 0.0016363817, 0.080971204)",
+          "physics:density": "1800.0",
+          "physics:diagonalInertia": "(0.013617196, 0.013811128, 0.013830961)",
+          "physics:mass": "2.799999952316284",
+          "physics:principalAxes": "(0.33919194, -0.7142178, 0.23410664, 0.5657171)",
+          "physics:rigidBodyEnabled": "True",
+          "physxRigidBody:enableCCD": "False",
+          "physxRigidBody:enableSpeculativeCCD": "True",
+          "physxRigidBody:solverPositionIterationCount": "128",
+          "physxRigidBody:solverVelocityIterationCount": "16"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/PhysicsMaterials/part_00_material",
+        "authored_attributes": {
+          "physics:dynamicFriction": "0.5199999809265137",
+          "physics:restitution": "0.10000000149011612",
+          "physics:staticFriction": "0.6200000047683716",
+          "physxMaterial:frictionCombineMode": "average",
+          "physxMaterial:restitutionCombineMode": "average"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_0",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020210184156894684",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_1",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020210184156894684",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_2",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020210184156894684",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_3",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020210184156894684",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_4",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020210184156894684",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_5",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020210184156894684",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_6",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020210184156894684",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_7",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020210184156894684",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_8",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020210184156894684",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_9",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020210184156894684",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_10",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020210184156894684",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_11",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020210184156894684",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_12",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020210184156894684",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_13",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020210184156894684",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_14",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020210184156894684",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_15",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020210184156894684",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_16",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020210184156894684",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_17",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020210184156894684",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_18",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020210184156894684",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_19",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020210184156894684",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_20",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020210184156894684",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_21",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020210184156894684",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_22",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020210184156894684",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_23",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020210184156894684",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_24",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020210184156894684",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_25",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020210184156894684",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_26",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020210184156894684",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_27",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020210184156894684",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_28",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020210184156894684",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_29",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020210184156894684",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_30",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020210184156894684",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_31",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020210184156894684",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_32",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020210184156894684",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_33",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020210184156894684",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_34",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020210184156894684",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_35",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020210184156894684",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_36",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020210184156894684",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_37",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020210184156894684",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_38",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020210184156894684",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_39",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020210184156894684",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_40",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020210184156894684",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_41",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020210184156894684",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_42",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020210184156894684",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_43",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020210184156894684",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_44",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020210184156894684",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_45",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020210184156894684",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_46",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020210184156894684",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_47",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020210184156894684",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_48",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020210184156894684",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_49",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020210184156894684",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_50",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020210184156894684",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_51",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020210184156894684",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_52",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020210184156894684",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_53",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020210184156894684",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_54",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020210184156894684",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_55",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020210184156894684",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_56",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020210184156894684",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_57",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020210184156894684",
+          "physxCollision:restOffset": "0.0"
+        }
+      },
+      {
+        "prim_path": "/World/part_00/Colliders_00/Collider_58",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0020210184156894684",
+          "physxCollision:restOffset": "0.0"
+        }
+      }
+    ]
+  },
+  "provenance": {
+    "source_schema": "legacy_batch1_physics",
+    "legacy_reasoning_preserved": true,
+    "legacy_overall_assessment": "",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification.",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "collision_source": "USD PhysicsCollisionAPI geometry",
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "54873a40296219791ff04b3d38204f46b2a42ebfbf089249d3d9251e774f3e8a"
+    },
+    "usd_path": "batch1/D00378 Herb Pot/IsaacSim_assets_69f5c28b431507ff7cf0d27c/IsaacSim_asset_69f5c28b431507ff7cf0d27c.usd",
+    "usd_sha256": "37fd341a9094b8d44ec0c210ef929986887c1f4568d764a9291874eb8393a659",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "native_runtime_repairs": [
+      {
+        "case": "native-contact-repairs-v1",
+        "old_usd_sha256": "7c17faf4688e6db2fc61891f934197cd9e6041dd43bf48427cf4b629a852e8ec",
+        "new_usd_sha256": "37fd341a9094b8d44ec0c210ef929986887c1f4568d764a9291874eb8393a659",
+        "changes": [
+          {
+            "kind": "lower_uncalibrated_restitution_after_observed_excessive_bounce",
+            "prim": "/World/part_00/PhysicsMaterials/part_00_material",
+            "before": 0.20000000298023224,
+            "after": 0.1
+          },
+          {
+            "kind": "speculative_ccd_and_velocity_solver_after_observed_upward_launch",
+            "velocity_iterations": 16
+          }
+        ],
+        "qualification": "native-fleet-evidence/shard-23/native-batch-000/qualification-normalized.json"
+      }
+    ]
+  },
+  "validation": {
+    "overall": "verified",
+    "scale": {
+      "status": "verified",
+      "confidence": "high",
+      "units": "m",
+      "up_axis": "Z",
+      "bounds_m": [
+        0.20214299857616425,
+        0.22143100202083588,
+        0.2735519902780652
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "37fd341a9094b8d44ec0c210ef929986887c1f4568d764a9291874eb8393a659",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
+    },
+    "mass": {
+      "status": "verified",
+      "confidence": "high",
+      "value_kg": 2.799999952316284,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "37fd341a9094b8d44ec0c210ef929986887c1f4568d764a9291874eb8393a659",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 2.799999952316284,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
+    },
+    "collision": {
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 59,
+      "approximations": [
+        "convexHull"
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "37fd341a9094b8d44ec0c210ef929986887c1f4568d764a9291874eb8393a659",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 59,
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
+    },
+    "articulation": {
+      "status": "verified",
+      "confidence": "high",
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "37fd341a9094b8d44ec0c210ef929986887c1f4568d764a9291874eb8393a659",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/f3c5298a3dd6a2f3b66a7847c10daf0fe8274012/reports/native/2026.10.13/cases/native-contact-repairs-v1/native-batch-000-evidence.tar.gz",
+        "sha256": "9f9503c1f012c9ce7bed3ede6f705a9207a42c9ae995278a9a219fcc8a5aaf54",
+        "hf_commit": "f3c5298a3dd6a2f3b66a7847c10daf0fe8274012",
+        "size_bytes": 26424675
+      },
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "37fd341a9094b8d44ec0c210ef929986887c1f4568d764a9291874eb8393a659",
+      "supplemental_accepted": true,
+      "planned_test_count": 12,
+      "result_count": 12,
+      "passed": 11,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-14T00:14:24.456767+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "08b0e5fe1aec9e4b9029558dbc07e5beea3dbee8e62af53726ffcfe62028d389",
+      "qualification": "native-fleet-evidence/shard-23/native-batch-000/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
+    }
+  }
+}

@@ -1,0 +1,423 @@
+{
+  "articulation": {
+    "has_joints": true,
+    "joints": [
+      {
+        "authored_attributes": {
+          "drive:angular:physics:damping": 0.019999999552965164,
+          "drive:angular:physics:stiffness": 0.0,
+          "physics:axis": "Z",
+          "physics:localPos0": "(0.218, -0.1895, 0.26)",
+          "physics:localPos1": "(0.218, -0.1895, 0.26)",
+          "physics:localRot0": "(1, 0, 0, 0)",
+          "physics:localRot1": "(1, 0, 0, 0)",
+          "physics:lowerLimit": 0.0,
+          "physics:upperLimit": 100.0
+        },
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "axis_frame": "USD joint-local frame; apply authored physics:localRot0/1 and body transforms for world axis; not bounds_frame",
+        "body0": "/World/body",
+        "body0_targets": [
+          "/World/body"
+        ],
+        "body1": "/World/door",
+        "body1_targets": [
+          "/World/door"
+        ],
+        "joint_path": "/World/Joints/door_hinge",
+        "motion_limits": {
+          "max": 100.0,
+          "min": 0.0
+        },
+        "path": "/World/Joints/door_hinge",
+        "type": "revolute",
+        "usd_type": "PhysicsRevoluteJoint",
+        "id": "door_hinge",
+        "enabled": true,
+        "authored_usd": {
+          "id": "door_hinge",
+          "source_prim_path": "/World/Joints/door_hinge",
+          "joint_type": "PhysicsRevoluteJoint",
+          "body0": [
+            "/World/body"
+          ],
+          "body1": [
+            "/World/door"
+          ],
+          "joint_enabled": true,
+          "axis": "Z",
+          "lowerLimit": 0.0,
+          "upperLimit": 100.0,
+          "localPos0": [
+            0.21799999475479126,
+            -0.18950000405311584,
+            0.25999999046325684
+          ],
+          "localPos1": [
+            0.21799999475479126,
+            -0.18950000405311584,
+            0.25999999046325684
+          ],
+          "localRot0": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "localRot1": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "static_frames": []
+        }
+      },
+      {
+        "authored_attributes": {
+          "drive:angular:physics:damping": 9.999999747378752e-06,
+          "drive:angular:physics:stiffness": 0.0,
+          "physics:axis": "X",
+          "physics:localPos0": "(-0.1969, -0.045, 0.375)",
+          "physics:localPos1": "(-0.1969, -0.045, 0.375)",
+          "physics:localRot0": "(1, 0, 0, 0)",
+          "physics:localRot1": "(1, 0, 0, 0)",
+          "physics:lowerLimit": -135.0,
+          "physics:upperLimit": 135.0
+        },
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "axis_frame": "USD joint-local frame; apply authored physics:localRot0/1 and body transforms for world axis; not bounds_frame",
+        "body0": "/World/body",
+        "body0_targets": [
+          "/World/body"
+        ],
+        "body1": "/World/temp_dial",
+        "body1_targets": [
+          "/World/temp_dial"
+        ],
+        "joint_path": "/World/Joints/temp_dial_spindle",
+        "motion_limits": {
+          "max": 135.0,
+          "min": -135.0
+        },
+        "path": "/World/Joints/temp_dial_spindle",
+        "type": "revolute",
+        "usd_type": "PhysicsRevoluteJoint",
+        "id": "temp_dial_spindle",
+        "enabled": true,
+        "authored_usd": {
+          "id": "temp_dial_spindle",
+          "source_prim_path": "/World/Joints/temp_dial_spindle",
+          "joint_type": "PhysicsRevoluteJoint",
+          "body0": [
+            "/World/body"
+          ],
+          "body1": [
+            "/World/temp_dial"
+          ],
+          "joint_enabled": true,
+          "axis": "X",
+          "lowerLimit": -135.0,
+          "upperLimit": 135.0,
+          "localPos0": [
+            -0.19689999520778656,
+            -0.04500000178813934,
+            0.375
+          ],
+          "localPos1": [
+            -0.19689999520778656,
+            -0.04500000178813934,
+            0.375
+          ],
+          "localRot0": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "localRot1": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "static_frames": []
+        }
+      }
+    ],
+    "moving_joints": 2,
+    "rigid_body_count": 4,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
+  },
+  "asset": {
+    "bounds": {
+      "min": [
+        -0.23999999463558197,
+        -0.27900001406669617,
+        0.0
+      ],
+      "max": [
+        0.23999999463558197,
+        0.223899707198143,
+        0.5
+      ],
+      "size": [
+        0.47999998927116394,
+        0.5028997212648392,
+        0.5
+      ],
+      "units": "m"
+    },
+    "name": "body",
+    "total_mass": 17.379999993368983,
+    "object_type": "rigid_bodies",
+    "bounds_frame": "USD stage world axes, metres, default authored pose",
+    "description": "3D model of mini fridge for robotics simulation research. The delivered USD contains 4 rigid bodies and 2 enabled moving joint constraints."
+  },
+  "asset_id": "D00201",
+  "parts": [
+    {
+      "bounds": {
+        "min": [
+          -0.23999999463558197,
+          -0.19249999523162842,
+          0.0
+        ],
+        "max": [
+          0.23999999463558197,
+          0.223899707198143,
+          0.5
+        ],
+        "size": [
+          0.47999998927116394,
+          0.4163997024297714,
+          0.5
+        ],
+        "units": "m"
+      },
+      "collision": {},
+      "id": "part_00",
+      "mass": 14.0,
+      "name": "body",
+      "physics_type": "rigid_body",
+      "source": {
+        "object_name": "/World/body",
+        "part_name": "body"
+      },
+      "source_prim_path": "/World/body",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
+    },
+    {
+      "bounds": {
+        "min": [
+          -0.22200004756450653,
+          -0.27900001406669617,
+          0.03799998760223389
+        ],
+        "max": [
+          0.22199997305870056,
+          -0.14400002360343933,
+          0.4819999933242798
+        ],
+        "size": [
+          0.4440000206232071,
+          0.13499999046325684,
+          0.4440000057220459
+        ],
+        "units": "m"
+      },
+      "collision": {},
+      "id": "part_01",
+      "mass": 3.0,
+      "name": "door",
+      "physics_type": "rigid_body",
+      "source": {
+        "object_name": "/World/door",
+        "part_name": "door"
+      },
+      "source_prim_path": "/World/door",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
+    },
+    {
+      "bounds": {
+        "min": [
+          -0.19590003788471222,
+          -0.06750000268220901,
+          0.35249999165534973
+        ],
+        "max": [
+          -0.17190003395080566,
+          -0.02250000089406967,
+          0.406499981880188
+        ],
+        "size": [
+          0.024000003933906555,
+          0.04500000178813934,
+          0.05399999022483826
+        ],
+        "units": "m"
+      },
+      "collision": {},
+      "id": "part_02",
+      "mass": 0.029999999329447746,
+      "name": "temp_dial",
+      "physics_type": "rigid_body",
+      "source": {
+        "object_name": "/World/temp_dial",
+        "part_name": "temp_dial"
+      },
+      "source_prim_path": "/World/temp_dial",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
+    },
+    {
+      "bounds": {
+        "min": [
+          -0.1889999955892563,
+          -0.11500000953674316,
+          0.2644999921321869
+        ],
+        "max": [
+          0.1889999955892563,
+          0.1550000011920929,
+          0.27650001645088196
+        ],
+        "size": [
+          0.3779999911785126,
+          0.27000001072883606,
+          0.012000024318695068
+        ],
+        "units": "m"
+      },
+      "collision": {},
+      "id": "part_03",
+      "mass": 0.3499999940395355,
+      "name": "interior_shelf",
+      "physics_type": "rigid_body",
+      "source": {
+        "object_name": "/World/interior_shelf",
+        "part_name": "interior_shelf"
+      },
+      "source_prim_path": "/World/interior_shelf",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
+    }
+  ],
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "6890d942c50fbcd00dedc7b42a82975f287bd01b98681b085fbdc55c858e5575"
+    },
+    "usd_path": "batch38/D00201_Mini_Fridge/D00201_Mini_Fridge_simready/D00201_Mini_Fridge.usd",
+    "usd_sha256": "c25896232e17c31ef6c3ee8d572123f9a0dadda3490f1df307621ffb2510ac7f",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  },
+  "validation": {
+    "overall": "verified",
+    "scale": {
+      "status": "verified",
+      "confidence": "high",
+      "units": "m",
+      "up_axis": "Z",
+      "bounds_m": [
+        0.47999998927116394,
+        0.5028997212648392,
+        0.5
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "c25896232e17c31ef6c3ee8d572123f9a0dadda3490f1df307621ffb2510ac7f",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
+    },
+    "mass": {
+      "status": "verified",
+      "confidence": "high",
+      "value_kg": 17.379999993368983,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "c25896232e17c31ef6c3ee8d572123f9a0dadda3490f1df307621ffb2510ac7f",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 17.379999993368983,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
+    },
+    "collision": {
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 198,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "c25896232e17c31ef6c3ee8d572123f9a0dadda3490f1df307621ffb2510ac7f",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 198,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
+    },
+    "articulation": {
+      "status": "verified",
+      "confidence": "high",
+      "moving_joints": 2,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "c25896232e17c31ef6c3ee8d572123f9a0dadda3490f1df307621ffb2510ac7f",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 2,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/8f10c97ca2edcb6bbfa74b5a10616d9e39e05e98/reports/native/2026.10.13/shard-06/native-batch-000-evidence.tar.gz",
+        "sha256": "ba4178b435b5110861a52d272d915b9c397a2461a753e750643075635f715c13",
+        "hf_commit": "8f10c97ca2edcb6bbfa74b5a10616d9e39e05e98",
+        "size_bytes": 119229811
+      },
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "c25896232e17c31ef6c3ee8d572123f9a0dadda3490f1df307621ffb2510ac7f",
+      "supplemental_accepted": true,
+      "planned_test_count": 14,
+      "result_count": 14,
+      "passed": 13,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
+      "warnings": [
+        "official_relative_translation_requires_independent_anchor_check"
+      ],
+      "completed_at": "2026-10-13T22:41:26.544493+00:00",
+      "joint_status": "passed",
+      "joints_total": 2,
+      "joints_passed": 2,
+      "joints_failed": 0,
+      "thumbnail_sha256": "84411be524d985ef27f78cbb5a149decd530aeb83cdf69772b3ee62b0129b1c9",
+      "qualification": "native-fleet-evidence/shard-06/native-batch-000/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
+    }
+  }
+}

@@ -1,0 +1,197 @@
+{
+  "schema_version": "1.0",
+  "asset_id": "D01054",
+  "asset": {
+    "name": "D01054 Spaghetti Portion Gauge",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.0430000014603138,
+    "bounds": {
+      "min": [
+        -0.11999999731779099,
+        -0.04450000077486038,
+        -4.905964372479542e-18
+      ],
+      "max": [
+        0.11999999731779099,
+        0.04450000077486038,
+        0.003000000026077032
+      ],
+      "size": [
+        0.23999999463558197,
+        0.08900000154972076,
+        0.003000000026077037
+      ],
+      "units": "m"
+    },
+    "bounds_frame": "USD stage world axes, metres, default authored pose",
+    "description": "3D model of spaghetti portion gauge for robotics simulation research. The delivered USD contains 1 rigid body and no enabled moving joint constraints."
+  },
+  "parts": [
+    {
+      "id": "portion_gauge",
+      "name": "portion_gauge",
+      "mass": 0.0430000014603138,
+      "density": 884.2978515625,
+      "inertia": [
+        3.523075793054886e-05,
+        0.00021054821263533086,
+        0.0002457145892549306
+      ],
+      "center_of_mass": [
+        -0.010806757025420666,
+        1.0092628989488706e-11,
+        0.001500000013038516
+      ],
+      "physics_type": "rigid",
+      "source": {
+        "prim_path": "/World/portion_gauge"
+      },
+      "collision": {
+        "shape_count": 1,
+        "approximations": [
+          "sdf"
+        ]
+      },
+      "reasoning": null,
+      "source_prim_path": "/World/portion_gauge",
+      "bounds": {
+        "min": [
+          -0.11999999731779099,
+          -0.04450000077486038,
+          -4.905964372479542e-18
+        ],
+        "max": [
+          0.11999999731779099,
+          0.04450000077486038,
+          0.003000000026077032
+        ],
+        "size": [
+          0.23999999463558197,
+          0.08900000154972076,
+          0.003000000026077037
+        ],
+        "units": "m"
+      },
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
+    }
+  ],
+  "articulation": {
+    "has_joints": false,
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
+  },
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  },
+  "simulation": {
+    "fix_base": null
+  },
+  "provenance": {
+    "source_schema": "authored_usd",
+    "usd_path": "batch41/D01054_Spaghetti_Portion_Gauge/sim-asset/IsaacSim/IsaacSim_asset_6aaa85a2b78e390b7d96d7b7.usd",
+    "usd_sha256": "ecc2c7d29f3eda5750141392460056a911dc88322d14206f675bac834edef38b",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "reasoning_available": false,
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification.",
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "8c2fa9f914af00718d2d51bfa864c890ef5ba4b2e33a13aebb1696190e2e7220"
+    },
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes"
+  },
+  "validation": {
+    "overall": "verified",
+    "scale": {
+      "status": "verified",
+      "confidence": "high",
+      "units": "m",
+      "up_axis": "Z",
+      "bounds_m": [
+        0.23999999463558197,
+        0.08900000154972076,
+        0.003000000026077037
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "ecc2c7d29f3eda5750141392460056a911dc88322d14206f675bac834edef38b",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
+    },
+    "mass": {
+      "status": "verified",
+      "confidence": "high",
+      "value_kg": 0.0430000014603138,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "ecc2c7d29f3eda5750141392460056a911dc88322d14206f675bac834edef38b",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.0430000014603138,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
+    },
+    "collision": {
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 1,
+      "approximations": [
+        "sdf"
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "ecc2c7d29f3eda5750141392460056a911dc88322d14206f675bac834edef38b",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 1,
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
+    },
+    "articulation": {
+      "status": "verified",
+      "confidence": "high",
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "ecc2c7d29f3eda5750141392460056a911dc88322d14206f675bac834edef38b",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/8d099cc3121d18878da3be453433de897dea9858/reports/native/2026.10.13/shard-07/native-batch-004-evidence.tar.gz",
+        "sha256": "e5372c00037f1f200f396773d23abb8bf6275d8f91dd165ddf2faeca61198944",
+        "hf_commit": "8d099cc3121d18878da3be453433de897dea9858",
+        "size_bytes": 105621587
+      },
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "ecc2c7d29f3eda5750141392460056a911dc88322d14206f675bac834edef38b",
+      "supplemental_accepted": true,
+      "planned_test_count": 12,
+      "result_count": 12,
+      "passed": 11,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-13T23:52:22.727342+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "034200d0635ed1c38cc33e6224a80034b6be41e87489cc332b98b80de6b46bae",
+      "qualification": "native-fleet-evidence/shard-07/native-batch-004/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
+    }
+  }
+}

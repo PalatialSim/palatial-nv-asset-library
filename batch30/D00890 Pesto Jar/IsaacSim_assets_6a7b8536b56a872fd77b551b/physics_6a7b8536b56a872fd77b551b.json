@@ -86,13 +86,21 @@
       "original_physics_sha256": "267abb1928a1a0aab066fbf355107ba0347683fed2ea00062c23b95073d0c68d"
     },
     "usd_path": "batch30/D00890 Pesto Jar/IsaacSim_assets_6a7b8536b56a872fd77b551b/IsaacSim_asset_6a7b8536b56a872fd77b551b.usd",
-    "usd_sha256": "3c758a905071071bfbac75a3905e9e19ece191b4bbf02438ba85822c8731201c",
+    "usd_sha256": "77676c57bc68a9a723b9e482ce075ff0408797740b95a5b1f0026b5c8e631f50",
     "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
     "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
     "source_meters_per_unit": 1.0,
     "source_kilograms_per_unit": 1.0,
     "source_up_axis": "Z",
-    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+    "verification_note": "Current authored metadata was rechecked against the corrected USD. Historical runtime proofs retain their original source hash and do not qualify this revision.",
+    "source_quality_revision": {
+      "release": "2026.10.15",
+      "original_usd_sha256": "3c758a905071071bfbac75a3905e9e19ece191b4bbf02438ba85822c8731201c",
+      "original_physics_sha256": "7af29ca30154a2e92d19535acded17e5146bedcc9d022af120a7bc2cdacc731f",
+      "changes": "reports/releases/2026.10.15/source-quality/repairs.json",
+      "invariants": "reports/releases/2026.10.15/source-quality/source-invariants.json"
+    },
+    "current_standard_submission": "reports/releases/2026.10.15/standard-submission/inventory.json"
   },
   "schema_version": "1.0",
   "simulation": {
@@ -104,7 +112,7 @@
     "up_axis": "Z"
   },
   "validation": {
-    "overall": "verified",
+    "overall": "stock_tests_passed",
     "scale": {
       "status": "verified",
       "confidence": "high",
@@ -115,9 +123,9 @@
         0.07184000313282013,
         0.09448299929499626
       ],
-      "checked_at": "2026-10-13T19:50:31.621292+00:00",
-      "evidence": "reports/releases/2026.10.13/assets.json",
-      "usd_sha256": "3c758a905071071bfbac75a3905e9e19ece191b4bbf02438ba85822c8731201c",
+      "checked_at": "2026-10-15T06:15:15Z",
+      "evidence": "reports/releases/2026.10.15/source-quality/metadata-inspections.json",
+      "usd_sha256": "77676c57bc68a9a723b9e482ce075ff0408797740b95a5b1f0026b5c8e631f50",
       "scope": "authored_usd_dimensions",
       "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
       "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
@@ -126,9 +134,9 @@
       "status": "verified",
       "confidence": "high",
       "value_kg": 0.6499999761581421,
-      "checked_at": "2026-10-13T19:50:31.621292+00:00",
-      "evidence": "reports/releases/2026.10.13/assets.json",
-      "usd_sha256": "3c758a905071071bfbac75a3905e9e19ece191b4bbf02438ba85822c8731201c",
+      "checked_at": "2026-10-15T06:15:15Z",
+      "evidence": "reports/releases/2026.10.15/source-quality/metadata-inspections.json",
+      "usd_sha256": "77676c57bc68a9a723b9e482ce075ff0408797740b95a5b1f0026b5c8e631f50",
       "scope": "authored_usd_mass_consistency",
       "part_sum_kg": 0.6499999761581421,
       "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
@@ -137,9 +145,9 @@
       "status": "verified",
       "confidence": "high",
       "shape_count": 2,
-      "checked_at": "2026-10-13T19:50:31.621292+00:00",
-      "evidence": "reports/releases/2026.10.13/assets.json",
-      "usd_sha256": "3c758a905071071bfbac75a3905e9e19ece191b4bbf02438ba85822c8731201c",
+      "checked_at": "2026-10-15T06:15:15Z",
+      "evidence": "reports/releases/2026.10.15/source-quality/metadata-inspections.json",
+      "usd_sha256": "77676c57bc68a9a723b9e482ce075ff0408797740b95a5b1f0026b5c8e631f50",
       "scope": "authored_usd_collision_schema",
       "enabled_shape_count": 2,
       "approximations": [
@@ -151,15 +159,15 @@
       "status": "verified",
       "confidence": "high",
       "moving_joints": 0,
-      "checked_at": "2026-10-13T19:50:31.621292+00:00",
-      "evidence": "reports/releases/2026.10.13/assets.json",
-      "usd_sha256": "3c758a905071071bfbac75a3905e9e19ece191b4bbf02438ba85822c8731201c",
+      "checked_at": "2026-10-15T06:15:15Z",
+      "evidence": "reports/releases/2026.10.15/source-quality/metadata-inspections.json",
+      "usd_sha256": "77676c57bc68a9a723b9e482ce075ff0408797740b95a5b1f0026b5c8e631f50",
       "scope": "authored_usd_joint_schema",
       "joint_count": 0,
       "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
     },
-    "scope": "authored_usd_metadata_consistency",
-    "runtime": {
+    "scope": "authored_metadata_and_complete_unchanged_stock_evidence_for_review",
+    "historical_runtime": {
       "evidence_archive": {
         "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/0054c98bb79ab2dd21591943c85874fdba98c745/reports/native/2026.10.13/shard-08/native-batch-004-evidence.tar.gz",
         "sha256": "142ce9b67155d2e2ce99e285be19805eec6a6667fb36521d387baef57d1a39eb",
@@ -186,7 +194,38 @@
       "joints_failed": 0,
       "thumbnail_sha256": "d15877e49f1dbe72a0f4bbd124c003b71efd0f27a24d98af106eb0fa7646f921",
       "qualification": "native-fleet-evidence/shard-08/native-batch-004/qualification-normalized.json",
-      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks",
+      "applies_to_current_source": false
+    },
+    "runtime": {
+      "status": "passed",
+      "scope": "unchanged_stock_tests_for_NVIDIA_review",
+      "usd_sha256": "77676c57bc68a9a723b9e482ce075ff0408797740b95a5b1f0026b5c8e631f50",
+      "asset_version": "2026.10.15_00",
+      "result_counts": {
+        "pass": 18,
+        "skipped": 2
+      },
+      "configured_engines": [
+        "isaac_sim",
+        "isaac_sim_newton"
+      ],
+      "physics_runtime": "PhysX",
+      "Newton_physics_qualified": false,
+      "stock_provider_only": true,
+      "benchmark_parameter_overrides": [],
+      "skip_or_ignore_flags": [],
+      "declared_test_coverage_verified": true,
+      "requires_NVIDIA_review": false,
+      "NVIDIA_approval": "pending",
+      "known_issue_urls": [],
+      "note": "Recorded eligibility skips are retained. Authored physical properties are not independent measurements.",
+      "package_url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/1aa71e9700b95193470408755c68864000936f42/D00890/com.nvidia.simready.packaging.json",
+      "raw_archive_url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/13e2e097d9de092a02a126392c07aa825a4274fc/reports/simready-central/2026.10.15_00/D00890/1aa71e9700b95193470408755c68864000936f42/benchmark-report.tar.gz",
+      "raw_manifest_url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/13e2e097d9de092a02a126392c07aa825a4274fc/reports/simready-central/2026.10.15_00/D00890/1aa71e9700b95193470408755c68864000936f42/evidence.json",
+      "benchmark_sidecar_sha256": "3bb1c6a2e15cf558a0c6ef709d9d53329644bea5e2b33ca797db52e96ccd9c4a",
+      "raw_archive_sha256": "6bb788f30a2e0afa91702f95f8d55b42bffd1345ca53e6886b9973f116a55f64",
+      "default_stock_plan_sha256": "78ad4b0804bb34a3b6bfcb0ba656b69b1696dd5f86da48b2a11f7d3678a78de9"
     }
   }
 }
