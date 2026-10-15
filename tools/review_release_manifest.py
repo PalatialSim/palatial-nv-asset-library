@@ -209,6 +209,14 @@ def load_review_release(root, relative='reports/current-release.json', require_r
                 'Immutable publication audit is incomplete')
         require(set(proof_by_name) == set(repairs_by_name), 'Every corrected source requires exact evidence')
         require('legacy_content_publication' in manifest, 'Legacy source content publication is not verified')
+        require('legacy_source_aliases' in manifest, 'All legacy source aliases must be verified')
+        aliases = checked(manifest['legacy_source_aliases'])
+        require(aliases['passed'] is True and aliases['commit'] == manifest['content_revision'] and
+                aliases['source_assets'] == 1013 and aliases['corrected_sources_included'] is True and
+                aliases['every_legacy_source_and_dependency_verified'] is True and aliases['errors'] == [],
+                'Legacy source alias verification is incomplete')
+        require(aliases['source_usd_sha256'] == {name: s['source_usd_sha256'] for name, s in stock_by_id.items()},
+                'Legacy source alias hashes differ from current stock packages')
         publication = checked(manifest['legacy_content_publication'])
         require(publication['commit'] == manifest['content_revision'] and publication['every_written_file_immutable_hash_verified'] is True,
                 'Legacy source publication verification differs')
