@@ -29,6 +29,17 @@ This release contains **1,013 USD assets across 41 batches**, with textures, phy
 
 The gallery is the quickest way to preview assets without downloading them or installing Isaac Sim. Search by name or asset ID, select a batch, filter authored moving joints, switch between rendered and collision views, and open a batch montage. The dataset table provides a thumbnail, collision thumbnail, dimensions, authored-joint indicator, USD path, and download links for each asset.
 
+
+<!-- standard-submission-report:start -->
+## Standard NVIDIA submission results — 15 October 2026
+
+All **1,013** stock SimReady packages now have recorded benchmark results and immutable raw-evidence archives: **955** assets have no failed tests; **58** have **142** recorded failures for NVIDIA review. No skip/ignore flags or benchmark parameter overrides were used.
+
+See the [complete package inventory and standard submission report](reports/releases/2026.10.13/standard-submission/README.md), including exact per-asset/test/engine messages and upstream issue links. These results are separate from the earlier internal native qualification and do not constitute NVIDIA approval. Nine source-quality repair candidates remain isolated and have not replaced released assets.
+
+<!-- standard-submission-report:end -->
+
+
 ## Download an asset
 
 Keep the complete asset folder together so relative texture, material, and behavior-script references remain available. Downloading the USD alone may omit its dependencies.
