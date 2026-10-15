@@ -1,0 +1,290 @@
+{
+  "articulation": {
+    "has_joints": true,
+    "joints": [
+      {
+        "authored_attributes": {
+          "drive:linear:physics:damping": 20.0,
+          "drive:linear:physics:maxForce": 30.0,
+          "drive:linear:physics:stiffness": 50.0,
+          "drive:linear:physics:targetPosition": 0.0,
+          "drive:linear:physics:targetVelocity": 0.0,
+          "drive:linear:physics:type": "force",
+          "physics:axis": "Z",
+          "physics:localPos0": "(0, 0, 0.1655)",
+          "physics:localPos1": "(0, 0, 0.1655)",
+          "physics:localRot0": "(1, 0, 0, 0)",
+          "physics:localRot1": "(1, 0, 0, 0)",
+          "physics:lowerLimit": -0.004999999888241291,
+          "physics:upperLimit": 0.0,
+          "state:linear:physics:position": 0.0,
+          "state:linear:physics:velocity": 0.0
+        },
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "axis_frame": "USD joint-local frame; apply authored physics:localRot0/1 and body transforms for world axis; not bounds_frame",
+        "body0": "/World/body",
+        "body0_targets": [
+          "/World/body"
+        ],
+        "body1": "/World/spray_head",
+        "body1_targets": [
+          "/World/spray_head"
+        ],
+        "joint_path": "/World/Joints/spray_head_press",
+        "motion_limits": {
+          "max": 0.0,
+          "min": -0.004999999888241291
+        },
+        "path": "/World/Joints/spray_head_press",
+        "type": "prismatic",
+        "usd_type": "PhysicsPrismaticJoint",
+        "id": "spray_head_press",
+        "enabled": true,
+        "authored_usd": {
+          "id": "spray_head_press",
+          "source_prim_path": "/World/Joints/spray_head_press",
+          "joint_type": "PhysicsPrismaticJoint",
+          "body0": [
+            "/World/body"
+          ],
+          "body1": [
+            "/World/spray_head"
+          ],
+          "joint_enabled": true,
+          "axis": "Z",
+          "lowerLimit": -0.004999999888241291,
+          "upperLimit": 0.0,
+          "localPos0": [
+            0.0,
+            0.0,
+            0.1655000001192093
+          ],
+          "localPos1": [
+            0.0,
+            0.0,
+            0.1655000001192093
+          ],
+          "localRot0": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "localRot1": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "static_frames": []
+        }
+      }
+    ],
+    "moving_joints": 1,
+    "rigid_body_count": 2,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
+  },
+  "asset": {
+    "bounds": {
+      "min": [
+        -0.027915000915527344,
+        -0.02763500064611435,
+        0.0008527300087735057
+      ],
+      "max": [
+        0.027737999334931374,
+        0.02796800062060356,
+        0.19043473899364471
+      ],
+      "size": [
+        0.05565300025045872,
+        0.05560300126671791,
+        0.1895820089848712
+      ],
+      "units": "m"
+    },
+    "name": "body",
+    "total_mass": 0.30000000074505806,
+    "object_type": "rigid_bodies",
+    "bounds_frame": "USD stage world axes, metres, default authored pose",
+    "description": "3D model of oil sprayer for robotics simulation research. The delivered USD contains 2 rigid bodies and 1 enabled moving joint constraint."
+  },
+  "asset_id": "D00526",
+  "parts": [
+    {
+      "bounds": {
+        "min": [
+          -0.027915000915527344,
+          -0.02763500064611435,
+          0.0008527300087735057
+        ],
+        "max": [
+          0.027737999334931374,
+          0.02796800062060356,
+          0.16677673161029816
+        ],
+        "size": [
+          0.05565300025045872,
+          0.05560300126671791,
+          0.16592400160152465
+        ],
+        "units": "m"
+      },
+      "collision": {},
+      "id": "part_00",
+      "mass": 0.2800000011920929,
+      "name": "body",
+      "physics_type": "rigid_body",
+      "source": {
+        "object_name": "/World/body",
+        "part_name": "body"
+      },
+      "source_prim_path": "/World/body",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
+    },
+    {
+      "bounds": {
+        "min": [
+          -0.015318999998271465,
+          -0.01501499954611063,
+          0.16420572996139526
+        ],
+        "max": [
+          0.015037000179290771,
+          0.015375000424683094,
+          0.19043473899364471
+        ],
+        "size": [
+          0.030356000177562237,
+          0.030389999970793724,
+          0.02622900903224945
+        ],
+        "units": "m"
+      },
+      "collision": {},
+      "id": "part_01",
+      "mass": 0.019999999552965164,
+      "name": "spray_head",
+      "physics_type": "rigid_body",
+      "source": {
+        "object_name": "/World/spray_head",
+        "part_name": "spray_head"
+      },
+      "source_prim_path": "/World/spray_head",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
+    }
+  ],
+  "provenance": {
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "d5807760b83d871ef2285c2976b6b8dc1fe263e272fb495d47eee0337929c249"
+    },
+    "usd_path": "batch39/D00526_Oil_Sprayer_simready/D00526_Oil_Sprayer_simready/D00526_Oil_Sprayer.usd",
+    "usd_sha256": "38a04453aa18beca0ff0a9b95d8571ba91900eab347bfa51471619bbb2a45387",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+  },
+  "schema_version": "1.0",
+  "simulation": {},
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  },
+  "validation": {
+    "overall": "verified",
+    "scale": {
+      "status": "verified",
+      "confidence": "high",
+      "units": "m",
+      "up_axis": "Z",
+      "bounds_m": [
+        0.05565300025045872,
+        0.05560300126671791,
+        0.1895820089848712
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "38a04453aa18beca0ff0a9b95d8571ba91900eab347bfa51471619bbb2a45387",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
+    },
+    "mass": {
+      "status": "verified",
+      "confidence": "high",
+      "value_kg": 0.30000000074505806,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "38a04453aa18beca0ff0a9b95d8571ba91900eab347bfa51471619bbb2a45387",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.30000000074505806,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
+    },
+    "collision": {
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 142,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "38a04453aa18beca0ff0a9b95d8571ba91900eab347bfa51471619bbb2a45387",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 142,
+      "approximations": [
+        "convexHull"
+      ],
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
+    },
+    "articulation": {
+      "status": "verified",
+      "confidence": "high",
+      "moving_joints": 1,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "38a04453aa18beca0ff0a9b95d8571ba91900eab347bfa51471619bbb2a45387",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 1,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/775fb2d52df92ce4d91cd2ef1a7bff2d0392614e/reports/native/2026.10.13/shard-06/native-batch-001-evidence.tar.gz",
+        "sha256": "662fa7295f7f10ef15aeb05cd103757c982fb863c0bd8c7bf844103762dc988d",
+        "hf_commit": "775fb2d52df92ce4d91cd2ef1a7bff2d0392614e",
+        "size_bytes": 109295261
+      },
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "38a04453aa18beca0ff0a9b95d8571ba91900eab347bfa51471619bbb2a45387",
+      "supplemental_accepted": true,
+      "planned_test_count": 14,
+      "result_count": 14,
+      "passed": 13,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-13T23:09:02.851129+00:00",
+      "joint_status": "passed",
+      "joints_total": 1,
+      "joints_passed": 1,
+      "joints_failed": 0,
+      "thumbnail_sha256": "4868a7d02f3d0c0af44ee9b8f2fc37293d9aab9f058e1221b635623542278300",
+      "qualification": "native-fleet-evidence/shard-06/native-batch-001/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
+    }
+  }
+}

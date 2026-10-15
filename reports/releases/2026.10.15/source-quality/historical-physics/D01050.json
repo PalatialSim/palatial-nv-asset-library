@@ -1,0 +1,484 @@
+{
+  "schema_version": "1.0",
+  "asset_id": "D01050",
+  "asset": {
+    "name": "D01050 Manual Vegetable Spiralizer",
+    "object_type": "articulated",
+    "total_mass": 0.2499999962747097,
+    "bounds": {
+      "min": [
+        -0.14400000870227814,
+        -0.06185000017285347,
+        0.0
+      ],
+      "max": [
+        0.06599999964237213,
+        0.04320000112056732,
+        0.08640000224113464
+      ],
+      "size": [
+        0.21000000834465027,
+        0.10505000129342079,
+        0.08640000224113464
+      ],
+      "units": "m"
+    },
+    "bounds_frame": "USD stage world axes, metres, default authored pose",
+    "description": "3D model of manual vegetable spiralizer for robotics simulation research. The delivered USD contains 4 rigid bodies and 3 enabled moving joint constraints."
+  },
+  "parts": [
+    {
+      "id": "Housing",
+      "name": "Housing",
+      "mass": 0.11999999731779099,
+      "density": null,
+      "inertia": null,
+      "center_of_mass": null,
+      "physics_type": "rigid",
+      "source": {
+        "prim_path": "/World/Housing"
+      },
+      "collision": {
+        "shape_count": 446,
+        "approximations": [
+          "convexHull"
+        ]
+      },
+      "reasoning": null,
+      "source_prim_path": "/World/Housing",
+      "bounds": {
+        "min": [
+          -0.060499999672174454,
+          -0.0494999997317791,
+          0.0
+        ],
+        "max": [
+          0.06599999964237213,
+          0.04320000112056732,
+          0.08640000224113464
+        ],
+        "size": [
+          0.12649999931454659,
+          0.09270000085234642,
+          0.08640000224113464
+        ],
+        "units": "m"
+      },
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
+    },
+    {
+      "id": "Crank",
+      "name": "Crank",
+      "mass": 0.019999999552965164,
+      "density": null,
+      "inertia": null,
+      "center_of_mass": null,
+      "physics_type": "rigid",
+      "source": {
+        "prim_path": "/World/Crank"
+      },
+      "collision": {
+        "shape_count": 18,
+        "approximations": [
+          "convexHull"
+        ]
+      },
+      "reasoning": null,
+      "source_prim_path": "/World/Crank",
+      "bounds": {
+        "min": [
+          0.017284903675317764,
+          -0.06185000017285347,
+          0.015200000256299973
+        ],
+        "max": [
+          0.038715098053216934,
+          -0.03176787868142128,
+          0.07119999825954437
+        ],
+        "size": [
+          0.02143019437789917,
+          0.03008212149143219,
+          0.0559999980032444
+        ],
+        "units": "m"
+      },
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
+    },
+    {
+      "id": "InnerDrum",
+      "name": "InnerDrum",
+      "mass": 0.05999999865889549,
+      "density": null,
+      "inertia": null,
+      "center_of_mass": null,
+      "physics_type": "rigid",
+      "source": {
+        "prim_path": "/World/InnerDrum"
+      },
+      "collision": {
+        "shape_count": 249,
+        "approximations": [
+          "convexHull"
+        ]
+      },
+      "reasoning": null,
+      "source_prim_path": "/World/InnerDrum",
+      "bounds": {
+        "min": [
+          -0.061000000685453415,
+          -0.03905000165104866,
+          0.0041499994695186615
+        ],
+        "max": [
+          0.04450000077486038,
+          0.03905000165104866,
+          0.08224999904632568
+        ],
+        "size": [
+          0.1055000014603138,
+          0.07810000330209732,
+          0.07809999957680702
+        ],
+        "units": "m"
+      },
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
+    },
+    {
+      "id": "Pusher",
+      "name": "Pusher",
+      "mass": 0.05000000074505806,
+      "density": null,
+      "inertia": null,
+      "center_of_mass": null,
+      "physics_type": "rigid",
+      "source": {
+        "prim_path": "/World/Pusher"
+      },
+      "collision": {
+        "shape_count": 15,
+        "approximations": [
+          "convexHull"
+        ]
+      },
+      "reasoning": null,
+      "source_prim_path": "/World/Pusher",
+      "bounds": {
+        "min": [
+          -0.14400000870227814,
+          -0.03849999979138374,
+          0.0047000013291835785
+        ],
+        "max": [
+          -0.015700001269578934,
+          0.03849999979138374,
+          0.08169999718666077
+        ],
+        "size": [
+          0.1283000074326992,
+          0.07699999958276749,
+          0.07699999585747719
+        ],
+        "units": "m"
+      },
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
+    }
+  ],
+  "articulation": {
+    "has_joints": true,
+    "joints": [
+      {
+        "id": "crank_spin",
+        "path": "/World/Joints/crank_spin",
+        "type": "PhysicsRevoluteJoint",
+        "enabled": true,
+        "body0": [
+          "/World/Housing"
+        ],
+        "body1": [
+          "/World/Crank"
+        ],
+        "lower_limit": null,
+        "upper_limit": null,
+        "usd_type": "PhysicsRevoluteJoint",
+        "body0_targets": [
+          "/World/Housing"
+        ],
+        "body1_targets": [
+          "/World/Crank"
+        ],
+        "authored_usd": {
+          "id": "crank_spin",
+          "source_prim_path": "/World/Joints/crank_spin",
+          "joint_type": "PhysicsRevoluteJoint",
+          "body0": [
+            "/World/Housing"
+          ],
+          "body1": [
+            "/World/Crank"
+          ],
+          "joint_enabled": true,
+          "axis": "Y",
+          "lowerLimit": "-Infinity",
+          "upperLimit": "Infinity",
+          "localPos0": [
+            0.02800000086426735,
+            -0.048500001430511475,
+            0.04320000112056732
+          ],
+          "localPos1": [
+            0.02800000086426735,
+            -0.048500001430511475,
+            0.04320000112056732
+          ],
+          "localRot0": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "localRot1": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "static_frames": []
+        }
+      },
+      {
+        "id": "drum_spin",
+        "path": "/World/Joints/drum_spin",
+        "type": "PhysicsRevoluteJoint",
+        "enabled": true,
+        "body0": [
+          "/World/Housing"
+        ],
+        "body1": [
+          "/World/InnerDrum"
+        ],
+        "lower_limit": null,
+        "upper_limit": null,
+        "usd_type": "PhysicsRevoluteJoint",
+        "body0_targets": [
+          "/World/Housing"
+        ],
+        "body1_targets": [
+          "/World/InnerDrum"
+        ],
+        "authored_usd": {
+          "id": "drum_spin",
+          "source_prim_path": "/World/Joints/drum_spin",
+          "joint_type": "PhysicsRevoluteJoint",
+          "body0": [
+            "/World/Housing"
+          ],
+          "body1": [
+            "/World/InnerDrum"
+          ],
+          "joint_enabled": true,
+          "axis": "X",
+          "lowerLimit": "-Infinity",
+          "upperLimit": "Infinity",
+          "localPos0": [
+            0.0,
+            0.0,
+            0.04320000112056732
+          ],
+          "localPos1": [
+            0.0,
+            0.0,
+            0.04320000112056732
+          ],
+          "localRot0": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "localRot1": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "static_frames": []
+        }
+      },
+      {
+        "id": "pusher_slide",
+        "path": "/World/Joints/pusher_slide",
+        "type": "PhysicsPrismaticJoint",
+        "enabled": true,
+        "body0": [
+          "/World/InnerDrum"
+        ],
+        "body1": [
+          "/World/Pusher"
+        ],
+        "lower_limit": -0.029999999329447746,
+        "upper_limit": 0.054999999701976776,
+        "usd_type": "PhysicsPrismaticJoint",
+        "body0_targets": [
+          "/World/InnerDrum"
+        ],
+        "body1_targets": [
+          "/World/Pusher"
+        ],
+        "authored_usd": {
+          "id": "pusher_slide",
+          "source_prim_path": "/World/Joints/pusher_slide",
+          "joint_type": "PhysicsPrismaticJoint",
+          "body0": [
+            "/World/InnerDrum"
+          ],
+          "body1": [
+            "/World/Pusher"
+          ],
+          "joint_enabled": true,
+          "axis": "X",
+          "lowerLimit": -0.029999999329447746,
+          "upperLimit": 0.054999999701976776,
+          "localPos0": [
+            -0.054999999701976776,
+            0.0,
+            0.04320000112056732
+          ],
+          "localPos1": [
+            -0.054999999701976776,
+            0.0,
+            0.04320000112056732
+          ],
+          "localRot0": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "localRot1": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "static_frames": []
+        }
+      }
+    ],
+    "moving_joints": 3,
+    "rigid_body_count": 4,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
+  },
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  },
+  "simulation": {
+    "fix_base": null
+  },
+  "provenance": {
+    "source_schema": "authored_usd",
+    "usd_path": "batch41/D01050_Manual_Vegetable_Spiralizer/D01050_Manual_Vegetable_Spiralizer.usd",
+    "usd_sha256": "7dbf71669631cb5ab78bc2f3710190033289317d6a119e1c6fc42871d31d9704",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "reasoning_available": false,
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification.",
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "65ddfad370e072f37b3d31f5b650699229a49b24c1de3da24b8ca7949e28810d"
+    },
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes"
+  },
+  "validation": {
+    "overall": "verified",
+    "scale": {
+      "status": "verified",
+      "confidence": "high",
+      "units": "m",
+      "up_axis": "Z",
+      "bounds_m": [
+        0.21000000834465027,
+        0.10505000129342079,
+        0.08640000224113464
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "7dbf71669631cb5ab78bc2f3710190033289317d6a119e1c6fc42871d31d9704",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
+    },
+    "mass": {
+      "status": "verified",
+      "confidence": "high",
+      "value_kg": 0.2499999962747097,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "7dbf71669631cb5ab78bc2f3710190033289317d6a119e1c6fc42871d31d9704",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.2499999962747097,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
+    },
+    "collision": {
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 728,
+      "approximations": [
+        "convexHull"
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "7dbf71669631cb5ab78bc2f3710190033289317d6a119e1c6fc42871d31d9704",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 728,
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
+    },
+    "articulation": {
+      "status": "verified",
+      "confidence": "high",
+      "moving_joints": 3,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "7dbf71669631cb5ab78bc2f3710190033289317d6a119e1c6fc42871d31d9704",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 3,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/0054c98bb79ab2dd21591943c85874fdba98c745/reports/native/2026.10.13/shard-08/native-batch-004-evidence.tar.gz",
+        "sha256": "142ce9b67155d2e2ce99e285be19805eec6a6667fb36521d387baef57d1a39eb",
+        "hf_commit": "0054c98bb79ab2dd21591943c85874fdba98c745",
+        "size_bytes": 106767539
+      },
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "7dbf71669631cb5ab78bc2f3710190033289317d6a119e1c6fc42871d31d9704",
+      "supplemental_accepted": true,
+      "planned_test_count": 14,
+      "result_count": 14,
+      "passed": 13,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-14T00:01:16.497774+00:00",
+      "joint_status": "passed",
+      "joints_total": 3,
+      "joints_passed": 3,
+      "joints_failed": 0,
+      "thumbnail_sha256": "ac3ee2fc70676eb4c0149ceddbeff1f275b3da91711dc581c14ba9053de10f27",
+      "qualification": "native-fleet-evidence/shard-08/native-batch-004/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
+    }
+  }
+}

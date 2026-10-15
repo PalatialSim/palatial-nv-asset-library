@@ -1,0 +1,4221 @@
+{
+  "schema_version": "1.0",
+  "asset_id": "D01032",
+  "asset": {
+    "name": "D01032 Cherry Pitter",
+    "object_type": "articulated",
+    "total_mass": 0.07500000222353265,
+    "bounds": {
+      "min": [
+        -0.10570000112056732,
+        -0.01679999940097332,
+        0.0
+      ],
+      "max": [
+        0.08399999886751175,
+        0.01679999940097332,
+        0.14233371590680224
+      ],
+      "size": [
+        0.18969999998807907,
+        0.03359999880194664,
+        0.14233371590680224
+      ],
+      "units": "m"
+    },
+    "bounds_frame": "USD stage world axes, metres, default authored pose",
+    "description": "3D model of cherry pitter for robotics simulation research. The delivered USD contains 3 rigid bodies and 2 enabled moving joint constraints."
+  },
+  "parts": [
+    {
+      "id": "UpperLever",
+      "name": "UpperLever",
+      "mass": 0.034796155989170074,
+      "density": null,
+      "inertia": [
+        8.694050848134793e-06,
+        0.00012628070544451475,
+        0.00013323473103810102
+      ],
+      "center_of_mass": [
+        0.08649659901857376,
+        -3.4448105452611344e-06,
+        0.014477874152362347
+      ],
+      "physics_type": "rigid",
+      "source": {
+        "prim_path": "/World/CherryOlivePitter/UpperLever"
+      },
+      "collision": {
+        "shape_count": 61,
+        "approximations": [
+          "convexHull"
+        ]
+      },
+      "reasoning": null,
+      "source_prim_path": "/World/CherryOlivePitter/UpperLever",
+      "bounds": {
+        "min": [
+          -0.0935673403746652,
+          -0.01140000019222498,
+          0.05471980841370799
+        ],
+        "max": [
+          0.07141239149763137,
+          0.01140000019222498,
+          0.14233371590680224
+        ],
+        "size": [
+          0.1649797318722966,
+          0.02280000038444996,
+          0.08761390749309425
+        ],
+        "units": "m"
+      },
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
+    },
+    {
+      "id": "StorageLatch",
+      "name": "StorageLatch",
+      "mass": 0.000592711556237191,
+      "density": null,
+      "inertia": [
+        4.417913590515354e-09,
+        2.521510111819225e-08,
+        2.610670080116506e-08
+      ],
+      "center_of_mass": [
+        -0.009152235463261604,
+        -8.148817620678983e-09,
+        0.0009046576451510191
+      ],
+      "physics_type": "rigid",
+      "source": {
+        "prim_path": "/World/CherryOlivePitter/StorageLatch"
+      },
+      "collision": {
+        "shape_count": 8,
+        "approximations": [
+          "convexHull"
+        ]
+      },
+      "reasoning": null,
+      "source_prim_path": "/World/CherryOlivePitter/StorageLatch",
+      "bounds": {
+        "min": [
+          -0.10570000112056732,
+          -0.0044999998062849045,
+          0.05420000106096268
+        ],
+        "max": [
+          -0.0851999968290329,
+          0.0044999998062849045,
+          0.06400000303983688
+        ],
+        "size": [
+          0.020500004291534424,
+          0.008999999612569809,
+          0.009800001978874207
+        ],
+        "units": "m"
+      },
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
+    },
+    {
+      "id": "LowerBody",
+      "name": "LowerBody",
+      "mass": 0.03961113467812538,
+      "density": null,
+      "inertia": [
+        9.53225935518276e-06,
+        0.0001409851829521358,
+        0.00014554892550222576
+      ],
+      "center_of_mass": [
+        0.013293834403157234,
+        -1.2396284546412062e-05,
+        0.05112388730049133
+      ],
+      "physics_type": "rigid",
+      "source": {
+        "prim_path": "/World/CherryOlivePitter/LowerBody"
+      },
+      "collision": {
+        "shape_count": 285,
+        "approximations": [
+          "convexHull"
+        ]
+      },
+      "reasoning": null,
+      "source_prim_path": "/World/CherryOlivePitter/LowerBody",
+      "bounds": {
+        "min": [
+          -0.09049999713897705,
+          -0.01679999940097332,
+          0.0
+        ],
+        "max": [
+          0.08399999886751175,
+          0.01679999940097332,
+          0.07800000160932541
+        ],
+        "size": [
+          0.1744999960064888,
+          0.03359999880194664,
+          0.07800000160932541
+        ],
+        "units": "m"
+      },
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
+    }
+  ],
+  "articulation": {
+    "has_joints": true,
+    "joints": [
+      {
+        "id": "SqueezeHinge",
+        "path": "/World/CherryOlivePitter/Joints/SqueezeHinge",
+        "type": "PhysicsRevoluteJoint",
+        "enabled": true,
+        "body0": [
+          "/World/CherryOlivePitter/LowerBody"
+        ],
+        "body1": [
+          "/World/CherryOlivePitter/UpperLever"
+        ],
+        "lower_limit": -20.0,
+        "upper_limit": 0.0,
+        "usd_type": "PhysicsRevoluteJoint",
+        "body0_targets": [
+          "/World/CherryOlivePitter/LowerBody"
+        ],
+        "body1_targets": [
+          "/World/CherryOlivePitter/UpperLever"
+        ],
+        "authored_usd": {
+          "id": "SqueezeHinge",
+          "source_prim_path": "/World/CherryOlivePitter/Joints/SqueezeHinge",
+          "joint_type": "PhysicsRevoluteJoint",
+          "body0": [
+            "/World/CherryOlivePitter/LowerBody"
+          ],
+          "body1": [
+            "/World/CherryOlivePitter/UpperLever"
+          ],
+          "joint_enabled": true,
+          "axis": "Y",
+          "lowerLimit": -20.0,
+          "upperLimit": 0.0,
+          "localPos0": [
+            -0.07400000095367432,
+            0.0,
+            0.06300000101327896
+          ],
+          "localPos1": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "localRot0": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "localRot1": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "static_frames": []
+        },
+        "joint_path": "/World/CherryOlivePitter/Joints/SqueezeHinge",
+        "usd_attributes": {
+          "drive:angular:physics:damping": 0.0020000000949949026,
+          "drive:angular:physics:maxForce": 0.11999999731779099,
+          "drive:angular:physics:stiffness": 0.019999999552965164,
+          "drive:angular:physics:targetPosition": 0.0,
+          "drive:angular:physics:targetVelocity": 0.0,
+          "drive:angular:physics:type": "force",
+          "physics:axis": "Y",
+          "physics:collisionEnabled": false,
+          "physics:localPos0": [
+            -0.07400000095367432,
+            0.0,
+            0.06300000101327896
+          ],
+          "physics:localPos1": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "physics:localRot0": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "physics:localRot1": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "physics:lowerLimit": -20.0,
+          "physics:upperLimit": 0.0,
+          "physxJoint:jointFriction": 0.0020000000949949026,
+          "physxJoint:maxJointVelocity": 300.0
+        },
+        "motion_limits": {
+          "min": -20.0,
+          "max": 0.0,
+          "unit": "degrees"
+        },
+        "drives": {
+          "angular": {
+            "physics:damping": 0.0020000000949949026,
+            "physics:maxForce": 0.11999999731779099,
+            "physics:stiffness": 0.019999999552965164,
+            "physics:targetPosition": 0.0,
+            "physics:targetVelocity": 0.0,
+            "physics:type": "force"
+          }
+        }
+      },
+      {
+        "id": "StorageLatchHinge",
+        "path": "/World/CherryOlivePitter/Joints/StorageLatchHinge",
+        "type": "PhysicsRevoluteJoint",
+        "enabled": true,
+        "body0": [
+          "/World/CherryOlivePitter/LowerBody"
+        ],
+        "body1": [
+          "/World/CherryOlivePitter/StorageLatch"
+        ],
+        "lower_limit": 0.0,
+        "upper_limit": 90.0,
+        "usd_type": "PhysicsRevoluteJoint",
+        "body0_targets": [
+          "/World/CherryOlivePitter/LowerBody"
+        ],
+        "body1_targets": [
+          "/World/CherryOlivePitter/StorageLatch"
+        ],
+        "authored_usd": {
+          "id": "StorageLatchHinge",
+          "source_prim_path": "/World/CherryOlivePitter/Joints/StorageLatchHinge",
+          "joint_type": "PhysicsRevoluteJoint",
+          "body0": [
+            "/World/CherryOlivePitter/LowerBody"
+          ],
+          "body1": [
+            "/World/CherryOlivePitter/StorageLatch"
+          ],
+          "joint_enabled": true,
+          "axis": "Y",
+          "lowerLimit": 0.0,
+          "upperLimit": 90.0,
+          "localPos0": [
+            -0.08799999952316284,
+            0.0,
+            0.05700000002980232
+          ],
+          "localPos1": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "localRot0": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "localRot1": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "static_frames": []
+        },
+        "joint_path": "/World/CherryOlivePitter/Joints/StorageLatchHinge",
+        "usd_attributes": {
+          "drive:angular:physics:damping": 0.0,
+          "drive:angular:physics:maxForce": "Infinity",
+          "drive:angular:physics:stiffness": 0.0,
+          "drive:angular:physics:targetPosition": 0.0,
+          "drive:angular:physics:targetVelocity": 0.0,
+          "drive:angular:physics:type": "force",
+          "physics:axis": "Y",
+          "physics:collisionEnabled": false,
+          "physics:localPos0": [
+            -0.08799999952316284,
+            0.0,
+            0.05700000002980232
+          ],
+          "physics:localPos1": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "physics:localRot0": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "physics:localRot1": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "physics:lowerLimit": 0.0,
+          "physics:upperLimit": 90.0,
+          "physxJoint:jointFriction": 0.014999999664723873,
+          "physxJoint:maxJointVelocity": 300.0
+        },
+        "motion_limits": {
+          "min": 0.0,
+          "max": 90.0,
+          "unit": "degrees"
+        },
+        "drives": {
+          "angular": {
+            "physics:damping": 0.0,
+            "physics:maxForce": "Infinity",
+            "physics:stiffness": 0.0,
+            "physics:targetPosition": 0.0,
+            "physics:targetVelocity": 0.0,
+            "physics:type": "force"
+          }
+        }
+      }
+    ],
+    "moving_joints": 2,
+    "rigid_body_count": 3,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
+  },
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  },
+  "simulation": {
+    "fix_base": null,
+    "authored_usd_physics_properties": [
+      {
+        "prim_path": "/World/CherryOlivePitter",
+        "authored_attributes": {
+          "physxArticulation:enabledSelfCollisions": "False",
+          "physxArticulation:solverPositionIterationCount": "128",
+          "physxArticulation:solverVelocityIterationCount": "16"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/UpperLever",
+        "authored_attributes": {
+          "physics:centerOfMass": "(0.0864966, -0.0000034448105, 0.014477874)",
+          "physics:diagonalInertia": "(0.000008694051, 0.0001262807, 0.00013323473)",
+          "physics:kinematicEnabled": "False",
+          "physics:mass": "0.034796155989170074",
+          "physics:principalAxes": "(0.70647746, -0.7066247, 0.027999023, 0.028057212)",
+          "physics:rigidBodyEnabled": "True",
+          "physxRigidBody:angularDamping": "0.03999999910593033",
+          "physxRigidBody:enableCCD": "True",
+          "physxRigidBody:enableSpeculativeCCD": "True",
+          "physxRigidBody:linearDamping": "0.019999999552965164",
+          "physxRigidBody:maxDepenetrationVelocity": "0.6000000238418579",
+          "physxRigidBody:solverVelocityIterationCount": "16"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/UpperLever/Collisions/Upper_grip/Hull_000",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/UpperLever/Collisions/Upper_grip/Hull_001",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/UpperLever/Collisions/Upper_grip/Hull_002",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/UpperLever/Collisions/Upper_grip/Hull_003",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/UpperLever/Collisions/Upper_grip/Hull_004",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/UpperLever/Collisions/Upper_grip/Hull_005",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/UpperLever/Collisions/Upper_grip/Hull_006",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/UpperLever/Collisions/Upper_grip/Hull_007",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/UpperLever/Collisions/Upper_grip/Hull_008",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/UpperLever/Collisions/Upper_grip/Hull_009",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/UpperLever/Collisions/Upper_grip/Hull_010",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/UpperLever/Collisions/Upper_grip/Hull_011",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/UpperLever/Collisions/Upper_grip/Hull_012",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/UpperLever/Collisions/Upper_grip/Hull_013",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/UpperLever/Collisions/Upper_grip/Hull_014",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/UpperLever/Collisions/Upper_grip/Hull_015",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/UpperLever/Collisions/Upper_grip/Hull_016",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/UpperLever/Collisions/Upper_grip/Hull_017",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/UpperLever/Collisions/Upper_grip/Hull_018",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/UpperLever/Collisions/Upper_grip/Hull_019",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/UpperLever/Collisions/Upper_grip/Hull_020",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/UpperLever/Collisions/Pivot_tongue/Hull_000",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/UpperLever/Collisions/Pivot_tongue/Hull_001",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/UpperLever/Collisions/Pivot_tongue/Hull_002",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/UpperLever/Collisions/Pivot_tongue/Hull_003",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/UpperLever/Collisions/Pivot_tongue/Hull_004",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/UpperLever/Collisions/Pivot_tongue/Hull_005",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/UpperLever/Collisions/Pivot_tongue/Hull_006",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/UpperLever/Collisions/Pivot_tongue/Hull_007",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/UpperLever/Collisions/Pivot_tongue/Hull_008",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/UpperLever/Collisions/Pivot_tongue/Hull_009",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/UpperLever/Collisions/Pivot_tongue/Hull_010",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/UpperLever/Collisions/Pivot_tongue/Hull_011",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/UpperLever/Collisions/Pivot_tongue/Hull_012",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/UpperLever/Collisions/Pivot_tongue/Hull_013",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/UpperLever/Collisions/Pivot_tongue/Hull_014",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/UpperLever/Collisions/Pivot_tongue/Hull_015",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/UpperLever/Collisions/Pivot_tongue/Hull_016",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/UpperLever/Collisions/Pivot_tongue/Hull_017",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/UpperLever/Collisions/Pivot_tongue/Hull_018",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/UpperLever/Collisions/Pivot_tongue/Hull_019",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/UpperLever/Collisions/Pivot_tongue/Hull_020",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/UpperLever/Collisions/Pivot_tongue/Hull_021",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/UpperLever/Collisions/Pivot_tongue/Hull_022",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/UpperLever/Collisions/Pivot_tongue/Hull_023",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/UpperLever/Collisions/Pivot_tongue/Hull_024",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/UpperLever/Collisions/Pivot_tongue/Hull_025",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/UpperLever/Collisions/Pivot_tongue/Hull_026",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/UpperLever/Collisions/Pivot_tongue/Hull_027",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/UpperLever/Collisions/Heel_catch/Hull_000",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/UpperLever/Collisions/Heel_catch/Hull_001",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/UpperLever/Collisions/Heel_catch/Hull_002",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/UpperLever/Collisions/Heel_catch/Hull_003",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/UpperLever/Collisions/Heel_catch/Hull_004",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/UpperLever/Collisions/Heel_catch/Hull_005",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/UpperLever/Collisions/Heel_catch/Hull_006",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/UpperLever/Collisions/Plunger/Hull_000",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/UpperLever/Collisions/Plunger/Hull_001",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/UpperLever/Collisions/Internal_grip_webs/Hull_000",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/UpperLever/Collisions/Internal_grip_webs/Hull_001",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/UpperLever/Collisions/Internal_grip_webs/Hull_002",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/StorageLatch",
+        "authored_attributes": {
+          "physics:centerOfMass": "(-0.009152235, -8.148818e-9, 0.00090465765)",
+          "physics:diagonalInertia": "(4.4179136e-9, 2.5215101e-8, 2.61067e-8)",
+          "physics:kinematicEnabled": "False",
+          "physics:mass": "0.000592711556237191",
+          "physics:principalAxes": "(0.9976364, -0.0000048121133, 0.06871464, 3.7588617e-8)",
+          "physics:rigidBodyEnabled": "True",
+          "physxRigidBody:angularDamping": "0.03999999910593033",
+          "physxRigidBody:enableCCD": "True",
+          "physxRigidBody:enableSpeculativeCCD": "True",
+          "physxRigidBody:linearDamping": "0.019999999552965164",
+          "physxRigidBody:maxDepenetrationVelocity": "0.6000000238418579",
+          "physxRigidBody:solverVelocityIterationCount": "16"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/StorageLatch/Collisions/Hook/Hull_000",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/StorageLatch/Collisions/Hook/Hull_001",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/StorageLatch/Collisions/Hook/Hull_002",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/StorageLatch/Collisions/Hook/Hull_003",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/StorageLatch/Collisions/Hook/Hull_004",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/StorageLatch/Collisions/Pivot_journal/Hull_000",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/StorageLatch/Collisions/Thumb_pad/Hull_000",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/StorageLatch/Collisions/Thumb_pad/Hull_001",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/Joints/SqueezeHinge",
+        "authored_attributes": {
+          "physics:axis": "Y",
+          "physics:collisionEnabled": "False",
+          "physics:localPos0": "(-0.074, 0, 0.063)",
+          "physics:localPos1": "(0, 0, 0)",
+          "physics:localRot0": "(1, 0, 0, 0)",
+          "physics:localRot1": "(1, 0, 0, 0)",
+          "physics:lowerLimit": "-20.0",
+          "physics:upperLimit": "0.0",
+          "physxJoint:jointFriction": "0.0020000000949949026",
+          "physxJoint:maxJointVelocity": "300.0"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/Joints/StorageLatchHinge",
+        "authored_attributes": {
+          "physics:axis": "Y",
+          "physics:collisionEnabled": "False",
+          "physics:localPos0": "(-0.088, 0, 0.057)",
+          "physics:localPos1": "(0, 0, 0)",
+          "physics:localRot0": "(1, 0, 0, 0)",
+          "physics:localRot1": "(1, 0, 0, 0)",
+          "physics:lowerLimit": "0.0",
+          "physics:upperLimit": "90.0",
+          "physxJoint:jointFriction": "0.014999999664723873",
+          "physxJoint:maxJointVelocity": "300.0"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody",
+        "authored_attributes": {
+          "physics:centerOfMass": "(0.013293834, -0.000012396285, 0.051123887)",
+          "physics:diagonalInertia": "(0.000009532259, 0.00014098518, 0.00014554893)",
+          "physics:kinematicEnabled": "False",
+          "physics:mass": "0.03961113467812538",
+          "physics:principalAxes": "(0.7069464, -0.7064096, 0.024515528, 0.024725046)",
+          "physics:rigidBodyEnabled": "True",
+          "physxRigidBody:angularDamping": "0.03999999910593033",
+          "physxRigidBody:enableCCD": "True",
+          "physxRigidBody:enableSpeculativeCCD": "True",
+          "physxRigidBody:linearDamping": "0.019999999552965164",
+          "physxRigidBody:maxDepenetrationVelocity": "0.6000000238418579",
+          "physxRigidBody:solverVelocityIterationCount": "16"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Lower_grip/Hull_000",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Lower_grip/Hull_001",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Lower_grip/Hull_002",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Lower_grip/Hull_003",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Lower_grip/Hull_004",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Lower_grip/Hull_005",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Lower_grip/Hull_006",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Lower_grip/Hull_007",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Lower_grip/Hull_008",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Lower_grip/Hull_009",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Lower_grip/Hull_010",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Lower_grip/Hull_011",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Lower_grip/Hull_012",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Lower_grip/Hull_013",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Lower_grip/Hull_014",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Lower_grip/Hull_015",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Lower_grip/Hull_016",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Lower_grip/Hull_017",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Lower_grip/Hull_018",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Pivot_clevis/Hull_000",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Pivot_clevis/Hull_001",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fork_ribs/Hull_000",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fork_ribs/Hull_001",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fork_ribs/Hull_002",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fork_ribs/Hull_003",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fork_web/Hull_000",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fork_web/Hull_001",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Plunger_guide/Hull_000",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Plunger_guide/Hull_001",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Plunger_guide/Hull_002",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Plunger_guide/Hull_003",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Plunger_guide/Hull_004",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Plunger_guide/Hull_005",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Plunger_guide/Hull_006",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Plunger_guide/Hull_007",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Plunger_guide/Hull_008",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Plunger_guide/Hull_009",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Plunger_guide/Hull_010",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Plunger_guide/Hull_011",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Plunger_guide/Hull_012",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Plunger_guide/Hull_013",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Plunger_guide/Hull_014",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Plunger_guide/Hull_015",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Plunger_guide/Hull_016",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Plunger_guide/Hull_017",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Plunger_guide/Hull_018",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Plunger_guide/Hull_019",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Plunger_guide/Hull_020",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Plunger_guide/Hull_021",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Plunger_guide/Hull_022",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Plunger_guide/Hull_023",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Plunger_guide/Hull_024",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Plunger_guide/Hull_025",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Plunger_guide/Hull_026",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Plunger_guide/Hull_027",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Plunger_guide/Hull_028",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Plunger_guide/Hull_029",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Plunger_guide/Hull_030",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Plunger_guide/Hull_031",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Plunger_guide/Hull_032",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Plunger_guide/Hull_033",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Plunger_guide/Hull_034",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Plunger_guide/Hull_035",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Plunger_guide/Hull_036",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Plunger_guide/Hull_037",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Plunger_guide/Hull_038",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Plunger_guide/Hull_039",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_000",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_001",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_002",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_003",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_004",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_005",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_006",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_007",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_008",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_009",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_010",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_011",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_012",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_013",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_014",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_015",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_016",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_017",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_018",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_019",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_020",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_021",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_022",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_023",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_024",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_025",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_026",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_027",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_028",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_029",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_030",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_031",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_032",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_033",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_034",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_035",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_036",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_037",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_038",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_039",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_040",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_041",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_042",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_043",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_044",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_045",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_046",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_047",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_048",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_049",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_050",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_051",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_052",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_053",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_054",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_055",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_056",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_057",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_058",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_059",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_060",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_061",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_062",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_063",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_064",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_065",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_066",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_067",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_068",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_069",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_070",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_071",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_072",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_073",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_074",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_075",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_076",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_077",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_078",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_079",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_080",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_081",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_082",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_083",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_084",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_085",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_086",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_087",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_088",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_089",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_090",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_091",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_092",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_093",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_094",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_095",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_096",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_097",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_098",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_099",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_100",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_101",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_102",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_103",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_104",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_105",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_106",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_107",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_108",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_109",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_110",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_111",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_112",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_113",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_114",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_115",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_116",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_117",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_118",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_119",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_120",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_121",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_122",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_123",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_124",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_125",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_126",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_127",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_128",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_129",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_130",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_131",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_132",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_133",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_134",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_135",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_136",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_137",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_138",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_139",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_140",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_141",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_142",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Fruit_bowl/Hull_143",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Clear_cup_wall/Hull_000",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Clear_cup_wall/Hull_001",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Clear_cup_wall/Hull_002",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Clear_cup_wall/Hull_003",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Clear_cup_wall/Hull_004",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Clear_cup_wall/Hull_005",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Clear_cup_wall/Hull_006",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Clear_cup_wall/Hull_007",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Clear_cup_wall/Hull_008",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Clear_cup_wall/Hull_009",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Clear_cup_wall/Hull_010",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Clear_cup_wall/Hull_011",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Clear_cup_wall/Hull_012",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Clear_cup_wall/Hull_013",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Clear_cup_wall/Hull_014",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Clear_cup_wall/Hull_015",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Clear_cup_wall/Hull_016",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Clear_cup_wall/Hull_017",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Clear_cup_wall/Hull_018",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Clear_cup_wall/Hull_019",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Clear_cup_wall/Hull_020",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Clear_cup_wall/Hull_021",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Clear_cup_wall/Hull_022",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Clear_cup_wall/Hull_023",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Clear_cup_wall/Hull_024",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Clear_cup_wall/Hull_025",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Clear_cup_wall/Hull_026",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Clear_cup_wall/Hull_027",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Clear_cup_wall/Hull_028",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Clear_cup_wall/Hull_029",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Clear_cup_wall/Hull_030",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Clear_cup_wall/Hull_031",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Clear_cup_wall/Hull_032",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Clear_cup_wall/Hull_033",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Clear_cup_wall/Hull_034",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Clear_cup_wall/Hull_035",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Clear_cup_wall/Hull_036",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Clear_cup_wall/Hull_037",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Clear_cup_wall/Hull_038",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Clear_cup_wall/Hull_039",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Clear_cup_wall/Hull_040",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Clear_cup_wall/Hull_041",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Clear_cup_wall/Hull_042",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Clear_cup_wall/Hull_043",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Clear_cup_wall/Hull_044",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Clear_cup_wall/Hull_045",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Clear_cup_wall/Hull_046",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Clear_cup_wall/Hull_047",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Clear_cup_wall/Hull_048",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Clear_cup_wall/Hull_049",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Clear_cup_wall/Hull_050",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Clear_cup_wall/Hull_051",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Clear_cup_wall/Hull_052",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Clear_cup_wall/Hull_053",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Clear_cup_wall/Hull_054",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Clear_cup_wall/Hull_055",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Clear_cup_wall/Hull_056",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Clear_cup_wall/Hull_057",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Clear_cup_wall/Hull_058",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Clear_cup_wall/Hull_059",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Clear_cup_wall/Hull_060",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Clear_cup_wall/Hull_061",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Clear_cup_wall/Hull_062",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Clear_cup_wall/Hull_063",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Rivet/Hull_000",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Latch_support/Hull_000",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Latch_support/Hull_001",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Latch_support/Hull_002",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Latch_support/Hull_003",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Latch_support/Hull_004",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Latch_support/Hull_005",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Internal_grip_webs/Hull_000",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Internal_grip_webs/Hull_001",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/LowerBody/Collisions/Internal_grip_webs/Hull_002",
+        "authored_attributes": {
+          "physics:approximation": "convexHull",
+          "physics:collisionEnabled": "True",
+          "physxCollision:contactOffset": "0.0001500000071246177",
+          "physxCollision:restOffset": "0.0",
+          "physxConvexHullCollision:hullVertexLimit": "64"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/PhysicsMaterials/SoftGrip",
+        "authored_attributes": {
+          "physics:dynamicFriction": "0.6499999761581421",
+          "physics:restitution": "0.0",
+          "physics:staticFriction": "0.8999999761581421"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/PhysicsMaterials/RigidPlastic",
+        "authored_attributes": {
+          "physics:dynamicFriction": "0.3199999928474426",
+          "physics:restitution": "0.0",
+          "physics:staticFriction": "0.44999998807907104"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/PhysicsMaterials/ClearCup",
+        "authored_attributes": {
+          "physics:dynamicFriction": "0.25",
+          "physics:restitution": "0.0",
+          "physics:staticFriction": "0.3799999952316284"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/PhysicsMaterials/Steel",
+        "authored_attributes": {
+          "physics:dynamicFriction": "0.18000000715255737",
+          "physics:restitution": "0.0",
+          "physics:staticFriction": "0.23999999463558197"
+        }
+      },
+      {
+        "prim_path": "/World/CherryOlivePitter/PhysicsMaterials/Latch",
+        "authored_attributes": {
+          "physics:dynamicFriction": "0.3499999940395355",
+          "physics:restitution": "0.0",
+          "physics:staticFriction": "0.5"
+        }
+      }
+    ]
+  },
+  "provenance": {
+    "source_schema": "authored_usd",
+    "usd_path": "batch41/D01032 Cherry Pitter/D01032 Cherry Pitter.usd",
+    "usd_sha256": "e1771b226c2aa22e0fd8222662de72792723247692ac8cbb685701c0d4f451f9",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "reasoning_available": false,
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification.",
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "094d3bd676a8c95bc0c8d87ad4b27e6457dca46400792bf0071fc3ed1a64de1b"
+    },
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "native_runtime_repairs": [
+      {
+        "case": "native-pitter-repairs-v1",
+        "old_usd_sha256": "df3ec64766ac6c15f916ecf1de92ab84dfdd2caef69621e341f0c1c413356d11",
+        "new_usd_sha256": "e1771b226c2aa22e0fd8222662de72792723247692ac8cbb685701c0d4f451f9",
+        "changes": [
+          {
+            "kind": "explicit_articulation_contact_solver",
+            "position_iterations": 128,
+            "velocity_iterations": 16,
+            "self_collisions": false
+          },
+          {
+            "kind": "speculative_ccd_and_contact_velocity_solver",
+            "velocity_iterations": 16
+          },
+          {
+            "kind": "return_spring_target_inside_authored_limits",
+            "prim": "/World/CherryOlivePitter/Joints/SqueezeHinge",
+            "before": {
+              "targetPosition": -35.0,
+              "stiffness": 0.0010000000474974513,
+              "damping": 5.999999848427251e-05
+            },
+            "after": {
+              "targetPosition": 0.0,
+              "stiffness": 0.02,
+              "damping": 0.002
+            },
+            "body_mass_travel_geometry_unchanged": true,
+            "hardware_gains_calibrated": false
+          }
+        ],
+        "qualification": "native-fleet-evidence/shard-38/native-batch-000/qualification-normalized.json"
+      }
+    ]
+  },
+  "validation": {
+    "overall": "verified",
+    "scale": {
+      "status": "verified",
+      "confidence": "high",
+      "units": "m",
+      "up_axis": "Z",
+      "bounds_m": [
+        0.18969999998807907,
+        0.03359999880194664,
+        0.14233371590680224
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "e1771b226c2aa22e0fd8222662de72792723247692ac8cbb685701c0d4f451f9",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
+    },
+    "mass": {
+      "status": "verified",
+      "confidence": "high",
+      "value_kg": 0.07500000222353265,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "e1771b226c2aa22e0fd8222662de72792723247692ac8cbb685701c0d4f451f9",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.07500000222353265,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
+    },
+    "collision": {
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 354,
+      "approximations": [
+        "convexHull"
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "e1771b226c2aa22e0fd8222662de72792723247692ac8cbb685701c0d4f451f9",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 354,
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
+    },
+    "articulation": {
+      "status": "verified",
+      "confidence": "high",
+      "moving_joints": 2,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "e1771b226c2aa22e0fd8222662de72792723247692ac8cbb685701c0d4f451f9",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 2,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/842a0a385a94e733bf0d29e3f4ccb4bf6b4098af/reports/native/2026.10.13/cases/native-pitter-repairs-v1/native-batch-000-evidence.tar.gz",
+        "sha256": "2e3e63c7c8466d9a71f4d1c548cef96a9667d3b4715a9798a2241ebe01052d77",
+        "hf_commit": "842a0a385a94e733bf0d29e3f4ccb4bf6b4098af",
+        "size_bytes": 6031407
+      },
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "e1771b226c2aa22e0fd8222662de72792723247692ac8cbb685701c0d4f451f9",
+      "supplemental_accepted": true,
+      "planned_test_count": 14,
+      "result_count": 14,
+      "passed": 13,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-14T00:56:26.952033+00:00",
+      "joint_status": "passed",
+      "joints_total": 2,
+      "joints_passed": 2,
+      "joints_failed": 0,
+      "thumbnail_sha256": "ff5dd9c62c3a226a460651ec5b9a47c0ed6fea477985660a75bf35399ad9d89f",
+      "qualification": "native-fleet-evidence/shard-38/native-batch-000/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
+    }
+  }
+}

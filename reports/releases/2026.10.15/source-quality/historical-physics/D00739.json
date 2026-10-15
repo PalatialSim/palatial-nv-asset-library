@@ -1,0 +1,214 @@
+{
+  "schema_version": "1.0",
+  "asset_id": "D00739",
+  "asset": {
+    "name": "D00739 Snack",
+    "description": "A small round chocolate peanut-butter cup with a ridged chocolate shell and smooth top surface, seated in a crinkled brown paper liner.",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.020999999716877937,
+    "bounds": {
+      "min": [
+        -0.023502999916672707,
+        -0.02353999949991703,
+        -9.999999747378752e-06
+      ],
+      "max": [
+        0.023333000019192696,
+        0.023567000404000282,
+        0.017124999314546585
+      ],
+      "size": [
+        0.0468359999358654,
+        0.04710699990391731,
+        0.017134999314293964
+      ],
+      "units": "m"
+    },
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
+  },
+  "parts": [
+    {
+      "id": "part_00",
+      "name": "D00739 Snack",
+      "mass": 0.020999999716877937,
+      "density": 900.0,
+      "volume": 1.966780424183634e-05,
+      "inertia": [
+        2.4935840810731874e-06,
+        2.5192520730694104e-06,
+        4.220093365499596e-06
+      ],
+      "inertia_axes": [
+        0.9734388403530445,
+        0.0006222606909974308,
+        -0.0002250349566699228,
+        -0.22894625186497528
+      ],
+      "center_of_mass": [
+        -0.0001278204304615689,
+        2.8994945358414987e-05,
+        0.009313602459113899
+      ],
+      "bounds": {
+        "min": [
+          -0.023502999916672707,
+          -0.02353999949991703,
+          -9.999999747378752e-06
+        ],
+        "max": [
+          0.023333000019192696,
+          0.023567000404000282,
+          0.017124999314546585
+        ],
+        "size": [
+          0.0468359999358654,
+          0.04710699990391731,
+          0.017134999314293964
+        ],
+        "units": "m"
+      },
+      "material": "chocolate_confection_with_waxed_paper_liner",
+      "physics_type": "rigid",
+      "source": {
+        "object_name": "D00739 Snack",
+        "part_name": "D00739 Snack"
+      },
+      "collision": {},
+      "reasoning": "The object appears to be a single standard peanut-butter cup in a paper liner. A typical cup is about 45-50 mm in top diameter, 35-40 mm in bottom diameter, and 15-18 mm tall, with a mass near 20-22 g; the estimate uses 0.021 kg including the thin paper wrapper. Treating the candy as a shallow truncated cylinder gives an occupied volume on the order of 2.2e-5 to 2.4e-5 m^3, so an effective bulk density of about 900 kg/m^3 is appropriate; this is lower than solid chocolate because the wrapper flutes, peanut-butter filling, and shape voids reduce the convex-collider bulk density. The dominant structural mass is chocolate/peanut filling, while the paper liner affects many side and bottom contacts. Friction is estimated slightly above waxed paper but below rubber: static friction about 0.46 and dynamic friction about 0.36 for chocolate/paper against common table, plastic, or metal surfaces. Restitution is very low, about 0.05, because the candy and paper liner are damped and should not bounce appreciably. For Isaac Sim/PhysX, a convex decomposition is recommended instead of a raw triangle mesh for a dynamic rigid body: use a small number of hulls to approximate the tapered circular body and fluted wrapper, and reserve SDF mesh collision only if the corrugated rim must be contacted accurately. A single convex hull is faster but will smooth over the flutes and outer paper folds. Because this is a small, light object, contact_offset should be much smaller than Isaac defaults: about 1.5 mm with rest_offset near 0 keeps contacts stable without visible hovering. CCD is enabled because a 15-18 mm tall object can tunnel at normal drop or manipulation speeds at 60 Hz; recommended linear velocity limit is roughly 5 m/s and angular velocity limit 50-75 rad/s if many such objects are simulated. For hibernation/sleep, a low sleep threshold around 5e-4 to 2e-3 mass-normalized kinetic energy is appropriate so the candy settles quickly but does not sleep during light contacts. The compliant contact settings approximate the slight give of chocolate and paper while keeping the body rigid; stiffness around 5000 N/m and damping around 25 N*s/m are stable at 120 Hz for this mass and reduce jitter during grasping or stacking.",
+      "static_friction": 0.46,
+      "dynamic_friction": 0.36,
+      "restitution": 0.05,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "is_structural_root": true,
+      "description": "A small round chocolate peanut-butter cup with a ridged chocolate shell and smooth top surface, seated in a crinkled brown paper liner.",
+      "semantic": {
+        "qid": null
+      },
+      "non_visual_material": null,
+      "source_prim_path": "/World/part_00",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
+    }
+  ],
+  "articulation": {
+    "has_joints": false,
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
+  },
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  },
+  "simulation": {
+    "fix_base": false
+  },
+  "provenance": {
+    "source_schema": "legacy_batch1_physics",
+    "legacy_reasoning_preserved": true,
+    "legacy_overall_assessment": "",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification.",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "collision_source": "USD PhysicsCollisionAPI geometry",
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "aebb4475e402826a413fb2e12059a605ce865405311da1c69d5285b4b8133e9a"
+    },
+    "usd_path": "batch1/D00739 Snack/IsaacSim_assets_69fddfcd8102b48e9a293f6c/IsaacSim_asset_69fddfcd8102b48e9a293f6c.usd",
+    "usd_sha256": "d3f7ca5006bdee17f3a533110cd2f6fcdadad22d82c45e1a4b3a3039ffd951e8",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z"
+  },
+  "validation": {
+    "overall": "verified",
+    "scale": {
+      "status": "verified",
+      "confidence": "high",
+      "units": "m",
+      "up_axis": "Z",
+      "bounds_m": [
+        0.0468359999358654,
+        0.04710699990391731,
+        0.017134999314293964
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "d3f7ca5006bdee17f3a533110cd2f6fcdadad22d82c45e1a4b3a3039ffd951e8",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
+    },
+    "mass": {
+      "status": "verified",
+      "confidence": "high",
+      "value_kg": 0.020999999716877937,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "d3f7ca5006bdee17f3a533110cd2f6fcdadad22d82c45e1a4b3a3039ffd951e8",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.020999999716877937,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
+    },
+    "collision": {
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 58,
+      "approximations": [
+        "convexHull"
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "d3f7ca5006bdee17f3a533110cd2f6fcdadad22d82c45e1a4b3a3039ffd951e8",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 58,
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
+    },
+    "articulation": {
+      "status": "verified",
+      "confidence": "high",
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "d3f7ca5006bdee17f3a533110cd2f6fcdadad22d82c45e1a4b3a3039ffd951e8",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/1bf2d24ecbe6041eb3bf34be7e9e8af315d455a5/reports/native/2026.10.13/shard-07/native-batch-003-evidence.tar.gz",
+        "sha256": "2d05bbe9714e0ceeca0db31443409b2fb6967044c7867e0412c2e819a69999ba",
+        "hf_commit": "1bf2d24ecbe6041eb3bf34be7e9e8af315d455a5",
+        "size_bytes": 101530955
+      },
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "d3f7ca5006bdee17f3a533110cd2f6fcdadad22d82c45e1a4b3a3039ffd951e8",
+      "supplemental_accepted": true,
+      "planned_test_count": 12,
+      "result_count": 12,
+      "passed": 11,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-13T23:23:06.966123+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "a4c77325f97d7bf27c8cbeacc745f4edc50888bd30795af11f3bd11f521c5d6e",
+      "qualification": "native-fleet-evidence/shard-07/native-batch-003/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
+    }
+  }
+}

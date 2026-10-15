@@ -1,0 +1,304 @@
+{
+  "schema_version": "1.0",
+  "asset_id": "D01061",
+  "asset": {
+    "name": "D01061 Waffle Maker",
+    "object_type": "articulated",
+    "total_mass": 1.4000000357627869,
+    "bounds": {
+      "min": [
+        -0.20270965109528927,
+        -0.101500004529953,
+        0.0
+      ],
+      "max": [
+        0.1014999970793724,
+        0.1014999970793724,
+        0.28931320432974306
+      ],
+      "size": [
+        0.3042096481746617,
+        0.2030000016093254,
+        0.28931320432974306
+      ],
+      "units": "m"
+    },
+    "bounds_frame": "USD stage world axes, metres, default authored pose",
+    "description": "3D model of waffle maker for robotics simulation research. The delivered USD contains 2 rigid bodies and 1 enabled moving joint constraint."
+  },
+  "parts": [
+    {
+      "id": "Base",
+      "name": "Base",
+      "mass": 0.8820000290870667,
+      "density": null,
+      "inertia": [
+        0.0019036501180380583,
+        0.0019036501180380583,
+        0.003572100307792425
+      ],
+      "center_of_mass": [
+        0.01081340666860342,
+        0.0,
+        0.03200000151991844
+      ],
+      "physics_type": "rigid",
+      "source": {
+        "prim_path": "/WaffleMaker/Base"
+      },
+      "collision": {
+        "shape_count": 176,
+        "approximations": [
+          "convexHull"
+        ]
+      },
+      "reasoning": null,
+      "source_prim_path": "/WaffleMaker/Base",
+      "bounds": {
+        "min": [
+          -0.12099999934434891,
+          -0.1014999970793724,
+          0.0
+        ],
+        "max": [
+          0.1014999970793724,
+          0.1014999970793724,
+          0.0645499974489212
+        ],
+        "size": [
+          0.2224999964237213,
+          0.2029999941587448,
+          0.0645499974489212
+        ],
+        "units": "m"
+      },
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
+    },
+    {
+      "id": "Lid",
+      "name": "Lid",
+      "mass": 0.5180000066757202,
+      "density": null,
+      "inertia": [
+        0.00109885074198246,
+        0.00109885074198246,
+        0.0020979002583771944
+      ],
+      "center_of_mass": [
+        0.11599999666213989,
+        0.0,
+        0.012240900658071041
+      ],
+      "physics_type": "rigid",
+      "source": {
+        "prim_path": "/WaffleMaker/Lid"
+      },
+      "collision": {
+        "shape_count": 249,
+        "approximations": [
+          "convexHull"
+        ]
+      },
+      "reasoning": null,
+      "source_prim_path": "/WaffleMaker/Lid",
+      "bounds": {
+        "min": [
+          -0.20270965109528927,
+          -0.101500004529953,
+          0.05205719986338442
+        ],
+        "max": [
+          -0.1047571952817632,
+          0.10149998962879181,
+          0.28931320432974306
+        ],
+        "size": [
+          0.09795245581352607,
+          0.2029999941587448,
+          0.23725600446635864
+        ],
+        "units": "m"
+      },
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
+    }
+  ],
+  "articulation": {
+    "has_joints": true,
+    "joints": [
+      {
+        "id": "LidHinge",
+        "path": "/WaffleMaker/Joints/LidHinge",
+        "type": "PhysicsRevoluteJoint",
+        "enabled": true,
+        "body0": [
+          "/WaffleMaker/Base"
+        ],
+        "body1": [
+          "/WaffleMaker/Lid"
+        ],
+        "lower_limit": -110.0,
+        "upper_limit": 0.0,
+        "usd_type": "PhysicsRevoluteJoint",
+        "body0_targets": [
+          "/WaffleMaker/Base"
+        ],
+        "body1_targets": [
+          "/WaffleMaker/Lid"
+        ],
+        "authored_usd": {
+          "id": "LidHinge",
+          "source_prim_path": "/WaffleMaker/Joints/LidHinge",
+          "joint_type": "PhysicsRevoluteJoint",
+          "body0": [
+            "/WaffleMaker/Base"
+          ],
+          "body1": [
+            "/WaffleMaker/Lid"
+          ],
+          "joint_enabled": true,
+          "axis": "Y",
+          "lowerLimit": -110.0,
+          "upperLimit": 0.0,
+          "localPos0": [
+            -0.11100000143051147,
+            0.0,
+            0.05829999968409538
+          ],
+          "localPos1": [
+            0.0,
+            0.0,
+            -1.3877787807814457e-17
+          ],
+          "localRot0": [
+            6.123233601181349e-17,
+            0.6156615018844604,
+            -5.408088977770464e-17,
+            0.7880107760429382
+          ],
+          "localRot1": [
+            9.431936860803249e-17,
+            1.0,
+            4.014580895912292e-18,
+            4.500239292326569e-09
+          ],
+          "static_frames": []
+        }
+      }
+    ],
+    "moving_joints": 1,
+    "rigid_body_count": 2,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
+  },
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  },
+  "simulation": {
+    "fix_base": null
+  },
+  "provenance": {
+    "source_schema": "authored_usd",
+    "usd_path": "batch41/D01061_Waffle_Maker/D01061_Waffle_Maker.usd",
+    "usd_sha256": "afc4a054ad85cb264988fb0b49674e4112433a750f0f69cd5efbcb6b91824f01",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "reasoning_available": false,
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification.",
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "c23ed194cf444384264c879e11976924ad946aa93867cd184bf356c78c3d6ecd"
+    },
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes"
+  },
+  "validation": {
+    "overall": "verified",
+    "scale": {
+      "status": "verified",
+      "confidence": "high",
+      "units": "m",
+      "up_axis": "Z",
+      "bounds_m": [
+        0.3042096481746617,
+        0.2030000016093254,
+        0.28931320432974306
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "afc4a054ad85cb264988fb0b49674e4112433a750f0f69cd5efbcb6b91824f01",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
+    },
+    "mass": {
+      "status": "verified",
+      "confidence": "high",
+      "value_kg": 1.4000000357627869,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "afc4a054ad85cb264988fb0b49674e4112433a750f0f69cd5efbcb6b91824f01",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 1.4000000357627869,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
+    },
+    "collision": {
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 425,
+      "approximations": [
+        "convexHull"
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "afc4a054ad85cb264988fb0b49674e4112433a750f0f69cd5efbcb6b91824f01",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 425,
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
+    },
+    "articulation": {
+      "status": "verified",
+      "confidence": "high",
+      "moving_joints": 1,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "afc4a054ad85cb264988fb0b49674e4112433a750f0f69cd5efbcb6b91824f01",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 1,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/6cadaf22226a37798c70b3606ba3d59315524b06/reports/native/2026.10.13/shard-05/native-batch-005-evidence.tar.gz",
+        "sha256": "c350639b3a15f5400b332b1ee9383032717e2a8c4023f4c438245772d64b61a5",
+        "hf_commit": "6cadaf22226a37798c70b3606ba3d59315524b06",
+        "size_bytes": 13685337
+      },
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "afc4a054ad85cb264988fb0b49674e4112433a750f0f69cd5efbcb6b91824f01",
+      "supplemental_accepted": true,
+      "planned_test_count": 14,
+      "result_count": 14,
+      "passed": 13,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
+      "warnings": [],
+      "completed_at": "2026-10-14T00:03:29.393211+00:00",
+      "joint_status": "passed",
+      "joints_total": 1,
+      "joints_passed": 1,
+      "joints_failed": 0,
+      "thumbnail_sha256": "8f25a2ef69307b9a0b0be730462127777fcc85db9f05c831f44a3985733f8137",
+      "qualification": "native-fleet-evidence/shard-05/native-batch-005/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
+    }
+  }
+}

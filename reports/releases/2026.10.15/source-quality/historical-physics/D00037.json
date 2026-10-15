@@ -1,0 +1,228 @@
+{
+  "schema_version": "1.0",
+  "asset_id": "D00037",
+  "asset": {
+    "name": "D00037 Blueberry",
+    "description": "A small, nearly spherical dark blue fruit with a distinct star-shaped crown at the top. The surface features a mottled, slightly powdery texture characteristic of a natural wax coating.",
+    "object_type": "rigid_bodies",
+    "total_mass": 0.0020000000949949026,
+    "bounds": {
+      "min": [
+        -0.006023999769240618,
+        -0.006182999815791845,
+        -2.2000000171829015e-05
+      ],
+      "max": [
+        0.006403000093996525,
+        0.006200000178068876,
+        0.010577999986708164
+      ],
+      "size": [
+        0.012426999863237143,
+        0.012382999993860722,
+        0.010599999986879993
+      ],
+      "units": "m"
+    },
+    "bounds_frame": "USD stage world axes, metres, default authored pose"
+  },
+  "parts": [
+    {
+      "id": "part_00",
+      "name": "D00037 Blueberry",
+      "mass": 0.0020000000949949026,
+      "density": 1050.0,
+      "volume": 8.878165189461281e-07,
+      "inertia": [
+        2.700838784105116e-08,
+        2.790963012443044e-08,
+        3.154184191689787e-08
+      ],
+      "inertia_axes": [
+        0.9223795410883807,
+        0.030690955446448478,
+        -0.07657531003399122,
+        -0.3773728518700976
+      ],
+      "center_of_mass": [
+        0.0001745767069086337,
+        5.279769933800392e-05,
+        0.00489897126728982
+      ],
+      "bounds": {
+        "min": [
+          -0.006023999769240618,
+          -0.006182999815791845,
+          -2.2000000171829015e-05
+        ],
+        "max": [
+          0.006403000093996525,
+          0.006200000178068876,
+          0.010577999986708164
+        ],
+        "size": [
+          0.012426999863237143,
+          0.012382999993860722,
+          0.010599999986879993
+        ],
+        "units": "m"
+      },
+      "material": "organic_fruit_tissue",
+      "physics_type": "rigid",
+      "source": {
+        "object_name": "D00037 Blueberry",
+        "part_name": "D00037 Blueberry"
+      },
+      "collision": {},
+      "reasoning": "The object is a blueberry, which can be modeled as a small, lightweight organic solid. Its mass is estimated at 2 grams (0.002 kg) based on an average diameter of roughly 1.5 cm. The density is slightly higher than water, estimated at 1050 kg/m^3. The skin has a moderate amount of friction (static 0.4, dynamic 0.3) against typical surfaces, and being a fleshy fruit, it has low restitution (0.2), meaning it will not bounce significantly. For collision geometry, a 'sphere_approximation' is highly efficient and accurate enough for rigid body dynamics, given its roughly spherical form. Because the object is very small, Continuous Collision Detection (CCD) is crucial to prevent it from tunneling through other colliders during physics steps. The contact offset is set to a minimal value (0.001 m) to maintain visual fidelity when resting on surfaces.",
+      "static_friction": 0.4,
+      "dynamic_friction": 0.3,
+      "restitution": 0.2,
+      "friction_combine_mode": "average",
+      "restitution_combine_mode": "average",
+      "is_structural_root": true,
+      "description": "A small, nearly spherical dark blue fruit with a distinct star-shaped crown at the top. The surface features a mottled, slightly powdery texture characteristic of a natural wax coating.",
+      "source_prim_path": "/World/part_00_organic_fruit_tissue",
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
+    }
+  ],
+  "articulation": {
+    "has_joints": false,
+    "joints": [],
+    "moving_joints": 0,
+    "rigid_body_count": 1,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
+  },
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  },
+  "simulation": {
+    "fix_base": false
+  },
+  "provenance": {
+    "source_schema": "legacy_batch1_physics",
+    "legacy_reasoning_preserved": true,
+    "legacy_overall_assessment": "",
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification.",
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes",
+    "collision_source": "USD PhysicsCollisionAPI geometry",
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "6febef0b6128267ed7943d3c94754fbde3a2120fcce1e4be2e020599b69cb7e3"
+    },
+    "usd_path": "batch1/D00037 Blueberry/IsaacSim_assets_69f1f21059057a931058da79/IsaacSim_asset_69f1f21059057a931058da79.usd",
+    "usd_sha256": "d5621278ff11690d12b17b18fe57e0ba29b9fc3bf7689249bfda86d9aeae902e",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z"
+  },
+  "validation": {
+    "overall": "verified",
+    "scale": {
+      "status": "verified",
+      "confidence": "high",
+      "units": "m",
+      "up_axis": "Z",
+      "bounds_m": [
+        0.012426999863237143,
+        0.012382999993860722,
+        0.010599999986879993
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "d5621278ff11690d12b17b18fe57e0ba29b9fc3bf7689249bfda86d9aeae902e",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
+    },
+    "mass": {
+      "status": "verified",
+      "confidence": "high",
+      "value_kg": 0.0020000000949949026,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "d5621278ff11690d12b17b18fe57e0ba29b9fc3bf7689249bfda86d9aeae902e",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.0020000000949949026,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
+    },
+    "collision": {
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 118,
+      "approximations": [
+        "convexHull"
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "d5621278ff11690d12b17b18fe57e0ba29b9fc3bf7689249bfda86d9aeae902e",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 118,
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
+    },
+    "articulation": {
+      "status": "verified",
+      "confidence": "high",
+      "moving_joints": 0,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "d5621278ff11690d12b17b18fe57e0ba29b9fc3bf7689249bfda86d9aeae902e",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 0,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/6ab9c09610c69f0f05598c1c92b2b9df7af22ee3/reports/native/2026.10.13/cases/native-repairs-full-v1/native-batch-000-evidence.tar.gz",
+        "sha256": "124902536e3a7a8b278cc96efa2adde0e118ce58d1b4ac274ddee7a1476789d2",
+        "hf_commit": "6ab9c09610c69f0f05598c1c92b2b9df7af22ee3",
+        "size_bytes": 23396527
+      },
+      "status": "completed_with_tool_findings",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "d5621278ff11690d12b17b18fe57e0ba29b9fc3bf7689249bfda86d9aeae902e",
+      "supplemental_accepted": true,
+      "planned_test_count": 11,
+      "result_count": 11,
+      "passed": 8,
+      "skipped": 0,
+      "failed": 3,
+      "issues": [
+        "presence:fail",
+        "preview_surface_renders:fail",
+        "semantic_labels_seg_labelled:fail"
+      ],
+      "warnings": [],
+      "completed_at": "2026-10-13T22:16:44.124723+00:00",
+      "joint_status": "not_applicable",
+      "joints_total": 0,
+      "joints_passed": 0,
+      "joints_failed": 0,
+      "thumbnail_sha256": "7b3eb566bcd04322a0aadd0f3ab33aa990084abf858ed1dba79df073547f0e23",
+      "tool_findings": {
+        "certificate_path": "tool-finding-certificates/D00037.json",
+        "certificate_sha256": "154240c3bbd19db2e389133412a6e54a63ffdf6500ebf15624031fd72d2b1219",
+        "raw_benchmark_status": "failed",
+        "failed_tests": [
+          "presence",
+          "preview_surface_renders",
+          "semantic_labels_seg_labelled"
+        ],
+        "reason": "SDK camera clamps each axis to 0.1 m, underframing this small asset; exact native geometry, labels and materials are present. All physics and supplemental checks pass.",
+        "NVIDIA_raw_results_modified": false,
+        "requires_NVIDIA_review": true,
+        "release_certificate": "reports/releases/2026.10.13/tool-findings/D00037.json"
+      },
+      "qualification": "native-fleet-evidence/shard-12/native-batch-000/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
+    }
+  }
+}

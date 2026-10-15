@@ -1,0 +1,486 @@
+{
+  "schema_version": "1.0",
+  "asset_id": "D01041",
+  "asset": {
+    "name": "D01041 Kitchen Blowtorch",
+    "object_type": "articulated",
+    "total_mass": 0.1799999929498881,
+    "bounds": {
+      "min": [
+        -0.0383400022983551,
+        -0.03200000151991844,
+        0.0
+      ],
+      "max": [
+        0.09870000183582306,
+        0.03200000151991844,
+        0.19009999930858612
+      ],
+      "size": [
+        0.13704000413417816,
+        0.06400000303983688,
+        0.19009999930858612
+      ],
+      "units": "m"
+    },
+    "bounds_frame": "USD stage world axes, metres, default authored pose",
+    "description": "3D model of kitchen blowtorch for robotics simulation research. The delivered USD contains 4 rigid bodies and 3 enabled moving joint constraints."
+  },
+  "parts": [
+    {
+      "id": "MainBody",
+      "name": "MainBody",
+      "mass": 0.17299999296665192,
+      "density": null,
+      "inertia": null,
+      "center_of_mass": null,
+      "physics_type": "rigid",
+      "source": {
+        "prim_path": "/World/MainBody"
+      },
+      "collision": {
+        "shape_count": 441,
+        "approximations": [
+          "convexHull"
+        ]
+      },
+      "reasoning": null,
+      "source_prim_path": "/World/MainBody",
+      "bounds": {
+        "min": [
+          -0.032521940767765045,
+          -0.03200000151991844,
+          0.0
+        ],
+        "max": [
+          0.09870000183582306,
+          0.03200000151991844,
+          0.19009999930858612
+        ],
+        "size": [
+          0.1312219426035881,
+          0.06400000303983688,
+          0.19009999930858612
+        ],
+        "units": "m"
+      },
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
+    },
+    {
+      "id": "FlameDial",
+      "name": "FlameDial",
+      "mass": 0.0024999999441206455,
+      "density": null,
+      "inertia": null,
+      "center_of_mass": null,
+      "physics_type": "rigid",
+      "source": {
+        "prim_path": "/World/FlameDial"
+      },
+      "collision": {
+        "shape_count": 98,
+        "approximations": [
+          "convexHull"
+        ]
+      },
+      "reasoning": null,
+      "source_prim_path": "/World/FlameDial",
+      "bounds": {
+        "min": [
+          0.0007347643258981407,
+          -0.03095499984920025,
+          0.1547347754240036
+        ],
+        "max": [
+          0.021265234798192978,
+          -0.014000000432133675,
+          0.17526522278785706
+        ],
+        "size": [
+          0.020530470472294837,
+          0.016954999417066574,
+          0.020530447363853455
+        ],
+        "units": "m"
+      },
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
+    },
+    {
+      "id": "IgnitionTrigger",
+      "name": "IgnitionTrigger",
+      "mass": 0.003000000026077032,
+      "density": null,
+      "inertia": null,
+      "center_of_mass": null,
+      "physics_type": "rigid",
+      "source": {
+        "prim_path": "/World/IgnitionTrigger"
+      },
+      "collision": {
+        "shape_count": 8,
+        "approximations": [
+          "convexHull"
+        ]
+      },
+      "reasoning": null,
+      "source_prim_path": "/World/IgnitionTrigger",
+      "bounds": {
+        "min": [
+          -0.0383400022983551,
+          -0.009399999864399433,
+          0.16210000216960907
+        ],
+        "max": [
+          -0.014999999664723873,
+          0.009399999864399433,
+          0.1776999980211258
+        ],
+        "size": [
+          0.02334000263363123,
+          0.018799999728798866,
+          0.015599995851516724
+        ],
+        "units": "m"
+      },
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
+    },
+    {
+      "id": "SafetySlider",
+      "name": "SafetySlider",
+      "mass": 0.001500000013038516,
+      "density": null,
+      "inertia": null,
+      "center_of_mass": null,
+      "physics_type": "rigid",
+      "source": {
+        "prim_path": "/World/SafetySlider"
+      },
+      "collision": {
+        "shape_count": 4,
+        "approximations": [
+          "convexHull"
+        ]
+      },
+      "reasoning": null,
+      "source_prim_path": "/World/SafetySlider",
+      "bounds": {
+        "min": [
+          -0.014650000259280205,
+          -0.027009999379515648,
+          0.14670000970363617
+        ],
+        "max": [
+          -0.004199999384582043,
+          0.003000000026077032,
+          0.1648000031709671
+        ],
+        "size": [
+          0.010450000874698162,
+          0.03000999940559268,
+          0.018099993467330933
+        ],
+        "units": "m"
+      },
+      "bounds_frame": "USD stage world axes, metres, default authored pose"
+    }
+  ],
+  "articulation": {
+    "has_joints": true,
+    "joints": [
+      {
+        "id": "flame_dial",
+        "path": "/World/Joints/flame_dial",
+        "type": "PhysicsRevoluteJoint",
+        "enabled": true,
+        "body0": [
+          "/World/MainBody"
+        ],
+        "body1": [
+          "/World/FlameDial"
+        ],
+        "lower_limit": 0.0,
+        "upper_limit": 240.0,
+        "usd_type": "PhysicsRevoluteJoint",
+        "body0_targets": [
+          "/World/MainBody"
+        ],
+        "body1_targets": [
+          "/World/FlameDial"
+        ],
+        "authored_usd": {
+          "id": "flame_dial",
+          "source_prim_path": "/World/Joints/flame_dial",
+          "joint_type": "PhysicsRevoluteJoint",
+          "body0": [
+            "/World/MainBody"
+          ],
+          "body1": [
+            "/World/FlameDial"
+          ],
+          "joint_enabled": true,
+          "axis": "Y",
+          "lowerLimit": 0.0,
+          "upperLimit": 240.0,
+          "localPos0": [
+            0.010999999940395355,
+            -0.025299999862909317,
+            0.16500000655651093
+          ],
+          "localPos1": [
+            0.010999999940395355,
+            -0.025299999862909317,
+            0.16500000655651093
+          ],
+          "localRot0": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "localRot1": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "static_frames": []
+        }
+      },
+      {
+        "id": "ignition_trigger",
+        "path": "/World/Joints/ignition_trigger",
+        "type": "PhysicsPrismaticJoint",
+        "enabled": true,
+        "body0": [
+          "/World/MainBody"
+        ],
+        "body1": [
+          "/World/IgnitionTrigger"
+        ],
+        "lower_limit": 0.0,
+        "upper_limit": 0.0031999999191612005,
+        "usd_type": "PhysicsPrismaticJoint",
+        "body0_targets": [
+          "/World/MainBody"
+        ],
+        "body1_targets": [
+          "/World/IgnitionTrigger"
+        ],
+        "authored_usd": {
+          "id": "ignition_trigger",
+          "source_prim_path": "/World/Joints/ignition_trigger",
+          "joint_type": "PhysicsPrismaticJoint",
+          "body0": [
+            "/World/MainBody"
+          ],
+          "body1": [
+            "/World/IgnitionTrigger"
+          ],
+          "joint_enabled": true,
+          "axis": "X",
+          "lowerLimit": 0.0,
+          "upperLimit": 0.0031999999191612005,
+          "localPos0": [
+            -0.028999999165534973,
+            0.0,
+            0.17100000381469727
+          ],
+          "localPos1": [
+            -0.028999999165534973,
+            0.0,
+            0.17100000381469727
+          ],
+          "localRot0": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "localRot1": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "static_frames": []
+        }
+      },
+      {
+        "id": "safety_slide",
+        "path": "/World/Joints/safety_slide",
+        "type": "PhysicsPrismaticJoint",
+        "enabled": true,
+        "body0": [
+          "/World/MainBody"
+        ],
+        "body1": [
+          "/World/SafetySlider"
+        ],
+        "lower_limit": -0.004999999888241291,
+        "upper_limit": 0.0,
+        "usd_type": "PhysicsPrismaticJoint",
+        "body0_targets": [
+          "/World/MainBody"
+        ],
+        "body1_targets": [
+          "/World/SafetySlider"
+        ],
+        "authored_usd": {
+          "id": "safety_slide",
+          "source_prim_path": "/World/Joints/safety_slide",
+          "joint_type": "PhysicsPrismaticJoint",
+          "body0": [
+            "/World/MainBody"
+          ],
+          "body1": [
+            "/World/SafetySlider"
+          ],
+          "joint_enabled": true,
+          "axis": "Z",
+          "lowerLimit": -0.004999999888241291,
+          "upperLimit": 0.0,
+          "localPos0": [
+            -0.008999999612569809,
+            -0.02199999988079071,
+            0.15000000596046448
+          ],
+          "localPos1": [
+            -0.008999999612569809,
+            -0.02199999988079071,
+            0.15000000596046448
+          ],
+          "localRot0": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "localRot1": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "static_frames": []
+        }
+      }
+    ],
+    "moving_joints": 3,
+    "rigid_body_count": 4,
+    "scope": "Authored USD constraints; independent free bodies are not joints."
+  },
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "up_axis": "Z"
+  },
+  "simulation": {
+    "fix_base": null
+  },
+  "provenance": {
+    "source_schema": "authored_usd",
+    "usd_path": "batch41/D01041_Kitchen_Blowtorch/D01041_Kitchen_Blowtorch.usd",
+    "usd_sha256": "92b85259d6baa6ae9a63c9f2fa79ceca032e28733add09134e6f4f94dab75a2c",
+    "source_meters_per_unit": 1.0,
+    "source_kilograms_per_unit": 1.0,
+    "source_up_axis": "Z",
+    "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+    "reasoning_available": false,
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification.",
+    "metadata_repair": {
+      "date": "2026-10-13T19:50:31.621292+00:00",
+      "source": "delivered USD inspected with OpenUSD 26.8",
+      "report": "reports/releases/2026.10.13/assets.json",
+      "original_physics_sha256": "fda3f3039a04ae476b05b52a15a9e09cfcbefa96cada30c71a93286e2d946acc"
+    },
+    "usd_world_bounds_source": "delivered USD visual geometry; stage world axes"
+  },
+  "validation": {
+    "overall": "verified",
+    "scale": {
+      "status": "verified",
+      "confidence": "high",
+      "units": "m",
+      "up_axis": "Z",
+      "bounds_m": [
+        0.13704000413417816,
+        0.06400000303983688,
+        0.19009999930858612
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "92b85259d6baa6ae9a63c9f2fa79ceca032e28733add09134e6f4f94dab75a2c",
+      "scope": "authored_usd_dimensions",
+      "bounds_method": "transformed_visible_mesh_points_in_USD_stage_axes",
+      "note": "Verified against delivered geometry and authored stage units; real-world dimensions are not calibrated."
+    },
+    "mass": {
+      "status": "verified",
+      "confidence": "high",
+      "value_kg": 0.1799999929498881,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "92b85259d6baa6ae9a63c9f2fa79ceca032e28733add09134e6f4f94dab75a2c",
+      "scope": "authored_usd_mass_consistency",
+      "part_sum_kg": 0.1799999929498881,
+      "note": "Positive authored rigid-body masses, units and JSON part sum checked; physical measurements are not independently calibrated."
+    },
+    "collision": {
+      "status": "verified",
+      "confidence": "high",
+      "shape_count": 548,
+      "approximations": [
+        "convexHull"
+      ],
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "92b85259d6baa6ae9a63c9f2fa79ceca032e28733add09134e6f4f94dab75a2c",
+      "scope": "authored_usd_collision_schema",
+      "enabled_shape_count": 548,
+      "note": "Authored collision APIs, enabled states, counts and finite mesh coordinates checked; collision cooking and contact stability are not revalidated."
+    },
+    "articulation": {
+      "status": "verified",
+      "confidence": "high",
+      "moving_joints": 3,
+      "checked_at": "2026-10-13T19:50:31.621292+00:00",
+      "evidence": "reports/releases/2026.10.13/assets.json",
+      "usd_sha256": "92b85259d6baa6ae9a63c9f2fa79ceca032e28733add09134e6f4f94dab75a2c",
+      "scope": "authored_usd_joint_schema",
+      "joint_count": 3,
+      "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
+    },
+    "scope": "authored_usd_metadata_consistency",
+    "runtime": {
+      "evidence_archive": {
+        "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/60cf18af96dac78d3e45ebf7c2cb2daa91b7e191/reports/native/2026.10.13/shard-06/native-batch-004-evidence.tar.gz",
+        "sha256": "d9a337295e00f7b7fc560283a2bde86aa9a66c2c7301f45dcbd7bb9527604387",
+        "hf_commit": "60cf18af96dac78d3e45ebf7c2cb2daa91b7e191",
+        "size_bytes": 103516805
+      },
+      "status": "passed",
+      "required_engine": "isaac_sim",
+      "physics_runtime": "PhysX",
+      "engine_version": "6.1.0.0",
+      "usd_sha256": "92b85259d6baa6ae9a63c9f2fa79ceca032e28733add09134e6f4f94dab75a2c",
+      "supplemental_accepted": true,
+      "planned_test_count": 14,
+      "result_count": 14,
+      "passed": 13,
+      "skipped": 1,
+      "failed": 0,
+      "issues": [],
+      "warnings": [
+        "official_relative_translation_requires_independent_anchor_check"
+      ],
+      "completed_at": "2026-10-14T00:44:56.960251+00:00",
+      "joint_status": "passed",
+      "joints_total": 3,
+      "joints_passed": 3,
+      "joints_failed": 0,
+      "thumbnail_sha256": "01ba25c505335e0539dde320e3343373e6e64c200ff02247118bcc4595d228e4",
+      "qualification": "native-fleet-evidence/shard-06/native-batch-004/qualification-normalized.json",
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
+    }
+  }
+}

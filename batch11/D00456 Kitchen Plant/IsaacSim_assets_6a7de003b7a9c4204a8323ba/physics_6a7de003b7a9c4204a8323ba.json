@@ -92,7 +92,8 @@
     "source_meters_per_unit": 1.0,
     "source_kilograms_per_unit": 1.0,
     "source_up_axis": "Z",
-    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification."
+    "verification_note": "Authored metadata checked against delivered USD. High confidence applies to metadata consistency, not measured real-world properties or new native simulation qualification.",
+    "current_standard_submission": "reports/releases/2026.10.15/standard-submission/inventory.json"
   },
   "schema_version": "1.0",
   "simulation": {
@@ -104,7 +105,7 @@
     "up_axis": "Z"
   },
   "validation": {
-    "overall": "verified",
+    "overall": "requires_NVIDIA_review",
     "scale": {
       "status": "verified",
       "confidence": "high",
@@ -158,8 +159,8 @@
       "joint_count": 0,
       "note": "Joint existence, enabled state, references and ordered limits checked; joint actuation is not revalidated by this metadata audit."
     },
-    "scope": "authored_usd_metadata_consistency",
-    "runtime": {
+    "scope": "authored_metadata_and_complete_unchanged_stock_evidence_for_review",
+    "historical_runtime": {
       "evidence_archive": {
         "url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/e62d8f2cb31fd947ff5b31d8d780aa56aeb783a8/reports/native/2026.10.13/shard-07/native-batch-001-evidence.tar.gz",
         "sha256": "c758bcf6aed753e71d1311222dcefb2f4b653117fbf9768a7af563a63e2d46e2",
@@ -200,7 +201,42 @@
         "release_certificate": "reports/releases/2026.10.13/tool-findings/D00456.json"
       },
       "qualification": "native-fleet-evidence/shard-07/native-batch-001/qualification-normalized.json",
-      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks"
+      "scope": "NVIDIA Robotics-Prop native tests plus independent joint constraints and thumbnail checks",
+      "applies_to_current_source": true,
+      "qualification_period": "historical_internal_native_release_2026.10.13"
+    },
+    "runtime": {
+      "status": "completed_with_failed_tests",
+      "scope": "unchanged_stock_tests_for_NVIDIA_review",
+      "usd_sha256": "c62835cb88c6c56dd5fa49ca7250dab930dd819666c8685ec5cfc6ad33f7b72c",
+      "asset_version": "2026.10.13_00",
+      "result_counts": {
+        "pass": 17,
+        "skipped": 2,
+        "fail": 1
+      },
+      "configured_engines": [
+        "isaac_sim",
+        "isaac_sim_newton"
+      ],
+      "physics_runtime": "PhysX",
+      "Newton_physics_qualified": false,
+      "stock_provider_only": true,
+      "benchmark_parameter_overrides": [],
+      "skip_or_ignore_flags": [],
+      "declared_test_coverage_verified": true,
+      "requires_NVIDIA_review": true,
+      "NVIDIA_approval": "pending",
+      "known_issue_urls": [
+        "https://github.com/NVIDIA/simready-foundation/issues/38"
+      ],
+      "note": "Recorded eligibility skips are retained. Authored physical properties are not independent measurements.",
+      "package_url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/9c8ee494fc26041ca4460a9b4d3e182aaa9e3ba4/D00456/com.nvidia.simready.packaging.json",
+      "raw_archive_url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/56cabfc65772700ea1297f3791ec30a9ebfa3ace/reports/simready-central/2026.10.13_00/D00456/9c8ee494fc26041ca4460a9b4d3e182aaa9e3ba4/benchmark-report.tar.gz",
+      "raw_manifest_url": "https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/resolve/56cabfc65772700ea1297f3791ec30a9ebfa3ace/reports/simready-central/2026.10.13_00/D00456/9c8ee494fc26041ca4460a9b4d3e182aaa9e3ba4/evidence.json",
+      "benchmark_sidecar_sha256": "5e999009ed2214c03bcf717a41f3e71cfbb4aa073a3374fecc81d927f24094ac",
+      "raw_archive_sha256": "fd0f5d343682e3126521f4b646420964d36fdb0a35addc1ee405fe23f9d33091",
+      "default_stock_plan_sha256": "baf9fbfe5a10915e4dc155fbcd08b9ebd49e37ac0e0e5244b3cf686e2c12fd2e"
     }
   }
 }

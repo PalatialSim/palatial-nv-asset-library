@@ -25,27 +25,26 @@ The Palatial NV Asset Library was **generated and verified by Palatial in collab
 
 **[Browse the visual gallery](https://palatialsim.github.io/palatial-nv-asset-library/) · [Source repository](https://github.com/PalatialSim/palatial-nv-asset-library) · [Download files](https://huggingface.co/datasets/PalatialSim/palatial-nv-asset-library/tree/main)**
 
-This release contains **1,013 USD assets across 41 batches**, with textures, physics metadata, rendered and collision previews, and recorded simulation videos. The library is intended for researchers building simulation scenes and studying robotic perception, manipulation, and object interaction in NVIDIA Isaac Sim. The source snapshot is approximately 28.9 GB.
+This release contains **1,013 USD assets across 41 batches**, with textures, physics metadata, rendered and collision previews, and recorded simulation videos. The library is intended for researchers building simulation scenes and studying robotic perception, manipulation, and object interaction in NVIDIA Isaac Sim. The original source snapshot was approximately 28.9 GB; current package inventories record each published package’s file count and byte size.
 
-The gallery is the quickest way to preview assets without downloading them or installing Isaac Sim. Search by name or asset ID, select a batch, filter authored moving joints, switch between rendered and collision views, and open a batch montage. The dataset table provides a thumbnail, collision thumbnail, dimensions, authored-joint indicator, USD path, and download links for each asset.
+The gallery is the quickest way to preview assets without downloading them or installing Isaac Sim. Search by name or asset ID, select a batch, filter authored moving joints, switch between rendered and collision views, and open a batch montage. The dataset table provides names and stable IDs, preview image paths, dimensions, an authored-joint indicator, USD paths and download links. The gallery displays the images.
 
 
 <!-- standard-submission-report:start -->
-## Standard NVIDIA submission results — 15 October 2026
+## Current standard NVIDIA submission results
 
-All **1,013** stock SimReady packages now have recorded benchmark results and immutable raw-evidence archives: **955** assets have no failed tests; **58** have **142** recorded failures for NVIDIA review. No skip/ignore flags or benchmark parameter overrides were used.
+All **1,013** current packages have complete unchanged stock benchmark evidence. **955** have no failed tests and **58** retain **142 raw failures** for NVIDIA review. Eligibility skips remain separate from passes. No skip/ignore flags, test changes or benchmark parameter overrides were used. This is a submission for review, not NVIDIA approval or independent physical calibration.
 
-See the [complete package inventory and standard submission report](reports/releases/2026.10.13/standard-submission/README.md), including exact per-asset/test/engine messages and upstream issue links. These results are separate from the earlier internal native qualification and do not constitute NVIDIA approval. Nine source-quality repair candidates remain isolated and have not replaced released assets.
-
+See the [complete current inventory and exact failure reports](reports/releases/2026.10.15/standard-submission/README.md).
 <!-- standard-submission-report:end -->
 
 
 <!-- source-quality-follow-up:start -->
-## Source-quality follow-up
+## Source-quality corrections — 15 October 2026
 
-Corrections for **221 assets** are undergoing full unchanged stock qualification. They address undefined authored normals, exactly zero-area faces and impossible explicit mass properties while preserving dimensions, surviving surfaces, materials and joint definitions. [Exact source diffs, invariant checks and qualification progress](reports/releases/2026.10.15/source-quality/preparation/README.md) distinguish completed evidence from pending work; raw benchmark failures remain disclosed.
+221 corrected source revisions have completed full stock validation and benchmarking. The corrections remove undefined zero normals and exactly zero-area faces, and replace impossible explicit mass properties with standard geometry-derived automatic properties. Point coordinates, surviving surfaces, textures, materials, mass, density and joint definitions are preserved. Geometry-derived properties are modeling approximations, not measurements.
 
-The current catalog and batch downloads remain the previous released revisions until the corrected sources, metadata and immutable package evidence are published together. This follow-up is not NVIDIA approval.
+The [source diffs and invariant checks](reports/releases/2026.10.15/source-quality/README.md) bind the corrected hashes to their actual evidence. Current batch downloads, logical packages, physics metadata, catalog and gallery use the same source hashes. Earlier internal qualification stays historical and is not reassigned to changed sources.
 <!-- source-quality-follow-up:end -->
 
 ## Download an asset
@@ -82,15 +81,17 @@ print(assets[0]["name"], assets[0]["usd_path"])
 
 ## Organization
 
-The original batch and asset folder paths are preserved. Each asset has one USD and a physics JSON, plus its textures, material files, behavior scripts where supplied, and simulation recording. `gallery/` contains preview images, montages, and the browser gallery. `data/catalog.parquet` contains one searchable row per asset with embedded rendered and collision thumbnails, resized to fit within 512 × 512 pixels. Original preview images retain their source resolution. `data/catalog.jsonl` provides a readable index. The file manifest records Git blob hashes and byte sizes for the current source revision.
+The original batch and asset folder paths are preserved. Each asset has one USD and a physics JSON, plus its textures, material files, behavior scripts where supplied, and simulation recording. `gallery/` contains preview images, montages, and the browser gallery. `data/catalog.parquet` contains one searchable row per asset with metadata and paths to rendered and collision images. Original preview images retain their source resolution. `data/catalog.jsonl` provides a readable index. The current release manifest records SHA-256 source identities and immutable package/evidence provenance per asset.
 
 The gallery identifies 90 assets with enabled authored moving joints and 923 without. An authored-joint indicator does not mean a video exercises every joint. Bounds are transformed visual-mesh dimensions in X × Y × Z order, in metres; consult each USD and physics JSON for units and axis metadata.
 
 ## Verification and research use
 
-The 2026-10-13 release uses NVIDIA Robotics-Prop 4.0.0 with separate single-body, multi-body and articulated checks in Isaac Sim 6.1.0.0 (PhysX). Current acceptance: **1,013 static profile passes, 957 native passes, 56 native completions with disclosed SDK findings and 1,013 completed SimReady packages out of 1,013 assets.** The [release manifest](reports/current-release.json) binds the catalog, physics metadata and per-asset evidence. Native passes require complete planned test coverage, unchanged USD bytes, an independently checked black-background thumbnail and, for moving joints, independent joint-constraint checks.
+All **1,013** current packages have complete unchanged stock benchmark evidence. **955** have no failed tests and **58** retain **142 raw failures** for NVIDIA review. Eligibility skips remain separate from passes. No skip/ignore flags, test changes or benchmark parameter overrides were used. This is a submission for review, not NVIDIA approval or independent physical calibration.
 
-Authored geometry dimensions, mass and collision data are checked against the USD. These properties are not independently calibrated from physical measurements. Existing simulation recordings remain available; the current release's native verdicts come from the new hash-bound test evidence. See [release notes](RELEASE_NOTES.md) and [verification policy](VERIFICATION.md).
+The [current release manifest](reports/current-release.json) binds current source hashes, physics JSONs, complete stock results and immutable package/raw-evidence URLs. Its readiness check verifies evidence and metadata for review; it does not waive a failed test or certify cooked contact behavior. The earlier 2026-10-13 internal release recorded 957 native passes and 56 separately documented SDK findings; those results retain their original source hashes.
+
+Authored dimensions, mass, collision schema and joints are checked against the USD. Physical measurements are not independently calibrated. Corrected-source rendered thumbnails are fresh native authoring output. Older collision previews and simulation recordings are labeled historical and do not qualify the current revision. See [verification policy](VERIFICATION.md).
 
 ## License and attribution
 

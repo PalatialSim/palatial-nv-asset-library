@@ -1,3 +1,15 @@
+# 2026-10-15 source-quality corrections
+
+All **1,013** current packages have complete unchanged stock benchmark evidence. **955** have no failed tests and **58** retain **142 raw failures** for NVIDIA review. Eligibility skips remain separate from passes. No skip/ignore flags, test changes or benchmark parameter overrides were used. This is a submission for review, not NVIDIA approval or independent physical calibration.
+
+221 corrected USD revisions and all current stock metadata are synchronized across the catalog, gallery and dataset. Repairs preserve object identity and occupied surfaces. Existing raw failures and prior attempts remain immutable. The [current report](reports/releases/2026.10.15/source-quality/README.md) records exact changes, source hashes and verification scope.
+
+Evidence preservation: all published stock packages and complete benchmark archives were independently verified. Some completed receipts were reconstructed from immutable artifacts and the original stock BoM after worker deletion. Ancillary preview-generation and orchestration logs were not separately archived; this limitation is recorded in [evidence recovery](reports/releases/2026.10.15/source-quality/evidence-recovery.json).
+
+The following sections are historical release notes. References to acceptance in those sections apply to their original source revisions.
+
+---
+
 <!-- simready-release-20261013 -->
 # 2026-10-13 SimReady completion
 
