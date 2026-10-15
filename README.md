@@ -40,6 +40,14 @@ See the [complete package inventory and standard submission report](reports/rele
 <!-- standard-submission-report:end -->
 
 
+<!-- source-quality-follow-up:start -->
+## Source-quality follow-up
+
+Corrections for **221 assets** are undergoing full unchanged stock qualification. They address undefined authored normals, exactly zero-area faces and impossible explicit mass properties while preserving dimensions, surviving surfaces, materials and joint definitions. [Exact source diffs, invariant checks and qualification progress](reports/releases/2026.10.15/source-quality/preparation/README.md) distinguish completed evidence from pending work; raw benchmark failures remain disclosed.
+
+The current catalog and batch downloads remain the previous released revisions until the corrected sources, metadata and immutable package evidence are published together. This follow-up is not NVIDIA approval.
+<!-- source-quality-follow-up:end -->
+
 ## Download an asset
 
 Keep the complete asset folder together so relative texture, material, and behavior-script references remain available. Downloading the USD alone may omit its dependencies.
