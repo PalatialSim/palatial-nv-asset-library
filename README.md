@@ -105,6 +105,10 @@ snapshot_download(
 )
 ```
 
+## Asset names and IDs
+
+Assets use readable names alongside their stable identifiers, for example **Bamboo Basket (D00006)**. The gallery and Hugging Face catalog expose this paired display name. The [complete name-to-ID index](data/asset-names.csv) covers all 1,013 assets. Package folder names, package IDs, USD files and immutable download URLs retain their existing identifiers.
+
 ## Asset name update register
 
 The complete [205-record handoff register](reports/rename-register-20261008.csv) includes original asset IDs, old and corrected names, and preview links.
