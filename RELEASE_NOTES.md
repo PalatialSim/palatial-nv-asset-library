@@ -1,3 +1,13 @@
+# 2026-10-17 build-path removal
+
+NVIDIA's review of the 2026-10-15 submission found absolute build-machine paths in 42 USD files (D01001–D01036, D01058–D01063). Each file carried one line in its layer documentation, written automatically by USD when the stage was flattened: `Generated from Composed Stage of root layer <local path>`. No asset, texture or reference path was absolute.
+
+That line is removed from the 42 USD files in this repository and in the dataset. Any other documentation text (for example an asset description) is kept. The files were rewritten rather than edited in place, so the old path no longer appears anywhere in the file bytes. Geometry, materials, physics and joints are unchanged; the layer documentation is the only difference.
+
+The corrected assets are published as version `2026.10.17_00` with fresh stock validation and benchmark results, and will be resubmitted to the SimReady catalog separately. The other 965 assets were accepted unchanged.
+
+---
+
 # 2026-10-15 source-quality corrections
 
 All **1,013** current packages have complete unchanged stock benchmark evidence. **955** have no failed tests and **58** retain **142 raw failures** for NVIDIA review. Eligibility skips remain separate from passes. No skip/ignore flags, test changes or benchmark parameter overrides were used. This is a submission for review, not NVIDIA approval or independent physical calibration.
